@@ -2,7 +2,7 @@
 
 ![Squilly Logo](img/logo.png)
 
-A comprehensive Python pipeline for processing and FAIRifying palaeoclimate data from EPICA (European Project for Ice Coring in Antarctica) ice cores and SISAL (Speleothem Isotopes Synthesis and AnaLysis) speleothem databases. The tool generates publication-ready visualizations, converts raw data into RDF/Linked Open Data following FAIR principles, and produces interactive Mermaid diagrams of the ontology structure. It implements a GeoSPARQL-compliant ontology extending SOSA (Sensor, Observation, Sample, and Actuator), harmonizes EPICA ice core observations (CH₄, δ¹⁸O) with SISAL speleothem isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced palaeoclimate sites as a unified FeatureCollection. The pipeline outputs 192,428 RDF triples across multiple files, enabling SPARQL queries for integrated palaeoclimate research spanning up to 805,000 years.
+A comprehensive Python pipeline for processing and FAIRifying palaeoclimate data from EPICA (European Project for Ice Coring in Antarctica) ice cores and SISAL (Speleothem Isotopes Synthesis and AnaLysis) speleothem databases. The tool generates publication-ready visualizations, converts raw data into RDF/Linked Open Data following FAIR principles, and produces interactive Mermaid diagrams of the ontology structure. It implements a GeoSPARQL-compliant ontology extending SOSA (Sensor, Observation, Sample, and Actuator), harmonizes EPICA ice core observations (CH₄, δ¹⁸O) with SISAL speleothem isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced palaeoclimate sites as a unified FeatureCollection. The pipeline outputs 192,428 RDF triples across multiple files, enabling SPARQL queries for integrated palaeoclimate research spanning up to 805,000 years. SISAL cave sites and CI findspots can be typed as archaeological sites (`geolod:ArchaeologicalCaveSite`, `geolod:CIArchaeologicalSite`) and are linked to Wikidata via `owl:sameAs`.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18814640.svg)](https://doi.org/10.5281/zenodo.18814640)
 
@@ -48,12 +48,21 @@ project/
 │   └── report/
 │       └── report.txt
 │
+├── CI/                           ← Campanian Ignimbrite findspots
+│   ├── ci_pipeline.py
+│   ├── rdf/                          ← RDF/TTL files
+│   │   ├── ci_findspots.ttl
+│   │   └── geo_lod_ci.ttl            ← CI ontology extension
+│   └── report/
+│       └── report.txt
+│
 ├── ontology/                     ← Shared ontology utilities
 │   ├── geo_lod_utils.py          ← Core functions + Mermaid generation
 │   ├── geo_lod_core.ttl          ← Base ontology (generated)
 │   ├── mermaid_taxonomy.mermaid  ← Class hierarchy diagram
 │   ├── mermaid_instance_epica.mermaid  ← EPICA instances
-│   └── mermaid_instance_sisal.mermaid  ← SISAL instances
+│   ├── mermaid_instance_sisal.mermaid  ← SISAL instances
+│   └── mermaid_instance_ci.mermaid      ← CI instances
 │
 ├── img/                          ← Documentation images
 │   ├── logo.png
@@ -84,8 +93,9 @@ python main.py
 
 This executes:
 1. ✓ EPICA Dome C — 12 plots + RDF/TTL + Mermaid diagrams
-2. ✓ SISAL — 24 plots + RDF/TTL for 4 caves (305 sites metadata)
-3. ✓ Shared ontology (`geo_lod_core.ttl`) with 3 Mermaid diagrams
+2. ✓ SISAL — 24 plots + RDF/TTL for 4 caves (305 sites metadata, incl. archaeological sites)
+2. ✓ CI — Campanian Ignimbrite findspots → RDF/TTL (incl. archaeological sites)
+3. ✓ Shared ontology (`geo_lod_core.ttl`) with 4 Mermaid diagrams
 4. ✓ Complete log saved to `pipeline_report.txt`
 
 **Duration:** ~45-60 seconds
@@ -142,12 +152,17 @@ Format: `{site_id}_{cave}_{isotope}_age_{variant}.{jpg,svg}`
 
 **SISAL:**
 - `SISAL/rdf/sisal_ontology.ttl` — SISAL-specific classes (SpeleothemObservation, Cave, etc.)
-- `SISAL/rdf/sisal_sites.ttl` — All 305 SISAL caves with WGS84 geometries (3,360 triples)
+- `SISAL/rdf/sisal_sites.ttl` — All 305 SISAL caves with WGS84 geometries and archaeological enrichment (3,663 triples)
 - `SISAL/rdf/sisal_144_botuvera_data.ttl` — 907 δ¹⁸O + 907 δ¹³C observations (21,795 triples)
 - `SISAL/rdf/sisal_145_corchia_data.ttl` — 1,234 δ¹⁸O + 1,234 δ¹³C observations (29,651 triples)
 - `SISAL/rdf/sisal_140_sanbao_data.ttl` — 5,832 δ¹⁸O observations (70,075 triples)
 - `SISAL/rdf/sisal_275_buracagloriosa_data.ttl` — 1,137 δ¹⁸O + 1,137 δ¹³C observations (27,327 triples)
 - `SISAL/rdf/sisal_all_data.ttl` — Combined file (**152,169 triples total**)
+
+
+**CI (Campanian Ignimbrite):**
+- `CI/rdf/geo_lod_ci.ttl` — CI ontology extension (CIFindspot, CIArchaeologicalSite, etc.)
+- `CI/rdf/ci_findspots.ttl` — Findspot data with GeoSPARQL geometries and PROV-O provenance
 
 ### Mermaid Diagrams (Ontology Visualisation)
 
@@ -162,8 +177,12 @@ All diagrams generated in `ontology/`:
   - Green color scheme (#d4edda)
   
 - **`mermaid_instance_sisal.mermaid`** — SISAL named individuals
-  - 305 cave sites, FeatureCollections
+  - 305 cave sites, FeatureCollections, archaeological cave sites
   - Yellow/brown color scheme (#fff3cd)
+
+- **`mermaid_instance_ci.mermaid`** — CI named individuals
+  - Campanian Ignimbrite volcanic event, findspots, archaeological sites
+  - Terracotta color scheme (#fce8d5)
 
 **Rendering to PNG:**
 ```bash
@@ -174,6 +193,7 @@ npm install -g @mermaid-js/mermaid-cli
 mmdc -i ontology/mermaid_taxonomy.mermaid -o img/taxonomy.png
 mmdc -i ontology/mermaid_instance_epica.mermaid -o img/instance_epica.png
 mmdc -i ontology/mermaid_instance_sisal.mermaid -o img/instance_sisal.png
+mmdc -i ontology/mermaid_instance_ci.mermaid -o img/instance_ci.png
 ```
 
 ## 🖼️ RDF Model Visualisations
@@ -278,7 +298,10 @@ geolod:PalaeoclimateObservation
 
 geolod:SamplingLocation
   ├── geolod:DrillingSite (EPICA)
-  └── geolod:Cave (SISAL)
+  ├── geolod:Cave (SISAL)
+  │     └── geolod:ArchaeologicalCaveSite
+  └── geolod:CIFindspot (CI)
+        └── geolod:CIArchaeologicalSite
 
 geolod:PalaeoclimateSample
   ├── geolod:IceCore (EPICA)
@@ -293,6 +316,9 @@ geolod:Chronology
 
 - `geolod:EPICA_DrillingSite_Collection` — 1 member
 - `geolod:SISAL_Cave_Collection` — 305 members
+- `geolod:SISAL_ArchaeologicalCave_Collection` — 37 members
+- `geolod:AllPalaeoclimateSites_Collection` — 306 members
+- `geolod:CIFindspotCollection` — CI findspots
 
 ## 🌐 W3ID URIs
 
@@ -312,7 +338,7 @@ All resources use persistent W3ID.org URIs:
 - **40,259 RDF triples**
 
 ### SISAL
-- **305 cave sites** worldwide
+- **305 cave sites** worldwide (37 typed as `geolod:ArchaeologicalCaveSite`, 27 with Wikidata `owl:sameAs`, 7 UNESCO World Heritage)
 - **9,110 observations** in 4 example caves (Botuverá, Corchia, Sanbao, Buraca Gloriosa)
 - **318,870 total δ¹⁸O samples** across all 305 sites (metadata only)
 - **220,224 total δ¹³C samples** across all 305 sites (metadata only)
