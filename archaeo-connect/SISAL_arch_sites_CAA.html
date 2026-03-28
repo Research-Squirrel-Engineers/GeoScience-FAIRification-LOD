@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SISAL Archaeological Sites — CAA 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; background: #f4f3ef; color: #1a1a18; }
+header { padding: 20px 24px 14px; background: #1a1a18; color: #f4f3ef; }
+header h1 { font-size: 18px; font-weight: 500; }
+header p  { font-size: 12px; color: #888780; margin-top: 3px; }
+#map { width: 100%; height: 380px; border-bottom: 2px solid #e8e6e0; }
+.legend-strip { display:flex; gap:20px; flex-wrap:wrap; padding:10px 24px; background:#fff; border-bottom:1px solid #e8e6e0; font-size:12px; color:#5f5e5a; align-items:center; }
+.leg { display:flex; align-items:center; gap:5px; }
+.leg-circ { border-radius:50%; display:inline-block; border:1.5px solid #fff; }
+.controls { display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding:10px 24px; background:#faf9f6; border-bottom:1px solid #e8e6e0; }
+.controls span { font-size:12px; color:#888780; }
+.btn { padding:4px 12px; border-radius:16px; border:1px solid #b4b2a9; background:transparent; color:#5f5e5a; font-size:12px; cursor:pointer; transition:all .15s; }
+.btn.on { background:#1a1a18; color:#f4f3ef; border-color:#1a1a18; }
+.btn.f-direct.on   { background:#085041; border-color:#085041; color:#fff; }
+.btn.f-proximal.on { background:#185FA5; border-color:#185FA5; color:#fff; }
+.btn.f-highn.on    { background:#BA7517; border-color:#BA7517; color:#fff; }
+.btn.f-unesco.on   { background:#4c1d95; border-color:#4c1d95; color:#fff; }
+.btn.f-top5.on     { background:#9a3412; border-color:#9a3412; color:#fff; }
+#count-direct, #count-proximal { font-size:11px; opacity:.7; }
+.rank-info { margin:0 24px 8px; background:#fff; border:1px solid #e8e6e0; border-radius:8px; padding:11px 16px; font-size:12px; color:#5f5e5a; display:flex; gap:16px; flex-wrap:wrap; }
+.rank-info strong { color:#1a1a18; font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
+.rank-formula { font-family:monospace; font-size:11px; background:#f4f3ef; padding:3px 8px; border-radius:4px; color:#1a1a18; }
+.sections { padding:16px 24px 0; display:flex; flex-direction:column; gap:24px; }
+.section-block { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+.section-header { padding:12px 16px; display:flex; align-items:center; gap:12px; }
+.section-header.direct-hdr   { background:#085041; color:#fff; }
+.section-header.proximal-hdr { background:#e8f3fd; color:#0C447C; border-bottom:1px solid #c5dcf0; }
+.section-title { font-size:15px; font-weight:500; }
+.section-sub   { font-size:12px; opacity:.75; margin-top:1px; }
+.section-count { margin-left:auto; font-size:12px; opacity:.7; white-space:nowrap; }
+table { width:100%; border-collapse:collapse; }
+th { padding:9px 12px; font-size:11px; font-weight:500; text-align:left; white-space:nowrap; cursor:pointer; user-select:none; border-bottom:1px solid #e8e6e0; color:#5f5e5a; background:#fafaf8; }
+th:hover { background:#f0efeb; }
+th.sorted-asc::after  { content:' ↑'; }
+th.sorted-desc::after { content:' ↓'; }
+.direct-hdr-row th   { background:#f0faf6; color:#085041; border-bottom:2px solid #9fd8b8; }
+td { padding:9px 12px; border-bottom:1px solid #f1efe8; vertical-align:top; font-size:13px; line-height:1.5; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:#f9f8f4; }
+tr.high-n td { background:#fffbf0; }
+tr.high-n:hover td { background:#fff5d9; }
+.rank-cell { font-weight:700; font-size:15px; text-align:center; min-width:28px; }
+.rank-cell.direct-rank   { color:#085041; }
+.rank-cell.proximal-rank { color:#185FA5; }
+.rank-cell.top3 { color:#BA7517 !important; }
+.score-bar-wrap { display:flex; align-items:center; gap:5px; margin-top:2px; }
+.score-bar-d { height:5px; border-radius:2px; background:#085041; }
+.score-bar-p { height:5px; border-radius:2px; background:#3B8BD4; }
+.score-val { font-size:11px; color:#888780; }
+.site-name { font-weight:500; }
+.ext-links { display:flex; gap:5px; margin-top:4px; flex-wrap:wrap; }
+.ext-link { display:inline-flex; align-items:center; font-size:11px; padding:1px 7px; border-radius:8px; text-decoration:none; border:1px solid; white-space:nowrap; }
+.ext-link:hover { opacity:.75; }
+.lnk-wd  { background:#f0f0ff; color:#3C3489; border-color:#c8c4f0; }
+.lnk-osm { background:#f0fff4; color:#085041; border-color:#9fd8b8; }
+.lnk-osm.missing { opacity:.3; cursor:default; pointer-events:none; }
+.badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:500; white-space:nowrap; }
+.b-direct   { background:#085041; color:#fff; }
+.b-proximal { background:#E6F1FB; color:#0C447C; }
+.b-unesco   { background:#EEEDFE; color:#3C3489; }
+.n-bar-wrap { display:flex; align-items:center; gap:5px; }
+.n-bar-d { height:6px; border-radius:3px; background:#085041; min-width:2px; opacity:.6; }
+.n-bar-p { height:6px; border-radius:3px; background:#3B8BD4; min-width:2px; opacity:.6; }
+.n-val { font-size:12px; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.n-val.high { font-weight:500; color:#633806; }
+.mis-text  { font-size:12px; color:#5f5e5a; }
+.corr-text { font-size:12px; color:#5f5e5a; font-style:italic; }
+.popup-name  { font-weight:600; font-size:14px; margin-bottom:4px; }
+.popup-row   { font-size:12px; line-height:1.7; color:#333; }
+.popup-badge { display:inline-block; padding:1px 6px; border-radius:8px; font-size:11px; font-weight:500; margin-right:3px; }
+.popup-links { margin-top:6px; display:flex; gap:6px; flex-wrap:wrap; }
+.popup-link  { font-size:11px; text-decoration:none; padding:2px 7px; border-radius:6px; border:1px solid; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SISAL Archaeological Sites</h1>
+</header>
+<div id="map"></div>
+<div class="legend-strip">
+  <span style="font-weight:500;color:#1a1a18">Map:</span>
+  <div class="leg"><div class="leg-circ" style="width:11px;height:11px;background:#085041"></div> <strong style="color:#085041">direct</strong> — arch. evidence in cave</div>
+  <div class="leg"><div class="leg-circ" style="width:11px;height:11px;background:#3B8BD4"></div> proximal — regional context</div>
+  <div class="leg" style="margin-left:6px"><div class="leg-circ" style="width:7px;height:7px;background:#aaa;border-color:#888"></div> small n δ¹⁸O</div>
+  <div class="leg"><div class="leg-circ" style="width:15px;height:15px;background:#aaa;border-color:#888"></div> large n δ¹⁸O</div>
+  <div class="leg" style="margin-left:4px">★ = UNESCO WH</div>
+  <span style="margin-left:auto;color:#888780;font-size:11px">Click for details + links</span>
+</div>
+<div class="rank-info">
+  <div>
+    <strong>Ranking formula</strong>
+    <div class="rank-formula">score = (n_norm×0.25) + (coupling×0.45) + (arch_sig×0.2) + (geo×0.1)</div>
+  </div>
+  <div style="font-size:12px;color:#5f5e5a">
+    <strong>coupling</strong> direct=1.0 · proximal=0.5 &nbsp;|&nbsp;
+    <strong>arch_sig</strong> hominin/art=1.0 · unique=0.9 · historic=0.7 · occupation=0.6 &nbsp;|&nbsp;
+    <strong>geo</strong> underrepresented regions=1.0 · W. Europe=0.6–0.7
+  </div>
+</div>
+<div class="controls">
+  <span>Filter:</span>
+  <button class="btn on"           onclick="setFilter('all',this)">All (27)</button>
+  <button class="btn f-direct"     onclick="setFilter('direct',this)">Direct (12)</button>
+  <button class="btn f-proximal"   onclick="setFilter('proximal',this)">Proximal (15)</button>
+  <button class="btn f-highn"      onclick="setFilter('highN',this)">n δ¹⁸O ≥ 500 (15)</button>
+  <button class="btn f-unesco"     onclick="setFilter('unesco',this)">UNESCO WH (7)</button>
+  <button class="btn f-top5"       onclick="setFilter('top5direct',this)">Top 5 direct</button>
+</div>
+<div class="sections">
+  <div class="section-block" id="block-direct">
+    <div class="section-header direct-hdr">
+      <div>
+        <div class="section-title">Direct coupling — archaeological evidence in the cave</div>
+        <div class="section-sub">Speleothem record and human activity share the same space. Strongest climate–archaeology correlation.</div>
+      </div>
+      <div class="section-count" id="count-direct"></div>
+    </div>
+    <table>
+      <thead><tr class="direct-hdr-row">
+        <th onclick="sortBy('rank','d')">Rank</th>
+        <th onclick="sortBy('name','d')">Site</th>
+        <th onclick="sortBy('mis','d')">Geoscientific Epoch (MIS)</th>
+        <th onclick="sortBy('ap','d')">Archaeological Period</th>
+        <th onclick="sortBy('coupling','d')">Coupling</th>
+        <th onclick="sortBy('cat','d')">Category</th>
+        <th>Correlation &amp; Significance</th>
+        <th onclick="sortBy('n18','d')">n δ¹⁸O</th>
+        <th onclick="sortBy('score','d')">Score</th>
+        <th onclick="sortBy('unesco','d')">UNESCO</th>
+      </tr></thead>
+      <tbody id="tbody-direct"></tbody>
+    </table>
+  </div>
+  <div class="section-block" id="block-proximal">
+    <div class="section-header proximal-hdr">
+      <div>
+        <div class="section-title" style="color:#0C447C">Proximal coupling — regional palaeoclimate context</div>
+        <div class="section-sub">Speleothem provides climate archive for a region with known archaeological activity.</div>
+      </div>
+      <div class="section-count" id="count-proximal"></div>
+    </div>
+    <table>
+      <thead><tr>
+        <th onclick="sortBy('rank','p')">Rank</th>
+        <th onclick="sortBy('name','p')">Site</th>
+        <th onclick="sortBy('mis','p')">Geoscientific Epoch (MIS)</th>
+        <th onclick="sortBy('ap','p')">Archaeological Period</th>
+        <th onclick="sortBy('coupling','p')">Coupling</th>
+        <th onclick="sortBy('cat','p')">Category</th>
+        <th>Correlation &amp; Significance</th>
+        <th onclick="sortBy('n18','p')">n δ¹⁸O</th>
+        <th onclick="sortBy('score','p')">Score</th>
+        <th onclick="sortBy('unesco','p')">UNESCO</th>
+      </tr></thead>
+      <tbody id="tbody-proximal"></tbody>
+    </table>
+  </div>
+</div>
+<div style="height:32px"></div>
+<script>
+const SITES=[{"id": 104, "name": "Liang Luar", "lat": -8.53, "lon": 120.43, "mis": "Late Pleistocene (MIS 4–2)", "ap": "Lower Palaeolithic / Hominin", "coupling": "direct", "cat": "Hominin Site", "corr": "Type site for Homo floresiensis; speleothem dates bracket hominin occupation directly.", "n18": 2715, "n13": 2047, "unesco": false, "qid": null, "osm": null, "arch_sig": 1.0, "geo": 1.0, "score": 0.9999999999999999, "highN": true, "rank": 1}, {"id": 136, "name": "Juxtlahuaca cave", "lat": 17.4, "lon": -99.2, "mis": "Holocene / Late Pleistocene (MIS 3–1)", "ap": "Preclassic / Olmec", "coupling": "direct", "cat": "Mesoamerican Art", "corr": "Olmec cave paintings ~900 BCE; dense δ¹⁸O record links humidity phases to ritual use.", "n18": 2698, "n13": 679, "unesco": false, "qid": null, "osm": null, "arch_sig": 1.0, "geo": 1.0, "score": 0.9984346224677717, "highN": true, "rank": 2}, {"id": 11, "name": "Jeita cave", "lat": 33.95, "lon": 35.65, "mis": "Holocene (MIS 1)", "ap": "Neolithic to Bronze Age", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "Near early Levantine settlements; high-res proxy for 4.2 ka societal collapse event.", "n18": 1830, "n13": 1830, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.7, "geo": 0.85, "score": 0.6185082872928177, "highN": true, "rank": 2}, {"id": 182, "name": "Kotumsar cave", "lat": 19.0, "lon": 82.0, "mis": "Holocene (MIS 1)", "ap": "Prehistoric / Historic", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "Archaeological finds reported; India monsoon proxy for prehistoric settlement context.", "n18": 1546, "n13": 1546, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.9, "score": 0.5773572744014733, "highN": true, "rank": 3}, {"id": 160, "name": "Soreq cave", "lat": 31.7558, "lon": 35.0226, "mis": "Middle–Late Pleistocene (MIS 6–2)", "ap": "Middle & Upper Palaeolithic", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "Near Out-of-Africa migration corridor; key palaeoclimate reference proxy for the Levant.", "n18": 1432, "n13": 0, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.9, "geo": 0.85, "score": 0.6218600368324125, "highN": true, "rank": 1}, {"id": 253, "name": "Hoq cave", "lat": 12.5866, "lon": 54.3543, "mis": "Holocene (MIS 1)", "ap": "Historic (1st millennium CE)", "coupling": "direct", "cat": "Ancient Inscriptions", "corr": "Ancient South Arabian & Palmyrene inscriptions in cave; Indian Ocean trade proxy.", "n18": 1426, "n13": 1426, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.9, "geo": 1.0, "score": 0.8613075506445673, "highN": true, "rank": 3}, {"id": 275, "name": "Buraca Gloriosa", "lat": 39.5333, "lon": -8.7833, "mis": "Late Pleistocene (MIS 4–2)", "ap": "Upper Palaeolithic / Epipalaeolithic", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "Pleistocene fauna & lithic assemblages, Estremadura; Iberian Atlantic climate record.", "n18": 1178, "n13": 1178, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.7, "score": 0.5234714548802947, "highN": true, "rank": 5}, {"id": 4, "name": "Villars cave", "lat": 45.43, "lon": 0.78, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Art", "corr": "Cave paintings incl. ‘Bison & Sorcerer’; δ¹⁸O mirrors Dordogne occupation phases.", "n18": 1126, "n13": 1126, "unesco": false, "qid": "Q3578093", "osm": "node/2423303117", "arch_sig": 1.0, "geo": 0.7, "score": 0.823683241252302, "highN": true, "rank": 4}, {"id": 266, "name": "Cueva Victoria", "lat": 37.6322, "lon": -0.8215, "mis": "Middle–Late Pleistocene (MIS 7–4)", "ap": "Lower Palaeolithic / Hominin", "coupling": "direct", "cat": "Pleistocene Fauna / Hominins", "corr": "Hominin remains & Pleistocene megafauna in cave; SE Iberia dispersal corridor.", "n18": 1030, "n13": 1030, "unesco": false, "qid": null, "osm": null, "arch_sig": 1.0, "geo": 0.75, "score": 0.8198434622467772, "highN": true, "rank": 5}, {"id": 16, "name": "Han-sur-Lesse cave", "lat": 50.1164, "lon": 5.1884, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Middle & Upper Palaeolithic", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "Archaeological finds; Meuse valley Palaeolithic corridor, Belgium/S Netherlands.", "n18": 953, "n13": 953, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.65, "score": 0.49775322283609574, "highN": true, "rank": 8}, {"id": 324, "name": "La Vallina", "lat": 43.41, "lon": -4.8067, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Art", "corr": "Rock art, Asturias; Cantabrian palaeoclimate context for cave art production.", "n18": 890, "n13": 890, "unesco": false, "qid": null, "osm": null, "arch_sig": 1.0, "geo": 0.65, "score": 0.79695211786372, "highN": true, "rank": 6}, {"id": 298, "name": "Belum cave", "lat": 15.1, "lon": 78.1, "mis": "Holocene (MIS 1)", "ap": "Prehistoric / Historic", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "Prehistoric occupation; Deccan plateau monsoon proxy for S Indian settlement.", "n18": 861, "n13": 861, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.9, "score": 0.514281767955801, "highN": true, "rank": 6}, {"id": 286, "name": "La Garma cave", "lat": 43.4306, "lon": -3.6658, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Art", "corr": "UNESCO; painted cave + butchered fauna, Cantabria; stalagmite from occupied cave.", "n18": 765, "n13": 497, "unesco": true, "qid": null, "osm": null, "arch_sig": 1.0, "geo": 0.65, "score": 0.7854419889502762, "highN": true, "rank": 7}, {"id": 223, "name": "Wanxiang cave", "lat": 33.32, "lon": 105.0, "mis": "Late Pleistocene–Holocene (MIS 3–1)", "ap": "Historic / Prehistoric", "coupling": "proximal", "cat": "Historic / Prehistoric", "corr": "Dynastic Chinese records proximal; δ¹⁸O correlates with Tang & Ming collapse events.", "n18": 711, "n13": 0, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.7, "geo": 1.0, "score": 0.5304696132596685, "highN": true, "rank": 4}, {"id": 71, "name": "Baradla cave", "lat": 48.4667, "lon": 20.5, "mis": "Holocene (MIS 1)", "ap": "Neolithic to Bronze Age", "coupling": "direct", "cat": "Neolithic / Bronze Age", "corr": "UNESCO; Neolithic–Bronze Age finds in cave system, Aggtelek karst, Hungary.", "n18": 559, "n13": 559, "unesco": true, "qid": "Q631356", "osm": "node/981440188", "arch_sig": 0.8, "geo": 0.7, "score": 0.7314732965009209, "highN": true, "rank": 11}, {"id": 81, "name": "Gueldaman cave", "lat": 36.4333, "lon": 4.5667, "mis": "Holocene (MIS 1)", "ap": "Neolithic / Protohistoric", "coupling": "proximal", "cat": "Neolithic / Protohistoric", "corr": "Neolithic pottery & lithics nearby; N. African Humid Period / Saharan Neolithisation.", "n18": 425, "n13": 425, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.7, "geo": 1.0, "score": 0.504134438305709, "highN": false, "rank": 7}, {"id": 87, "name": "Pindal cave", "lat": 43.4, "lon": -4.53, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Art", "corr": "UNESCO; rock art Asturias; Franco-Cantabrian art zone, direct climate context.", "n18": 422, "n13": 413, "unesco": true, "qid": "Q555011", "osm": "node/558629070", "arch_sig": 1.0, "geo": 0.6, "score": 0.7488581952117863, "highN": false, "rank": 8}, {"id": 67, "name": "Clearwater/Wind caves connection", "lat": 4.1, "lon": 114.83, "mis": "Holocene (MIS 1)", "ap": "Prehistoric", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "UNESCO Mulu; prehistoric finds in cave system, Sarawak / Borneo.", "n18": 385, "n13": 385, "unesco": true, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.9, "score": 0.47045119705340704, "highN": false, "rank": 11}, {"id": 73, "name": "Bourgeois–Delaunay cave", "lat": 45.6678, "lon": 0.5133, "mis": "Middle Pleistocene (MIS 8–6)", "ap": "Lower & Middle Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Occupation", "corr": "Hominin remains (La Chaise), Charente; important European Middle Palaeolithic site.", "n18": 358, "n13": 358, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.9, "geo": 0.6, "score": 0.7229650092081032, "highN": false, "rank": 12}, {"id": 108, "name": "Clamouse cave", "lat": 43.71, "lon": 3.55, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Middle & Upper Palaeolithic", "coupling": "proximal", "cat": "Palaeolithic Occupation", "corr": "Prehistoric occupation, Hérault; Languedoc proxy for Palaeolithic corridor.", "n18": 299, "n13": 299, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.6, "score": 0.4325322283609576, "highN": false, "rank": 13}, {"id": 297, "name": "Bàsura cave", "lat": 44.13, "lon": 8.2, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Art", "corr": "Palaeolithic footprints & parietal art, Liguria; rare direct-dated art context.", "n18": 265, "n13": 0, "unesco": false, "qid": null, "osm": null, "arch_sig": 1.0, "geo": 0.65, "score": 0.7394014732965009, "highN": false, "rank": 9}, {"id": 359, "name": "Zoolithen cave", "lat": 49.7793, "lon": 11.2829, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic / Pleistocene", "coupling": "proximal", "cat": "Pleistocene Fauna", "corr": "Cave bear & Pleistocene megafauna; Franconian Alb, megafauna extinction context.", "n18": 263, "n13": 263, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.5, "geo": 0.65, "score": 0.41421731123388583, "highN": false, "rank": 15}, {"id": 268, "name": "Pere Noel cave", "lat": 50.0, "lon": 5.2, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Middle & Upper Palaeolithic", "coupling": "proximal", "cat": "Palaeolithic Occupation", "corr": "Prehistoric occupation, Belgian Ardennes; Meuse valley Palaeolithic record.", "n18": 260, "n13": 260, "unesco": false, "qid": "Q8348804", "osm": "node/418784261", "arch_sig": 0.6, "geo": 0.6, "score": 0.4289410681399632, "highN": false, "rank": 14}, {"id": 295, "name": "Qadisha cave", "lat": 34.2439, "lon": 36.0364, "mis": "Holocene (MIS 1)", "ap": "Historic (Bronze Age to Medieval)", "coupling": "proximal", "cat": "Sacred / Historic", "corr": "UNESCO Qadisha Valley; sacred use from Bronze Age; Lebanon Holocene hydroclimate.", "n18": 228, "n13": 228, "unesco": true, "qid": null, "osm": null, "arch_sig": 0.7, "geo": 0.85, "score": 0.4709944751381216, "highN": false, "rank": 10}, {"id": 118, "name": "Clearwater cave", "lat": 4.1, "lon": 114.8333, "mis": "Holocene (MIS 1)", "ap": "Prehistoric", "coupling": "proximal", "cat": "Prehistoric Occupation", "corr": "UNESCO Mulu; prehistoric finds, Sarawak; companion to Clearwater/Wind caves.", "n18": 228, "n13": 0, "unesco": true, "qid": null, "osm": null, "arch_sig": 0.6, "geo": 0.9, "score": 0.4559944751381216, "highN": false, "rank": 12}, {"id": 329, "name": "Matupi cave", "lat": 1.25, "lon": 29.82, "mis": "Late Pleistocene–Holocene (MIS 3–1)", "ap": "Later Stone Age", "coupling": "proximal", "cat": "African Later Stone Age", "corr": "Later Stone Age artefacts, DRC; central African climate context for LSA dispersal.", "n18": 222, "n13": 222, "unesco": false, "qid": null, "osm": null, "arch_sig": 0.7, "geo": 1.0, "score": 0.48544198895027624, "highN": false, "rank": 9}, {"id": 77, "name": "Chauvet cave", "lat": 44.23, "lon": 4.26, "mis": "Late Pleistocene (MIS 3–2)", "ap": "Upper Palaeolithic", "coupling": "direct", "cat": "Palaeolithic Art", "corr": "UNESCO; ~36,000 BP cave paintings (lions, rhinos); art dates correlate with interstadials.", "n18": 187, "n13": 187, "unesco": true, "qid": "Q374096", "osm": "node/2199517628", "arch_sig": 1.0, "geo": 0.65, "score": 0.7322191528545119, "highN": false, "rank": 10}];
+const MAX_N=Math.max(...SITES.map(s=>s.n18));
+const MAX_SCORE_D=Math.max(...SITES.filter(s=>s.coupling==='direct').map(s=>s.score));
+const MAX_SCORE_P=Math.max(...SITES.filter(s=>s.coupling==='proximal').map(s=>s.score));
+
+const map=L.map('map').setView([25,15],2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);
+
+// Fullscreen control (native, no plugin needed)
+const FullscreenControl=L.Control.extend({
+  options:{position:'topleft'},
+  onAdd:function(){
+    const btn=L.DomUtil.create('button','leaflet-bar leaflet-control leaflet-control-fullscreen');
+    btn.innerHTML='⛶';
+    btn.title='Toggle fullscreen';
+    btn.style.cssText='width:30px;height:30px;font-size:16px;cursor:pointer;background:#fff;border:none;display:flex;align-items:center;justify-content:center;';
+    L.DomEvent.on(btn,'click',function(e){
+      L.DomEvent.stopPropagation(e);
+      const el=document.getElementById('map');
+      if(!document.fullscreenElement){
+        el.requestFullscreen().catch(()=>{});
+        btn.innerHTML='✕';
+      } else {
+        document.exitFullscreen();
+        btn.innerHTML='⛶';
+      }
+    });
+    document.addEventListener('fullscreenchange',function(){
+      if(!document.fullscreenElement) btn.innerHTML='⛶';
+    });
+    return btn;
+  }
+});
+new FullscreenControl().addTo(map);
+
+// Legend control (bottom right)
+const LegendControl=L.Control.extend({
+  options:{position:'bottomright'},
+  onAdd:function(){
+    const div=L.DomUtil.create('div','leaflet-bar');
+    div.style.cssText='background:#fff;padding:8px 12px;font-size:12px;line-height:1.8;color:#1a1a18;min-width:180px;pointer-events:none;';
+    div.innerHTML=
+      '<div style="font-weight:500;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#888">Legend</div>'+
+      '<div style="display:flex;align-items:center;gap:7px"><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#085041"/></svg><span><strong style="color:#085041">direct</strong> — arch. evidence in cave</span></div>'+
+      '<div style="display:flex;align-items:center;gap:7px"><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#3B8BD4"/></svg><span>proximal — regional context</span></div>'+
+      '<div style="display:flex;align-items:center;gap:7px;margin-top:3px"><svg width="16" height="12"><circle cx="4" cy="6" r="3" fill="#aaa"/><circle cx="12" cy="6" r="5" fill="#aaa"/></svg><span style="color:#888">circle size = n δ¹⁸O</span></div>'+
+      '<div style="display:flex;align-items:center;gap:7px"><span style="font-size:13px">★</span><span style="color:#888">UNESCO WH</span></div>';
+    return div;
+  }
+});
+new LegendControl().addTo(map);
+const markers={};
+SITES.forEach(s=>{
+  const col=s.coupling==='direct'?'#085041':'#3B8BD4';
+  const m=L.circleMarker([s.lat,s.lon],{radius:5+Math.round((s.n18/MAX_N)*12),fillColor:col,color:'#fff',weight:1.5,fillOpacity:0.85}).addTo(map);
+  const wdL=s.qid?`<a href="https://www.wikidata.org/wiki/${s.qid}" target="_blank" class="popup-link lnk-wd">Wikidata ${s.qid}</a>`:'';
+  const osmL=s.osm?`<a href="https://www.openstreetmap.org/${s.osm}" target="_blank" class="popup-link lnk-osm">OSM ${s.osm}</a>`:`<span style="font-size:11px;color:#aaa">OSM: not in dataset</span>`;
+  m.bindPopup(`<div class="popup-name">#${s.rank} ${s.name} <span style="font-weight:400;color:#888;font-size:11px">(SISAL ${s.id})</span></div><div class="popup-row" style="margin-bottom:4px"><span class="popup-badge" style="background:${s.coupling==='direct'?'#085041':'#3B8BD4'};color:#fff">${s.coupling}</span>${s.unesco?'<span class="popup-badge" style="background:#EEEDFE;color:#3C3489">★ UNESCO</span>':''}<span class="popup-badge" style="background:#faeeda;color:#633806">score ${s.score.toFixed(3)}</span></div><div class="popup-row"><b>MIS:</b> ${s.mis}</div><div class="popup-row"><b>Period:</b> ${s.ap}</div><div class="popup-row"><b>n δ¹⁸O:</b> ${s.n18.toLocaleString()}</div><div class="popup-row" style="margin-top:4px;font-style:italic;color:#555">${s.corr}</div><div class="popup-links">${wdL}${osmL}</div>`,{maxWidth:320});
+  markers[s.id]=m;
+});
+
+const directSites  =SITES.filter(s=>s.coupling==='direct');
+const proximalSites=SITES.filter(s=>s.coupling==='proximal');
+let activeFilter='all';
+const sortState={d:{key:'rank',dir:1},p:{key:'rank',dir:1}};
+
+function setFilter(f,btn){activeFilter=f;document.querySelectorAll('.btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');render();}
+function sortBy(key,tbl){const st=sortState[tbl];if(st.key===key)st.dir*=-1;else{st.key=key;st.dir=(key==='n18'||key==='score')?-1:1;}document.querySelectorAll('th').forEach(t=>t.classList.remove('sorted-asc','sorted-desc'));const keys=['rank','name','mis','ap','coupling','cat','corr','n18','score','unesco'];const idx=keys.indexOf(key);if(idx>=0)document.querySelectorAll('th')[idx].classList.add(st.dir===1?'sorted-asc':'sorted-desc');render();}
+
+function applyFilter(sites){
+  if(activeFilter==='direct')    return sites.filter(s=>s.coupling==='direct');
+  if(activeFilter==='proximal')  return sites.filter(s=>s.coupling==='proximal');
+  if(activeFilter==='highN')     return sites.filter(s=>s.highN);
+  if(activeFilter==='unesco')    return sites.filter(s=>s.unesco);
+  if(activeFilter==='top5direct')return sites[0]?.coupling==='direct'?sites.slice(0,5):[];
+  return sites;
+}
+
+function sortSites(sites,tbl){const {key,dir}=sortState[tbl];return[...sites].sort((a,b)=>{let av=a[key],bv=b[key];if(typeof av==='string'){av=av.toLowerCase();bv=bv.toLowerCase();}return av<bv?-dir:av>bv?dir:0;});}
+
+function rowHtml(s,isD){
+  const bW=Math.max(2,Math.round((s.n18/MAX_N)*80));
+  const sW=Math.round((s.score/(isD?MAX_SCORE_D:MAX_SCORE_P))*60);
+  const osmEl=s.osm?`<a href="https://www.openstreetmap.org/${s.osm}" target="_blank" class="ext-link lnk-osm">OSM ↗</a>`:`<span class="ext-link lnk-osm missing">OSM –</span>`;
+  const wdEl=s.qid?`<a href="https://www.wikidata.org/wiki/${s.qid}" target="_blank" class="ext-link lnk-wd">WD ${s.qid}</a>`:`<span class="ext-link lnk-wd missing">WD –</span>`;
+  return`<tr class="${s.highN?'high-n':''}"><td class="rank-cell${s.rank<=3?' top3':''} ${isD?'direct-rank':'proximal-rank'}">${s.rank}</td><td><div class="site-name">${s.name}</div><div style="font-size:11px;color:#888">SISAL ${s.id}</div><div class="ext-links">${wdEl}${osmEl}</div></td><td><span class="mis-text">${s.mis}</span></td><td>${s.ap}</td><td><span class="badge ${isD?'b-direct':'b-proximal'}">${s.coupling}</span></td><td style="font-size:12px;color:#5f5e5a">${s.cat}</td><td><span class="corr-text">${s.corr}</span></td><td><div class="n-bar-wrap"><div class="${isD?'n-bar-d':'n-bar-p'}" style="width:${bW}px"></div><span class="n-val${s.highN?' high':''}">${s.n18.toLocaleString()}</span></div></td><td><div class="score-bar-wrap"><div class="${isD?'score-bar-d':'score-bar-p'}" style="width:${sW}px"></div><span class="score-val">${s.score.toFixed(3)}</span></div></td><td>${s.unesco?'<span class="badge b-unesco">★ UNESCO</span>':''}</td></tr>`;
+}
+
+function render(){
+  const hideDirect  =activeFilter==='proximal';
+  const hideProximal=activeFilter==='direct'||activeFilter==='top5direct';
+  let dSites=hideDirect?[]:applyFilter(directSites);
+  if(activeFilter==='top5direct')dSites=directSites.slice(0,5);
+  let pSites=hideProximal?[]:applyFilter(proximalSites);
+  dSites=sortSites(dSites,'d');
+  pSites=sortSites(pSites,'p');
+  document.getElementById('count-direct').textContent  =dSites.length+' sites';
+  document.getElementById('count-proximal').textContent=pSites.length+' sites';
+  document.getElementById('block-direct').style.opacity  =hideDirect?'0.3':'1';
+  document.getElementById('block-proximal').style.opacity=hideProximal?'0.3':'1';
+  document.getElementById('tbody-direct').innerHTML  =dSites.map(s=>rowHtml(s,true)).join('');
+  document.getElementById('tbody-proximal').innerHTML=pSites.map(s=>rowHtml(s,false)).join('');
+  const vis=new Set([...dSites,...pSites].map(s=>s.id));
+  Object.values(markers).forEach(m=>m.setStyle({opacity:.15,fillOpacity:.1}));
+  vis.forEach(id=>markers[id]?.setStyle({opacity:1,fillOpacity:.85}));
+}
+render();
+document.querySelectorAll('th')[0].classList.add('sorted-asc');
+</script>
+</body>
+</html>

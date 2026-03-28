@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campanian Ignimbrite Findspots — CAA 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; background: #f4f3ef; color: #1a1a18; }
+header { padding: 20px 24px 14px; background: #1a1a18; color: #f4f3ef; }
+header h1 { font-size: 18px; font-weight: 500; }
+header p  { font-size: 12px; color: #888780; margin-top: 3px; }
+#map { width: 100%; height: 400px; border-bottom: 2px solid #e8e6e0; }
+.controls { display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding:10px 24px; background:#faf9f6; border-bottom:1px solid #e8e6e0; }
+.controls span { font-size:12px; color:#888780; }
+.btn { padding:4px 12px; border-radius:16px; border:1px solid #b4b2a9; background:transparent; color:#5f5e5a; font-size:12px; cursor:pointer; transition:all .15s; }
+.btn.on { background:#1a1a18; color:#f4f3ef; border-color:#1a1a18; }
+.btn.f-arch.on   { background:#9a3412; border-color:#9a3412; color:#fff; }
+.btn.f-other.on  { background:#3B8BD4; border-color:#3B8BD4; color:#fff; }
+.btn.f-high.on   { background:#085041; border-color:#085041; color:#fff; }
+.info-box { margin:14px 24px 0; background:#fff; border:1px solid #e8e6e0; border-radius:8px; padding:11px 16px; font-size:12px; color:#5f5e5a; display:flex; gap:20px; flex-wrap:wrap; }
+.info-box strong { color:#1a1a18; font-size:11px; text-transform:uppercase; letter-spacing:.04em; display:block; margin-bottom:3px; }
+.sections { padding: 16px 24px 32px; display: flex; flex-direction: column; gap: 22px; }
+.section-block { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.section-header { padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
+.section-header.arch-hdr  { background: #9a3412; color: #fff; }
+.section-header.other-hdr { background: #e8f3fd; color: #0C447C; border-bottom: 1px solid #c5dcf0; }
+.section-title { font-size: 15px; font-weight: 500; }
+.section-sub   { font-size: 12px; opacity: .8; margin-top: 2px; }
+.section-count { margin-left: auto; font-size: 12px; opacity: .75; white-space: nowrap; }
+table { width:100%; border-collapse:collapse; }
+th { padding:9px 12px; font-size:11px; font-weight:500; text-align:left; white-space:nowrap; cursor:pointer; user-select:none; border-bottom:1px solid #e8e6e0; color:#5f5e5a; background:#fafaf8; }
+th:hover { background:#f0efeb; }
+th.sorted-asc::after  { content:' ↑'; }
+th.sorted-desc::after { content:' ↓'; }
+.arch-hdr-row th { background:#fef5f2; color:#7c2d12; border-bottom:2px solid #fca89a; }
+td { padding:9px 12px; border-bottom:1px solid #f1efe8; vertical-align:top; font-size:13px; line-height:1.5; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:#f9f8f4; }
+tr.high-cert td { background:#f0faf6; }
+tr.high-cert:hover td { background:#e4f5ef; }
+.site-name { font-weight:500; }
+.ext-links { display:flex; gap:5px; margin-top:4px; flex-wrap:wrap; }
+.ext-link  { display:inline-flex; align-items:center; font-size:11px; padding:1px 7px; border-radius:8px; text-decoration:none; border:1px solid; white-space:nowrap; }
+.ext-link:hover { opacity:.75; }
+.lnk-wd      { background:#f0f0ff; color:#3C3489; border-color:#c8c4f0; }
+.lnk-osm     { background:#f0fff4; color:#085041; border-color:#9fd8b8; }
+.lnk-wp      { background:#f5f5f5; color:#444; border-color:#ccc; }
+.lnk-missing { opacity:.3; cursor:default; pointer-events:none; }
+.badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:500; white-space:nowrap; }
+.b-cert-high { background:#E1F5EE; color:#085041; }
+.b-cert-med  { background:#f4f3ef; color:#5f5e5a; border:1px solid #d3d1c7; }
+.b-cert-low  { background:#FEF9EE; color:#633806; }
+.b-cert-dub  { background:#fcebeb; color:#7c2d12; }
+.b-cert-rep  { background:#EEEDFE; color:#3C3489; }
+.lit  { font-size:12px; color:#5f5e5a; font-style:italic; }
+.sptype { font-size:11px; color:#888; }
+.popup-name  { font-weight:600; font-size:14px; margin-bottom:4px; }
+.popup-row   { font-size:12px; line-height:1.7; color:#333; }
+.popup-badge { display:inline-block; padding:1px 6px; border-radius:8px; font-size:11px; font-weight:500; margin-right:3px; }
+.popup-links { margin-top:6px; display:flex; gap:6px; flex-wrap:wrap; }
+.popup-link  { font-size:11px; text-decoration:none; padding:2px 7px; border-radius:6px; border:1px solid; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Campanian Ignimbrite (CI) Findspots</h1></header>
+<div id="map"></div>
+<div class="info-box">
+  <div>
+    <strong>Archaeological site logic (ci_pipeline.py)</strong>
+    <code style="font-size:11px;background:#f4f3ef;padding:2px 6px;border-radius:4px">is_arch = id ∈ ARCHAEOLOGICAL_IDS  OR  spatialtype contains “ArchaeologicalSite”</code>
+    <div style="font-size:11px;margin-top:5px;color:#5f5e5a">IDs 5 (Castelcivita), 42 (Kozarnika), 43 (Temnata) treated as confirmed — pending curation of ARCHAEOLOGICAL_IDS in pipeline.</div>
+  </div>
+  <div><strong>Confirmed (12 sites)</strong>IDs: 5, 19, 42, 43, 44, 45, 50, 51, 59, 62, 63, 65</div>
+  <div><strong>Linked Data coverage</strong>Wikidata QID: 43/74 · OSM: 31/74</div>
+</div>
+<div class="controls">
+  <span>Filter:</span>
+  <button class="btn on"        onclick="setFilter('all',this)">All (74)</button>
+  <button class="btn f-arch"    onclick="setFilter('arch',this)">Archaeological (12)</button>
+  <button class="btn f-other"   onclick="setFilter('other',this)">Other findspots (62)</button>
+  <button class="btn f-high"    onclick="setFilter('high',this)">High certainty</button>
+</div>
+<div class="sections">
+  <div class="section-block" id="block-arch">
+    <div class="section-header arch-hdr">
+      <div>
+        <div class="section-title">Archaeological sites — confirmed (ci_pipeline.py)</div>
+        <div class="section-sub">spatialtype = fsl:ArchaeologicalSite or fsl:Cave;fsl:ArchaeologicalSite · includes Castelcivita, Kozarnika, Temnata (pending pipeline update)</div>
+      </div>
+      <div class="section-count" id="count-arch"></div>
+    </div>
+    <table>
+      <thead><tr class="arch-hdr-row">
+        <th onclick="sortBy('id','a')">ID</th>
+        <th onclick="sortBy('label','a')">Site</th>
+        <th onclick="sortBy('spatialtype','a')">Spatial Type</th>
+        <th onclick="sortBy('certainty','a')">Certainty</th>
+        <th onclick="sortBy('relatedtohow','a')">Match Type</th>
+        <th onclick="sortBy('literature','a')">Literature</th>
+      </tr></thead>
+      <tbody id="tbody-arch"></tbody>
+    </table>
+  </div>
+  <div class="section-block" id="block-other">
+    <div class="section-header other-hdr">
+      <div>
+        <div class="section-title" style="color:#0C447C">All other findspots</div>
+        <div class="section-sub">Lakes, inhabited places, plateaux, maars, geological/sediment sites</div>
+      </div>
+      <div class="section-count" id="count-other"></div>
+    </div>
+    <table>
+      <thead><tr>
+        <th onclick="sortBy('id','o')">ID</th>
+        <th onclick="sortBy('label','o')">Site</th>
+        <th onclick="sortBy('spatialtype','o')">Spatial Type</th>
+        <th onclick="sortBy('certainty','o')">Certainty</th>
+        <th onclick="sortBy('relatedtohow','o')">Match Type</th>
+        <th onclick="sortBy('literature','o')">Literature</th>
+      </tr></thead>
+      <tbody id="tbody-other"></tbody>
+    </table>
+  </div>
+</div>
+<div style="height:32px"></div>
+<script>
+const CERT_ORDER = {'fsl:high':0,'fsl:medium':1,'fsl:representative':2,'fsl:low':3,'fsl:dubious':4};
+const CERT_LABEL = {'fsl:high':'high','fsl:medium':'medium','fsl:representative':'representative','fsl:low':'low','fsl:dubious':'dubious'};
+const CERT_CLASS = {'fsl:high':'b-cert-high','fsl:medium':'b-cert-med','fsl:representative':'b-cert-rep','fsl:low':'b-cert-low','fsl:dubious':'b-cert-dub'};
+const SPTYPE_LABEL = v => v.replace(/fsl:/g,'').replace(/;/g,' · ');
+const MATCH_LABEL  = v => ({'skos:closeMatch':'close match','fsl:spatialCloseMatch':'spatial close','fsl:partlyMatch':'partial','fsl:dubiousMatch':'dubious'}[v]||v);
+
+const SITES = [{"id": 1, "label": "Acerra Sink", "lat": 40.9489, "lon": 14.3624, "spatialtype": "fsl:Sink", "certainty": "fsl:medium", "relatedtohow": "fsl:partlyMatch", "literature": "Scandone et al., 1991", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 2, "label": "Acqua Fidia", "lat": 40.9285, "lon": 14.6983, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Rosi et al., 1999", "qid": null, "osm": "node/2883423553", "wp": null, "is_arch": false, "proposed": false}, {"id": 3, "label": "Capezzano", "lat": 40.7119, "lon": 14.768, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q2610850", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 4, "label": "Casola", "lat": 40.6993, "lon": 14.5259, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Rosi et al., 1999", "qid": null, "osm": "node/68580470", "wp": null, "is_arch": false, "proposed": false}, {"id": 5, "label": "Castelcivita Cave", "lat": 40.4956, "lon": 15.2092, "spatialtype": "fsl:Cave", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Fedele et al., 2008;Giaccio et al., 2008", "qid": "Q3777120", "osm": "node/337519639", "wp": null, "is_arch": true, "proposed": false}, {"id": 6, "label": "Copecchia", "lat": 40.7198, "lon": 14.7662, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q3690987", "osm": "node/4371325110", "wp": null, "is_arch": false, "proposed": false}, {"id": 7, "label": "Cuma", "lat": 40.8381, "lon": 14.056, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Pappalardo et al., 1999", "qid": "Q243456", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 8, "label": "Gulf of Naples", "lat": 40.7192, "lon": 14.2559, "spatialtype": "fsl:Bight ", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Arienzo et al., 2009", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 9, "label": "Lago Patria (Naples)", "lat": 40.926, "lon": 14.0366, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Civetta et al., 1997;Scandone et al., 1991", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 10, "label": "Marina di Cassano (Naples)", "lat": 40.6385, "lon": 14.3998, "spatialtype": "fsl:Bight ", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Civetta et al., 1997", "qid": null, "osm": "node/566221732", "wp": null, "is_arch": false, "proposed": false}, {"id": 11, "label": "Massaquano (Naples)", "lat": 40.6619, "lon": 14.4476, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q3850928", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 12, "label": "Monte Echia (Naples)", "lat": 40.8312, "lon": 14.2479, "spatialtype": "fsl:Mountain", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Pappalardo et al., 1999", "qid": "Q2794197", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 13, "label": "Lago Grande di Monticchio", "lat": 40.9315, "lon": 15.6057, "spatialtype": "fsl:Lake", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Narcisi, 1996", "qid": "Q56258568", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 14, "label": "Monticchio (Bagni)", "lat": 40.949, "lon": 15.5699, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q593338", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 15, "label": "Monticchio Lakes", "lat": 40.9319, "lon": 15.6098, "spatialtype": "fsl:Lake", "certainty": "fsl:high", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Brauer et al., 2000;Fedele et al., 2003", "qid": null, "osm": "relation/15802545", "wp": null, "is_arch": false, "proposed": false}, {"id": 16, "label": "Murge Plateau", "lat": 41.0047, "lon": 16.2833, "spatialtype": "fsl:Plateau", "certainty": "fsl:low", "relatedtohow": "skos:closeMatch", "literature": "Giaccio et al., 2008", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 17, "label": "Naples", "lat": 40.8537, "lon": 14.208, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Orsi et al., 1996", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 18, "label": "Pacognano", "lat": 40.6484, "lon": 14.4347, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Civetta et al., 1997;Rosi et al., 1999", "qid": null, "osm": "node/5381436704", "wp": null, "is_arch": false, "proposed": false}, {"id": 19, "label": "Paglicci Cave", "lat": 41.6541, "lon": 15.615, "spatialtype": "fsl:Cave;fsl:ArchaeologicalSite", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Giaccio et al., 2008", "qid": "Q3777010", "osm": "node/2293681037", "wp": null, "is_arch": true, "proposed": false}, {"id": 20, "label": "Pellezzano", "lat": 40.7249, "lon": 14.7546, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q81270", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 21, "label": "Penta", "lat": 40.7615, "lon": 14.7979, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q1242721", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 22, "label": "Phlegraean Fields", "lat": 40.8275, "lon": 14.1402, "spatialtype": "fsl:Supervolcano", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Orsi et al., 1996;Fedele et al., 2003", "qid": "Q755123", "osm": "node/10879170567", "wp": null, "is_arch": false, "proposed": false}, {"id": 23, "label": "Ponti Rossi (Naples)", "lat": 40.8731, "lon": 14.2594, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "fsl:partlyMatch", "literature": "Civetta et al., 1997;Giaccio et al., 2008;Pappalardo et al., 1999", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 24, "label": "Pozzuoli Bay", "lat": 40.8215, "lon": 14.089, "spatialtype": "fsl:Bight ", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Orsi et al., 1996", "qid": "Q386701", "osm": "relation/8222525", "wp": null, "is_arch": false, "proposed": false}, {"id": 25, "label": "Pucara", "lat": 40.6783, "lon": 14.6459, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Civetta et al., 1997", "qid": null, "osm": "node/716485183", "wp": null, "is_arch": false, "proposed": false}, {"id": 26, "label": "Punta Marmolite", "lat": 40.8888, "lon": 14.1489, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Pappalardo et al., 1999", "qid": "Q72443", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 27, "label": "Sant‘ Agata dei due Golfi", "lat": 40.607, "lon": 14.3733, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Civetta et al., 1997", "qid": "Q1860399", "osm": "node/705576753", "wp": null, "is_arch": false, "proposed": false}, {"id": 28, "label": "Sant‘ Angelo a Scala", "lat": 40.9746, "lon": 14.7402, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q55100", "osm": "node/68567290", "wp": null, "is_arch": false, "proposed": false}, {"id": 29, "label": "San Marco", "lat": 41.0369, "lon": 14.3381, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Civetta et al., 1997", "qid": "Q58849", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 30, "label": "San Nicola La Strada", "lat": 41.0518, "lon": 14.3313, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Civetta et al., 1997", "qid": "Q58859", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 31, "label": "Scarafea Area", "lat": 40.9346, "lon": 14.156, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:dubious", "relatedtohow": "fsl:partlyMatch", "literature": "Civetta et al., 1997", "qid": "Q1438", "osm": "relation/40218", "wp": null, "is_arch": false, "proposed": false}, {"id": 32, "label": "Serino", "lat": 40.8567, "lon": 14.8706, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Fedele et al., 2008;Giaccio et al., 2008;Lowe et al., 2012", "qid": "Q55113", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 33, "label": "Starza", "lat": 41.0075, "lon": 14.7567, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Rosi et al., 1999", "qid": null, "osm": "node/8710500139", "wp": null, "is_arch": false, "proposed": false}, {"id": 34, "label": "Torregaveta", "lat": 40.8111, "lon": 14.0477, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Pappalardo et al., 1999", "qid": "Q47352348", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 35, "label": "Trefola", "lat": 40.8926, "lon": 14.1486, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Pappalardo et al., 1999", "qid": null, "osm": "node/4225662539", "wp": null, "is_arch": false, "proposed": false}, {"id": 36, "label": "Tufara", "lat": 41.0577, "lon": 14.7069, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q4000186", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 37, "label": "Tufarella Area", "lat": 40.7616, "lon": 14.7906, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:dubious", "relatedtohow": "fsl:partlyMatch", "literature": "Rosi et al., 1999", "qid": "Q1438", "osm": "relation/40218", "wp": null, "is_arch": false, "proposed": false}, {"id": 38, "label": "Vico Equense", "lat": 40.6622, "lon": 14.4273, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Rosi et al., 1999", "qid": "Q72732", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 39, "label": "Villa di Briano (Naples)", "lat": 41.0, "lon": 14.1607, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Civetta et al., 1997", "qid": "Q58927", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 40, "label": "Voscone Area", "lat": 40.8005, "lon": 14.5194, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:dubious", "relatedtohow": "fsl:partlyMatch", "literature": "Rosi et al., 1999", "qid": "Q1438", "osm": "relation/40218", "wp": null, "is_arch": false, "proposed": false}, {"id": 41, "label": "Lake Ohrid (Albania)", "lat": 40.9874, "lon": 20.6749, "spatialtype": "fsl:Lake", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Leicher et al., 2019, 2016", "qid": "Q156258", "osm": "relation/2905270", "wp": null, "is_arch": false, "proposed": false}, {"id": 42, "label": "Kozarnika Cave (Bulgaria)", "lat": 43.6519, "lon": 22.7024, "spatialtype": "fsl:Cave", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Lowe et al., 2012", "qid": "Q2037533", "osm": "node/8814442373", "wp": null, "is_arch": true, "proposed": false}, {"id": 43, "label": "Temnata Cave (Bulgaria)", "lat": 43.0892, "lon": 23.3848, "spatialtype": "fsl:Cave", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Fedele et al., 2008, 2003;Fitzsimmons et al., 2013;Giaccio et al., 2008", "qid": "Q12296153", "osm": "node/369821847", "wp": null, "is_arch": true, "proposed": false}, {"id": 44, "label": "Toplitsa Cave (Bulgaria)", "lat": 43.1907, "lon": 24.0053, "spatialtype": "fsl:Cave;fsl:ArchaeologicalSite", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Tsanova et al., 2021", "qid": "Q61788595", "osm": "node/11109379095", "wp": null, "is_arch": true, "proposed": false}, {"id": 45, "label": "Franchthi Cave (Greece)", "lat": 37.4226, "lon": 23.1311, "spatialtype": "fsl:Cave;fsl:ArchaeologicalSite", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Fedele et al., 2003", "qid": "Q1441331", "osm": "node/1221172611", "wp": null, "is_arch": true, "proposed": false}, {"id": 46, "label": "Klissoura (Greece)", "lat": 40.5361, "lon": 21.4672, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Lowe et al., 2012", "qid": "Q21468911", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 47, "label": "Tenaghi Philippon (Greece)", "lat": 40.9794, "lon": 24.2274, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:low", "relatedtohow": "fsl:dubiousMatch", "literature": "Lowe et al., 2012;Wulf et al., 2018", "qid": null, "osm": "node/299298568", "wp": null, "is_arch": false, "proposed": false}, {"id": 48, "label": "Susak Island (Greece)", "lat": 44.5104, "lon": 14.2921, "spatialtype": "fsl:Island", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Wacha, 2011", "qid": null, "osm": "relation/9854999", "wp": null, "is_arch": false, "proposed": false}, {"id": 49, "label": "Lake Ohrid (Macedonia)", "lat": 41.0467, "lon": 20.7409, "spatialtype": "fsl:Lake", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Leicher et al., 2019; Leicher et al., 2016", "qid": "Q156258", "osm": "relation/2905270", "wp": null, "is_arch": false, "proposed": false}, {"id": 50, "label": "Golema Pesht Cave near Zdunje (Macedonia)", "lat": 41.8117, "lon": 21.1617, "spatialtype": "fsl:Cave;fsl:ArchaeologicalSite", "certainty": "fsl:dubious", "relatedtohow": "skos:closeMatch", "literature": "Lowe et al., 2012", "qid": "Q20565511", "osm": "node/11107939919", "wp": null, "is_arch": true, "proposed": false}, {"id": 51, "label": "Crvena Stiljena (Montenegro)", "lat": 42.779, "lon": 18.4815, "spatialtype": "fsl:Cave;fsl:ArchaeologicalSite", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Morley & Woodward, 2011", "qid": "Q121418883", "osm": "node/10879170567", "wp": null, "is_arch": true, "proposed": false}, {"id": 52, "label": "Urluia (Romania)", "lat": 44.0947, "lon": 27.9021, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Fitzsimmons et al., 2014;Fitzsimmons et al.,, 2013;Obreht et al., 2017;Pötter et al., 2021", "qid": null, "osm": "way/84975654", "wp": null, "is_arch": false, "proposed": false}, {"id": 53, "label": "Dobrogea (Romania)", "lat": 43.9996, "lon": 28.2329, "spatialtype": "fsl:Plateau", "certainty": "fsl:representative", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Fitzsimmons et al., 2014; Fitzsimmons et al.,2013", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 54, "label": "Vlasca (Romania)", "lat": 44.3921, "lon": 27.8491, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht et al., 2017", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 55, "label": "Lower Danube Basin (Romania)", "lat": 43.655, "lon": 25.292, "spatialtype": "fsl:Plateau", "certainty": "fsl:low", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Obreht et al., 2017", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 56, "label": "Bratul Borcea (Romania)", "lat": 44.1891, "lon": 27.3271, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:dubious", "relatedtohow": "fsl:dubiousMatch", "literature": "Pötter et al., 2021", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 57, "label": "Balta Alba (Romania)", "lat": 45.3037, "lon": 27.2478, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Pötter et al., 2021", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 58, "label": "Russian Plane", "lat": 55.0, "lon": 45.0, "spatialtype": "fsl:Plateau", "certainty": "fsl:low", "relatedtohow": "fsl:spatialCloseMatch", "literature": "Fitzsimmons et al., 2013", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 59, "label": "Kostenki-Borshchevo (Russia)", "lat": 51.3858, "lon": 39.0517, "spatialtype": "fsl:ArchaeologicalSite", "certainty": "fsl:representative", "relatedtohow": "fsl:dubiousMatch", "literature": "Fedele et al., 2008;Giaccio et al., 2008", "qid": null, "osm": null, "wp": "https://en.wikipedia.org/wiki/Kostyonki%E2%80%93Borshchyovo", "is_arch": true, "proposed": false}, {"id": 60, "label": "Kostenki (Russia)", "lat": 51.3858, "lon": 39.0473, "spatialtype": "fsl:InhabitedPlace", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Fedele et al., 2003", "qid": "Q2070357", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 61, "label": "Kisiljevo (Serbia)", "lat": 44.7397, "lon": 21.3912, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Baykal et al., 2018", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 62, "label": "Tabula Traiana (Serbia)", "lat": 44.6568, "lon": 22.3094, "spatialtype": "fsl:ArchaeologicalSite", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Boric et al., 2012;Lowe et al., 2012", "qid": "Q2091689", "osm": "node/1918839400", "wp": null, "is_arch": true, "proposed": false}, {"id": 63, "label": "Titel Pleateau (Serbia)", "lat": 45.2034, "lon": 20.3026, "spatialtype": "fsl:ArchaeologicalSite", "certainty": "fsl:low", "relatedtohow": "skos:closeMatch", "literature": "Baykal et al., 2018", "qid": "Q3391916", "osm": null, "wp": null, "is_arch": true, "proposed": false}, {"id": 64, "label": "Southern Ukraine", "lat": 47.43, "lon": 31.8, "spatialtype": "fsl:ModernRegion", "certainty": "fsl:low", "relatedtohow": "fsl:dubiousMatch", "literature": "Fitzsimmons et al., 2013", "qid": "Q2641546", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 65, "label": "Haua-Fteah (Libya)", "lat": 32.9002, "lon": 22.0516, "spatialtype": "fsl:Cave;fsl:ArchaeologicalSite", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Lowe et al., 2012", "qid": "Q25226810", "osm": "node/7778324735", "wp": null, "is_arch": true, "proposed": false}, {"id": 101, "label": "Orlovat", "lat": 45.2417, "lon": 20.5809, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht, I. et al. (2017), Fig. 1;Obreht, I. et al. (2015)", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 102, "label": "Stalać", "lat": 43.6728, "lon": 21.4058, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht, I. et al. (2017), Fig. 1;Obreht, I. et al. (2016)", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 103, "label": "Dunaszekcső", "lat": 46.0874, "lon": 18.7587, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht, I. et al. (2017), Fig. 1;Újvári, G. Et al. (2016)", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 104, "label": "Batajnica", "lat": 44.9032, "lon": 20.2802, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht, I. et al. (2017), Fig. 1;Buggle, B. et al. (2013);Buggle, B. et al. (2014)", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 105, "label": "Rasova", "lat": 44.2462, "lon": 27.9347, "spatialtype": "fsl:UnknownCategory", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht, I. et al. (2017), Fig. 1;Zeeden, C. et al. (2018)", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 106, "label": "Lake Prespa", "lat": 40.9167, "lon": 21.0, "spatialtype": "fsl:Lake", "certainty": "fsl:medium", "relatedtohow": "skos:closeMatch", "literature": "Obreht, I. et al. (2017), Fig. 1;Panagiotopoulos, K. (2014)", "qid": null, "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 201, "label": "Auel Maar AU3", "lat": 50.2825, "lon": 6.5951, "spatialtype": "fsl:Maar", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Schenk et al. (2024)", "qid": "Q134466471", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 202, "label": "Auel Maar AU4", "lat": 50.2821, "lon": 6.5949, "spatialtype": "fsl:Maar", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Schenk et al. (2024)", "qid": "Q134466471", "osm": null, "wp": null, "is_arch": false, "proposed": false}, {"id": 203, "label": "Dehner Maar DE3", "lat": 50.2928, "lon": 6.5066, "spatialtype": "fsl:Maar", "certainty": "fsl:high", "relatedtohow": "skos:closeMatch", "literature": "Schenk et al. (2024)", "qid": "Q134466523", "osm": null, "wp": null, "is_arch": false, "proposed": false}];
+
+// Map
+const map = L.map('map').setView([43, 18], 4);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);
+
+// Fullscreen control (native, no plugin needed)
+const FullscreenControl = L.Control.extend({
+  options: {position:'topleft'},
+  onAdd: function(){
+    const btn = L.DomUtil.create('button','leaflet-bar leaflet-control');
+    btn.innerHTML = '⛶';
+    btn.title = 'Toggle fullscreen';
+    btn.style.cssText = 'width:30px;height:30px;font-size:16px;cursor:pointer;background:#fff;border:none;display:flex;align-items:center;justify-content:center;';
+    L.DomEvent.on(btn,'click',function(e){
+      L.DomEvent.stopPropagation(e);
+      const el = document.getElementById('map');
+      if(!document.fullscreenElement){
+        el.requestFullscreen().catch(()=>{});
+        btn.innerHTML = '✕';
+      } else {
+        document.exitFullscreen();
+        btn.innerHTML = '⛶';
+      }
+    });
+    document.addEventListener('fullscreenchange',function(){
+      if(!document.fullscreenElement) btn.innerHTML = '⛶';
+    });
+    return btn;
+  }
+});
+new FullscreenControl().addTo(map);
+
+// Legend control (bottom right, inside map)
+const LegendControl = L.Control.extend({
+  options: {position:'bottomright'},
+  onAdd: function(){
+    const div = L.DomUtil.create('div','leaflet-bar');
+    div.style.cssText = 'background:#fff;padding:8px 12px;font-size:12px;line-height:1.9;color:#1a1a18;min-width:190px;pointer-events:none;';
+    div.innerHTML =
+      '<div style="font-weight:500;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#888">Legend</div>'+
+      '<div style="display:flex;align-items:center;gap:7px"><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#9a3412"/></svg><strong style="color:#9a3412">archaeological site</strong></div>'+
+      '<div style="display:flex;align-items:center;gap:7px"><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#3B8BD4"/></svg>other findspot</div>'+
+      '<div style="display:flex;align-items:center;gap:7px;margin-top:3px"><svg width="16" height="12"><circle cx="4" cy="6" r="2.2" fill="#aaa"/><circle cx="12" cy="6" r="5" fill="#aaa"/></svg><span style="color:#888">size = certainty</span></div>'+
+      '<div style="display:flex;align-items:center;gap:7px"><span style="opacity:.4;font-size:11px">filled</span> high · <span style="opacity:.3;font-size:11px">faded</span> dubious</div>';
+    return div;
+  }
+});
+new LegendControl().addTo(map);
+
+const markers = {};
+function markerColor(s){ return s.is_arch ? '#9a3412' : '#3B8BD4'; }
+function markerRadius(s){ const co = CERT_ORDER[s.certainty]??2; return 10 - co*1.8; }
+function markerOpacity(s){ return s.certainty==='fsl:dubious' ? 0.35 : 0.85; }
+
+SITES.forEach(s => {
+  if(s.lat === null || s.lon === null) return;  // skip sites with missing coordinates
+  const m = L.circleMarker([s.lat,s.lon],{
+    radius: markerRadius(s), fillColor: markerColor(s),
+    color: '#fff', weight: 1.5, fillOpacity: markerOpacity(s)
+  }).addTo(map);
+
+  const wdL  = s.qid ? `<a href="https://www.wikidata.org/wiki/${s.qid}" target="_blank" class="popup-link lnk-wd">Wikidata ${s.qid}</a>` : '';
+  const osmL = s.osm ? `<a href="https://www.openstreetmap.org/${s.osm}" target="_blank" class="popup-link lnk-osm">OSM ${s.osm}</a>` : '';
+  const wpL  = s.wp  ? `<a href="${s.wp}" target="_blank" class="popup-link lnk-wp">Wikipedia</a>` : '';
+  const tag  = s.is_arch
+    ? `<span class="popup-badge" style="background:#9a3412;color:#fff">archaeological</span>`
+    : '';
+
+  m.bindPopup(
+    `<div class="popup-name">${s.label} <span style="font-weight:400;color:#888;font-size:11px">(ID ${s.id})</span></div>`+
+    `<div class="popup-row" style="margin-bottom:4px">${tag}<span class="popup-badge ${CERT_CLASS[s.certainty]}">${CERT_LABEL[s.certainty]}</span></div>`+
+    `<div class="popup-row"><b>Spatial type:</b> ${SPTYPE_LABEL(s.spatialtype)}</div>`+
+    `<div class="popup-row"><b>Match:</b> ${MATCH_LABEL(s.relatedtohow)}</div>`+
+    `<div class="popup-row"><b>Literature:</b> <i>${s.literature}</i></div>`+
+    `<div class="popup-links">${wdL}${osmL}${wpL}</div>`,
+    {maxWidth:320}
+  );
+  markers[s.id] = m;
+});
+
+let activeFilter = 'all';
+const sortState = {a:{key:'id',dir:1}, o:{key:'id',dir:1}};
+
+function setFilter(f, btn){
+  activeFilter = f;
+  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  render();
+}
+
+function sortBy(key, tbl){
+  const st = sortState[tbl];
+  if(st.key===key) st.dir*=-1; else { st.key=key; st.dir=1; }
+  render();
+}
+
+function applyFilter(sites){
+  if(activeFilter==='high') return sites.filter(s=>s.certainty==='fsl:high');
+  return sites;
+}
+
+function sortSites(sites, tbl){
+  const {key,dir} = sortState[tbl];
+  return [...sites].sort((a,b)=>{
+    let av=a[key], bv=b[key];
+    if(key==='certainty'){ av=CERT_ORDER[av]??9; bv=CERT_ORDER[bv]??9; }
+    if(typeof av==='string'){ av=av.toLowerCase(); bv=bv.toLowerCase(); }
+    return av<bv?-dir:av>bv?dir:0;
+  });
+}
+
+function linksHtml(s){
+  const wd  = s.qid ? `<a href="https://www.wikidata.org/wiki/${s.qid}" target="_blank" class="ext-link lnk-wd">WD ${s.qid}</a>` : `<span class="ext-link lnk-wd lnk-missing">WD –</span>`;
+  const osm = s.osm ? `<a href="https://www.openstreetmap.org/${s.osm}" target="_blank" class="ext-link lnk-osm">OSM ↗</a>` : `<span class="ext-link lnk-osm lnk-missing">OSM –</span>`;
+  const wp  = s.wp  ? `<a href="${s.wp}" target="_blank" class="ext-link lnk-wp">WP ↗</a>` : '';
+  return `<div class="ext-links">${wd}${osm}${wp}</div>`;
+}
+
+function archRowHtml(s){
+  return `<tr class="${s.certainty==='fsl:high'?'high-cert':''}">
+    <td style="color:#888;font-size:12px">${s.id}</td>
+    <td><div class="site-name">${s.label}</div>${linksHtml(s)}</td>
+    <td><span class="sptype">${SPTYPE_LABEL(s.spatialtype)}</span></td>
+    <td><span class="badge ${CERT_CLASS[s.certainty]}">${CERT_LABEL[s.certainty]}</span></td>
+    <td style="font-size:12px;color:#5f5e5a">${MATCH_LABEL(s.relatedtohow)}</td>
+    <td><span class="lit">${s.literature}</span></td>
+  </tr>`;
+}
+
+function otherRowHtml(s){
+  return `<tr class="${s.certainty==='fsl:high'?'high-cert':''}">
+    <td style="color:#888;font-size:12px">${s.id}</td>
+    <td><div class="site-name">${s.label}</div>${linksHtml(s)}</td>
+    <td><span class="sptype">${SPTYPE_LABEL(s.spatialtype)}</span></td>
+    <td><span class="badge ${CERT_CLASS[s.certainty]}">${CERT_LABEL[s.certainty]}</span></td>
+    <td style="font-size:12px;color:#5f5e5a">${MATCH_LABEL(s.relatedtohow)}</td>
+    <td><span class="lit">${s.literature}</span></td>
+  </tr>`;
+}
+
+function render(){
+  const archSites  = SITES.filter(s=>s.is_arch);
+  const otherSites = SITES.filter(s=>!s.is_arch);
+
+  const hideArch  = activeFilter==='other';
+  const hideOther = activeFilter==='arch';
+
+  const aRows = hideArch  ? [] : sortSites(applyFilter(archSites),  'a');
+  const oRows = hideOther ? [] : sortSites(applyFilter(otherSites), 'o');
+
+  document.getElementById('count-arch').textContent  = aRows.length+' sites';
+  document.getElementById('count-other').textContent = oRows.length+' sites';
+
+  document.getElementById('block-arch').style.opacity  = hideArch  ? '0.25' : '1';
+  document.getElementById('block-other').style.opacity = hideOther ? '0.25' : '1';
+
+  document.getElementById('tbody-arch').innerHTML  = aRows.map(archRowHtml).join('');
+  document.getElementById('tbody-other').innerHTML = oRows.map(otherRowHtml).join('');
+
+  const vis = new Set([...aRows,...oRows].map(s=>s.id));
+  Object.values(markers).forEach(m=>m.setStyle({opacity:.1,fillOpacity:.08}));
+  vis.forEach(id=>{
+    const orig = markerOpacity(SITES.find(s=>s.id===id));
+    markers[id]?.setStyle({opacity:1,fillOpacity:orig});
+  });
+}
+
+render();
+</script>
+</body>
+</html>
