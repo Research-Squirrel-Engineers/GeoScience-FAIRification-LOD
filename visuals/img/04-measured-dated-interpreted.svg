@@ -112,8 +112,8 @@
 <text x="1704" y="681.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#ffffff">3</text>
 <rect x="60" y="954" width="22" height="22" rx="3" fill="url(#cold)" stroke="#000000" stroke-width="1"/>
 <text x="92" y="965" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">MIS 2, cold</text>
-<rect x="220.72" y="954" width="22" height="22" rx="3" fill="url(#warm)" stroke="#000000" stroke-width="1"/>
-<text x="252.72" y="965" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">MIS 3, warm</text>
+<rect x="220.7" y="954" width="22" height="22" rx="3" fill="url(#warm)" stroke="#000000" stroke-width="1"/>
+<text x="252.7" y="965" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">MIS 3, warm</text>
 <polygon points="400,958 400,972 414,965" fill="#9a3412" stroke="#000000"/>
 <text x="424" y="965" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">U/Th date</text>
 <line x1="540" y1="965" x2="590" y2="965" stroke="#1f1f1d" stroke-width="3"/>

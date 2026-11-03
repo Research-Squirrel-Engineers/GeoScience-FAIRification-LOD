@@ -59,14 +59,14 @@
 <text x="675.0" y="770.84" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">a geolod:DrillingSite</text>
 <path d="M 480 275 L 480 755" fill="none" stroke="#55544f" stroke-width="1.6"/>
 <line x1="480" y1="395" x2="498" y2="395" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<rect x="500" y="304" width="231.28" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
-<text x="615.64" y="319" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">sosa:hasFeatureOfInterest</text>
+<rect x="500" y="304" width="231.3" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="615.65" y="319" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">sosa:hasFeatureOfInterest</text>
 <line x1="480" y1="575" x2="498" y2="575" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <rect x="500" y="484" width="204.1" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
 <text x="602.05" y="499" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">sosa:observedProperty</text>
 <line x1="480" y1="755" x2="498" y2="755" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<rect x="500" y="664" width="194.74" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
-<text x="597.37" y="679" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">crm:P7_took_place_at</text>
+<rect x="500" y="664" width="194.7" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="597.35" y="679" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">crm:P7_took_place_at</text>
 <line x1="412" y1="215" x2="458" y2="215" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <rect x="915" y="165" width="340" height="100" rx="6" fill="#9a3412" stroke="#000000" stroke-width="1"/>
 <text x="1085.0" y="198.76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#ffffff">E13</text>
@@ -106,17 +106,17 @@
 <line x1="1323" y1="755" x2="1257" y2="755" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <rect x="560" y="904" width="22" height="22" rx="3" fill="#166534" stroke="#000000" stroke-width="1"/>
 <text x="592" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Physical object</text>
-<rect x="757.77" y="904" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
-<text x="789.77" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Instance in the graph</text>
-<rect x="1009.88" y="904" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
-<text x="1041.88" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Class</text>
-<rect x="1122.15" y="904" width="22" height="22" rx="3" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
-<text x="1154.15" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Property</text>
+<rect x="757.8" y="904" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="789.8" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Instance in the graph</text>
+<rect x="1009.9" y="904" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1041.9" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Class</text>
+<rect x="1122.2" y="904" width="22" height="22" rx="3" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1154.2" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Property</text>
 <line x1="1250" y1="915" x2="1298" y2="915" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <text x="1310" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">is a  (rdfs:subClassOf)</text>
 <rect x="560" y="949" width="22" height="22" rx="3" fill="url(#warm)" stroke="#000000" stroke-width="1"/>
 <text x="592" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Warm stage, odd MIS number</text>
-<rect x="882.03" y="949" width="22" height="22" rx="3" fill="url(#cold)" stroke="#000000" stroke-width="1"/>
-<text x="914.03" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Cold stage, even MIS number</text>
+<rect x="882.0" y="949" width="22" height="22" rx="3" fill="url(#cold)" stroke="#000000" stroke-width="1"/>
+<text x="914.0" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Cold stage, even MIS number</text>
 <text x="1250" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Stage limits from the CH₄ record, EDC2-gas</text>
 </svg>

@@ -51,7 +51,7 @@
 <text x="1497.5" y="371.3400000000004" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#ffffff">AICC2023-ice</text>
 <text x="1497.5" y="406.0600000000004" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="21" fill="#ffffff">temporal reference system</text>
 <line x1="845" y1="387.5800000000004" x2="662" y2="387.5800000000004" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<rect x="667.6800000000001" y="346.5800000000004" width="168.64" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<rect x="667.7" y="346.5800000000004" width="168.6" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
 <text x="752.0" y="361.5800000000004" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">crm:P141_assigned</text>
 <line x1="1085" y1="387.5800000000004" x2="1283" y2="387.5800000000004" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <rect x="1092.4" y="346.5800000000004" width="185.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
@@ -63,7 +63,7 @@
 <text x="1497.5" y="709.5799999999999" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#ffffff">EDC2-gas</text>
 <text x="1497.5" y="744.3" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="21" fill="#ffffff">temporal reference system</text>
 <line x1="845" y1="725.8199999999999" x2="662" y2="725.8199999999999" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<rect x="667.6800000000001" y="684.8199999999999" width="168.64" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<rect x="667.7" y="684.8199999999999" width="168.6" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
 <text x="752.0" y="699.8199999999999" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">crm:P141_assigned</text>
 <line x1="1085" y1="725.8199999999999" x2="1283" y2="725.8199999999999" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <rect x="1092.4" y="684.8199999999999" width="185.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
@@ -79,16 +79,16 @@
 <text x="1124.4" y="643.26" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">crm:P140_assigned_attribute_to</text>
 <rect x="125" y="904" width="22" height="22" rx="3" fill="url(#warm)" stroke="#000000" stroke-width="1"/>
 <text x="157" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">MIS 5, warm stage</text>
-<rect x="347.85" y="904" width="22" height="22" rx="3" fill="url(#cold)" stroke="#000000" stroke-width="1"/>
-<text x="379.85" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">MIS 6, cold stage</text>
+<rect x="347.8" y="904" width="22" height="22" rx="3" fill="url(#cold)" stroke="#000000" stroke-width="1"/>
+<text x="379.8" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">MIS 6, cold stage</text>
 <line x1="600" y1="915" x2="650" y2="915" stroke="#1f1f1d" stroke-width="5"/>
 <text x="662" y="915" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Beginning of MIS 5 on this chronology, interpolated</text>
 <rect x="125" y="949" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
 <text x="157" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Value</text>
-<rect x="240.88" y="949" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
-<text x="272.88" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Assignment (E13)</text>
-<rect x="454.03999999999996" y="949" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
-<text x="486.03999999999996" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Concept or reference system</text>
-<rect x="770.56" y="949" width="22" height="22" rx="3" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
-<text x="802.56" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Property</text>
+<rect x="240.9" y="949" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="272.9" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Assignment (E13)</text>
+<rect x="454.1" y="949" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="486.1" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Concept or reference system</text>
+<rect x="770.6" y="949" width="22" height="22" rx="3" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="802.6" y="960" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Property</text>
 </svg>
