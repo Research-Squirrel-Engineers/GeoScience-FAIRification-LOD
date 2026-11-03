@@ -1,0 +1,3 @@
+# Figures only; the pipeline does not need these.
+resvg-py>=0.2
+pillow>=10

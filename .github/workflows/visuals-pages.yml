@@ -1,0 +1,30 @@
+name: Publish slide figures
+
+# visuals/site/ goes to gh-pages under /visuals/. The ontology documentation
+# workflow deploys to the same branch with clean: false, so neither removes
+# what the other wrote.
+on:
+  push:
+    branches: ["main"]
+    paths: ["visuals/site/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visuals-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: visuals/site
+          target-folder: visuals
+          clean: true

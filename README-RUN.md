@@ -303,3 +303,11 @@ Erwartet: CRM-Abdeckung ohne Lücke, null SHACL-Verstösse. Eine Warnung zu
 | `none of SISAL/rdf/sisal_sites.ttl … found` | die Übersichtskarte lief vor dem SISAL-Schritt |
 | `columns missing from cifindspots_part_full.csv` | die Fundstellentabelle stammt aus einer anderen Fassung von `campanian-ignimbrite-geo` |
 | Bundle-Schritt dauert ewig | das ist die SHACL-Validierung über zwei Millionen Tripel. `--no-bundle` überspringt sie |
+
+## `visuals/build.py` — Abbildungen für Vorträge
+
+```cmd
+py visuals\build.py
+```
+
+Schreibt sieben Abbildungen als SVG und PNG sowie `index.html` nach `visuals/site/`. Kein Teil von `main.py`; braucht `visuals/requirements.txt`. Der Workflow `visuals-pages.yml` veröffentlicht den Ordner unter `/visuals/` auf GitHub Pages.
