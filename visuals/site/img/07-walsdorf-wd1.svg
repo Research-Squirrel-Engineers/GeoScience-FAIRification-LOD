@@ -188,8 +188,8 @@
 <line x1="1250" y1="268" x2="1308" y2="268" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="1250" y1="416" x2="1308" y2="416" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="1200" y1="564" x2="1308" y2="564" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<rect x="1310" y="39" width="126.25" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
-<text x="1373.125" y="54" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:partOfCore</text>
+<rect x="1310" y="39" width="126.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1373.1" y="54" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:partOfCore</text>
 <rect x="1310" y="187" width="147.7" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
 <text x="1383.85" y="202" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:markerTephra</text>
 <rect x="1310" y="335" width="192.1" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
@@ -197,7 +197,7 @@
 <rect x="1310" y="483" width="155.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
 <text x="1387.6" y="498" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:hostsSpecimen</text>
 <line x1="1000" y1="318" x2="1000" y2="512" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<rect x="953.375" y="401" width="93.25" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<rect x="953.4" y="401" width="93.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
 <text x="1000.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:meets</text>
 <text x="800" y="655" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#1f1f1d">Depth is measured, age is modelled</text>
 <text x="800" y="689" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#55544f">Anchors: HBT 40Ar/39Ar at 86.43 m, GLT at 20.20 m</text>
@@ -205,35 +205,35 @@
 <text x="800" y="751" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#55544f">Dashed: strat: classes exist in geo-lod, WD1 instances and IRIs are illustrative</text>
 <rect x="800" y="789" width="22" height="22" rx="3" fill="#e7d3b0" stroke="#000000" stroke-width="1"/>
 <text x="832" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Gyttja</text>
-<rect x="918.54" y="789" width="22" height="22" rx="3" fill="#b8bcc0" stroke="#000000" stroke-width="1"/>
-<text x="950.54" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Sapropel</text>
-<rect x="1064.06" y="789" width="22" height="22" rx="3" fill="#f6efc4" stroke="#000000" stroke-width="1"/>
-<text x="1096.06" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Silt–clay lamination</text>
-<rect x="1302.6799999999998" y="789" width="22" height="22" rx="3" fill="#dfc7c0" stroke="#000000" stroke-width="1"/>
-<text x="1334.6799999999998" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Rubble</text>
-<rect x="1431.6699999999998" y="789" width="22" height="22" rx="3" fill="#e6b8a8" stroke="#000000" stroke-width="1"/>
-<text x="1463.6699999999998" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Landslide</text>
+<rect x="918.5" y="789" width="22" height="22" rx="3" fill="#b8bcc0" stroke="#000000" stroke-width="1"/>
+<text x="950.5" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Sapropel</text>
+<rect x="1064.0" y="789" width="22" height="22" rx="3" fill="#f6efc4" stroke="#000000" stroke-width="1"/>
+<text x="1096.0" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Silt–clay lamination</text>
+<rect x="1302.6" y="789" width="22" height="22" rx="3" fill="#dfc7c0" stroke="#000000" stroke-width="1"/>
+<text x="1334.6" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Rubble</text>
+<rect x="1431.6" y="789" width="22" height="22" rx="3" fill="#e6b8a8" stroke="#000000" stroke-width="1"/>
+<text x="1463.6" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Landslide</text>
 <rect x="800" y="827" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <text x="832" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Calcite</text>
-<rect x="926.14" y="827" width="22" height="22" rx="3" fill="#d9d2c5" stroke="#000000" stroke-width="1"/>
-<text x="958.14" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Other</text>
-<rect x="1043.16" y="827" width="22" height="22" rx="3" fill="#eeeeec" stroke="#000000" stroke-width="1"/>
-<text x="1075.16" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Not described</text>
+<rect x="926.1" y="827" width="22" height="22" rx="3" fill="#d9d2c5" stroke="#000000" stroke-width="1"/>
+<text x="958.1" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Other</text>
+<rect x="1043.1" y="827" width="22" height="22" rx="3" fill="#eeeeec" stroke="#000000" stroke-width="1"/>
+<text x="1075.1" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Not described</text>
 <rect x="800" y="865" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
 <text x="832" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Marker tephra</text>
-<rect x="990.9300000000001" y="865" width="22" height="22" rx="3" fill="#1f1f1d" stroke="#000000" stroke-width="1"/>
-<text x="1022.9300000000001" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Primary tephra</text>
-<rect x="1188.51" y="865" width="22" height="22" rx="3" fill="#8a8a84" stroke="#000000" stroke-width="1"/>
-<text x="1220.51" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Reworked tephra</text>
-<rect x="1404.71" y="865" width="22" height="22" rx="3" fill="#5c6f82" stroke="#000000" stroke-width="1"/>
-<text x="1436.71" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Tephra, not classified</text>
+<rect x="990.9" y="865" width="22" height="22" rx="3" fill="#1f1f1d" stroke="#000000" stroke-width="1"/>
+<text x="1022.9" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Primary tephra</text>
+<rect x="1188.5" y="865" width="22" height="22" rx="3" fill="#8a8a84" stroke="#000000" stroke-width="1"/>
+<text x="1220.5" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Reworked tephra</text>
+<rect x="1404.7" y="865" width="22" height="22" rx="3" fill="#5c6f82" stroke="#000000" stroke-width="1"/>
+<text x="1436.7" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Tephra, not classified</text>
 <rect x="800" y="903" width="22" height="22" rx="3" fill="#166534" stroke="#000000" stroke-width="1"/>
 <text x="832" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Physical object</text>
-<rect x="997.77" y="903" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
-<text x="1029.77" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Instance</text>
-<rect x="1139.49" y="903" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
-<text x="1171.49" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Class</text>
-<rect x="1251.76" y="903" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
-<text x="1283.76" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Concept</text>
+<rect x="997.8" y="903" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="1029.8" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Instance</text>
+<rect x="1139.5" y="903" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1171.5" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Class</text>
+<rect x="1251.8" y="903" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1283.8" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Concept</text>
 <text x="800" y="958" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Schenk et al. 2026, Quaternary 9, 67; tables CC BY 4.0, Fiona Schenk (wdt-tables)</text>
 </svg>

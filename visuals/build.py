@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build.py - slide figures for the semantic-modelling section of the CHNT31 talk.
 
-Seven figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
+Nine figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
 and a caption page, written to visuals/site/. That folder is what the workflow
 visuals-pages.yml publishes under /visuals/ on GitHub Pages.
 
@@ -61,7 +61,8 @@ def check_quoted_values():
             "Beginning of MIS 5 at 1782.26 m in the CH4 record", "Beginning of MIS 5 at 1759.64 m in the d18O record",
             "Beginning of MIS 5 at 1755.63 m in the dD record", "Beginning of MIS 5 at 1733.94 m in the dO2N2 record",
             "Beginning of MIS 5 at 1739.87 m in the dust record", "Beginning of MIS 6 at 2064.95 m in the CH4 record",
-            "Beginning of MIS 4 at 1150.53 m in the CH4 record", "geolod:atDepth_m 1782.015", "geolod:measuredValue 436.30000"],
+            "Beginning of MIS 4 at 1150.53 m in the CH4 record", "geolod:atDepth_m 1782.015", "geolod:measuredValue 436.30000",
+            "epica:mis_membership_ch4_0371 a geolod:MISMembershipAssignment", "132.16"],
         REPO/"SISAL/rdf/sisal_v3_dating.ttl": [
             "sisal:hiatus_0420893 a geolod:GrowthHiatus", "sisal:datingpoint_012773 a strat:AgeControlPoint",
             "geolod:ageKaBP 35.022453", "geolod:ageKaBP 31.481986"],
@@ -83,7 +84,10 @@ WARM, COLD = ("url(#warm)",), ("url(#cold)",)
 DARK, MUTED, LINE = "#1f1f1d", "#55544f", "#55544f"
 
 def tw(s, size, med=False):
-    return ImageFont.truetype(str(M if med else R), 100).getlength(s) * size / 100
+    # BASIC layout: raqm is not on every machine, and a width that differs
+    # between Windows and Linux would show up as a diff in every figure.
+    font = ImageFont.truetype(str(M if med else R), 100, layout_engine=ImageFont.Layout.BASIC)
+    return round(font.getlength(s) * size / 100, 1)
 
 class Fig:
     def __init__(s, name, title):
@@ -525,6 +529,129 @@ def fig5():
     f.save()
 
 
+
+GL, ST = ("#fff2cc", "#000000", "#000000"), ("#d8ead3", "#000000", "#000000")
+PILL = {"crm": "#d4e1f5", "sci": "#ffcc99", "arch": "#e3d5f0", "w3c": "#e4e4e0"}
+
+
+def cbox(f, x, y, w, h, name, anchor=None, fam="crm", st=GL, sub=None):
+    """A class in the style of the CRM family diagrams; the pill names its anchor."""
+    f.rect(x, y, w, h, st[0], "#000000", 14, 1.2)
+    if anchor is None and sub is None:
+        f.text(x+w/2, y+h/2, name, 21, True, "#000000", maxw=w-10); return
+    f.text(x+w/2, y+h*.30, name, 21, True, "#000000", maxw=w-10)
+    if sub is not None:
+        for i, t in enumerate(sub if isinstance(sub, list) else [sub]):
+            f.text(x+w/2, y+h*.30+27+i*24, t, 18, False, "#000000", maxw=w-10)
+    if anchor:
+        tw_ = tw(anchor, 16)+18; py_ = y+h-33
+        f.rect(x+w/2-tw_/2, py_, tw_, 25, PILL[fam], "#000000", 12, .8); f.text(x+w/2, py_+12.5, anchor, 16, False, "#000000")
+
+
+def label(f, x, y, t, anchor="middle"):
+    """A property name on a white ground, as in the CRM family figures."""
+    w = tw(t, 16)+10; x0 = x-w/2 if anchor == "middle" else x
+    f.rect(x0, y-12, w, 24, "#ffffff", "none"); f.text(x0+w/2, y, t, 16, True, "#000000")
+
+
+def model_legend(f, y, items, x=40):
+    f.text(x, y-34, "Models", 22, True, anchor="start")
+    for fill, t in items:
+        f.rect(x, y-13, 36, 26, fill, "#000000", 3); f.text(x+46, y, t, 20, anchor="start"); x += 46+tw(t, 20)+36
+
+
+def fig8():
+    f = Fig("08-geo-lod-ontology", "Classes and properties of the geo-lod model")
+    A, B, C, D, w, h = 40, 480, 930, 1400, 290, 96
+    r = [36, 215, 390, 565, 730]
+    c = lambda *a, **k: cbox(f, *a, **k)
+    c(A, r[0], w, h, "ObservableProperty", "S9 Property Type", "sci")
+    c(C, r[0], w, h, "MarineIsotopeStage", "E4 Period")
+    c(D, r[0], w+20, h, "Chronology", "S4 Observation", "sci")
+    c(A, r[1], w, h, "DataSource", "E73 Information Object")
+    c(B, r[1], w, h, "PalaeoclimateObservation", "S4 Observation", "sci")
+    c(C, r[1], w, h, "MISMembershipAssignment", "E13 Attribute Assignment")
+    c(D, r[1], w+20, h, "MISAttributeAssignment", "E13 Attribute Assignment")
+    c(A, r[2], w, h, "SamplingLocation", "E53 Place")
+    c(B, r[2], w, h, "PalaeoclimateSample", "E18 Physical Thing")
+    c(C, r[2], w, h, "strat:AgeControlPoint", "E13 Attribute Assignment", st=ST)
+    c(D, r[2], w+20, h, "DepthPosition", "E54 Dimension")
+    c(A, r[3], 140, h-20, "DrillingSite"); c(A+150, r[3], 140, h-20, "Cave")
+    c(A, r[4], w, h, "CIFindspot", "E27 Site")
+    c(B, r[3], 142, h, "IceCore", "E22"); c(B+148, r[3], 142, h, "Speleothem")
+    c(B, r[4], w, h, "DrillingCampaign", "S1 Matter Removal", "sci")
+    c(C, r[3], w, h, "GrowthHiatus", "A3 Stratigraphic Interface", "arch")
+    c(C, r[4], w, h, "SpeleothemSample", "E18 Physical Thing")
+    c(D, r[3], w+20, h, "AgeModel", "S6 Data Evaluation", "sci")
+    c(D, r[4], w+20, h, "AgeAssignment", "E13 Attribute Assignment")
+    # subclass arrows
+    f.line(A+70, r[3], A+70, r[2]+h+1, "t"); f.line(A+220, r[3], A+220, r[2]+h+1, "t")
+    f.line(B+71, r[3], B+71, r[2]+h+1, "t"); f.line(B+219, r[3], B+219, r[2]+h+1, "t")
+    # observation
+    ob = r[1]
+    f.path(f"M {B+40} {ob} L {B+40} 84 L {A+w+2} 84", "a"); label(f, B+40, 150, "sosa:observedProperty")
+    f.path(f"M {B+250} {ob} L {B+250} 84 L {C-2} 84", "a"); label(f, (B+250+C)/2, 84, "fallsWithinStage")
+    f.path(f"M {B+145} {ob} L {B+145} 14 L {D+155} 14 L {D+155} {r[0]-2}", "a"); label(f, 1000, 14, "ageChronology")
+    f.line(B, ob+48, A+w+2, ob+48); label(f, (A+w+B)/2, ob+24, "wasDerivedFrom")
+    f.path(f"M {B+40} {ob+h} L {B+40} {ob+h+22} L {(A+w+B)/2} {ob+h+22} L {(A+w+B)/2} {r[2]+26} L {A+w+2} {r[2]+26}", "a"); label(f, (A+w+B)/2, r[2]-14, "P7 took place at")
+    f.line(B+145, ob+h, B+145, r[2]-2); label(f, B+172, ob+h+40, "hasFeatureOfInterest", "start")
+    f.line(B, r[2]+70, A+w+2, r[2]+70); label(f, (A+w+B)/2, r[2]+70+16, "extractedFrom")
+    f.line(C, ob+48, B+w+2, ob+48); label(f, (B+w+C)/2, ob+24, "P140 assigned to")
+    f.line(C+145, ob, C+145, r[0]+h+2); label(f, C+145, (ob+r[0]+h)/2, "P141 assigned")
+    f.path(f"M {D} {ob+48} L {(C+w+D)/2} {ob+48} L {(C+w+D)/2} 84 L {C+w+2} 84", "a"); label(f, (C+w+D)/2, 140, "P140 assigned to")
+    f.line(D+155, ob, D+155, r[0]+h+2); label(f, D+155, (ob+r[0]+h)/2, "inChronology")
+    f.line(D+155, ob+h, D+155, r[2]-2); label(f, D+155, (ob+h+r[2])/2, "P141 assigned")
+    # drilling and speleothem
+    f.line(B+71, r[4], B+71, r[3]+h+2); label(f, B+71, (r[4]+r[3]+h)/2, "O1 removed")
+    sp = B+290
+    f.path(f"M {C} {r[2]+70} L {sp+40} {r[2]+70} L {sp+40} {r[3]+24} L {sp+2} {r[3]+24}", "a"); label(f, sp+58, r[2]+100, "constrainsSpeleothem", "start") if False else None
+    label(f, (sp+C)/2+10, r[2]+70-16, "constrains")
+    f.line(C, r[3]+48, sp+2, r[3]+48); label(f, (sp+C)/2+10, r[3]+70, "inSpeleothem")
+    f.path(f"M {C} {r[4]+48} L {sp+40} {r[4]+48} L {sp+40} {r[3]+80} L {sp+2} {r[3]+80}", "a"); label(f, (sp+C)/2+22, r[4]+70, "collectedFrom")
+    f.path(f"M {C+w} {r[2]+70} L {(C+w+D)/2} {r[2]+70} L {(C+w+D)/2} {r[3]+24} L {D-2} {r[3]+24}", "a"); label(f, (C+w+D)/2, r[2]+70+30, "usedInAgeModel")
+    f.line(C+w, r[3]+70, D-2, r[3]+70); label(f, (C+w+D)/2, r[3]+90, "respectedByAgeModel")
+    f.line(D+155, r[4], D+155, r[3]+h+2); label(f, D+155, (r[4]+r[3]+h)/2, "ageModel")
+    f.line(C+w, r[4]+48, D-2, r[4]+48); label(f, (C+w+D)/2, r[4]+24, "hasAgeAssignment")
+    model_legend(f, 918, [(GL[0], "geo-lod"), (ST[0], "strat:"), (PILL["crm"], "CIDOC CRM"), (PILL["sci"], "CRMsci"), (PILL["arch"], "CRMarchaeo")])
+    f.line(1010, 918, 1058, 918, "t"); f.text(1068, 918, "subclass of", 20, anchor="start")
+    f.line(1230, 918, 1278, 918, "a"); f.text(1288, 918, "property, as used in the graph", 20, anchor="start")
+    f.text(40, 970, "Selected classes of 46 in geo_lod_core, EPICA and SISAL. A pill names the CRM-family anchor; a class without one inherits it.", 18, color=MUTED, anchor="start", maxw=1670)
+    f.save()
+
+
+def fig9():
+    f = Fig("09-geo-lod-instance", "A semantic representation of one CH4 measurement from the EPICA Dome C core")
+    w, h = 340, 110
+    GREY = ("#e4e4e0", "#000000", "#000000")
+    c = lambda x, y, n, s, st=GL, ww=w: cbox(f, x, y, ww, h, n, sub=s, st=st)
+    X1, X2, X3, W3 = 40, 560, 1090, 420
+    c(X1, 40, "DataSource", ["Spahni & Stocker 2006"])
+    c(X2, 40, "ObservableProperty", ["Methane (CH₄), ppbv"])
+    c(X3, 40, "MarineIsotopeStage", ["MIS 5, warm stage"], ww=W3)
+    c(X3, 215, "MISMembershipAssignment", ["observation falls in MIS 5"], ww=W3)
+    c(X1, 395, "IceCore", ["EPICA Dome C core"])
+    c(X2, 395, "IceCoreObservation", ["Methane, 436.3 ppbv", "at 1782.015 m"])
+    c(X3, 395, "IceCoreChronology", ["EDC2-gas"], ww=W3)
+    c(X3, 575, "MISAttributeAssignment", ["Beginning of MIS 5", "at 1782.26 m"], ww=W3)
+    c(X1, 750, "DrillingSite", ["EPICA Dome C,", "East Antarctica"])
+    c(X2, 750, "time:TimePosition", ["132.16 ka", "on EDC2-gas"], GREY)
+    c(X3, 750, "DepthPosition", ["1782.26 m"], ww=W3)
+    f.line(X2+170, 395, X2+170, 152); label(f, X2+170, 275, "sosa:observedProperty")
+    f.path(f"M {X2+50} 395 L {X2+50} 210 L {X1+170} 210 L {X1+170} 152", "a"); label(f, 400, 210, "prov:wasDerivedFrom")
+    f.line(X2, 450, X1+342, 450); label(f, (X1+340+X2)/2, 426, "hasFeatureOfInterest")
+    f.line(X1+120, 505, X1+120, 748); label(f, X1+120, 625, "extractedFrom")
+    f.path(f"M {X2+50} 505 L {X2+50} 640 L {X1+290} 640 L {X1+290} 748", "a"); label(f, 470, 640, "P7 took place at")
+    f.line(X2+230, 505, X2+230, 748); label(f, X2+230, 625, "hasTimePosition")
+    f.path(f"M {X3} 270 L {X2+290} 270 L {X2+290} 393", "a"); label(f, 995, 246, "P140 assigned to")
+    f.line(X3+210, 215, X3+210, 152); label(f, X3+210, 184, "P141 assigned")
+    f.line(X2+340, 450, X3-2, 450); label(f, (X2+340+X3)/2, 426, "ageChronology")
+    f.line(X3+210, 575, X3+210, 507); label(f, X3+210, 541, "inChronology")
+    f.line(X3+210, 685, X3+210, 748); label(f, X3+210, 716, "P141 assigned")
+    f.path(f"M {X3+W3} 630 L 1600 630 L 1600 95 L {X3+W3+2} 95", "a"); label(f, 1600, 360, "P140 assigned to")
+    model_legend(f, 925, [(GL[0], "geo-lod"), ("#e4e4e0", "OWL-Time")])
+    f.text(560, 925, "Each class shown is the most specific one; figure 08 gives its CRM-family anchor.", 20, color=MUTED, anchor="start", maxw=1150)
+    f.save()
+
 ITEMS = [
  ("01-from-measurement-to-crm", "From one table row to CIDOC CRM and its extensions.", "Data: EPICA Dome C, Spahni & Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0."),
  ("02-crm-family", "Extensions specialise CIDOC CRM classes rather than replace them.", "Classes: geo-lod, CIDOC CRM, CRMsci 2.0, CRMarchaeo 1.4.8; figure CC BY 4.0."),
@@ -533,6 +660,8 @@ ITEMS = [
  ("05-ci-map", "Archaeological sites with Campanian Ignimbrite tephra, up to 2,234 km from the source.", "Data: geo-lod CI findspots; coastline Natural Earth; figure CC BY 4.0."),
  ("06-ci-model", "The graph records where; the measurement shows what.", "Data: Schenk et al. 2024, Quaternary 7, 17; dashed nodes are planned; figure CC BY 4.0."),
  ("07-walsdorf-wd1", "Core WD1: depth is measured, age is modelled.", "Data: Schenk et al. 2026, Quaternary 9, 67; tables CC BY 4.0, Fiona Schenk; dashed nodes are illustrative."),
+ ("08-geo-lod-ontology", "Classes and properties of the geo-lod model.", "Selected classes; each anchored in the CIDOC CRM family; figure CC BY 4.0."),
+ ("09-geo-lod-instance", "One methane measurement as a semantic representation.", "Data: EPICA Dome C, Spahni & Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0."),
 ]
 
 def caption_page():
@@ -577,6 +706,6 @@ def caption_page():
 
 if __name__ == "__main__":
     check_quoted_values()
-    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7()
+    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9()
     caption_page()
     print(f"Wrote {len(list(IMG.glob('*.png')))} figures and index.html to {SITE}")
