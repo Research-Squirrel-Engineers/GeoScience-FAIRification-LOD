@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build.py - slide figures for the semantic-modelling section of the CHNT31 talk.
 
-Nine figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
+Twelve figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
 and a caption page, written to visuals/site/. That folder is what the workflow
 visuals-pages.yml publishes under /visuals/ on GitHub Pages.
 
@@ -530,8 +530,10 @@ def fig5():
 
 
 
+OWL_B = ("#fbbf24", "#000000", "#000000")
 GL, ST = ("#fff2cc", "#000000", "#000000"), ("#d8ead3", "#000000", "#000000")
-PILL = {"crm": "#d4e1f5", "sci": "#ffcc99", "arch": "#e3d5f0", "w3c": "#e4e4e0"}
+PILL = {"crm": "#d4e1f5", "sci": "#ffcc99", "arch": "#e3d5f0", "w3c": "#e4e4e0", "plan": "#ffffff"}
+AN, W3 = ("#f7dbe8", "#000000", "#000000"), ("#e4e4e0", "#000000", "#000000")
 
 
 def cbox(f, x, y, w, h, name, anchor=None, fam="crm", st=GL, sub=None):
@@ -539,13 +541,15 @@ def cbox(f, x, y, w, h, name, anchor=None, fam="crm", st=GL, sub=None):
     f.rect(x, y, w, h, st[0], "#000000", 14, 1.2)
     if anchor is None and sub is None:
         f.text(x+w/2, y+h/2, name, 21, True, "#000000", maxw=w-10); return
-    f.text(x+w/2, y+h*.30, name, 21, True, "#000000", maxw=w-10)
+    tight = bool(anchor and sub) and h < 110
+    f.text(x+w/2, y+(20 if tight else h*.30), name, 21, True, "#000000", maxw=w-10)
     if sub is not None:
         for i, t in enumerate(sub if isinstance(sub, list) else [sub]):
-            f.text(x+w/2, y+h*.30+27+i*24, t, 18, False, "#000000", maxw=w-10)
+            f.text(x+w/2, y+(46 if tight else h*.30+27)+i*24, t, 17 if tight else 18, False, "#000000", maxw=w-10)
     if anchor:
         tw_ = tw(anchor, 16)+18; py_ = y+h-33
-        f.rect(x+w/2-tw_/2, py_, tw_, 25, PILL[fam], "#000000", 12, .8); f.text(x+w/2, py_+12.5, anchor, 16, False, "#000000")
+        f.rect(x+w/2-tw_/2, py_, tw_, 25, PILL[fam], "#000000", 12, 1.2 if fam == "plan" else .8, fam == "plan")
+        f.text(x+w/2, py_+12.5, anchor, 16, False, "#000000")
 
 
 def label(f, x, y, t, anchor="middle"):
@@ -652,6 +656,114 @@ def fig9():
     f.text(560, 925, "Each class shown is the most specific one; figure 08 gives its CRM-family anchor.", 20, color=MUTED, anchor="start", maxw=1150)
     f.save()
 
+def fig10():
+    f = Fig("10-strat-ontology", "Classes and properties of the strat module")
+    A, B, C, D, w, h = 40, 500, 960, 1400, 290, 96
+    aw = 255
+    r = [36, 215, 390, 565, 730]
+    c = lambda *a, **k: cbox(f, *a, **k)
+    c(A, r[0], aw, h, "time:TRS", "E29 Design or Procedure", st=W3)
+    c(B, r[0], w, h, "Core", "E18 Physical Thing", "plan", st=ST)
+    c(C, r[0], w, h, "AgeDepthModel", st=ST)
+    c(D, r[0], w+20, h, "AgeControlPoint", "E13 Attribute Assignment", st=ST)
+    c(A, r[1], aw, h, "skos:Concept", "E55 Type", sub="lithology, colour, structure", st=W3)
+    c(B, r[1], w, h, "StratigraphicUnit", "A2 Volume Unit", "plan", st=ST)
+    c(C, r[1], w, h, "TephraClass", "E55 Type", sub="primary, secondary", st=ST)
+    c(D, r[1], w+20, h, "geolod:Speleothem", "E18 Physical Thing")
+    c(B, r[2], w, h, "LithologicalUnit", st=ST)
+    c(C, r[2], w, h, "Boundary", "A3 Stratigraphic Interface", "plan", st=ST)
+    c(B, r[3], w, h, "TephraLayer", st=ST)
+    c(C, r[3], w, h, "skos:Concept", "E55 Type", sub="marker: HBT, GLT, JWT", st=W3)
+    c(A, r[4], aw, h, "Locality", "E1 via geo:Feature", st=ST)
+    c(B, r[4], w, h, "an:Specimen", "E18 via sosa:Sample", st=AN)
+    c(C, r[4], w, h, "Eruption", "E5 Event", "plan", st=ST)
+    f.line(B, r[0]+48, A+aw+2, r[0]+48); label(f, (A+aw+B)/2, r[0]+24, "depthReferenceSystem")
+    f.line(B+w, r[0]+48, C-2, r[0]+48); label(f, (B+w+C)/2, r[0]+24, "hasAgeModel")
+    f.line(C+w, r[0]+48, D-2, r[0]+48); label(f, (C+w+D)/2, r[0]+24, "hasControlPoint")
+    f.line(B+145, r[1], B+145, r[0]+h+2); label(f, B+145, (r[1]+r[0]+h)/2, "partOfCore")
+    f.line(D+155, r[0]+h, D+155, r[1]-2); label(f, D+155, (r[1]+r[0]+h)/2, "constrainsSpeleothem")
+    f.line(B, r[1]+48, A+aw+2, r[1]+48); label(f, (A+aw+B)/2, r[1]+24, "hasLithology ...")
+    f.line(B+w, r[1]+30, C-2, r[1]+30); label(f, (B+w+C)/2, r[1]+8, "tephraClass")
+    f.path(f"M {B+w} {r[1]+62} L {B+w+40} {r[1]+62} L {B+w+40} {r[1]+86} L {B+w+2} {r[1]+86}", "a"); label(f, B+w+110, r[1]+122, "overlies, meets, Allen")
+    f.line(B+145, r[2], B+145, r[1]+h+1, "t"); f.line(B+145, r[3], B+145, r[2]+h+1, "t")
+    f.line(B+w, r[3]+30, C-2, r[3]+30); label(f, (B+w+C)/2, r[3]+8, "markerTephra")
+    f.path(f"M {B+w} {r[3]+70} L {(B+w+C)/2} {r[3]+70} L {(B+w+C)/2} {r[4]+48} L {C-2} {r[4]+48}", "a"); label(f, (B+w+C)/2, r[3]+h+30, "producedByEruption")
+    f.path(f"M {B} {r[1]+74} L 462 {r[1]+74} L 462 {r[4]+30} L {B-2} {r[4]+30}", "a"); label(f, 440, r[2]+h+40, "hostsSpecimen")
+    f.line(B, r[4]+72, A+aw+2, r[4]+72); label(f, (A+aw+B)/2, r[4]+92, "sampledAt")
+    f.path(f"M {A+127} {r[4]} L {A+127} {r[4]-40} L 462 {r[4]-40}", None)
+    model_legend(f, 918, [(ST[0], "strat:"), (GL[0], "geolod:"), (AN[0], "an:"), (W3[0], "W3C")])
+    f.rect(790, 906, 62, 24, "#ffffff", "#000000", 12, 1.2, True); f.text(862, 918, "CRM counterpart documented, not yet in crm_bridging.ttl", 20, anchor="start")
+    f.rect(790, 950, 62, 24, PILL["crm"], "#000000", 12, .8); f.text(862, 962, "Anchored in the graph today", 20, anchor="start")
+    f.line(1200, 962, 1248, 962, "t"); f.text(1258, 962, "subclass of", 20, anchor="start")
+    f.save()
+
+
+def fig11():
+    f = Fig("11-analysis-ontology", "Classes and properties of the analysis module")
+    w, h = 340, 130
+    A, B, C = 40, 700, 1370
+    c = lambda x, y, n, a=None, fam="crm", st=AN, sub=None, ww=w: cbox(f, x, y, ww, h, n, a, fam, st, sub)
+    c(A, 60, "strat:StratigraphicUnit", "A2 Volume Unit", "plan", ST)
+    c(A, 345, "Specimen", "E18 via sosa:Sample", sub="an:sampleDepth")
+    c(B, 345, "Analysis", "S4 via sosa:Observation", "sci", sub="one value on one specimen")
+    c(C, 345, "Property", "S9 via sosa:ObservableProperty", "sci", sub="oxide wt%, element ppm", ww=340)
+    c(B, 60, "Method", "E55 via skos:Concept", sub="EPMA, LA-ICP-MS")
+    c(C, 60, "ChEBI", None, st=W3, sub="the chemical entity")
+    c(B, 640, "DerivedValue", sub="fraction from counts, TMAF")
+    c(A, 640, "QualityFlag", "E55 via skos:Concept", sub="below detection limit")
+    c(C, 640, "qudt:QuantityValue", None, st=W3, sub="value and unit")
+    f.line(A+170, 190, A+170, 343); label(f, A+170, 268, "strat:hostsSpecimen")
+    f.line(B, 410, A+342, 410); label(f, (A+340+B)/2, 386, "sosa:hasFeatureOfInterest")
+    f.line(B+340, 410, C-2, 410); label(f, (B+340+C)/2, 386, "sosa:observedProperty")
+    f.line(B+170, 345, B+170, 192); label(f, B+170, 268, "sosa:usedProcedure")
+    f.line(C+170, 345, C+170, 192); label(f, C+170, 268, "an:analyte")
+    f.line(B+170, 640, B+170, 476, "t")
+    f.path(f"M {B+280} 640 L {B+280} 580 L {B+500} 580 L {B+500} 450 L {B+342} 450", None) if False else None
+    f.path(f"M {B+60} 475 L {B+60} 560 L {A+290} 560 L {A+290} 638", "a"); label(f, 480, 560, "an:qualityFlag")
+    f.path(f"M {B+280} 475 L {B+280} 560 L {C+170} 560 L {C+170} 638", "a"); label(f, 1200, 560, "sosa:hasResult")
+    f.text(B+170, 806, "prov:wasDerivedFrom names the inputs", 18, color=MUTED)
+    model_legend(f, 918, [(AN[0], "an:"), (ST[0], "strat:"), (W3[0], "external")])
+    f.rect(610, 906, 62, 24, PILL["crm"], "#000000", 12, .8); f.text(682, 918, "Reached through crm_bridging.ttl", 20, anchor="start")
+    f.rect(1050, 906, 62, 24, "#ffffff", "#000000", 12, 1.2, True); f.text(1122, 918, "Documented, not yet bridged", 20, anchor="start")
+    f.line(1430, 918, 1478, 918, "t"); f.text(1488, 918, "subclass of", 20, anchor="start")
+    f.text(40, 970, "The module itself names no CRM class; the sosa: and skos: parents carry the anchors. The sosa: properties are reused as documented in the file.", 18, color=MUTED, anchor="start", maxw=1670)
+    f.save()
+
+
+def fig12():
+    f = Fig("12-modules-and-crm", "How the geolod, strat and an modules connect to the CIDOC CRM family")
+    f.rect(30, 24, 1690, 262, "#eef2f9", "#000000", 14, 1)
+    f.text(60, 58, "CRM family", 26, True, anchor="start")
+    f.box(60, 84, 1630, 70, "CIDOC CRM", "E13, E18, E53, E55, E4, E54 ...", ("#d4e1f5", "#000000", "#000000"), 23, 18, rx=10)
+    for x, a, b, col in ((60, "CRMsci", "S4, S6, S9, S1", "#ffcc99"), (610, "CRMarchaeo", "A3, A2", "#e3d5f0"), (1160, "CRMgeo", "SP6", "#d9ead3")):
+        f.box(x, 174, 530, 90, a, b, (col, "#000000", "#000000"), 23, 18, rx=10)
+    X = [(40, 470), (650, 480), (1270, 440)]
+    f.box(650, 340, 1060, 70, "crm_bridging.ttl", "anchors SOSA, PROV, GeoSPARQL, SKOS, OWL-Time, DCAT and one strat: class", OWL_B, 22, 18, rx=10)
+    mods = [("geolod:", ["geo_lod_core, epica_ontology, sisal_ontology", "46 classes with subclass axioms into CRM", "archive, chronology, stage, hiatus"], GL),
+            ("strat:", ["strat.ttl, 10 classes", "CRM-free by design", "core, unit, tephra, boundary, age model"], ST),
+            ("an:", ["analysis_core.ttl, 6 classes", "CRM-free by design", "specimen, analysis, method, property"], AN)]
+    for (x, ww), (n, lines, st) in zip(X, mods):
+        f.rect(x, 470, ww, 170, st[0], "#000000", 14, 1.2)
+        f.text(x+ww/2, 504, n, 27, True, "#000000")
+        for i, t in enumerate(lines):
+            f.text(x+ww/2, 542+i*30, t, 19, color="#000000", maxw=ww-16)
+    f.line(275, 470, 275, 288); label(f, 275, 380, "direct rdfs:subClassOf")
+    f.line(1180, 340, 1180, 288)
+    f.line(890, 470, 890, 412); label(f, 890, 442, "1 class now, more planned")
+    f.line(1490, 470, 1490, 412); label(f, 1490, 442, "through SOSA, SKOS")
+    f.line(650, 570, 512, 570); label(f, 580, 546, "AgeControlPoint")
+    f.line(1130, 570, 1268, 570); label(f, 1200, 546, "hostsSpecimen")
+    f.box(650, 700, 1060, 76, "W3C and community standards", "SOSA/SSN, OWL-Time, GeoSPARQL, PROV-O, SKOS, DCAT, QUDT", W3, 22, 18, rx=10)
+    f.line(890, 640, 890, 698); f.line(1490, 640, 1490, 698)
+    f.path("M 275 640 L 275 738 L 648 738", "a"); label(f, 460, 738, "reused with subclasses")
+    f.text(40, 815, "Where each figure stands", 22, True, anchor="start")
+    for (x, ww), (a, b, st) in zip(X, (("Ice core, stalagmite, CI findspots", "geolod:, one strat: class; 01 to 05, 08, 09", GL),
+                                        ("WD1 and tephra", "strat:, an:; 06, 07, data still planned", ST),
+                                        ("Vocabularies", "mis:, trs:, tephra: reserved", W3))):
+        f.box(x, 840, ww, 86, a, b, st, 22, 18, rx=10)
+    f.save()
+
+
 ITEMS = [
  ("01-from-measurement-to-crm", "From one table row to CIDOC CRM and its extensions.", "Data: EPICA Dome C, Spahni & Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0."),
  ("02-crm-family", "Extensions specialise CIDOC CRM classes rather than replace them.", "Classes: geo-lod, CIDOC CRM, CRMsci 2.0, CRMarchaeo 1.4.8; figure CC BY 4.0."),
@@ -662,6 +774,9 @@ ITEMS = [
  ("07-walsdorf-wd1", "Core WD1: depth is measured, age is modelled.", "Data: Schenk et al. 2026, Quaternary 9, 67; tables CC BY 4.0, Fiona Schenk; dashed nodes are illustrative."),
  ("08-geo-lod-ontology", "Classes and properties of the geo-lod model.", "Selected classes; each anchored in the CIDOC CRM family; figure CC BY 4.0."),
  ("09-geo-lod-instance", "One methane measurement as a semantic representation.", "Data: EPICA Dome C, Spahni & Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0."),
+ ("10-strat-ontology", "The strat module: stratigraphy of a core.", "Ontology: strat.ttl; dashed anchors are planned; figure CC BY 4.0."),
+ ("11-analysis-ontology", "The an module: one analysis of one specimen.", "Ontology: analysis_core.ttl; anchors through crm_bridging.ttl; figure CC BY 4.0."),
+ ("12-modules-and-crm", "Three modules, one CRM family.", "Ontology modules of geo-lod; figure CC BY 4.0."),
 ]
 
 def caption_page():
@@ -706,6 +821,6 @@ def caption_page():
 
 if __name__ == "__main__":
     check_quoted_values()
-    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9()
+    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12()
     caption_page()
     print(f"Wrote {len(list(IMG.glob('*.png')))} figures and index.html to {SITE}")

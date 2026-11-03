@@ -1,6 +1,6 @@
 # Slide figures
 
-Nine figures for the semantic-modelling section of the CHNT31 talk, with a
+Twelve figures for the semantic-modelling section of the CHNT31 talk, with a
 caption page. Everything under `site/` is generated.
 
     pip install -r visuals/requirements.txt
