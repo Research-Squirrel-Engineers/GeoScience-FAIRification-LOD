@@ -8,6 +8,5 @@
     rdfs:label "Property Partition: member"@en ;
     void:property rdfs:member ;
     void:triples 769,
-        1831,
         21693 .
 
