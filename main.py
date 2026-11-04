@@ -27,6 +27,7 @@ DOCS_CHECK_SCRIPT = SCRIPT_DIR / "check_docs.py"
 EPICA_MAP_SCRIPT = SCRIPT_DIR / "EPICA" / "plot_epica_map.py"
 SISAL_MAP_SCRIPT = SCRIPT_DIR / "SISAL" / "plot_sisal_maps.py"
 OVERVIEW_SCRIPT = SCRIPT_DIR / "plot_overview_map.py"
+VISUALS_SCRIPT = SCRIPT_DIR / "visuals" / "build.py"
 ONTOLOGY_DIR = SCRIPT_DIR / "ontology"
 DIST_DIR     = SCRIPT_DIR / "dist"
 
@@ -402,6 +403,21 @@ def _status(ok: bool, requested: bool) -> str:
     return "✓ Success" if ok else "✗ Failed"
 
 
+def visuals_ready(quiet: bool = False) -> bool:
+    """True when the packages of visuals/requirements.txt can be imported."""
+    missing = []
+    for module, package in (("resvg_py", "resvg-py"), ("PIL", "pillow"), ("rdflib", "rdflib"), ("yaml", "pyyaml")):
+        try:
+            __import__(module)
+        except ImportError:
+            missing.append(package)
+    if missing and not quiet:
+        print(f"  ✗ visuals need {', '.join(missing)}: pip install -r visuals/requirements.txt")
+    elif missing:
+        print(f"  ℹ  visuals step skipped, missing {', '.join(missing)} (pip install -r visuals/requirements.txt)")
+    return not missing
+
+
 #: How a strand is named in the summary. Longest label sets the column.
 SUMMARY_LABELS = {
     "epica": "EPICA",
@@ -409,6 +425,7 @@ SUMMARY_LABELS = {
     "ci": "CI",
     "archaeo": "Archaeo HTML",
     "bundle": "Bundle",
+    "visuals": "Visuals",
 }
 
 
@@ -481,6 +498,17 @@ def main():
         help="den Bundle-Schritt (RDF-Bundle + Validierung) überspringen",
     )
     parser.add_argument(
+        "--no-visuals", action="store_true",
+        help="den Schritt Dokumentationsseiten und Vortragsabbildungen "
+             "(visuals/build.py, Ausgabe docu/ und visuals/site/) überspringen",
+    )
+    parser.add_argument(
+        "--visuals-only", action="store_true",
+        help="nur die Dokumentationsseiten und Vortragsabbildungen bauen; "
+             "liest die vorhandenen Ontologie- und RDF-Dateien, ändert nichts "
+             "an der Pipeline",
+    )
+    parser.add_argument(
         "--bundle-format",
         default=",".join(DEFAULT_BUNDLE_FORMATS),
         help=(
@@ -516,6 +544,12 @@ def main():
     )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
+
+    if args.visuals_only:
+        print_section(step("Documentation pages and slide figures"))
+        ok = visuals_ready() and run_script(VISUALS_SCRIPT, "docu/ and visuals/site/")
+        end_section()
+        sys.exit(0 if ok else 1)
 
     if args.bundle_format.strip().lower() in ("release", "all"):
         bundle_formats = list(RELEASE_BUNDLE_FORMATS)
@@ -605,6 +639,7 @@ def main():
     ci_ok      = False
     archaeo_ok = False
     bundle_ok  = False
+    visuals_ok = False
 
     print_section(step("Regenerate canonical ontology"))
     canonical_ok = regenerate_canonical_ontology()
@@ -705,6 +740,16 @@ def main():
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 
+    # Dokumentationsseiten und Vortragsabbildungen lesen die geschriebenen
+    # Ontologie- und RDF-Dateien, deshalb nach dem Bundle. Ihre Abhängigkeiten
+    # (visuals/requirements.txt) gehören nicht zur Pipeline: fehlen sie, wird
+    # der Schritt als nicht angefordert gemeldet, nicht als Fehler.
+    visuals_wanted = not args.no_visuals and VISUALS_SCRIPT.exists() and visuals_ready(quiet=True)
+    if visuals_wanted:
+        print_section(step("Documentation pages and slide figures"))
+        visuals_ok = run_script(VISUALS_SCRIPT, "docu/ and visuals/site/")
+        end_section()
+
     # Was dieser Lauf überhaupt vorhatte. Ein nicht angeforderter Schritt ist
     # nicht fehlgeschlagen; vorher gab `--sisal-only` selbst bei fehlerfreiem
     # Lauf Exit-Code 1 zurück, was einen CI-Job reihenweise rot färbt.
@@ -713,9 +758,11 @@ def main():
     requested = {name: strand_requested(args, name) and exists[name]
                  for name in STRANDS}
     requested["bundle"] = not args.no_bundle
+    requested["visuals"] = visuals_wanted
 
     results = {"epica": epica_ok, "sisal": sisal_ok, "ci": ci_ok,
-               "archaeo": archaeo_ok, "bundle": bundle_ok}
+               "archaeo": archaeo_ok, "bundle": bundle_ok,
+               "visuals": visuals_ok}
     print_summary(results, requested, start)
 
     overall_ok = (

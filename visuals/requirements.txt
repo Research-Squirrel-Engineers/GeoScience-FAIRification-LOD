@@ -1,3 +1,5 @@
-# Figures only; the pipeline does not need these.
+# Figures and documentation pages only; the pipeline does not need these.
 resvg-py>=0.2
 pillow>=10
+rdflib>=7.1
+pyyaml>=6

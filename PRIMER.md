@@ -197,6 +197,9 @@ lesen hier ab, statt neu zu diskutieren.
 | SVG-Determinismus | `svg.hashsalt` gesetzt, `<dc:date>` unterdrückt — 33 Abbildungen über zwei Läufe byte-identisch, JPG ohnehin | 2026-08-08 |
 | SHACL-Inferenz | `inference="none"` statt `"rdfs"`. SHACL folgt `rdfs:subClassOf` bei `sh:targetClass` und `sh:class` selbst; die Subklassen-Axiome liegen im Bundle. Ergebnis identisch, Schritt von 42 s auf 14 s | 2026-08-08 |
 | Laufzeitmessung | je Schritt eine Dauer im Report, dazu eine Tabelle mit Anteilen in der Summary | 2026-08-08 |
+| Ort der Dokumentationsseiten | `docu/` (statisch, von `visuals/build.py` erzeugt), Veröffentlichung unter `/docu/`; `docs/` gehört Unicorn ontdoc, `visuals/site/` bleibt unter `/visuals/` | 2026-11-04 |
+| Datenmodell-Seiten | aus den Ontologiedateien gelesen, nicht von Hand gesetzt; `check()` stoppt den Bau bei Abweichung von den Zahlen der Abbildungen 08/12 | 2026-11-04 |
+| Abfrageseite | rdflib unter Pyodide über einen Beispielgraphen, kein Endpunkt; eine Abfrage ohne Treffer stoppt den Bau | 2026-11-04 |
 | Log der Sub-Skripte | eingefangen und zeilenweise durchgereicht: `pipeline_report.txt` und Terminal zeigen dasselbe. `PYTHONIOENCODING=utf-8` im Kindprozess, sonst scheitern ✓, ‰ und δ an der Pipe | 2026-08-08 |
 | Zeitstempel im RDF | keine. `dct:created` aus `GEO_LOD_RELEASE`, dazu `owl:versionInfo` mit einem SHA-256-Fingerabdruck über Eingabedaten und Generator-Skript. Die Aktivitätszeiten in `ci_findspots.ttl` sind entfallen — die Laufzeit eines Konvertierungsskripts ist keine Aussage über die Daten | 2026-08-08 |
 | Umfang des Fingerabdrucks | Eingabedaten **und** Generator-Skript. Ein geänderter Kommentar im Code ändert ihn mit; das ist gewollt, weil der Datensatz nur für den Codestand gilt, aus dem er stammt | 2026-08-08 |
@@ -417,6 +420,7 @@ noch nicht entschieden.
 | S3d | `wdttest-sisal` auf `sisal_v3` umstellen | wdttest-sisal | S3b, S3c.1 | erledigt 2026-08-11 |
 | S3e | CI-Strang auf den Stand von EPICA und SISAL bringen | geo-lod | S3c.4 | erledigt 2026-08-13 |
 | S3g | Kartengrundlage für alle Stränge | geo-lod | S3e | erledigt 2026-08-13 |
+| S3h | Dokumentationsseiten, Datenmodell-Abbildungen, Abfrageseite | geo-lod | S3g | erledigt 2026-11-04 |
 | S3f | Archäologie-Komponente durchsehen | geo-lod | S3e | offen |
 | S4 | Ontologie-Angleichung | geo-lod + wdttest-tables | S2, S3c.3 | offen |
 | S5 | ELSA | geo-lod | S4 | offen |
@@ -1874,6 +1878,55 @@ Lauf. Der Kerngraph verliert sie, das Bundle vereinigt beides wie zuvor, und
 `README.md` versprach diese Datei ohnehin seit Langem. Der Katalog trägt keinen
 `Partial graph`-Vermerk — er ist das ganze SISAL v3, was auch immer `--sites`
 verlangt.
+
+---
+
+## S3h — Dokumentationsseiten und Datenmodell-Abbildungen
+
+**Ziel:** das Datenmodell wird aus den Ontologiedateien gelesen und als Seiten
+und Abbildungen veröffentlicht, im Stil der Vortragsabbildungen und wie in
+`CHNT2026-amt`. Zusätzlich eine Abfrageseite, die im Browser läuft.
+
+**Uploads:** geo-lod-Bundle (A5). Die RDF-Dateien der drei Stränge sind gross;
+für Änderungen an den Abbildungen genügen `ontology/` und `visuals/`.
+
+**Stand:** erledigt 2026-11-04.
+
+**Aufbau.** `visuals/build.py` baut beides: die zwölf Vortragsabbildungen nach
+`visuals/site/` (Veröffentlichung unter `/visuals/`) und die Dokumentation nach
+`docu/` (Veröffentlichung unter `/docu/`). `docs/` bleibt Unicorn ontdoc
+überlassen (`main.yml`). Einzeln: `py visuals\build.py --only docu`; im Lauf:
+Schritt nach dem Bundle in `main.py`, `--visuals-only` und `--no-visuals`.
+
+- `visuals/model_data.py` liest Klassen, Eigenschaften, Domänen, Wertebereiche
+  und CRM-Anker aus den fünf Ontologiedateien plus `crm_bridging.ttl`. `check()`
+  stoppt den Bau, wenn die Zahlen der Abbildungen 08 und 12 (46, 10, 6 Klassen)
+  nicht mehr stimmen oder eine `geolod:`-Klasse keinen Anker hat (N4O-Regel).
+- `visuals/model_figs.py`: Klassenhierarchie und Beziehungen je Modul
+  (`geolod:`, `strat:`, `an:`), CRM-Abdeckung, drei Instanzmodelle (EPICA,
+  SISAL, CI) aus den echten Graphen.
+- `docu/`: `index`, `model`, `crm-coverage`, `instances`, `sparql`; gemeinsame
+  Navigation und Stil aus `visuals/site_kit.py`.
+- Abfrageseite nach `wdt-sparql`: `visuals/queries.yaml`, acht Abfragen, rdflib
+  unter Pyodide (0.26.4 / 7.1.1), Beispielgraph `docu/data/geo-lod-sample.nt`
+  (19 681 Tripel, 2,8 MB; jede 50. EPICA-Beobachtung, jeder 6. SISAL-Datierungspunkt,
+  CI und SISAL-Sites vollständig). Eine Abfrage ohne Treffer stoppt den Bau.
+- Workflow `docu-pages.yml` veröffentlicht `docu/` unter `/docu/`.
+
+**Befunde.**
+
+- Abbildung 12 spricht von einer Verankerung der `strat:`-Klassen; die
+  Ontologie trägt sie nur für 3 von 10 (`an:` 6 von 6). Es fehlen:
+  `strat:AgeDepthModel`, `Boundary`, `Core`, `Eruption`, `LithologicalUnit`,
+  `StratigraphicUnit`, `TephraLayer`. Die Seite `crm-coverage` führt sie auf.
+  Entscheidung in S4.
+- 43 von 101 Eigenschaften haben keinen `rdfs:comment` (Liste auf `model.html`).
+- `geolod:ArchaeologicalContext` ist im Kern und in der SISAL-Ontologie
+  deklariert; gezählt wird einmal.
+
+**Abnahme.** `py main.py --visuals-only` zweimal, `git status` danach sauber;
+alle acht Abfragen mit Zeilen; `docu/index.html` über einen lokalen
+HTTP-Server (`py -m http.server` in `docu\`), Status der Abfrageseite „Ready".
 
 ---
 

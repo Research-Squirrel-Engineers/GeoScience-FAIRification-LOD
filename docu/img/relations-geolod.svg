@@ -1,0 +1,112 @@
+<svg width="1750" height="1086" viewBox="0 0 1750 1086" xmlns="http://www.w3.org/2000/svg" role="img"><title>Object properties: geolod: core, EPICA and SISAL</title>
+<rect width="1750" height="1086" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<line x1="344.3" y1="394.0" x2="835.5" y2="179.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="222.0" x2="835.5" y2="93.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1062.8" y1="265.0" x2="1554.0" y2="437.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="308.0" x2="1554.0" y2="437.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="480.0" x2="835.5" y2="351.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1062.8" y1="437.0" x2="1554.0" y2="523.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="738.0" x2="835.5" y2="437.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="738.0" x2="835.5" y2="695.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="738.0" x2="835.5" y2="781.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="738.0" x2="835.5" y2="867.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="824.0" x2="835.5" y2="953.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1062.8" y1="609.0" x2="1554.0" y2="609.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 893.8 589.0 C 893.8 539.0 1006.5 539.0 1006.5 587.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 893.8 589.0 C 893.8 517.0 1006.5 517.0 1006.5 587.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="652.0" x2="835.5" y2="265.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="652.0" x2="835.5" y2="609.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="566.0" x2="1554.0" y2="437.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="566.0" x2="835.5" y2="523.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="344.3" y1="566.0" x2="835.5" y2="609.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="50.0" y="202.0" width="294.3" height="40.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="222.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E27_Site</text>
+<rect x="50.0" y="288.0" width="294.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="308.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">GrowthHiatus</text>
+<rect x="50.0" y="374.0" width="294.3" height="40.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="394.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E13_Attribute_Assignment</text>
+<rect x="50.0" y="460.0" width="294.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="480.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">IceCoreDataset</text>
+<rect x="50.0" y="546.0" width="294.3" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="566.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:AgeControlPoint</text>
+<rect x="50.0" y="632.0" width="294.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="652.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SpeleothemSample</text>
+<rect x="50.0" y="718.0" width="294.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="738.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">PalaeoclimateObservation</text>
+<rect x="50.0" y="804.0" width="294.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="824.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">PalaeoclimateSample</text>
+<rect x="837.5" y="73.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="93.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">ArchaeologicalContext</text>
+<rect x="837.5" y="159.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="179.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AssignmentStatus</text>
+<rect x="837.5" y="245.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AgeAssignment</text>
+<rect x="837.5" y="331.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DrillingCampaign</text>
+<rect x="837.5" y="417.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="437.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeStage</text>
+<rect x="837.5" y="503.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DatingMethod</text>
+<rect x="837.5" y="589.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="609.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Speleothem</text>
+<rect x="837.5" y="675.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="695.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MeasurementType</text>
+<rect x="837.5" y="761.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="781.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">RollingMedianFilter</text>
+<rect x="837.5" y="847.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="867.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SavitzkyGolayFilter</text>
+<rect x="837.5" y="933.0" width="225.3" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="950.15" y="953.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SamplingLocation</text>
+<rect x="1556.0" y="417.0" width="144.0" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1628.0" y="437.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AgeModel</text>
+<rect x="1556.0" y="503.0" width="144.0" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1628.0" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">ClimateMode</text>
+<rect x="1556.0" y="589.0" width="144.0" height="40.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1628.0" y="609.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">EntityStatus</text>
+<rect x="521.1999999999999" y="274.0622964169381" width="139.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="286.0622964169381" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">assignmentStatus</text>
+<rect x="475.5" y="145.2373778501629" width="230.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="157.2373778501629" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">archaeologicalBroaderContext</text>
+<rect x="1268.9499999999998" y="339.35016286644947" width="80.9" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1309.3999999999999" y="351.35016286644947" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">ageModel</text>
+<rect x="505.09999999999997" y="322.29693312391504" width="171.6" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="334.29693312391504" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">respectedByAgeModel</text>
+<rect x="511.0" y="403.2373778501629" width="159.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="415.2373778501629" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasDrillingCampaign</text>
+<rect x="1257.3" y="468.1750814332247" width="104.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1309.3999999999999" y="480.1750814332247" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">climateMode</text>
+<rect x="526.85" y="574.8872149837134" width="128.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="586.8872149837134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">fallsWithinStage</text>
+<rect x="518.3" y="704.4124592833876" width="145.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="716.4124592833876" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">measurementType</text>
+<rect x="487.9" y="747.5875407166124" width="206.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="759.5875407166124" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">smoothingMethod_median</text>
+<rect x="492.15" y="790.7626221498372" width="197.5" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="802.7626221498372" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">smoothingMethod_savgol</text>
+<rect x="532.8" y="876.7626221498372" width="116.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="888.7626221498372" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">extractedFrom</text>
+<rect x="1260.4999999999998" y="597.0" width="97.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1309.3999999999999" y="609.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">entityStatus</text>
+<rect x="899.25" y="533.0" width="101.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="950.15" y="545.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">composedOf</text>
+<rect x="821.15" y="511.0" width="258.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="950.15" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">correspondingCurrentSpeleothem</text>
+<rect x="517.9" y="445.7121335504886" width="146.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="457.7121335504886" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasAgeAssignment</text>
+<rect x="533.9" y="618.4124592833876" width="114.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="630.4124592833876" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">collectedFrom</text>
+<rect x="525.5" y="527.703066876085" width="130.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="539.703066876085" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">usedInAgeModel</text>
+<rect x="534.9499999999999" y="532.4124592833876" width="111.9" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="544.4124592833876" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">datingMethod</text>
+<rect x="504.15" y="575.5875407166124" width="173.5" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="587.5875407166124" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">constrainsSpeleothem</text>
+<rect x="671.3" y="1005" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="703.3" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
+<rect x="803.0999999999999" y="1005" width="22" height="22" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="835.0999999999999" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">strat:</text>
+<rect x="915.8999999999999" y="1005" width="22" height="22" rx="3" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="947.8999999999999" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CIDOC CRM</text>
+<text x="50" y="1060" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Arrows run from domain to range; datatype properties are in the table.</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg width="1750" height="424" viewBox="0 0 1750 424" xmlns="http://www.w3.org/2000/svg" role="img"><title>Class hierarchy: an:</title>
+<rect width="1750" height="424" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<path d="M 740.0 188.0 L 692.0 188.0 L 692.0 188.0 L 646.0 188.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 394.9 188.0 L 346.9 188.0 L 346.9 188.0 L 300.9 188.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 964.2 188.0 L 916.2 188.0 L 916.2 188.0 L 870.2 188.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 740.0 100.0 L 692.0 100.0 L 692.0 122.0 L 646.0 122.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 394.9 122.0 L 346.9 122.0 L 346.9 122.0 L 300.9 122.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 740.0 232.0 L 692.0 232.0 L 692.0 232.0 L 646.0 232.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 394.9 232.0 L 346.9 232.0 L 346.9 232.0 L 300.9 232.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 740.0 144.0 L 692.0 144.0 L 692.0 122.0 L 646.0 122.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 740.0 56.0 L 692.0 56.0 L 692.0 56.0 L 646.0 56.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 394.9 56.0 L 346.9 56.0 L 346.9 56.0 L 300.9 56.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 740.0 106.0 L 708.0 106.0 L 708.0 276.0 L 300.9 276.0" fill="none" stroke="#55544f" stroke-width="1.6" stroke-dasharray="7 6" marker-end="url(#t)"/>
+<rect x="740.0" y="172.0" width="128.2" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="804.1" y="188.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Analysis</text>
+<rect x="394.9" y="172.0" width="249.1" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="519.4499999999999" y="188.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">sosa:Observation</text>
+<rect x="50.0" y="172.0" width="248.9" height="32.0" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="174.45" y="188.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crmsci:S4_Observation</text>
+<rect x="964.2" y="172.0" width="145.1" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="1036.75" y="188.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DerivedValue</text>
+<rect x="740.0" y="84.0" width="128.2" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="804.1" y="100.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Method</text>
+<rect x="394.9" y="106.0" width="249.1" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="519.4499999999999" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">skos:Concept</text>
+<rect x="50.0" y="106.0" width="248.9" height="32.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="174.45" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E55_Type</text>
+<rect x="740.0" y="216.0" width="128.2" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="804.1" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Property</text>
+<rect x="394.9" y="216.0" width="249.1" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="519.4499999999999" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">sosa:ObservableProperty</text>
+<rect x="50.0" y="216.0" width="248.9" height="32.0" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="174.45" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crmsci:S9_Property_Type</text>
+<rect x="740.0" y="128.0" width="128.2" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="804.1" y="144.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">QualityFlag</text>
+<rect x="740.0" y="40.0" width="128.2" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="804.1" y="56.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Specimen</text>
+<rect x="394.9" y="40.0" width="249.1" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="519.4499999999999" y="56.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">sosa:Sample</text>
+<rect x="50.0" y="40.0" width="248.9" height="32.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="174.45" y="56.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E18_Physical_Thing</text>
+<rect x="50.0" y="260.0" width="248.9" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="174.45" y="276.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">sosa:Procedure</text>
+<rect x="574.95" y="343" width="22" height="22" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="606.95" y="354" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">an:</text>
+<rect x="668.95" y="343" width="22" height="22" rx="3" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="700.95" y="354" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CIDOC CRM</text>
+<rect x="831.75" y="343" width="22" height="22" rx="3" fill="#ffcc99" stroke="#000000" stroke-width="1"/>
+<text x="863.75" y="354" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CRMsci</text>
+<rect x="960.55" y="343" width="22" height="22" rx="3" fill="#e4e4e0" stroke="#000000" stroke-width="1"/>
+<text x="992.55" y="354" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">other vocabulary</text>
+<text x="50" y="398" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Own classes solid, CRM-family ancestors dashed; colour shows the family.</text>
+</svg>

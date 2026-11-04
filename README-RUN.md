@@ -61,6 +61,8 @@ schnellste sinnvolle Lauf, wenn man am CI-Strang arbeitet.
 | `--bundle-format release` | | N-Triples, Turtle, JSON-LD und RDF/XML |
 | `--no-bundle` | | den Bundle-Schritt ganz überspringen |
 | `--no-overview` | | die Übersichtskarte überspringen |
+| `--no-visuals` | | den Schritt Dokumentationsseiten und Vortragsabbildungen überspringen. Er läuft ohnehin nur, wenn `visuals/requirements.txt` installiert ist |
+| `--visuals-only` | | nur `docu/` und `visuals/site/` bauen, ohne die Pipeline |
 | `--no-clean` | | Schritt 0 überspringen und in vorhandene Ausgaben schreiben |
 | `--clean` | an | Schritt 0 ausführen. Ist ohnehin die Voreinstellung; der Schalter bleibt, damit ältere Aufrufe weiter gelten |
 
@@ -304,10 +306,10 @@ Erwartet: CRM-Abdeckung ohne Lücke, null SHACL-Verstösse. Eine Warnung zu
 | `columns missing from cifindspots_part_full.csv` | die Fundstellentabelle stammt aus einer anderen Fassung von `campanian-ignimbrite-geo` |
 | Bundle-Schritt dauert ewig | das ist die SHACL-Validierung über zwei Millionen Tripel. `--no-bundle` überspringt sie |
 
-## `visuals/build.py` — Abbildungen für Vorträge
+## `visuals/build.py` — Dokumentation und Abbildungen
 
 ```cmd
-py visuals\build.py
+py -m pip install -r visuals\requirements.txt && py visuals\build.py
 ```
 
-Schreibt sieben Abbildungen als SVG und PNG sowie `index.html` nach `visuals/site/`. Kein Teil von `main.py`; braucht `visuals/requirements.txt`. Der Workflow `visuals-pages.yml` veröffentlicht den Ordner unter `/visuals/` auf GitHub Pages.
+Baut beides: zwölf Vortragsabbildungen als SVG und PNG plus `index.html` nach `visuals/site/`, und die Dokumentation nach `docu/` (`index`, `model`, `crm-coverage`, `instances`, `sparql` mit Abbildungen, `downloads/queries/*.rq` und dem Beispielgraphen `data/geo-lod-sample.nt`). `--only slides` oder `--only docu` baut eine Hälfte. Im Lauf von `main.py` ist es der Schritt nach dem Bundle; `py main.py --visuals-only` führt nur ihn aus. `visuals/docu.py` und `visuals/sample_graph.py` sind die Teile, aus denen `docu/` entsteht. Die Workflows `visuals-pages.yml` und `docu-pages.yml` veröffentlichen die beiden Ordner unter `/visuals/` und `/docu/` auf GitHub Pages.

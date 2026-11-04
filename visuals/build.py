@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""build.py - slide figures for the semantic-modelling section of the CHNT31 talk.
+"""build.py - slide figures for the CHNT31 talk (visuals/site/) and the documentation pages (docu/).
 
 Twelve figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
 and a caption page, written to visuals/site/. That folder is what the workflow
-visuals-pages.yml publishes under /visuals/ on GitHub Pages.
+visuals-pages.yml publishes under /visuals/ on GitHub Pages. The documentation
+(data model, CRM coverage, instance models, query page) is written by docu.py to
+docu/, published under /docu/ by docu-pages.yml; `--only slides` or `--only docu`
+builds one of the two.
 
 Inputs are the repository's own files. Stage depths and sample values drawn by
 hand in the figures are checked against the graph in check_quoted_values().
@@ -90,10 +93,11 @@ def tw(s, size, med=False):
     return round(font.getlength(s) * size / 100, 1)
 
 class Fig:
-    def __init__(s, name, title):
-        s.name, s.o = name, [
-            f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img"><title>{escape(title)}</title>',
-            f'<rect width="{W}" height="{H}" fill="#ffffff"/>',
+    def __init__(s, name, title, w=W, h=H, outdir=None):
+        # w, h and outdir default to the slide format; the docu figures (model_figs.py) pass their own.
+        s.name, s.w, s.h, s.outdir, s.o = name, w, h, outdir, [
+            f'<svg width="{w}" height="{h}" viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" role="img"><title>{escape(title)}</title>',
+            f'<rect width="{w}" height="{h}" fill="#ffffff"/>',
             f'<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="{LINE}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>'
             f'<marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="{LINE}" stroke-width="1.3" stroke-linejoin="round"/></marker>'
             '<pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern>'
@@ -122,11 +126,11 @@ class Fig:
     def raw(s, x): s.o.append(x)
     def legend(s, y, items, x=None):
         sizes = [34 + tw(t, 19) + 34 for _, t in items]
-        x = (W - sum(sizes)) / 2 if x is None else x
+        x = (s.w - sum(sizes)) / 2 if x is None else x
         for (st, t), sz in zip(items, sizes):
             s.rect(x, y-11, 22, 22, st[0], "#000000", 3); s.text(x+32, y, t, 19, color=MUTED, anchor="start"); x += sz
     def save(s):
-        d = IMG; d.mkdir(parents=True, exist_ok=True); p = d/f"{s.name}.svg"
+        d = s.outdir or IMG; d.mkdir(parents=True, exist_ok=True); p = d/f"{s.name}.svg"
         p.write_text("\n".join(s.o+["</svg>"])+"\n", encoding="utf-8", newline="\n")
         (d/f"{s.name}.png").write_bytes(resvg_py.svg_to_bytes(svg_path=str(p), background="#ffffff", skip_system_fonts=True, font_files=[str(R), str(M)], zoom=2.0))
 
@@ -780,47 +784,33 @@ ITEMS = [
 ]
 
 def caption_page():
-    cards = []
-    for i, (n, c, cr) in enumerate(ITEMS, 1):
-        cards.append(f"""<section>
-<img src="img/{n}.png" width="3500" height="2000" loading="lazy" alt="{html.escape(c)}">
-<div class="row"><p class="cap"><span class="n">{i}</span>{html.escape(c)}</p><button type="button" data-c="{html.escape(c)}">Copy</button></div>
-<p class="cr">{html.escape(cr)}</p>
-<p class="dl"><a href="img/{n}.png" download>PNG</a><a href="img/{n}.svg" download>SVG</a></p>
-</section>""")
-    page = """<!doctype html>
-    <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CHNT31 Slide Figures</title>
-    <style>
-    :root{--bg:#f6f6f3;--card:#fff;--ink:#1f1f1d;--mut:#55544f;--line:#d8d6ce}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 "Fira Sans",system-ui,sans-serif}
-    main{max-width:1040px;margin:0 auto;padding:32px 16px 64px}
-    h1{font-size:28px;font-weight:500;margin:0 0 24px}
-    section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:0 0 24px}
-    img{display:block;width:100%;height:auto;border-radius:4px}
-    .row{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;margin-top:14px}
-    .cap{margin:0;font-size:20px;font-weight:500}
-    .n{color:#9a3412;margin-right:10px}
-    .cr{margin:6px 0 0;color:var(--mut);font-size:14px}
-    .dl{margin:6px 0 0;font-size:14px}
-    .dl a{color:#9a3412;margin-right:14px}
-    button{flex:none;font:inherit;font-size:14px;padding:5px 12px;border:1px solid #9a3412;border-radius:6px;background:#fff;color:#9a3412;cursor:pointer}
-    button:hover{background:#9a3412;color:#fff}
-    </style></head><body><main><h1>CHNT31 slide figures</h1>
-    """ + "\n".join(cards) + """
-    </main><script>
-    document.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){
-      var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
-      if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
-    })});
-    </script></body></html>
-    """
-    (SITE/"index.html").write_text(page, encoding="utf-8", newline="\n")
+    import site_kit
+    cards = [site_kit.fig_card(IMG, n, str(i), c, cr) for i, (n, c, cr) in enumerate(ITEMS, 1)]
+    intro = ("Twelve figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, "
+             'the CRM coverage and a query page are in the <a href="../docu/index.html">documentation</a>.')
+    site_kit.write_assets(SITE)
+    site_kit.write_page(SITE/"index.html", site_kit.page("visuals", "index.html", "Slide figures", intro, "\n".join(cards)))
 
 
-if __name__ == "__main__":
+def slides():
     check_quoted_values()
     fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12()
     caption_page()
     print(f"Wrote {len(list(IMG.glob('*.png')))} figures and index.html to {SITE}")
+
+
+def main(argv=None):
+    import argparse
+    ap = argparse.ArgumentParser(description="Slide figures (visuals/site/) and the documentation pages (docu/).")
+    ap.add_argument("--only", choices=["slides", "docu"], help="build one of the two; default is both")
+    args = ap.parse_args(argv)
+    if args.only != "docu":
+        slides()
+    if args.only != "slides":
+        import docu
+        docu.main()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

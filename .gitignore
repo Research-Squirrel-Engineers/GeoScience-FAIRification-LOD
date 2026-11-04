@@ -222,3 +222,5 @@ dist/geo-lod-bundle.nt
 # Release-Lauf schreibt:  python main.py --bundle-format release
 SISAL/rdf/*.nt
 dist/*-bundle.ttl
+
+PATCH-README.md

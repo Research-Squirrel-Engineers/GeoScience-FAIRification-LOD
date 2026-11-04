@@ -1,0 +1,137 @@
+# Source of the query page (docu/sparql.html) and of docu/downloads/queries/*.rq.
+# Written for visuals/sparql_page.py. Every query is run against the published sample graph at build time;
+# a query that returns no rows stops the build (an empty result is the usual sign of a mistyped IRI).
+
+graph:
+  url: data/geo-lod-sample.nt        # relative to docu/
+  format: nt
+  note: >-
+    The ontology files, the full CI and SISAL site layers, every 6th SISAL dating point and every 50th EPICA
+    observation with its time position and MIS membership. visuals/sample_graph.py writes it.
+
+page:
+  title: Query
+  intro: >-
+    Eight queries over a sample of the geo-lod graph. They run in your browser; nothing is sent anywhere. Edit a query and
+    press Run.
+
+prefixes: |
+  PREFIX geolod: <http://w3id.org/geo-lod/>
+  PREFIX strat: <http://w3id.org/geo-lod/strat/>
+  PREFIX an: <http://w3id.org/geo-lod/analysis/>
+  PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+  PREFIX crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/>
+  PREFIX sosa: <http://www.w3.org/ns/sosa/>
+  PREFIX prov: <http://www.w3.org/ns/prov#>
+  PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+  PREFIX dct: <http://purl.org/dc/terms/>
+  PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+queries:
+  - id: classes-in-use
+    title: Which classes are used, and how often?
+    intro: >-
+      The instances of every class in the sample, most frequent first. The three strands show up as IceCoreObservation
+      (EPICA), Cave and AgeControlPoint (SISAL) and CIFindspot (campanian ignimbrite).
+    sparql: |
+      SELECT ?class (COUNT(?s) AS ?instances) WHERE {
+        ?s a ?class .
+        FILTER(STRSTARTS(STR(?class), "http://w3id.org/geo-lod/"))
+      } GROUP BY ?class ORDER BY DESC(?instances)
+
+  - id: crm-anchors
+    title: Which own classes reach the CIDOC CRM family?
+    intro: >-
+      A class is anchored when a chain of rdfs:subClassOf axioms leads from it into CIDOC CRM, CRMsci, CRMgeo or CRMarchaeo.
+      The property path follows the chain through the bridging axioms (SOSA, PROV and SKOS classes on the way).
+    sparql: |
+      SELECT ?class ?anchor WHERE {
+        ?class a owl:Class ;
+               rdfs:subClassOf+ ?anchor .
+        FILTER(STRSTARTS(STR(?class), "http://w3id.org/geo-lod/"))
+        FILTER(STRSTARTS(STR(?anchor), "http://www.cidoc-crm.org/")
+            || STRSTARTS(STR(?anchor), "http://www.ics.forth.gr/isl/CRM"))
+      } ORDER BY ?class ?anchor
+
+  - id: epica-observations
+    title: Methane observations in a marine isotope stage
+    intro: >-
+      EPICA Dome C observations, each linked to a time position and a MIS stage. The query lists methane values with the
+      stage they fall in and the depth they were measured at.
+    sparql: |
+      SELECT ?label ?stage ?depth_m ?ageKaBP ?value WHERE {
+        ?obs a geolod:IceCoreObservation ;
+             rdfs:label ?label ;
+             geolod:fallsWithinStage ?stage ;
+             geolod:atDepth_m ?depth_m ;
+             geolod:ageKaBP ?ageKaBP ;
+             sosa:hasSimpleResult ?value .
+        FILTER(CONTAINS(?label, "Methane"))
+      } ORDER BY xsd:decimal(?ageKaBP) LIMIT 40
+
+  - id: observation-provenance
+    title: Where does an observation come from?
+    intro: >-
+      The route from one observation to the real objects it speaks about: the ice core it samples and the drilling site
+      where it took place, with the data source it was derived from.
+    sparql: |
+      SELECT ?obs ?core ?site ?source WHERE {
+        ?obs a geolod:IceCoreObservation ;
+             sosa:hasFeatureOfInterest ?core ;
+             crm:P7_took_place_at ?site ;
+             prov:wasDerivedFrom ?source .
+      } LIMIT 20
+
+  - id: sisal-caves
+    title: Caves with archaeological screening
+    intro: >-
+      SISAL caves with elevation and the number of oxygen isotope samples, restricted to those screened for archaeology.
+    sparql: |
+      SELECT ?label ?elevation_m ?d18O_samples WHERE {
+        ?cave a geolod:Cave ;
+              rdfs:label ?label ;
+              geolod:elevation_m ?elevation_m ;
+              geolod:countD18OSamples ?d18O_samples ;
+              geolod:screenedForArchaeology true .
+      } ORDER BY DESC(xsd:integer(?d18O_samples)) LIMIT 30
+
+  - id: dating-methods
+    title: Age control points per dating method
+    intro: >-
+      Radiometric and other dating points in the SISAL sample, grouped by method.
+    sparql: |
+      SELECT ?method (COUNT(?pt) AS ?points) (AVG(xsd:decimal(?age)) AS ?meanAgeKaBP) WHERE {
+        ?pt a strat:AgeControlPoint ;
+            geolod:datingMethod ?method ;
+            geolod:ageKaBP ?age .
+      } GROUP BY ?method ORDER BY DESC(?points)
+
+  - id: ci-findspots
+    title: Campanian Ignimbrite findspots by spatial type
+    intro: >-
+      Findspots of the CI tephra, their certainty level and the literature they come from.
+    sparql: |
+      SELECT ?label ?spatialType ?certainty ?literature WHERE {
+        ?f a geolod:CIFindspot ;
+           rdfs:label ?label ;
+           geolod:hasSpatialType ?spatialType ;
+           geolod:hasCertaintyLevel ?certainty ;
+           geolod:hasLiteratureReference ?literature .
+      } ORDER BY ?spatialType ?label LIMIT 40
+
+  - id: ci-archaeological
+    title: Resources typed as CRMarchaeo stratigraphic volume units
+    intro: >-
+      Archaeologically relevant caves and findspots carry a CRMarchaeo type directly in the data, next to their own class.
+      The query lists them with their geometry resource.
+    sparql: |
+      SELECT ?f ?label ?literature ?geometry WHERE {
+        ?f a crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+           rdfs:label ?label ;
+           geo:hasGeometry ?geometry .
+        OPTIONAL { ?f geolod:hasLiteratureReference ?literature }
+      } ORDER BY ?label

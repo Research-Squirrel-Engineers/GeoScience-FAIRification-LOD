@@ -1,0 +1,487 @@
+"""Data-model figures in the house style of the slide figures, drawn from the ontology files and from the graph.
+
+Nothing here knows a class or property by name. The hierarchy, relation and coverage figures read model_data.Model; the
+instance figures read the published RDF. A figure therefore cannot show a class the ontology does not declare, and a
+change in the ontology changes the figure instead of making it wrong.
+
+    hierarchy_fig   rdfs:subClassOf as a left-to-right tree, CRM-family classes at the roots
+    relations_fig   object properties as arrows from domain to range
+    coverage_fig    one card per CRM-family anchor, with the geo-lod classes that reach it
+    instance_fig    one resource of the graph with its neighbours, as it stands in the RDF
+
+Layout is deterministic: sorted iteration, no random numbers, text widths from the bundled Fira Sans (build.tw).
+"""
+from __future__ import annotations
+
+from collections import defaultdict
+from pathlib import Path
+
+from rdflib import BNode, Graph, Literal, URIRef
+from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS
+
+import build as B
+import model_data as md
+from build import AN, CLS, GL, INST, MUTED, REAL, ST, TERM, Fig, tw
+
+OWN_FILL = {"geolod": GL[0], "strat": ST[0], "an": AN[0]}
+FAM_FILL = {"crm": "#d4e1f5", "sci": "#ffcc99", "arch": "#e3d5f0", "geo": "#dbe9d3", None: "#e4e4e0"}
+FAM_ORDER = {"crm": 0, "sci": 1, "arch": 2, "geo": 3, None: 4}
+BLACK = "#000000"
+
+
+def fill_of(iri: str) -> str:
+    ns = md.ns_key(iri)
+    return OWN_FILL[ns] if ns else FAM_FILL.get(md.family(iri), FAM_FILL[None])
+
+
+def fit(text: str, size: int, maxw: float, med: bool = False) -> str:
+    """Shorten with an ellipsis until the text fits; the figures must not raise over a long label from the data."""
+    if tw(text, size, med) <= maxw:
+        return text
+    while text and tw(text + "…", size, med) > maxw:
+        text = text[:-1]
+    return text + "…"
+
+
+def nbox(f: Fig, x, y, w, h, text, fill, dash=False, size=19, color=BLACK):
+    ds = ' stroke-dasharray="7 5" stroke-width="1.8"' if dash else ' stroke-width="1.2"'
+    f.raw(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="8" fill="{fill}" stroke="{BLACK}"{ds}/>')
+    f.text(x + w / 2, y + h / 2, fit(text, size, w - 14, True), size, True, color, maxw=w - 10)
+
+
+def legend(f: Fig, y, items, note=None):
+    f.legend(y, [((fill, BLACK, BLACK), text) for fill, text in items])
+    if note:
+        f.text(50, f.h - 26, note, 18, color=MUTED, anchor="start", maxw=f.w - 100)
+
+
+def family_items(iris, with_own=()):
+    items = [(OWN_FILL[k], t) for k, t in with_own]
+    seen = {}
+    for i in iris:
+        if not md.ns_key(i):
+            seen[md.family(i)] = True
+    names = {"crm": "CIDOC CRM", "sci": "CRMsci", "arch": "CRMarchaeo", "geo": "CRMgeo", None: "other vocabulary"}
+    items += [(FAM_FILL[k], names[k]) for k in sorted(seen, key=lambda k: FAM_ORDER[k])]
+    return items
+
+
+# ------------------------------------------------------------------ hierarchy
+
+def hierarchy_fig(M: md.Model, outdir: Path, name: str, title: str, mods: tuple[str, ...], note: str) -> Fig:
+    own = M.classes_of(*mods)
+    ownset = {c.iri for c in own}
+    label_of = {c.iri: c.local for c in own}
+
+    def lab(iri):
+        return label_of.get(iri) or M.curie(iri)
+
+    def primary(iri):
+        ps = M.parents(iri)
+        if not ps or (md.family(iri) and iri not in ownset):
+            return None
+        inside = [p for p in ps if p in ownset]
+        fam = [p for p in ps if md.family(p)]
+        return (inside or fam or ps)[0]
+
+    parent: dict[str, str | None] = {}
+
+    def chain(iri):
+        while iri not in parent:
+            p = primary(iri)
+            parent[iri] = p
+            if p is None:
+                break
+            iri = p
+
+    for c in own:
+        chain(c.iri)
+    extras = []
+    for c in own:
+        for q in M.parents(c.iri):
+            if q != parent[c.iri]:
+                extras.append((c.iri, q))
+                chain(q)
+
+    children = defaultdict(list)
+    for n, p in parent.items():
+        if p:
+            children[p].append(n)
+    for p in children:
+        children[p].sort(key=M.curie)
+    roots = sorted((n for n, p in parent.items() if p is None), key=lambda n: (FAM_ORDER[md.family(n)], M.curie(n)))
+
+    depth = {}
+
+    def dep(n):
+        if n not in depth:
+            depth[n] = 0 if parent[n] is None else dep(parent[n]) + 1
+        return depth[n]
+
+    for n in parent:
+        dep(n)
+    ncol = max(depth.values()) + 1
+    colw = [min(410, max(tw(lab(n), 19, True) + 30 for n in parent if depth[n] == d)) for d in range(ncol)]
+    gap = 96
+    if sum(colw) + gap * (ncol - 1) > 1750 - 100:
+        raise ValueError(f"{name}: {ncol} columns do not fit")
+    xs = [50 + sum(colw[:d]) + gap * d for d in range(ncol)]
+
+    ypos, cur = {}, [0]
+
+    def place(n):
+        ch = children.get(n, [])
+        if not ch:
+            ypos[n] = cur[0]
+            cur[0] += 1
+            return
+        for c in ch:
+            place(c)
+        ypos[n] = (ypos[ch[0]] + ypos[ch[-1]]) / 2
+
+    for r in roots:
+        place(r)
+    rowh, top, bh = 44, 40, 32
+    f = Fig(name, title, 1750, int(top + cur[0] * rowh + 120), outdir)
+    cy = {n: top + ypos[n] * rowh + bh / 2 for n in parent}
+    for n, p in parent.items():
+        if p:
+            mx = xs[depth[n]] - gap / 2
+            f.path(f"M {xs[depth[n]]:.1f} {cy[n]:.1f} L {mx:.1f} {cy[n]:.1f} L {mx:.1f} {cy[p]:.1f} L {xs[depth[p]] + colw[depth[p]] + 2:.1f} {cy[p]:.1f}", "t")
+    for n, q in extras:
+        mx = xs[depth[n]] - gap / 2 + 16
+        f.path(f"M {xs[depth[n]]:.1f} {cy[n] + 6:.1f} L {mx:.1f} {cy[n] + 6:.1f} L {mx:.1f} {cy[q]:.1f} L {xs[depth[q]] + colw[depth[q]] + 2:.1f} {cy[q]:.1f}", "t", True)
+    for n in parent:
+        nbox(f, xs[depth[n]], cy[n] - bh / 2, colw[depth[n]], bh, lab(n), fill_of(n),
+             dash=bool(md.ns_key(n)) and n not in ownset)
+    items = family_items(parent, [(k, t) for k, t in (("geolod", "geolod:"), ("strat", "strat:"), ("an", "an:"))
+                                  if any(md.ns_key(n) == k for n in parent)])
+    legend(f, f.h - 70, items, note)
+    f.save()
+    return f
+
+
+# ------------------------------------------------------------------ relations
+
+def relations_fig(M: md.Model, outdir: Path, name: str, title: str, mods: tuple[str, ...], note: str) -> tuple[Fig, list[str]]:
+    """Object properties with a domain and a range, as arrows. Returns the figure and the properties left out."""
+    props = [p for p in M.props_of(*mods) if p.kind == "object" and p.domains and p.ranges]
+    left_out = [p.curie for p in M.props_of(*mods) if p.kind == "object" and not (p.domains and p.ranges)]
+    edges = [(d, r, p) for p in props for d in p.domains for r in p.ranges]
+    nodes = sorted({n for d, r, _ in edges for n in (d, r)}, key=M.curie)
+
+    out = defaultdict(list)
+    for d, r, _ in edges:
+        if d != r:
+            out[d].append(r)
+    state, back = {}, set()
+
+    def dfs(n):
+        state[n] = 1
+        for m in sorted(set(out[n]), key=M.curie):
+            if state.get(m) == 1:
+                back.add((n, m))
+            elif m not in state:
+                dfs(m)
+        state[n] = 2
+
+    for n in nodes:
+        if n not in state:
+            dfs(n)
+    preds = defaultdict(list)
+    for d, r, _ in edges:
+        if d != r and (d, r) not in back:
+            preds[r].append(d)
+    layer = {}
+
+    def lay(n):
+        if n not in layer:
+            layer[n] = 1 + max((lay(p) for p in preds[n]), default=-1)
+        return layer[n]
+
+    for n in nodes:
+        lay(n)
+    ncol = max(layer.values()) + 1
+    cols = [[n for n in nodes if layer[n] == d] for d in range(ncol)]
+    nbrs = defaultdict(set)
+    for d, r, _ in edges:
+        nbrs[d].add(r)
+        nbrs[r].add(d)
+    pos = {n: i for c in cols for i, n in enumerate(c)}
+    for _ in range(4):
+        for c in cols:
+            c.sort(key=lambda n: (sum(pos[m] for m in nbrs[n]) / max(len(nbrs[n]), 1), M.curie(n)))
+            for i, n in enumerate(c):
+                pos[n] = i
+
+    def lab(n):
+        return M.curie(n) if not md.ns_key(n) or md.ns_key(n) != "geolod" else M.curie(n).split(":", 1)[1]
+
+    colw = [min(360, max(tw(lab(n), 19, True) + 30 for n in c)) for c in cols]
+    gap = (1750 - 100 - sum(colw)) / max(ncol - 1, 1) if ncol > 1 else 0
+    if ncol > 1 and gap < 110:
+        raise ValueError(f"{name}: {ncol} columns leave only {gap:.0f} px between them")
+    xs = [50 + sum(colw[:d]) + gap * d for d in range(ncol)]
+    pitch, bh, top = 86, 40, 50
+    height = int(top + max(len(c) for c in cols) * pitch + 90)
+    f = Fig(name, title, 1750, height, outdir)
+    box, cy = {}, {}
+    for d, c in enumerate(cols):
+        block = len(c) * pitch
+        y0 = top + (height - 90 - top - block) / 2
+        for i, n in enumerate(c):
+            cy[n] = y0 + i * pitch + pitch / 2
+            box[n] = (xs[d], cy[n] - bh / 2, colw[d], bh)
+    pair = defaultdict(list)
+    for d, r, p in edges:
+        pair[(d, r)].append(p)
+    labels = []
+    for (d, r), ps in sorted(pair.items(), key=lambda kv: (M.curie(kv[0][0]), M.curie(kv[0][1]))):
+        for k, p in enumerate(ps):
+            off = (k - (len(ps) - 1) / 2) * 20
+            x1, y1, w1, h1 = box[d]
+            x2, y2, w2, h2 = box[r]
+            if d == r:
+                f.path(f"M {x1 + w1 * .25:.1f} {y1} C {x1 + w1 * .25:.1f} {y1 - 50 - 22 * k:.1f} {x1 + w1 * .75:.1f} {y1 - 50 - 22 * k:.1f} {x1 + w1 * .75:.1f} {y1 - 2}", "a")
+                labels.append((x1 + w1 / 2, y1 - 50 - 22 * k + 6, p.local))
+            elif layer[d] < layer[r]:
+                a, b = (x1 + w1, y1 + h1 / 2 + off), (x2 - 2, y2 + h2 / 2 + off)
+            elif layer[d] > layer[r]:
+                a, b = (x1, y1 + h1 / 2 + off), (x2 + w2 + 2, y2 + h2 / 2 + off)
+            else:
+                up = y1 > y2
+                a, b = (x1 + w1 / 2 + off, y1 if up else y1 + h1), (x2 + w2 / 2 + off, y2 + h2 + 2 if up else y2 - 2)
+            if d != r:
+                f.line(a[0], a[1], b[0], b[1], "a")
+                # the label sits in the first gap after the source column, so a long edge cannot hide it behind a box
+                if layer[d] != layer[r] and ncol > 1:
+                    lx = a[0] + (gap / 2 if layer[d] < layer[r] else -gap / 2)
+                    ly = a[1] + (b[1] - a[1]) * (lx - a[0]) / (b[0] - a[0])
+                else:
+                    lx, ly = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+                labels.append((lx, ly, p.local))
+    for n, (x, y, w, h) in box.items():
+        nbox(f, x, y, w, h, lab(n), fill_of(n), dash=md.ns_key(n) is None and False)
+    for x, y, t in labels:
+        B.label(f, x, y, fit(t, 16, 250, True))
+    items = family_items(nodes, [(k, t) for k, t in (("geolod", "geolod:"), ("strat", "strat:"), ("an", "an:"))
+                                 if any(md.ns_key(n) == k for n in nodes)])
+    legend(f, f.h - 70, items, note)
+    f.save()
+    return f, left_out
+
+
+# ------------------------------------------------------------------ CRM coverage
+
+def coverage_fig(M: md.Model, outdir: Path, name: str, title: str) -> Fig:
+    cards = defaultdict(list)
+    loose = []
+    for c in sorted(M.classes.values(), key=lambda c: c.curie):
+        found, chain = M.anchors(c.iri)
+        if not found:
+            loose.append(c)
+            continue
+        via = (M.curie(chain[1]).replace("geolod:", "") if len(chain) > 2 else None)
+        for a in found:
+            cards[a].append((c, via, len(found) - 1))
+    order = sorted(cards, key=lambda a: (FAM_ORDER[md.family(a)], -len(cards[a]), M.curie(a)))
+    heads = [(a, M.curie(a), cards[a]) for a in order]
+    if loose:
+        heads.append((None, "no CRM-family ancestor", [(c, None, 0) for c in loose]))
+    cw, gap, line, head, pad = 530, 30, 27, 44, 14
+    colh = [0, 0, 0]
+    place = []
+    for a, t, items in heads:
+        h = head + len(items) * line + pad
+        k = colh.index(min(colh))
+        place.append((a, t, items, 50 + k * (cw + gap), 40 + colh[k], h))
+        colh[k] += h + 22
+    height = int(40 + max(colh) + 100)
+    f = Fig(name, title, 1750, height, outdir)
+    for a, t, items, x, y, h in place:
+        f.raw(f'<rect x="{x}" y="{y}" width="{cw}" height="{h}" rx="10" fill="#ffffff" stroke="{BLACK}" stroke-width="1.2"/>')
+        f.raw(f'<path d="M {x} {y + head} V {y + 10} Q {x} {y} {x + 10} {y} H {x + cw - 10} Q {x + cw} {y} {x + cw} {y + 10} V {y + head} Z" '
+              f'fill="{FAM_FILL[md.family(a)] if a else "#ffffff"}" stroke="{BLACK}" stroke-width="1.2"/>')
+        f.text(x + 16, y + head / 2, t, 21, True, anchor="start", maxw=cw - 100)
+        f.text(x + cw - 14, y + head / 2, f"{len(items)}", 19, False, MUTED, "end")
+        for i, (c, via, more) in enumerate(items):
+            yy = y + head + i * line + line / 2 + 4
+            f.rect(x + 16, yy - 8, 16, 16, OWN_FILL[c.ns], BLACK, 3, 1)
+            nm = c.local if c.ns == "geolod" else c.curie
+            f.text(x + 42, yy, nm, 18, True, anchor="start", maxw=cw - 60)
+            extra = fit((f"via {via}" if via else "direct") + (f"  +{more}" if more else ""), 16,
+                        cw - 14 - 42 - tw(nm, 18, True) - 14)
+            f.text(x + cw - 14, yy, extra, 16, False, MUTED, "end")
+    legend(f, f.h - 70, [(OWN_FILL[k], t) for k, t in (("geolod", "geolod:"), ("strat", "strat:"), ("an", "an:"))],
+           "Anchor classes at the top of each card; a class with two nearest anchors appears under both (+n). \"via\" names the first step of the chain.")
+    f.save()
+    return f
+
+
+# ------------------------------------------------------------------ instances
+
+LABEL_PREDS = (RDFS.label, SKOS.prefLabel, DCTERMS.title)
+ROWS = 9
+HIDE_ATTR = {str(p) for p in (RDFS.label, SKOS.prefLabel, DCTERMS.title, RDFS.comment, SKOS.scopeNote, SKOS.note,
+                              DCTERMS.identifier, OWL.versionInfo)}
+
+
+def short(g: Graph, iri) -> str:
+    try:
+        pfx, ns, local = g.namespace_manager.compute_qname(str(iri), generate=False)
+        return f"{pfx}:{local}"
+    except Exception:                                   # noqa: BLE001  (no prefix bound)
+        s = str(iri).rstrip("/")
+        return s.rsplit("/", 1)[-1].rsplit("#", 1)[-1] or s
+
+
+def is_leaf(g: Graph, iri) -> bool:
+    """A resource the graph says nothing about: a unit, a licence, an ORCID. Shown as a row of its neighbour, not as a box."""
+    return not any(True for _ in g.predicate_objects(iri))
+
+
+class _Node:
+    def __init__(self, g, M, iri, closure, skip_p=()):
+        self.iri = iri
+        labels = sorted(str(o) for p in LABEL_PREDS for o in g.objects(iri, p) if isinstance(o, Literal))
+        self.head = " ".join(labels[0].split()) if labels else short(g, iri)
+        self.curie = short(g, iri)
+        self.types = [t for t in sorted(g.objects(iri, RDF.type), key=str) if isinstance(t, URIRef) and t != OWL.NamedIndividual]
+        self.attrs = [(short(g, p), str(o)) for p, o in sorted(g.predicate_objects(iri), key=lambda t: (str(t[0]), str(t[1])))
+                      if isinstance(o, Literal) and str(p) not in HIDE_ATTR]
+        self.attrs += [(short(g, p) + " →", short(g, o)) for p, o in sorted(g.predicate_objects(iri), key=lambda t: (str(t[0]), str(t[1])))
+                       if isinstance(o, URIRef) and str(p) not in skip_p and is_leaf(g, o)]
+        anc = set()
+        for t in self.types:
+            anc |= closure(str(t))
+        self.kind = ("term" if anc & {"http://www.w3.org/2004/02/skos/core#Concept", "http://www.cidoc-crm.org/cidoc-crm/E55_Type"}
+                     else "real" if anc & {"http://w3id.org/geo-lod/SamplingLocation", "http://w3id.org/geo-lod/PalaeoclimateSample",
+                                           "http://w3id.org/geo-lod/strat/Core"} else "inst")
+
+
+def instance_fig(M: md.Model, g: Graph, outdir: Path, name: str, title: str, root: str, skip=(), inbound=(),
+                 max_children=9, note="") -> tuple[Fig, list[str]]:
+    """One resource and its neighbours two steps out, as stored. Returns the figure and the IRIs it shows."""
+    skip_p = {str(RDF.type)} | {str(s) for s in skip}
+    cache = {}
+
+    def closure(iri):
+        if iri not in cache:
+            seen, stack = set(), [iri]
+            while stack:
+                n = stack.pop()
+                for p in M.parents(n):
+                    if p not in seen:
+                        seen.add(p)
+                        stack.append(p)
+            cache[iri] = seen | {iri}
+        return cache[iri]
+
+    root_u = URIRef(root)
+    level = {root_u: 0}
+    order = [[root_u], [], []]
+    links = []                                         # (s, p, o)
+
+    def neighbours(n):
+        out = [(p, o, False) for p, o in sorted(g.predicate_objects(n), key=lambda t: (str(t[0]), str(t[1])))
+               if isinstance(o, URIRef) and str(p) not in skip_p and not is_leaf(g, o)]
+        if n == root_u:
+            out += [(p, s, True) for p in map(URIRef, inbound) for s in sorted(g.subjects(p, n), key=str)]
+        return out[:max_children + (3 if n == root_u else 0)]
+
+    for lv in (1, 2):
+        for n in list(order[lv - 1]):
+            for p, o, rev in neighbours(n):
+                if o not in level:
+                    level[o] = lv
+                    order[lv].append(o)
+                if level[o] in (lv, lv - 1) or True:
+                    links.append((o, p, n) if rev else (n, p, o))
+    nodes = {n: _Node(g, M, n, closure, skip_p) for n in level}
+    size = 17
+    colw = []
+    for lv in range(3):
+        ws = []
+        for n in order[lv]:
+            nd = nodes[n]
+            ws += [tw(nd.head, 20, True), tw(nd.curie, size), *[tw(f"{a}  {v}", size) for a, v in nd.attrs[:ROWS]],
+                   *[tw(M.curie(str(t)) if M.curie(str(t)) != str(t) else short(g, t), 16) + 20 for t in nd.types[:2]]]
+        colw.append(min(430, max(ws, default=200) + 36))
+    gap = (1750 - 100 - sum(colw)) / 2
+    if gap < 120:
+        raise ValueError(f"{name}: columns too wide ({colw})")
+    xs = [50, 50 + colw[0] + gap, 50 + colw[0] + colw[1] + 2 * gap]
+
+    def height(n):
+        nd = nodes[n]
+        return 14 + 28 + 22 + (26 if nd.types else 0) + min(len(nd.attrs), ROWS) * 23 + 12
+
+    ycen, bottom = {}, 0
+    for lv in (1, 2):
+        cur = 40
+        want = sorted(order[lv], key=lambda n: (ycen.get(next((a for a, p, b in links if b == n and a in ycen), None), 0), str(n))) \
+            if lv == 2 else order[lv]
+        for n in want:
+            h = height(n)
+            target = None
+            if lv == 2:
+                src = [a for a, p, b in links if b == n and level.get(a) == 1] + [b for a, p, b in links if a == n and level.get(b) == 1]
+                target = ycen[src[0]] - h / 2 if src else None
+            y = max(cur, target if target is not None else cur)
+            ycen[n] = y + h / 2
+            cur = y + h + 22
+            bottom = max(bottom, cur)
+    ycen[root_u] = (40 + max(bottom, 40 + height(root_u))) / 2 if order[1] else 40 + height(root_u) / 2
+    bottom = max(bottom, ycen[root_u] + height(root_u) / 2 + 22)
+    f = Fig(name, title, 1750, int(bottom + 110), outdir)
+    X = {n: xs[level[n]] for n in level}
+    W = {n: colw[level[n]] for n in level}
+    shown = set(level)
+    skipped = 0
+    labels = []
+    for s, p, o in links:
+        if s not in shown or o not in shown:
+            continue
+        ls, lo = level[s], level[o]
+        if abs(ls - lo) > 1:
+            skipped += 1
+            continue
+        if ls == lo:
+            xr = X[s] + W[s]
+            f.path(f"M {xr:.1f} {ycen[s]:.1f} L {xr + 34:.1f} {ycen[s]:.1f} L {xr + 34:.1f} {ycen[o]:.1f} L {xr + 2:.1f} {ycen[o]:.1f}", "a")
+            labels.append((xr + 34, (ycen[s] + ycen[o]) / 2, short(g, p)))
+            continue
+        a, b = (s, o) if ls < lo else (o, s)
+        x1, y1 = X[a] + W[a], ycen[a]
+        x2, y2 = X[b], ycen[b]
+        if ls < lo:
+            f.line(x1, y1, x2 - 2, y2, "a")
+        else:
+            f.line(x2, y2, x1 + 2, y1, "a")
+        labels.append((x1 + (x2 - x1) * .66, y1 + (y2 - y1) * .66, short(g, p)))
+    for n in level:
+        nd, h = nodes[n], height(n)
+        x, y, w = X[n], ycen[n] - h / 2, W[n]
+        st = {"term": TERM, "real": REAL, "inst": INST}[nd.kind]
+        f.raw(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="8" fill="{st[0]}" stroke="{BLACK}" stroke-width="1.2"/>')
+        yy = y + 14 + 14
+        f.text(x + w / 2, yy, fit(nd.head, 20, w - 20, True), 20, True, st[2], maxw=w - 14)
+        f.text(x + w / 2, yy + 24, fit(nd.curie, size, w - 20), size, False, st[2], maxw=w - 14)
+        yy += 24 + 22
+        if nd.types:
+            tt = " + ".join(M.curie(str(t)) if M.curie(str(t)) != str(t) else short(g, t) for t in nd.types[:2])
+            tt = fit(tt, 16, w - 36)
+            tw_ = tw(tt, 16) + 18
+            f.rect(x + w / 2 - tw_ / 2, yy - 12, tw_, 24, CLS[0], BLACK, 12, 1)
+            f.text(x + w / 2, yy, tt, 16, False, CLS[2])
+            yy += 26
+        for a, v in nd.attrs[:ROWS]:
+            f.text(x + 14, yy + 4, fit(f"{a}  {v}", size, w - 26), size, False, st[2], "start")
+            yy += 23
+    for x, y, t in labels:
+        B.label(f, x, y, fit(t, 16, 240, True))
+    f.legend(f.h - 66, [(INST, "resource"), (REAL, "real object"), (TERM, "term"), (CLS, "class of the resource")])
+    cap = note + (f" {skipped} link between non-adjacent columns not drawn." if skipped else "")
+    f.text(50, f.h - 22, cap.strip(), 18, color=MUTED, anchor="start", maxw=1650)
+    f.save()
+    return f, sorted(str(n) for n in level)
