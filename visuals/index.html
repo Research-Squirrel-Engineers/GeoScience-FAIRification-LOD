@@ -1,24 +1,17 @@
-<!doctype html>
-    <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CHNT31 Slide Figures</title>
-    <style>
-    :root{--bg:#f6f6f3;--card:#fff;--ink:#1f1f1d;--mut:#55544f;--line:#d8d6ce}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 "Fira Sans",system-ui,sans-serif}
-    main{max-width:1040px;margin:0 auto;padding:32px 16px 64px}
-    h1{font-size:28px;font-weight:500;margin:0 0 24px}
-    section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:0 0 24px}
-    img{display:block;width:100%;height:auto;border-radius:4px}
-    .row{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;margin-top:14px}
-    .cap{margin:0;font-size:20px;font-weight:500}
-    .n{color:#9a3412;margin-right:10px}
-    .cr{margin:6px 0 0;color:var(--mut);font-size:14px}
-    .dl{margin:6px 0 0;font-size:14px}
-    .dl a{color:#9a3412;margin-right:14px}
-    button{flex:none;font:inherit;font-size:14px;padding:5px 12px;border:1px solid #9a3412;border-radius:6px;background:#fff;color:#9a3412;cursor:pointer}
-    button:hover{background:#9a3412;color:#fff}
-    </style></head><body><main><h1>CHNT31 slide figures</h1>
-    <section>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slide figures · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="../docu/index.html">Overview</a><a href="../docu/model.html">Data model</a><a href="../docu/crm-coverage.html">CRM coverage</a><a href="../docu/instances.html">Instance models</a><a href="../docu/sparql.html">Query</a></span></div><div class="grp"><span class="lab">Visuals</span><span class="lnk"><a class="on" href="index.html">Slide figures</a></span></div></nav>
+<h1>Slide figures</h1>
+<p class="intro">Twelve figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, the CRM coverage and a query page are in the <a href="../docu/index.html">documentation</a>.</p>
+<section>
 <img src="img/01-from-measurement-to-crm.png" width="3500" height="2000" loading="lazy" alt="From one table row to CIDOC CRM and its extensions.">
 <div class="row"><p class="cap"><span class="n">1</span>From one table row to CIDOC CRM and its extensions.</p><button type="button" data-c="From one table row to CIDOC CRM and its extensions.">Copy</button></div>
 <p class="cr">Data: EPICA Dome C, Spahni &amp; Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0.</p>
@@ -90,10 +83,11 @@
 <p class="cr">Ontology modules of geo-lod; figure CC BY 4.0.</p>
 <p class="dl"><a href="img/12-modules-and-crm.png" download>PNG</a><a href="img/12-modules-and-crm.svg" download>SVG</a></p>
 </section>
-    </main><script>
-    document.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){
-      var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
-      if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
-    })});
-    </script></body></html>
-    
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>
