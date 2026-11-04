@@ -11,6 +11,5 @@
     void:linkPredicate rdf:type ;
     void:objectsTarget owl: ;
     void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
-    void:triples 365,
-        5750 .
+    void:triples 5750 .
 
