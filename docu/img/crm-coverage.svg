@@ -1,5 +1,5 @@
-<svg width="1750" height="1402" viewBox="0 0 1750 1402" xmlns="http://www.w3.org/2000/svg" role="img"><title>Own classes and their CIDOC CRM anchors</title>
-<rect width="1750" height="1402" fill="#ffffff"/>
+<svg width="1750" height="1376" viewBox="0 0 1750 1376" xmlns="http://www.w3.org/2000/svg" role="img"><title>Own classes and their CIDOC CRM anchors</title>
+<rect width="1750" height="1376" fill="#ffffff"/>
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
 <rect x="50" y="40" width="530" height="301" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
 <path d="M 50 84 V 50 Q 50 40 60 40 H 570 Q 580 40 580 50 V 84 Z" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
@@ -7,7 +7,7 @@
 <text x="566" y="62.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">9</text>
 <rect x="66" y="93.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
 <text x="92" y="101.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:Method</text>
-<text x="566" y="101.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via skos:Concept</text>
+<text x="566" y="101.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via sosa:Procedure  +1</text>
 <rect x="66" y="120.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
 <text x="92" y="128.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:QualityFlag</text>
 <text x="566" y="128.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via skos:Concept</text>
@@ -141,148 +141,159 @@
 <text x="566" y="558.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
 <rect x="610" y="577" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
 <path d="M 610 621 V 587 Q 610 577 620 577 H 1130 Q 1140 577 1140 587 V 621 Z" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
-<text x="626" y="599.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E54_Dimension</text>
+<text x="626" y="599.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E29_Design_or_Procedure</text>
 <text x="1126" y="599.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
-<rect x="626" y="630.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="638.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">DepthPosition</text>
-<text x="1126" y="638.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="626" y="630.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="652" y="638.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:Method</text>
+<text x="1126" y="638.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via sosa:Procedure  +1</text>
 <rect x="1170" y="577" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
 <path d="M 1170 621 V 587 Q 1170 577 1180 577 H 1690 Q 1700 577 1700 587 V 621 Z" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
-<text x="1186" y="599.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E78_Curated_Holding</text>
+<text x="1186" y="599.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E54_Dimension</text>
 <text x="1686" y="599.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
 <rect x="1186" y="630.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="638.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">PalaeoclimateDataCatalogue</text>
-<text x="1686" y="638.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via dcat:Catalog</text>
+<text x="1212" y="638.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">DepthPosition</text>
+<text x="1686" y="638.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
 <rect x="50" y="604" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
 <path d="M 50 648 V 614 Q 50 604 60 604 H 570 Q 580 604 580 614 V 648 Z" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
-<text x="66" y="626.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E7_Activity</text>
+<text x="66" y="626.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E5_Event</text>
 <text x="566" y="626.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
-<rect x="66" y="657.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="92" y="665.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">DrillingCampaign</text>
-<text x="566" y="665.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct  +1</text>
-<rect x="610" y="684" width="530" height="328" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<path d="M 610 728 V 694 Q 610 684 620 684 H 1130 Q 1140 684 1140 694 V 728 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
-<text x="626" y="706.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S4_Observation</text>
-<text x="1126" y="706.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">10</text>
-<rect x="626" y="737.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
-<text x="652" y="745.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:Analysis</text>
-<text x="1126" y="745.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via sosa:Observation</text>
-<rect x="626" y="764.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
-<text x="652" y="772.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:DerivedValue</text>
-<text x="1126" y="772.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via an:Analysis</text>
-<rect x="626" y="791.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="799.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Chronology</text>
-<text x="1126" y="799.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="626" y="818.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="826.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta13CSpeleothemObservation</text>
-<text x="1126" y="826.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SpeleothemObserva…</text>
-<rect x="626" y="845.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="853.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta18OSpeleothemObservation</text>
-<text x="1126" y="853.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SpeleothemObserva…</text>
-<rect x="626" y="872.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="880.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">IceCoreChronology</text>
-<text x="1126" y="880.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via Chronology</text>
-<rect x="626" y="899.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="907.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">IceCoreObservation</text>
-<text x="1126" y="907.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via PalaeoclimateObservation</text>
-<rect x="626" y="926.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="934.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">PalaeoclimateObservation</text>
-<text x="1126" y="934.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="626" y="953.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="961.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">SpeleothemObservation</text>
-<text x="1126" y="961.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via PalaeoclimateObservation</text>
-<rect x="626" y="980.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="652" y="988.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">UThChronology</text>
-<text x="1126" y="988.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via Chronology</text>
-<rect x="1170" y="684" width="530" height="193" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<path d="M 1170 728 V 694 Q 1170 684 1180 684 H 1690 Q 1700 684 1700 694 V 728 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
-<text x="1186" y="706.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S6_Data_Evaluation</text>
-<text x="1686" y="706.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">5</text>
+<rect x="66" y="657.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="92" y="665.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:Eruption</text>
+<text x="566" y="665.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="610" y="684" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 610 728 V 694 Q 610 684 620 684 H 1130 Q 1140 684 1140 694 V 728 Z" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="626" y="706.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E78_Curated_Holding</text>
+<text x="1126" y="706.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
+<rect x="626" y="737.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="745.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">PalaeoclimateDataCatalogue</text>
+<text x="1126" y="745.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via dcat:Catalog</text>
+<rect x="1170" y="684" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 1170 728 V 694 Q 1170 684 1180 684 H 1690 Q 1700 684 1700 694 V 728 Z" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1186" y="706.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crm:E7_Activity</text>
+<text x="1686" y="706.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
 <rect x="1186" y="737.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="745.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">AgeModel</text>
-<text x="1686" y="745.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="764.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="772.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">MeasurementType</text>
-<text x="1686" y="772.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="791.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="799.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">RollingMedianFilter</text>
-<text x="1686" y="799.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SmoothingMethod</text>
-<rect x="1186" y="818.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="826.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">SavitzkyGolayFilter</text>
-<text x="1686" y="826.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SmoothingMethod</text>
-<rect x="1186" y="845.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="853.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">SmoothingMethod</text>
-<text x="1686" y="853.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="50" y="711" width="530" height="166" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<text x="1212" y="745.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">DrillingCampaign</text>
+<text x="1686" y="745.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct  +1</text>
+<rect x="50" y="711" width="530" height="328" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
 <path d="M 50 755 V 721 Q 50 711 60 711 H 570 Q 580 711 580 721 V 755 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
-<text x="66" y="733.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S9_Property_Type</text>
-<text x="566" y="733.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">4</text>
+<text x="66" y="733.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S4_Observation</text>
+<text x="566" y="733.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">10</text>
 <rect x="66" y="764.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
-<text x="92" y="772.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:Property</text>
-<text x="566" y="772.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via sosa:ObservableProperty</text>
-<rect x="66" y="791.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="92" y="799.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta13CProperty</text>
-<text x="566" y="799.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via ObservableProperty</text>
+<text x="92" y="772.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:Analysis</text>
+<text x="566" y="772.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via sosa:Observation</text>
+<rect x="66" y="791.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="92" y="799.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:DerivedValue</text>
+<text x="566" y="799.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via an:Analysis</text>
 <rect x="66" y="818.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="92" y="826.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta18OProperty</text>
-<text x="566" y="826.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via ObservableProperty</text>
+<text x="92" y="826.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Chronology</text>
+<text x="566" y="826.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
 <rect x="66" y="845.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="92" y="853.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">ObservableProperty</text>
-<text x="566" y="853.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="50" y="899" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<path d="M 50 943 V 909 Q 50 899 60 899 H 570 Q 580 899 580 909 V 943 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
-<text x="66" y="921.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S1_Matter_Removal</text>
-<text x="566" y="921.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
-<rect x="66" y="952.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="92" y="960.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">DrillingCampaign</text>
-<text x="566" y="960.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct  +1</text>
-<rect x="1170" y="899" width="530" height="112" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<path d="M 1170 943 V 909 Q 1170 899 1180 899 H 1690 Q 1700 899 1700 909 V 943 Z" fill="#e3d5f0" stroke="#000000" stroke-width="1.2"/>
-<text x="1186" y="921.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmarchaeo:A2_Stratigraphic_Volume_Unit</text>
-<text x="1686" y="921.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">2</text>
-<rect x="1186" y="952.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="960.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">ArchaeologicalCaveSite</text>
-<text x="1686" y="960.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="979.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="987.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">CIArchaeologicalSite</text>
-<text x="1686" y="987.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="50" y="1006" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<path d="M 50 1050 V 1016 Q 50 1006 60 1006 H 570 Q 580 1006 580 1016 V 1050 Z" fill="#e3d5f0" stroke="#000000" stroke-width="1.2"/>
-<text x="66" y="1028.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmarchaeo:A3_Stratigraphic_Interface</text>
-<text x="566" y="1028.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
-<rect x="66" y="1059.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="92" y="1067.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">GrowthHiatus</text>
-<text x="566" y="1067.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1170" y="1033" width="530" height="247" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<path d="M 1170 1077 V 1043 Q 1170 1033 1180 1033 H 1690 Q 1700 1033 1700 1043 V 1077 Z" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
-<text x="1186" y="1055.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">no CRM-family ancestor</text>
-<text x="1686" y="1055.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">7</text>
-<rect x="1186" y="1086.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1094.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:AgeDepthModel</text>
-<text x="1686" y="1094.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="1113.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1121.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:Boundary</text>
-<text x="1686" y="1121.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="1140.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1148.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:Core</text>
-<text x="1686" y="1148.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="1167.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1175.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:Eruption</text>
-<text x="1686" y="1175.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="1194.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1202.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:LithologicalUnit</text>
-<text x="1686" y="1202.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="1221.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1229.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:StratigraphicUnit</text>
-<text x="1686" y="1229.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="1186" y="1248.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="1212" y="1256.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:TephraLayer</text>
-<text x="1686" y="1256.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
-<rect x="705.7" y="1321" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="737.7" y="1332" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
-<rect x="837.5" y="1321" width="22" height="22" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
-<text x="869.5" y="1332" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">strat:</text>
-<rect x="950.3" y="1321" width="22" height="22" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
-<text x="982.3" y="1332" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">an:</text>
-<text x="50" y="1376" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Anchor classes at the top of each card; a class with two nearest anchors appears under both (+n). "via" names the first step of the chain.</text>
+<text x="92" y="853.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta13CSpeleothemObservation</text>
+<text x="566" y="853.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SpeleothemObserva…</text>
+<rect x="66" y="872.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="880.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta18OSpeleothemObservation</text>
+<text x="566" y="880.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SpeleothemObserva…</text>
+<rect x="66" y="899.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="907.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">IceCoreChronology</text>
+<text x="566" y="907.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via Chronology</text>
+<rect x="66" y="926.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="934.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">IceCoreObservation</text>
+<text x="566" y="934.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via PalaeoclimateObservation</text>
+<rect x="66" y="953.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="961.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">PalaeoclimateObservation</text>
+<text x="566" y="961.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="66" y="980.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="988.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">SpeleothemObservation</text>
+<text x="566" y="988.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via PalaeoclimateObservation</text>
+<rect x="66" y="1007.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="1015.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">UThChronology</text>
+<text x="566" y="1015.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via Chronology</text>
+<rect x="610" y="791" width="530" height="220" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 610 835 V 801 Q 610 791 620 791 H 1130 Q 1140 791 1140 801 V 835 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="626" y="813.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S6_Data_Evaluation</text>
+<text x="1126" y="813.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">6</text>
+<rect x="626" y="844.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="852.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">AgeModel</text>
+<text x="1126" y="852.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="626" y="871.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="879.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">MeasurementType</text>
+<text x="1126" y="879.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="626" y="898.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="906.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">RollingMedianFilter</text>
+<text x="1126" y="906.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SmoothingMethod</text>
+<rect x="626" y="925.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="933.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">SavitzkyGolayFilter</text>
+<text x="1126" y="933.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via SmoothingMethod</text>
+<rect x="626" y="952.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="960.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">SmoothingMethod</text>
+<text x="1126" y="960.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="626" y="979.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="652" y="987.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:AgeDepthModel</text>
+<text x="1126" y="987.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="1170" y="791" width="530" height="166" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 1170 835 V 801 Q 1170 791 1180 791 H 1690 Q 1700 791 1700 801 V 835 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="1186" y="813.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S9_Property_Type</text>
+<text x="1686" y="813.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">4</text>
+<rect x="1186" y="844.5" width="16" height="16" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="852.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">an:Property</text>
+<text x="1686" y="852.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via sosa:ObservableProperty</text>
+<rect x="1186" y="871.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="879.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta13CProperty</text>
+<text x="1686" y="879.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via ObservableProperty</text>
+<rect x="1186" y="898.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="906.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">Delta18OProperty</text>
+<text x="1686" y="906.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via ObservableProperty</text>
+<rect x="1186" y="925.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="933.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">ObservableProperty</text>
+<text x="1686" y="933.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="1170" y="979" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 1170 1023 V 989 Q 1170 979 1180 979 H 1690 Q 1700 979 1700 989 V 1023 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="1186" y="1001.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S13_Sample</text>
+<text x="1686" y="1001.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
+<rect x="1186" y="1032.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="1040.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:Core</text>
+<text x="1686" y="1040.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="610" y="1033" width="530" height="85" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 610 1077 V 1043 Q 610 1033 620 1033 H 1130 Q 1140 1033 1140 1043 V 1077 Z" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="626" y="1055.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmsci:S1_Matter_Removal</text>
+<text x="1126" y="1055.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">1</text>
+<rect x="626" y="1086.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="652" y="1094.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">DrillingCampaign</text>
+<text x="1126" y="1094.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct  +1</text>
+<rect x="50" y="1061" width="530" height="193" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 50 1105 V 1071 Q 50 1061 60 1061 H 570 Q 580 1061 580 1071 V 1105 Z" fill="#e3d5f0" stroke="#000000" stroke-width="1.2"/>
+<text x="66" y="1083.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmarchaeo:A2_Stratigraphic_Volume_Unit</text>
+<text x="566" y="1083.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">5</text>
+<rect x="66" y="1114.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="1122.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">ArchaeologicalCaveSite</text>
+<text x="566" y="1122.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="66" y="1141.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="92" y="1149.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">CIArchaeologicalSite</text>
+<text x="566" y="1149.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="66" y="1168.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="92" y="1176.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:LithologicalUnit</text>
+<text x="566" y="1176.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via strat:StratigraphicUnit</text>
+<rect x="66" y="1195.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="92" y="1203.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:StratigraphicUnit</text>
+<text x="566" y="1203.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="66" y="1222.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="92" y="1230.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:TephraLayer</text>
+<text x="566" y="1230.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">via strat:LithologicalUnit</text>
+<rect x="1170" y="1086" width="530" height="112" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1.2"/>
+<path d="M 1170 1130 V 1096 Q 1170 1086 1180 1086 H 1690 Q 1700 1086 1700 1096 V 1130 Z" fill="#e3d5f0" stroke="#000000" stroke-width="1.2"/>
+<text x="1186" y="1108.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">crmarchaeo:A3_Stratigraphic_Interface</text>
+<text x="1686" y="1108.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">2</text>
+<rect x="1186" y="1139.5" width="16" height="16" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="1147.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">GrowthHiatus</text>
+<text x="1686" y="1147.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="1186" y="1166.5" width="16" height="16" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="1212" y="1174.5" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">strat:Boundary</text>
+<text x="1686" y="1174.5" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">direct</text>
+<rect x="705.7" y="1295" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="737.7" y="1306" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
+<rect x="837.5" y="1295" width="22" height="22" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="869.5" y="1306" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">strat:</text>
+<rect x="950.3" y="1295" width="22" height="22" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="982.3" y="1306" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">an:</text>
+<text x="50" y="1350" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Anchor classes at the top of each card; a class with two nearest anchors appears under both (+n). "via" names the first step of the chain.</text>
 </svg>

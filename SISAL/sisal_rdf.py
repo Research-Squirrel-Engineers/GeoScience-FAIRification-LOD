@@ -432,19 +432,22 @@ geolod:hasAgeAssignment
     a owl:ObjectProperty ;
     rdfs:domain  geolod:SpeleothemSample ;
     rdfs:range   geolod:AgeAssignment ;
-    rdfs:label   "has age assignment"@en .
+    rdfs:label   "has age assignment"@en ;
+    rdfs:comment "Links a speleothem sample to one of its age assignments, an age derived from a given age model."@en .
 
 geolod:ageUncertaintyPos_ka
     a owl:DatatypeProperty ;
     rdfs:domain  geolod:AgeAssignment ;
     rdfs:range   xsd:decimal ;
-    rdfs:label   "age uncertainty, older side (ka)"@en .
+    rdfs:label   "age uncertainty, older side (ka)"@en ;
+    rdfs:comment "Uncertainty of the age on the older side, in ka. Together with geolod:ageUncertaintyNeg_ka it gives the interval age minus the negative uncertainty to age plus this value."@en .
 
 geolod:ageUncertaintyNeg_ka
     a owl:DatatypeProperty ;
     rdfs:domain  geolod:AgeAssignment ;
     rdfs:range   xsd:decimal ;
-    rdfs:label   "age uncertainty, younger side (ka)"@en .
+    rdfs:label   "age uncertainty, younger side (ka)"@en ;
+    rdfs:comment "Uncertainty of the age on the younger side, in ka. Together with geolod:ageUncertaintyPos_ka it gives the interval age minus this value to age plus the positive uncertainty."@en .
 
 geolod:extrapolatedBeyondDatingRange
     a owl:DatatypeProperty ;
@@ -478,7 +481,8 @@ geolod:datingMethod
     a owl:ObjectProperty ;
     rdfs:domain  strat:AgeControlPoint ;
     rdfs:range   geolod:DatingMethod ;
-    rdfs:label   "dating method"@en .
+    rdfs:label   "dating method"@en ;
+    rdfs:comment "The method by which an age control point was determined (a geolod:DatingMethod). It also tells laboratory measurements apart from statements such as a speleothem that is still growing."@en .
 
 geolod:constrainsSpeleothem
     a owl:ObjectProperty ;
@@ -498,13 +502,15 @@ geolod:datingLabId
     a owl:DatatypeProperty ;
     rdfs:domain  strat:AgeControlPoint ;
     rdfs:range   xsd:string ;
-    rdfs:label   "laboratory identifier"@en .
+    rdfs:label   "laboratory identifier"@en ;
+    rdfs:comment "Identifier the dating laboratory gave to the dated sample."@en .
 
 geolod:materialDated
     a owl:DatatypeProperty ;
     rdfs:domain  strat:AgeControlPoint ;
     rdfs:range   xsd:string ;
-    rdfs:label   "material dated"@en .
+    rdfs:label   "material dated"@en ;
+    rdfs:comment "The material that was dated, as recorded in SISAL v3 (free text, unknown when not stated)."@en .
 
 # -- Hiatus and gap --------------------------------------------------------
 # Two different statements, and the difference is the one the figures already
@@ -555,7 +561,8 @@ geolod:entityStatus
     a owl:ObjectProperty ;
     rdfs:domain  geolod:Speleothem ;
     rdfs:range   geolod:EntityStatus ;
-    rdfs:label   "entity status"@en .
+    rdfs:label   "entity status"@en ;
+    rdfs:comment "Status of the speleothem entity in SISAL v3 (a geolod:EntityStatus term)."@en .
 
 geolod:correspondingCurrentSpeleothem
     a owl:ObjectProperty ;
@@ -583,17 +590,20 @@ geolod:composedOf
 geolod:entityId
     a owl:DatatypeProperty ;
     rdfs:range   xsd:integer ;
-    rdfs:label   "SISAL entity id"@en .
+    rdfs:label   "SISAL entity id"@en ;
+    rdfs:comment "Identifier of the speleothem entity in the SISAL v3 database, kept so that a resource can be traced back to its source table."@en .
 
 geolod:siteId
     a owl:DatatypeProperty ;
     rdfs:range   xsd:integer ;
-    rdfs:label   "SISAL site id"@en .
+    rdfs:label   "SISAL site id"@en ;
+    rdfs:comment "Identifier of the cave site in the SISAL v3 database, kept so that a resource can be traced back to its source table."@en .
 
 geolod:sampleId
     a owl:DatatypeProperty ;
     rdfs:range   xsd:integer ;
-    rdfs:label   "SISAL sample id"@en .
+    rdfs:label   "SISAL sample id"@en ;
+    rdfs:comment "Identifier of the sample in the SISAL v3 database, kept so that a resource can be traced back to its source table."@en .
 
 geolod:atDepth_mm
     a owl:DatatypeProperty ;
@@ -605,17 +615,20 @@ geolod:atDepth_mm
 geolod:sampleThickness_mm
     a owl:DatatypeProperty ;
     rdfs:range   xsd:decimal ;
-    rdfs:label   "sample thickness (mm)"@en .
+    rdfs:label   "sample thickness (mm)"@en ;
+    rdfs:comment "Thickness of the sample, in millimetres."@en .
 
 geolod:mineralogy
     a owl:DatatypeProperty ;
     rdfs:range   xsd:string ;
-    rdfs:label   "mineralogy"@en .
+    rdfs:label   "mineralogy"@en ;
+    rdfs:comment "Mineralogy of the speleothem sample (for example calcite or aragonite), as recorded in SISAL v3."@en .
 
 geolod:aragoniteCorrection
     a owl:DatatypeProperty ;
     rdfs:range   xsd:string ;
-    rdfs:label   "aragonite correction"@en .
+    rdfs:label   "aragonite correction"@en ;
+    rdfs:comment "Correction applied to the isotope values of the sample for aragonite, as recorded in SISAL v3 (free text)."@en .
 
 geolod:elevation_m
     a owl:DatatypeProperty ;
@@ -669,7 +682,8 @@ geolod:isUNESCOWorldHeritage
     a owl:DatatypeProperty ;
     rdfs:domain  geolod:Cave ;
     rdfs:range   xsd:boolean ;
-    rdfs:label   "is UNESCO World Heritage"@en .
+    rdfs:label   "is UNESCO World Heritage"@en ;
+    rdfs:comment "True if the cave belongs to a UNESCO World Heritage Site."@en .
 
 geolod:unescoWHId
     a owl:ObjectProperty ;
@@ -688,13 +702,15 @@ geolod:countD13CSamples
     a owl:DatatypeProperty ;
     rdfs:domain  geolod:Cave ;
     rdfs:range   xsd:integer ;
-    rdfs:label   "number of δ¹³C samples"@en .
+    rdfs:label   "number of δ¹³C samples"@en ;
+    rdfs:comment "Number of delta-13-C measurements recorded for the cave in the SISAL v3 release."@en .
 
 geolod:collectedFrom
     a owl:ObjectProperty ;
     rdfs:domain  geolod:SpeleothemSample ;
     rdfs:range   geolod:Speleothem ;
-    rdfs:label   "collected from"@en .
+    rdfs:label   "collected from"@en ;
+    rdfs:comment "Links a speleothem sample to the speleothem it was collected from."@en .
 """
 
 

@@ -7,6 +7,7 @@ change in the ontology changes the figure instead of making it wrong.
     hierarchy_fig   rdfs:subClassOf as a left-to-right tree, CRM-family classes at the roots
     relations_fig   object properties as arrows from domain to range
     coverage_fig    one card per CRM-family anchor, with the geo-lod classes that reach it
+    crosswalk_fig   every class on the left, the classes it passes on the way, its CRM-family anchor on the right
     instance_fig    one resource of the graph with its neighbours, as it stands in the RDF
 
 Layout is deterministic: sorted iteration, no random numbers, text widths from the bundled Fira Sans (build.tw).
@@ -316,6 +317,175 @@ def coverage_fig(M: md.Model, outdir: Path, name: str, title: str) -> Fig:
            "Anchor classes at the top of each card; a class with two nearest anchors appears under both (+n). \"via\" names the first step of the chain.")
     f.save()
     return f
+
+
+# ------------------------------------------------------------------ crosswalk
+
+def crosswalk_fig(M: md.Model, outdir: Path, name: str, title: str, items: list[str], note: str,
+                  extra: dict[str, str] | None = None) -> Fig:
+    """Each class in `items` as a row on the left; arrows follow rdfs:subClassOf through the classes of other vocabularies
+    that carry it (SOSA, PROV, SKOS ...) to the CIDOC CRM family class it reaches. Own classes that a chain passes on
+    the way (LithologicalUnit -> StratigraphicUnit) are not drawn as steps; the left box says "via". A class with no chain
+    gets a dashed box in a last row, so a gap shows in the figure and not only in a report."""
+    extra = extra or {}
+    rows = []
+    for iri in items:
+        _, chain = M.anchors(iri)
+        mids = [n for n in chain[1:-1] if not md.ns_key(n)]
+        own_via = [n for n in chain[1:-1] if md.ns_key(n)]
+        rows.append((iri, chain[-1] if chain else None, mids, own_via))
+    rows.sort(key=lambda r: (r[1] is None, FAM_ORDER[md.family(r[1])] if r[1] else 9, M.curie(r[1]) if r[1] else "",
+                             tuple(M.curie(m) for m in r[2]), M.curie(r[0])))
+    K = max([len(r[2]) for r in rows] + [0])
+    colw = [520] + [330] * K + [400]
+    ncol = len(colw)
+    gap = (1750 - 100 - sum(colw)) / max(ncol - 1, 1)
+    xs = [50 + sum(colw[:i]) + gap * i for i in range(ncol)]
+    bh, step = 34, 42
+    # left column
+    y_left = {r[0]: 40 + i * step for i, r in enumerate(rows)}
+    nodes = {}                                   # (iri, column) -> [y values of the rows it serves]
+    for iri, anchor, mids, _ in rows:
+        cy = y_left[iri] + bh / 2
+        if anchor is None:
+            continue
+        for j, m in enumerate(mids):
+            nodes.setdefault((m, K - len(mids) + j + 1), []).append(cy)
+        nodes.setdefault((anchor, ncol - 1), []).append(cy)
+    pos = {}
+    for col in range(1, ncol):
+        ks = sorted((k for k in nodes if k[1] == col), key=lambda k: (sum(nodes[k]) / len(nodes[k]), M.curie(k[0])))
+        last = -1e9
+        for k in ks:
+            y = max(sum(nodes[k]) / len(nodes[k]) - bh / 2, last + bh + 8)
+            pos[k] = y
+            last = y
+    loose = [r for r in rows if r[1] is None]
+    height = int(max([y_left[r[0]] for r in rows] + list(pos.values()) + [0]) + bh + 130)
+    f = Fig(name, title, 1750, height, outdir)
+    # edges first, so the boxes sit on top
+    drawn = set()
+    for iri, anchor, mids, _ in rows:
+        if anchor is None:
+            continue
+        seq = [(iri, 0)] + [(m, K - len(mids) + j + 1) for j, m in enumerate(mids)] + [(anchor, ncol - 1)]
+        for a, b in zip(seq, seq[1:]):
+            if (a, b) in drawn:
+                continue
+            drawn.add((a, b))
+            ya = (y_left[a[0]] if a[1] == 0 else pos[a]) + bh / 2
+            yb = pos[b] + bh / 2
+            x1, x2 = xs[a[1]] + colw[a[1]] + 2, xs[b[1]] - 2
+            xm = (x1 + x2) / 2
+            f.path(f"M {x1:.1f} {ya:.1f} C {xm:.1f} {ya:.1f} {xm:.1f} {yb:.1f} {x2:.1f} {yb:.1f}", "a")
+    for iri, anchor, mids, own_via in rows:
+        x, y, w = xs[0], y_left[iri], colw[0]
+        c = M.classes.get(iri)
+        nm = c.local if c and c.ns == "geolod" else (c.curie if c else M.curie(iri))
+        fill = fill_of(iri)
+        if anchor is None:
+            f.raw(f'<rect x="{x}" y="{y}" width="{w}" height="{bh}" rx="8" fill="#fde2e2" stroke="{BLACK}" stroke-width="1.8" stroke-dasharray="7 5"/>')
+        else:
+            f.raw(f'<rect x="{x}" y="{y}" width="{w}" height="{bh}" rx="8" fill="{fill}" stroke="{BLACK}" stroke-width="1.2"/>')
+        side = extra.get(iri) or (("via " + M.curie(own_via[0]).split(":")[-1] + (f" +{len(own_via) - 1}" if len(own_via) > 1 else "")) if own_via else "")
+        sw = tw(side, 15) + 14 if side else 0
+        f.text(x + 12, y + bh / 2, fit(nm, 18, w - 24 - sw, True), 18, True, anchor="start")
+        if side:
+            f.text(x + w - 10, y + bh / 2, fit(side, 15, w * 0.55), 15, False, MUTED, "end")
+    for (iri, col), y in sorted(pos.items(), key=lambda kv: (kv[0][1], kv[1])):
+        nbox(f, xs[col], y, colw[col], bh, M.curie(iri), fill_of(iri), size=18)
+    if loose:
+        f.text(xs[-1] + colw[-1] / 2, y_left[loose[0][0]] + bh / 2, "no CRM-family ancestor", 18, True, "#7f1d1d")
+    own_keys = [(k, t) for k, t in (("geolod", "geolod:"), ("strat", "strat:"), ("an", "an:"))
+                if any(md.ns_key(i) == k for i in items)]
+    anchors = [r[1] for r in rows if r[1]] + [m for r in rows for m in r[2]]
+    legend(f, f.h - 70, family_items(anchors + [i for i in items if not md.ns_key(i)], own_keys), note)
+    f.save()
+    return f
+
+
+def crosswalk_e1_fig(M: md.Model, outdir: Path, name: str, title: str, items: list[str], note: str) -> tuple[Fig, list[str]]:
+    """The whole way: every class in `items` hangs on its CRM-family anchor, and the anchors are drawn with their
+    superclass spine (crm_tree) up to crm:E1_CRM_Entity on the left. Returns the figure and the anchors the spine table lacks."""
+    import crm_tree as T
+    leaves, missing = defaultdict(list), []
+    for iri in items:
+        _, chain = M.anchors(iri)
+        if chain:
+            leaves[chain[-1]].append((iri, [n for n in chain[1:-1]]))
+    nodes = set()
+    for a in leaves:
+        sp = T.up(a)
+        nodes.update(sp)
+        if sp[-1] != T.E1:
+            missing.append(a)
+    kids = defaultdict(list)
+    for n in nodes:
+        if n in T.PARENT and T.PARENT[n] in nodes:
+            kids[T.PARENT[n]].append(n)
+    roots = sorted(n for n in nodes if n not in T.PARENT or T.PARENT[n] not in nodes)
+    depth = {}
+
+    def dep(n, d):
+        depth[n] = d
+        for k in kids[n]:
+            dep(k, d + 1)
+    for r in roots:
+        dep(r, 0)
+    D = max(depth.values()) + 1
+    bh, step, cw, lw = 32, 40, 262, 540
+    W = 60 + D * (cw + 38) + lw + 40
+    ypos, row = {}, [0]
+
+    def place(n):
+        ys = []
+        for k in sorted(kids[n], key=lambda k: M.curie(k)):
+            ys.append(place(k))
+        for iri, mids in sorted(leaves.get(n, []), key=lambda l: M.curie(l[0])):
+            ypos[("leaf", iri)] = 40 + row[0] * step
+            ys.append(ypos[("leaf", iri)])
+            row[0] += 1
+        if not ys:
+            ys = [40 + row[0] * step]
+            row[0] += 1
+        ypos[n] = sum(ys) / len(ys)
+        return ypos[n]
+    for r in roots:
+        place(r)
+    height = 40 + row[0] * step + 130
+    f = Fig(name, title, W, height, outdir)
+    xs = lambda d: 40 + d * (cw + 38)
+    xl = 40 + D * (cw + 38)
+    for n in sorted(nodes):
+        if n in T.PARENT and T.PARENT[n] in nodes:
+            p_ = T.PARENT[n]
+            x1, x2, ya, yb = xs(depth[p_]) + cw + 2, xs(depth[n]) - 2, ypos[p_] + bh / 2, ypos[n] + bh / 2
+            xm = (x1 + x2) / 2
+            f.path(f"M {x1:.1f} {ya:.1f} C {xm:.1f} {ya:.1f} {xm:.1f} {yb:.1f} {x2:.1f} {yb:.1f}", "a")
+    for a, ls in leaves.items():
+        for iri, _ in ls:
+            x1, x2, ya, yb = xs(depth[a]) + cw + 2, xl - 2, ypos[a] + bh / 2, ypos[("leaf", iri)] + bh / 2
+            xm = (x1 + x2) / 2
+            f.path(f"M {x1:.1f} {ya:.1f} C {xm:.1f} {ya:.1f} {xm:.1f} {yb:.1f} {x2:.1f} {yb:.1f}", "a")
+    for n in sorted(nodes, key=lambda n: (depth[n], ypos[n])):
+        label = M.curie(n).split(":")[-1].replace("_", " ")
+        nbox(f, xs(depth[n]), ypos[n], cw, bh, label, fill_of(n), size=15)
+    for a, ls in leaves.items():
+        for iri, mids in ls:
+            c = M.classes.get(iri)
+            nm = c.curie if c else M.curie(iri)
+            via = ("via " + ", ".join(M.curie(m) for m in mids)) if mids else ""
+            y = ypos[("leaf", iri)]
+            f.raw(f'<rect x="{xl}" y="{y}" width="{lw}" height="{bh}" rx="8" fill="{fill_of(iri)}" stroke="{BLACK}" stroke-width="1.2"/>')
+            sw = tw(via, 13) + 12 if via else 0
+            f.text(xl + 10, y + bh / 2, fit(nm, 16, lw - 20 - sw, True), 16, True, anchor="start")
+            if via:
+                f.text(xl + lw - 8, y + bh / 2, fit(via, 13, lw * 0.5), 13, False, MUTED, "end")
+    own_keys = [(k, t_) for k, t_ in (("geolod", "geolod:"), ("strat", "strat:"), ("an", "an:"))
+                if any(md.ns_key(i) == k for i in items)]
+    legend(f, f.h - 70, family_items(sorted(nodes) + [i for i in items if not md.ns_key(i)], own_keys), note)
+    f.save()
+    return f, sorted(missing)
 
 
 # ------------------------------------------------------------------ instances

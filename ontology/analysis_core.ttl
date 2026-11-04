@@ -65,7 +65,8 @@ an:analyte a owl:ObjectProperty ; rdfs:domain an:Property ;
 
 # ---- detection-limit handling (EPMA b.d.l.) ------------------------------
 an:belowDetectionLimit a owl:DatatypeProperty ; rdfs:domain an:Analysis ; rdfs:range xsd:boolean ;
-    rdfs:label "below detection limit"@en .
+    rdfs:label "below detection limit"@en ;
+    rdfs:comment "True when the result lies below the detection limit of the method, so the reported value is an upper bound and not a measurement."@en .
 an:workingDetectionLimit a owl:DatatypeProperty ; rdfs:domain an:Analysis ; rdfs:range xsd:decimal ;
     rdfs:label "working detection limit"@en ;
     rdfs:comment "Uniform threshold used when instrument 3-sigma limits are unavailable (Goldstein 2003; Reed 2005)."@en .

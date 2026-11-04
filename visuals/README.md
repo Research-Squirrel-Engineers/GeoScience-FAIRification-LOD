@@ -34,8 +34,9 @@ Figures: CC BY 4.0. Code: MIT. Fonts: Fira Sans, SIL OFL 1.1, see `fonts/`.
 | File | Role |
 |---|---|
 | `model_data.py` | reads classes, properties, domains, ranges and CRM anchors from the ontology files; `check()` stops the build on a mismatch with figures 08 and 12 |
-| `model_figs.py` | hierarchy, relations, CRM coverage and instance figures |
+| `model_figs.py` | hierarchy, relations, CRM coverage, crosswalk (per module, other vocabularies, whole way to E1) and instance figures |
+| `crm_tree.py` | superclass spine of the CRM-family anchors up to `crm:E1_CRM_Entity`, one primary parent per class; extend it when a bridging axiom reaches a class that is missing (the build says which) |
 | `site_kit.py` | stylesheet, navigation and page frame shared by `docu/` and `site/` |
 | `sample_graph.py` | the graph behind the query page |
 | `sparql_page.py`, `queries.yaml` | the query page and its `.rq` files; a query without rows stops the build |
-| `docu.py` | writes the five pages |
+| `docu.py` | writes the six pages; `crosswalk.html` takes every class defined or used and draws its chain to the CRM family. The build fails when a class used in the data has no CRM-family ancestor |

@@ -200,6 +200,7 @@ lesen hier ab, statt neu zu diskutieren.
 | Ort der Dokumentationsseiten | `docu/` (statisch, von `visuals/build.py` erzeugt), Veröffentlichung unter `/docu/`; `docs/` gehört Unicorn ontdoc, `visuals/site/` bleibt unter `/visuals/` | 2026-11-04 |
 | Datenmodell-Seiten | aus den Ontologiedateien gelesen, nicht von Hand gesetzt; `check()` stoppt den Bau bei Abweichung von den Zahlen der Abbildungen 08/12 | 2026-11-04 |
 | Abfrageseite | rdflib unter Pyodide über einen Beispielgraphen, kein Endpunkt; eine Abfrage ohne Treffer stoppt den Bau | 2026-11-04 |
+| CRM-Anker für alle Klassen | jede Klasse der eigenen Module hat einen CRM-Vorfahren, instanziiert oder nicht. Fremde Vokabulare über den Crosswalk (`crm_bridging.ttl`; im N4O-Profil `profile/crosswalk-crm.ttl`), nie in deren Ontologie | 2026-11-04 |
 | Log der Sub-Skripte | eingefangen und zeilenweise durchgereicht: `pipeline_report.txt` und Terminal zeigen dasselbe. `PYTHONIOENCODING=utf-8` im Kindprozess, sonst scheitern ✓, ‰ und δ an der Pipe | 2026-08-08 |
 | Zeitstempel im RDF | keine. `dct:created` aus `GEO_LOD_RELEASE`, dazu `owl:versionInfo` mit einem SHA-256-Fingerabdruck über Eingabedaten und Generator-Skript. Die Aktivitätszeiten in `ci_findspots.ttl` sind entfallen — die Laufzeit eines Konvertierungsskripts ist keine Aussage über die Daten | 2026-08-08 |
 | Umfang des Fingerabdrucks | Eingabedaten **und** Generator-Skript. Ein geänderter Kommentar im Code ändert ihn mit; das ist gewollt, weil der Datensatz nur für den Codestand gilt, aus dem er stammt | 2026-08-08 |
@@ -1916,11 +1917,16 @@ Schritt nach dem Bundle in `main.py`, `--visuals-only` und `--no-visuals`.
 **Befunde.**
 
 - Abbildung 12 spricht von einer Verankerung der `strat:`-Klassen; die
-  Ontologie trägt sie nur für 3 von 10 (`an:` 6 von 6). Es fehlen:
-  `strat:AgeDepthModel`, `Boundary`, `Core`, `Eruption`, `LithologicalUnit`,
-  `StratigraphicUnit`, `TephraLayer`. Die Seite `crm-coverage` führt sie auf.
-  Entscheidung in S4.
-- 43 von 101 Eigenschaften haben keinen `rdfs:comment` (Liste auf `model.html`).
+  Ontologie trug sie nur für 3 von 10 (`an:` 6 von 6). **Behoben 2026-11-04:**
+  `crm_bridging.ttl` verankert jetzt alle zehn (`StratigraphicUnit` → A2,
+  `Boundary` → A3, `Eruption` → E5, `Core` → S13, `AgeDepthModel` → S6;
+  `LithologicalUnit` und `TephraLayer` erben von `StratigraphicUnit`). Die
+  Entscheidung für `Core` und `AgeDepthModel` ist in S4 gegen `geolod:IceCore`
+  und `geolod:AgeModel` abzugleichen.
+- 43 von 101 Eigenschaften hatten keinen `rdfs:comment`. **Behoben 2026-11-04**,
+  in den Generatoren (`geo_lod_utils.py`, `sisal_rdf.py`, `epica_rdf.py`) und in
+  `strat.ttl` / `analysis_core.ttl`; die TTLs sind daraus regeneriert. Die
+  Liste auf `model.html` ist leer.
 - `geolod:ArchaeologicalContext` ist im Kern und in der SISAL-Ontologie
   deklariert; gezählt wird einmal.
 

@@ -67,8 +67,8 @@ def _label_bnodes(g: Graph) -> Graph:
     return out
 
 
-def write(dest: Path, repo: Path = REPO) -> int:
-    g = _label_bnodes(build(repo))
+def write(dest: Path, repo: Path = REPO, graph: Graph | None = None) -> int:
+    g = _label_bnodes(graph if graph is not None else build(repo))
     lines = sorted(t.rstrip() for t in g.serialize(format="nt").splitlines() if t.strip())
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")

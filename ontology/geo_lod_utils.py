@@ -565,7 +565,8 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a owl:ObjectProperty ;
         rdfs:domain  crm:E27_Site ;
         rdfs:range   geolod:ArchaeologicalContext ;
-        rdfs:label   "archaeological broader context"@en .
+        rdfs:label   "archaeological broader context"@en ;
+        rdfs:comment "Links an archaeological site (crm:E27_Site) to the broader archaeological context it belongs to."@en .
 
     geolod:archaeologicalConfidence
         a owl:DatatypeProperty ;
@@ -611,19 +612,22 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a owl:ObjectProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   geolod:MeasurementType ;
-        rdfs:label   "measurement type"@en .
+        rdfs:label   "measurement type"@en ;
+        rdfs:comment "The kind of quantity an observation measures (a geolod:MeasurementType), for example methane concentration."@en .
 
     geolod:smoothingMethod_median
         a owl:ObjectProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   geolod:RollingMedianFilter ;
-        rdfs:label   "smoothing method (rolling median)"@en .
+        rdfs:label   "smoothing method (rolling median)"@en ;
+        rdfs:comment "The rolling-median filter that produced geolod:smoothedValue_rollingMedian."@en .
 
     geolod:smoothingMethod_savgol
         a owl:ObjectProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   geolod:SavitzkyGolayFilter ;
-        rdfs:label   "smoothing method (Savitzky-Golay)"@en .
+        rdfs:label   "smoothing method (Savitzky-Golay)"@en ;
+        rdfs:comment "The Savitzky-Golay filter that produced geolod:smoothedValue_savgol."@en .
 
     geolod:tookPlaceAt
         a owl:ObjectProperty ;
@@ -635,7 +639,8 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a owl:ObjectProperty ;
         rdfs:domain  geolod:PalaeoclimateSample ;
         rdfs:range   geolod:SamplingLocation ;
-        rdfs:label   "extracted from"@en .
+        rdfs:label   "extracted from"@en ;
+        rdfs:comment "Links a palaeoclimate sample to the sampling location it was extracted from."@en .
 
     geolod:removedSample
         a owl:ObjectProperty ;
@@ -644,7 +649,8 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
 
     geolod:hasObservation
         a owl:ObjectProperty ;
-        rdfs:label   "has observation"@en .
+        rdfs:label   "has observation"@en ;
+        rdfs:comment "Links a resource to an observation made on it."@en .
 
     # ==========================================================================
     # DATATYPE PROPERTIES
@@ -660,19 +666,22 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a owl:DatatypeProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   xsd:decimal ;
-        rdfs:label   "measured value"@en .
+        rdfs:label   "measured value"@en ;
+        rdfs:comment "The value as measured, before any smoothing, in the unit of the observation's measurement type."@en .
 
     geolod:smoothedValue_rollingMedian
         a owl:DatatypeProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   xsd:decimal ;
-        rdfs:label   "smoothed value (rolling median)"@en .
+        rdfs:label   "smoothed value (rolling median)"@en ;
+        rdfs:comment "The measured value after the rolling-median filter named by geolod:smoothingMethod_median."@en .
 
     geolod:smoothedValue_savgol
         a owl:DatatypeProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   xsd:decimal ;
-        rdfs:label   "smoothed value (Savitzky-Golay)"@en .
+        rdfs:label   "smoothed value (Savitzky-Golay)"@en ;
+        rdfs:comment "The measured value after the Savitzky-Golay filter named by geolod:smoothingMethod_savgol."@en .
 
     geolod:windowSize
         a owl:DatatypeProperty ;
@@ -685,7 +694,8 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a owl:DatatypeProperty ;
         rdfs:domain  geolod:SavitzkyGolayFilter ;
         rdfs:range   xsd:integer ;
-        rdfs:label   "polynomial order"@en .
+        rdfs:label   "polynomial order"@en ;
+        rdfs:comment "Polynomial order of a Savitzky-Golay filter."@en .
 
     # ==========================================================================
     # NAMED INDIVIDUALS  — shared between EPICA and SISAL
@@ -786,7 +796,8 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         a owl:ObjectProperty ;
         rdfs:domain  crm:E13_Attribute_Assignment ;
         rdfs:range   geolod:AssignmentStatus ;
-        rdfs:label   "assignment status"@en .
+        rdfs:label   "assignment status"@en ;
+        rdfs:comment "Says whether an attribute assignment is the leading reading or an alternative one (a geolod:AssignmentStatus). Used where several sources assign a value to the same thing, for example MIS stages."@en .
 
     geolod:leadingSource
         a owl:ObjectProperty ;

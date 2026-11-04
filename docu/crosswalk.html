@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crosswalk · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a class="on" href="crosswalk.html">Crosswalk</a><a href="instances.html">Instance models</a><a href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Visuals</span><span class="lnk"><a href="../visuals/index.html">Slide figures</a></span></div></nav>
+<h1>Crosswalk</h1>
+<p class="intro">Every class this project defines or uses, drawn with the chain of <code>rdfs:subClassOf</code> axioms that carries it into the CIDOC CRM family. The axioms for other vocabularies are in <code>ontology/crm_bridging.ttl</code>; the last figure and the table cover the classes of those vocabularies, counted from the sample graph of the query page.</p>
+<section>
+<img src="img/crosswalk-e1.png" width="6680" height="7060" loading="lazy" alt="Crosswalk to E1, all classes">
+<div class="row"><p class="cap"><span class="n"></span>Crosswalk to E1, all classes</p><button type="button" data-c="Crosswalk to E1, all classes">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/crosswalk-e1.png" download>PNG</a><a href="img/crosswalk-e1.svg" download>SVG</a></p>
+</section>
+<section>
+<img src="img/crosswalk-geolod.png" width="3500" height="4188" loading="lazy" alt="Crosswalk, geolod: core, EPICA and SISAL">
+<div class="row"><p class="cap"><span class="n"></span>Crosswalk, geolod: core, EPICA and SISAL</p><button type="button" data-c="Crosswalk, geolod: core, EPICA and SISAL">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/crosswalk-geolod.png" download>PNG</a><a href="img/crosswalk-geolod.svg" download>SVG</a></p>
+</section>
+<section>
+<img src="img/crosswalk-strat.png" width="3500" height="1164" loading="lazy" alt="Crosswalk, strat:">
+<div class="row"><p class="cap"><span class="n"></span>Crosswalk, strat:</p><button type="button" data-c="Crosswalk, strat:">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/crosswalk-strat.png" download>PNG</a><a href="img/crosswalk-strat.svg" download>SVG</a></p>
+</section>
+<section>
+<img src="img/crosswalk-an.png" width="3500" height="828" loading="lazy" alt="Crosswalk, an:">
+<div class="row"><p class="cap"><span class="n"></span>Crosswalk, an:</p><button type="button" data-c="Crosswalk, an:">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/crosswalk-an.png" download>PNG</a><a href="img/crosswalk-an.svg" download>SVG</a></p>
+</section>
+<section>
+<img src="img/crosswalk-external.png" width="3500" height="2172" loading="lazy" alt="Crosswalk, classes of other vocabularies">
+<div class="row"><p class="cap"><span class="n"></span>Crosswalk, classes of other vocabularies</p><button type="button" data-c="Crosswalk, classes of other vocabularies">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/crosswalk-external.png" download>PNG</a><a href="img/crosswalk-external.svg" download>SVG</a></p>
+</section><section class="text"><h3>Classes of other vocabularies</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Use</th><th>Chain up to E1</th></tr></thead><tbody><tr><td><code>fuzzysl:Georeferencing</code></td><td>74 in data</td><td>fuzzysl:Georeferencing → crm:E13_Attribute_Assignment → crm:E7_Activity → crm:E5_Event → crm:E4_Period → crm:E2_Temporal_Entity → crm:E1_CRM_Entity</td></tr><tr><td><code>fuzzysl:Site</code></td><td>74 in data</td><td>fuzzysl:Site → crm:E27_Site → crm:E26_Physical_Feature → crm:E18_Physical_Thing → crm:E72_Legal_Object → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>dct:BibliographicResource</code></td><td>bridged only</td><td>dct:BibliographicResource → crm:E31_Document → crm:E73_Information_Object → crm:E89_Propositional_Object → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>geo:Feature</code></td><td>referenced</td><td>geo:Feature → crm:E1_CRM_Entity</td></tr><tr><td><code>geo:FeatureCollection</code></td><td>6 in data</td><td>geo:FeatureCollection → crm:E78_Curated_Holding → crm:E24_Physical_Human-Made_Thing → crm:E18_Physical_Thing → crm:E72_Legal_Object → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>sf:Point</code></td><td>441 in data</td><td>sf:Point → crmgeo:SP6_Declarative_Place → crm:E53_Place → crm:E1_CRM_Entity</td></tr><tr><td><code>skos:Collection</code></td><td>bridged only</td><td>skos:Collection → crm:E78_Curated_Holding → crm:E24_Physical_Human-Made_Thing → crm:E18_Physical_Thing → crm:E72_Legal_Object → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>skos:Concept</code></td><td>referenced</td><td>skos:Concept → crm:E55_Type → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>skos:ConceptScheme</code></td><td>bridged only</td><td>skos:ConceptScheme → crm:E32_Authority_Document → crm:E31_Document → crm:E73_Information_Object → crm:E89_Propositional_Object → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>time:TRS</code></td><td>10 in data</td><td>time:TRS → crm:E29_Design_or_Procedure → crm:E73_Information_Object → crm:E89_Propositional_Object → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>time:TimePosition</code></td><td>100 in data</td><td>time:TimePosition → crm:E54_Dimension → crm:E1_CRM_Entity</td></tr><tr><td><code>dcat:Catalog</code></td><td>1 in data</td><td>dcat:Catalog → crm:E78_Curated_Holding → crm:E24_Physical_Human-Made_Thing → crm:E18_Physical_Thing → crm:E72_Legal_Object → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>dcat:Dataset</code></td><td>5 in data</td><td>dcat:Dataset → crm:E73_Information_Object → crm:E89_Propositional_Object → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>prov:Activity</code></td><td>157 in data</td><td>prov:Activity → crm:E7_Activity → crm:E5_Event → crm:E4_Period → crm:E2_Temporal_Entity → crm:E1_CRM_Entity</td></tr><tr><td><code>prov:Agent</code></td><td>2 in data</td><td>prov:Agent → crm:E39_Actor → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>prov:Entity</code></td><td>106 in data</td><td>prov:Entity → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>sosa:ObservableProperty</code></td><td>referenced</td><td>sosa:ObservableProperty → crmsci:S9_Property_Type → crm:E55_Type → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>sosa:Observation</code></td><td>referenced</td><td>sosa:Observation → crmsci:S4_Observation → crm:E13_Attribute_Assignment → crm:E7_Activity → crm:E5_Event → crm:E4_Period → crm:E2_Temporal_Entity → crm:E1_CRM_Entity</td></tr><tr><td><code>sosa:Procedure</code></td><td>referenced</td><td>sosa:Procedure → crm:E29_Design_or_Procedure → crm:E73_Information_Object → crm:E89_Propositional_Object → crm:E28_Conceptual_Object → crm:E71_Human-Made_Thing → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>sosa:Sample</code></td><td>referenced</td><td>sosa:Sample → crm:E18_Physical_Thing → crm:E72_Legal_Object → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>foaf:Person</code></td><td>2 in data</td><td>foaf:Person → crm:E21_Person → crm:E20_Biological_Object → crm:E19_Physical_Object → crm:E18_Physical_Thing → crm:E72_Legal_Object → crm:E70_Thing → crm:E77_Persistent_Item → crm:E1_CRM_Entity</td></tr><tr><td><code>pleiades:Place</code></td><td>74 in data</td><td>pleiades:Place → crm:E53_Place → crm:E1_CRM_Entity</td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>

@@ -148,11 +148,11 @@ boot();
 """
 
 
-def build(dest: Path) -> int:
+def build(dest: Path, graph: Graph | None = None) -> int:
     """Write docu/sparql.html, the .rq files and the graph. Returns the number of queries."""
     cfg = load()
     graph_file = dest / cfg["graph"]["url"]
-    n_lines = sample_graph.write(graph_file)
+    n_lines = sample_graph.write(graph_file, graph=graph)
     n_triples = check(cfg, graph_file)
     write_rq(cfg, dest)
     esc = site_kit.esc

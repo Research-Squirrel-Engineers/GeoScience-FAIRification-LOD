@@ -5307,10 +5307,12 @@
 <http://w3id.org/geo-lod/ageModel> <http://www.w3.org/2000/01/rdf-schema#label> "age model"@en .
 <http://w3id.org/geo-lod/ageModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/AgeModel> .
 <http://w3id.org/geo-lod/ageUncertaintyNeg_ka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/ageUncertaintyNeg_ka> <http://www.w3.org/2000/01/rdf-schema#comment> "Uncertainty of the age on the younger side, in ka. Together with geolod:ageUncertaintyPos_ka it gives the interval age minus this value to age plus the positive uncertainty."@en .
 <http://w3id.org/geo-lod/ageUncertaintyNeg_ka> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/AgeAssignment> .
 <http://w3id.org/geo-lod/ageUncertaintyNeg_ka> <http://www.w3.org/2000/01/rdf-schema#label> "age uncertainty, younger side (ka)"@en .
 <http://w3id.org/geo-lod/ageUncertaintyNeg_ka> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/ageUncertaintyPos_ka> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/ageUncertaintyPos_ka> <http://www.w3.org/2000/01/rdf-schema#comment> "Uncertainty of the age on the older side, in ka. Together with geolod:ageUncertaintyNeg_ka it gives the interval age minus the negative uncertainty to age plus this value."@en .
 <http://w3id.org/geo-lod/ageUncertaintyPos_ka> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/AgeAssignment> .
 <http://w3id.org/geo-lod/ageUncertaintyPos_ka> <http://www.w3.org/2000/01/rdf-schema#label> "age uncertainty, older side (ka)"@en .
 <http://w3id.org/geo-lod/ageUncertaintyPos_ka> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
@@ -5349,6 +5351,7 @@
 <http://w3id.org/geo-lod/analysis/analyte> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/analysis/Property> .
 <http://w3id.org/geo-lod/analysis/analyte> <http://www.w3.org/2000/01/rdf-schema#label> "analyte"@en .
 <http://w3id.org/geo-lod/analysis/belowDetectionLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/analysis/belowDetectionLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "True when the result lies below the detection limit of the method, so the reported value is an upper bound and not a measurement."@en .
 <http://w3id.org/geo-lod/analysis/belowDetectionLimit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/analysis/Analysis> .
 <http://w3id.org/geo-lod/analysis/belowDetectionLimit> <http://www.w3.org/2000/01/rdf-schema#label> "below detection limit"@en .
 <http://w3id.org/geo-lod/analysis/belowDetectionLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
@@ -5368,9 +5371,11 @@
 <http://w3id.org/geo-lod/analysis/workingDetectionLimit> <http://www.w3.org/2000/01/rdf-schema#label> "working detection limit"@en .
 <http://w3id.org/geo-lod/analysis/workingDetectionLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/aragoniteCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/aragoniteCorrection> <http://www.w3.org/2000/01/rdf-schema#comment> "Correction applied to the isotope values of the sample for aragonite, as recorded in SISAL v3 (free text)."@en .
 <http://w3id.org/geo-lod/aragoniteCorrection> <http://www.w3.org/2000/01/rdf-schema#label> "aragonite correction"@en .
 <http://w3id.org/geo-lod/aragoniteCorrection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/geo-lod/archaeologicalBroaderContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/archaeologicalBroaderContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an archaeological site (crm:E27_Site) to the broader archaeological context it belongs to."@en .
 <http://w3id.org/geo-lod/archaeologicalBroaderContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E27_Site> .
 <http://w3id.org/geo-lod/archaeologicalBroaderContext> <http://www.w3.org/2000/01/rdf-schema#label> "archaeological broader context"@en .
 <http://w3id.org/geo-lod/archaeologicalBroaderContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/ArchaeologicalContext> .
@@ -5385,6 +5390,7 @@
 <http://w3id.org/geo-lod/archaeologicalConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "archaeological confidence"@en .
 <http://w3id.org/geo-lod/archaeologicalConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/geo-lod/assignmentStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/assignmentStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Says whether an attribute assignment is the leading reading or an alternative one (a geolod:AssignmentStatus). Used where several sources assign a value to the same thing, for example MIS stages."@en .
 <http://w3id.org/geo-lod/assignmentStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> .
 <http://w3id.org/geo-lod/assignmentStatus> <http://www.w3.org/2000/01/rdf-schema#label> "assignment status"@en .
 <http://w3id.org/geo-lod/assignmentStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/AssignmentStatus> .
@@ -8684,6 +8690,7 @@
 <http://w3id.org/geo-lod/climateMode> <http://www.w3.org/2000/01/rdf-schema#label> "climate mode"@en .
 <http://w3id.org/geo-lod/climateMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/ClimateMode> .
 <http://w3id.org/geo-lod/collectedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/collectedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a speleothem sample to the speleothem it was collected from."@en .
 <http://w3id.org/geo-lod/collectedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/SpeleothemSample> .
 <http://w3id.org/geo-lod/collectedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "collected from"@en .
 <http://w3id.org/geo-lod/collectedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/Speleothem> .
@@ -8703,6 +8710,7 @@
 <http://w3id.org/geo-lod/correspondingCurrentSpeleothem> <http://www.w3.org/2000/01/rdf-schema#label> "corresponding current speleothem"@en .
 <http://w3id.org/geo-lod/correspondingCurrentSpeleothem> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/Speleothem> .
 <http://w3id.org/geo-lod/countD13CSamples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/countD13CSamples> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of delta-13-C measurements recorded for the cave in the SISAL v3 release."@en .
 <http://w3id.org/geo-lod/countD13CSamples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/Cave> .
 <http://w3id.org/geo-lod/countD13CSamples> <http://www.w3.org/2000/01/rdf-schema#label> "number of δ¹³C samples"@en .
 <http://w3id.org/geo-lod/countD13CSamples> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
@@ -8722,10 +8730,12 @@
 <http://w3id.org/geo-lod/crm-bridging> <http://www.w3.org/2000/01/rdf-schema#label> "geo-lod ↔ CIDOC-CRM Bridging Axioms"@en .
 <http://w3id.org/geo-lod/crm-bridging> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/geo-lod/> .
 <http://w3id.org/geo-lod/datingLabId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/datingLabId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier the dating laboratory gave to the dated sample."@en .
 <http://w3id.org/geo-lod/datingLabId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/AgeControlPoint> .
 <http://w3id.org/geo-lod/datingLabId> <http://www.w3.org/2000/01/rdf-schema#label> "laboratory identifier"@en .
 <http://w3id.org/geo-lod/datingLabId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/geo-lod/datingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/datingMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "The method by which an age control point was determined (a geolod:DatingMethod). It also tells laboratory measurements apart from statements such as a speleothem that is still growing."@en .
 <http://w3id.org/geo-lod/datingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/AgeControlPoint> .
 <http://w3id.org/geo-lod/datingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "dating method"@en .
 <http://w3id.org/geo-lod/datingMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/DatingMethod> .
@@ -8750,9 +8760,11 @@
 <http://w3id.org/geo-lod/endAgeKaBP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/endAgeKaBP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/geo-lod/ageKaBP> .
 <http://w3id.org/geo-lod/entityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/entityId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the speleothem entity in the SISAL v3 database, kept so that a resource can be traced back to its source table."@en .
 <http://w3id.org/geo-lod/entityId> <http://www.w3.org/2000/01/rdf-schema#label> "SISAL entity id"@en .
 <http://w3id.org/geo-lod/entityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://w3id.org/geo-lod/entityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/entityStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of the speleothem entity in SISAL v3 (a geolod:EntityStatus term)."@en .
 <http://w3id.org/geo-lod/entityStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/Speleothem> .
 <http://w3id.org/geo-lod/entityStatus> <http://www.w3.org/2000/01/rdf-schema#label> "entity status"@en .
 <http://w3id.org/geo-lod/entityStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/EntityStatus> .
@@ -14015,6 +14027,7 @@
 <http://w3id.org/geo-lod/epica> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/geo-lod/> .
 <http://w3id.org/geo-lod/epica> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.0" .
 <http://w3id.org/geo-lod/extractedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/extractedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a palaeoclimate sample to the sampling location it was extracted from."@en .
 <http://w3id.org/geo-lod/extractedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateSample> .
 <http://w3id.org/geo-lod/extractedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "extracted from"@en .
 <http://w3id.org/geo-lod/extractedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/SamplingLocation> .
@@ -14029,14 +14042,17 @@
 <http://w3id.org/geo-lod/fallsWithinStage> <http://www.w3.org/2000/01/rdf-schema#label> "falls within stage"@en .
 <http://w3id.org/geo-lod/fallsWithinStage> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/MarineIsotopeStage> .
 <http://w3id.org/geo-lod/hasAgeAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/hasAgeAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a speleothem sample to one of its age assignments, an age derived from a given age model."@en .
 <http://w3id.org/geo-lod/hasAgeAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/SpeleothemSample> .
 <http://w3id.org/geo-lod/hasAgeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "has age assignment"@en .
 <http://w3id.org/geo-lod/hasAgeAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/AgeAssignment> .
 <http://w3id.org/geo-lod/hasDrillingCampaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/hasDrillingCampaign> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an ice-core dataset to the drilling campaign that produced the core."@en .
 <http://w3id.org/geo-lod/hasDrillingCampaign> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/IceCoreDataset> .
 <http://w3id.org/geo-lod/hasDrillingCampaign> <http://www.w3.org/2000/01/rdf-schema#label> "has drilling campaign"@en .
 <http://w3id.org/geo-lod/hasDrillingCampaign> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/DrillingCampaign> .
 <http://w3id.org/geo-lod/hasObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/hasObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to an observation made on it."@en .
 <http://w3id.org/geo-lod/hasObservation> <http://www.w3.org/2000/01/rdf-schema#label> "has observation"@en .
 <http://w3id.org/geo-lod/hasTimePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/geo-lod/hasTimePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "The age of an observation as a time position, carrying both  the numeric value and the reference system it belongs to. Kept alongside the  plain geolod:ageKaBP literal, which stays queryable without a join."@en .
@@ -14060,6 +14076,7 @@
 <http://w3id.org/geo-lod/isComposite> <http://www.w3.org/2000/01/rdf-schema#label> "is composite"@en .
 <http://w3id.org/geo-lod/isComposite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://w3id.org/geo-lod/isUNESCOWorldHeritage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/isUNESCOWorldHeritage> <http://www.w3.org/2000/01/rdf-schema#comment> "True if the cave belongs to a UNESCO World Heritage Site."@en .
 <http://w3id.org/geo-lod/isUNESCOWorldHeritage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/Cave> .
 <http://w3id.org/geo-lod/isUNESCOWorldHeritage> <http://www.w3.org/2000/01/rdf-schema#label> "is UNESCO World Heritage"@en .
 <http://w3id.org/geo-lod/isUNESCOWorldHeritage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
@@ -14072,18 +14089,22 @@
 <http://w3id.org/geo-lod/markedBySample> <http://www.w3.org/2000/01/rdf-schema#label> "marked by sample"@en .
 <http://w3id.org/geo-lod/markedBySample> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/SpeleothemSample> .
 <http://w3id.org/geo-lod/materialDated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/materialDated> <http://www.w3.org/2000/01/rdf-schema#comment> "The material that was dated, as recorded in SISAL v3 (free text, unknown when not stated)."@en .
 <http://w3id.org/geo-lod/materialDated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/AgeControlPoint> .
 <http://w3id.org/geo-lod/materialDated> <http://www.w3.org/2000/01/rdf-schema#label> "material dated"@en .
 <http://w3id.org/geo-lod/materialDated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/geo-lod/measuredValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/measuredValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value as measured, before any smoothing, in the unit of the observation's measurement type."@en .
 <http://w3id.org/geo-lod/measuredValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
 <http://w3id.org/geo-lod/measuredValue> <http://www.w3.org/2000/01/rdf-schema#label> "measured value"@en .
 <http://w3id.org/geo-lod/measuredValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/measurementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/measurementType> <http://www.w3.org/2000/01/rdf-schema#comment> "The kind of quantity an observation measures (a geolod:MeasurementType), for example methane concentration."@en .
 <http://w3id.org/geo-lod/measurementType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
 <http://w3id.org/geo-lod/measurementType> <http://www.w3.org/2000/01/rdf-schema#label> "measurement type"@en .
 <http://w3id.org/geo-lod/measurementType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/MeasurementType> .
 <http://w3id.org/geo-lod/mineralogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/mineralogy> <http://www.w3.org/2000/01/rdf-schema#comment> "Mineralogy of the speleothem sample (for example calcite or aragonite), as recorded in SISAL v3."@en .
 <http://w3id.org/geo-lod/mineralogy> <http://www.w3.org/2000/01/rdf-schema#label> "mineralogy"@en .
 <http://w3id.org/geo-lod/mineralogy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/geo-lod/peakAgeKaBP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -14092,6 +14113,7 @@
 <http://w3id.org/geo-lod/peakAgeKaBP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/peakAgeKaBP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/geo-lod/ageKaBP> .
 <http://w3id.org/geo-lod/polyOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/polyOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "Polynomial order of a Savitzky-Golay filter."@en .
 <http://w3id.org/geo-lod/polyOrder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/SavitzkyGolayFilter> .
 <http://w3id.org/geo-lod/polyOrder> <http://www.w3.org/2000/01/rdf-schema#label> "polynomial order"@en .
 <http://w3id.org/geo-lod/polyOrder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
@@ -14104,9 +14126,11 @@
 <http://w3id.org/geo-lod/respectedByAgeModel> <http://www.w3.org/2000/01/rdf-schema#label> "respected by age model"@en .
 <http://w3id.org/geo-lod/respectedByAgeModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/AgeModel> .
 <http://w3id.org/geo-lod/sampleId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/sampleId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the sample in the SISAL v3 database, kept so that a resource can be traced back to its source table."@en .
 <http://w3id.org/geo-lod/sampleId> <http://www.w3.org/2000/01/rdf-schema#label> "SISAL sample id"@en .
 <http://w3id.org/geo-lod/sampleId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://w3id.org/geo-lod/sampleThickness_mm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/sampleThickness_mm> <http://www.w3.org/2000/01/rdf-schema#comment> "Thickness of the sample, in millimetres."@en .
 <http://w3id.org/geo-lod/sampleThickness_mm> <http://www.w3.org/2000/01/rdf-schema#label> "sample thickness (mm)"@en .
 <http://w3id.org/geo-lod/sampleThickness_mm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/screenedForArchaeology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -19338,21 +19362,26 @@
 <http://w3id.org/geo-lod/sisal/hiatus_0474908> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/geo-lod/GrowthHiatus> .
 <http://w3id.org/geo-lod/sisal/hiatus_0474908> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://w3id.org/geo-lod/SISALv3_DataSource> .
 <http://w3id.org/geo-lod/siteId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/siteId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the cave site in the SISAL v3 database, kept so that a resource can be traced back to its source table."@en .
 <http://w3id.org/geo-lod/siteId> <http://www.w3.org/2000/01/rdf-schema#label> "SISAL site id"@en .
 <http://w3id.org/geo-lod/siteId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://w3id.org/geo-lod/smoothedValue_rollingMedian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/smoothedValue_rollingMedian> <http://www.w3.org/2000/01/rdf-schema#comment> "The measured value after the rolling-median filter named by geolod:smoothingMethod_median."@en .
 <http://w3id.org/geo-lod/smoothedValue_rollingMedian> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
 <http://w3id.org/geo-lod/smoothedValue_rollingMedian> <http://www.w3.org/2000/01/rdf-schema#label> "smoothed value (rolling median)"@en .
 <http://w3id.org/geo-lod/smoothedValue_rollingMedian> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/smoothedValue_savgol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/smoothedValue_savgol> <http://www.w3.org/2000/01/rdf-schema#comment> "The measured value after the Savitzky-Golay filter named by geolod:smoothingMethod_savgol."@en .
 <http://w3id.org/geo-lod/smoothedValue_savgol> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
 <http://w3id.org/geo-lod/smoothedValue_savgol> <http://www.w3.org/2000/01/rdf-schema#label> "smoothed value (Savitzky-Golay)"@en .
 <http://w3id.org/geo-lod/smoothedValue_savgol> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/smoothingMethod_median> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/smoothingMethod_median> <http://www.w3.org/2000/01/rdf-schema#comment> "The rolling-median filter that produced geolod:smoothedValue_rollingMedian."@en .
 <http://w3id.org/geo-lod/smoothingMethod_median> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
 <http://w3id.org/geo-lod/smoothingMethod_median> <http://www.w3.org/2000/01/rdf-schema#label> "smoothing method (rolling median)"@en .
 <http://w3id.org/geo-lod/smoothingMethod_median> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/RollingMedianFilter> .
 <http://w3id.org/geo-lod/smoothingMethod_savgol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/smoothingMethod_savgol> <http://www.w3.org/2000/01/rdf-schema#comment> "The Savitzky-Golay filter that produced geolod:smoothedValue_savgol."@en .
 <http://w3id.org/geo-lod/smoothingMethod_savgol> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
 <http://w3id.org/geo-lod/smoothingMethod_savgol> <http://www.w3.org/2000/01/rdf-schema#label> "smoothing method (Savitzky-Golay)"@en .
 <http://w3id.org/geo-lod/smoothingMethod_savgol> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/SavitzkyGolayFilter> .
@@ -19372,15 +19401,19 @@
 <http://w3id.org/geo-lod/strat/AgeDepthModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/AgeDepthModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A depth->age model for the core (here: piecewise-linear interpolation between dated tephra tie points)."@en .
 <http://w3id.org/geo-lod/strat/AgeDepthModel> <http://www.w3.org/2000/01/rdf-schema#label> "Age-Depth Model"@en .
+<http://w3id.org/geo-lod/strat/AgeDepthModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/CRMsci/S6_Data_Evaluation> .
 <http://w3id.org/geo-lod/strat/Boundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/Boundary> <http://www.w3.org/2000/01/rdf-schema#comment> "Contact between two units. ~ crmarchaeo:A3_Stratigraphic_Interface."@en .
 <http://w3id.org/geo-lod/strat/Boundary> <http://www.w3.org/2000/01/rdf-schema#label> "Boundary"@en .
+<http://w3id.org/geo-lod/strat/Boundary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/extensions/crmarchaeo/A3_Stratigraphic_Interface> .
 <http://w3id.org/geo-lod/strat/Core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/Core> <http://www.w3.org/2000/01/rdf-schema#comment> "The recovered drill core (e.g. WD1)."@en .
 <http://w3id.org/geo-lod/strat/Core> <http://www.w3.org/2000/01/rdf-schema#label> "Core"@en .
+<http://w3id.org/geo-lod/strat/Core> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/CRMsci/S13_Sample> .
 <http://w3id.org/geo-lod/strat/Eruption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/Eruption> <http://www.w3.org/2000/01/rdf-schema#comment> "The event that produced a tephra; carries the age. ~ crm:E5_Event."@en .
 <http://w3id.org/geo-lod/strat/Eruption> <http://www.w3.org/2000/01/rdf-schema#label> "Volcanic Eruption"@en .
+<http://w3id.org/geo-lod/strat/Eruption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E5_Event> .
 <http://w3id.org/geo-lod/strat/LithologicalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/LithologicalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A depositional unit of the litho-log (Table 1)."@en .
 <http://w3id.org/geo-lod/strat/LithologicalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Lithological Unit"@en .
@@ -19396,6 +19429,7 @@
 <http://w3id.org/geo-lod/strat/StratigraphicUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/StratigraphicUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A body of sediment in the core. ~ crmarchaeo:A2_Stratigraphic_Volume_Unit."@en .
 <http://w3id.org/geo-lod/strat/StratigraphicUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Stratigraphic Unit"@en .
+<http://w3id.org/geo-lod/strat/StratigraphicUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit> .
 <http://w3id.org/geo-lod/strat/TephraClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/strat/TephraClass> <http://www.w3.org/2000/01/rdf-schema#label> "Tephra Class"@en .
 <http://w3id.org/geo-lod/strat/TephraClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -19416,9 +19450,11 @@
 <http://w3id.org/geo-lod/strat/ageBottom> <http://www.w3.org/2000/01/rdf-schema#label> "age bottom (years b2k)"@en .
 <http://w3id.org/geo-lod/strat/ageBottom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/strat/ageKaBP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/strat/ageKaBP> <http://www.w3.org/2000/01/rdf-schema#comment> "Age in thousands of years before present (ka BP)."@en .
 <http://w3id.org/geo-lod/strat/ageKaBP> <http://www.w3.org/2000/01/rdf-schema#label> "age (ka BP)"@en .
 <http://w3id.org/geo-lod/strat/ageKaBP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/strat/ageReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/ageReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The time reference system in which the ages of a core are stated (a time:TRS), for example years before AD 2000."@en .
 <http://w3id.org/geo-lod/strat/ageReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/Core> .
 <http://w3id.org/geo-lod/strat/ageReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "age reference system"@en .
 <http://w3id.org/geo-lod/strat/ageReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TRS> .
@@ -19442,16 +19478,20 @@
 <http://w3id.org/geo-lod/strat/depthBelowSurface> <http://www.w3.org/2000/01/rdf-schema#comment> "The 1D reference system for all depth intervals: metres below the core top, increasing downward."@en .
 <http://w3id.org/geo-lod/strat/depthBelowSurface> <http://www.w3.org/2000/01/rdf-schema#label> "depth below core top (m)"@en .
 <http://w3id.org/geo-lod/strat/depthBottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/strat/depthBottom> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth of the lower (deeper) boundary of a unit, in metres below the core top."@en .
 <http://w3id.org/geo-lod/strat/depthBottom> <http://www.w3.org/2000/01/rdf-schema#label> "depth bottom (m)"@en .
 <http://w3id.org/geo-lod/strat/depthBottom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/strat/depthReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/depthReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The depth reference system of a core (a time:TRS), normally strat:depthBelowSurface."@en .
 <http://w3id.org/geo-lod/strat/depthReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/Core> .
 <http://w3id.org/geo-lod/strat/depthReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "depth reference system"@en .
 <http://w3id.org/geo-lod/strat/depthReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TRS> .
 <http://w3id.org/geo-lod/strat/depthTop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/geo-lod/strat/depthTop> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth of the upper (shallower) boundary of a unit, in metres below the core top."@en .
 <http://w3id.org/geo-lod/strat/depthTop> <http://www.w3.org/2000/01/rdf-schema#label> "depth top (m)"@en .
 <http://w3id.org/geo-lod/strat/depthTop> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/geo-lod/strat/hasAgeModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/hasAgeModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a core to its age-depth model."@en .
 <http://w3id.org/geo-lod/strat/hasAgeModel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/Core> .
 <http://w3id.org/geo-lod/strat/hasAgeModel> <http://www.w3.org/2000/01/rdf-schema#label> "has age model"@en .
 <http://w3id.org/geo-lod/strat/hasAgeModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/AgeDepthModel> .
@@ -19466,6 +19506,7 @@
 <http://w3id.org/geo-lod/strat/hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
 <http://w3id.org/geo-lod/strat/hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3id.org/geo-lod/strat/hasControlPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/hasControlPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an age-depth model to the dated control points that constrain it."@en .
 <http://w3id.org/geo-lod/strat/hasControlPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/AgeDepthModel> .
 <http://w3id.org/geo-lod/strat/hasControlPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has control point"@en .
 <http://w3id.org/geo-lod/strat/hasControlPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/AgeControlPoint> .
@@ -19495,10 +19536,12 @@
 <http://w3id.org/geo-lod/strat/meets> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2006/time#intervalMeets> .
 <http://w3id.org/geo-lod/strat/meets> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/geo-lod/strat/metBy> .
 <http://w3id.org/geo-lod/strat/metBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/metBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of strat:meets: the object's depthBottom equals the subject's depthTop."@en .
 <http://w3id.org/geo-lod/strat/metBy> <http://www.w3.org/2000/01/rdf-schema#label> "met by"@en .
 <http://w3id.org/geo-lod/strat/metBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/geo-lod/strat/underlies> .
 <http://w3id.org/geo-lod/strat/metBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2006/time#intervalMetBy> .
 <http://w3id.org/geo-lod/strat/overlappedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of strat:overlaps: the object starts shallower than the subject and ends inside it."@en .
 <http://w3id.org/geo-lod/strat/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#label> "overlapped by"@en .
 <http://w3id.org/geo-lod/strat/overlappedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2006/time#intervalOverlappedBy> .
 <http://w3id.org/geo-lod/strat/overlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -19513,10 +19556,12 @@
 <http://w3id.org/geo-lod/strat/overlies> <http://www.w3.org/2000/01/rdf-schema#label> "overlies"@en .
 <http://w3id.org/geo-lod/strat/overlies> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/StratigraphicUnit> .
 <http://w3id.org/geo-lod/strat/partOfCore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/partOfCore> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a stratigraphic unit to the core it belongs to."@en .
 <http://w3id.org/geo-lod/strat/partOfCore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/StratigraphicUnit> .
 <http://w3id.org/geo-lod/strat/partOfCore> <http://www.w3.org/2000/01/rdf-schema#label> "part of core"@en .
 <http://w3id.org/geo-lod/strat/partOfCore> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/Core> .
 <http://w3id.org/geo-lod/strat/producedByEruption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/producedByEruption> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tephra layer to the eruption that produced it."@en .
 <http://w3id.org/geo-lod/strat/producedByEruption> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/TephraLayer> .
 <http://w3id.org/geo-lod/strat/producedByEruption> <http://www.w3.org/2000/01/rdf-schema#label> "produced by eruption"@en .
 <http://w3id.org/geo-lod/strat/producedByEruption> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/Eruption> .
@@ -19526,15 +19571,18 @@
 <http://w3id.org/geo-lod/strat/sampledAt> <http://www.w3.org/2000/01/rdf-schema#label> "sampled at"@en .
 <http://w3id.org/geo-lod/strat/sampledAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/Locality> .
 <http://w3id.org/geo-lod/strat/tephraClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/geo-lod/strat/tephraClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Says whether a tephra layer is primary (in-situ isochron) or secondary (reworked), a strat:TephraClass."@en .
 <http://w3id.org/geo-lod/strat/tephraClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/geo-lod/strat/StratigraphicUnit> .
 <http://w3id.org/geo-lod/strat/tephraClass> <http://www.w3.org/2000/01/rdf-schema#label> "tephra class"@en .
 <http://w3id.org/geo-lod/strat/tephraClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/geo-lod/strat/TephraClass> .
 <http://w3id.org/geo-lod/strat/underlies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/geo-lod/strat/underlies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://w3id.org/geo-lod/strat/underlies> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of strat:overlies: the subject lies stratigraphically below the object (deeper)."@en .
 <http://w3id.org/geo-lod/strat/underlies> <http://www.w3.org/2000/01/rdf-schema#label> "underlies"@en .
 <http://w3id.org/geo-lod/strat/underlies> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/geo-lod/strat/overlies> .
 <http://w3id.org/geo-lod/strat/within> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/geo-lod/strat/within> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://w3id.org/geo-lod/strat/within> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of strat:contains: the subject's depth span lies fully inside the object's."@en .
 <http://w3id.org/geo-lod/strat/within> <http://www.w3.org/2000/01/rdf-schema#label> "within"@en .
 <http://w3id.org/geo-lod/strat/within> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2006/time#intervalDuring> .
 <http://w3id.org/geo-lod/tookPlaceAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -19663,6 +19711,7 @@
 <http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/CRMsci/S9_Property_Type> .
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
 <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/CRMsci/S4_Observation> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample"@en .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> .
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .

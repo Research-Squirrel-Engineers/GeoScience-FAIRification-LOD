@@ -23,7 +23,7 @@ FONTS = HERE / "fonts"
 
 # (file, label) per row. "docu" pages live in docu/, "visuals" pages in visuals/site/; both folders are
 # published side by side on gh-pages, so ../<other>/ always resolves.
-DOCU_PAGES = [("index.html", "Overview"), ("model.html", "Data model"), ("crm-coverage.html", "CRM coverage"),
+DOCU_PAGES = [("index.html", "Overview"), ("model.html", "Data model"), ("crm-coverage.html", "CRM coverage"), ("crosswalk.html", "Crosswalk"),
               ("instances.html", "Instance models"), ("sparql.html", "Query")]
 VISUAL_PAGES = [("index.html", "Slide figures")]
 

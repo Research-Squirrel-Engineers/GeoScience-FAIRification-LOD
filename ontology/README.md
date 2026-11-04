@@ -85,7 +85,15 @@ count from the most recent pipeline run as orientation.
 
 These are written into `ontology/crm_bridging.ttl`. Each external class
 that we actually instantiate in our data needs exactly one bridging
-axiom.
+axiom, and so does every class of our own modules that no `rdfs:subClassOf`
+chain of its own carries into the CRM family (the `strat:` rows below).
+`docu/crm-coverage.html` lists every class with its chain and the build stops
+when a `geolod:` class has none.
+
+The external rows are shared with the profile of the N4O KG
+(`n4o-rse/n4o-kg-profile`, `profile/crosswalk-crm.ttl`), which applies them
+to every collection it builds. That file uses the NFDI4Objects namespaces of
+the CRM extensions; the axioms are the same.
 
 | External class                         | `rdfs:subClassOf` (CRM family)             | Notes |
 |---|---|---|
@@ -110,6 +118,12 @@ axiom.
 | `pleiades:Place`                        | `crm:E53_Place`                             |  |
 | `fuzzy-sl:Site`                         | `crm:E27_Site`                              | Squirrel.link Site model |
 | `fuzzy-sl:Georeferencing`               | `crm:E13_Attribute_Assignment`              | Statement of position |
+| `strat:StratigraphicUnit`               | `crmarchaeo:A2_Stratigraphic_Volume_Unit`   | `LithologicalUnit` and `TephraLayer` inherit it |
+| `strat:Boundary`                        | `crmarchaeo:A3_Stratigraphic_Interface`     | Contact between two units |
+| `strat:Eruption`                        | `crm:E5_Event`                              | A natural event |
+| `strat:Core`                            | `crmsci:S13_Sample`                         | Matter taken for examination; `geolod:IceCore` stays E22 |
+| `strat:AgeDepthModel`                   | `crmsci:S6_Data_Evaluation`                 | Same reading as `geolod:AgeModel`; one axiom after S4 |
+| `strat:AgeControlPoint`                 | `crm:E13_Attribute_Assignment`              | Stated with S3c.3 |
 | `crmarchaeo:A2_Stratigraphic_Volume_Unit` | (already in CRM family)                   | No bridging needed |
 | `crmgeo:SP6_Declarative_Place`          | (already in CRM family)                     | No bridging needed |
 | `crmsci:S4_Observation` etc.            | (already in CRM family)                     | No bridging needed |

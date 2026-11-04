@@ -72,6 +72,9 @@ sosa:Sample
 sosa:ObservableProperty
     rdfs:subClassOf crmsci:S9_Property_Type .
 
+sosa:Procedure
+    rdfs:subClassOf crm:E29_Design_or_Procedure .
+
 # ============================================================================
 # PROV-O  →  CRM
 # ============================================================================
@@ -176,9 +179,12 @@ time:TRS
 # anchoring lives here, which is the same split the WD1 family used between
 # strat.ttl and its own crm_bridge.ttl.
 #
-# Only the classes geo-lod instantiates are anchored. The rest of strat: is
-# waiting for its data (ELSA, S5) and for the merge with geolod: (S4); a
-# subClassOf axiom written now would have to be argued twice.
+# Every class of strat: is anchored, instantiated here or not. The N4O rule is
+# that nothing in the graph may lack a CRM-family ancestor, and a class that is
+# declared but unanchored is a gap in the ontology whatever its data say. Where
+# the merge with geolod: (S4) moves a class, its axiom moves with it. The
+# subclasses LithologicalUnit and TephraLayer inherit the anchor of
+# StratigraphicUnit and need no axiom of their own.
 
 strat:AgeControlPoint
     rdfs:subClassOf crm:E13_Attribute_Assignment .
@@ -188,3 +194,35 @@ strat:AgeControlPoint
 # measurements and two observations that the speleothem is still growing.
 # Both constrain the age-depth model, only the first is a measurement, and
 # geolod:datingMethod says which is which.
+
+# ---- the rest of strat: ---------------------------------------------------
+
+# A body of sediment in a core is a volume of matter with a place in the
+# stratigraphic sequence, which is what A2 is. The comment in strat.ttl names
+# the same class.
+strat:StratigraphicUnit
+    rdfs:subClassOf crmarchaeo:A2_Stratigraphic_Volume_Unit .
+
+# The contact between two units; strat.ttl names A3 as the counterpart.
+strat:Boundary
+    rdfs:subClassOf crmarchaeo:A3_Stratigraphic_Interface .
+
+# An eruption is a natural event, which E5 covers. It carries the age of the
+# tephra it produced.
+strat:Eruption
+    rdfs:subClassOf crm:E5_Event .
+
+# The drill core is a piece of matter taken from the ground for examination,
+# which is S13 Sample. It is the physical counterpart of geolod:IceCore
+# (E22), which stays a human-made object because an ice core is cut and
+# stored by people.
+strat:Core
+    rdfs:subClassOf crmsci:S13_Sample .
+
+# The age-depth model is the result of evaluating dated tie points, the same
+# reading as geolod:AgeModel (S6). When S4 merges the two classes this axiom
+# and the one for geolod:AgeModel become one.
+strat:AgeDepthModel
+    rdfs:subClassOf crmsci:S6_Data_Evaluation .
+
+

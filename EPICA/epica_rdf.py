@@ -904,7 +904,8 @@ geolod:hasDrillingCampaign
     a owl:ObjectProperty ;
     rdfs:domain  geolod:IceCoreDataset ;
     rdfs:range   geolod:DrillingCampaign ;
-    rdfs:label   "has drilling campaign"@en .
+    rdfs:label   "has drilling campaign"@en ;
+    rdfs:comment "Links an ice-core dataset to the drilling campaign that produced the core."@en .
 
 # ============================================================================
 # LABELS FOR EXTERNAL TERMS USED HERE
