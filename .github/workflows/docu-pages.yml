@@ -11,9 +11,11 @@ on:
 permissions:
   contents: write
 
+# One group for every workflow that writes to gh-pages: two pushes to the branch at the same moment
+# make the second fail with "cannot lock ref". Queued, not cancelled, so no deployment is dropped.
 concurrency:
-  group: docu-pages
-  cancel-in-progress: true
+  group: gh-pages-write
+  cancel-in-progress: false
 
 jobs:
   deploy:
