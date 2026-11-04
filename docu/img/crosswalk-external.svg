@@ -1,0 +1,139 @@
+<svg width="1750" height="1086" viewBox="0 0 1750 1086" xmlns="http://www.w3.org/2000/svg" role="img"><title>Crosswalk: classes of other vocabularies</title>
+<rect width="1750" height="1086" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<path d="M 572.0 57.0 C 935.0 57.0 935.0 57.0 1298.0 57.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 99.0 C 935.0 99.0 935.0 99.0 1298.0 99.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 141.0 C 935.0 141.0 935.0 141.0 1298.0 141.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 183.0 C 935.0 183.0 935.0 183.0 1298.0 183.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 225.0 C 935.0 225.0 935.0 225.0 1298.0 225.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 267.0 C 935.0 267.0 935.0 288.0 1298.0 288.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 309.0 C 935.0 309.0 935.0 288.0 1298.0 288.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 351.0 C 935.0 351.0 935.0 351.0 1298.0 351.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 393.0 C 935.0 393.0 935.0 393.0 1298.0 393.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 435.0 C 935.0 435.0 935.0 435.0 1298.0 435.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 477.0 C 935.0 477.0 935.0 477.0 1298.0 477.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 519.0 C 935.0 519.0 935.0 519.0 1298.0 519.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 561.0 C 935.0 561.0 935.0 561.0 1298.0 561.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 603.0 C 935.0 603.0 935.0 603.0 1298.0 603.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 645.0 C 935.0 645.0 935.0 645.0 1298.0 645.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 687.0 C 935.0 687.0 935.0 729.0 1298.0 729.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 729.0 C 935.0 729.0 935.0 729.0 1298.0 729.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 771.0 C 935.0 771.0 935.0 729.0 1298.0 729.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 813.0 C 935.0 813.0 935.0 813.0 1298.0 813.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 855.0 C 935.0 855.0 935.0 855.0 1298.0 855.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 897.0 C 935.0 897.0 935.0 897.0 1298.0 897.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 572.0 939.0 C 935.0 939.0 935.0 939.0 1298.0 939.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="50.0" y="40" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="57.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">fuzzysl:Georeferencing</text>
+<text x="560.0" y="57.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">74 in data</text>
+<rect x="50.0" y="82" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="99.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">sosa:Sample</text>
+<text x="560.0" y="99.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">referenced</text>
+<rect x="50.0" y="124" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="141.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">geo:Feature</text>
+<text x="560.0" y="141.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">referenced</text>
+<rect x="50.0" y="166" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="183.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">foaf:Person</text>
+<text x="560.0" y="183.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">2 in data</text>
+<rect x="50.0" y="208" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="225.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">fuzzysl:Site</text>
+<text x="560.0" y="225.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">74 in data</text>
+<rect x="50.0" y="250" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">sosa:Procedure</text>
+<text x="560.0" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">referenced</text>
+<rect x="50.0" y="292" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">time:TRS</text>
+<text x="560.0" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">10 in data</text>
+<rect x="50.0" y="334" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">dct:BibliographicResource</text>
+<text x="560.0" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">bridged only</text>
+<rect x="50.0" y="376" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="393.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">skos:ConceptScheme</text>
+<text x="560.0" y="393.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">bridged only</text>
+<rect x="50.0" y="418" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="435.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">prov:Agent</text>
+<text x="560.0" y="435.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">2 in data</text>
+<rect x="50.0" y="460" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="477.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">pleiades:Place</text>
+<text x="560.0" y="477.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">74 in data</text>
+<rect x="50.0" y="502" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="519.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">time:TimePosition</text>
+<text x="560.0" y="519.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">100 in data</text>
+<rect x="50.0" y="544" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="561.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">skos:Concept</text>
+<text x="560.0" y="561.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">referenced</text>
+<rect x="50.0" y="586" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="603.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">prov:Entity</text>
+<text x="560.0" y="603.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">106 in data</text>
+<rect x="50.0" y="628" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="645.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">dcat:Dataset</text>
+<text x="560.0" y="645.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">5 in data</text>
+<rect x="50.0" y="670" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="687.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">dcat:Catalog</text>
+<text x="560.0" y="687.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">1 in data</text>
+<rect x="50.0" y="712" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="729.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">geo:FeatureCollection</text>
+<text x="560.0" y="729.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">6 in data</text>
+<rect x="50.0" y="754" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="771.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">skos:Collection</text>
+<text x="560.0" y="771.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">bridged only</text>
+<rect x="50.0" y="796" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="813.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">prov:Activity</text>
+<text x="560.0" y="813.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">157 in data</text>
+<rect x="50.0" y="838" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="855.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">sosa:Observation</text>
+<text x="560.0" y="855.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">referenced</text>
+<rect x="50.0" y="880" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="897.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">sosa:ObservableProperty</text>
+<text x="560.0" y="897.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">referenced</text>
+<rect x="50.0" y="922" width="520" height="34" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="62.0" y="939.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#1f1f1d">sf:Point</text>
+<text x="560.0" y="939.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">441 in data</text>
+<rect x="1300.0" y="40.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="57.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E13_Attribute_Assignment</text>
+<rect x="1300.0" y="82.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="99.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E18_Physical_Thing</text>
+<rect x="1300.0" y="124.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="141.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E1_CRM_Entity</text>
+<rect x="1300.0" y="166.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="183.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E21_Person</text>
+<rect x="1300.0" y="208.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="225.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E27_Site</text>
+<rect x="1300.0" y="271.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="288.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E29_Design_or_Procedure</text>
+<rect x="1300.0" y="334.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E31_Document</text>
+<rect x="1300.0" y="376.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="393.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E32_Authority_Document</text>
+<rect x="1300.0" y="418.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E39_Actor</text>
+<rect x="1300.0" y="460.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="477.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E53_Place</text>
+<rect x="1300.0" y="502.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="519.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E54_Dimension</text>
+<rect x="1300.0" y="544.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="561.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E55_Type</text>
+<rect x="1300.0" y="586.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="603.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E70_Thing</text>
+<rect x="1300.0" y="628.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="645.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E73_Information_Object</text>
+<rect x="1300.0" y="712.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="729.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E78_Curated_Holding</text>
+<rect x="1300.0" y="796.0" width="400.0" height="34.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="813.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crm:E7_Activity</text>
+<rect x="1300.0" y="838.0" width="400.0" height="34.0" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="855.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crmsci:S4_Observation</text>
+<rect x="1300.0" y="880.0" width="400.0" height="34.0" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="897.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crmsci:S9_Property_Type</text>
+<rect x="1300.0" y="922.0" width="400.0" height="34.0" rx="8" fill="#dbe9d3" stroke="#000000" stroke-width="1.2"/>
+<text x="1500.0" y="939.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">crmgeo:SP6_Declarative_Place</text>
+<rect x="553.55" y="1005" width="22" height="22" rx="3" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="585.55" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CIDOC CRM</text>
+<rect x="716.3499999999999" y="1005" width="22" height="22" rx="3" fill="#ffcc99" stroke="#000000" stroke-width="1"/>
+<text x="748.3499999999999" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CRMsci</text>
+<rect x="845.1499999999999" y="1005" width="22" height="22" rx="3" fill="#dbe9d3" stroke="#000000" stroke-width="1"/>
+<text x="877.1499999999999" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CRMgeo</text>
+<rect x="981.9499999999998" y="1005" width="22" height="22" rx="3" fill="#e4e4e0" stroke="#000000" stroke-width="1"/>
+<text x="1013.9499999999998" y="1016" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">other vocabulary</text>
+<text x="50" y="1060" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Every class of another vocabulary that the ontology refers to, the bridging file covers or the data use.</text>
+</svg>
