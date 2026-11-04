@@ -1,0 +1,48 @@
+<svg width="1750" height="512" viewBox="0 0 1750 512" xmlns="http://www.w3.org/2000/svg" role="img"><title>Class hierarchy: strat:</title>
+<rect width="1750" height="512" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<path d="M 440.3 56.0 L 392.3 56.0 L 392.3 56.0 L 346.3 56.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 440.3 364.0 L 392.3 364.0 L 392.3 364.0 L 346.3 364.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 708.0 100.0 L 660.0 100.0 L 660.0 100.0 L 614.0 100.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 440.3 100.0 L 392.3 100.0 L 392.3 100.0 L 346.3 100.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 708.0 144.0 L 660.0 144.0 L 660.0 144.0 L 614.0 144.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 440.3 144.0 L 392.3 144.0 L 392.3 144.0 L 346.3 144.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<path d="M 708.0 364.0 L 660.0 364.0 L 660.0 364.0 L 614.0 364.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<rect x="440.3" y="40.0" width="171.7" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="526.15" y="56.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AgeControlPoint</text>
+<rect x="50.0" y="40.0" width="294.3" height="32.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="56.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E13_Attribute_Assignment</text>
+<rect x="50.0" y="172.0" width="294.3" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="188.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AgeDepthModel</text>
+<rect x="50.0" y="216.0" width="294.3" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Boundary</text>
+<rect x="50.0" y="260.0" width="294.3" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="276.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Core</text>
+<rect x="50.0" y="304.0" width="294.3" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="320.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Eruption</text>
+<rect x="440.3" y="348.0" width="171.7" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="526.15" y="364.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">LithologicalUnit</text>
+<rect x="50.0" y="348.0" width="294.3" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="364.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">StratigraphicUnit</text>
+<rect x="708.0" y="84.0" width="138.5" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="777.25" y="100.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Locality</text>
+<rect x="440.3" y="84.0" width="171.7" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="526.15" y="100.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">geo:Feature</text>
+<rect x="50.0" y="84.0" width="294.3" height="32.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="100.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E1_CRM_Entity</text>
+<rect x="708.0" y="128.0" width="138.5" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="777.25" y="144.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">TephraClass</text>
+<rect x="440.3" y="128.0" width="171.7" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="526.15" y="144.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">skos:Concept</text>
+<rect x="50.0" y="128.0" width="294.3" height="32.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="197.15" y="144.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E55_Type</text>
+<rect x="708.0" y="348.0" width="138.5" height="32.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="777.25" y="364.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">TephraLayer</text>
+<rect x="629.95" y="431" width="22" height="22" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="661.95" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">strat:</text>
+<rect x="742.75" y="431" width="22" height="22" rx="3" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="774.75" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CIDOC CRM</text>
+<rect x="905.55" y="431" width="22" height="22" rx="3" fill="#e4e4e0" stroke="#000000" stroke-width="1"/>
+<text x="937.55" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">other vocabulary</text>
+<text x="50" y="486" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Own classes solid, CRM-family ancestors dashed; colour shows the family.</text>
+</svg>

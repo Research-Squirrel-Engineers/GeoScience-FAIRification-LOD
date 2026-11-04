@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Query · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a href="instances.html">Instance models</a><a class="on" href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Visuals</span><span class="lnk"><a href="../visuals/index.html">Slide figures</a></span></div></nav>
+<h1>Query</h1>
+<p class="intro">Eight queries over a sample of the geo-lod graph. They run in your browser; nothing is sent anywhere. Edit a query and press Run.</p>
+<p class="note">There is no SPARQL endpoint and no server. The graph is fetched as a static file and parsed in your browser with <code>rdflib</code> under Pyodide, so an archived copy of the repository stays queryable. The sample holds 19,681 triples (The ontology files, the full CI and SISAL site layers, every 6th SISAL dating point and every 50th EPICA observation with its time position and MIS membership. visuals/sample_graph.py writes it.) <a href="data/geo-lod-sample.nt">Download the graph</a>.</p><div class="status"><span class="dot" id="dot"></span><span id="status-text">Loading the Python runtime (about 10 MB on first visit)&hellip;</span></div><p class="note" id="graph-note" hidden></p><section class="query" id="q-classes-in-use">
+<h2>1. Which classes are used, and how often?</h2>
+<p class="intro">The instances of every class in the sample, most frequent first. The three strands show up as IceCoreObservation (EPICA), Cave and AgeControlPoint (SISAL) and CIFindspot (campanian ignimbrite).</p>
+<textarea class="sparql" id="src-classes-in-use" spellcheck="false" rows="6">SELECT ?class (COUNT(?s) AS ?instances) WHERE {
+  ?s a ?class .
+  FILTER(STRSTARTS(STR(?class), &quot;http://w3id.org/geo-lod/&quot;))
+} GROUP BY ?class ORDER BY DESC(?instances)</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="classes-in-use" disabled>Run</button><button type="button" class="reset" data-q="classes-in-use">Reset</button><span class="timing" id="time-classes-in-use"></span><a href="downloads/queries/classes-in-use.rq" download>.rq</a></div>
+<div class="result" id="out-classes-in-use"></div>
+</section>
+<section class="query" id="q-crm-anchors">
+<h2>2. Which own classes reach the CIDOC CRM family?</h2>
+<p class="intro">A class is anchored when a chain of rdfs:subClassOf axioms leads from it into CIDOC CRM, CRMsci, CRMgeo or CRMarchaeo. The property path follows the chain through the bridging axioms (SOSA, PROV and SKOS classes on the way).</p>
+<textarea class="sparql" id="src-crm-anchors" spellcheck="false" rows="8">SELECT ?class ?anchor WHERE {
+  ?class a owl:Class ;
+         rdfs:subClassOf+ ?anchor .
+  FILTER(STRSTARTS(STR(?class), &quot;http://w3id.org/geo-lod/&quot;))
+  FILTER(STRSTARTS(STR(?anchor), &quot;http://www.cidoc-crm.org/&quot;)
+      || STRSTARTS(STR(?anchor), &quot;http://www.ics.forth.gr/isl/CRM&quot;))
+} ORDER BY ?class ?anchor</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="crm-anchors" disabled>Run</button><button type="button" class="reset" data-q="crm-anchors">Reset</button><span class="timing" id="time-crm-anchors"></span><a href="downloads/queries/crm-anchors.rq" download>.rq</a></div>
+<div class="result" id="out-crm-anchors"></div>
+</section>
+<section class="query" id="q-epica-observations">
+<h2>3. Methane observations in a marine isotope stage</h2>
+<p class="intro">EPICA Dome C observations, each linked to a time position and a MIS stage. The query lists methane values with the stage they fall in and the depth they were measured at.</p>
+<textarea class="sparql" id="src-epica-observations" spellcheck="false" rows="10">SELECT ?label ?stage ?depth_m ?ageKaBP ?value WHERE {
+  ?obs a geolod:IceCoreObservation ;
+       rdfs:label ?label ;
+       geolod:fallsWithinStage ?stage ;
+       geolod:atDepth_m ?depth_m ;
+       geolod:ageKaBP ?ageKaBP ;
+       sosa:hasSimpleResult ?value .
+  FILTER(CONTAINS(?label, &quot;Methane&quot;))
+} ORDER BY xsd:decimal(?ageKaBP) LIMIT 40</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="epica-observations" disabled>Run</button><button type="button" class="reset" data-q="epica-observations">Reset</button><span class="timing" id="time-epica-observations"></span><a href="downloads/queries/epica-observations.rq" download>.rq</a></div>
+<div class="result" id="out-epica-observations"></div>
+</section>
+<section class="query" id="q-observation-provenance">
+<h2>4. Where does an observation come from?</h2>
+<p class="intro">The route from one observation to the real objects it speaks about: the ice core it samples and the drilling site where it took place, with the data source it was derived from.</p>
+<textarea class="sparql" id="src-observation-provenance" spellcheck="false" rows="7">SELECT ?obs ?core ?site ?source WHERE {
+  ?obs a geolod:IceCoreObservation ;
+       sosa:hasFeatureOfInterest ?core ;
+       crm:P7_took_place_at ?site ;
+       prov:wasDerivedFrom ?source .
+} LIMIT 20</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="observation-provenance" disabled>Run</button><button type="button" class="reset" data-q="observation-provenance">Reset</button><span class="timing" id="time-observation-provenance"></span><a href="downloads/queries/observation-provenance.rq" download>.rq</a></div>
+<div class="result" id="out-observation-provenance"></div>
+</section>
+<section class="query" id="q-sisal-caves">
+<h2>5. Caves with archaeological screening</h2>
+<p class="intro">SISAL caves with elevation and the number of oxygen isotope samples, restricted to those screened for archaeology.</p>
+<textarea class="sparql" id="src-sisal-caves" spellcheck="false" rows="8">SELECT ?label ?elevation_m ?d18O_samples WHERE {
+  ?cave a geolod:Cave ;
+        rdfs:label ?label ;
+        geolod:elevation_m ?elevation_m ;
+        geolod:countD18OSamples ?d18O_samples ;
+        geolod:screenedForArchaeology true .
+} ORDER BY DESC(xsd:integer(?d18O_samples)) LIMIT 30</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="sisal-caves" disabled>Run</button><button type="button" class="reset" data-q="sisal-caves">Reset</button><span class="timing" id="time-sisal-caves"></span><a href="downloads/queries/sisal-caves.rq" download>.rq</a></div>
+<div class="result" id="out-sisal-caves"></div>
+</section>
+<section class="query" id="q-dating-methods">
+<h2>6. Age control points per dating method</h2>
+<p class="intro">Radiometric and other dating points in the SISAL sample, grouped by method.</p>
+<textarea class="sparql" id="src-dating-methods" spellcheck="false" rows="6">SELECT ?method (COUNT(?pt) AS ?points) (AVG(xsd:decimal(?age)) AS ?meanAgeKaBP) WHERE {
+  ?pt a strat:AgeControlPoint ;
+      geolod:datingMethod ?method ;
+      geolod:ageKaBP ?age .
+} GROUP BY ?method ORDER BY DESC(?points)</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="dating-methods" disabled>Run</button><button type="button" class="reset" data-q="dating-methods">Reset</button><span class="timing" id="time-dating-methods"></span><a href="downloads/queries/dating-methods.rq" download>.rq</a></div>
+<div class="result" id="out-dating-methods"></div>
+</section>
+<section class="query" id="q-ci-findspots">
+<h2>7. Campanian Ignimbrite findspots by spatial type</h2>
+<p class="intro">Findspots of the CI tephra, their certainty level and the literature they come from.</p>
+<textarea class="sparql" id="src-ci-findspots" spellcheck="false" rows="8">SELECT ?label ?spatialType ?certainty ?literature WHERE {
+  ?f a geolod:CIFindspot ;
+     rdfs:label ?label ;
+     geolod:hasSpatialType ?spatialType ;
+     geolod:hasCertaintyLevel ?certainty ;
+     geolod:hasLiteratureReference ?literature .
+} ORDER BY ?spatialType ?label LIMIT 40</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="ci-findspots" disabled>Run</button><button type="button" class="reset" data-q="ci-findspots">Reset</button><span class="timing" id="time-ci-findspots"></span><a href="downloads/queries/ci-findspots.rq" download>.rq</a></div>
+<div class="result" id="out-ci-findspots"></div>
+</section>
+<section class="query" id="q-ci-archaeological">
+<h2>8. Resources typed as CRMarchaeo stratigraphic volume units</h2>
+<p class="intro">Archaeologically relevant caves and findspots carry a CRMarchaeo type directly in the data, next to their own class. The query lists them with their geometry resource.</p>
+<textarea class="sparql" id="src-ci-archaeological" spellcheck="false" rows="7">SELECT ?f ?label ?literature ?geometry WHERE {
+  ?f a crmarchaeo:A2_Stratigraphic_Volume_Unit ;
+     rdfs:label ?label ;
+     geo:hasGeometry ?geometry .
+  OPTIONAL { ?f geolod:hasLiteratureReference ?literature }
+} ORDER BY ?label</textarea>
+<div class="query-bar"><button type="button" class="run" data-q="ci-archaeological" disabled>Run</button><button type="button" class="reset" data-q="ci-archaeological">Reset</button><span class="timing" id="time-ci-archaeological"></span><a href="downloads/queries/ci-archaeological.rq" download>.rq</a></div>
+<div class="result" id="out-ci-archaeological"></div>
+</section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script>
+const PREFIXES = "PREFIX geolod: <http://w3id.org/geo-lod/>\nPREFIX strat: <http://w3id.org/geo-lod/strat/>\nPREFIX an: <http://w3id.org/geo-lod/analysis/>\nPREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nPREFIX crmarchaeo: <http://www.cidoc-crm.org/extensions/crmarchaeo/>\nPREFIX sosa: <http://www.w3.org/ns/sosa/>\nPREFIX prov: <http://www.w3.org/ns/prov#>\nPREFIX geo: <http://www.opengis.net/ont/geosparql#>\nPREFIX dct: <http://purl.org/dc/terms/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n", QUERIES = {"classes-in-use": "SELECT ?class (COUNT(?s) AS ?instances) WHERE {\n  ?s a ?class .\n  FILTER(STRSTARTS(STR(?class), \"http://w3id.org/geo-lod/\"))\n} GROUP BY ?class ORDER BY DESC(?instances)", "crm-anchors": "SELECT ?class ?anchor WHERE {\n  ?class a owl:Class ;\n         rdfs:subClassOf+ ?anchor .\n  FILTER(STRSTARTS(STR(?class), \"http://w3id.org/geo-lod/\"))\n  FILTER(STRSTARTS(STR(?anchor), \"http://www.cidoc-crm.org/\")\n      || STRSTARTS(STR(?anchor), \"http://www.ics.forth.gr/isl/CRM\"))\n} ORDER BY ?class ?anchor", "epica-observations": "SELECT ?label ?stage ?depth_m ?ageKaBP ?value WHERE {\n  ?obs a geolod:IceCoreObservation ;\n       rdfs:label ?label ;\n       geolod:fallsWithinStage ?stage ;\n       geolod:atDepth_m ?depth_m ;\n       geolod:ageKaBP ?ageKaBP ;\n       sosa:hasSimpleResult ?value .\n  FILTER(CONTAINS(?label, \"Methane\"))\n} ORDER BY xsd:decimal(?ageKaBP) LIMIT 40", "observation-provenance": "SELECT ?obs ?core ?site ?source WHERE {\n  ?obs a geolod:IceCoreObservation ;\n       sosa:hasFeatureOfInterest ?core ;\n       crm:P7_took_place_at ?site ;\n       prov:wasDerivedFrom ?source .\n} LIMIT 20", "sisal-caves": "SELECT ?label ?elevation_m ?d18O_samples WHERE {\n  ?cave a geolod:Cave ;\n        rdfs:label ?label ;\n        geolod:elevation_m ?elevation_m ;\n        geolod:countD18OSamples ?d18O_samples ;\n        geolod:screenedForArchaeology true .\n} ORDER BY DESC(xsd:integer(?d18O_samples)) LIMIT 30", "dating-methods": "SELECT ?method (COUNT(?pt) AS ?points) (AVG(xsd:decimal(?age)) AS ?meanAgeKaBP) WHERE {\n  ?pt a strat:AgeControlPoint ;\n      geolod:datingMethod ?method ;\n      geolod:ageKaBP ?age .\n} GROUP BY ?method ORDER BY DESC(?points)", "ci-findspots": "SELECT ?label ?spatialType ?certainty ?literature WHERE {\n  ?f a geolod:CIFindspot ;\n     rdfs:label ?label ;\n     geolod:hasSpatialType ?spatialType ;\n     geolod:hasCertaintyLevel ?certainty ;\n     geolod:hasLiteratureReference ?literature .\n} ORDER BY ?spatialType ?label LIMIT 40", "ci-archaeological": "SELECT ?f ?label ?literature ?geometry WHERE {\n  ?f a crmarchaeo:A2_Stratigraphic_Volume_Unit ;\n     rdfs:label ?label ;\n     geo:hasGeometry ?geometry .\n  OPTIONAL { ?f geolod:hasLiteratureReference ?literature }\n} ORDER BY ?label"}, GRAPH = {"url": "data/geo-lod-sample.nt", "format": "nt", "note": "The ontology files, the full CI and SISAL site layers, every 6th SISAL dating point and every 50th EPICA observation with its time position and MIS membership. visuals/sample_graph.py writes it."}, MAX_ROWS = 500;
+const statusText = document.getElementById('status-text'), dot = document.getElementById('dot');
+let pyodide = null;
+function setStatus(t, s) { statusText.textContent = t; dot.className = 'dot ' + (s || ''); }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function renderTable(cols, rows, id, total) {
+  const out = document.getElementById(id);
+  if (!rows.length) { out.innerHTML = '<p class="note">No results. The query is valid but matched nothing.</p>'; return; }
+  let h = '<div class="tbl"><table><thead><tr>' + cols.map(c => '<th>' + esc(c) + '</th>').join('') + '</tr></thead><tbody>';
+  for (const r of rows) {
+    h += '<tr>' + cols.map(c => {
+      const v = r[c];
+      if (v === null || v === undefined) return '<td class="nil">&mdash;</td>';
+      const s = String(v);
+      return /^https?:\/\//.test(s) ? '<td><a href="' + esc(s) + '" target="_blank" rel="noopener">' + esc(s) + '</a></td>' : '<td>' + esc(s) + '</td>';
+    }).join('') + '</tr>';
+  }
+  h += '</tbody></table></div><p class="note">' + (total > rows.length ? 'Showing the first ' + rows.length + ' of ' + total + ' rows.' : rows.length + ' row' + (rows.length === 1 ? '' : 's') + '.') + '</p>';
+  out.innerHTML = h;
+}
+async function boot() {
+  try {
+    pyodide = await loadPyodide();
+    setStatus('Installing rdflib\u2026', 'busy');
+    await pyodide.loadPackage('micropip');
+    await pyodide.runPythonAsync('import micropip\nawait micropip.install("rdflib==7.1.1")');
+    setStatus('Loading the graph\u2026', 'busy');
+    pyodide.globals.set('_url', GRAPH.url);
+    pyodide.globals.set('_fmt', GRAPH.format);
+    await pyodide.runPythonAsync(`
+from pyodide.http import pyfetch
+from rdflib import Graph
+resp = await pyfetch(_url)
+if resp.status != 200:
+    raise RuntimeError(f"{_url} -> HTTP {resp.status}")
+base = Graph()
+base.parse(data=await resp.string(), format=_fmt)
+n_base = len(base)
+`);
+    const n = pyodide.globals.get('n_base');
+    const note = document.getElementById('graph-note');
+    note.hidden = false;
+    note.textContent = 'Graph loaded: ' + n + ' triples from ' + GRAPH.url + '.';
+    setStatus('Ready \u2014 edit a query and press Run.', 'ok');
+    document.querySelectorAll('button.run').forEach(b => (b.disabled = false));
+  } catch (err) { setStatus('Could not start: ' + err.message, 'err'); console.error(err); }
+}
+async function runQuery(id) {
+  const btn = document.querySelector('button.run[data-q="' + id + '"]');
+  const timing = document.getElementById('time-' + id), out = document.getElementById('out-' + id);
+  btn.disabled = true; timing.textContent = 'running\u2026'; out.innerHTML = '';
+  const t0 = performance.now();
+  try {
+    pyodide.globals.set('_q', PREFIXES + '\n' + document.getElementById('src-' + id).value);
+    pyodide.globals.set('_max', MAX_ROWS);
+    const json = await pyodide.runPythonAsync(`
+import json
+res = base.query(_q)
+cols = [str(v) for v in res.vars]
+_all = list(res)
+rows = [{c: (None if r[i] is None else str(r[i])) for i, c in enumerate(cols)} for r in _all[:_max]]
+json.dumps({"cols": cols, "rows": rows, "n": len(base), "total": len(_all)})
+`);
+    const d = JSON.parse(json);
+    renderTable(d.cols, d.rows, 'out-' + id, d.total);
+    timing.textContent = ((performance.now() - t0) / 1000).toFixed(1) + 's over ' + d.n + ' triples';
+  } catch (err) { out.innerHTML = '<pre class="error">' + esc(err.message) + '</pre>'; timing.textContent = ''; }
+  btn.disabled = false;
+}
+document.querySelectorAll('button.run').forEach(b => b.addEventListener('click', () => runQuery(b.dataset.q)));
+document.querySelectorAll('button.reset').forEach(b => b.addEventListener('click', () => {
+  const id = b.dataset.q;
+  document.getElementById('src-' + id).value = QUERIES[id];
+  document.getElementById('out-' + id).innerHTML = '';
+  document.getElementById('time-' + id).textContent = '';
+}));
+boot();
+</script>
+</body></html>

@@ -1,0 +1,126 @@
+<svg width="1750" height="1533" viewBox="0 0 1750 1533" xmlns="http://www.w3.org/2000/svg" role="img"><title>EPICA: one methane observation</title>
+<rect width="1750" height="1533" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<line x1="480" y1="731.5" x2="658.0" y2="125.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="295.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="454.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="635.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="805.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="998.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="1191.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="731.5" x2="658.0" y2="1338.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1090.0" y1="805.5" x2="1268.0" y2="805.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 1090.0 1191.5 L 1124.0 1191.5 L 1124.0 805.5 L 1092.0 805.5" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 1090.0 1191.5 L 1124.0 1191.5 L 1124.0 805.5 L 1092.0 805.5" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 1090.0 1191.5 L 1124.0 1191.5 L 1124.0 805.5 L 1092.0 805.5" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="50.0" y="577.0" width="430.0" height="309.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="265.0" y="605.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">Methane (CH₄) observation 0371 (132.2 ka B…</text>
+<text x="265.0" y="629.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:obs_ch4_0371</text>
+<rect x="157.6" y="639.0" width="214.8" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="265.0" y="651.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:IceCoreObservation</text>
+<text x="64" y="681.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:ageKaBP  132.1600</text>
+<text x="64" y="704.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:atDepth_m  1782.015</text>
+<text x="64" y="727.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:measuredValue  436.30000</text>
+<text x="64" y="750.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:smoothedValue_rollingMedian  436.30000</text>
+<text x="64" y="773.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:smoothedValue_savgol  441.93333</text>
+<text x="64" y="796.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:standardDeviation  10.00</text>
+<text x="64" y="819.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">sosa:hasSimpleResult  436.30000</text>
+<text x="64" y="842.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">sosa:resultTime  132.1600</text>
+<text x="64" y="865.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">qudt:unit →  unit:PPB</text>
+<rect x="660.0" y="40.0" width="430.0" height="171.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="68.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">132.2 ka BP on EDC2-gas</text>
+<text x="875.0" y="92.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:tp_ch4_0371</text>
+<rect x="800.25" y="102.0" width="149.5" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="114.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">time:TimePosition</text>
+<text x="674.0" y="144.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:ageKaBP  132.1600</text>
+<text x="674.0" y="167.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">time:numericPosition  132.1600</text>
+<text x="674.0" y="190.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">time:hasTRS →  trs:EDC2-gas</text>
+<rect x="660.0" y="233.0" width="430.0" height="125.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="261.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">Methane (CH₄) measurement</text>
+<text x="875.0" y="285.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:measurement_type_ch4</text>
+<rect x="772.0" y="295.0" width="206.0" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="307.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:MeasurementType</text>
+<text x="674.0" y="337.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">crm:P2_has_type  Gas chromatography</text>
+<rect x="660.0" y="380.0" width="430.0" height="148.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="408.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">Rolling median filter, window 11</text>
+<text x="875.0" y="432.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:smoothing_rolling_median_w11</text>
+<rect x="768.1" y="442.0" width="213.8" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="454.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:RollingMedianFilter</text>
+<text x="674.0" y="484.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:windowSize  11</text>
+<text x="674.0" y="507.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">dct:references →  1968.1969</text>
+<rect x="660.0" y="550.0" width="430.0" height="171.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="578.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">Savitzky-Golay filter, window 11, polynomia…</text>
+<text x="875.0" y="602.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:smoothing_savitzky_golay_w11_p2</text>
+<rect x="770.7" y="612.0" width="208.6" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="624.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:SavitzkyGolayFilter</text>
+<text x="674.0" y="654.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:polyOrder  2</text>
+<text x="674.0" y="677.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:windowSize  11</text>
+<text x="674.0" y="700.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">dct:references →  ac60214a047</text>
+<rect x="660.0" y="743.0" width="430.0" height="125.0" rx="8" fill="#166534" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="771.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#ffffff">EPICA Dome C, East Antarctica</text>
+<text x="875.0" y="795.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#ffffff">epica:site_dome_c</text>
+<rect x="798.95" y="805.0" width="152.1" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="817.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:DrillingSite</text>
+<text x="674.0" y="847.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#ffffff">crm:P87_is_identified_by  EDC</text>
+<rect x="660.0" y="890.0" width="430.0" height="217.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="918.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">EPICA Dome C - methane (CH4)</text>
+<text x="875.0" y="942.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:source_ch4</text>
+<rect x="797.45" y="952.0" width="155.1" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="964.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:DataSource</text>
+<text x="674.0" y="994.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">dct:creator  Spahni, R.; Stocker, T. F.</text>
+<text x="674.0" y="1017.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">dct:date  2006</text>
+<text x="674.0" y="1040.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">dct:license →  3.0</text>
+<text x="674.0" y="1063.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">dct:source →  PANGAEA.472484</text>
+<text x="674.0" y="1086.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">owl:sameAs →  PANGAEA.472484</text>
+<rect x="660.0" y="1129.0" width="430.0" height="125.0" rx="8" fill="#166534" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="1157.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#ffffff">EPICA Dome C ice core (EDC)</text>
+<text x="875.0" y="1181.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#ffffff">epica:core_edc</text>
+<rect x="811.85" y="1191.0" width="126.3" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="1203.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:IceCore</text>
+<text x="674.0" y="1233.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#ffffff">crm:P2_has_type  Ice core</text>
+<rect x="660.0" y="1276.0" width="430.0" height="125.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="1304.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">Methane (CH₄)</text>
+<text x="875.0" y="1328.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:property_ch4</text>
+<rect x="766.5" y="1338.0" width="217.0" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="1350.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">geolod:ObservableProperty</text>
+<text x="674.0" y="1380.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">qudt:unit →  unit:PPB</text>
+<rect x="1270.0" y="743.0" width="430.0" height="125.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="1485.0" y="771.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">epica:geom_borehole_edc99</text>
+<text x="1485.0" y="795.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">epica:geom_borehole_edc99</text>
+<rect x="1448.5" y="805.0" width="73.0" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1485.0" y="817.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">sf:Point</text>
+<text x="1284.0" y="847.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geo:asWKT  &lt;http://www.opengis.net/def/crs/EPS…</text>
+<rect x="506.69999999999993" y="319.53999999999996" width="184.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="331.53999999999996" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:hasTimePosition</text>
+<rect x="499.29999999999995" y="431.74" width="199.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="443.74" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:measurementType</text>
+<rect x="474.29999999999995" y="536.35" width="249.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="548.35" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:smoothingMethod_med…</text>
+<rect x="478.34999999999997" y="656.14" width="240.9" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="668.14" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:smoothingMethod_sav…</text>
+<rect x="514.3499999999999" y="768.34" width="168.9" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="780.34" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">crm:P7_took_place_at</text>
+<rect x="515.0999999999999" y="895.72" width="167.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="907.72" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">prov:wasDerivedFrom</text>
+<rect x="498.09999999999997" y="1023.0999999999999" width="201.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="1035.1" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">sosa:hasFeatureOfInterest</text>
+<rect x="510.19999999999993" y="1120.12" width="177.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="1132.12" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">sosa:observedProperty</text>
+<rect x="1140.6" y="793.5" width="136.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1208.8" y="805.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geo:hasGeometry</text>
+<rect x="1039.0" y="986.5" width="170.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1124.0" y="998.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:extractedFrom</text>
+<rect x="1003.5" y="986.5" width="241.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1124.0" y="998.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">crm:P53_has_former_or_curre…</text>
+<rect x="1059.3" y="986.5" width="129.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1124.0" y="998.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">sosa:isSampleOf</text>
+<rect x="544.3" y="1456" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="576.3" y="1467" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">resource</text>
+<rect x="688.0999999999999" y="1456" width="22" height="22" rx="3" fill="#166534" stroke="#000000" stroke-width="1"/>
+<text x="720.0999999999999" y="1467" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">real object</text>
+<rect x="848.8" y="1456" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="880.8" y="1467" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">term</text>
+<rect x="957.8" y="1456" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="989.8" y="1467" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">class of the resource</text>
+<text x="50" y="1511" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">An ice-core observation with its time position, MIS membership, sample, data source and the real objects it speaks about.</text>
+</svg>

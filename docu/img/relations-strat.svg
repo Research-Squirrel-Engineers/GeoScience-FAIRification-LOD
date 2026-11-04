@@ -1,0 +1,75 @@
+<svg width="1750" height="570" viewBox="0 0 1750 570" xmlns="http://www.w3.org/2000/svg" role="img"><title>Object properties: strat:</title>
+<rect width="1750" height="570" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<line x1="275.3" y1="351.0" x2="543.7333333333333" y2="437.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1211.8666666666668" y1="222.0" x2="1480.3" y2="265.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="727.7333333333333" y1="265.0" x2="996.1666666666667" y2="222.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="727.7333333333333" y1="255.0" x2="996.1666666666667" y2="298.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="727.7333333333333" y1="275.0" x2="996.1666666666667" y2="318.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="235.0" x2="543.7333333333333" y2="149.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="255.0" x2="543.7333333333333" y2="169.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="275.0" x2="543.7333333333333" y2="189.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="295.0" x2="543.7333333333333" y2="209.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="265.0" x2="543.7333333333333" y2="265.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 106.3 245.0 C 106.3 195.0 219.0 195.0 219.0 243.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="265.0" x2="543.7333333333333" y2="351.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="179.0" x2="543.7333333333333" y2="179.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="275.3" y1="179.0" x2="543.7333333333333" y2="93.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="50.0" y="159.0" width="225.3" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="162.65" y="179.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:TephraLayer</text>
+<rect x="50.0" y="245.0" width="225.3" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="162.65" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:StratigraphicUnit</text>
+<rect x="50.0" y="331.0" width="225.3" height="40.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
+<text x="162.65" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">an:Specimen</text>
+<rect x="545.7" y="73.0" width="182.0" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="636.7333333333333" y="93.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:Eruption</text>
+<rect x="545.7" y="159.0" width="182.0" height="40.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="636.7333333333333" y="179.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">skos:Concept</text>
+<rect x="545.7" y="245.0" width="182.0" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="636.7333333333333" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:Core</text>
+<rect x="545.7" y="331.0" width="182.0" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="636.7333333333333" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:TephraClass</text>
+<rect x="545.7" y="417.0" width="182.0" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="636.7333333333333" y="437.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:Locality</text>
+<rect x="998.2" y="202.0" width="213.7" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="1105.0166666666667" y="222.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:AgeDepthModel</text>
+<rect x="998.2" y="288.0" width="213.7" height="40.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="1105.0166666666667" y="308.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">time:TRS</text>
+<rect x="1482.3" y="245.0" width="217.7" height="40.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
+<text x="1591.1499999999999" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:AgeControlPoint</text>
+<rect x="366.8666666666667" y="382.3203774990687" width="87.3" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="394.3203774990687" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">sampledAt</text>
+<rect x="1283.3833333333334" y="231.66018874953434" width="127.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1347.0833333333335" y="243.66018874953434" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasControlPoint</text>
+<rect x="809.45" y="231.33981125046566" width="107.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="862.95" y="243.33981125046566" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasAgeModel</text>
+<rect x="781.95" y="264.6601887495343" width="162.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="862.95" y="276.6601887495343" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">ageReferenceSystem</text>
+<rect x="773.3000000000001" y="284.6601887495343" width="179.3" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="862.95" y="296.6601887495343" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">depthReferenceSystem</text>
+<rect x="368.8666666666667" y="179.67962250093134" width="83.3" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="191.67962250093134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasColour</text>
+<rect x="350.6166666666667" y="199.67962250093134" width="119.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="211.67962250093134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasComponent</text>
+<rect x="359.21666666666664" y="219.67962250093134" width="102.6" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="231.67962250093134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasLithology</text>
+<rect x="358.81666666666666" y="239.67962250093134" width="103.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="251.67962250093134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">hasStructure</text>
+<rect x="365.6166666666667" y="253.0" width="89.8" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">partOfCore</text>
+<rect x="128.85000000000002" y="189.0" width="67.6" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="162.65000000000003" y="201.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">overlies</text>
+<rect x="362.71666666666664" y="296.3203774990687" width="95.6" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="308.3203774990687" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">tephraClass</text>
+<rect x="354.16666666666663" y="167.0" width="112.7" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="179.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">markerTephra</text>
+<rect x="330.46666666666664" y="123.67962250093134" width="160.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="410.51666666666665" y="135.67962250093134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">producedByEruption</text>
+<rect x="664.35" y="489" width="22" height="22" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="696.35" y="500" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">strat:</text>
+<rect x="777.15" y="489" width="22" height="22" rx="3" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="809.15" y="500" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">an:</text>
+<rect x="871.15" y="489" width="22" height="22" rx="3" fill="#e4e4e0" stroke="#000000" stroke-width="1"/>
+<text x="903.15" y="500" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">other vocabulary</text>
+<text x="50" y="544" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Arrows run from domain to range; datatype properties are in the table.</text>
+</svg>

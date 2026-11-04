@@ -1,0 +1,68 @@
+<svg width="1750" height="559" viewBox="0 0 1750 559" xmlns="http://www.w3.org/2000/svg" role="img"><title>CI: one findspot</title>
+<rect width="1750" height="559" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<line x1="480" y1="244.5" x2="658.0" y2="125.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="244.5" x2="658.0" y2="295.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1090.0" y1="125.5" x2="1268.0" y2="148.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1090.0" y1="295.5" x2="1268.0" y2="353.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="50.0" y="113.0" width="430.0" height="263.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="265.0" y="141.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">Paglicci Cave</text>
+<text x="265.0" y="165.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">ci:cisite_19</text>
+<rect x="106.30000000000001" y="175.0" width="317.4" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="265.0" y="187.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">fuzzysl:Site + geolod:CIArchaeologicalSite</text>
+<text x="64" y="217.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasCertaintyDescription  findspot mention…</text>
+<text x="64" y="240.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasLiteratureReference  Giaccio et al., 2008</text>
+<text x="64" y="263.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasCertaintyLevel →  fsl:medium</text>
+<text x="64" y="286.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasSpatialType →  fsl:ArchaeologicalSite</text>
+<text x="64" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasSpatialType →  fsl:Cave</text>
+<text x="64" y="332.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">skos:closeMatch →  2293681037</text>
+<text x="64" y="355.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">skos:closeMatch →  Q3777010</text>
+<rect x="660.0" y="40.0" width="430.0" height="171.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="68.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">ci:cisite_19_geom</text>
+<text x="875.0" y="92.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">ci:cisite_19_geom</text>
+<rect x="719.2" y="102.0" width="311.6" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="114.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">crmgeo:SP6_Declarative_Place + sf:Point</text>
+<text x="674.0" y="144.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasCertaintyDescription  findspot mention…</text>
+<text x="674.0" y="167.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geo:asWKT  &lt;http://www.opengis.net/def/crs/EPS…</text>
+<text x="674.0" y="190.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasCertaintyLevel →  fsl:medium</text>
+<rect x="660.0" y="233.0" width="430.0" height="125.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="875.0" y="261.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">ci:cisite_19_pyscript</text>
+<text x="875.0" y="285.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">ci:cisite_19_pyscript</text>
+<rect x="821.2" y="295.0" width="107.6" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="875.0" y="307.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">prov:Activity</text>
+<text x="674.0" y="337.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">prov:wasAssociatedWith →  CI.py</text>
+<rect x="1270.0" y="40.0" width="430.0" height="217.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="1485.0" y="68.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">ci:cisite_19_activity</text>
+<text x="1485.0" y="92.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">ci:cisite_19_activity</text>
+<rect x="1340.65" y="102.0" width="288.7" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1485.0" y="114.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">fuzzysl:Georeferencing + prov:Activity</text>
+<text x="1284.0" y="144.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">fsl:activityDesc  set a representative point based o…</text>
+<text x="1284.0" y="167.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasLiteratureReference  Giaccio et al., 2008</text>
+<text x="1284.0" y="190.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">fsl:hasSource →  fsl:PaperDesc</text>
+<text x="1284.0" y="213.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">fsl:hasSourceType →  fsl:Paper</text>
+<text x="1284.0" y="236.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">geolod:hasCertaintyLevel →  fsl:medium</text>
+<rect x="1270.0" y="279.0" width="430.0" height="148.0" rx="8" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="1485.0" y="307.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" font-weight="500" fill="#000000">CI findspot RDF generation</text>
+<text x="1485.0" y="331.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">ci:ci_findspots_generation</text>
+<rect x="1431.2" y="341.0" width="107.6" height="24" rx="12" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1485.0" y="353.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#ffffff">prov:Activity</text>
+<text x="1284.0" y="383.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">prov:wasAssociatedWith →  campanian-ignimbrite…</text>
+<text x="1284.0" y="406.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">prov:wasAssociatedWith →  0000-0002-3246-3531</text>
+<rect x="530.5999999999999" y="153.95999999999998" width="136.4" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="165.95999999999998" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geo:hasGeometry</text>
+<rect x="514.75" y="266.16" width="168.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="278.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">prov:wasGeneratedBy</text>
+<rect x="1124.75" y="128.68" width="168.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1208.8" y="140.68" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">prov:wasGeneratedBy</text>
+<rect x="1129.1499999999999" y="321.45" width="159.3" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1208.8" y="333.45" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">prov:wasInformedBy</text>
+<rect x="544.3" y="482" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="576.3" y="493" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">resource</text>
+<rect x="688.0999999999999" y="482" width="22" height="22" rx="3" fill="#166534" stroke="#000000" stroke-width="1"/>
+<text x="720.0999999999999" y="493" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">real object</text>
+<rect x="848.8" y="482" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="880.8" y="493" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">term</text>
+<rect x="957.8" y="482" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="989.8" y="493" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">class of the resource</text>
+<text x="50" y="537" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">A Campanian Ignimbrite findspot with its geometry and the generating activity; attribution links are left out.</text>
+</svg>
