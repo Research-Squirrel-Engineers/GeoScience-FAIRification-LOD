@@ -1,0 +1,85 @@
+<svg width="1750" height="1340" viewBox="0 0 1750 1340" xmlns="http://www.w3.org/2000/svg" role="img"><title>Two assignments, one stage</title>
+<rect width="1750" height="1340" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">A stage is attached twice: to an observation, and to a depth</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Both are a crm:E13 Attribute Assignment, so the source, the timescale and the status stay with the statement.</text>
+<text x="50" y="130" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">Which stage an observation falls in</text>
+<rect x="50" y="200" width="330" height="66" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="215.0" y="223.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">epica:obs_ch4_0001</text>
+<text x="215.0" y="247.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a geolod:IceCoreObservation</text>
+<rect x="700" y="200" width="470" height="74" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="227.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">epica:mis_membership_ch4_0001</text>
+<text x="935.0" y="251.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a geolod:MISMembershipAssignment  → crm:E13_Attribute_Assignment</text>
+<rect x="1370" y="200" width="350" height="66" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1545.0" y="223.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">mis:MIS_1</text>
+<text x="1545.0" y="247.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a geolod:MarineIsotopeStage</text>
+<line x1="700" y1="230" x2="380" y2="230" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="409.9" y="218.0" width="260.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="540.0" y="230.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P140_assigned_attribute_to</text>
+<line x1="1170" y1="237" x2="1370" y2="233" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1191.9" y="223.0" width="156.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1270.0" y="235.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P141_assigned</text>
+<rect x="700" y="320" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="345.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:MISMembership</text>
+<line x1="700" y1="345" x2="650" y2="345" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="345" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P177_assigned_property_of_type</text>
+<rect x="700" y="382" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="407.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">trs:EDC2-gas</text>
+<line x1="700" y1="407" x2="650" y2="407" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="407" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">geolod:inChronology</text>
+<rect x="700" y="444" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="469.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">mis:source_railsback2015</text>
+<line x1="700" y1="469" x2="650" y2="469" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="469" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">dct:source</text>
+<rect x="700" y="506" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="531.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:LeadingAssignment</text>
+<line x1="700" y1="531" x2="650" y2="531" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="531" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">geolod:assignmentStatus</text>
+<text x="1210" y="330" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">The scale is the one the record is dated on; the observation</text>
+<text x="1210" y="356" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">has one membership.</text>
+<line x1="50" y1="590" x2="1700" y2="590" stroke="#d8d6ce" stroke-width="1.2"/>
+<text x="50" y="638" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">Where a stage begins on a timescale</text>
+<rect x="50" y="708" width="330" height="66" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="215.0" y="731.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">mis:MIS_11</text>
+<text x="215.0" y="755.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a geolod:MarineIsotopeStage</text>
+<rect x="700" y="708" width="470" height="74" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="735.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">epica:mis_boundary_depth_ch4_11_begin</text>
+<text x="935.0" y="759.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a geolod:MISAttributeAssignment  → crm:E13_Attribute_Assignment</text>
+<rect x="1370" y="708" width="350" height="66" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1545.0" y="731.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">epica:depth_position_ch4_11_begin</text>
+<text x="1545.0" y="755.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a geolod:DepthPosition  ·  2792.273 m</text>
+<line x1="700" y1="738" x2="380" y2="738" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="409.9" y="726.0" width="260.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="540.0" y="738.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P140_assigned_attribute_to</text>
+<line x1="1170" y1="745" x2="1370" y2="741" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1191.9" y="731.0" width="156.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1270.0" y="743.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P141_assigned</text>
+<rect x="700" y="828" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="853.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:MISBoundaryDepth</text>
+<line x1="700" y1="853" x2="650" y2="853" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="853" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P177_assigned_property_of_type</text>
+<rect x="700" y="890" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="915.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">trs:EDC2-gas</text>
+<line x1="700" y1="915" x2="650" y2="915" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="915" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">geolod:inChronology</text>
+<rect x="700" y="952" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="977.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">mis:source_railsback2015</text>
+<line x1="700" y1="977" x2="650" y2="977" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="977" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">dct:source</text>
+<rect x="700" y="1014" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="1039.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:LeadingAssignment</text>
+<line x1="700" y1="1039" x2="650" y2="1039" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="1039" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">geolod:assignmentStatus</text>
+<rect x="700" y="1076" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="1101.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:LinearInterpolation</text>
+<line x1="700" y1="1101" x2="650" y2="1101" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="1101" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">geolod:interpolationMethod</text>
+<rect x="700" y="1138" width="470" height="50" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="935.0" y="1163.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">mis:tp_railsback2015_MIS_11_begin</text>
+<line x1="700" y1="1163" x2="650" y2="1163" stroke="#55544f" stroke-width="1.2"/>
+<text x="640" y="1163" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">prov:wasDerivedFrom</text>
+<text x="1210" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">One such node per timescale; the age of the boundary stays</text>
+<text x="1210" y="864" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">the same.</text>
+<text x="50" y="1270" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The ontology anchors both classes in crm:E13_Attribute_Assignment; nodes and values are read from the committed graphs.</text>
+<text x="50" y="1300" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The stage concept also carries geolod:beginAgeKaBP of the leading source as a shortcut; a competing reading exists only as an assignment.</text>
+</svg>
