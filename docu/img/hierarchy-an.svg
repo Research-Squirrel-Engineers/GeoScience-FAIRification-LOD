@@ -20,7 +20,7 @@
 <rect x="50.0" y="216.0" width="293.3" height="32.0" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
 <text x="196.65" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crmsci:S4_Observation</text>
 <rect x="1008.6" y="216.0" width="145.1" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
-<text x="1081.1499999999999" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DerivedValue</text>
+<text x="1081.15" y="232.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DerivedValue</text>
 <rect x="784.4" y="128.0" width="128.2" height="32.0" rx="8" fill="#f7dbe8" stroke="#000000" stroke-width="1.2"/>
 <text x="848.5" y="144.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Method</text>
 <rect x="439.3" y="150.0" width="249.1" height="32.0" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
