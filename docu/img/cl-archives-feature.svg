@@ -1,0 +1,40 @@
+<svg width="1750" height="730" viewBox="0 0 1750 730" xmlns="http://www.w3.org/2000/svg" role="img"><title>What the observations of each dataset are about</title>
+<rect width="1750" height="730" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">An observation is about the core, or about the section the source states</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">sosa:hasFeatureOfInterest of the observations of each geolod:IceCoreDataset, counted by the class of the node it points to.</text>
+<line x1="520.0" y1="156" x2="520.0" y2="526" stroke="#d8d6ce" stroke-width="1"/>
+<text x="520.0" y="140" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">0</text>
+<line x1="820.0" y1="156" x2="820.0" y2="526" stroke="#d8d6ce" stroke-width="1"/>
+<text x="820.0" y="140" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">500</text>
+<line x1="1120.0" y1="156" x2="1120.0" y2="526" stroke="#d8d6ce" stroke-width="1"/>
+<text x="1120.0" y="140" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">1000</text>
+<line x1="1420.0" y1="156" x2="1420.0" y2="526" stroke="#d8d6ce" stroke-width="1"/>
+<text x="1420.0" y="140" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">1500</text>
+<text x="502" y="195.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">δ18O of atmospheric O2</text>
+<text x="502" y="219.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_d18o</text>
+<rect x="520" y="180" width="826.8" height="44" rx="0" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1360.8" y="201.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">1378  ·  on the core</text>
+<text x="502" y="269.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">dust concentration (Coulter counter)</text>
+<text x="502" y="293.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_dust</text>
+<rect x="520" y="254" width="692.4" height="44" rx="0" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1226.4" y="275.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">1154  ·  on the core</text>
+<text x="502" y="343.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">δO2/N2</text>
+<text x="502" y="367.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_do2n2</text>
+<rect x="520" y="328" width="493.2" height="44" rx="0" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1027.2" y="349.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">822  ·  on the core</text>
+<text x="502" y="417.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">deuterium (δD)</text>
+<text x="502" y="441.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_dd</text>
+<rect x="520.0" y="402" width="488.4" height="44" rx="0" fill="#E69F00" stroke="#000000" stroke-width="1"/>
+<text x="1022.4" y="423.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">814  ·  814 on sections</text>
+<text x="502" y="491.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">methane (CH4)</text>
+<text x="502" y="515.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_ch4</text>
+<rect x="520" y="476" width="441.6" height="44" rx="0" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="975.6" y="497.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">736  ·  on the core</text>
+<rect x="520" y="559" width="22" height="22" rx="3" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="552" y="570" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">geolod:IceCore, the observation is about the core</text>
+<rect x="1020" y="559" width="22" height="22" rx="3" fill="#E69F00" stroke="#000000" stroke-width="1"/>
+<text x="1052" y="570" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">geolod:SampleSection, an interval the source states</text>
+<text x="50" y="670" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The 814 sections tile 6.6 to 3140.5 m of the core (3133.9 m) without gap or overlap; each is 3.85 m thick.</text>
+<text x="50" y="698" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">A section is minted only where the source states the interval; the other four records give a depth, and their observations stay on the core.</text>
+</svg>

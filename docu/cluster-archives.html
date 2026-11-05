@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archives and sampling · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a href="crosswalk.html">Crosswalk</a><a href="instances.html">Instance models</a><a href="slides.html">Slide figures</a><a href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Clusters</span><span class="lnk"><a href="clusters.html">Overview</a><a href="cluster-chronology.html">Chronology</a><a href="cluster-mis.html">Marine isotope stages</a><a class="on" href="cluster-archives.html">Archives and sampling</a></span></div><div class="grp"><span class="lab">Ontology pages</span><span class="lnk"><a href="../semweb/index.html">Overall</a><a href="../semweb/featurecollections.html">Feature collections</a><a href="../semweb/AllPalaeoclimateSites_Collection/index.html">All sites</a><a href="../semweb/SISAL_Cave_Collection/index.html">SISAL caves</a><a href="../semweb/ci/CIFindspotCollection/index.html">CI findspots</a><a href="../semweb/IceCore_collection/index.html">Ice cores</a><a href="../semweb/DrillingSite_collection/index.html">Drilling sites</a><a href="../semweb/Dataset_collection/index.html">Datasets</a><a href="../semweb/Catalog_collection/index.html">Catalogues</a></span></div></nav>
+<h1>Archives and sampling</h1>
+<p class="intro">Where the material comes from; ice cores, drilling sites, caves, speleothems and the samples cut from them. All clusters are on the <a href="clusters.html">overview</a>.</p>
+<h2>Model</h2>
+<section>
+<img src="img/cl-archives-model.png" width="3944" height="1496" loading="lazy" alt="Cluster graph: Archives and sampling">
+<div class="row"><p class="cap"><span class="n"></span>Cluster graph: Archives and sampling</p><button type="button" data-c="Cluster graph: Archives and sampling">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-model.png" download>PNG</a><a href="img/cl-archives-model.svg" download>SVG</a></p>
+</section>
+<h2>Modelling pattern</h2>
+<section>
+<img src="img/cl-archives-pattern.png" width="3500" height="2480" loading="lazy" alt="A place, the thing taken from it and the part measured">
+<div class="row"><p class="cap"><span class="n"></span>A place, the thing taken from it and the part measured</p><button type="button" data-c="A place, the thing taken from it and the part measured">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-pattern.png" download>PNG</a><a href="img/cl-archives-pattern.svg" download>SVG</a></p>
+</section>
+<h2>In the data</h2>
+<section>
+<img src="img/cl-archives-inventory.png" width="3500" height="1512" loading="lazy" alt="Which classes have nodes in the committed graphs">
+<div class="row"><p class="cap"><span class="n"></span>Which classes have nodes in the committed graphs</p><button type="button" data-c="Which classes have nodes in the committed graphs">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-inventory.png" download>PNG</a><a href="img/cl-archives-inventory.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:Borehole
+    geolod:Cave
+    geolod:DrillingCampaign
+    geolod:DrillingSite
+    geolod:EntityStatus
+    geolod:IceCore
+    geolod:IceCoreDataset
+    geolod:PalaeoclimateSample
+    geolod:SampleSection
+    geolod:SamplingLocation
+    geolod:Speleothem
+    geolod:SpeleothemSample }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:Borehole
+    geolod:Cave
+    geolod:DrillingCampaign
+    geolod:DrillingSite
+    geolod:EntityStatus
+    geolod:IceCore
+    geolod:IceCoreDataset
+    geolod:PalaeoclimateSample
+    geolod:SampleSection
+    geolod:SamplingLocation
+    geolod:Speleothem
+    geolod:SpeleothemSample }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class">Copy</button></div><p class="note">Run on the committed graphs and compared with a count in Python: 7 of 12 classes have asserted nodes.</p></section>
+<section>
+<img src="img/cl-archives-feature.png" width="3500" height="1460" loading="lazy" alt="What the observations of each dataset are about">
+<div class="row"><p class="cap"><span class="n"></span>What the observations of each dataset are about</p><button type="button" data-c="What the observations of each dataset are about">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-feature.png" download>PNG</a><a href="img/cl-archives-feature.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+SELECT ?dataset ?feature_class (COUNT(?obs) AS ?n) WHERE {
+  ?dataset a geolod:IceCoreDataset ;
+           geolod:hasObservation ?obs .
+  ?obs sosa:hasFeatureOfInterest ?feature .
+  ?feature a ?feature_class .
+  FILTER(?feature_class IN (geolod:IceCore, geolod:SampleSection))
+} GROUP BY ?dataset ?feature_class ORDER BY ?dataset</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+SELECT ?dataset ?feature_class (COUNT(?obs) AS ?n) WHERE {
+  ?dataset a geolod:IceCoreDataset ;
+           geolod:hasObservation ?obs .
+  ?obs sosa:hasFeatureOfInterest ?feature .
+  ?feature a ?feature_class .
+  FILTER(?feature_class IN (geolod:IceCore, geolod:SampleSection))
+} GROUP BY ?dataset ?feature_class ORDER BY ?dataset">Copy</button></div><p class="note">Run on epica_dome_c.ttl and compared with the figure: five datasets, two classes.</p></section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# The sections of the core: how many, how thick in all, and where they start and end.
+SELECT (COUNT(?s) AS ?sections) (SUM(?bottom - ?top) AS ?thickness_m) (MIN(?top) AS ?from_m) (MAX(?bottom) AS ?to_m) WHERE {
+  ?s a geolod:SampleSection ;
+     geolod:depthTop_m ?top ;
+     geolod:depthBottom_m ?bottom .
+}</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# The sections of the core: how many, how thick in all, and where they start and end.
+SELECT (COUNT(?s) AS ?sections) (SUM(?bottom - ?top) AS ?thickness_m) (MIN(?top) AS ?from_m) (MAX(?bottom) AS ?to_m) WHERE {
+  ?s a geolod:SampleSection ;
+     geolod:depthTop_m ?top ;
+     geolod:depthBottom_m ?bottom .
+}">Copy</button></div><p class="note">Compared with the figure: 814 sections, 3133.9 m of 6.6 to 3140.5 m; the sections tile the core without gap or overlap.</p></section>
+<section>
+<img src="img/cl-archives-caves.png" width="3500" height="1600" loading="lazy" alt="How many delta-18-O samples each of the 365 caves stands for">
+<div class="row"><p class="cap"><span class="n"></span>How many delta-18-O samples each of the 365 caves stands for</p><button type="button" data-c="How many delta-18-O samples each of the 365 caves stands for">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-caves.png" download>PNG</a><a href="img/cl-archives-caves.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+SELECT ?cave ?label ?d18o_samples WHERE {
+  ?cave a geolod:Cave ;
+        rdfs:label ?label ;
+        geolod:countD18OSamples ?d18o_samples .
+} ORDER BY DESC(?d18o_samples) ?label</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+SELECT ?cave ?label ?d18o_samples WHERE {
+  ?cave a geolod:Cave ;
+        rdfs:label ?label ;
+        geolod:countD18OSamples ?d18o_samples .
+} ORDER BY DESC(?d18o_samples) ?label">Copy</button></div><p class="note">Run on sisal_sites.ttl and compared with the figure: 365 rows. 447,170 samples in all, median 625, most 20,974 (Sieben Hengste cave).</p></section>
+<section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:Borehole</code></td><td>Borehole</td><td>The individual hole from which core material was recovered, inside the wider site. Kept apart from the site because published records of the same drilling can carry different coordinates, and averaging them would invent a position that no source states.</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:Cave</code></td><td>Cave</td><td>A karst cave holding one or more speleothem records.</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:DrillingCampaign</code></td><td>Drilling Campaign</td><td>A field campaign during which an ice core was drilled.</td><td><code>crm:E7_Activity</code>, <code>crmsci:S1_Matter_Removal</code></td></tr><tr><td><code>geolod:DrillingSite</code></td><td>Ice Core Drilling Site</td><td>The location at which one or more ice cores were drilled. The individual holes are geolod:Borehole instances falling within it.</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:EntityStatus</code></td><td>Entity Status</td><td>SISAL&#x27;s judgement on a speleothem record. A statement about the data, not about the cave.</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:IceCore</code></td><td>Ice Core</td><td>A cylindrical ice sample extracted by drilling from a glacier or ice sheet.</td><td><code>crm:E22_Human-Made_Object</code></td></tr><tr><td><code>geolod:IceCoreDataset</code></td><td>Ice Core Dataset</td><td>A published set of measurements on one ice core, on one depth-age model.</td><td><code>crm:E73_Information_Object</code></td></tr><tr><td><code>geolod:PalaeoclimateSample</code></td><td>Palaeoclimate Sample</td><td>A physical archive recording a palaeoclimate signal (ice core or speleothem).</td><td><code>crm:E18_Physical_Thing</code></td></tr><tr><td><code>geolod:SampleSection</code></td><td>Sample Section</td><td>A bounded interval cut from a larger archive, over which a single value was measured or averaged. Minted only where the source states the interval; where a record gives a single depth and nothing else, the observation hangs on the whole archive instead of on an invented section.</td><td><code>crm:E18_Physical_Thing</code></td></tr><tr><td><code>geolod:SamplingLocation</code></td><td>Sampling Location</td><td>A geographically identified location from which palaeoclimate proxy material was obtained (ice-core drilling site or speleothem cave).</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:Speleothem</code></td><td>Speleothem</td><td>One secondary carbonate deposit whose growth records a climate signal. SISAL calls it an entity; several may come from one cave, and their isotope values are offset against one another for reasons unrelated to climate.</td><td><code>crm:E18_Physical_Thing</code></td></tr><tr><td><code>geolod:SpeleothemSample</code></td><td>Speleothem Sample</td><td>One sampling position along a speleothem, identified by its depth from the top. Carries the isotope measurements and the competing ages.</td><td><code>crm:E18_Physical_Thing</code></td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>
