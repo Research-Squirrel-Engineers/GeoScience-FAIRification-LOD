@@ -1,0 +1,22 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/A2_Stratigraphic_Volume_Unit_collection> a geo:FeatureCollection,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "A2_Stratigraphic_Volume_Unit Instances Collection"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:member <http://w3id.org/geo-lod/ci/cisite_19>,
+        <http://w3id.org/geo-lod/ci/cisite_42>,
+        <http://w3id.org/geo-lod/ci/cisite_43>,
+        <http://w3id.org/geo-lod/ci/cisite_44>,
+        <http://w3id.org/geo-lod/ci/cisite_45>,
+        <http://w3id.org/geo-lod/ci/cisite_5>,
+        <http://w3id.org/geo-lod/ci/cisite_50>,
+        <http://w3id.org/geo-lod/ci/cisite_51>,
+        <http://w3id.org/geo-lod/ci/cisite_59>,
+        <http://w3id.org/geo-lod/ci/cisite_62>,
+        <http://w3id.org/geo-lod/ci/cisite_63>,
+        <http://w3id.org/geo-lod/ci/cisite_65> .
+

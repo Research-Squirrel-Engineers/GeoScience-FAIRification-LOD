@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/geo-lod_fuzzy-sl.squirrel.link_ontology_> a void:Linkset,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Linkset: geo-lod - fsl:"@en ;
+    void:linkPredicate <http://fuzzy-sl.squirrel.link/ontology/hasSource>,
+        <http://fuzzy-sl.squirrel.link/ontology/hasSourceType>,
+        <http://w3id.org/geo-lod/hasCertaintyLevel>,
+        <http://w3id.org/geo-lod/hasSpatialType>,
+        rdf:type ;
+    void:objectsTarget <http://fuzzy-sl.squirrel.link/ontology/> ;
+    void:subjectsTarget <http://w3id.org/geo-lod/geo-lod> ;
+    void:triples 74,
+        80,
+        148,
+        222 .
+
