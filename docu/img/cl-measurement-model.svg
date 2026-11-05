@@ -1,26 +1,26 @@
-<svg width="1922" height="1118" viewBox="0 0 1922 1118" xmlns="http://www.w3.org/2000/svg" role="img"><title>Cluster: Observation and measurement</title>
-<rect width="1922" height="1118" fill="#ffffff"/>
+<svg width="2069" height="1118" viewBox="0 0 2069 1118" xmlns="http://www.w3.org/2000/svg" role="img"><title>Cluster: Observation and measurement</title>
+<rect width="2069" height="1118" fill="#ffffff"/>
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
-<path d="M 313.7 489.4 C 383.7 47.1 1589.0 47.1 1659.0 412.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="313.7" y1="501.8" x2="570.9" y2="508.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="313.7" y1="514.2" x2="570.9" y2="700.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="313.7" y1="526.6" x2="570.9" y2="796.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<path d="M 818.4 619.5 C 888.4 -51.9 1589.0 -51.9 1659.0 604.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<path d="M 818.4 588.5 C 888.4 -76.1 1589.0 -76.1 1659.0 508.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="573.9" y1="220.0" x2="316.7" y2="401.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="1078.6" y1="460.0" x2="821.4" y2="401.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="573.9" y1="316.0" x2="316.7" y2="422.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="1078.6" y1="556.0" x2="821.4" y2="422.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="573.9" y1="604.0" x2="316.7" y2="518.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="573.9" y1="700.0" x2="316.7" y2="593.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="573.9" y1="796.0" x2="316.7" y2="614.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="573.9" y1="412.0" x2="316.7" y2="497.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<rect x="364.4" y="492.9" width="155.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="442.3" y="504.9" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">measurementType</text>
-<rect x="332.2" y="595.1" width="220.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="442.3" y="607.1" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">smoothingMethod_median</text>
-<rect x="336.7" y="649.3" width="211.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="442.3" y="661.3" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">smoothingMethod_savgol</text>
+<path d="M 313.7 489.4 C 383.7 47.1 1736.0 47.1 1806.0 412.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="313.7" y1="501.8" x2="619.9" y2="508.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="313.7" y1="514.2" x2="619.9" y2="700.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="313.7" y1="526.6" x2="619.9" y2="796.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 867.4 619.5 C 937.4 -51.9 1736.0 -51.9 1806.0 604.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 867.4 588.5 C 937.4 -76.1 1736.0 -76.1 1806.0 508.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="622.9" y1="220.0" x2="316.7" y2="401.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="1176.6" y1="460.0" x2="870.4" y2="401.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="622.9" y1="316.0" x2="316.7" y2="422.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="1176.6" y1="556.0" x2="870.4" y2="422.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="622.9" y1="604.0" x2="316.7" y2="518.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="622.9" y1="700.0" x2="316.7" y2="593.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="622.9" y1="796.0" x2="316.7" y2="614.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="622.9" y1="412.0" x2="316.7" y2="497.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<rect x="388.9" y="492.9" width="155.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="466.8" y="504.9" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">measurementType</text>
+<rect x="332.2" y="595.1" width="269.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="466.8" y="607.1" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">smoothingMethod_rollingMedian</text>
+<rect x="361.2" y="649.3" width="211.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="466.8" y="661.3" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">smoothingMethod_savgol</text>
 <rect x="50.0" y="381.0" width="263.7" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
 <text x="181.85" y="403.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">ObservableProperty</text>
 <text x="181.85" y="426.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S9_Property_Type</text>
@@ -30,54 +30,54 @@
 <rect x="50.0" y="573.0" width="263.7" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
 <text x="181.85" y="595.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SmoothingMethod</text>
 <text x="181.85" y="618.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
-<rect x="573.9" y="189.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="211.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta13CProperty</text>
-<text x="696.15" y="234.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S9_Property_Type</text>
-<rect x="573.9" y="285.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="307.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta18OProperty</text>
-<text x="696.15" y="330.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S9_Property_Type</text>
-<rect x="573.9" y="381.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="403.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SpeleothemObservation</text>
-<text x="696.15" y="426.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
-<rect x="573.9" y="477.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="499.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MeasurementType</text>
-<text x="696.15" y="522.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
-<rect x="573.9" y="573.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="595.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">IceCoreObservation</text>
-<text x="696.15" y="618.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
-<rect x="573.9" y="669.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="691.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">RollingMedianFilter</text>
-<text x="696.15" y="714.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
-<rect x="573.9" y="765.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="696.15" y="787.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SavitzkyGolayFilter</text>
-<text x="696.15" y="810.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
-<rect x="1078.6" y="429.0" width="323.2" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="1240.1999999999998" y="451.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta13CSpeleothemObservation</text>
-<text x="1240.1999999999998" y="474.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
-<rect x="1078.6" y="525.0" width="323.2" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="1240.1999999999998" y="547.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta18OSpeleothemObservation</text>
-<text x="1240.1999999999998" y="570.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
-<rect x="1662.0" y="381.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
-<text x="1767.0" y="408.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeStage</text>
-<text x="1767.0" y="441.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ MIS</text>
-<rect x="1662.0" y="477.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
-<text x="1767.0" y="504.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DataSource</text>
-<text x="1767.0" y="537.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Sources</text>
-<rect x="1662.0" y="573.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
-<text x="1767.0" y="600.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">IceCoreChronology</text>
-<text x="1767.0" y="633.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Chronology</text>
-<rect x="917.6" y="136" width="137.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="986.4" y="148" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">fallsWithinStage</text>
-<rect x="1175.0" y="102" width="127.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1238.7" y="114" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">ageChronology</text>
-<rect x="1168.5" y="68" width="140.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1238.7" y="80" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">wasDerivedFrom</text>
+<rect x="622.9" y="189.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="211.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta13CProperty</text>
+<text x="745.15" y="234.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S9_Property_Type</text>
+<rect x="622.9" y="285.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="307.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta18OProperty</text>
+<text x="745.15" y="330.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S9_Property_Type</text>
+<rect x="622.9" y="381.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="403.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SpeleothemObservation</text>
+<text x="745.15" y="426.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
+<rect x="622.9" y="477.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="499.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MeasurementType</text>
+<text x="745.15" y="522.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
+<rect x="622.9" y="573.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="595.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">IceCoreObservation</text>
+<text x="745.15" y="618.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
+<rect x="622.9" y="669.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="691.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">RollingMedianFilter</text>
+<text x="745.15" y="714.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
+<rect x="622.9" y="765.0" width="244.5" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="745.15" y="787.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">SavitzkyGolayFilter</text>
+<text x="745.15" y="810.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S6_Data_Evaluation</text>
+<rect x="1176.6" y="429.0" width="323.2" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1338.1999999999998" y="451.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta13CSpeleothemObservation</text>
+<text x="1338.1999999999998" y="474.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
+<rect x="1176.6" y="525.0" width="323.2" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1338.1999999999998" y="547.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Delta18OSpeleothemObservation</text>
+<text x="1338.1999999999998" y="570.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crmsci:S4_Observation</text>
+<rect x="1809.0" y="381.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
+<text x="1914.0" y="408.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeStage</text>
+<text x="1914.0" y="441.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ MIS</text>
+<rect x="1809.0" y="477.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
+<text x="1914.0" y="504.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DataSource</text>
+<text x="1914.0" y="537.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Sources</text>
+<rect x="1809.0" y="573.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
+<text x="1914.0" y="600.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">IceCoreChronology</text>
+<text x="1914.0" y="633.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Chronology</text>
+<rect x="991.1" y="136" width="137.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1059.8" y="148" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">fallsWithinStage</text>
+<rect x="1273.0" y="102" width="127.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1336.7" y="114" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">ageChronology</text>
+<rect x="1266.5" y="68" width="140.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1336.7" y="80" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">wasDerivedFrom</text>
 <text x="50" y="880" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Classes of the cluster with no relation of their own in the ontology</text>
 <rect x="50.0" y="902.0" width="230.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
 <text x="165.0" y="933.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DepthPosition</text>
-<rect x="722.8" y="1037" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="754.8" y="1048" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
-<rect x="854.5999999999999" y="1037" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="886.5999999999999" y="1048" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">dashed: class of another cluster</text>
+<rect x="796.3" y="1037" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="828.3" y="1048" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
+<rect x="928.0999999999999" y="1037" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="960.0999999999999" y="1048" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">dashed: class of another cluster</text>
 <text x="50" y="1092" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Arrows run from domain to range; a hollow head marks a subclass; the second line names the CRM-family class a class reaches. Datatype properties are in the tables.</text>
 </svg>

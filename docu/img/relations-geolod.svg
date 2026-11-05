@@ -80,8 +80,8 @@
 <text x="590.9" y="586.8872149837134" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">fallsWithinStage</text>
 <rect x="518.3" y="704.4124592833876" width="145.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="590.9" y="716.4124592833876" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">measurementType</text>
-<rect x="487.9" y="747.5875407166124" width="206.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="590.9" y="759.5875407166124" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">smoothingMethod_median</text>
+<rect x="464.84999999999997" y="747.5875407166124" width="252.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="590.9" y="759.5875407166124" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">smoothingMethod_rollingMedian</text>
 <rect x="492.15" y="790.7626221498372" width="197.5" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="590.9" y="802.7626221498372" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">smoothingMethod_savgol</text>
 <rect x="532.8" y="876.7626221498372" width="116.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>

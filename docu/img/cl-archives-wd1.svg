@@ -1,0 +1,159 @@
+<svg width="1900" height="570" viewBox="0 0 1900 570" xmlns="http://www.w3.org/2000/svg" role="img"><title>The WD1 log as a chain of units</title>
+<rect width="1900" height="570" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">The log is 111 units, from 0 to 87 m, and strat:meets links each to the next</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">One segment per strat:StratigraphicUnit, by depth; the counts come from the query below, compared with a count made from the CSV.</text>
+<rect x="70.0" y="150" width="3.236781609195404" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="73.2367816091954" y="150" width="12.137931034482762" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="85.37471264367817" y="150" width="4.855172413793099" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="90.22988505747126" y="150" width="2.4275862068965495" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="92.65747126436781" y="150" width="12.542528735632189" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="105.2" y="150" width="40.0551724137931" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="145.2551724137931" y="150" width="22.859770114942535" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="168.11494252873564" y="150" width="23.264367816091948" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="191.3793103448276" y="150" width="5.664367816091982" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="197.04367816091957" y="150" width="3.034482758620669" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="200.07816091954024" y="150" width="6.878160919540221" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="206.95632183908046" y="150" width="25.894252873563232" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="232.8505747126437" y="150" width="10.721839080459745" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="243.57241379310344" y="150" width="17.599999999999994" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="261.17241379310343" y="150" width="5.259770114942569" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="266.432183908046" y="150" width="26.096551724137953" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="292.52873563218395" y="150" width="3.641379310344746" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="312.7586206896552" y="150" width="1.6183908045977091" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="327.3241379310345" y="150" width="0.6068965517241054" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="331.97701149425285" y="150" width="21.241379310344826" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="353.2183908045977" y="150" width="15.17241379310343" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="369.80689655172415" y="150" width="15.779310344827593" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="385.58620689655174" y="150" width="46.1241379310344" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="431.71034482758614" y="150" width="3.236781609195475" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="434.9471264367816" y="150" width="29.535632183908035" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="464.48275862068965" y="150" width="10.11494252873564" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="478.64367816091954" y="150" width="46.52873563218395" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="525.1724137931035" y="150" width="1.01149425287349" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="526.183908045977" y="150" width="19.218390804597675" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="545.4022988505747" y="150" width="1.0114942528736037" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="546.4137931034483" y="150" width="63.724137931034534" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="610.1379310344828" y="150" width="0.4045977011493278" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="610.5425287356321" y="150" width="18.409195402298906" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="633.4022988505747" y="150" width="59.678160919540346" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="693.080459770115" y="150" width="246.80459770114942" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="939.8850574712644" y="150" width="10.114942528735583" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="950.0" y="150" width="28.321839080459654" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="978.3218390804597" y="150" width="24.27586206896558" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1002.5977011494252" y="150" width="10.721839080459858" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1013.3195402298851" y="150" width="27.714942528735605" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1041.0344827586207" y="150" width="7.080459770114885" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="1048.1149425287356" y="150" width="10.721839080459858" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1061.2643678160919" y="150" width="10.11494252873581" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="1081.4942528735633" y="150" width="3.0344827586206975" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1085.5402298850574" y="150" width="16.183908045976978" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="1101.7241379310344" y="150" width="44.50574712643697" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1146.2298850574714" y="150" width="2.02298850574698" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1148.2528735632184" y="150" width="14.160919540229997" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1164.6390804597702" y="150" width="13.554022988505722" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1178.193103448276" y="150" width="4.450574712643629" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1182.6436781609195" y="150" width="10.11494252873581" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1192.7586206896553" y="150" width="25.489655172413677" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1218.248275862069" y="150" width="4.8551724137930705" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1223.103448275862" y="150" width="25.085057471264463" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1251.0206896551726" y="150" width="2.4275862068964216" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1253.448275862069" y="150" width="10.114942528735355" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="1270.441379310345" y="150" width="17.802298850574516" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1289.8620689655172" y="150" width="17.600000000000136" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1324.2528735632184" y="150" width="20.229885057471392" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="1344.4827586206898" y="150" width="30.344827586206748" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1383.3241379310346" y="150" width="6.6758620689654435" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1390.0" y="150" width="8.091954022988602" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1398.0919540229886" y="150" width="3.4390804597699116" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1404.5655172413792" y="150" width="8.698850574712878" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1413.264367816092" y="150" width="5.6643678160919535" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1426.4137931034481" y="150" width="6.675862068965671" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1437.135632183908" y="150" width="20.229885057471165" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1457.3655172413792" y="150" width="3.4390804597703664" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1460.8045977011495" y="150" width="5.057471264367678" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1473.5494252873561" y="150" width="3.034482758620925" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1477.1908045977011" y="150" width="5.866666666666561" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1487.5080459770115" y="150" width="19.42068965517251" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1506.928735632184" y="150" width="1.4160919540227042" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1508.3448275862067" y="150" width="39.85287356321851" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1548.1977011494253" y="150" width="30.951724137931024" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1593.310344827586" y="150" width="14.160919540230225" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1607.4712643678163" y="150" width="80.91954022988489" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1688.3908045977012" y="150" width="33.783908045977114" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1725.2091954022987" y="150" width="64.3310344827587" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1789.5402298850574" y="150" width="10.114942528735583" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1799.655172413793" y="150" width="10.11494252873581" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1809.7701149425288" y="150" width="2.629885057471256" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1818.4689655172415" y="150" width="1.4160919540227042" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1819.8850574712642" y="150" width="2.0229885057472075" height="90" rx="0" fill="#cfcdc4" stroke="none" stroke-width="1"/>
+<rect x="1821.9080459770114" y="150" width="2.427586206896649" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="1825.5494252873564" y="150" width="4.450574712643629" height="90" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="296.1701149425287" y="150" width="16.588505747126476" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="314.3770114942529" y="150" width="12.947126436781616" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="327.9310344827586" y="150" width="4.045977011494244" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="368.3908045977011" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="474.5977011494253" y="150" width="4.045977011494244" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="628.951724137931" y="150" width="4.450574712643629" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1058.8367816091954" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1071.3793103448277" y="150" width="10.114942528735583" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1084.528735632184" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1162.4137931034484" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1248.1885057471266" y="150" width="2.8321839080460904" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1263.5632183908044" y="150" width="6.878160919540505" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1288.2436781609194" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1307.4620689655173" y="150" width="16.790804597701026" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1374.8275862068965" y="150" width="8.496551724138044" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1401.5310344827585" y="150" width="3.0344827586206975" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1418.928735632184" y="150" width="7.485057471264099" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1433.0896551724138" y="150" width="4.0459770114941875" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1465.8620689655172" y="150" width="7.687356321838934" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1476.583908045977" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1483.0574712643677" y="150" width="4.450574712643856" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1579.1494252873563" y="150" width="14.16091954022977" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1722.1747126436783" y="150" width="3.03448275862047" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1812.4" y="150" width="6.068965517241395" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="1824.335632183908" y="150" width="2.5" height="90" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="70" y="150" width="1760" height="90" rx="0" fill="none" stroke="#000000" stroke-width="1"/>
+<line x1="70.0" y1="240" x2="70.0" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="70.0" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">0 m</text>
+<line x1="272.2988505747127" y1="240" x2="272.2988505747127" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="272.2988505747127" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">10 m</text>
+<line x1="474.5977011494253" y1="240" x2="474.5977011494253" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="474.5977011494253" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">20 m</text>
+<line x1="676.896551724138" y1="240" x2="676.896551724138" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="676.896551724138" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">30 m</text>
+<line x1="879.1954022988506" y1="240" x2="879.1954022988506" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="879.1954022988506" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">40 m</text>
+<line x1="1081.4942528735633" y1="240" x2="1081.4942528735633" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="1081.4942528735633" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">50 m</text>
+<line x1="1283.793103448276" y1="240" x2="1283.793103448276" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="1283.793103448276" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">60 m</text>
+<line x1="1486.0919540229886" y1="240" x2="1486.0919540229886" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="1486.0919540229886" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">70 m</text>
+<line x1="1688.3908045977012" y1="240" x2="1688.3908045977012" y2="249" stroke="#000000" stroke-width="1.2"/>
+<text x="1688.3908045977012" y="270" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">80 m</text>
+<rect x="70" y="330" width="410" height="130" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="90" y="378" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="40" font-weight="500" fill="#1f1f1d">111</text>
+<text x="90" y="416" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">strat:StratigraphicUnit</text>
+<text x="90" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">one per log row</text>
+<rect x="520" y="330" width="410" height="130" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="540" y="378" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="40" font-weight="500" fill="#1f1f1d">25</text>
+<text x="540" y="416" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">of them strat:TephraLayer</text>
+<text x="540" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rows that name a tephra</text>
+<rect x="970" y="330" width="410" height="130" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="990" y="378" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="40" font-weight="500" fill="#1f1f1d">110</text>
+<text x="990" y="416" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">units that are met by another</text>
+<text x="990" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:meets, from the unit above</text>
+<rect x="1420" y="330" width="410" height="130" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="1440" y="378" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="40" font-weight="500" fill="#1f1f1d">0</text>
+<text x="1440" y="416" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">depth gaps in the chain</text>
+<text x="1440" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">where a unit does not touch the next</text>
+<rect x="70" y="503" width="22" height="22" rx="3" fill="#e7d3b0" stroke="#000000" stroke-width="1"/>
+<text x="102" y="514" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">lithological unit</text>
+<rect x="290" y="503" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="322" y="514" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">tephra layer</text>
+<rect x="480" y="503" width="22" height="22" rx="3" fill="#cfcdc4" stroke="#000000" stroke-width="1"/>
+<text x="512" y="514" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">not described</text>
+<text x="50" y="548" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">Illustrative instances, built from Table 1 of the WD1 core; the strat: classes are planned.</text>
+</svg>

@@ -25,6 +25,12 @@
 <p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
 <p class="dl"><a href="img/cl-archives-pattern.png" download>PNG</a><a href="img/cl-archives-pattern.svg" download>SVG</a></p>
 </section>
+<section>
+<img src="img/cl-archives-log.png" width="3800" height="1384" loading="lazy" alt="A log row as a stratigraphic unit">
+<div class="row"><p class="cap"><span class="n"></span>A log row as a stratigraphic unit</p><button type="button" data-c="A log row as a stratigraphic unit">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-log.png" download>PNG</a><a href="img/cl-archives-log.svg" download>SVG</a></p>
+</section>
 <h2>In the data</h2>
 <section>
 <img src="img/cl-archives-inventory.png" width="3500" height="1512" loading="lazy" alt="Which classes have nodes in the committed graphs">
@@ -168,6 +174,37 @@ SELECT ?cave ?label ?d18o_samples WHERE {
         rdfs:label ?label ;
         geolod:countD18OSamples ?d18o_samples .
 } ORDER BY DESC(?d18o_samples) ?label">Copy</button></div><p class="note">Run on sisal_sites.ttl and compared with the figure: 365 rows. 447,170 samples in all, median 625, most 20,974 (Sieben Hengste cave).</p></section>
+<section>
+<img src="img/cl-archives-wd1.png" width="3800" height="1140" loading="lazy" alt="The WD1 log as a chain of units">
+<div class="row"><p class="cap"><span class="n"></span>The WD1 log as a chain of units</p><button type="button" data-c="The WD1 log as a chain of units">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archives-wd1.png" download>PNG</a><a href="img/cl-archives-wd1.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+# The WD1 log as a chain: units, tephra layers, units met by another unit, and the depth range.
+SELECT (COUNT(DISTINCT ?unit) AS ?units) (COUNT(DISTINCT ?tephra) AS ?tephra_layers)
+       (COUNT(DISTINCT ?met) AS ?met_units) (MIN(?top) AS ?top) (MAX(?bottom) AS ?bottom) WHERE {
+  ?unit a/rdfs:subClassOf* strat:StratigraphicUnit ;
+        strat:depthTop ?top ;
+        strat:depthBottom ?bottom .
+  OPTIONAL { ?unit a strat:TephraLayer . BIND(?unit AS ?tephra) }
+  OPTIONAL { ?unit strat:meets ?met }
+}</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+# The WD1 log as a chain: units, tephra layers, units met by another unit, and the depth range.
+SELECT (COUNT(DISTINCT ?unit) AS ?units) (COUNT(DISTINCT ?tephra) AS ?tephra_layers)
+       (COUNT(DISTINCT ?met) AS ?met_units) (MIN(?top) AS ?top) (MAX(?bottom) AS ?bottom) WHERE {
+  ?unit a/rdfs:subClassOf* strat:StratigraphicUnit ;
+        strat:depthTop ?top ;
+        strat:depthBottom ?bottom .
+  OPTIONAL { ?unit a strat:TephraLayer . BIND(?unit AS ?tephra) }
+  OPTIONAL { ?unit strat:meets ?met }
+}">Copy</button></div><p class="note">Run on the WD1 graph that the page builds from Table 1 (illustrative instances, strat.ttl for the classes) and compared with a count from the CSV: 111 units, 25 tephra layers, 110 units met by another, 0 gaps.</p></section>
 <section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:Borehole</code></td><td>Borehole</td><td>The individual hole from which core material was recovered, inside the wider site. Kept apart from the site because published records of the same drilling can carry different coordinates, and averaging them would invent a position that no source states.</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:Cave</code></td><td>Cave</td><td>A karst cave holding one or more speleothem records.</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:DrillingCampaign</code></td><td>Drilling Campaign</td><td>A field campaign during which an ice core was drilled.</td><td><code>crm:E7_Activity</code>, <code>crmsci:S1_Matter_Removal</code></td></tr><tr><td><code>geolod:DrillingSite</code></td><td>Ice Core Drilling Site</td><td>The location at which one or more ice cores were drilled. The individual holes are geolod:Borehole instances falling within it.</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:EntityStatus</code></td><td>Entity Status</td><td>SISAL&#x27;s judgement on a speleothem record. A statement about the data, not about the cave.</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:IceCore</code></td><td>Ice Core</td><td>A cylindrical ice sample extracted by drilling from a glacier or ice sheet.</td><td><code>crm:E22_Human-Made_Object</code></td></tr><tr><td><code>geolod:IceCoreDataset</code></td><td>Ice Core Dataset</td><td>A published set of measurements on one ice core, on one depth-age model.</td><td><code>crm:E73_Information_Object</code></td></tr><tr><td><code>geolod:PalaeoclimateSample</code></td><td>Palaeoclimate Sample</td><td>A physical archive recording a palaeoclimate signal (ice core or speleothem).</td><td><code>crm:E18_Physical_Thing</code></td></tr><tr><td><code>geolod:SampleSection</code></td><td>Sample Section</td><td>A bounded interval cut from a larger archive, over which a single value was measured or averaged. Minted only where the source states the interval; where a record gives a single depth and nothing else, the observation hangs on the whole archive instead of on an invented section.</td><td><code>crm:E18_Physical_Thing</code></td></tr><tr><td><code>geolod:SamplingLocation</code></td><td>Sampling Location</td><td>A geographically identified location from which palaeoclimate proxy material was obtained (ice-core drilling site or speleothem cave).</td><td><code>crm:E27_Site</code>, <code>crm:E53_Place</code></td></tr><tr><td><code>geolod:Speleothem</code></td><td>Speleothem</td><td>One secondary carbonate deposit whose growth records a climate signal. SISAL calls it an entity; several may come from one cave, and their isotope values are offset against one another for reasons unrelated to climate.</td><td><code>crm:E18_Physical_Thing</code></td></tr><tr><td><code>geolod:SpeleothemSample</code></td><td>Speleothem Sample</td><td>One sampling position along a speleothem, identified by its depth from the top. Carries the isotope measurements and the competing ages.</td><td><code>crm:E18_Physical_Thing</code></td></tr></tbody></table></div></section>
 </main>
 <script>

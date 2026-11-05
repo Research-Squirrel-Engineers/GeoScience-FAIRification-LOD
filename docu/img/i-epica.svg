@@ -94,8 +94,8 @@
 <text x="598.8" y="331.53999999999996" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:hasTimePosition</text>
 <rect x="499.29999999999995" y="431.74" width="199.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="598.8" y="443.74" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:measurementType</text>
-<rect x="474.29999999999995" y="536.35" width="249.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="598.8" y="548.35" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:smoothingMethod_med…</text>
+<rect x="475.69999999999993" y="536.35" width="246.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="598.8" y="548.35" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:smoothingMethod_rolli…</text>
 <rect x="478.34999999999997" y="656.14" width="240.9" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="598.8" y="668.14" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">geolod:smoothingMethod_sav…</text>
 <rect x="514.3499999999999" y="768.34" width="168.9" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
