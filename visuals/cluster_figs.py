@@ -226,7 +226,7 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
         order = sorted(lst, key=lambda j: (endpoint(other(j))[1], j))
         return y0 + h0 * (order.index(ai) + 1) / (len(order) + 1)
 
-    labels = []
+    labels, late = [], []
     for ai, (kind, a, b, l) in enumerate(arrows):
         sx, sy, sw, sh = endpoint(a)
         dx, dy, dw, dh = endpoint(b)
@@ -241,7 +241,7 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
             k = channel.index(ai)
             ty = top - 34 * (k + 1) + 10
             f.path(f"M {x1:.1f} {y1:.1f} C {x1 + 70:.1f} {ty:.1f} {x2 - 70:.1f} {ty:.1f} {x2:.1f} {y2:.1f}", mk)
-            labels.append(((x1 + x2) / 2, (y1 + y2) / 8 + 0.75 * ty, l))
+            late.append(((x1 + x2) / 2, (y1 + y2) / 8 + 0.75 * ty, l))
         else:
             f.line(round(x1, 1), round(y1, 1), round(x2, 1), round(y2, 1), mk)
             if l:
@@ -265,6 +265,12 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
             F.nbox(f, x0, y0, w0, h0 - 8 if other else h0, lab(n), fill, dash=True, size=size)
             if other:
                 f.text(x0 + w0 / 2, y0 + h0 - 2, "→ " + other["short"], 15, color=MUTED, maxw=w0 - 8)
+
+    # labels of the long arrows come last, so that no box covers them
+    for lx, ly, l in late:
+        w = tw(l, 17) + 12
+        f.rect(round(lx - w / 2, 1), round(ly - 12, 1), round(w, 1), 24, "#ffffff", "none", 4)
+        f.text(round(lx, 1), round(ly, 1), l, 17, color=MUTED)
 
     if loose:
         y = top + graph_h + 36

@@ -11,16 +11,10 @@
 <line x1="746.6" y1="316.0" x2="940.1" y2="268.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="943.1" y1="364.0" x2="749.6" y2="497.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <line x1="943.1" y1="460.0" x2="749.6" y2="518.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<rect x="1015.6" y="176.1" width="87.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1059.2" y="188.1" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">ageModel</text>
-<rect x="1387.1" y="152.5" width="185.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1479.9" y="164.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">constrainsSpeleothem</text>
 <rect x="1215.0" y="272.2" width="120.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="1275.2" y="284.2" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">datingMethod</text>
 <rect x="278.1" y="256.0" width="156.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="356.4" y="268.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">hasAgeAssignment</text>
-<rect x="967.4" y="152.9" width="183.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1059.2" y="164.9" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">respectedByAgeModel</text>
 <rect x="1205.0" y="335.8" width="140.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="1275.2" y="347.8" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">usedInAgeModel</text>
 <rect x="298.9" y="352.0" width="115.0" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
@@ -62,6 +56,12 @@
 <rect x="1784.4" y="333.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
 <text x="1889.4" y="360.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Speleothem</text>
 <text x="1889.4" y="393.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Archives</text>
+<rect x="1015.6" y="176.1" width="87.3" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1059.2" y="188.1" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">ageModel</text>
+<rect x="1387.1" y="152.5" width="185.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1479.9" y="164.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">constrainsSpeleothem</text>
+<rect x="967.4" y="152.9" width="183.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1059.2" y="164.9" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">respectedByAgeModel</text>
 <text x="50" y="592" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Classes of the cluster with no relation of their own in the ontology</text>
 <rect x="50.0" y="614.0" width="230.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
 <text x="165.0" y="645.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">RecordGap</text>

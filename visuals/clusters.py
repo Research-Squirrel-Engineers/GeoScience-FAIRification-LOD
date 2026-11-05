@@ -16,6 +16,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import cluster_figs as C  # noqa: E402
+import cluster_archives as AR  # noqa: E402
 import cluster_mis as MS  # noqa: E402
 import model_data as md  # noqa: E402
 import site_kit as K  # noqa: E402
@@ -125,6 +126,41 @@ SELECT ?obs (COUNT(?a) AS ?n) WHERE {
 } GROUP BY ?obs HAVING (COUNT(?a) > 1)"""
 
 
+APFX = PFX + """PREFIX sosa:   <http://www.w3.org/ns/sosa/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct:    <http://purl.org/dc/terms/>
+"""
+Q_INVENTORY = APFX + """
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { %s }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class"""
+Q_FEATURE = APFX + """
+SELECT ?dataset ?feature_class (COUNT(?obs) AS ?n) WHERE {
+  ?dataset a geolod:IceCoreDataset ;
+           geolod:hasObservation ?obs .
+  ?obs sosa:hasFeatureOfInterest ?feature .
+  ?feature a ?feature_class .
+  FILTER(?feature_class IN (geolod:IceCore, geolod:SampleSection))
+} GROUP BY ?dataset ?feature_class ORDER BY ?dataset"""
+Q_TILING = APFX + """
+# The sections of the core: how many, how thick in all, and where they start and end.
+SELECT (COUNT(?s) AS ?sections) (SUM(?bottom - ?top) AS ?thickness_m) (MIN(?top) AS ?from_m) (MAX(?bottom) AS ?to_m) WHERE {
+  ?s a geolod:SampleSection ;
+     geolod:depthTop_m ?top ;
+     geolod:depthBottom_m ?bottom .
+}"""
+Q_CAVES = APFX + """
+SELECT ?cave ?label ?d18o_samples WHERE {
+  ?cave a geolod:Cave ;
+        rdfs:label ?label ;
+        geolod:countD18OSamples ?d18o_samples .
+} ORDER BY DESC(?d18o_samples) ?label"""
+
+
 def query_block(q: str, note: str = "") -> str:
     """The query as text with a copy button; the note says what it was checked against."""
     q = q.strip("\n")
@@ -216,7 +252,59 @@ def data_figures_mis(M: md.Model, D: MS.MisData) -> tuple[list[str], list[str]]:
     return pattern, data
 
 
-DATA = {"chronology": (data_figures_chronology, "dating"), "mis": (data_figures_mis, "mis")}
+def data_figures_archives(M: md.Model, D: AR.ArcData, cl: dict) -> tuple[list[str], list[str]]:
+    """Cards for the pattern and the data figures of the archives page, each with the query that gives its numbers."""
+    from rdflib import URIRef
+    from rdflib.namespace import RDF, RDFS
+    pattern, data = [], []
+    f, st = AR.archive_pattern_fig(M, D, IMG, "cl-archives-pattern")
+    pattern.append(K.fig_card(IMG, "cl-archives-pattern", "", "A place, the thing taken from it and the part measured", CREDIT))
+
+    # inventory: the query against an independent count in Python
+    curies = {iri: M.curie(iri) for iri in cl["iris"]}
+    q = Q_INVENTORY % " ".join(sorted(curies.values()))
+    got = {M.curie(str(r[0])) if str(r[0]) in M.classes else str(r[0]): (int(r[1]), int(r[2])) for r in D.g.query(q)}
+    want = {}
+    for iri, cur in curies.items():
+        cls = URIRef(iri)
+        sub = set(D.g.transitive_subjects(RDFS.subClassOf, cls))
+        asserted = {x for x in D.g.subjects(RDF.type, cls)}
+        withsub = {x for t in sub for x in D.g.subjects(RDF.type, t)}
+        want[cur] = (len(asserted), len(withsub))
+    got = {k: v for k, v in got.items()}
+    for cur, v in want.items():
+        if got.get(cur, (0, 0)) != v:
+            raise ValueError(f"cl-archives-inventory: the query gives {got.get(cur, (0, 0))} for {cur}, the count in Python {v}")
+    AR.inventory_fig(M, cl["iris"], D, want, IMG, "cl-archives-inventory")
+    data.append(K.fig_card(IMG, "cl-archives-inventory", "", "Which classes have nodes in the committed graphs", CREDIT))
+    data.append(query_block(q.replace(" ".join(sorted(curies.values())), "\n    ".join(sorted(curies.values()))),
+                            f"Run on the committed graphs and compared with a count in Python: {sum(1 for v in want.values() if v[0])} of {len(want)} classes have asserted nodes."))
+
+    f, st = AR.feature_fig(D, IMG, "cl-archives-feature")
+    got = {}
+    for r in D.g.query(Q_FEATURE):
+        got.setdefault(str(r[0]).rsplit("/", 1)[1], {})[str(r[1]).rsplit("/", 1)[1]] = int(r[2])
+    if {k: (v.get("IceCore", 0), v.get("SampleSection", 0)) for k, v in got.items()} != st["rows"]:
+        raise ValueError("cl-archives-feature: the query and the figure disagree on the feature of interest")
+    row = next(iter(D.g.query(Q_TILING)))
+    if (int(row[0]), round(float(row[1]), 3), float(row[2]), float(row[3])) != (st["sections"], round(st["thickness"], 3), st["top"], st["bottom"]):
+        raise ValueError("cl-archives-feature: the tiling query and the figure disagree on the sections")
+    data.append(K.fig_card(IMG, "cl-archives-feature", "", "What the observations of each dataset are about", CREDIT))
+    data.append(query_block(Q_FEATURE, "Run on epica_dome_c.ttl and compared with the figure: five datasets, two classes."))
+    data.append(query_block(Q_TILING, f"Compared with the figure: {st['sections']} sections, {st['thickness']:.1f} m of {st['top']:g} to {st['bottom']:g} m; "
+                            + ("the sections tile the core without gap or overlap." if st["tiles"] else "there are gaps or overlaps.")))
+
+    f, st = AR.caves_fig(D, IMG, "cl-archives-caves")
+    got = [(str(r[1]), int(r[2])) for r in D.g.query(Q_CAVES)]
+    if got != D.caves:
+        raise ValueError("cl-archives-caves: the query and the figure disagree on the caves")
+    data.append(K.fig_card(IMG, "cl-archives-caves", "", "How many delta-18-O samples each of the 365 caves stands for", CREDIT))
+    data.append(query_block(Q_CAVES, f"Run on sisal_sites.ttl and compared with the figure: {st['caves']} rows. {st['total']:,} samples in all, median {st['median']:g}, "
+                            f"most {st['max'][1]:,} ({st['max'][0]})."))
+    return pattern, data
+
+
+DATA = {"chronology": (data_figures_chronology, "dating"), "mis": (data_figures_mis, "mis"), "archives": (data_figures_archives, "archives")}
 
 
 def build_cluster(M: md.Model, clusters: list[dict], cl: dict, sources: dict) -> None:
@@ -224,7 +312,7 @@ def build_cluster(M: md.Model, clusters: list[dict], cl: dict, sources: dict) ->
     body = ["<h2>Model</h2>", K.fig_card(IMG, f"cl-{cl['id']}-model", "", f"Cluster graph: {cl['title']}", CREDIT)]
     if cl["id"] in DATA:
         fn, key = DATA[cl["id"]]
-        pattern, data = fn(M, sources[key]())
+        pattern, data = fn(M, sources[key]()) if cl["id"] != "archives" else fn(M, sources[key](), cl)
         body += ["<h2>Modelling pattern</h2>"] + pattern + ["<h2>In the data</h2>"] + data
     body.append(f'<section class="text"><h3>Classes</h3>{class_table(M, cl)}</section>')
     intro = esc(cl["lead"]) + ' All clusters are on the <a href="clusters.html">overview</a>.'
@@ -254,7 +342,8 @@ def main() -> int:
     K.write_assets(SITE)
     cache: dict = {}
     # The data are read when a cluster page needs them, and once.
-    sources = {"dating": lambda: cache.setdefault("dating", C.Dating()), "mis": lambda: cache.setdefault("mis", MS.MisData())}
+    sources = {"dating": lambda: cache.setdefault("dating", C.Dating()), "mis": lambda: cache.setdefault("mis", MS.MisData()),
+               "archives": lambda: cache.setdefault("archives", AR.ArcData())}
     built = 0
     for cl in clusters:
         if cl.get("page"):

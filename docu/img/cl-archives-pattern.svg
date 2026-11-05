@@ -1,0 +1,74 @@
+<svg width="1750" height="1240" viewBox="0 0 1750 1240" xmlns="http://www.w3.org/2000/svg" role="img"><title>From a place to a measured thing</title>
+<rect width="1750" height="1240" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">A place, a thing taken from it, and the part that was measured: three nodes, not one</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">The site is a place (crm:E27), the core a physical object (crm:E22), the section a part of it (crm:E18); the campaign that removed it is an activity.</text>
+<text x="50" y="132" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">The ice core: nodes of EPICA/rdf/epica_dome_c.ttl</text>
+<rect x="50" y="215" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="190.0" y="240.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:campaign_1996_2004</text>
+<text x="190.0" y="266.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:DrillingCampaign · crm:E7</text>
+<rect x="500" y="215" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="640.0" y="240.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:core_edc</text>
+<text x="640.0" y="266.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:IceCore · crm:E22</text>
+<rect x="950" y="215" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1090.0" y="240.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:site_dome_c</text>
+<text x="1090.0" y="266.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:DrillingSite · crm:E27</text>
+<rect x="1400" y="215" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1540.0" y="240.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:borehole_domec</text>
+<text x="1540.0" y="266.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:Borehole · crm:E27</text>
+<line x1="330" y1="251.0" x2="500" y2="251.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="415.0" y="233.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:removedSample</text>
+<line x1="780" y1="251.0" x2="950" y2="251.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="865.0" y="233.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:extractedFrom</text>
+<line x1="1400" y1="251.0" x2="1230" y2="251.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="1315.0" y="233.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">crm:P89_falls_within</text>
+<path d="M190.0 215 L190.0 179 L1090.0 179 L1090.0 213" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="564.9" y="168" width="150.2" height="22" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="640.0" y="179" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:tookPlaceAt</text>
+<rect x="500" y="405" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="640.0" y="430.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:sample_dd_0001</text>
+<text x="640.0" y="456.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:SampleSection · crm:E18</text>
+<line x1="640.0" y1="405" x2="640.0" y2="287" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="547.9" y="335.0" width="184.2" height="22" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="640.0" y="346.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">crm:P46i_forms_part_of</text>
+<text x="960" y="429.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">6.6 to 10.45 m of the core</text>
+<text x="960" y="455.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">an interval the source states</text>
+<rect x="500" y="595" width="280" height="72" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="640.0" y="620.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:obs_dd_0001</text>
+<text x="640.0" y="646.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">an observation of the dataset</text>
+<line x1="640.0" y1="595" x2="640.0" y2="477" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="539.3" y="525.0" width="201.4" height="22" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="640.0" y="536.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">sosa:hasFeatureOfInterest</text>
+<rect x="50" y="595" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="190.0" y="620.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">epica:dataset_dd</text>
+<text x="190.0" y="646.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:IceCoreDataset · crm:E73</text>
+<line x1="330" y1="631.0" x2="500" y2="631.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="415.0" y="613.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:hasObservation</text>
+<text x="960" y="619.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">Where the source gives no interval, the observation points</text>
+<text x="960" y="645.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">to the core itself, epica:core_edc.</text>
+<line x1="50" y1="717" x2="1700" y2="717" stroke="#d8d6ce" stroke-width="1.2"/>
+<text x="50" y="767" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">The speleothem: entity and sample from the SISAL tables, IRIs and properties as sisal_rdf.py writes them</text>
+<rect x="50" y="827" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="190.0" y="852.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">sisal:sample_0026516</text>
+<text x="190.0" y="878.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:SpeleothemSample · crm:E18</text>
+<rect x="500" y="827" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="640.0" y="852.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">sisal:entity_00055</text>
+<text x="640.0" y="878.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:Speleothem · crm:E18</text>
+<rect x="950" y="827" width="280" height="72" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1090.0" y="852.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">geolod:Cave_site_0010</text>
+<text x="1090.0" y="878.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:Cave · crm:E27</text>
+<line x1="330" y1="863.0" x2="500" y2="863.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="415.0" y="845.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:collectedFrom</text>
+<line x1="780" y1="863.0" x2="950" y2="863.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="865.0" y="845.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:extractedFrom</text>
+<rect x="500" y="987" width="280" height="72" rx="8" fill="#f6f6f3" stroke="#000000" stroke-width="1.2"/>
+<text x="640.0" y="1012.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#000000">geolod:EntityStatus_current</text>
+<text x="640.0" y="1038.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:EntityStatus · crm:E55</text>
+<line x1="640.0" y1="987" x2="640.0" y2="899" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="564.2" y="932.0" width="151.6" height="22" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="640.0" y="943.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:entityStatus</text>
+<text x="1280" y="851.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">Jaraguá cave, speleothem JAR7</text>
+<text x="1280" y="877.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#9a3412">sample taken 580.83 mm from the top</text>
+<text x="50" y="1170" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">In both chains the place, the thing taken from it and the part measured are three nodes with three CRM anchors; a measurement can then say which of them it is about.</text>
+<text x="50" y="1200" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The speleothem nodes belong to the large graph the pipeline writes; the committed Turtle holds the 365 caves and the dating points only.</text>
+</svg>

@@ -7,6 +7,7 @@
 - id: archives
   title: Archives and sampling
   short: Archives
+  page: cluster-archives.html
   lead: Where the material comes from; ice cores, drilling sites, caves, speleothems and the samples cut from them.
   classes: [geolod:Borehole, geolod:Cave, geolod:DrillingCampaign, geolod:DrillingSite, geolod:EntityStatus,
             geolod:IceCore, geolod:IceCoreDataset, geolod:PalaeoclimateSample, geolod:SampleSection,
