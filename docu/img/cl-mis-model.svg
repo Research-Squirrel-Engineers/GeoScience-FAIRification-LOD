@@ -1,45 +1,68 @@
-<svg width="1750" height="536" viewBox="0 0 1750 536" xmlns="http://www.w3.org/2000/svg" role="img"><title>Cluster: Marine isotope stages</title>
-<rect width="1750" height="536" fill="#ffffff"/>
+<svg width="2109" height="590" viewBox="0 0 2109 590" xmlns="http://www.w3.org/2000/svg" role="img"><title>Cluster: Marine isotope stages</title>
+<rect width="2109" height="590" fill="#ffffff"/>
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
-<line x1="610.5" y1="118.0" x2="797.0" y2="118.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="1008.4" y1="214.0" x2="1194.8" y2="118.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="610.5" y1="214.0" x2="797.0" y2="203.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<line x1="1197.8" y1="214.0" x2="1011.4" y2="224.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<rect x="629.0" y="106.0" width="149.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="703.7" y="118.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">assignmentStatus</text>
-<rect x="1045.5" y="154.0" width="112.1" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1101.6" y="166.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">climateMode</text>
-<rect x="635.0" y="196.8" width="137.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="703.7" y="208.8" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">fallsWithinStage</text>
-<rect x="312.1" y="87.0" width="298.3" height="62.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
-<text x="461.29999999999995" y="118.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E13_Attribute_Assignment</text>
-<rect x="312.1" y="183.0" width="298.3" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
-<text x="461.29999999999995" y="210.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">PalaeoclimateObservation</text>
-<text x="461.29999999999995" y="243.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Measurement</text>
-<rect x="800.0" y="87.0" width="208.4" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="904.1500000000001" y="109.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AssignmentStatus</text>
-<text x="904.1500000000001" y="132.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E55_Type</text>
-<rect x="800.0" y="183.0" width="208.4" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="904.1500000000001" y="205.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeStage</text>
-<text x="904.1500000000001" y="228.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E4_Period</text>
-<rect x="1197.8" y="87.0" width="240.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="1317.85" y="109.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">ClimateMode</text>
-<text x="1317.85" y="132.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E55_Type</text>
-<rect x="1197.8" y="183.0" width="240.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="1317.85" y="205.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeSubstage</text>
-<text x="1317.85" y="228.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E4_Period</text>
-<text x="50" y="298" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Classes of the cluster with no relation of their own in the ontology</text>
-<rect x="50.0" y="320.0" width="274.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="187.0" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AssignedPropertyType</text>
-<rect x="344.0" y="320.0" width="274.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="481.0" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MISAttributeAssignment</text>
-<rect x="638.0" y="320.0" width="274.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
-<text x="775.0" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MISMembershipAssignment</text>
-<rect x="555.4" y="455" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
-<text x="587.4" y="466" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
-<rect x="687.2" y="455" width="22" height="22" rx="3" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
-<text x="719.2" y="466" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CIDOC CRM</text>
-<rect x="850.0" y="455" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="882.0" y="466" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">dashed: class of another cluster</text>
-<text x="50" y="510" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Arrows run from domain to range; a hollow head marks a subclass; the second line names the CRM-family class a class reaches. Datatype properties are in the tables.</text>
+<line x1="348.3" y1="268.0" x2="534.8" y2="220.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1230.0" y1="364.0" x2="1416.5" y2="268.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 348.3 364.0 C 418.3 77.0 927.9 77.0 997.9 357.8" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 811.4 316.0 C 881.4 48.4 1776.0 48.4 1846.0 305.7" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="811.4" y1="331.5" x2="997.9" y2="345.4" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="811.4" y1="300.5" x2="997.9" y2="268.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 811.4 396.5 C 881.4 -13.8 1776.0 -13.8 1846.0 326.3" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="537.8" y1="412.0" x2="351.3" y2="364.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="811.4" y1="427.5" x2="997.9" y2="382.6" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1419.5" y1="364.0" x2="1233.0" y2="370.2" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<rect x="366.8" y="232.0" width="149.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="441.5" y="244.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">assignmentStatus</text>
+<rect x="1267.2" y="304.0" width="112.1" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1323.2" y="316.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">climateMode</text>
+<rect x="864.0" y="326.4" width="81.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="904.6" y="338.4" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P140</text>
+<rect x="865.9" y="272.2" width="77.6" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="904.6" y="284.2" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P177</text>
+<rect x="403.9" y="376.0" width="81.2" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="444.5" y="388.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P140</text>
+<rect x="865.1" y="393.1" width="79.0" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="904.6" y="405.1" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">crm:P141</text>
+<rect x="50.0" y="237.0" width="298.3" height="62.0" rx="8" fill="#d4e1f5" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
+<text x="199.15" y="268.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">crm:E13_Attribute_Assignment</text>
+<rect x="50.0" y="333.0" width="298.3" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
+<text x="199.15" y="360.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">PalaeoclimateObservation</text>
+<text x="199.15" y="393.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Measurement</text>
+<rect x="537.8" y="189.0" width="273.6" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="674.5999999999999" y="211.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AssignmentStatus</text>
+<text x="674.5999999999999" y="234.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E55_Type</text>
+<rect x="537.8" y="285.0" width="273.6" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="674.5999999999999" y="307.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MISAttributeAssignment</text>
+<text x="674.5999999999999" y="330.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E13_Attribute_Assignment</text>
+<rect x="537.8" y="381.0" width="273.6" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="674.5999999999999" y="403.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MISMembershipAssignment</text>
+<text x="674.5999999999999" y="426.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E13_Attribute_Assignment</text>
+<rect x="1000.9" y="237.0" width="229.1" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1115.45" y="259.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AssignedPropertyType</text>
+<text x="1115.45" y="282.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E55_Type</text>
+<rect x="1000.9" y="333.0" width="229.1" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1115.45" y="355.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeStage</text>
+<text x="1115.45" y="378.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E4_Period</text>
+<rect x="1419.5" y="237.0" width="240.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1539.5" y="259.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">ClimateMode</text>
+<text x="1539.5" y="282.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E55_Type</text>
+<rect x="1419.5" y="333.0" width="240.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1539.5" y="355.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">MarineIsotopeSubstage</text>
+<text x="1539.5" y="378.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">→ crm:E4_Period</text>
+<rect x="1849.0" y="285.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
+<text x="1954.0" y="312.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">Chronology</text>
+<text x="1954.0" y="345.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Chronology</text>
+<rect x="604.4" y="136" width="137.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="673.1" y="148" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">fallsWithinStage</text>
+<rect x="1271.4" y="102" width="114.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1328.7" y="114" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">inChronology</text>
+<rect x="1271.4" y="68" width="114.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1328.7" y="80" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">inChronology</text>
+<rect x="734.9" y="509" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="766.9" y="520" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
+<rect x="866.7" y="509" width="22" height="22" rx="3" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="898.7" y="520" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">CIDOC CRM</text>
+<rect x="1029.5" y="509" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1061.5" y="520" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">dashed: class of another cluster</text>
+<text x="50" y="564" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Arrows run from domain to range; a hollow head marks a subclass; the second line names the CRM-family class a class reaches. Datatype properties are in the tables.</text>
 </svg>

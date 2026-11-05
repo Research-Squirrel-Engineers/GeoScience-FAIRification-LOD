@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observation and measurement · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a href="crosswalk.html">Crosswalk</a><a href="instances.html">Instance models</a><a href="slides.html">Slide figures</a><a href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Clusters</span><span class="lnk"><a href="clusters.html">Overview</a><a href="cluster-chronology.html">Chronology</a><a href="cluster-mis.html">Marine isotope stages</a><a href="cluster-archives.html">Archives and sampling</a><a class="on" href="cluster-measurement.html">Observation and measurement</a></span></div><div class="grp"><span class="lab">Ontology pages</span><span class="lnk"><a href="../semweb/index.html">Overall</a><a href="../semweb/featurecollections.html">Feature collections</a><a href="../semweb/AllPalaeoclimateSites_Collection/index.html">All sites</a><a href="../semweb/SISAL_Cave_Collection/index.html">SISAL caves</a><a href="../semweb/ci/CIFindspotCollection/index.html">CI findspots</a><a href="../semweb/IceCore_collection/index.html">Ice cores</a><a href="../semweb/DrillingSite_collection/index.html">Drilling sites</a><a href="../semweb/Dataset_collection/index.html">Datasets</a><a href="../semweb/Catalog_collection/index.html">Catalogues</a></span></div></nav>
+<h1>Observation and measurement</h1>
+<p class="intro">What was measured, in which quantity, and how a value was smoothed afterwards. All clusters are on the <a href="clusters.html">overview</a>.</p>
+<h2>Model</h2>
+<section>
+<img src="img/cl-measurement-model.png" width="3844" height="2236" loading="lazy" alt="Cluster graph: Observation and measurement">
+<div class="row"><p class="cap"><span class="n"></span>Cluster graph: Observation and measurement</p><button type="button" data-c="Cluster graph: Observation and measurement">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-measurement-model.png" download>PNG</a><a href="img/cl-measurement-model.svg" download>SVG</a></p>
+</section>
+<h2>Modelling pattern</h2>
+<section>
+<img src="img/cl-measurement-pattern.png" width="3800" height="2004" loading="lazy" alt="One observation in three views">
+<div class="row"><p class="cap"><span class="n"></span>One observation in three views</p><button type="button" data-c="One observation in three views">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-measurement-pattern.png" download>PNG</a><a href="img/cl-measurement-pattern.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+
+# Everything the committed graph says about one observation: the nodes of the pattern figure.
+SELECT ?property ?value WHERE {
+  epica:obs_ch4_0001 ?property ?value .
+} ORDER BY ?property ?value</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+
+# Everything the committed graph says about one observation: the nodes of the pattern figure.
+SELECT ?property ?value WHERE {
+  epica:obs_ch4_0001 ?property ?value .
+} ORDER BY ?property ?value">Copy</button></div><p class="note">Run on epica_dome_c.ttl: 23 statements with 21 distinct properties. The figure draws 17 of them; the others are listed under it.</p></section>
+<h2>In the data</h2>
+<section>
+<img src="img/cl-measurement-inventory.png" width="3500" height="1588" loading="lazy" alt="Which classes have nodes in the committed graphs">
+<div class="row"><p class="cap"><span class="n"></span>Which classes have nodes in the committed graphs</p><button type="button" data-c="Which classes have nodes in the committed graphs">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-measurement-inventory.png" download>PNG</a><a href="img/cl-measurement-inventory.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:Delta13CProperty
+    geolod:Delta13CSpeleothemObservation
+    geolod:Delta18OProperty
+    geolod:Delta18OSpeleothemObservation
+    geolod:DepthPosition
+    geolod:IceCoreObservation
+    geolod:MeasurementType
+    geolod:ObservableProperty
+    geolod:PalaeoclimateObservation
+    geolod:RollingMedianFilter
+    geolod:SavitzkyGolayFilter
+    geolod:SmoothingMethod
+    geolod:SpeleothemObservation }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:Delta13CProperty
+    geolod:Delta13CSpeleothemObservation
+    geolod:Delta18OProperty
+    geolod:Delta18OSpeleothemObservation
+    geolod:DepthPosition
+    geolod:IceCoreObservation
+    geolod:MeasurementType
+    geolod:ObservableProperty
+    geolod:PalaeoclimateObservation
+    geolod:RollingMedianFilter
+    geolod:SavitzkyGolayFilter
+    geolod:SmoothingMethod
+    geolod:SpeleothemObservation }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class">Copy</button></div><p class="note">Run on epica_dome_c.ttl with the ontology files and compared with a count in Python: 7 of 13 classes have asserted nodes.</p></section>
+<section>
+<img src="img/cl-measurement-coverage.png" width="3500" height="1420" loading="lazy" alt="Which kinds of value each dataset carries">
+<div class="row"><p class="cap"><span class="n"></span>Which kinds of value each dataset carries</p><button type="button" data-c="Which kinds of value each dataset carries">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-measurement-coverage.png" download>PNG</a><a href="img/cl-measurement-coverage.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+
+# Per dataset: observations, and how many carry each kind of value.
+SELECT ?dataset ?unit (COUNT(DISTINCT ?obs) AS ?observations) (COUNT(?measured) AS ?with_value) (COUNT(?sd) AS ?with_sd)
+       (COUNT(?median) AS ?with_median) (COUNT(?savgol) AS ?with_savgol) WHERE {
+  ?dataset a geolod:IceCoreDataset ;
+           geolod:hasObservation ?obs .
+  ?obs qudt:unit ?unit .
+  OPTIONAL { ?obs geolod:measuredValue ?measured }
+  OPTIONAL { ?obs geolod:standardDeviation ?sd }
+  OPTIONAL { ?obs geolod:smoothedValue_rollingMedian ?median }
+  OPTIONAL { ?obs geolod:smoothedValue_savgol ?savgol }
+} GROUP BY ?dataset ?unit ORDER BY DESC(?observations) ?dataset</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+
+# Per dataset: observations, and how many carry each kind of value.
+SELECT ?dataset ?unit (COUNT(DISTINCT ?obs) AS ?observations) (COUNT(?measured) AS ?with_value) (COUNT(?sd) AS ?with_sd)
+       (COUNT(?median) AS ?with_median) (COUNT(?savgol) AS ?with_savgol) WHERE {
+  ?dataset a geolod:IceCoreDataset ;
+           geolod:hasObservation ?obs .
+  ?obs qudt:unit ?unit .
+  OPTIONAL { ?obs geolod:measuredValue ?measured }
+  OPTIONAL { ?obs geolod:standardDeviation ?sd }
+  OPTIONAL { ?obs geolod:smoothedValue_rollingMedian ?median }
+  OPTIONAL { ?obs geolod:smoothedValue_savgol ?savgol }
+} GROUP BY ?dataset ?unit ORDER BY DESC(?observations) ?dataset">Copy</button></div><p class="note">Run on epica_dome_c.ttl and compared with the figure: five datasets, 4,904 observations.</p></section>
+<section>
+<img src="img/cl-measurement-series.png" width="3500" height="2240" loading="lazy" alt="Measured and smoothed methane">
+<div class="row"><p class="cap"><span class="n"></span>Measured and smoothed methane</p><button type="button" data-c="Measured and smoothed methane">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-measurement-series.png" download>PNG</a><a href="img/cl-measurement-series.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+
+# The methane record: age, measured value and the two smoothed values, one row per observation.
+SELECT ?age_ka ?measured ?rolling_median ?savitzky_golay WHERE {
+  ?obs sosa:observedProperty epica:property_ch4 ;
+       geolod:ageKaBP ?age_ka ;
+       geolod:measuredValue ?measured ;
+       geolod:smoothedValue_rollingMedian ?rolling_median ;
+       geolod:smoothedValue_savgol ?savitzky_golay .
+} ORDER BY ?age_ka</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+
+# The methane record: age, measured value and the two smoothed values, one row per observation.
+SELECT ?age_ka ?measured ?rolling_median ?savitzky_golay WHERE {
+  ?obs sosa:observedProperty epica:property_ch4 ;
+       geolod:ageKaBP ?age_ka ;
+       geolod:measuredValue ?measured ;
+       geolod:smoothedValue_rollingMedian ?rolling_median ;
+       geolod:smoothedValue_savgol ?savitzky_golay .
+} ORDER BY ?age_ka">Copy</button></div><p class="note">Run on epica_dome_c.ttl and compared with the figure: 736 rows, 0 to 649 ka BP.</p></section>
+<section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:Delta13CProperty</code></td><td>δ¹³C Property</td><td></td><td><code>crmsci:S9_Property_Type</code></td></tr><tr><td><code>geolod:Delta13CSpeleothemObservation</code></td><td>δ¹³C Speleothem Observation</td><td></td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>geolod:Delta18OProperty</code></td><td>δ¹⁸O Property</td><td>Stable oxygen isotope ratio (δ¹⁸O), shared by both ice-core and speleothem records.</td><td><code>crmsci:S9_Property_Type</code></td></tr><tr><td><code>geolod:Delta18OSpeleothemObservation</code></td><td>δ¹⁸O Speleothem Observation</td><td></td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>geolod:DepthPosition</code></td><td>Depth Position</td><td>A position along the depth axis of an archive, in metres. Used where a value published as an age has been carried into depth through a depth-age model.</td><td><code>crm:E54_Dimension</code></td></tr><tr><td><code>geolod:IceCoreObservation</code></td><td>Ice Core Observation</td><td>A single measured value at a known depth in an ice core. The depth is what was measured; the age is derived from it through a chronology, which the observation names.</td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>geolod:MeasurementType</code></td><td>Measurement Type</td><td>Classifies an observation by the physical quantity measured.</td><td><code>crmsci:S6_Data_Evaluation</code></td></tr><tr><td><code>geolod:ObservableProperty</code></td><td>Observable Property</td><td>A measurable geochemical or physical property of a palaeoclimate sample (e.g. δ¹⁸O, δ¹³C, CH₄ concentration).</td><td><code>crmsci:S9_Property_Type</code></td></tr><tr><td><code>geolod:PalaeoclimateObservation</code></td><td>Palaeoclimate Observation</td><td>A single measured value (e.g. δ¹⁸O, δ¹³C, CH₄) at a known depth or age within a palaeoclimate archive.</td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>geolod:RollingMedianFilter</code></td><td>Rolling Median Filter</td><td>Non-parametric smoother computing the median within a sliding window of fixed width.</td><td><code>crmsci:S6_Data_Evaluation</code></td></tr><tr><td><code>geolod:SavitzkyGolayFilter</code></td><td>Savitzky-Golay Filter</td><td>Polynomial least-squares smoothing filter preserving higher signal moments.</td><td><code>crmsci:S6_Data_Evaluation</code></td></tr><tr><td><code>geolod:SmoothingMethod</code></td><td>Smoothing Method</td><td>A numerical method applied to reduce high-frequency noise in a palaeoclimate time series.</td><td><code>crmsci:S6_Data_Evaluation</code></td></tr><tr><td><code>geolod:SpeleothemObservation</code></td><td>Speleothem Observation</td><td></td><td><code>crmsci:S4_Observation</code></td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>

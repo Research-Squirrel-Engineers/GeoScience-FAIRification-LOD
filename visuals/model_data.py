@@ -173,6 +173,22 @@ class Model:
                             cur.ranges.append(str(o))
         self.classes = classes
         self.props = props
+        self.restrictions = self._restrictions()
+
+    def _restrictions(self) -> list[tuple[str, str, str]]:
+        """Named-class restrictions of the form `C rdfs:subClassOf [owl:onProperty p; owl:allValuesFrom|someValuesFrom F]`:
+        (C, p, F), sorted. They say what a property of a class points to where the property itself has no domain of our own,
+        as for the CRM properties of an assignment."""
+        g, out = self.merged, set()
+        for c, r in g.subject_objects(RDFS.subClassOf):
+            if not (isinstance(c, URIRef) and isinstance(r, BNode) and (r, RDF.type, OWL.Restriction) in g):
+                continue
+            p = g.value(r, OWL.onProperty)
+            for k in (OWL.allValuesFrom, OWL.someValuesFrom):
+                f = g.value(r, k)
+                if isinstance(p, URIRef) and isinstance(f, URIRef) and str(c) in self.classes and str(f) in self.classes:
+                    out.add((str(c), str(p), str(f)))
+        return sorted(out)
 
     def classes_of(self, *modules: str) -> list[Cls]:
         """Classes whose first declaring module is one of `modules`, sorted by name."""

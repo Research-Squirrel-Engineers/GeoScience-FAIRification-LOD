@@ -2,15 +2,17 @@
 <rect width="1972" height="748" fill="#ffffff"/>
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
 <line x1="705.2" y1="367.7" x2="913.3" y2="367.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<path d="M 271.6 378.0 C 341.6 114.0 843.3 114.0 913.3 388.3" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 271.6 378.0 C 341.6 24.3 843.3 24.3 913.3 388.3" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="1149.6" y1="388.3" x2="1357.8" y2="522.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="705.2" y1="474.0" x2="913.3" y2="300.6" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
-<path d="M 705.2 388.3 C 775.2 80.0 1639.0 80.0 1709.0 378.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 705.2 388.3 C 775.2 -21.1 1639.0 -21.1 1709.0 378.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="705.2" y1="282.0" x2="913.3" y2="186.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1149.6" y1="186.0" x2="1357.8" y2="415.7" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1149.6" y1="463.7" x2="1357.8" y2="436.3" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <line x1="1360.8" y1="234.0" x2="1152.6" y2="263.4" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <line x1="1360.8" y1="330.0" x2="1152.6" y2="275.8" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <line x1="1360.8" y1="426.0" x2="1152.6" y2="288.2" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
-<line x1="916.3" y1="474.0" x2="708.2" y2="474.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
+<line x1="916.3" y1="484.3" x2="708.2" y2="474.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <line x1="916.3" y1="570.0" x2="708.2" y2="489.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <line x1="916.3" y1="367.7" x2="708.2" y2="458.5" stroke="#55544f" stroke-width="1.6" marker-end="url(#t)"/>
 <rect x="748.0" y="355.7" width="122.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
@@ -21,6 +23,10 @@
 <text x="809.3" y="387.3" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">extractedFrom</text>
 <rect x="723.8" y="222.0" width="171.1" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
 <text x="809.3" y="234.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">hasDrillingCampaign</text>
+<rect x="1201.8" y="288.8" width="103.8" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1253.7" y="300.8" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">tookPlaceAt</text>
+<rect x="1191.2" y="438.0" width="124.9" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1253.7" y="450.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">extractedFrom</text>
 <rect x="49.9" y="347.0" width="221.7" height="54.0" rx="8" fill="#d8ead3" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
 <text x="160.79999999999998" y="374.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">strat:AgeControlPoint</text>
 <text x="160.79999999999998" y="407.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Chronology</text>
@@ -63,10 +69,10 @@
 <rect x="1712.0" y="347.0" width="210.0" height="54.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-dasharray="7 5" stroke-width="1.8"/>
 <text x="1817.05" y="374.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">AgeAssignment</text>
 <text x="1817.05" y="407.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">→ Chronology</text>
-<rect x="499.6" y="169.3" width="185.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="592.5" y="181.3" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">constrainsSpeleothem</text>
-<rect x="1128.9" y="143.8" width="156.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="1207.2" y="155.8" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">hasAgeAssignment</text>
+<rect x="499.6" y="102" width="185.7" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="592.5" y="114" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">constrainsSpeleothem</text>
+<rect x="1128.9" y="68" width="156.5" height="24" rx="4" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1207.2" y="80" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">hasAgeAssignment</text>
 <rect x="691.4" y="667" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
 <text x="723.4" y="678" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
 <rect x="823.2" y="667" width="22" height="22" rx="3" fill="#d8ead3" stroke="#000000" stroke-width="1"/>

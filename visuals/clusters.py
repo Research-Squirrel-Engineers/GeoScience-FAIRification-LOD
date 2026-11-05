@@ -16,7 +16,8 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import cluster_figs as C  # noqa: E402
-import cluster_archives as AR  # noqa: E402
+import cluster_archives as AR
+import cluster_measurement as MT  # noqa: E402
 import cluster_mis as MS  # noqa: E402
 import model_data as md  # noqa: E402
 import site_kit as K  # noqa: E402
@@ -304,7 +305,87 @@ def data_figures_archives(M: md.Model, D: AR.ArcData, cl: dict) -> tuple[list[st
     return pattern, data
 
 
-DATA = {"chronology": (data_figures_chronology, "dating"), "mis": (data_figures_mis, "mis"), "archives": (data_figures_archives, "archives")}
+TPFX = APFX + """PREFIX qudt:   <http://qudt.org/schema/qudt/>
+PREFIX epica:  <http://w3id.org/geo-lod/epica/>
+"""
+Q_OBS_ONE = TPFX + """
+# Everything the committed graph says about one observation: the nodes of the pattern figure.
+SELECT ?property ?value WHERE {
+  epica:obs_ch4_0001 ?property ?value .
+} ORDER BY ?property ?value"""
+Q_SERIES = TPFX + """
+# The methane record: age, measured value and the two smoothed values, one row per observation.
+SELECT ?age_ka ?measured ?rolling_median ?savitzky_golay WHERE {
+  ?obs sosa:observedProperty epica:property_ch4 ;
+       geolod:ageKaBP ?age_ka ;
+       geolod:measuredValue ?measured ;
+       geolod:smoothedValue_rollingMedian ?rolling_median ;
+       geolod:smoothedValue_savgol ?savitzky_golay .
+} ORDER BY ?age_ka"""
+Q_COVERAGE = TPFX + """
+# Per dataset: observations, and how many carry each kind of value.
+SELECT ?dataset ?unit (COUNT(DISTINCT ?obs) AS ?observations) (COUNT(?measured) AS ?with_value) (COUNT(?sd) AS ?with_sd)
+       (COUNT(?median) AS ?with_median) (COUNT(?savgol) AS ?with_savgol) WHERE {
+  ?dataset a geolod:IceCoreDataset ;
+           geolod:hasObservation ?obs .
+  ?obs qudt:unit ?unit .
+  OPTIONAL { ?obs geolod:measuredValue ?measured }
+  OPTIONAL { ?obs geolod:standardDeviation ?sd }
+  OPTIONAL { ?obs geolod:smoothedValue_rollingMedian ?median }
+  OPTIONAL { ?obs geolod:smoothedValue_savgol ?savgol }
+} GROUP BY ?dataset ?unit ORDER BY DESC(?observations) ?dataset"""
+
+
+def data_figures_measurement(M: md.Model, D: MT.MeasData, cl: dict) -> tuple[list[str], list[str]]:
+    """Cards for the pattern and the data figures of the measurement page, each with the query that gives its numbers."""
+    from rdflib import URIRef
+    from rdflib.namespace import RDF, RDFS
+    pattern, data = [], []
+    f, st = MT.pattern_fig(M, D, IMG, "cl-measurement-pattern")
+    rows = list(D.g.query(Q_OBS_ONE))
+    if len({str(r[0]) for r in rows}) != st["properties"] + 1:
+        raise ValueError("cl-measurement-pattern: the query finds a different number of properties than the figure counts")
+    pattern.append(K.fig_card(IMG, "cl-measurement-pattern", "", "One observation in three views", CREDIT))
+    pattern.append(query_block(Q_OBS_ONE, f"Run on epica_dome_c.ttl: {len(rows)} statements with {st['properties'] + 1} distinct properties. "
+                               f"The figure draws {st['shown']} of them; the others are listed under it."))
+
+    curies = {iri: M.curie(iri) for iri in cl["iris"]}
+    q = Q_INVENTORY % " ".join(sorted(curies.values()))
+    got = {M.curie(str(r[0])) if str(r[0]) in M.classes else str(r[0]): (int(r[1]), int(r[2])) for r in D.g.query(q)}
+    want = {}
+    for iri, cur in curies.items():
+        cls = URIRef(iri)
+        sub = set(D.g.transitive_subjects(RDFS.subClassOf, cls))
+        want[cur] = (len({x for x in D.g.subjects(RDF.type, cls)}), len({x for t in sub for x in D.g.subjects(RDF.type, t)}))
+    for cur, v in want.items():
+        if got.get(cur, (0, 0)) != v:
+            raise ValueError(f"cl-measurement-inventory: the query gives {got.get(cur, (0, 0))} for {cur}, the count in Python {v}")
+    AR.inventory_fig(M, cl["iris"], D, want, IMG, "cl-measurement-inventory",
+                     "0 and 0: the class has no node in the committed Turtle; the SISAL observations and the properties they use are in the large graph of the pipeline.")
+    data.append(K.fig_card(IMG, "cl-measurement-inventory", "", "Which classes have nodes in the committed graphs", CREDIT))
+    data.append(query_block(q.replace(" ".join(sorted(curies.values())), "\n    ".join(sorted(curies.values()))),
+                            f"Run on epica_dome_c.ttl with the ontology files and compared with a count in Python: {sum(1 for v in want.values() if v[0])} of {len(want)} classes have asserted nodes."))
+
+    f, st = MT.coverage_fig(D, IMG, "cl-measurement-coverage")
+    got = {}
+    for r in D.g.query(Q_COVERAGE):
+        got[str(r[0]).rsplit("/", 1)[1]] = (int(r[2]), tuple(int(r[i]) for i in (3, 4, 5, 6)), "unit:" + str(r[1]).rsplit("/", 1)[1])
+    if got != st["rows"]:
+        raise ValueError("cl-measurement-coverage: the query and the figure disagree on the values per dataset")
+    data.append(K.fig_card(IMG, "cl-measurement-coverage", "", "Which kinds of value each dataset carries", CREDIT))
+    data.append(query_block(Q_COVERAGE, f"Run on epica_dome_c.ttl and compared with the figure: five datasets, {st['total']:,} observations."))
+
+    f, st = MT.series_fig(D, IMG, "cl-measurement-series")
+    got = [(round(float(r[0]), 4), float(r[1]), float(r[2]), float(r[3])) for r in D.g.query(Q_SERIES)]
+    if got != st["rows"]:
+        raise ValueError("cl-measurement-series: the query and the figure disagree on the methane record")
+    data.append(K.fig_card(IMG, "cl-measurement-series", "", "Measured and smoothed methane", CREDIT))
+    data.append(query_block(Q_SERIES, f"Run on epica_dome_c.ttl and compared with the figure: {st['n']} rows, {st['first_age']:g} to {st['last_age']:.0f} ka BP."))
+    return pattern, data
+
+
+DATA = {"chronology": (data_figures_chronology, "dating"), "mis": (data_figures_mis, "mis"), "archives": (data_figures_archives, "archives"),
+        "measurement": (data_figures_measurement, "measurement")}
 
 
 def build_cluster(M: md.Model, clusters: list[dict], cl: dict, sources: dict) -> None:
@@ -312,7 +393,7 @@ def build_cluster(M: md.Model, clusters: list[dict], cl: dict, sources: dict) ->
     body = ["<h2>Model</h2>", K.fig_card(IMG, f"cl-{cl['id']}-model", "", f"Cluster graph: {cl['title']}", CREDIT)]
     if cl["id"] in DATA:
         fn, key = DATA[cl["id"]]
-        pattern, data = fn(M, sources[key]()) if cl["id"] != "archives" else fn(M, sources[key](), cl)
+        pattern, data = fn(M, sources[key]()) if cl["id"] not in ("archives", "measurement") else fn(M, sources[key](), cl)
         body += ["<h2>Modelling pattern</h2>"] + pattern + ["<h2>In the data</h2>"] + data
     body.append(f'<section class="text"><h3>Classes</h3>{class_table(M, cl)}</section>')
     intro = esc(cl["lead"]) + ' All clusters are on the <a href="clusters.html">overview</a>.'
@@ -343,7 +424,8 @@ def main() -> int:
     cache: dict = {}
     # The data are read when a cluster page needs them, and once.
     sources = {"dating": lambda: cache.setdefault("dating", C.Dating()), "mis": lambda: cache.setdefault("mis", MS.MisData()),
-               "archives": lambda: cache.setdefault("archives", AR.ArcData())}
+               "archives": lambda: cache.setdefault("archives", AR.ArcData()),
+               "measurement": lambda: cache.setdefault("measurement", MT.MeasData())}
     built = 0
     for cl in clusters:
         if cl.get("page"):

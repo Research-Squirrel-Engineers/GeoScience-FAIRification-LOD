@@ -96,6 +96,15 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
             for r in p.ranges:
                 if d != r and (d in members or r in members):
                     rel.append((d, r, p.local))
+    # restrictions of a member class (only those that start at a member; owl:allValuesFrom / someValuesFrom on a property) count as relations too, so that the
+    # CRM properties of an assignment, which have no domain of our own, still connect it to the classes they point to
+    seen = {(d, r, l) for d, r, l in rel}
+    for c, p, f in M.restrictions:
+        if c != f and c in members:
+            lbl = M.curie(p).replace("crm:", "crm:").split("_")[0] if p.startswith("http://www.cidoc-crm.org/") else p.rsplit("/", 1)[-1].rsplit("#", 1)[-1]
+            if (c, f, lbl) not in seen:
+                seen.add((c, f, lbl))
+                rel.append((c, f, lbl))
     subs = sorted((c, q) for c in members for q in M.parents(c) if q in members)
 
     inner_rel = [(d, r, l) for d, r, l in rel if d in members and r in members]
@@ -126,7 +135,8 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
 
     # edge nodes: classes outside the cluster, once on the left (they are the domain) and once on the right (the range)
     left_edge = sorted({d for d, r, _ in rel if d not in members}, key=M.curie)
-    right_edge = sorted({r for d, r, _ in rel if r not in members}, key=M.curie)
+    # a class outside that is a domain and a range of the cluster stands once, on the left; the arrows into it run backwards
+    right_edge = sorted({r for d, r, _ in rel if r not in members and r not in left_edge}, key=M.curie)
     inner_layers = max((layer[n] for n in inner), default=0) + 1
     cols: list[list[tuple[str, str]]] = [[("edge", n) for n in left_edge]]
     for k in range(inner_layers):
@@ -164,8 +174,6 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
                 pos[key] = i
 
     # geometry
-    if set(left_edge) & set(right_edge):
-        raise ValueError(f"{name}: a class outside the cluster is both a domain and a range of it; the figure would need it twice")
     size, bh = 19, 62
     keycol = {key: ci for ci in used_cols for key in cols[ci]}
     rank = {ci: i for i, ci in enumerate(used_cols)}
@@ -239,9 +247,10 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
             x1, x2 = sx, dx + dw + 3
         if ai in channel:
             k = channel.index(ai)
-            ty = top - 34 * (k + 1) + 10
+            peak = top - 34 * (k + 1) + 10          # the curve's highest point, above every box; each long arrow has its own level
+            ty = (peak - (y1 + y2) / 8) / 0.75      # control height that puts the cubic's apex at `peak`
             f.path(f"M {x1:.1f} {y1:.1f} C {x1 + 70:.1f} {ty:.1f} {x2 - 70:.1f} {ty:.1f} {x2:.1f} {y2:.1f}", mk)
-            late.append(((x1 + x2) / 2, (y1 + y2) / 8 + 0.75 * ty, l))
+            late.append(((x1 + x2) / 2, peak, l))
         else:
             f.line(round(x1, 1), round(y1, 1), round(x2, 1), round(y2, 1), mk)
             if l:

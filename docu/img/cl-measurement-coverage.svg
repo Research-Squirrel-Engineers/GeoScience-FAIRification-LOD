@@ -1,0 +1,84 @@
+<svg width="1750" height="710" viewBox="0 0 1750 710" xmlns="http://www.w3.org/2000/svg" role="img"><title>Which values each dataset carries</title>
+<rect width="1750" height="710" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">Every observation has its value and two smoothed ones; only methane has a standard deviation</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Observations of each geolod:IceCoreDataset that carry each kind of value, counted on the node.</text>
+<text x="60" y="156" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">Dataset</text>
+<text x="600" y="156" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">unit</text>
+<text x="930" y="156" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">observations</text>
+<text x="1070" y="156" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">measured value</text>
+<text x="1250" y="156" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">standard deviation</text>
+<text x="1430" y="156" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">rolling median</text>
+<text x="1610" y="156" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">Savitzky-Golay</text>
+<rect x="50" y="190" width="1650" height="74" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="215.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">δ18O of atmospheric O2</text>
+<text x="60" y="241.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_d18o</text>
+<text x="600" y="227.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">unit:PERMILLE</text>
+<text x="930" y="227.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">1,378</text>
+<rect x="1000" y="204" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1070" y="227.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">1,378</text>
+<rect x="1180" y="204" width="140" height="46" rx="5" fill="#ffffff" stroke="#bdbbb2" stroke-width="1"/>
+<text x="1250" y="227.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<rect x="1360" y="204" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1430" y="227.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">1,378</text>
+<rect x="1540" y="204" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1610" y="227.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">1,378</text>
+<text x="60" y="289.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">dust concentration (Coulter counter)</text>
+<text x="60" y="315.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_dust</text>
+<text x="600" y="301.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">unit:MicroGM-PER-KiloGM</text>
+<text x="930" y="301.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">1,154</text>
+<rect x="1000" y="278" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1070" y="301.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">1,154</text>
+<rect x="1180" y="278" width="140" height="46" rx="5" fill="#ffffff" stroke="#bdbbb2" stroke-width="1"/>
+<text x="1250" y="301.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<rect x="1360" y="278" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1430" y="301.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">1,154</text>
+<rect x="1540" y="278" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1610" y="301.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">1,154</text>
+<rect x="50" y="338" width="1650" height="74" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="363.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">δO2/N2</text>
+<text x="60" y="389.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_do2n2</text>
+<text x="600" y="375.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">unit:PERMILLE</text>
+<text x="930" y="375.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">822</text>
+<rect x="1000" y="352" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1070" y="375.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">822</text>
+<rect x="1180" y="352" width="140" height="46" rx="5" fill="#ffffff" stroke="#bdbbb2" stroke-width="1"/>
+<text x="1250" y="375.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<rect x="1360" y="352" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1430" y="375.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">822</text>
+<rect x="1540" y="352" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1610" y="375.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">822</text>
+<text x="60" y="437.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">deuterium (δD)</text>
+<text x="60" y="463.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_dd</text>
+<text x="600" y="449.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">unit:PERMILLE</text>
+<text x="930" y="449.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">814</text>
+<rect x="1000" y="426" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1070" y="449.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">814</text>
+<rect x="1180" y="426" width="140" height="46" rx="5" fill="#ffffff" stroke="#bdbbb2" stroke-width="1"/>
+<text x="1250" y="449.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<rect x="1360" y="426" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1430" y="449.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">814</text>
+<rect x="1540" y="426" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1610" y="449.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">814</text>
+<rect x="50" y="486" width="1650" height="74" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="511.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">methane (CH4)</text>
+<text x="60" y="537.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">dataset_ch4</text>
+<text x="600" y="523.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">unit:PPB</text>
+<text x="930" y="523.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#1f1f1d">736</text>
+<rect x="1000" y="500" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1070" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">736</text>
+<rect x="1180" y="500" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1250" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">736</text>
+<rect x="1360" y="500" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1430" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">736</text>
+<rect x="1540" y="500" width="140" height="46" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="1610" y="523.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" font-weight="500" fill="#ffffff">736</text>
+<rect x="60" y="585" width="22" height="22" rx="3" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="92" y="596" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">all observations of the dataset</text>
+<rect x="420" y="585" width="22" height="22" rx="3" fill="#E69F00" stroke="#000000" stroke-width="1"/>
+<text x="452" y="596" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">some of them</text>
+<rect x="820" y="585" width="22" height="22" rx="3" fill="#ffffff" stroke="#bdbbb2" stroke-width="1"/>
+<text x="852" y="596" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">none</text>
+<text x="50" y="648" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">4,904 observations in five datasets. The speleothem observations (geolod:SpeleothemObservation and its two subclasses) are in the large graph of the pipeline.</text>
+<text x="50" y="678" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The two smoothed values sit under two property names of their own (smoothedValue_rollingMedian, smoothedValue_savgol), one per filter, not under one generic property.</text>
+</svg>

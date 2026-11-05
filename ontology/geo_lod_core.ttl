@@ -369,6 +369,15 @@ geolod:MarineIsotopeSubstage
 geolod:MISAttributeAssignment
     a owl:Class ;
     rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty crm:P140_assigned_attribute_to ;
+                      owl:allValuesFrom geolod:MarineIsotopeStage ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty crm:P177_assigned_property_of_type ;
+                      owl:allValuesFrom geolod:AssignedPropertyType ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty geolod:inChronology ;
+                      owl:allValuesFrom geolod:Chronology ] ;
     rdfs:label   "MIS Attribute Assignment"@en ;
     rdfs:comment "Assigns a boundary age, an excursion peak or a climate mode to a Marine Isotope Stage on the authority of one source. Competing readings of the same boundary are kept as separate assignments rather than harmonised."@en .
 
@@ -496,6 +505,15 @@ geolod:peakAgeKaBP
 geolod:MISMembershipAssignment
     a owl:Class ;
     rdfs:subClassOf crm:E13_Attribute_Assignment ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty crm:P140_assigned_attribute_to ;
+                      owl:allValuesFrom geolod:PalaeoclimateObservation ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty crm:P141_assigned ;
+                      owl:allValuesFrom geolod:MarineIsotopeStage ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty geolod:inChronology ;
+                      owl:allValuesFrom geolod:Chronology ] ;
     rdfs:label   "MIS Membership Assignment"@en ;
     rdfs:comment "Places an observation in a Marine Isotope Stage, on the  authority of one boundary source and through one chronology. Deliberately not  a subclass of geolod:MISAttributeAssignment: that one assigns properties *to*  a stage, this one assigns a stage *to* something else, and the two carry  different constraints."@en .
 

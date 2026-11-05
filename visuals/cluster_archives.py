@@ -183,7 +183,8 @@ def archive_pattern_fig(M: md.Model, D: ArcData, outdir: Path, name: str, entity
 
 # ------------------------------------------------------------------ what the graphs hold per class
 
-def inventory_fig(M: md.Model, clusters_iris: list[str], D: ArcData, rows: dict[str, tuple[int, int]], outdir: Path, name: str) -> Fig:
+def inventory_fig(M: md.Model, clusters_iris: list[str], D: ArcData, rows: dict[str, tuple[int, int]], outdir: Path, name: str,
+                  zero_note: str = "0 and 0: the class is used by the pipeline (SISAL speleothems and samples, entity status terms) and its nodes are in the large graph, not in the committed Turtle.") -> Fig:
     """One row per class of the cluster: the CRM anchor, the nodes asserted with that class, the nodes of it or a subclass."""
     items = sorted(clusters_iris, key=M.curie)
     left, top, rowh = 60, 170, 38
@@ -213,7 +214,7 @@ def inventory_fig(M: md.Model, clusters_iris: list[str], D: ArcData, rows: dict[
         else:
             f.text(cx[2], y + rowh / 2, "0", 18, color="#b5b3aa", anchor="start")
     f.text(50, H - 60, "Blue: the class has asserted nodes. Orange: the class is only a superclass here, its nodes are typed with a subclass.", 17, color=MUTED, anchor="start", maxw=W - 100)
-    f.text(50, H - 32, "0 and 0: the class is used by the pipeline (SISAL speleothems and samples, entity status terms) and its nodes are in the large graph, not in the committed Turtle.", 17, color=MUTED, anchor="start", maxw=W - 100)
+    f.text(50, H - 32, zero_note, 17, color=MUTED, anchor="start", maxw=W - 100)
     f.save()
     return f
 

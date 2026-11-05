@@ -16,6 +16,7 @@
 - id: measurement
   title: Observation and measurement
   short: Measurement
+  page: cluster-measurement.html
   lead: What was measured, in which quantity, and how a value was smoothed afterwards.
   classes: [geolod:Delta13CProperty, geolod:Delta13CSpeleothemObservation, geolod:Delta18OProperty,
             geolod:Delta18OSpeleothemObservation, geolod:DepthPosition, geolod:IceCoreObservation,
