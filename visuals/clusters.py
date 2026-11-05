@@ -17,8 +17,10 @@ sys.path.insert(0, str(HERE))
 
 import cluster_figs as C  # noqa: E402
 import cluster_archives as AR
+import cluster_archaeology as AY
 import cluster_measurement as MT  # noqa: E402
 import cluster_mis as MS  # noqa: E402
+import cluster_sources as SO
 import model_data as md  # noqa: E402
 import site_kit as K  # noqa: E402
 
@@ -384,8 +386,161 @@ def data_figures_measurement(M: md.Model, D: MT.MeasData, cl: dict) -> tuple[lis
     return pattern, data
 
 
+YPFX = TPFX + """PREFIX geo:    <http://www.opengis.net/ont/geosparql#>
+PREFIX ci:     <http://w3id.org/geo-lod/ci/>
+PREFIX dcat:   <http://www.w3.org/ns/dcat#>
+"""
+Q_READING = YPFX + """
+# What the graphs say about the three nodes of the pattern figure: a cave read for archaeology, a findspot read, a findspot not read.
+SELECT ?site ?property ?value WHERE {
+  VALUES ?site { geolod:Cave_site_0077 ci:cisite_43 ci:cisite_1 }
+  ?site ?property ?value .
+} ORDER BY ?site ?property ?value"""
+Q_SCREENING = YPFX + """
+# Per kind of place: how many, how many have been screened for archaeology, how many carry archaeological evidence.
+SELECT ?kind (COUNT(DISTINCT ?site) AS ?places) (COUNT(DISTINCT ?screened) AS ?screened_places)
+       (COUNT(DISTINCT ?positive) AS ?typed_archaeological) (COUNT(DISTINCT ?both) AS ?typed_and_screened) WHERE {
+  { ?site a geolod:Cave . BIND("caves" AS ?kind) } UNION { ?site a geolod:CIFindspot . BIND("CI findspots" AS ?kind) }
+  OPTIONAL { ?site geolod:screenedForArchaeology true . BIND(?site AS ?screened) }
+  OPTIONAL { ?site a ?evidence . FILTER(?evidence IN (geolod:ArchaeologicalCaveSite, geolod:CIArchaeologicalSite)) BIND(?site AS ?positive) }
+  BIND(IF(BOUND(?screened) && BOUND(?positive), ?site, ?nothing) AS ?both)
+} GROUP BY ?kind ORDER BY ?kind"""
+Q_CONTEXT = YPFX + """
+SELECT ?kind ?context ?confidence (COUNT(?site) AS ?sites) WHERE {
+  ?site geolod:archaeologicalBroaderContext ?context ;
+        geolod:archaeologicalConfidence ?confidence .
+  BIND(IF(EXISTS { ?site a geolod:CIArchaeologicalSite }, "CI", "cave") AS ?kind)
+} GROUP BY ?kind ?context ?confidence ORDER BY ?kind ?context ?confidence"""
+Q_FINDSPOTS = YPFX + """
+# The findspots of the map: position and the certainty of the position (a statement on the geometry node).
+SELECT ?site ?wkt ?certainty WHERE {
+  ?site a geolod:CIFindspot ;
+        geo:hasGeometry ?geom .
+  ?geom geo:asWKT ?wkt .
+  OPTIONAL { ?geom geolod:hasCertaintyLevel ?certainty }
+} ORDER BY ?site"""
+Q_ARCH_CAVES = YPFX + """
+SELECT ?cave ?wkt WHERE {
+  ?cave a geolod:ArchaeologicalCaveSite ;
+        geo:hasGeometry/geo:asWKT ?wkt .
+} ORDER BY ?cave"""
+SPFX = YPFX
+Q_CATALOGUE = SPFX + """
+# The catalogue, its datasets, the source each names, and how many observations each dataset has.
+SELECT ?dataset ?source (COUNT(?obs) AS ?observations) WHERE {
+  ?catalogue a geolod:PalaeoclimateDataCatalogue ;
+             dcat:dataset ?dataset .
+  ?dataset dct:source ?source ;
+           geolod:hasObservation ?obs .
+} GROUP BY ?dataset ?source ORDER BY ?dataset"""
+Q_CITING = SPFX + """
+# How many ice core observations cite each source with prov:wasDerivedFrom.
+SELECT ?source (COUNT(?obs) AS ?citing_observations) WHERE {
+  ?obs a geolod:IceCoreObservation ;
+       prov:wasDerivedFrom ?source .
+} GROUP BY ?source ORDER BY ?source"""
+Q_DERIVED = SPFX + """
+# Which nodes cite which source, counted by class. A source is a typed geolod:DataSource or a node the graph says nothing else about.
+SELECT ?source ?typed ?class (COUNT(DISTINCT ?x) AS ?nodes) WHERE {
+  { ?x prov:wasDerivedFrom ?source } UNION { ?x dct:source ?source }
+  BIND(EXISTS { ?source a geolod:DataSource } AS ?typed)
+  FILTER (?typed || NOT EXISTS { ?source ?p ?o })
+  ?x a ?class .
+  FILTER (STRSTARTS(STR(?class), STR(geolod:)) && ?class != geolod:DataSource)
+} GROUP BY ?source ?typed ?class ORDER BY ?source DESC(?nodes) ?class"""
+
+def _inventory(M: md.Model, D, cl: dict, name: str, note: str) -> tuple[str, str]:
+    """The inventory card and its query for a cluster page: the query is run and compared with an independent count in Python."""
+    from rdflib import URIRef
+    from rdflib.namespace import RDF, RDFS
+    curies = {iri: M.curie(iri) for iri in cl["iris"]}
+    q = Q_INVENTORY % " ".join(sorted(curies.values()))
+    got = {M.curie(str(r[0])) if str(r[0]) in M.classes else str(r[0]): (int(r[1]), int(r[2])) for r in D.g.query(q)}
+    want = {}
+    for iri, cur in curies.items():
+        cls = URIRef(iri)
+        sub = set(D.g.transitive_subjects(RDFS.subClassOf, cls))
+        want[cur] = (len({x for x in D.g.subjects(RDF.type, cls)}), len({x for t in sub for x in D.g.subjects(RDF.type, t)}))
+    for cur, v in want.items():
+        if got.get(cur, (0, 0)) != v:
+            raise ValueError(f"{name}: the query gives {got.get(cur, (0, 0))} for {cur}, the count in Python {v}")
+    AR.inventory_fig(M, cl["iris"], D, want, IMG, name, note)
+    card = K.fig_card(IMG, name, "", "Which classes have nodes in the committed graphs", CREDIT)
+    block = query_block(q.replace(" ".join(sorted(curies.values())), "\n    ".join(sorted(curies.values()))),
+                        f"Run on the committed graphs with the ontology files and compared with a count in Python: {sum(1 for v in want.values() if v[0])} of {len(want)} classes have asserted nodes.")
+    return card, block
+
+
+def data_figures_archaeology(M: md.Model, D: AY.ArchData, cl: dict) -> tuple[list[str], list[str]]:
+    pattern, data = [], []
+    f, st = AY.pattern_fig(M, D, IMG, "cl-archaeology-pattern")
+    rows = list(D.g.query(Q_READING))
+    pattern.append(K.fig_card(IMG, "cl-archaeology-pattern", "", "One archaeological reading on two kinds of place", CREDIT))
+    pattern.append(query_block(Q_READING, f"Run on the committed graphs: {len(rows)} statements about the three nodes of the figure; the rows of each card are among them."))
+
+    f, st = AY.screening_fig(D, IMG, "cl-archaeology-screening")
+    got = {str(r[0]): (int(r[1]), int(r[2]), int(r[3]), int(r[4])) for r in D.g.query(Q_SCREENING)}
+    if got != {"caves": st["caves"], "CI findspots": st["ci"]}:
+        raise ValueError(f"cl-archaeology-screening: the query gives {got}, the figure {st}")
+    data.append(K.fig_card(IMG, "cl-archaeology-screening", "", "Looked at, found, not looked at", CREDIT))
+    data.append(query_block(Q_SCREENING, f"Run on the committed graphs and compared with the figure: {st['caves'][2]} of {st['caves'][0]} caves and {st['ci'][2]} of {st['ci'][0]} findspots carry an archaeological class; {st['caves'][3]} and {st['ci'][3]} of them also have a curated reading."))
+
+    f, st = AY.context_fig(D, IMG, "cl-archaeology-context")
+    got = {f"{r[0]}/{str(r[1]).rsplit('/', 1)[-1]}/{r[2]}": int(r[3]) for r in D.g.query(Q_CONTEXT)}
+    if got != st["rows"]:
+        raise ValueError("cl-archaeology-context: the query and the figure disagree on contexts and confidence")
+    data.append(K.fig_card(IMG, "cl-archaeology-context", "", "Archaeological sites by broader context and confidence", CREDIT))
+    data.append(query_block(Q_CONTEXT, f"Run on the committed graphs and compared with the figure: {st['total']} sites."))
+
+    f, st = AY.map_fig(D, IMG, "cl-archaeology-map")
+    from rdflib import URIRef
+    got = sorted((str(r[0]).rsplit("/", 1)[-1], round(AY._point(r[1])[0], 4), round(AY._point(r[1])[1], 4), str(r[2]).rsplit("/", 1)[-1] if r[2] is not None else "none") for r in D.g.query(Q_FINDSPOTS))
+    if got != st["findspots"]:
+        raise ValueError("cl-archaeology-map: the query and the figure disagree on the findspots")
+    got = sorted((str(r[0]).rsplit("/", 1)[-1], round(AY._point(r[1])[0], 4), round(AY._point(r[1])[1], 4)) for r in D.g.query(Q_ARCH_CAVES))
+    if got != st["caves"]:
+        raise ValueError("cl-archaeology-map: the query and the figure disagree on the archaeological caves")
+    data.append(K.fig_card(IMG, "cl-archaeology-map", "", "Campanian Ignimbrite findspots and archaeological caves", CREDIT))
+    data.append(query_block(Q_FINDSPOTS, f"Run on ci_findspots.ttl and compared with the figure: {len(st['findspots'])} findspots; the certainty is read from the geometry node."))
+    data.append(query_block(Q_ARCH_CAVES, f"Compared with the figure: {len(st['caves'])} caves, {st['inside']} of them inside the window."))
+
+    card, block = _inventory(M, D, cl, "cl-archaeology-inventory", "0 and 0: the class has no node in the committed Turtle.")
+    data += [card, block]
+    return pattern, data
+
+
+def data_figures_sources(M: md.Model, D: SO.SrcData, cl: dict) -> tuple[list[str], list[str]]:
+    pattern, data = [], []
+    f, st = SO.pattern_fig(M, D, IMG, "cl-sources-pattern")
+    citing = {str(r[0]): int(r[1]) for r in D.g.query(Q_CITING)}
+    got = {str(r[0]).rsplit("/", 1)[-1]: (int(r[2]), citing.get(str(r[1]), 0)) for r in D.g.query(Q_CATALOGUE)}
+    key = st["dataset"].split(":", 1)[1]
+    if len(got) != st["datasets"] or got.get(key) != (st["observations"], st["cited"]):
+        raise ValueError(f"cl-sources-pattern: the query gives {got}, the figure {st}")
+    pattern.append(K.fig_card(IMG, "cl-sources-pattern", "", "From a catalogue to a source", CREDIT))
+    pattern.append(query_block(Q_CATALOGUE, f"Run on epica_dome_c.ttl and compared with the figure: {len(got)} datasets; {st['dataset']} has {st['observations']:,} observations."))
+    pattern.append(query_block(Q_CITING, f"The second query counts the observations that cite each source; {st['cited']:,} of them cite {st['source']}, as many as the dataset has."))
+
+    f, st = SO.sources_fig(D, IMG, "cl-sources-table")
+    got: dict = {}
+    for r in D.g.query(Q_DERIVED):
+        got.setdefault(str(r[0]).rsplit("/", 1)[-1], [bool(r[1].toPython()), []])[1].append((str(r[2]).rsplit("/", 1)[-1], int(r[3])))
+    want = {k: [v[0], sorted(v[1], key=lambda kv: (-kv[1], kv[0]))] for k, v in st["rows"].items()}
+    got = {k: [v[0], sorted(v[1], key=lambda kv: (-kv[1], kv[0]))] for k, v in got.items()}
+    want = {k: [v[0], sorted(v[1], key=lambda kv: (-kv[1], kv[0]))] for k, v in want.items()}
+    if got != want:
+        raise ValueError("cl-sources-table: the query and the figure disagree on what derives from which source")
+    data.append(K.fig_card(IMG, "cl-sources-table", "", "Which sources the graphs cite", CREDIT))
+    data.append(query_block(Q_DERIVED, f"Run on the committed graphs and compared with the figure: {len(got)} sources, {st['typed']} typed and {st['cited']} cited only."))
+
+    card, block = _inventory(M, D, cl, "cl-sources-inventory", "Both classes have nodes in the committed Turtle (the sources and the EPICA catalogue).")
+    data += [card, block]
+    return pattern, data
+
+
 DATA = {"chronology": (data_figures_chronology, "dating"), "mis": (data_figures_mis, "mis"), "archives": (data_figures_archives, "archives"),
-        "measurement": (data_figures_measurement, "measurement")}
+        "measurement": (data_figures_measurement, "measurement"),
+        "archaeology": (data_figures_archaeology, "archaeology"), "sources": (data_figures_sources, "sources")}
 
 
 def build_cluster(M: md.Model, clusters: list[dict], cl: dict, sources: dict) -> None:
@@ -393,7 +548,7 @@ def build_cluster(M: md.Model, clusters: list[dict], cl: dict, sources: dict) ->
     body = ["<h2>Model</h2>", K.fig_card(IMG, f"cl-{cl['id']}-model", "", f"Cluster graph: {cl['title']}", CREDIT)]
     if cl["id"] in DATA:
         fn, key = DATA[cl["id"]]
-        pattern, data = fn(M, sources[key]()) if cl["id"] not in ("archives", "measurement") else fn(M, sources[key](), cl)
+        pattern, data = fn(M, sources[key]()) if cl["id"] not in ("archives", "measurement", "archaeology", "sources") else fn(M, sources[key](), cl)
         body += ["<h2>Modelling pattern</h2>"] + pattern + ["<h2>In the data</h2>"] + data
     body.append(f'<section class="text"><h3>Classes</h3>{class_table(M, cl)}</section>')
     intro = esc(cl["lead"]) + ' All clusters are on the <a href="clusters.html">overview</a>.'
@@ -425,7 +580,9 @@ def main() -> int:
     # The data are read when a cluster page needs them, and once.
     sources = {"dating": lambda: cache.setdefault("dating", C.Dating()), "mis": lambda: cache.setdefault("mis", MS.MisData()),
                "archives": lambda: cache.setdefault("archives", AR.ArcData()),
-               "measurement": lambda: cache.setdefault("measurement", MT.MeasData())}
+               "measurement": lambda: cache.setdefault("measurement", MT.MeasData()),
+               "archaeology": lambda: cache.setdefault("archaeology", AY.ArchData()),
+               "sources": lambda: cache.setdefault("sources", SO.SrcData())}
     built = 0
     for cl in clusters:
         if cl.get("page"):

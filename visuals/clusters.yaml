@@ -43,11 +43,13 @@
 - id: archaeology
   title: Archaeology and the Campanian Ignimbrite
   short: Archaeology
+  page: cluster-archaeology.html
   lead: Cave sites and CI findspots with archaeological evidence, and the context vocabulary that classifies them.
   classes: [geolod:ArchaeologicalCaveSite, geolod:ArchaeologicalContext, geolod:CIArchaeologicalSite, geolod:CIFindspot]
 
 - id: sources
   title: Sources and provenance
   short: Sources
+  page: cluster-sources.html
   lead: The citable sources and the catalogue that gathers the datasets.
   classes: [geolod:DataSource, geolod:PalaeoclimateDataCatalogue]

@@ -204,7 +204,7 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
         x += colw[ci] + gap
     pitch = 96
     top = 70 + 34 * len(channel)
-    rows = max(len(cols[ci]) for ci in used_cols)
+    rows = max((len(cols[ci]) for ci in used_cols), default=0)
     graph_h = rows * pitch
     loose_h = 0
     per_row = max(1, int((W - 100) // 250))

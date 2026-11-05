@@ -1,0 +1,96 @@
+<svg width="1900" height="1160" viewBox="0 0 1900 1160" xmlns="http://www.w3.org/2000/svg" role="img"><title>Which sources the graphs cite</title>
+<rect width="1900" height="1160" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">Every source the graphs cite, what derives from it, and whether it has a node here</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Nodes with prov:wasDerivedFrom or dct:source, counted by class; a source is typed (geolod:DataSource) or only cited.</text>
+<text x="60" y="164" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">Source</text>
+<text x="640" y="164" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">node here</text>
+<text x="980" y="164" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">licence</text>
+<text x="1130" y="164" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">year</text>
+<text x="1260" y="164" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">nodes derived from it, by class</text>
+<rect x="50" y="200" width="1800" height="70" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="223.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">geo-lod CI findspot annotations</text>
+<text x="60" y="249.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">GeoLodCIAnnotations_DataSource</text>
+<rect x="640" y="217" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="235.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="235.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 4.0</text>
+<text x="1130" y="235.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<text x="1260" y="235.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">3 CIArchaeologicalSite  ·  3 CIFindspot</text>
+<text x="60" y="293.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">geo-lod cave site annotations</text>
+<text x="60" y="319.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">GeoLodSiteAnnotations_DataSource</text>
+<rect x="640" y="287" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="305.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="305.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 4.0</text>
+<text x="1130" y="305.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<text x="1260" y="305.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">305 Cave  ·  37 ArchaeologicalCaveSite</text>
+<rect x="50" y="340" width="1800" height="70" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="363.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Spahni &amp; Stocker (2006)</text>
+<text x="60" y="389.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_ch4</text>
+<rect x="640" y="357" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="375.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="375.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 3.0</text>
+<text x="1130" y="375.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2006</text>
+<text x="1260" y="375.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">736 IceCoreObservation  ·  1 IceCoreDataset</text>
+<text x="60" y="433.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Bouchet et al. (2023)</text>
+<text x="60" y="459.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_d18o</text>
+<rect x="640" y="427" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="445.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="445.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 4.0</text>
+<text x="1130" y="445.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2023</text>
+<text x="1260" y="445.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">1,378 IceCoreObservation  ·  1 IceCoreDataset</text>
+<rect x="50" y="480" width="1800" height="70" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="503.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Augustin et al. (2004), Nature 429</text>
+<text x="60" y="529.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_dd</text>
+<rect x="640" y="497" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="515.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="515.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 3.0</text>
+<text x="1130" y="515.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2004</text>
+<text x="1260" y="515.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">814 IceCoreObservation  ·  1 IceCoreDataset</text>
+<text x="60" y="573.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Bouchet et al. (2023)</text>
+<text x="60" y="599.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_do2n2</text>
+<rect x="640" y="567" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="585.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="585.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 4.0</text>
+<text x="1130" y="585.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2023</text>
+<text x="1260" y="585.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">822 IceCoreObservation  ·  1 IceCoreDataset</text>
+<rect x="50" y="620" width="1800" height="70" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="643.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Lambert et al. (2008)</text>
+<text x="60" y="669.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_dust</text>
+<rect x="640" y="637" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="655.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="655.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 3.0</text>
+<text x="1130" y="655.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2008</text>
+<text x="1260" y="655.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">1,154 IceCoreObservation  ·  1 IceCoreDataset</text>
+<text x="60" y="713.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Lisiecki &amp; Raymo (2005), LR04</text>
+<text x="60" y="739.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_lisieckiRaymo2005</text>
+<rect x="640" y="707" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="725.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="725.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none stated</text>
+<text x="1130" y="725.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<text x="1260" y="725.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">459 MISAttributeAssignment  ·  228 MarineIsotopeStage  ·  + 1 more …</text>
+<rect x="50" y="760" width="1800" height="70" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="783.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">Railsback et al. (2015)</text>
+<text x="60" y="809.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source_railsback2015</text>
+<rect x="640" y="777" width="160" height="36" rx="5" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="720" y="795.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">typed</text>
+<text x="980" y="795.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none stated</text>
+<text x="1130" y="795.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<text x="1260" y="795.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">4,904 MISMembershipAssignment  ·  410 MISAttributeAssignment  ·  …</text>
+<text x="60" y="853.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">SISALv3_DataSource</text>
+<text x="60" y="879.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">SISALv3_DataSource</text>
+<rect x="640" y="847" width="160" height="36" rx="5" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="720" y="865.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">cited only</text>
+<text x="980" y="865.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none stated</text>
+<text x="1130" y="865.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<text x="1260" y="865.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">1,841 AgeControlPoint  ·  365 Cave  ·  + 3 more classes</text>
+<rect x="50" y="900" width="1800" height="70" rx="0" fill="#f6f6f3" stroke="none" stroke-width="1"/>
+<text x="60" y="923.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#1f1f1d">campanian-ignimbrite-geo</text>
+<text x="60" y="949.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">campanian-ignimbrite-geo</text>
+<rect x="640" y="917" width="160" height="36" rx="5" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+<text x="720" y="935.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">cited only</text>
+<text x="980" y="935.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none stated</text>
+<text x="1130" y="935.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#9a988f">none</text>
+<text x="1260" y="935.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">74 CIFindspot  ·  12 CIArchaeologicalSite</text>
+<text x="50" y="1098" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">11 sources: 9 typed as geolod:DataSource in the committed graphs, 2 cited by IRI only.</text>
+<text x="50" y="1128" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">No node of their own in the committed Turtle: SISALv3_DataSource, campanian-ignimbrite-geo. The SISAL one is defined by the pipeline in its large graph.</text>
+</svg>

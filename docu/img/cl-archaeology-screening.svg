@@ -1,0 +1,33 @@
+<svg width="1750" height="700" viewBox="0 0 1750 700" xmlns="http://www.w3.org/2000/svg" role="img"><title>Looked at, found, not looked at</title>
+<rect width="1750" height="700" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">Where the graph says nothing, nobody has looked</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:screenedForArchaeology and the archaeological classes, counted per kind of place.</text>
+<text x="280" y="230" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#1f1f1d">Caves</text>
+<text x="280" y="262" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">365 places</text>
+<rect x="300" y="204" width="136.8" height="52" rx="0" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="368.4" y="230" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">37</text>
+<rect x="436.8" y="204" width="991.2" height="52" rx="0" fill="#E69F00" stroke="#000000" stroke-width="1"/>
+<text x="932.4000000000001" y="230" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">268 screened, no evidence</text>
+<rect x="1428.0" y="204" width="221.9" height="52" rx="0" fill="#d9d7cf" stroke="#000000" stroke-width="1"/>
+<text x="1538.95" y="230" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">60 no statement</text>
+<text x="280" y="380" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#1f1f1d">CI findspots</text>
+<text x="280" y="412" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">74 places</text>
+<rect x="300" y="354" width="11.1" height="52" rx="0" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<line x1="305.55" y1="406" x2="335.55" y2="440" stroke="#55544f" stroke-width="0.8"/>
+<text x="341.55" y="442" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#1f1f1d">3 with evidence, read</text>
+<rect x="311.1" y="354" width="33.3" height="52" rx="0" fill="#56B4E9" stroke="#000000" stroke-width="1"/>
+<text x="327.75" y="380" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">9</text>
+<rect x="344.40000000000003" y="354" width="229.3" height="52" rx="0" fill="#d9d7cf" stroke="#000000" stroke-width="1"/>
+<text x="459.05000000000007" y="380" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#1f1f1d">62 no statement</text>
+<rect x="300" y="519" width="22" height="22" rx="3" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="332" y="530" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">archaeological class and a curated reading</text>
+<rect x="716.8" y="519" width="22" height="22" rx="3" fill="#56B4E9" stroke="#000000" stroke-width="1"/>
+<text x="748.8" y="530" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">archaeological class, no curated reading</text>
+<rect x="1113.3" y="519" width="22" height="22" rx="3" fill="#E69F00" stroke="#000000" stroke-width="1"/>
+<text x="1145.3" y="530" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">screened, no evidence</text>
+<rect x="1363.3" y="519" width="22" height="22" rx="3" fill="#d9d7cf" stroke="#000000" stroke-width="1"/>
+<text x="1395.3" y="530" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">no statement</text>
+<text x="50" y="638" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">All 37 archaeological caves carry a curated reading. Of the 12 findspots typed as archaeological, 3 do; the other 9 come from the findspot source alone.</text>
+<text x="50" y="668" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">Absence of screenedForArchaeology is kept distinguishable from a negative result (the comment of the property); the bars do not count the silent places as negative.</text>
+</svg>

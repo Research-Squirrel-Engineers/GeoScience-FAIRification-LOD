@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources and provenance · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a href="crosswalk.html">Crosswalk</a><a href="instances.html">Instance models</a><a href="slides.html">Slide figures</a><a href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Clusters</span><span class="lnk"><a href="clusters.html">Overview</a><a href="cluster-chronology.html">Chronology</a><a href="cluster-mis.html">Marine isotope stages</a><a href="cluster-archives.html">Archives and sampling</a><a href="cluster-measurement.html">Observation and measurement</a><a href="cluster-archaeology.html">Archaeology and the CI</a><a class="on" href="cluster-sources.html">Sources and provenance</a></span></div><div class="grp"><span class="lab">Ontology pages</span><span class="lnk"><a href="../semweb/index.html">Overall</a><a href="../semweb/featurecollections.html">Feature collections</a><a href="../semweb/AllPalaeoclimateSites_Collection/index.html">All sites</a><a href="../semweb/SISAL_Cave_Collection/index.html">SISAL caves</a><a href="../semweb/ci/CIFindspotCollection/index.html">CI findspots</a><a href="../semweb/IceCore_collection/index.html">Ice cores</a><a href="../semweb/DrillingSite_collection/index.html">Drilling sites</a><a href="../semweb/Dataset_collection/index.html">Datasets</a><a href="../semweb/Catalog_collection/index.html">Catalogues</a></span></div></nav>
+<h1>Sources and provenance</h1>
+<p class="intro">The citable sources and the catalogue that gathers the datasets. All clusters are on the <a href="clusters.html">overview</a>.</p>
+<h2>Model</h2>
+<section>
+<img src="img/cl-sources-model.png" width="3500" height="688" loading="lazy" alt="Cluster graph: Sources and provenance">
+<div class="row"><p class="cap"><span class="n"></span>Cluster graph: Sources and provenance</p><button type="button" data-c="Cluster graph: Sources and provenance">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-sources-model.png" download>PNG</a><a href="img/cl-sources-model.svg" download>SVG</a></p>
+</section>
+<h2>Modelling pattern</h2>
+<section>
+<img src="img/cl-sources-pattern.png" width="3800" height="1384" loading="lazy" alt="From a catalogue to a source">
+<div class="row"><p class="cap"><span class="n"></span>From a catalogue to a source</p><button type="button" data-c="From a catalogue to a source">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-sources-pattern.png" download>PNG</a><a href="img/cl-sources-pattern.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# The catalogue, its datasets, the source each names, and how many observations each dataset has.
+SELECT ?dataset ?source (COUNT(?obs) AS ?observations) WHERE {
+  ?catalogue a geolod:PalaeoclimateDataCatalogue ;
+             dcat:dataset ?dataset .
+  ?dataset dct:source ?source ;
+           geolod:hasObservation ?obs .
+} GROUP BY ?dataset ?source ORDER BY ?dataset</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# The catalogue, its datasets, the source each names, and how many observations each dataset has.
+SELECT ?dataset ?source (COUNT(?obs) AS ?observations) WHERE {
+  ?catalogue a geolod:PalaeoclimateDataCatalogue ;
+             dcat:dataset ?dataset .
+  ?dataset dct:source ?source ;
+           geolod:hasObservation ?obs .
+} GROUP BY ?dataset ?source ORDER BY ?dataset">Copy</button></div><p class="note">Run on epica_dome_c.ttl and compared with the figure: 5 datasets; epica:dataset_ch4 has 736 observations.</p></section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# How many ice core observations cite each source with prov:wasDerivedFrom.
+SELECT ?source (COUNT(?obs) AS ?citing_observations) WHERE {
+  ?obs a geolod:IceCoreObservation ;
+       prov:wasDerivedFrom ?source .
+} GROUP BY ?source ORDER BY ?source</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# How many ice core observations cite each source with prov:wasDerivedFrom.
+SELECT ?source (COUNT(?obs) AS ?citing_observations) WHERE {
+  ?obs a geolod:IceCoreObservation ;
+       prov:wasDerivedFrom ?source .
+} GROUP BY ?source ORDER BY ?source">Copy</button></div><p class="note">The second query counts the observations that cite each source; 736 of them cite epica:source_ch4, as many as the dataset has.</p></section>
+<h2>In the data</h2>
+<section>
+<img src="img/cl-sources-table.png" width="3800" height="2320" loading="lazy" alt="Which sources the graphs cite">
+<div class="row"><p class="cap"><span class="n"></span>Which sources the graphs cite</p><button type="button" data-c="Which sources the graphs cite">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-sources-table.png" download>PNG</a><a href="img/cl-sources-table.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# Which nodes cite which source, counted by class. A source is a typed geolod:DataSource or a node the graph says nothing else about.
+SELECT ?source ?typed ?class (COUNT(DISTINCT ?x) AS ?nodes) WHERE {
+  { ?x prov:wasDerivedFrom ?source } UNION { ?x dct:source ?source }
+  BIND(EXISTS { ?source a geolod:DataSource } AS ?typed)
+  FILTER (?typed || NOT EXISTS { ?source ?p ?o })
+  ?x a ?class .
+  FILTER (STRSTARTS(STR(?class), STR(geolod:)) &amp;&amp; ?class != geolod:DataSource)
+} GROUP BY ?source ?typed ?class ORDER BY ?source DESC(?nodes) ?class</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# Which nodes cite which source, counted by class. A source is a typed geolod:DataSource or a node the graph says nothing else about.
+SELECT ?source ?typed ?class (COUNT(DISTINCT ?x) AS ?nodes) WHERE {
+  { ?x prov:wasDerivedFrom ?source } UNION { ?x dct:source ?source }
+  BIND(EXISTS { ?source a geolod:DataSource } AS ?typed)
+  FILTER (?typed || NOT EXISTS { ?source ?p ?o })
+  ?x a ?class .
+  FILTER (STRSTARTS(STR(?class), STR(geolod:)) &amp;&amp; ?class != geolod:DataSource)
+} GROUP BY ?source ?typed ?class ORDER BY ?source DESC(?nodes) ?class">Copy</button></div><p class="note">Run on the committed graphs and compared with the figure: 11 sources, 9 typed and 2 cited only.</p></section>
+<section>
+<img src="img/cl-sources-inventory.png" width="3500" height="752" loading="lazy" alt="Which classes have nodes in the committed graphs">
+<div class="row"><p class="cap"><span class="n"></span>Which classes have nodes in the committed graphs</p><button type="button" data-c="Which classes have nodes in the committed graphs">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-sources-inventory.png" download>PNG</a><a href="img/cl-sources-inventory.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:DataSource
+    geolod:PalaeoclimateDataCatalogue }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:DataSource
+    geolod:PalaeoclimateDataCatalogue }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class">Copy</button></div><p class="note">Run on the committed graphs with the ontology files and compared with a count in Python: 2 of 2 classes have asserted nodes.</p></section>
+<section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:DataSource</code></td><td>Data Source</td><td>A citable source (database, repository, publication) from which palaeoclimate observations were obtained.</td><td><code>crm:E73_Information_Object</code></td></tr><tr><td><code>geolod:PalaeoclimateDataCatalogue</code></td><td>Palaeoclimate Data Catalogue</td><td>A DCAT catalogue aggregating palaeoclimate datasets.</td><td><code>crm:E78_Curated_Holding</code></td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>
