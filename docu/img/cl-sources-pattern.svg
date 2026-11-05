@@ -1,0 +1,55 @@
+<svg width="1900" height="692" viewBox="0 0 1900 692" xmlns="http://www.w3.org/2000/svg" role="img"><title>From a catalogue to a source</title>
+<rect width="1900" height="692" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">Catalogue, dataset, source: three nodes, and every observation points to the third</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">The EPICA methane record, every row read from the committed graph; a dataset names its source, and so does each of its observations.</text>
+<rect x="50" y="150" width="590" height="412" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="68" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">The catalogue: epica:catalog</text>
+<text x="68" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:PalaeoclimateDataCatalogue and dcat:Catalog</text>
+<text x="68" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:title</text>
+<text x="622" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">EPICA Dome C ice core - linked…</text>
+<text x="68" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:publisher</text>
+<text x="622" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">PANGAEA - Data Publisher for …</text>
+<text x="68" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:created</text>
+<text x="622" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2026-08-08</text>
+<text x="68" y="386" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dcat:dataset</text>
+<rect x="68" y="402" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="345.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">epica:dataset_ch4</text>
+<text x="345.0" y="435" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:IceCoreDataset</text>
+<text x="68" y="479.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">datasets in the catalogue</text>
+<text x="622" y="479.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">5</text>
+<rect x="670" y="150" width="590" height="412" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="688" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">A dataset: epica:dataset_ch4</text>
+<text x="688" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:IceCoreDataset, a dcat:Dataset and a prov:Entity</text>
+<text x="688" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:title</text>
+<text x="1242" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">EPICA Dome C - methane (CH4)</text>
+<text x="688" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:license</text>
+<text x="1242" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 3.0</text>
+<text x="688" y="344" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:source</text>
+<rect x="688" y="360" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="965.0" y="374" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">epica:source_ch4</text>
+<text x="965.0" y="393" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:DataSource</text>
+<text x="688" y="430" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:hasObservation</text>
+<rect x="688" y="446" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="965.0" y="460" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">epica:obs_ch4_0001</text>
+<text x="965.0" y="479" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:IceCoreObservation</text>
+<text x="688" y="523.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">observations of the dataset</text>
+<text x="1242" y="523.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">736</text>
+<rect x="1290" y="150" width="590" height="412" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="1308" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">A source: epica:source_ch4</text>
+<text x="1308" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:DataSource, a crm:E73 and a prov:Entity</text>
+<text x="1308" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rdfs:label</text>
+<text x="1862" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Spahni &amp; Stocker (2006)</text>
+<text x="1308" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:creator</text>
+<text x="1862" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Spahni, R.; Stocker, T. F.</text>
+<text x="1308" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:date</text>
+<text x="1862" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">2006</text>
+<text x="1308" y="393.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:license</text>
+<text x="1862" y="393.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">CC BY 3.0</text>
+<text x="1308" y="435.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">dct:source</text>
+<text x="1862" y="435.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">&lt;https://doi.org/10.1594/PAN…</text>
+<text x="1308" y="477.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">observations citing it</text>
+<text x="1862" y="477.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">736</text>
+<text x="50" y="630" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The dataset names its source with dct:source, each observation with prov:wasDerivedFrom: the same source at two levels, so a reader can start from either.</text>
+<text x="50" y="660" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">The licence is a property of the source and of the dataset; the observations carry none of their own.</text>
+</svg>

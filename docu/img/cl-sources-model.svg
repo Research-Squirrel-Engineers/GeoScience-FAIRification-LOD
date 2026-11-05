@@ -1,0 +1,14 @@
+<svg width="1750" height="344" viewBox="0 0 1750 344" xmlns="http://www.w3.org/2000/svg" role="img"><title>Cluster: Sources and provenance</title>
+<rect width="1750" height="344" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="106" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Classes of the cluster with no relation of their own in the ontology</text>
+<rect x="50.0" y="128.0" width="286.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="193.0" y="159.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">DataSource</text>
+<rect x="356.0" y="128.0" width="286.0" height="62.0" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="499.0" y="159.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" font-weight="500" fill="#000000">PalaeoclimateDataCatalogue</text>
+<rect x="636.8" y="263" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="668.8" y="274" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">geolod:</text>
+<rect x="768.5999999999999" y="263" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="800.5999999999999" y="274" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">dashed: class of another cluster</text>
+<text x="50" y="318" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Arrows run from domain to range; a hollow head marks a subclass; the second line names the CRM-family class a class reaches. Datatype properties are in the tables.</text>
+</svg>

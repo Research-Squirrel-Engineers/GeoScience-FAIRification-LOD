@@ -1,0 +1,69 @@
+<svg width="1900" height="776" viewBox="0 0 1900 776" xmlns="http://www.w3.org/2000/svg" role="img"><title>One archaeological reading on two kinds of place</title>
+<rect width="1900" height="776" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">The same four statements on a cave and on a findspot, and a findspot without them</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">The properties sit on crm:E27_Site, so both branches use them; their absence is not a negative result.</text>
+<rect x="50" y="150" width="590" height="496" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="68" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">A cave, read: geolod:Cave_site_0077</text>
+<text x="68" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:ArchaeologicalCaveSite, a geolod:Cave and a crmarchaeo:A2</text>
+<text x="68" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rdfs:label</text>
+<text x="622" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Chauvet cave</text>
+<text x="68" y="302" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:archaeologicalBroaderContext</text>
+<rect x="68" y="318" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="345.0" y="332" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:PalaeolithicContext</text>
+<text x="345.0" y="351" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:ArchaeologicalContext</text>
+<text x="68" y="395.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:archaeologicalCategory</text>
+<text x="622" y="395.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Palaeolithic Art</text>
+<text x="68" y="437.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:archaeologicalConfidence</text>
+<text x="622" y="437.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">high</text>
+<text x="68" y="479.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:screenedForArchaeology</text>
+<text x="622" y="479.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">true</text>
+<text x="68" y="521.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">owl:sameAs</text>
+<text x="622" y="521.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">wikidata:Q191483</text>
+<text x="68" y="556" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">prov:wasDerivedFrom</text>
+<rect x="68" y="572" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="345.0" y="586" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:GeoLodSiteAnnotations_DataSource</text>
+<text x="345.0" y="605" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:DataSource</text>
+<rect x="670" y="150" width="590" height="496" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="688" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">A findspot, read: ci:cisite_42</text>
+<text x="688" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:CIArchaeologicalSite, a geolod:CIFindspot and a crmarchaeo:A2</text>
+<text x="688" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">skos:note</text>
+<text x="1242" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Long Palaeolithic sequence ca…</text>
+<text x="688" y="302" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:archaeologicalBroaderContext</text>
+<rect x="688" y="318" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="965.0" y="332" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:PalaeolithicContext</text>
+<text x="965.0" y="351" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:ArchaeologicalContext</text>
+<text x="688" y="395.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:archaeologicalCategory</text>
+<text x="1242" y="395.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Cave Site</text>
+<text x="688" y="437.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:archaeologicalConfidence</text>
+<text x="1242" y="437.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">high</text>
+<text x="688" y="479.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:screenedForArchaeology</text>
+<text x="1242" y="479.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">true</text>
+<text x="688" y="521.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">skos:closeMatch</text>
+<text x="1242" y="521.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">wikidata:Q2037533</text>
+<text x="688" y="556" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">prov:wasDerivedFrom</text>
+<rect x="688" y="572" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="965.0" y="586" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">geolod:GeoLodCIAnnotations_DataSource</text>
+<text x="965.0" y="605" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">geolod:DataSource</text>
+<rect x="1290" y="150" width="590" height="496" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2"/>
+<text x="1308" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">A findspot, not read: ci:cisite_1</text>
+<text x="1308" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:CIFindspot only: no statement about archaeology</text>
+<text x="1308" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rdfs:label</text>
+<text x="1862" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Acerra Sink</text>
+<text x="1308" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:hasLiteratureReference</text>
+<text x="1862" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">Scandone et al., 1991</text>
+<text x="1308" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:screenedForArchaeology</text>
+<text x="1862" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">no statement</text>
+<text x="1308" y="386" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geo:hasGeometry</text>
+<rect x="1308" y="402" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="1585.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">ci:cisite_1_geom</text>
+<text x="1585.0" y="435" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">crmgeo:SP6_Declarative_Place</text>
+<text x="1308" y="479.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">geolod:hasCertaintyLevel</text>
+<text x="1862" y="479.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">medium, on the geometry</text>
+<text x="1308" y="514" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">prov:wasDerivedFrom</text>
+<rect x="1308" y="530" width="554" height="48" rx="7" fill="#fff2cc" stroke="#000000" stroke-width="1.1"/>
+<text x="1585.0" y="544" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">github.com/…/campanian-ignimbrite-geo</text>
+<text x="1585.0" y="563" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">a repository, no node of its own in the graph</text>
+<text x="50" y="714" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">Chauvet cave and the CI findspots are read from the committed graphs; every row is a statement of the node above it.</text>
+<text x="50" y="744" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">A property that is missing says that nobody has looked (a different statement from 'looked and found nothing'), which the page counts on the next figure.</text>
+</svg>

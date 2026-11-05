@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archaeology and the Campanian Ignimbrite · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a href="crosswalk.html">Crosswalk</a><a href="instances.html">Instance models</a><a href="slides.html">Slide figures</a><a href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Clusters</span><span class="lnk"><a href="clusters.html">Overview</a><a href="cluster-chronology.html">Chronology</a><a href="cluster-mis.html">Marine isotope stages</a><a href="cluster-archives.html">Archives and sampling</a><a href="cluster-measurement.html">Observation and measurement</a><a class="on" href="cluster-archaeology.html">Archaeology and the CI</a><a href="cluster-sources.html">Sources and provenance</a></span></div><div class="grp"><span class="lab">Ontology pages</span><span class="lnk"><a href="../semweb/index.html">Overall</a><a href="../semweb/featurecollections.html">Feature collections</a><a href="../semweb/AllPalaeoclimateSites_Collection/index.html">All sites</a><a href="../semweb/SISAL_Cave_Collection/index.html">SISAL caves</a><a href="../semweb/ci/CIFindspotCollection/index.html">CI findspots</a><a href="../semweb/IceCore_collection/index.html">Ice cores</a><a href="../semweb/DrillingSite_collection/index.html">Drilling sites</a><a href="../semweb/Dataset_collection/index.html">Datasets</a><a href="../semweb/Catalog_collection/index.html">Catalogues</a></span></div></nav>
+<h1>Archaeology and the Campanian Ignimbrite</h1>
+<p class="intro">Cave sites and CI findspots with archaeological evidence, and the context vocabulary that classifies them. All clusters are on the <a href="clusters.html">overview</a>.</p>
+<h2>Model</h2>
+<section>
+<img src="img/cl-archaeology-model.png" width="3500" height="1072" loading="lazy" alt="Cluster graph: Archaeology and the Campanian Ignimbrite">
+<div class="row"><p class="cap"><span class="n"></span>Cluster graph: Archaeology and the Campanian Ignimbrite</p><button type="button" data-c="Cluster graph: Archaeology and the Campanian Ignimbrite">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archaeology-model.png" download>PNG</a><a href="img/cl-archaeology-model.svg" download>SVG</a></p>
+</section>
+<h2>Modelling pattern</h2>
+<section>
+<img src="img/cl-archaeology-pattern.png" width="3800" height="1552" loading="lazy" alt="One archaeological reading on two kinds of place">
+<div class="row"><p class="cap"><span class="n"></span>One archaeological reading on two kinds of place</p><button type="button" data-c="One archaeological reading on two kinds of place">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archaeology-pattern.png" download>PNG</a><a href="img/cl-archaeology-pattern.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# What the graphs say about the three nodes of the pattern figure: a cave read for archaeology, a findspot read, a findspot not read.
+SELECT ?site ?property ?value WHERE {
+  VALUES ?site { geolod:Cave_site_0077 ci:cisite_43 ci:cisite_1 }
+  ?site ?property ?value .
+} ORDER BY ?site ?property ?value</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# What the graphs say about the three nodes of the pattern figure: a cave read for archaeology, a findspot read, a findspot not read.
+SELECT ?site ?property ?value WHERE {
+  VALUES ?site { geolod:Cave_site_0077 ci:cisite_43 ci:cisite_1 }
+  ?site ?property ?value .
+} ORDER BY ?site ?property ?value">Copy</button></div><p class="note">Run on the committed graphs: 79 statements about the three nodes of the figure; the rows of each card are among them.</p></section>
+<h2>In the data</h2>
+<section>
+<img src="img/cl-archaeology-screening.png" width="3500" height="1400" loading="lazy" alt="Looked at, found, not looked at">
+<div class="row"><p class="cap"><span class="n"></span>Looked at, found, not looked at</p><button type="button" data-c="Looked at, found, not looked at">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archaeology-screening.png" download>PNG</a><a href="img/cl-archaeology-screening.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# Per kind of place: how many, how many have been screened for archaeology, how many carry archaeological evidence.
+SELECT ?kind (COUNT(DISTINCT ?site) AS ?places) (COUNT(DISTINCT ?screened) AS ?screened_places)
+       (COUNT(DISTINCT ?positive) AS ?typed_archaeological) (COUNT(DISTINCT ?both) AS ?typed_and_screened) WHERE {
+  { ?site a geolod:Cave . BIND(&quot;caves&quot; AS ?kind) } UNION { ?site a geolod:CIFindspot . BIND(&quot;CI findspots&quot; AS ?kind) }
+  OPTIONAL { ?site geolod:screenedForArchaeology true . BIND(?site AS ?screened) }
+  OPTIONAL { ?site a ?evidence . FILTER(?evidence IN (geolod:ArchaeologicalCaveSite, geolod:CIArchaeologicalSite)) BIND(?site AS ?positive) }
+  BIND(IF(BOUND(?screened) &amp;&amp; BOUND(?positive), ?site, ?nothing) AS ?both)
+} GROUP BY ?kind ORDER BY ?kind</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# Per kind of place: how many, how many have been screened for archaeology, how many carry archaeological evidence.
+SELECT ?kind (COUNT(DISTINCT ?site) AS ?places) (COUNT(DISTINCT ?screened) AS ?screened_places)
+       (COUNT(DISTINCT ?positive) AS ?typed_archaeological) (COUNT(DISTINCT ?both) AS ?typed_and_screened) WHERE {
+  { ?site a geolod:Cave . BIND(&quot;caves&quot; AS ?kind) } UNION { ?site a geolod:CIFindspot . BIND(&quot;CI findspots&quot; AS ?kind) }
+  OPTIONAL { ?site geolod:screenedForArchaeology true . BIND(?site AS ?screened) }
+  OPTIONAL { ?site a ?evidence . FILTER(?evidence IN (geolod:ArchaeologicalCaveSite, geolod:CIArchaeologicalSite)) BIND(?site AS ?positive) }
+  BIND(IF(BOUND(?screened) &amp;&amp; BOUND(?positive), ?site, ?nothing) AS ?both)
+} GROUP BY ?kind ORDER BY ?kind">Copy</button></div><p class="note">Run on the committed graphs and compared with the figure: 37 of 365 caves and 12 of 74 findspots carry an archaeological class; 37 and 3 of them also have a curated reading.</p></section>
+<section>
+<img src="img/cl-archaeology-context.png" width="3500" height="1420" loading="lazy" alt="Archaeological sites by broader context and confidence">
+<div class="row"><p class="cap"><span class="n"></span>Archaeological sites by broader context and confidence</p><button type="button" data-c="Archaeological sites by broader context and confidence">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archaeology-context.png" download>PNG</a><a href="img/cl-archaeology-context.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+SELECT ?kind ?context ?confidence (COUNT(?site) AS ?sites) WHERE {
+  ?site geolod:archaeologicalBroaderContext ?context ;
+        geolod:archaeologicalConfidence ?confidence .
+  BIND(IF(EXISTS { ?site a geolod:CIArchaeologicalSite }, &quot;CI&quot;, &quot;cave&quot;) AS ?kind)
+} GROUP BY ?kind ?context ?confidence ORDER BY ?kind ?context ?confidence</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+SELECT ?kind ?context ?confidence (COUNT(?site) AS ?sites) WHERE {
+  ?site geolod:archaeologicalBroaderContext ?context ;
+        geolod:archaeologicalConfidence ?confidence .
+  BIND(IF(EXISTS { ?site a geolod:CIArchaeologicalSite }, &quot;CI&quot;, &quot;cave&quot;) AS ?kind)
+} GROUP BY ?kind ?context ?confidence ORDER BY ?kind ?context ?confidence">Copy</button></div><p class="note">Run on the committed graphs and compared with the figure: 40 sites.</p></section>
+<section>
+<img src="img/cl-archaeology-map.png" width="3500" height="3318" loading="lazy" alt="Campanian Ignimbrite findspots and archaeological caves">
+<div class="row"><p class="cap"><span class="n"></span>Campanian Ignimbrite findspots and archaeological caves</p><button type="button" data-c="Campanian Ignimbrite findspots and archaeological caves">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archaeology-map.png" download>PNG</a><a href="img/cl-archaeology-map.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# The findspots of the map: position and the certainty of the position (a statement on the geometry node).
+SELECT ?site ?wkt ?certainty WHERE {
+  ?site a geolod:CIFindspot ;
+        geo:hasGeometry ?geom .
+  ?geom geo:asWKT ?wkt .
+  OPTIONAL { ?geom geolod:hasCertaintyLevel ?certainty }
+} ORDER BY ?site</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+# The findspots of the map: position and the certainty of the position (a statement on the geometry node).
+SELECT ?site ?wkt ?certainty WHERE {
+  ?site a geolod:CIFindspot ;
+        geo:hasGeometry ?geom .
+  ?geom geo:asWKT ?wkt .
+  OPTIONAL { ?geom geolod:hasCertaintyLevel ?certainty }
+} ORDER BY ?site">Copy</button></div><p class="note">Run on ci_findspots.ttl and compared with the figure: 74 findspots; the certainty is read from the geometry node.</p></section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+SELECT ?cave ?wkt WHERE {
+  ?cave a geolod:ArchaeologicalCaveSite ;
+        geo:hasGeometry/geo:asWKT ?wkt .
+} ORDER BY ?cave</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX qudt:   &lt;http://qudt.org/schema/qudt/&gt;
+PREFIX epica:  &lt;http://w3id.org/geo-lod/epica/&gt;
+PREFIX geo:    &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX ci:     &lt;http://w3id.org/geo-lod/ci/&gt;
+PREFIX dcat:   &lt;http://www.w3.org/ns/dcat#&gt;
+
+SELECT ?cave ?wkt WHERE {
+  ?cave a geolod:ArchaeologicalCaveSite ;
+        geo:hasGeometry/geo:asWKT ?wkt .
+} ORDER BY ?cave">Copy</button></div><p class="note">Compared with the figure: 37 caves, 13 of them inside the window.</p></section>
+<section>
+<img src="img/cl-archaeology-inventory.png" width="3500" height="904" loading="lazy" alt="Which classes have nodes in the committed graphs">
+<div class="row"><p class="cap"><span class="n"></span>Which classes have nodes in the committed graphs</p><button type="button" data-c="Which classes have nodes in the committed graphs">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-archaeology-inventory.png" download>PNG</a><a href="img/cl-archaeology-inventory.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:ArchaeologicalCaveSite
+    geolod:ArchaeologicalContext
+    geolod:CIArchaeologicalSite
+    geolod:CIFindspot }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX sosa:   &lt;http://www.w3.org/ns/sosa/&gt;
+PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+
+# Per class of the cluster: nodes typed with the class itself, and nodes typed with it or a subclass.
+# Runs on the committed graphs (EPICA, SISAL cave catalogue) together with the three ontology files.
+SELECT ?class (SUM(IF(?t = ?class, 1, 0)) AS ?asserted) (COUNT(DISTINCT ?x) AS ?with_subclasses) WHERE {
+  VALUES ?class { geolod:ArchaeologicalCaveSite
+    geolod:ArchaeologicalContext
+    geolod:CIArchaeologicalSite
+    geolod:CIFindspot }
+  ?x a ?t .
+  ?t rdfs:subClassOf* ?class .
+} GROUP BY ?class">Copy</button></div><p class="note">Run on the committed graphs with the ontology files and compared with a count in Python: 4 of 4 classes have asserted nodes.</p></section>
+<section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:ArchaeologicalCaveSite</code></td><td>Archaeological Cave Site</td><td>A SISAL cave site that also carries confirmed or probable archaeological evidence (art, human occupation, skeletal remains, inscriptions). Modelling mirrors the CIArchaeologicalSite pattern from ci_pipeline.py.</td><td><code>crmarchaeo:A2_Stratigraphic_Volume_Unit</code></td></tr><tr><td><code>geolod:ArchaeologicalContext</code></td><td>Archaeological Context</td><td>Controlled vocabulary class for broader cultural-temporal context categories used in archaeological cave site classification.</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:CIArchaeologicalSite</code></td><td>CI Archaeological Site</td><td>A CI Findspot that also carries confirmed or probable archaeological evidence (artefacts, occupation layers, stratified contexts). Mirrors the ArchaeologicalCaveSite pattern in the SISAL extension.</td><td><code>crmarchaeo:A2_Stratigraphic_Volume_Unit</code></td></tr><tr><td><code>geolod:CIFindspot</code></td><td>Campanian Ignimbrite Findspot</td><td>A documented findspot of Campanian Ignimbrite tephra. Modelled as crm:E27_Site so that geometry, name, and finds can attach via standard CRM patterns.</td><td><code>crm:E27_Site</code></td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>
