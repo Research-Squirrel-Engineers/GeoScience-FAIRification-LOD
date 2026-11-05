@@ -40,3 +40,17 @@ Figures: CC BY 4.0. Code: MIT. Fonts: Fira Sans, SIL OFL 1.1, see `fonts/`.
 | `sample_graph.py` | the graph behind the query page |
 | `sparql_page.py`, `queries.yaml` | the query page and its `.rq` files; a query without rows stops the build |
 | `docu.py` | writes the six pages; `crosswalk.html` takes every class defined or used and draws its chain to the CRM family. The build fails when a class used in the data has no CRM-family ancestor |
+
+## Cluster pages (`site/clusters.html`, `site/cluster-*.html`)
+
+The data model drawn in slices: one page per thematic cluster, so that no figure has to carry all 46 classes of `geolod:`.
+
+    py visuals/build.py --only clusters
+
+| File | Role |
+|---|---|
+| `clusters.yaml` | which classes belong to which cluster; the build stops when a `geolod:` class is in no cluster or in two, or when a name is not a class. A cluster without `page` is listed as planned |
+| `cluster_figs.py` | the cluster graph (members solid, classes of other clusters as dashed edge nodes with the name of their cluster, long arrows routed above the graph) and the data figures, counted from `SISAL/rdf/sisal_v3_dating.ttl` and `data/derived/sisal/tables/` |
+| `clusters.py` | writes the overview and one page per cluster that has a `page`; the sentences under the data figures are built from the counts |
+
+Chronology and age is the first cluster page. To add the next one: give it a `page` in `clusters.yaml`, add the file to `CLUSTER_PAGES` in `site_kit.py`, and, if it has data figures, an entry in `DATA` in `clusters.py`.

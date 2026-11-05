@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chronology and age · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="../docu/index.html">Overview</a><a href="../docu/model.html">Data model</a><a href="../docu/crm-coverage.html">CRM coverage</a><a href="../docu/crosswalk.html">Crosswalk</a><a href="../docu/instances.html">Instance models</a><a href="../docu/sparql.html">Query</a></span></div><div class="grp"><span class="lab">Visuals</span><span class="lnk"><a href="index.html">Slide figures</a></span></div><div class="grp"><span class="lab">Clusters</span><span class="lnk"><a href="clusters.html">Overview</a><a class="on" href="cluster-chronology.html">Chronology</a></span></div></nav>
+<h1>Chronology and age</h1>
+<p class="intro">How a depth becomes an age; dating points, age models, the ages they give one sample, and the breaks in the growth. All clusters are on the <a href="clusters.html">overview</a>.</p>
+<h2>Model</h2>
+<section>
+<img src="img/cl-chronology-model.png" width="4088" height="1660" loading="lazy" alt="Cluster graph: Chronology and age">
+<div class="row"><p class="cap"><span class="n"></span>Cluster graph: Chronology and age</p><button type="button" data-c="Cluster graph: Chronology and age">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-chronology-model.png" download>PNG</a><a href="img/cl-chronology-model.svg" download>SVG</a></p>
+</section>
+<h2>Modelling pattern</h2>
+<section>
+<img src="img/cl-chronology-age-pattern.png" width="3500" height="2260" loading="lazy" alt="An age as a property and as geolod:AgeAssignment">
+<div class="row"><p class="cap"><span class="n"></span>An age as a property and as geolod:AgeAssignment</p><button type="button" data-c="An age as a property and as geolod:AgeAssignment">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-chronology-age-pattern.png" download>PNG</a><a href="img/cl-chronology-age-pattern.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+# All ages of one sample, with the model behind each and the one to follow.
+# Runs on the full graph SISAL/sisal_rdf.py writes, not on the committed Turtle.
+SELECT ?model ?age_ka ?status WHERE {
+  ?a a geolod:AgeAssignment ;
+     &lt;http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to&gt; sisal:sample_26516 ;
+     geolod:ageModel ?model ;
+     geolod:ageKaBP ?age_ka ;
+     geolod:assignmentStatus ?status .
+} ORDER BY ?model</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+# All ages of one sample, with the model behind each and the one to follow.
+# Runs on the full graph SISAL/sisal_rdf.py writes, not on the committed Turtle.
+SELECT ?model ?age_ka ?status WHERE {
+  ?a a geolod:AgeAssignment ;
+     &lt;http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to&gt; sisal:sample_26516 ;
+     geolod:ageModel ?model ;
+     geolod:ageKaBP ?age_ka ;
+     geolod:assignmentStatus ?status .
+} ORDER BY ?model">Copy</button></div><p class="note">Not run here: the assignment nodes are in the large graph the pipeline writes, not in the committed Turtle.</p></section>
+<h2>In the data</h2>
+<section>
+<img src="img/cl-chronology-one-speleothem.png" width="3500" height="2120" loading="lazy" alt="JAR7: the age of every sample under 7 age series">
+<div class="row"><p class="cap"><span class="n"></span>JAR7: the age of every sample under 7 age series</p><button type="button" data-c="JAR7: the age of every sample under 7 age series">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-chronology-one-speleothem.png" download>PNG</a><a href="img/cl-chronology-one-speleothem.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+SELECT ?point ?depth_mm ?age_ka WHERE {
+  ?point a strat:AgeControlPoint ;
+         geolod:constrainsSpeleothem sisal:entity_00055 ;
+         geolod:atDepth_mm ?depth_mm ;
+         geolod:ageKaBP ?age_ka .
+} ORDER BY ?depth_mm</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+SELECT ?point ?depth_mm ?age_ka WHERE {
+  ?point a strat:AgeControlPoint ;
+         geolod:constrainsSpeleothem sisal:entity_00055 ;
+         geolod:atDepth_mm ?depth_mm ;
+         geolod:ageKaBP ?age_ka .
+} ORDER BY ?depth_mm">Copy</button></div><p class="note">Run on sisal_v3_dating.ttl: 40 rows, the circles of the figure. Against StalAge the series differ by up to 799 years (Bacon).</p></section>
+<section>
+<img src="img/cl-chronology-hiatus-matrix.png" width="3180" height="2598" loading="lazy" alt="Growth hiatuses and the age models that respected them">
+<div class="row"><p class="cap"><span class="n"></span>Growth hiatuses and the age models that respected them</p><button type="button" data-c="Growth hiatuses and the age models that respected them">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-chronology-hiatus-matrix.png" download>PNG</a><a href="img/cl-chronology-hiatus-matrix.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+SELECT ?model (COUNT(?h) AS ?n) WHERE {
+  ?h a geolod:GrowthHiatus ;
+     geolod:respectedByAgeModel ?model .
+} GROUP BY ?model ORDER BY DESC(?n)</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+SELECT ?model (COUNT(?h) AS ?n) WHERE {
+  ?h a geolod:GrowthHiatus ;
+     geolod:respectedByAgeModel ?model .
+} GROUP BY ?model ORDER BY DESC(?n)">Copy</button></div><p class="note">Run on sisal_v3_dating.ttl and compared with the figure: 37 hiatuses in 21 speleothems; StalAge 32, Linear interpolation 31, COPRA 30, Bchron 29, Bacon 8, Linear regression 7, OxCal 1.</p></section>
+<section>
+<img src="img/cl-chronology-control-points.png" width="3500" height="1476" loading="lazy" alt="Dating points used by each age model">
+<div class="row"><p class="cap"><span class="n"></span>Dating points used by each age model</p><button type="button" data-c="Dating points used by each age model">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-chronology-control-points.png" download>PNG</a><a href="img/cl-chronology-control-points.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+SELECT ?model (COUNT(?p) AS ?n) WHERE {
+  ?p a strat:AgeControlPoint ;
+     geolod:usedInAgeModel ?model .
+} GROUP BY ?model ORDER BY DESC(?n)</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+
+SELECT ?model (COUNT(?p) AS ?n) WHERE {
+  ?p a strat:AgeControlPoint ;
+     geolod:usedInAgeModel ?model .
+} GROUP BY ?model ORDER BY DESC(?n)">Copy</button></div><p class="note">Run on sisal_v3_dating.ttl and compared with the figure: 1841 dating points.</p></section>
+<section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:AgeAssignment</code></td><td>Age Assignment</td><td>One model&#x27;s age for one sample. Kept as an assignment and not as a bare property because a sample has as many ages as there are models that reached it, and a consumer has to be able to tell which is which.</td><td><code>crm:E13_Attribute_Assignment</code></td></tr><tr><td><code>geolod:AgeModel</code></td><td>Age Model</td><td>A named method for turning dating points into an age at every depth. SISAL v3 carries seven, and the chronology as originally published is an eighth.</td><td><code>crmsci:S6_Data_Evaluation</code></td></tr><tr><td><code>geolod:Chronology</code></td><td>Chronology</td><td>A depth-age model assigning calendar ages to positions within a palaeoclimate archive. Also a temporal reference system: an age is only meaningful together with the model that produced it, so the same node serves as the value of geolod:ageChronology on an observation and of time:hasTRS on its time position.</td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>geolod:DatingMethod</code></td><td>Dating Method</td><td>How a control point was obtained. Four values in the cut: two mass-spectrometric U/Th methods, a combination of methods, and the observation that the speleothem is still growing.</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:GrowthHiatus</code></td><td>Growth Hiatus</td><td>A surface inside a speleothem across which nothing was deposited. A statement about the archive: the time above and the time below it do not join up, however densely either is sampled.</td><td><code>crmarchaeo:A3_Stratigraphic_Interface</code></td></tr><tr><td><code>geolod:IceCoreChronology</code></td><td>Ice Core Chronology</td><td>A depth-age model for an ice core, such as EDC2, EDC3 or AICC2023. Ice cores yield two ages per depth - one for the ice, one for the air trapped in it - so a chronology that publishes both appears here as two individuals rather than one.</td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>geolod:RecordGap</code></td><td>Record Gap</td><td>SISAL&#x27;s statement that the isotope record does not cover this position. An assignment, not an interface: the carbonate is there, the measurements are not, and a later study can close the gap without changing the speleothem.</td><td><code>crm:E13_Attribute_Assignment</code></td></tr><tr><td><code>geolod:UThChronology</code></td><td>U-Th Chronology</td><td>A depth-age model for a speleothem, built on U-Th dating points: the seven SISAL v3 models and the chronology as originally published. geo_lod_core.ttl names this class as the SISAL counterpart of geolod:IceCoreChronology but does not define it; defined here, so that the eight chronology individuals reach crmsci:S4_Observation through geolod:Chronology like every other class in the graph.</td><td><code>crmsci:S4_Observation</code></td></tr><tr><td><code>strat:AgeControlPoint</code></td><td>Age Control Point</td><td>A dated tie point (depth + age) that constrains the age-depth model.</td><td><code>crm:E13_Attribute_Assignment</code></td></tr><tr><td><code>strat:AgeDepthModel</code></td><td>Age-Depth Model</td><td>A depth-&gt;age model for the core (here: piecewise-linear interpolation between dated tephra tie points).</td><td><code>crmsci:S6_Data_Evaluation</code></td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>

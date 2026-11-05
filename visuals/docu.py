@@ -73,8 +73,9 @@ def prop_table(M: md.Model, mods) -> str:
     for p in M.props_of(*mods):
         dom = ", ".join(M.curie(x) for x in p.domains) or "–"
         rng = ", ".join(M.curie(x) for x in p.ranges) or "–"
+        comment = esc(p.comment) if p.comment else '<span class="timing">no comment</span>'
         rows.append(f'<tr><td><code>{esc(p.curie)}</code><small>{p.kind}</small></td><td>{esc(dom)}</td><td>{esc(rng)}</td>'
-                    f'<td>{esc(p.comment) if p.comment else "<span class=\"timing\">no comment</span>"}</td></tr>')
+                    f'<td>{comment}</td></tr>')
     return ('<div class="tbl"><table><thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Comment</th></tr></thead><tbody>'
             + "".join(rows) + "</tbody></table></div>")
 

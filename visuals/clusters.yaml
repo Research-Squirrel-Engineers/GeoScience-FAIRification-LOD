@@ -1,0 +1,50 @@
+# Thematic clusters of the geo-lod model, used by the cluster pages under visuals/ (cluster_figs.py, clusters.py).
+#
+# Every geolod: class belongs to exactly one cluster; the build stops when one is missing or listed twice. Classes of
+# strat: and an: may be listed too (they then count as members of the cluster), they are not required to be.
+# `page` is the file name under visuals/site/; a cluster without `page` is listed on the overview as planned.
+
+- id: archives
+  title: Archives and sampling
+  short: Archives
+  lead: Where the material comes from; ice cores, drilling sites, caves, speleothems and the samples cut from them.
+  classes: [geolod:Borehole, geolod:Cave, geolod:DrillingCampaign, geolod:DrillingSite, geolod:EntityStatus,
+            geolod:IceCore, geolod:IceCoreDataset, geolod:PalaeoclimateSample, geolod:SampleSection,
+            geolod:SamplingLocation, geolod:Speleothem, geolod:SpeleothemSample]
+
+- id: measurement
+  title: Observation and measurement
+  short: Measurement
+  lead: What was measured, in which quantity, and how a value was smoothed afterwards.
+  classes: [geolod:Delta13CProperty, geolod:Delta13CSpeleothemObservation, geolod:Delta18OProperty,
+            geolod:Delta18OSpeleothemObservation, geolod:DepthPosition, geolod:IceCoreObservation,
+            geolod:MeasurementType, geolod:ObservableProperty, geolod:PalaeoclimateObservation,
+            geolod:RollingMedianFilter, geolod:SavitzkyGolayFilter, geolod:SmoothingMethod,
+            geolod:SpeleothemObservation]
+
+- id: chronology
+  title: Chronology and age
+  short: Chronology
+  page: cluster-chronology.html
+  lead: How a depth becomes an age; dating points, age models, the ages they give one sample, and the breaks in the growth.
+  classes: [geolod:AgeAssignment, geolod:AgeModel, geolod:Chronology, geolod:DatingMethod, geolod:GrowthHiatus,
+            geolod:IceCoreChronology, geolod:RecordGap, geolod:UThChronology, strat:AgeControlPoint, strat:AgeDepthModel]
+
+- id: mis
+  title: Marine isotope stages
+  short: MIS
+  lead: The stage scheme observations are placed in, and the competing boundary sources behind it.
+  classes: [geolod:AssignedPropertyType, geolod:AssignmentStatus, geolod:ClimateMode, geolod:MISAttributeAssignment,
+            geolod:MISMembershipAssignment, geolod:MarineIsotopeStage, geolod:MarineIsotopeSubstage]
+
+- id: archaeology
+  title: Archaeology and the Campanian Ignimbrite
+  short: Archaeology
+  lead: Cave sites and CI findspots with archaeological evidence, and the context vocabulary that classifies them.
+  classes: [geolod:ArchaeologicalCaveSite, geolod:ArchaeologicalContext, geolod:CIArchaeologicalSite, geolod:CIFindspot]
+
+- id: sources
+  title: Sources and provenance
+  short: Sources
+  lead: The citable sources and the catalogue that gathers the datasets.
+  classes: [geolod:DataSource, geolod:PalaeoclimateDataCatalogue]

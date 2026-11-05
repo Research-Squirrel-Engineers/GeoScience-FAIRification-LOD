@@ -802,11 +802,14 @@ def slides():
 def main(argv=None):
     import argparse
     ap = argparse.ArgumentParser(description="Slide figures (visuals/site/) and the documentation pages (docu/).")
-    ap.add_argument("--only", choices=["slides", "docu"], help="build one of the two; default is both")
+    ap.add_argument("--only", choices=["slides", "clusters", "docu"], help="build one of the three; default is all")
     args = ap.parse_args(argv)
-    if args.only != "docu":
+    if args.only in (None, "slides"):
         slides()
-    if args.only != "slides":
+    if args.only in (None, "clusters"):
+        import clusters
+        clusters.main()
+    if args.only in (None, "docu"):
         import docu
         docu.main()
     return 0
