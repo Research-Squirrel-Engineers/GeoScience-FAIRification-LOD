@@ -1,0 +1,239 @@
+<svg width="1750" height="1000" viewBox="0 0 1750 1000" xmlns="http://www.w3.org/2000/svg" role="img"><title>Drill core WD1 from the Walsdorfer maar: lithology, tephra layers and one layer modelled in RDF</title>
+<rect width="1750" height="1000" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<rect x="120" y="70.0" width="130" height="1.5520000000000067" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="71.552" width="130" height="5.819999999999993" rx="0" fill="#d9d2c5" stroke="none" stroke-width="1"/>
+<rect x="120" y="77.372" width="130" height="2.328000000000003" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="79.7" width="130" height="1.1640000000000015" rx="0" fill="#d9d2c5" stroke="none" stroke-width="1"/>
+<rect x="120" y="80.864" width="130" height="6.013999999999996" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="86.878" width="130" height="19.206000000000003" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="106.084" width="130" height="10.960999999999984" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="117.04499999999999" width="130" height="11.155000000000001" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="128.2" width="130" height="2.716000000000008" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="130.916" width="130" height="1.454999999999984" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="132.37099999999998" width="130" height="3.298000000000002" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="135.66899999999998" width="130" height="12.416000000000025" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="148.085" width="130" height="5.140999999999991" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="153.226" width="130" height="8.438999999999993" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="161.665" width="130" height="2.52200000000002" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="164.187" width="130" height="12.512999999999977" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="176.7" width="130" height="1.745999999999981" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="186.39999999999998" width="130" height="0.7760000000000105" rx="0" fill="#d9d2c5" stroke="none" stroke-width="1"/>
+<rect x="120" y="193.38400000000001" width="130" height="0.2909999999999968" rx="0" fill="#d9d2c5" stroke="none" stroke-width="1"/>
+<rect x="120" y="195.61499999999998" width="130" height="10.185000000000002" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="205.79999999999998" width="130" height="7.275000000000006" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="213.754" width="130" height="7.5660000000000025" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="221.32" width="130" height="22.115999999999985" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="243.43599999999998" width="130" height="1.5519999999999925" rx="0" fill="#d9d2c5" stroke="none" stroke-width="1"/>
+<rect x="120" y="244.98799999999997" width="130" height="14.162000000000006" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="259.15" width="130" height="4.850000000000023" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="265.93999999999994" width="130" height="22.31000000000006" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="288.25" width="130" height="0.48500000000001364" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="288.735" width="130" height="9.214999999999975" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="297.95" width="130" height="0.48500000000001364" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="298.435" width="130" height="30.55499999999995" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="328.98999999999995" width="130" height="0.19400000000001683" rx="0" fill="#d9d2c5" stroke="none" stroke-width="1"/>
+<rect x="120" y="329.18399999999997" width="130" height="8.826999999999998" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="340.145" width="130" height="28.61500000000001" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="368.76" width="130" height="118.33999999999997" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="487.09999999999997" width="130" height="4.850000000000023" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="491.95" width="130" height="13.579999999999984" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="505.53" width="130" height="11.639999999999986" rx="0" fill="#f6efc4" stroke="none" stroke-width="1"/>
+<rect x="120" y="517.17" width="130" height="5.140999999999963" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="522.3109999999999" width="130" height="13.288999999999987" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="535.5999999999999" width="130" height="3.3950000000000955" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="538.995" width="130" height="5.140999999999963" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="545.3" width="130" height="4.850000000000023" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="555.0" width="130" height="1.4549999999999272" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="556.94" width="130" height="7.759999999999991" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="564.7" width="130" height="21.339999999999918" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="586.04" width="130" height="0.9700000000000273" rx="0" fill="#e6b8a8" stroke="none" stroke-width="1"/>
+<rect x="120" y="587.01" width="130" height="6.789999999999964" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="594.867" width="130" height="6.499000000000024" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="601.366" width="130" height="2.1340000000000146" rx="0" fill="#dfc7c0" stroke="none" stroke-width="1"/>
+<rect x="120" y="603.5" width="130" height="4.849999999999909" rx="0" fill="#e6b8a8" stroke="none" stroke-width="1"/>
+<rect x="120" y="608.3499999999999" width="130" height="12.22199999999998" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="620.5719999999999" width="130" height="2.328000000000088" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="622.9" width="130" height="12.02800000000002" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="636.286" width="130" height="1.1639999999999873" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="637.4499999999999" width="130" height="4.850000000000023" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="645.598" width="130" height="8.535999999999945" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="654.91" width="130" height="8.438999999999965" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="671.4" width="130" height="9.699999999999932" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="681.0999999999999" width="130" height="14.550000000000068" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="699.7239999999999" width="130" height="3.201000000000022" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="702.925" width="130" height="3.880000000000109" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<rect x="120" y="706.8050000000001" width="130" height="1.6489999999997735" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="709.909" width="130" height="4.171000000000049" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="714.08" width="130" height="2.716000000000008" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="720.3849999999999" width="130" height="3.201000000000022" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="725.526" width="130" height="9.699999999999932" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="735.2259999999999" width="130" height="1.6490000000001146" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<rect x="120" y="736.875" width="130" height="2.4249999999999545" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="742.9859999999999" width="130" height="1.455000000000041" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="744.732" width="130" height="2.8129999999998745" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="749.6789999999999" width="130" height="9.312000000000126" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="758.991" width="130" height="0.6789999999998599" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<rect x="120" y="759.6699999999998" width="130" height="19.109000000000037" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="778.7789999999999" width="130" height="14.841000000000008" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="800.41" width="130" height="6.789999999999964" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="807.1999999999999" width="130" height="38.80000000000007" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="846.0" width="130" height="16.198999999999955" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="863.6539999999999" width="130" height="30.846000000000004" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="894.4999999999999" width="130" height="4.850000000000023" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="899.3499999999999" width="130" height="4.850000000000023" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="904.1999999999999" width="130" height="1.2609999999999673" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="120" y="908.371" width="130" height="0.6789999999999736" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="909.05" width="130" height="0.9699999999999136" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="120" y="910.0199999999999" width="130" height="1.164000000000101" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="911.766" width="130" height="2.1340000000000146" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="120" y="178.44599999999997" width="130" height="7.954000000000008" rx="0" fill="#5c6f82" stroke="none" stroke-width="1"/>
+<rect x="120" y="187.176" width="130" height="6.208000000000027" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="193.675" width="130" height="3" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="120" y="213.075" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="264.0" width="130" height="3" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="120" y="338.01099999999997" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="544.136" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="550.15" width="130" height="4.850000000000023" rx="0" fill="#5c6f82" stroke="none" stroke-width="1"/>
+<rect x="120" y="556.4549999999999" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="593.8" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="634.928" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="642.3" width="130" height="3.298000000000002" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="654.1339999999999" width="130" height="3" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="663.3489999999999" width="130" height="8.051000000000045" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="695.65" width="130" height="4.073999999999955" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="708.4539999999998" width="130" height="3" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="716.796" width="130" height="3.588999999999828" rx="0" fill="#1f1f1d" stroke="none" stroke-width="1"/>
+<rect x="120" y="723.5859999999999" width="130" height="3" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="739.3" width="130" height="3.685999999999922" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="744.4409999999999" width="130" height="3" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="747.5449999999998" width="130" height="3" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="793.6199999999999" width="130" height="6.790000000000077" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="862.199" width="130" height="3" rx="0" fill="#8a8a84" stroke="none" stroke-width="1"/>
+<rect x="120" y="905.4609999999999" width="130" height="3" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="120" y="911.184" width="130" height="3" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="120" y="70.0" width="130" height="843.9" rx="0" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="185" y="40" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">WD1, 87 m</text>
+<line x1="112" y1="70.0" x2="120" y2="70.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="70.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">0 m</text>
+<line x1="112" y1="167.0" x2="120" y2="167.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="167.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">10 m</text>
+<line x1="112" y1="264.0" x2="120" y2="264.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="264.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">20 m</text>
+<line x1="112" y1="361.0" x2="120" y2="361.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="361.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">30 m</text>
+<line x1="112" y1="458.0" x2="120" y2="458.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="458.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">40 m</text>
+<line x1="112" y1="555.0" x2="120" y2="555.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="555.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">50 m</text>
+<line x1="112" y1="652.0" x2="120" y2="652.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="652.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">60 m</text>
+<line x1="112" y1="749.0" x2="120" y2="749.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="749.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">70 m</text>
+<line x1="112" y1="846.0" x2="120" y2="846.0" stroke="#55544f" stroke-width="1"/>
+<text x="104" y="846.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">80 m</text>
+<line x1="112" y1="913.9" x2="120" y2="913.9" stroke="#55544f" stroke-width="1"/>
+<line x1="250" y1="195.61499999999998" x2="272" y2="195.61499999999998" stroke="#9a3412" stroke-width="2"/>
+<text x="280" y="195.61499999999998" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#9a3412">JWT  132 ka</text>
+<line x1="250" y1="265.93999999999994" x2="272" y2="265.93999999999994" stroke="#9a3412" stroke-width="2"/>
+<text x="280" y="265.93999999999994" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#9a3412">GLT  151 ± 11 ka</text>
+<line x1="250" y1="908.371" x2="272" y2="908.371" stroke="#9a3412" stroke-width="2"/>
+<text x="280" y="870.371" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#9a3412">HBT  215 ± 4 ka</text>
+<text x="280" y="935.9" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#9a3412">WDT  216,286 yr b2k ± 4 ka, conservative upper limit</text>
+<text x="280" y="380.4" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#1f1f1d">170–140 ka</text>
+<text x="280" y="406.4" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">silt–clay lamination</text>
+<text x="280" y="632.5999999999999" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#1f1f1d">199–177 ka</text>
+<text x="280" y="658.5999999999999" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">15 tephra layers</text>
+<text x="280" y="816.9" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#1f1f1d">217–199 ka</text>
+<text x="280" y="842.9" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">gyttja and sapropel</text>
+<path d="M 250 899.3499999999999 L 545 899.3499999999999 L 570 434" fill="none" stroke="#55544f" stroke-width="1.6" stroke-dasharray="7 6"/>
+<path d="M 250 913.9 L 570 913.9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-dasharray="7 6"/>
+<rect x="570" y="434.0" width="120" height="160.0" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="570" y="594.0" width="120" height="41.599999999998545" rx="0" fill="#e7d3b0" stroke="none" stroke-width="1"/>
+<rect x="570" y="731.6000000000022" width="120" height="22.399999999997817" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="570" y="754.0" width="120" height="31.99999999999818" rx="0" fill="#eeeeec" stroke="none" stroke-width="1"/>
+<rect x="570" y="785.9999999999982" width="120" height="38.400000000001455" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="570" y="843.6000000000004" width="120" height="70.39999999999964" rx="0" fill="#b8bcc0" stroke="none" stroke-width="1"/>
+<rect x="570" y="635.5999999999985" width="120" height="96.00000000000364" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="570" y="824.3999999999996" width="120" height="19.200000000000728" rx="0" fill="#9a3412" stroke="none" stroke-width="1"/>
+<rect x="570" y="434.0" width="120" height="480.0" rx="0" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="630.0" y="406" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#1f1f1d">85.5 to 87 m</text>
+<text x="560" y="434.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">85.5</text>
+<text x="560" y="594.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">86</text>
+<text x="560" y="754.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">86.5</text>
+<text x="560" y="914.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">87</text>
+<text x="700" y="683.6000000000004" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#9a3412">HBT</text>
+<text x="700" y="834.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#9a3412">WDT</text>
+<line x1="752" y1="683.6000000000004" x2="798" y2="564" stroke="#55544f" stroke-width="1.6" stroke-dasharray="7 6"/>
+<text x="800" y="46" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">One layer as a graph</text>
+<rect x="800" y="514" width="400" height="100" rx="6" fill="#e2e8f0" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="1000.0" y="551.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#000000">wd1:unit_HBT</text>
+<text x="1000.0" y="578.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">86.13–86.43 m, a strat:TephraLayer</text>
+<rect x="800" y="218" width="400" height="100" rx="6" fill="#e2e8f0" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="1000.0" y="255.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#000000">Gyttja above</text>
+<text x="1000.0" y="282.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">yellow and brown, 86.00–86.13 m</text>
+<rect x="1310" y="70" width="410" height="100" rx="6" fill="#166534" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="1515.0" y="107.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#ffffff">wd1:WD1</text>
+<text x="1515.0" y="134.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#ffffff">a strat:Core, 87 m</text>
+<rect x="1310" y="218" width="410" height="100" rx="6" fill="#4c1d95" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="1515.0" y="255.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#ffffff">HBT</text>
+<text x="1515.0" y="282.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#ffffff">Hüttenberg Tephra, marker concept</text>
+<rect x="1310" y="366" width="410" height="100" rx="6" fill="#9a3412" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="1515.0" y="403.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#ffffff">Hüttenberg eruption</text>
+<text x="1515.0" y="430.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#ffffff">a strat:Eruption, 215 ± 4 ka</text>
+<rect x="1310" y="514" width="410" height="100" rx="6" fill="#e2e8f0" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="1515.0" y="551.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#000000">samples 36 to 38</text>
+<text x="1515.0" y="578.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">an:Specimen, leucite detected</text>
+<path d="M 1200 564 L 1250 564 L 1250 120 L 1308 120" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1250" y1="268" x2="1308" y2="268" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1250" y1="416" x2="1308" y2="416" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1200" y1="564" x2="1308" y2="564" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1310" y="39" width="126.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1373.1" y="54" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:partOfCore</text>
+<rect x="1310" y="187" width="147.7" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1383.85" y="202" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:markerTephra</text>
+<rect x="1310" y="335" width="192.1" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1406.05" y="350" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:producedByEruption</text>
+<rect x="1310" y="483" width="155.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1387.6" y="498" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:hostsSpecimen</text>
+<line x1="1000" y1="318" x2="1000" y2="512" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="953.4" y="401" width="93.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1000.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">strat:meets</text>
+<text x="800" y="655" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#1f1f1d">Depth is measured, age is modelled</text>
+<text x="800" y="689" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#55544f">Anchors: HBT 40Ar/39Ar at 86.43 m, GLT at 20.20 m</text>
+<text x="800" y="720" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#55544f">Primary tephra are isochrons; reworked layers do not date the sediment</text>
+<text x="800" y="751" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#55544f">Dashed: strat: classes exist in geo-lod, WD1 instances and IRIs are illustrative</text>
+<rect x="800" y="789" width="22" height="22" rx="3" fill="#e7d3b0" stroke="#000000" stroke-width="1"/>
+<text x="832" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Gyttja</text>
+<rect x="918.5" y="789" width="22" height="22" rx="3" fill="#b8bcc0" stroke="#000000" stroke-width="1"/>
+<text x="950.5" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Sapropel</text>
+<rect x="1064.0" y="789" width="22" height="22" rx="3" fill="#f6efc4" stroke="#000000" stroke-width="1"/>
+<text x="1096.0" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Silt–clay lamination</text>
+<rect x="1302.6" y="789" width="22" height="22" rx="3" fill="#dfc7c0" stroke="#000000" stroke-width="1"/>
+<text x="1334.6" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Rubble</text>
+<rect x="1431.6" y="789" width="22" height="22" rx="3" fill="#e6b8a8" stroke="#000000" stroke-width="1"/>
+<text x="1463.6" y="800" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Landslide</text>
+<rect x="800" y="827" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="832" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Calcite</text>
+<rect x="926.1" y="827" width="22" height="22" rx="3" fill="#d9d2c5" stroke="#000000" stroke-width="1"/>
+<text x="958.1" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Other</text>
+<rect x="1043.1" y="827" width="22" height="22" rx="3" fill="#eeeeec" stroke="#000000" stroke-width="1"/>
+<text x="1075.1" y="838" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Not described</text>
+<rect x="800" y="865" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="832" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Marker tephra</text>
+<rect x="990.9" y="865" width="22" height="22" rx="3" fill="#1f1f1d" stroke="#000000" stroke-width="1"/>
+<text x="1022.9" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Primary tephra</text>
+<rect x="1188.5" y="865" width="22" height="22" rx="3" fill="#8a8a84" stroke="#000000" stroke-width="1"/>
+<text x="1220.5" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Reworked tephra</text>
+<rect x="1404.7" y="865" width="22" height="22" rx="3" fill="#5c6f82" stroke="#000000" stroke-width="1"/>
+<text x="1436.7" y="876" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Tephra, not classified</text>
+<rect x="800" y="903" width="22" height="22" rx="3" fill="#166534" stroke="#000000" stroke-width="1"/>
+<text x="832" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Physical object</text>
+<rect x="997.8" y="903" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="1029.8" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Instance</text>
+<rect x="1139.5" y="903" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1171.5" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Class</text>
+<rect x="1251.8" y="903" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1283.8" y="914" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Concept</text>
+<text x="800" y="958" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Schenk et al. 2026, Quaternary 9, 67; tables CC BY 4.0, Fiona Schenk (wdt-tables)</text>
+</svg>
