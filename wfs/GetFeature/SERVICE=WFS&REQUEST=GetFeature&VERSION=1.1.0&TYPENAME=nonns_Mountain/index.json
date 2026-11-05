@@ -1,1 +1,1 @@
-{"title": "Mountain", "id": "onns_Mountain", "links": [], "itemType": "feature", "extent": {"spatial": {"bbox": [14.2479, 40.8312, 14.2479, 40.8312], "crs": "http://www.opengis.net/def/crs/EPSG/0/EPSG:4326"}}, "crs": "http://www.opengis.net/def/crs/EPSG/0/EPSG:4326"}
+{"title":"Mountain","id":"onns_Mountain","links":[],"itemType":"feature","extent":{"spatial":{"bbox":[14.2479,40.8312,14.2479,40.8312],"crs":"http://www.opengis.net/def/crs/EPSG/0/EPSG:4326"}},"crs":"http://www.opengis.net/def/crs/EPSG/0/EPSG:4326"}

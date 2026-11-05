@@ -7,10 +7,7 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Entity Instances Collection"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    rdfs:member <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Dataset>,
-        <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py>,
-        <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sites_csv>,
-        <http://w3id.org/geo-lod/ci/ci_findspots_dataset>,
+    rdfs:member <http://w3id.org/geo-lod/ci/ci_findspots_dataset>,
         <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py>,
         <http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv>,
         <http://w3id.org/geo-lod/ci/cisite_1>,
@@ -86,25 +83,5 @@
         <http://w3id.org/geo-lod/ci/cisite_65>,
         <http://w3id.org/geo-lod/ci/cisite_7>,
         <http://w3id.org/geo-lod/ci/cisite_8>,
-        <http://w3id.org/geo-lod/ci/cisite_9>,
-        <http://w3id.org/geo-lod/epica/dataset_ch4>,
-        <http://w3id.org/geo-lod/epica/dataset_d18o>,
-        <http://w3id.org/geo-lod/epica/dataset_dd>,
-        <http://w3id.org/geo-lod/epica/dataset_do2n2>,
-        <http://w3id.org/geo-lod/epica/dataset_dust>,
-        <http://w3id.org/geo-lod/epica/generation_ch4_input_EDC_CH4_tab>,
-        <http://w3id.org/geo-lod/epica/generation_ch4_input_epica_data_py>,
-        <http://w3id.org/geo-lod/epica/generation_ch4_input_epica_rdf_py>,
-        <http://w3id.org/geo-lod/epica/generation_d18o_input_EPICA_Dome_C_d18O_tab>,
-        <http://w3id.org/geo-lod/epica/generation_d18o_input_epica_data_py>,
-        <http://w3id.org/geo-lod/epica/generation_d18o_input_epica_rdf_py>,
-        <http://w3id.org/geo-lod/epica/generation_dd_input_EPICA_Dome_C_dD_tab>,
-        <http://w3id.org/geo-lod/epica/generation_dd_input_epica_data_py>,
-        <http://w3id.org/geo-lod/epica/generation_dd_input_epica_rdf_py>,
-        <http://w3id.org/geo-lod/epica/generation_do2n2_input_EPICA_Dome_C_do2n2_tab>,
-        <http://w3id.org/geo-lod/epica/generation_do2n2_input_epica_data_py>,
-        <http://w3id.org/geo-lod/epica/generation_do2n2_input_epica_rdf_py>,
-        <http://w3id.org/geo-lod/epica/generation_dust_input_EPICA_Dome_C_dust_tab>,
-        <http://w3id.org/geo-lod/epica/generation_dust_input_epica_data_py>,
-        <http://w3id.org/geo-lod/epica/generation_dust_input_epica_rdf_py> .
+        <http://w3id.org/geo-lod/ci/cisite_9> .
 

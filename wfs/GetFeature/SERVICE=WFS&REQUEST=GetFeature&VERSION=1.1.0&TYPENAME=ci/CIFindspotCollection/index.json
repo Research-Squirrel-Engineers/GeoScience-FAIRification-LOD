@@ -1,1 +1,1 @@
-{"title": "Campanian Ignimbrite Findspot Collection", "id": "i/CIFindspotCollection/", "links": [], "itemType": "feature", "extent": {"spatial": {"bbox": [6.5066, 32.9002, 45.0, 55.0], "crs": "http://www.opengis.net/def/crs/EPSG/0/4326"}}, "crs": "http://www.opengis.net/def/crs/EPSG/0/4326"}
+{"title":"Campanian Ignimbrite Findspot Collection","id":"i/CIFindspotCollection/","links":[],"itemType":"feature","extent":{"spatial":{"bbox":[6.5066,32.9002,45.0,55.0],"crs":"http://www.opengis.net/def/crs/EPSG/0/4326"}},"crs":"http://www.opengis.net/def/crs/EPSG/0/4326"}

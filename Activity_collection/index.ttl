@@ -155,10 +155,5 @@
         <http://w3id.org/geo-lod/ci/cisite_8_activity>,
         <http://w3id.org/geo-lod/ci/cisite_8_pyscript>,
         <http://w3id.org/geo-lod/ci/cisite_9_activity>,
-        <http://w3id.org/geo-lod/ci/cisite_9_pyscript>,
-        <http://w3id.org/geo-lod/epica/generation_ch4>,
-        <http://w3id.org/geo-lod/epica/generation_d18o>,
-        <http://w3id.org/geo-lod/epica/generation_dd>,
-        <http://w3id.org/geo-lod/epica/generation_do2n2>,
-        <http://w3id.org/geo-lod/epica/generation_dust> .
+        <http://w3id.org/geo-lod/ci/cisite_9_pyscript> .
 
