@@ -4737,6 +4737,9 @@
 <http://w3id.org/geo-lod/MISAttributeAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigns a boundary age, an excursion peak or a climate mode to a Marine Isotope Stage on the authority of one source. Competing readings of the same boundary are kept as separate assignments rather than harmonised."@en .
 <http://w3id.org/geo-lod/MISAttributeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "MIS Attribute Assignment"@en .
 <http://w3id.org/geo-lod/MISAttributeAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> .
+<http://w3id.org/geo-lod/MISAttributeAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b42bd123a264490e9 .
+<http://w3id.org/geo-lod/MISAttributeAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b64af83f437cb5b72 .
+<http://w3id.org/geo-lod/MISAttributeAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:bae37a7896fdb7fab .
 <http://w3id.org/geo-lod/MISBoundaryDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/geo-lod/AssignedPropertyType> .
 <http://w3id.org/geo-lod/MISBoundaryDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://w3id.org/geo-lod/MISBoundaryDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "The depth at which a stage boundary falls in a given  archive, obtained by interpolation in a given chronology."@en .
@@ -4749,6 +4752,9 @@
 <http://w3id.org/geo-lod/MISMembershipAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Places an observation in a Marine Isotope Stage, on the  authority of one boundary source and through one chronology. Deliberately not  a subclass of geolod:MISAttributeAssignment: that one assigns properties *to*  a stage, this one assigns a stage *to* something else, and the two carry  different constraints."@en .
 <http://w3id.org/geo-lod/MISMembershipAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "MIS Membership Assignment"@en .
 <http://w3id.org/geo-lod/MISMembershipAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> .
+<http://w3id.org/geo-lod/MISMembershipAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:b6fa9c53db3f08ef6 .
+<http://w3id.org/geo-lod/MISMembershipAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:be0db9d11bd2b3f05 .
+<http://w3id.org/geo-lod/MISMembershipAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:bf6e37f4f699e3f19 .
 <http://w3id.org/geo-lod/MarineIsotopeStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/geo-lod/MarineIsotopeStage> <http://www.w3.org/2000/01/rdf-schema#comment> "A stage of the marine oxygen-isotope record, used as a chronostratigraphic subdivision of the Quaternary and late Neogene."@en .
 <http://w3id.org/geo-lod/MarineIsotopeStage> <http://www.w3.org/2000/01/rdf-schema#label> "Marine Isotope Stage"@en .
@@ -19716,6 +19722,9 @@
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> .
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
 <https://pleiades.stoa.org/places/vocab#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+_:b42bd123a264490e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:b42bd123a264490e9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/geo-lod/MarineIsotopeStage> .
+_:b42bd123a264490e9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> .
 _:b4c8de925a3a90a6f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:b4c8de925a3a90a6f <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasDerivedFrom> .
 _:b4c8de925a3a90a6f <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/geo-lod/DataSource> .
@@ -19725,6 +19734,21 @@ _:b54d3d38dfbc7a4c6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.
 _:b59855beb42d477fe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:b59855beb42d477fe <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/geo-lod/extractedFrom> .
 _:b59855beb42d477fe <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/geo-lod/DrillingSite> .
+_:b64af83f437cb5b72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:b64af83f437cb5b72 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/geo-lod/Chronology> .
+_:b64af83f437cb5b72 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/geo-lod/inChronology> .
+_:b6fa9c53db3f08ef6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:b6fa9c53db3f08ef6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/geo-lod/Chronology> .
+_:b6fa9c53db3f08ef6 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/geo-lod/inChronology> .
+_:bae37a7896fdb7fab <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:bae37a7896fdb7fab <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/geo-lod/AssignedPropertyType> .
+_:bae37a7896fdb7fab <http://www.w3.org/2002/07/owl#onProperty> <http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type> .
 _:bba7c1a189807ef14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:bba7c1a189807ef14 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/geo-lod/tookPlaceAt> .
 _:bba7c1a189807ef14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/geo-lod/DrillingSite> .
+_:be0db9d11bd2b3f05 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:be0db9d11bd2b3f05 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/geo-lod/PalaeoclimateObservation> .
+_:be0db9d11bd2b3f05 <http://www.w3.org/2002/07/owl#onProperty> <http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> .
+_:bf6e37f4f699e3f19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:bf6e37f4f699e3f19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/geo-lod/MarineIsotopeStage> .
+_:bf6e37f4f699e3f19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.cidoc-crm.org/cidoc-crm/P141_assigned> .
