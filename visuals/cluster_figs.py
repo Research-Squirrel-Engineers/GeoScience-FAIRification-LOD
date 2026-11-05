@@ -269,8 +269,10 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
     if loose:
         y = top + graph_h + 36
         f.text(50, y, "Classes of the cluster with no relation of their own in the ontology", 18, color=MUTED, anchor="start")
+        wl = max(230, math.ceil(max(tw(lab(n), size, True) for n in loose) + 34))      # a long name must not be cut
+        pr = per_row if wl == 230 else max(1, (W - 100) // (wl + 20))
         for i, n in enumerate(loose):
-            F.nbox(f, 50 + (i % per_row) * 250, y + 22 + (i // per_row) * 64, 230, bh, lab(n), F.fill_of(n), size=size)
+            F.nbox(f, 50 + (i % pr) * (wl + 20), y + 22 + (i // pr) * 64, wl, bh, lab(n), F.fill_of(n), size=size)
 
     own = [("geolod", "geolod:")]
     if any(md.ns_key(n) == "strat" for n in members | set(left_edge) | set(right_edge)):

@@ -33,6 +33,7 @@
 - id: mis
   title: Marine isotope stages
   short: MIS
+  page: cluster-mis.html
   lead: The stage scheme observations are placed in, and the competing boundary sources behind it.
   classes: [geolod:AssignedPropertyType, geolod:AssignmentStatus, geolod:ClimateMode, geolod:MISAttributeAssignment,
             geolod:MISMembershipAssignment, geolod:MarineIsotopeStage, geolod:MarineIsotopeSubstage]

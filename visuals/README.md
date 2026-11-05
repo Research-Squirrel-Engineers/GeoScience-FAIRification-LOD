@@ -51,5 +51,6 @@ The data model drawn in slices: one page per thematic cluster, so that no figure
 | `clusters.yaml` | which classes belong to which cluster; the build stops when a `geolod:` class is in no cluster or in two, or when a name is not a class. A cluster without `page` is listed as planned |
 | `cluster_figs.py` | the cluster graph (members solid, classes of other clusters as dashed edge nodes with the name of their cluster, long arrows routed above the graph) and the data figures, counted from `SISAL/rdf/sisal_v3_dating.ttl` and `data/derived/sisal/tables/` |
 | `clusters.py` | writes the overview and one page per cluster that has a `page`; the sentences under the data figures are built from the counts |
+| `cluster_mis.py` | the figures of the page "Marine isotope stages", read from `ontology/vocab/mis.ttl`, `EPICA/rdf/epica_dome_c.ttl` and `ontology/trs.ttl`: the two assignment patterns, one stage boundary at its depth on each of the five EPICA timescales, Railsback et al. against LR04, memberships per timescale |
 
-Chronology and age is the first cluster page. To add the next one: give it a `page` in `clusters.yaml`, add the file to `CLUSTER_PAGES` in `site_kit.py`, and, if it has data figures, an entry in `DATA` in `clusters.py`.
+Chronology and age and Marine isotope stages are the first two cluster pages. To add the next one: give it a `page` in `clusters.yaml`, add the file to `CLUSTER_PAGES` in `site_kit.py`, and, if it has data figures, an entry in `DATA` in `clusters.py`.

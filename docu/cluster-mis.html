@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marine isotope stages · geo-lod</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+<nav><div class="grp"><span class="lab">Documentation</span><span class="lnk"><a href="index.html">Overview</a><a href="model.html">Data model</a><a href="crm-coverage.html">CRM coverage</a><a href="crosswalk.html">Crosswalk</a><a href="instances.html">Instance models</a><a href="slides.html">Slide figures</a><a href="sparql.html">Query</a></span></div><div class="grp"><span class="lab">Clusters</span><span class="lnk"><a href="clusters.html">Overview</a><a href="cluster-chronology.html">Chronology</a><a class="on" href="cluster-mis.html">Marine isotope stages</a></span></div><div class="grp"><span class="lab">Ontology pages</span><span class="lnk"><a href="../semweb/index.html">Overall</a><a href="../semweb/featurecollections.html">Feature collections</a><a href="../semweb/AllPalaeoclimateSites_Collection/index.html">All sites</a><a href="../semweb/SISAL_Cave_Collection/index.html">SISAL caves</a><a href="../semweb/ci/CIFindspotCollection/index.html">CI findspots</a><a href="../semweb/IceCore_collection/index.html">Ice cores</a><a href="../semweb/DrillingSite_collection/index.html">Drilling sites</a><a href="../semweb/Dataset_collection/index.html">Datasets</a><a href="../semweb/Catalog_collection/index.html">Catalogues</a></span></div></nav>
+<h1>Marine isotope stages</h1>
+<p class="intro">The stage scheme observations are placed in, and the competing boundary sources behind it. All clusters are on the <a href="clusters.html">overview</a>.</p>
+<h2>Model</h2>
+<section>
+<img src="img/cl-mis-model.png" width="3500" height="1072" loading="lazy" alt="Cluster graph: Marine isotope stages">
+<div class="row"><p class="cap"><span class="n"></span>Cluster graph: Marine isotope stages</p><button type="button" data-c="Cluster graph: Marine isotope stages">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-mis-model.png" download>PNG</a><a href="img/cl-mis-model.svg" download>SVG</a></p>
+</section>
+<h2>Modelling pattern</h2>
+<section>
+<img src="img/cl-mis-pattern.png" width="3500" height="2680" loading="lazy" alt="A stage reaches an observation and a depth through geolod:MIS*Assignment">
+<div class="row"><p class="cap"><span class="n"></span>A stage reaches an observation and a depth through geolod:MIS*Assignment</p><button type="button" data-c="A stage reaches an observation and a depth through geolod:MIS*Assignment">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-mis-pattern.png" download>PNG</a><a href="img/cl-mis-pattern.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# What an observation&#x27;s stage membership looks like: the nodes of one observation.
+SELECT ?assignment ?stage ?scale ?source ?status WHERE {
+  ?assignment a geolod:MISMembershipAssignment ;
+     crm:P140_assigned_attribute_to &lt;http://w3id.org/geo-lod/epica/obs_ch4_0001&gt; ;
+     crm:P141_assigned ?stage ;
+     geolod:inChronology ?scale ;
+     dct:source ?source ;
+     geolod:assignmentStatus ?status .
+}</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# What an observation&#x27;s stage membership looks like: the nodes of one observation.
+SELECT ?assignment ?stage ?scale ?source ?status WHERE {
+  ?assignment a geolod:MISMembershipAssignment ;
+     crm:P140_assigned_attribute_to &lt;http://w3id.org/geo-lod/epica/obs_ch4_0001&gt; ;
+     crm:P141_assigned ?stage ;
+     geolod:inChronology ?scale ;
+     dct:source ?source ;
+     geolod:assignmentStatus ?status .
+}">Copy</button></div><p class="note">Run on EPICA/rdf/epica_dome_c.ttl: one row, the node on the left of the figure (epica:mis_membership_ch4_0001).</p></section>
+<h2>In the data</h2>
+<section>
+<img src="img/cl-mis-boundary-depths.png" width="3500" height="1872" loading="lazy" alt="One stage boundary at its depth on each EPICA timescale">
+<div class="row"><p class="cap"><span class="n"></span>One stage boundary at its depth on each EPICA timescale</p><button type="button" data-c="One stage boundary at its depth on each EPICA timescale">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-mis-boundary-depths.png" download>PNG</a><a href="img/cl-mis-boundary-depths.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# The beginning of each stage as a depth, one row per timescale.
+# Runs on ontology/vocab/mis.ttl and EPICA/rdf/epica_dome_c.ttl together.
+SELECT ?stage ?scale ?depth_m ?age_ka WHERE {
+  ?a a geolod:MISAttributeAssignment ;
+     crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
+     crm:P140_assigned_attribute_to ?stage ;
+     geolod:inChronology ?scale ;
+     crm:P141_assigned/geolod:atDepth_m ?depth_m ;
+     prov:wasDerivedFrom/geolod:ageKaBP ?age_ka .
+} ORDER BY ?stage ?scale</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# The beginning of each stage as a depth, one row per timescale.
+# Runs on ontology/vocab/mis.ttl and EPICA/rdf/epica_dome_c.ttl together.
+SELECT ?stage ?scale ?depth_m ?age_ka WHERE {
+  ?a a geolod:MISAttributeAssignment ;
+     crm:P177_assigned_property_of_type geolod:MISBoundaryDepth ;
+     crm:P140_assigned_attribute_to ?stage ;
+     geolod:inChronology ?scale ;
+     crm:P141_assigned/geolod:atDepth_m ?depth_m ;
+     prov:wasDerivedFrom/geolod:ageKaBP ?age_ka .
+} ORDER BY ?stage ?scale">Copy</button></div><p class="note">Run on the two graphs together and compared with the figure: 77 rows, 19 boundaries. The widest spread is the beginning of MIS 4: 69 m between the scales.</p></section>
+<section>
+<img src="img/cl-mis-sources.png" width="3500" height="2112" loading="lazy" alt="The beginning of 28 stages in two sources">
+<div class="row"><p class="cap"><span class="n"></span>The beginning of 28 stages in two sources</p><button type="button" data-c="The beginning of 28 stages in two sources">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-mis-sources.png" download>PNG</a><a href="img/cl-mis-sources.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# The beginning of a stage, as each source dates it, for the stages that have an alternative reading.
+SELECT ?stage ?source ?status ?age_ka WHERE {
+  ?a a geolod:MISAttributeAssignment ;
+     crm:P177_assigned_property_of_type geolod:PeriodBeginning ;
+     crm:P140_assigned_attribute_to ?stage ;
+     crm:P141_assigned/time:numericPosition ?age_ka ;
+     dct:source ?source ;
+     geolod:assignmentStatus ?status .
+  ?stage a geolod:MarineIsotopeStage .
+  FILTER EXISTS {
+    ?b a geolod:MISAttributeAssignment ;
+       crm:P177_assigned_property_of_type geolod:PeriodBeginning ;
+       crm:P140_assigned_attribute_to ?stage ;
+       geolod:assignmentStatus geolod:AlternativeAssignment .
+  }
+} ORDER BY ?stage ?status</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# The beginning of a stage, as each source dates it, for the stages that have an alternative reading.
+SELECT ?stage ?source ?status ?age_ka WHERE {
+  ?a a geolod:MISAttributeAssignment ;
+     crm:P177_assigned_property_of_type geolod:PeriodBeginning ;
+     crm:P140_assigned_attribute_to ?stage ;
+     crm:P141_assigned/time:numericPosition ?age_ka ;
+     dct:source ?source ;
+     geolod:assignmentStatus ?status .
+  ?stage a geolod:MarineIsotopeStage .
+  FILTER EXISTS {
+    ?b a geolod:MISAttributeAssignment ;
+       crm:P177_assigned_property_of_type geolod:PeriodBeginning ;
+       crm:P140_assigned_attribute_to ?stage ;
+       geolod:assignmentStatus geolod:AlternativeAssignment .
+  }
+} ORDER BY ?stage ?status">Copy</button></div><p class="note">Run on ontology/vocab/mis.ttl and compared with the figure: 56 rows, two per stage. 15 of 28 boundaries differ by at most one ka; the largest gaps are MIS 8 (+21.0 ka), MIS 22 (+18.8 ka), MIS 10 (+8.6 ka), MIS 24 (+8.0 ka).</p></section>
+<section>
+<img src="img/cl-mis-memberships.png" width="3500" height="1200" loading="lazy" alt="Stage memberships per timescale">
+<div class="row"><p class="cap"><span class="n"></span>Stage memberships per timescale</p><button type="button" data-c="Stage memberships per timescale">Copy</button></div>
+<p class="cr">Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0.</p>
+<p class="dl"><a href="img/cl-mis-memberships.png" download>PNG</a><a href="img/cl-mis-memberships.svg" download>SVG</a></p>
+</section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+SELECT ?scale (COUNT(?a) AS ?n) WHERE {
+  ?a a geolod:MISMembershipAssignment ;
+     geolod:inChronology ?scale .
+} GROUP BY ?scale ORDER BY DESC(?n)</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+SELECT ?scale (COUNT(?a) AS ?n) WHERE {
+  ?a a geolod:MISMembershipAssignment ;
+     geolod:inChronology ?scale .
+} GROUP BY ?scale ORDER BY DESC(?n)">Copy</button></div><p class="note">Run on epica_dome_c.ttl and compared with the figure: 4904 memberships. The second query (observations with more than one membership) returns no row; the build stops if it does.</p></section>
+<section class="text"><h3>SPARQL</h3><pre>PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# Observations with more than one stage membership. Expected: no row.
+SELECT ?obs (COUNT(?a) AS ?n) WHERE {
+  ?a a geolod:MISMembershipAssignment ;
+     crm:P140_assigned_attribute_to ?obs .
+} GROUP BY ?obs HAVING (COUNT(?a) &gt; 1)</pre><div class="row"><span></span><button type="button" data-c="PREFIX geolod: &lt;http://w3id.org/geo-lod/&gt;
+PREFIX strat:  &lt;http://w3id.org/geo-lod/strat/&gt;
+PREFIX sisal:  &lt;http://w3id.org/geo-lod/sisal/&gt;
+PREFIX crm:    &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+PREFIX dct:    &lt;http://purl.org/dc/terms/&gt;
+PREFIX prov:   &lt;http://www.w3.org/ns/prov#&gt;
+PREFIX skos:   &lt;http://www.w3.org/2004/02/skos/core#&gt;
+PREFIX time:   &lt;http://www.w3.org/2006/time#&gt;
+
+# Observations with more than one stage membership. Expected: no row.
+SELECT ?obs (COUNT(?a) AS ?n) WHERE {
+  ?a a geolod:MISMembershipAssignment ;
+     crm:P140_assigned_attribute_to ?obs .
+} GROUP BY ?obs HAVING (COUNT(?a) &gt; 1)">Copy</button></div></section>
+<section class="text"><h3>Classes</h3><div class="tbl"><table><thead><tr><th>Class</th><th>Label</th><th>Comment</th><th>CRM anchor</th></tr></thead><tbody><tr><td><code>geolod:AssignedPropertyType</code></td><td>Assigned Property Type</td><td>The kind of property an attribute assignment establishes (crm:P177).</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:AssignmentStatus</code></td><td>Assignment Status</td><td>States whether an attribute assignment is the one geo-lod follows, or a competing reading kept alongside it. Competing readings are never dropped; this only records which one leads.</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:ClimateMode</code></td><td>Climate Mode</td><td>Classifies a Marine Isotope Stage as warm or cold.</td><td><code>crm:E55_Type</code></td></tr><tr><td><code>geolod:MISAttributeAssignment</code></td><td>MIS Attribute Assignment</td><td>Assigns a boundary age, an excursion peak or a climate mode to a Marine Isotope Stage on the authority of one source. Competing readings of the same boundary are kept as separate assignments rather than harmonised.</td><td><code>crm:E13_Attribute_Assignment</code></td></tr><tr><td><code>geolod:MISMembershipAssignment</code></td><td>MIS Membership Assignment</td><td>Places an observation in a Marine Isotope Stage, on the authority of one boundary source and through one chronology. Deliberately not a subclass of geolod:MISAttributeAssignment: that one assigns properties *to* a stage, this one assigns a stage *to* something else, and the two carry different constraints.</td><td><code>crm:E13_Attribute_Assignment</code></td></tr><tr><td><code>geolod:MarineIsotopeStage</code></td><td>Marine Isotope Stage</td><td>A stage of the marine oxygen-isotope record, used as a chronostratigraphic subdivision of the Quaternary and late Neogene.</td><td><code>crm:E4_Period</code></td></tr><tr><td><code>geolod:MarineIsotopeSubstage</code></td><td>Marine Isotope Substage</td><td>A lettered subdivision of a Marine Isotope Stage after Railsback et al. (2015). Substages label excursions rather than the transitions between them, so their boundaries are gradational.</td><td><code>crm:E4_Period</code></td></tr></tbody></table></div></section>
+</main>
+<script>
+document.querySelectorAll("button[data-c]").forEach(function(b){b.addEventListener("click",function(){
+  var ok=function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1200)};
+  if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.c).then(ok).catch(function(){})}
+})});
+</script>
+</body></html>
