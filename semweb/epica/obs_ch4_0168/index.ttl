@@ -25,7 +25,7 @@
     ns1:measurementType <http://w3id.org/geo-lod/epica/measurement_type_ch4> ;
     ns1:smoothedValue_rollingMedian 375.30000 ;
     ns1:smoothedValue_savgol 372.92751 ;
-    ns1:smoothingMethod_median <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
+    ns1:smoothingMethod_rollingMedian <http://w3id.org/geo-lod/epica/smoothing_rolling_median_w11> ;
     ns1:smoothingMethod_savgol <http://w3id.org/geo-lod/epica/smoothing_savitzky_golay_w11_p2> ;
     ns1:standardDeviation 10.00 ;
     ns2:P7_took_place_at <http://w3id.org/geo-lod/epica/site_dome_c> ;

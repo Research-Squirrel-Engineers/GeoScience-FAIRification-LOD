@@ -1399,7 +1399,7 @@
         <http://w3id.org/geo-lod/epica/obs_d18o_1376>,
         <http://w3id.org/geo-lod/epica/obs_d18o_1377>,
         <http://w3id.org/geo-lod/epica/obs_d18o_1378> ;
-    owl:versionInfo "sha256:18a6c40ef411" ;
+    owl:versionInfo "sha256:3c4e1cdf877d" ;
     dcat:record <http://w3id.org/geo-lod/epica/obs_d18o_0001>,
         <http://w3id.org/geo-lod/epica/obs_d18o_0002>,
         <http://w3id.org/geo-lod/epica/obs_d18o_0003>,
