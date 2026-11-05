@@ -58,8 +58,8 @@ def card_height(rows: list[Row]) -> int:
     return HEAD + sum(ROW_NODE if r[1] == "node" else ROW_LIT for r in rows) + 18
 
 
-def draw_card(f: Fig, x: float, y: float, w: float, h: float, title: str, sub: str, rows: list[Row], fill: str) -> None:
-    f.rect(x, y, w, h, "#fbfbf9", "#bdbbb2", 10, 1.2)
+def draw_card(f: Fig, x: float, y: float, w: float, h: float, title: str, sub: str, rows: list[Row], fill: str, dashed: bool = False) -> None:
+    f.rect(x, y, w, h, "#fbfbf9", "#bdbbb2", 10, 1.2, dash=dashed)
     f.text(x + 18, y + 30, title, 21, True, anchor="start", maxw=w - 30)
     f.text(x + 18, y + 62, sub, 16, color=MUTED, anchor="start", maxw=w - 30)
     yy = y + HEAD

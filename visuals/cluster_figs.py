@@ -197,8 +197,8 @@ def cluster_graph_fig(M: md.Model, clusters: list[dict], cl: dict, outdir: Path,
     ncols = len(used_cols)
     near = [tw(l, 17) + 12 for i, (_, _, _, l) in enumerate(arrows) if l and span[i] <= 1]
     gap = max(120.0, max(near, default=0) + 40)
-    W = max(1750, int(100 + sum(colw.values()) + gap * max(ncols - 1, 0)))
-    xs, x = {}, 50.0 + (W - 100 - sum(colw.values()) - gap * max(ncols - 1, 0)) / 2
+    W = max(1750, int(100 + math.fsum(colw.values()) + gap * max(ncols - 1, 0)))
+    xs, x = {}, 50.0 + (W - 100 - math.fsum(colw.values()) - gap * max(ncols - 1, 0)) / 2
     for ci in used_cols:
         xs[ci] = x
         x += colw[ci] + gap

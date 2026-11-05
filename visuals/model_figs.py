@@ -14,6 +14,7 @@ Layout is deterministic: sorted iteration, no random numbers, text widths from t
 """
 from __future__ import annotations
 
+import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -124,9 +125,9 @@ def hierarchy_fig(M: md.Model, outdir: Path, name: str, title: str, mods: tuple[
     ncol = max(depth.values()) + 1
     colw = [min(410, max(tw(lab(n), 19, True) + 30 for n in parent if depth[n] == d)) for d in range(ncol)]
     gap = 96
-    if sum(colw) + gap * (ncol - 1) > 1750 - 100:
+    if math.fsum(colw) + gap * (ncol - 1) > 1750 - 100:
         raise ValueError(f"{name}: {ncol} columns do not fit")
-    xs = [50 + sum(colw[:d]) + gap * d for d in range(ncol)]
+    xs = [50 + math.fsum(colw[:d]) + gap * d for d in range(ncol)]
 
     ypos, cur = {}, [0]
 
@@ -219,10 +220,10 @@ def relations_fig(M: md.Model, outdir: Path, name: str, title: str, mods: tuple[
         return M.curie(n) if not md.ns_key(n) or md.ns_key(n) != "geolod" else M.curie(n).split(":", 1)[1]
 
     colw = [min(360, max(tw(lab(n), 19, True) + 30 for n in c)) for c in cols]
-    gap = (1750 - 100 - sum(colw)) / max(ncol - 1, 1) if ncol > 1 else 0
+    gap = (1750 - 100 - math.fsum(colw)) / max(ncol - 1, 1) if ncol > 1 else 0
     if ncol > 1 and gap < 110:
         raise ValueError(f"{name}: {ncol} columns leave only {gap:.0f} px between them")
-    xs = [50 + sum(colw[:d]) + gap * d for d in range(ncol)]
+    xs = [50 + math.fsum(colw[:d]) + gap * d for d in range(ncol)]
     pitch, bh, top = 86, 40, 50
     height = int(top + max(len(c) for c in cols) * pitch + 90)
     f = Fig(name, title, 1750, height, outdir)
@@ -339,8 +340,8 @@ def crosswalk_fig(M: md.Model, outdir: Path, name: str, title: str, items: list[
     K = max([len(r[2]) for r in rows] + [0])
     colw = [520] + [330] * K + [400]
     ncol = len(colw)
-    gap = (1750 - 100 - sum(colw)) / max(ncol - 1, 1)
-    xs = [50 + sum(colw[:i]) + gap * i for i in range(ncol)]
+    gap = (1750 - 100 - math.fsum(colw)) / max(ncol - 1, 1)
+    xs = [50 + math.fsum(colw[:i]) + gap * i for i in range(ncol)]
     bh, step = 34, 42
     # left column
     y_left = {r[0]: 40 + i * step for i, r in enumerate(rows)}
@@ -577,7 +578,7 @@ def instance_fig(M: md.Model, g: Graph, outdir: Path, name: str, title: str, roo
             ws += [tw(nd.head, 20, True), tw(nd.curie, size), *[tw(f"{a}  {v}", size) for a, v in nd.attrs[:ROWS]],
                    *[tw(M.curie(str(t)) if M.curie(str(t)) != str(t) else short(g, t), 16) + 20 for t in nd.types[:2]]]
         colw.append(min(430, max(ws, default=200) + 36))
-    gap = (1750 - 100 - sum(colw)) / 2
+    gap = (1750 - 100 - math.fsum(colw)) / 2
     if gap < 120:
         raise ValueError(f"{name}: columns too wide ({colw})")
     xs = [50, 50 + colw[0] + gap, 50 + colw[0] + colw[1] + 2 * gap]

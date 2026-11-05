@@ -21,6 +21,7 @@ import cluster_archaeology as AY
 import cluster_measurement as MT  # noqa: E402
 import cluster_mis as MS  # noqa: E402
 import cluster_sources as SO
+import cluster_wd1 as WD
 import model_data as md  # noqa: E402
 import site_kit as K  # noqa: E402
 
@@ -255,6 +256,18 @@ def data_figures_mis(M: md.Model, D: MS.MisData) -> tuple[list[str], list[str]]:
     return pattern, data
 
 
+Q_LOG = PFX + """PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+# The WD1 log as a chain: units, tephra layers, units met by another unit, and the depth range.
+SELECT (COUNT(DISTINCT ?unit) AS ?units) (COUNT(DISTINCT ?tephra) AS ?tephra_layers)
+       (COUNT(DISTINCT ?met) AS ?met_units) (MIN(?top) AS ?top) (MAX(?bottom) AS ?bottom) WHERE {
+  ?unit a/rdfs:subClassOf* strat:StratigraphicUnit ;
+        strat:depthTop ?top ;
+        strat:depthBottom ?bottom .
+  OPTIONAL { ?unit a strat:TephraLayer . BIND(?unit AS ?tephra) }
+  OPTIONAL { ?unit strat:meets ?met }
+}"""
+
+
 def data_figures_archives(M: md.Model, D: AR.ArcData, cl: dict) -> tuple[list[str], list[str]]:
     """Cards for the pattern and the data figures of the archives page, each with the query that gives its numbers."""
     from rdflib import URIRef
@@ -304,6 +317,18 @@ def data_figures_archives(M: md.Model, D: AR.ArcData, cl: dict) -> tuple[list[st
     data.append(K.fig_card(IMG, "cl-archives-caves", "", "How many delta-18-O samples each of the 365 caves stands for", CREDIT))
     data.append(query_block(Q_CAVES, f"Run on sisal_sites.ttl and compared with the figure: {st['caves']} rows. {st['total']:,} samples in all, median {st['median']:g}, "
                             f"most {st['max'][1]:,} ({st['max'][0]})."))
+    L = WD.Wd1Log()
+    WD.pattern_fig(L, IMG, "cl-archives-log")
+    pattern.append(K.fig_card(IMG, "cl-archives-log", "", "A log row as a stratigraphic unit", CREDIT))
+    row = next(iter(L.g.query(Q_LOG)))
+    stats = {"units": int(row[0]), "tephra": int(row[1]), "links": int(row[2]), "top": float(row[3]), "bottom": float(row[4]), "gaps": L.gaps}
+    want = {"units": len(L.rows), "tephra": L.n_tephra, "links": len(L.rows) - 1 - L.gaps, "top": float(L.rows[0][0]), "bottom": float(L.rows[-1][1]), "gaps": L.gaps}
+    if stats != want:
+        raise ValueError(f"cl-archives-wd1: the query gives {stats}, the count from the CSV {want}")
+    WD.log_fig(L, stats, IMG, "cl-archives-wd1")
+    data.append(K.fig_card(IMG, "cl-archives-wd1", "", "The WD1 log as a chain of units", CREDIT))
+    data.append(query_block(Q_LOG, f"Run on the WD1 graph that the page builds from Table 1 (illustrative instances, strat.ttl for the classes) and compared with a count from the CSV: "
+                            f"{stats['units']} units, {stats['tephra']} tephra layers, {stats['links']} units met by another, {stats['gaps']} gaps."))
     return pattern, data
 
 

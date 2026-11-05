@@ -57,5 +57,6 @@ The data model drawn in slices: one page per thematic cluster, so that no figure
 | `cluster_cards.py` | shared drawing of triple cards (a node and its statements, read from the graph) for the pattern figures |
 | `cluster_archaeology.py` | the figures of the page "Archaeology and the Campanian Ignimbrite", read from the SISAL and CI annotation graphs: the same statements on a cave and a findspot, what was screened, archaeological contexts, a map of the findspots |
 | `cluster_sources.py` | the figures of the page "Sources and provenance", read from the committed graphs: catalogue, dataset and source, and every cited source with what derives from it |
+| `cluster_wd1.py` | the WD1 log on the page "Archives and sampling", read from `data/raw/wd1/Table1.csv` and `ontology/strat.ttl`: three log rows as stratigraphic units (strat:meets), and the whole log as a chain of units; the instances are built for the page and are illustrative |
 
 Chronology and age, Marine isotope stages, Archives and sampling, Observation and measurement, Archaeology and the Campanian Ignimbrite, and Sources and provenance are the six cluster pages; every cluster of `clusters.yaml` has one. To add another: give it a `page` in `clusters.yaml`, add the file to `CLUSTER_PAGES` in `site_kit.py`, and, if it has data figures, an entry in `DATA` in `clusters.py`.

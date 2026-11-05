@@ -14,6 +14,7 @@ hand in the figures are checked against the graph in check_quoted_values().
     py visuals/build.py
 """
 import html
+import math
 import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -126,7 +127,7 @@ class Fig:
     def raw(s, x): s.o.append(x)
     def legend(s, y, items, x=None):
         sizes = [34 + tw(t, 19) + 34 for _, t in items]
-        x = (s.w - sum(sizes)) / 2 if x is None else x
+        x = (s.w - math.fsum(sizes)) / 2 if x is None else x
         for (st, t), sz in zip(items, sizes):
             s.rect(x, y-11, 22, 22, st[0], "#000000", 3); s.text(x+32, y, t, 19, color=MUTED, anchor="start"); x += sz
     def save(s):

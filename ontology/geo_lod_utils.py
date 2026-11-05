@@ -615,7 +615,7 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         rdfs:label   "measurement type"@en ;
         rdfs:comment "The kind of quantity an observation measures (a geolod:MeasurementType), for example methane concentration."@en .
 
-    geolod:smoothingMethod_median
+    geolod:smoothingMethod_rollingMedian
         a owl:ObjectProperty ;
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   geolod:RollingMedianFilter ;
@@ -674,7 +674,7 @@ GEO_LOD_CORE_TTL: str = textwrap.dedent(
         rdfs:domain  geolod:PalaeoclimateObservation ;
         rdfs:range   xsd:decimal ;
         rdfs:label   "smoothed value (rolling median)"@en ;
-        rdfs:comment "The measured value after the rolling-median filter named by geolod:smoothingMethod_median."@en .
+        rdfs:comment "The measured value after the rolling-median filter named by geolod:smoothingMethod_rollingMedian."@en .
 
     geolod:smoothedValue_savgol
         a owl:DatatypeProperty ;

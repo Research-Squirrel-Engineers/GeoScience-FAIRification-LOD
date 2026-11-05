@@ -598,7 +598,7 @@ def add_observations(
             )
         )
         g.add((obs, GEOLOD["smoothedValue_savgol"], dec(smooth_savgol[i], DEC_VALUE)))
-        g.add((obs, GEOLOD["smoothingMethod_median"], median_method))
+        g.add((obs, GEOLOD["smoothingMethod_rollingMedian"], median_method))
         g.add((obs, GEOLOD["smoothingMethod_savgol"], savgol_method))
 
         # -- stage membership ------------------------------------------------

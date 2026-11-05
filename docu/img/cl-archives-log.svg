@@ -1,0 +1,59 @@
+<svg width="1900" height="692" viewBox="0 0 1900 692" xmlns="http://www.w3.org/2000/svg" role="img"><title>A log row as a stratigraphic unit</title>
+<rect width="1900" height="692" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="50" y="40" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">Three rows of the WD1 log, three units, each meeting the next</text>
+<text x="50" y="76" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Table 1 of the WD1 core, three consecutive rows; the depths are decimals, the description is the label, strat:meets runs downwards.</text>
+<rect x="50" y="150" width="590" height="412" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2" stroke-dasharray="7 6"/>
+<text x="68" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">The layer above: wd1:unit_105</text>
+<text x="68" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:LithologicalUnit, a strat:StratigraphicUnit</text>
+<text x="68" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rdfs:label</text>
+<text x="622" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">yellow and brown gyttja</text>
+<text x="68" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:depthTop</text>
+<text x="622" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">86 m</text>
+<text x="68" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:depthBottom</text>
+<text x="622" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">86.13 m</text>
+<text x="68" y="386" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:partOfCore</text>
+<rect x="68" y="402" width="554" height="48" rx="7" fill="#d8ead3" stroke="#000000" stroke-width="1.1"/>
+<text x="345.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">wd1:WD1</text>
+<text x="345.0" y="435" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">strat:Core</text>
+<text x="68" y="472" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:meets</text>
+<rect x="68" y="488" width="554" height="48" rx="7" fill="#d8ead3" stroke="#000000" stroke-width="1.1"/>
+<text x="345.0" y="502" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">wd1:unit_HBT</text>
+<text x="345.0" y="521" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">strat:TephraLayer</text>
+<rect x="670" y="150" width="590" height="412" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2" stroke-dasharray="7 6"/>
+<text x="688" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">A tephra layer: wd1:unit_HBT</text>
+<text x="688" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:TephraLayer, a strat:StratigraphicUnit</text>
+<text x="688" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rdfs:label</text>
+<text x="1242" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">tephra (HBT)</text>
+<text x="688" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:depthTop</text>
+<text x="1242" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">86.13 m</text>
+<text x="688" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:depthBottom</text>
+<text x="1242" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">86.43 m</text>
+<text x="688" y="386" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:partOfCore</text>
+<rect x="688" y="402" width="554" height="48" rx="7" fill="#d8ead3" stroke="#000000" stroke-width="1.1"/>
+<text x="965.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">wd1:WD1</text>
+<text x="965.0" y="435" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">strat:Core</text>
+<text x="688" y="472" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:meets</text>
+<rect x="688" y="488" width="554" height="48" rx="7" fill="#d8ead3" stroke="#000000" stroke-width="1.1"/>
+<text x="965.0" y="502" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">wd1:unit_107</text>
+<text x="965.0" y="521" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">strat:LithologicalUnit</text>
+<rect x="1290" y="150" width="590" height="412" rx="10" fill="#fbfbf9" stroke="#bdbbb2" stroke-width="1.2" stroke-dasharray="7 6"/>
+<text x="1308" y="180" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">The layer below: wd1:unit_107</text>
+<text x="1308" y="212" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:LithologicalUnit, a strat:StratigraphicUnit</text>
+<text x="1308" y="267.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">rdfs:label</text>
+<text x="1862" y="267.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">brown and dark greyish sapro…</text>
+<text x="1308" y="309.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:depthTop</text>
+<text x="1862" y="309.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">86.43 m</text>
+<text x="1308" y="351.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:depthBottom</text>
+<text x="1862" y="351.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#1f1f1d">86.5 m</text>
+<text x="1308" y="386" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:partOfCore</text>
+<rect x="1308" y="402" width="554" height="48" rx="7" fill="#d8ead3" stroke="#000000" stroke-width="1.1"/>
+<text x="1585.0" y="416" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">wd1:WD1</text>
+<text x="1585.0" y="435" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">strat:Core</text>
+<text x="1308" y="472" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">strat:meets</text>
+<rect x="1308" y="488" width="554" height="48" rx="7" fill="#d8ead3" stroke="#000000" stroke-width="1.1"/>
+<text x="1585.0" y="502" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#000000">wd1:unit_108</text>
+<text x="1585.0" y="521" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="14" fill="#3a3935">strat:StratigraphicUnit</text>
+<text x="50" y="630" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">Dashed: the strat: classes are planned in geo-lod, and the pipeline does not write WD1 yet; these 111 units are built from the CSV for this page.</text>
+<text x="50" y="660" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#55544f">A row that the log leaves undescribed is still a unit with its depths: the log is a chain of intervals, whatever it says about them.</text>
+</svg>

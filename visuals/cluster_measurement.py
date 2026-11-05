@@ -124,7 +124,7 @@ def pattern_fig(M: md.Model, D: MeasData, outdir: Path, name: str) -> tuple[Fig,
             row(G.ageChronology, "node"), row(G.atDepth_m, "lit", " m"), row(G.ageKaBP, "lit", " ka BP")]),
         ("geo-lod: the value and what was done to it", "the values stay on the observation; the filters are nodes", [
             row(QUDT.unit, "lit"), row(G.measuredValue, "lit"), row(G.standardDeviation, "lit"),
-            row(G.smoothedValue_rollingMedian, "lit"), row(G.smoothingMethod_median, "node"),
+            row(G.smoothedValue_rollingMedian, "lit"), row(G.smoothingMethod_rollingMedian, "node"),
             row(G.smoothedValue_savgol, "lit"), row(G.smoothingMethod_savgol, "node")]),
     ]
     shown = {r[0] for _, _, rows in panels for r in rows}
