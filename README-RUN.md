@@ -62,7 +62,7 @@ schnellste sinnvolle Lauf, wenn man am CI-Strang arbeitet.
 | `--no-bundle` | | den Bundle-Schritt ganz überspringen |
 | `--no-overview` | | die Übersichtskarte überspringen |
 | `--no-visuals` | | den Schritt Dokumentationsseiten und Vortragsabbildungen überspringen. Er läuft ohnehin nur, wenn `visuals/requirements.txt` installiert ist |
-| `--visuals-only` | | nur `docu/` und `visuals/site/` bauen, ohne die Pipeline |
+| `--visuals-only` | | nur `docu/` bauen, ohne die Pipeline |
 | `--no-clean` | | Schritt 0 überspringen und in vorhandene Ausgaben schreiben |
 | `--clean` | an | Schritt 0 ausführen. Ist ohnehin die Voreinstellung; der Schalter bleibt, damit ältere Aufrufe weiter gelten |
 
@@ -312,4 +312,4 @@ Erwartet: CRM-Abdeckung ohne Lücke, null SHACL-Verstösse. Eine Warnung zu
 py -m pip install -r visuals\requirements.txt && py visuals\build.py
 ```
 
-Baut beides: zwölf Vortragsabbildungen als SVG und PNG plus `index.html` nach `visuals/site/`, und die Dokumentation nach `docu/` (`index`, `model`, `crm-coverage`, `crosswalk`, `instances`, `sparql` mit Abbildungen, `downloads/queries/*.rq` und dem Beispielgraphen `data/geo-lod-sample.nt`). `--only slides` oder `--only docu` baut eine Hälfte. Im Lauf von `main.py` ist es der Schritt nach dem Bundle; `py main.py --visuals-only` führt nur ihn aus. `visuals/docu.py` und `visuals/sample_graph.py` sind die Teile, aus denen `docu/` entsteht. Die Workflows `visuals-pages.yml` und `docu-pages.yml` veröffentlichen die beiden Ordner unter `/visuals/` und `/docu/` auf GitHub Pages.
+Baut beides: zwölf Vortragsabbildungen als SVG und PNG plus `slides.html` und die Clusterseiten, und die Dokumentation, alles nach `docu/` (`index`, `model`, `crm-coverage`, `crosswalk`, `instances`, `sparql` mit Abbildungen, `downloads/queries/*.rq` und dem Beispielgraphen `data/geo-lod-sample.nt`). `--only slides` oder `--only docu` baut eine Hälfte. Im Lauf von `main.py` ist es der Schritt nach dem Bundle; `py main.py --visuals-only` führt nur ihn aus. `visuals/docu.py` und `visuals/sample_graph.py` sind die Teile, aus denen `docu/` entsteht. Der Workflow `docu-pages.yml` veröffentlicht `docu/` unter `/docu/` auf GitHub Pages und legt eine Weiterleitungsseite (`pages-root/index.html`) auf die Wurzel; die Unicorn-Seiten (`main.yml`) liegen unter `/semweb/`.

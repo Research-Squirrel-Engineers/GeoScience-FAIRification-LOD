@@ -197,7 +197,7 @@ lesen hier ab, statt neu zu diskutieren.
 | SVG-Determinismus | `svg.hashsalt` gesetzt, `<dc:date>` unterdrückt — 33 Abbildungen über zwei Läufe byte-identisch, JPG ohnehin | 2026-08-08 |
 | SHACL-Inferenz | `inference="none"` statt `"rdfs"`. SHACL folgt `rdfs:subClassOf` bei `sh:targetClass` und `sh:class` selbst; die Subklassen-Axiome liegen im Bundle. Ergebnis identisch, Schritt von 42 s auf 14 s | 2026-08-08 |
 | Laufzeitmessung | je Schritt eine Dauer im Report, dazu eine Tabelle mit Anteilen in der Summary | 2026-08-08 |
-| Ort der Dokumentationsseiten | `docu/` (statisch, von `visuals/build.py` erzeugt), Veröffentlichung unter `/docu/`; `docs/` gehört Unicorn ontdoc, `visuals/site/` bleibt unter `/visuals/` | 2026-11-04 |
+| Ort der Dokumentationsseiten | `docu/` (statisch, von `visuals/build.py` erzeugt), Veröffentlichung unter `/docu/`; `docs/` gehört Unicorn ontdoc und liegt unter `/semweb/`; Vortragsabbildungen und Clusterseiten liegen ebenfalls in `docu/` (eine Navigation, kein `/visuals/` mehr), die Wurzel leitet auf `/docu/` weiter | 2026-11-05 |
 | Datenmodell-Seiten | aus den Ontologiedateien gelesen, nicht von Hand gesetzt; `check()` stoppt den Bau bei Abweichung von den Zahlen der Abbildungen 08/12 | 2026-11-04 |
 | Abfrageseite | rdflib unter Pyodide über einen Beispielgraphen, kein Endpunkt; eine Abfrage ohne Treffer stoppt den Bau | 2026-11-04 |
 | CRM-Anker für alle Klassen | jede Klasse der eigenen Module hat einen CRM-Vorfahren, instanziiert oder nicht. Fremde Vokabulare über den Crosswalk (`crm_bridging.ttl`; im N4O-Profil `profile/crosswalk-crm.ttl`), nie in deren Ontologie | 2026-11-04 |

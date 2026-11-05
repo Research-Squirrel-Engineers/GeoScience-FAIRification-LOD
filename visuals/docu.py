@@ -228,7 +228,7 @@ def build_index(M: md.Model) -> None:
              ("crosswalk.html", "Crosswalk", "Every defined or used class, drawn with its chain to the CRM family."),
              ("instances.html", "Instance models", "One EPICA, SISAL and CI resource with its neighbours."),
              ("sparql.html", "Query", "Eight queries over a sample graph, run in the browser."),
-             ("../visuals/index.html", "Slide figures", "The twelve figures of the CHNT31 talk.")]
+             ("slides.html", "Slide figures", "The twelve figures of the CHNT31 talk.")]
     body = (f'<div class="stat">{stats}</div><section class="text"><ul>'
             + "".join(f'<li><a href="{h}">{esc(t)}</a>: {esc(d)}</li>' for h, t, d in links) + "</ul></section>")
     intro = ("Documentation of the geo-lod data model for ice cores (EPICA), speleothems (SISAL) and the Campanian Ignimbrite "

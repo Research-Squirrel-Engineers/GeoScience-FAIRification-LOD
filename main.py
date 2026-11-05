@@ -500,7 +500,7 @@ def main():
     parser.add_argument(
         "--no-visuals", action="store_true",
         help="den Schritt Dokumentationsseiten und Vortragsabbildungen "
-             "(visuals/build.py, Ausgabe docu/ und visuals/site/) überspringen",
+             "(visuals/build.py, Ausgabe docu/) überspringen",
     )
     parser.add_argument(
         "--visuals-only", action="store_true",
@@ -547,7 +547,7 @@ def main():
 
     if args.visuals_only:
         print_section(step("Documentation pages and slide figures"))
-        ok = visuals_ready() and run_script(VISUALS_SCRIPT, "docu/ and visuals/site/")
+        ok = visuals_ready() and run_script(VISUALS_SCRIPT, "docu/")
         end_section()
         sys.exit(0 if ok else 1)
 
@@ -747,7 +747,7 @@ def main():
     visuals_wanted = not args.no_visuals and VISUALS_SCRIPT.exists() and visuals_ready(quiet=True)
     if visuals_wanted:
         print_section(step("Documentation pages and slide figures"))
-        visuals_ok = run_script(VISUALS_SCRIPT, "docu/ and visuals/site/")
+        visuals_ok = run_script(VISUALS_SCRIPT, "docu/")
         end_section()
 
     # Was dieser Lauf überhaupt vorhatte. Ein nicht angeforderter Schritt ist

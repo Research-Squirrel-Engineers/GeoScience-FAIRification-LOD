@@ -11,7 +11,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Shares its group with docu-pages.yml and visuals-pages.yml, which also write to gh-pages.
+# Shares its group with docu-pages.yml, which also writes to gh-pages (the ontology pages go to /semweb/).
 concurrency:
   group: gh-pages-write
   cancel-in-progress: false
@@ -26,6 +26,7 @@ jobs:
       version: v018
       rdffilepath: EPICA/rdf/epica_dome_c.ttl SISAL/rdf/sisal_sites.ttl SISAL/rdf/sisal_145_corchia_data.ttl CI/rdf/ci_findspots.ttl
       docpath: docs
+      ghpagesfolder: semweb
       prefixns: http://w3id.org/geo-lod/
       prefixnsshort: geo-lod
       indexpages: true

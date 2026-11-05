@@ -1,17 +1,16 @@
 # Slide figures and documentation
 
 Twelve figures for the semantic-modelling section of the CHNT31 talk, with a
-caption page (`site/`), and the documentation pages of the data model (`../docu/`).
-Everything under `site/` and `docu/` is generated.
+caption page, and the documentation pages of the data model. Everything is one site and is written to `../docu/`
+(`slides.html`, the cluster pages and the documentation pages share one navigation). Everything under `docu/` is generated.
 
     pip install -r visuals/requirements.txt
     py visuals/build.py              # both
     py visuals/build.py --only docu  # documentation only
     py visuals/build.py --only slides
 
-Published at
-<https://research-squirrel-engineers.github.io/GeoScience-FAIRification-LOD/visuals/> (slides) and
-<https://research-squirrel-engineers.github.io/GeoScience-FAIRification-LOD/docu/> (documentation).
+Published at <https://research-squirrel-engineers.github.io/GeoScience-FAIRification-LOD/docu/>. The ontology pages
+of SPARQL Unicorn (the IRI pages) are under `/semweb/`; the root of the site forwards to `docu/`.
 
 Inputs are the repository's own files: `EPICA/rdf/`, `SISAL/rdf/`,
 `data/derived/sisal/tables/`, `data/raw/ci/`, `data/curated/`, `data/raw/basemap/`
@@ -36,12 +35,12 @@ Figures: CC BY 4.0. Code: MIT. Fonts: Fira Sans, SIL OFL 1.1, see `fonts/`.
 | `model_data.py` | reads classes, properties, domains, ranges and CRM anchors from the ontology files; `check()` stops the build on a mismatch with figures 08 and 12 |
 | `model_figs.py` | hierarchy, relations, CRM coverage, crosswalk (per module, other vocabularies, whole way to E1) and instance figures |
 | `crm_tree.py` | superclass spine of the CRM-family anchors up to `crm:E1_CRM_Entity`, one primary parent per class; extend it when a bridging axiom reaches a class that is missing (the build says which) |
-| `site_kit.py` | stylesheet, navigation and page frame shared by `docu/` and `site/` |
+| `site_kit.py` | stylesheet, navigation and page frame shared by all pages in `docu/` |
 | `sample_graph.py` | the graph behind the query page |
 | `sparql_page.py`, `queries.yaml` | the query page and its `.rq` files; a query without rows stops the build |
 | `docu.py` | writes the six pages; `crosswalk.html` takes every class defined or used and draws its chain to the CRM family. The build fails when a class used in the data has no CRM-family ancestor |
 
-## Cluster pages (`site/clusters.html`, `site/cluster-*.html`)
+## Cluster pages (`docu/clusters.html`, `docu/cluster-*.html`)
 
 The data model drawn in slices: one page per thematic cluster, so that no figure has to carry all 46 classes of `geolod:`.
 

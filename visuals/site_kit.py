@@ -1,14 +1,14 @@
-"""One design for the geo-lod pages (slide figures under /visuals/, documentation under /docu/).
+"""One design for the geo-lod pages: documentation, slide figures and cluster pages, all in docu/.
 
 The look follows the figure page of this repository and of CHNT2026-amt: cream background, white cards with a thin
 rim, Fira Sans, accent colour #9a3412. This module holds
 
   * the stylesheet, written to <site>/assets/site.css with the Fira Sans files next to it,
-  * the navigation, the same two rows on every page of both folders (relative links, so the pages work
+  * the navigation, the same rows on every page (relative links, so the pages work
     from the gh-pages branch, from a local checkout and from an unpacked archive),
   * the page frame and the figure card.
 
-Pages are static HTML. There is no Jekyll layout: the workflows deploy the two folders as they stand. Nothing here
+Pages are static HTML. There is no Jekyll layout: the workflow deploys the folder as it stands. Nothing here
 needs rdflib.
 """
 from __future__ import annotations
@@ -21,11 +21,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 FONTS = HERE / "fonts"
 
-# (file, label) per row. "docu" pages live in docu/, "visuals" pages in visuals/site/; both folders are
-# published side by side on gh-pages, so ../<other>/ always resolves.
+# (file, label) per row. Every page lives in docu/.
 DOCU_PAGES = [("index.html", "Overview"), ("model.html", "Data model"), ("crm-coverage.html", "CRM coverage"), ("crosswalk.html", "Crosswalk"),
-              ("instances.html", "Instance models"), ("sparql.html", "Query")]
-VISUAL_PAGES = [("index.html", "Slide figures")]
+              ("instances.html", "Instance models"), ("slides.html", "Slide figures"), ("sparql.html", "Query")]
 # Cluster pages: the overview first, then the clusters that have a page (clusters.yaml). Kept in step by clusters.py.
 CLUSTER_PAGES = [("clusters.html", "Overview"), ("cluster-chronology.html", "Chronology")]
 
@@ -106,13 +104,13 @@ def esc(s) -> str:
 
 
 def nav_html(here: str, active: str) -> str:
-    """here: 'docu' or 'visuals' (the folder the page sits in); active: '<folder>/<file>' of the current page."""
+    """here: the folder the page sits in ('docu'); active: '<folder>/<file>' of the current page."""
     def link(folder, path, label):
         href = path if folder == here else f"../{folder}/{path}"
         on = ' class="on"' if f"{folder}/{path}" == active else ""
         return f'<a{on} href="{href}">{esc(label)}</a>'
 
-    rows = [("Documentation", "docu", DOCU_PAGES), ("Visuals", "visuals", VISUAL_PAGES), ("Clusters", "visuals", CLUSTER_PAGES)]
+    rows = [("Documentation", "docu", DOCU_PAGES), ("Clusters", "docu", CLUSTER_PAGES)]
     return "<nav>" + "".join(
         f'<div class="grp"><span class="lab">{name}</span><span class="lnk">'
         + "".join(link(folder, p, t) for p, t in pages) + "</span></div>"

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""clusters.py - the cluster pages of geo-lod (visuals/site/): one page per thematic cluster of the data model.
+"""clusters.py - the cluster pages of geo-lod (docu/): one page per thematic cluster of the data model.
 
-    visuals/site/clusters.html            overview of the clusters (clusters.yaml)
-    visuals/site/cluster-<id>.html        one page: the cluster graph, data figures, the classes of the cluster
+    docu/clusters.html                    overview of the clusters (clusters.yaml)
+    docu/cluster-<id>.html                one page: the cluster graph, data figures, the classes of the cluster
 
-A cluster without `page` in clusters.yaml is listed on the overview as planned. Figures are written to visuals/site/img/.
+A cluster without `page` in clusters.yaml is listed on the overview as planned. Figures are written to docu/img/.
 Run it through `py visuals/build.py --only clusters`. The output is deterministic: no date, sorted iteration, LF endings.
 """
 from __future__ import annotations
@@ -19,7 +19,7 @@ import cluster_figs as C  # noqa: E402
 import model_data as md  # noqa: E402
 import site_kit as K  # noqa: E402
 
-SITE = HERE / "site"
+SITE = HERE.parent / "docu"
 IMG = SITE / "img"
 esc = K.esc
 CREDIT = "Fiona Schenk, Florian Thiery, Research Squirrel Engineers at LEIZA. CC BY 4.0."
@@ -129,7 +129,7 @@ def build_cluster(M: md.Model, clusters: list[dict], cl: dict, D: C.Dating | Non
         body += ["<h2>Modelling pattern</h2>"] + pattern + ["<h2>In the data</h2>"] + data
     body.append(f'<section class="text"><h3>Classes</h3>{class_table(M, cl)}</section>')
     intro = esc(cl["lead"]) + ' All clusters are on the <a href="clusters.html">overview</a>.'
-    K.write_page(SITE / cl["page"], K.page("visuals", cl["page"], cl["title"], intro, "\n".join(body)))
+    K.write_page(SITE / cl["page"], K.page("docu", cl["page"], cl["title"], intro, "\n".join(body)))
 
 
 def build_overview(M: md.Model, clusters: list[dict]) -> None:
@@ -144,8 +144,8 @@ def build_overview(M: md.Model, clusters: list[dict]) -> None:
             "the assignment is <code>visuals/clusters.yaml</code>, and the build stops when a class is missing or listed twice.</p>")
     intro = ('The data model drawn in slices instead of as one graph. Each page shows the classes of one cluster, the relations '
              'that leave it as dashed edge nodes, and figures from the data. The whole model is on the '
-             '<a href="../docu/model.html">data model page</a>.')
-    K.write_page(SITE / "clusters.html", K.page("visuals", "clusters.html", "Model clusters", intro, body))
+             '<a href="model.html">data model page</a>.')
+    K.write_page(SITE / "clusters.html", K.page("docu", "clusters.html", "Model clusters", intro, body))
 
 
 def main() -> int:
@@ -160,7 +160,7 @@ def main() -> int:
             build_cluster(M, clusters, cl, D)
             built += 1
     build_overview(M, clusters)
-    print(f"visuals/site/: {built} cluster pages of {len(clusters)}, overview")
+    print(f"docu/: {built} cluster pages of {len(clusters)}, overview")
     return 0
 
 

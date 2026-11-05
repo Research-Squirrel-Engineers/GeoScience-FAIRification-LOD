@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""build.py - slide figures for the CHNT31 talk (visuals/site/) and the documentation pages (docu/).
+"""build.py - slide figures for the CHNT31 talk (docu/slides.html) and the documentation pages (docu/).
 
 Twelve figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
-and a caption page, written to visuals/site/. That folder is what the workflow
-visuals-pages.yml publishes under /visuals/ on GitHub Pages. The documentation
+and a caption page (docu/slides.html). docu/ is what the workflow
+docu-pages.yml publishes under /docu/ on GitHub Pages. The documentation
 (data model, CRM coverage, instance models, query page) is written by docu.py to
 docu/, published under /docu/ by docu-pages.yml; `--only slides` or `--only docu`
 builds one of the two.
@@ -22,7 +22,7 @@ import resvg_py
 
 VISUALS = Path(__file__).resolve().parent
 REPO = VISUALS.parent
-SITE, IMG = VISUALS/"site", VISUALS/"site"/"img"
+SITE, IMG = VISUALS.parent/"docu", VISUALS.parent/"docu"/"img"
 sys.path.insert(0, str(REPO/"ontology"))
 import geo_lod_basemap as gb  # noqa: E402
 
@@ -787,21 +787,21 @@ def caption_page():
     import site_kit
     cards = [site_kit.fig_card(IMG, n, str(i), c, cr) for i, (n, c, cr) in enumerate(ITEMS, 1)]
     intro = ("Twelve figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, "
-             'the CRM coverage and a query page are in the <a href="../docu/index.html">documentation</a>.')
+             'the CRM coverage and a query page are in the <a href="index.html">documentation</a>.')
     site_kit.write_assets(SITE)
-    site_kit.write_page(SITE/"index.html", site_kit.page("visuals", "index.html", "Slide figures", intro, "\n".join(cards)))
+    site_kit.write_page(SITE/"slides.html", site_kit.page("docu", "slides.html", "Slide figures", intro, "\n".join(cards)))
 
 
 def slides():
     check_quoted_values()
     fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12()
     caption_page()
-    print(f"Wrote {len(list(IMG.glob('*.png')))} figures and index.html to {SITE}")
+    print(f"Wrote {len(list(IMG.glob('*.png')))} figures and slides.html to {SITE}")
 
 
 def main(argv=None):
     import argparse
-    ap = argparse.ArgumentParser(description="Slide figures (visuals/site/) and the documentation pages (docu/).")
+    ap = argparse.ArgumentParser(description="Slide figures and the documentation pages (both in docu/).")
     ap.add_argument("--only", choices=["slides", "clusters", "docu"], help="build one of the three; default is all")
     args = ap.parse_args(argv)
     if args.only in (None, "slides"):

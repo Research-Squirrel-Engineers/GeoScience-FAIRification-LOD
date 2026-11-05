@@ -2,7 +2,7 @@
 #
 # Every geolod: class belongs to exactly one cluster; the build stops when one is missing or listed twice. Classes of
 # strat: and an: may be listed too (they then count as members of the cluster), they are not required to be.
-# `page` is the file name under visuals/site/; a cluster without `page` is listed on the overview as planned.
+# `page` is the file name under docu/; a cluster without `page` is listed on the overview as planned.
 
 - id: archives
   title: Archives and sampling
