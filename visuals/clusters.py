@@ -145,7 +145,7 @@ def build_overview(M: md.Model, clusters: list[dict]) -> None:
     intro = ('The data model drawn in slices instead of as one graph. Each page shows the classes of one cluster, the relations '
              'that leave it as dashed edge nodes, and figures from the data. The whole model is on the '
              '<a href="../docu/model.html">data model page</a>.')
-    K.write_page(SITE / "clusters.html", K.page("visuals", "clusters.html", "Model clusters", intro, "\n".join(body)))
+    K.write_page(SITE / "clusters.html", K.page("visuals", "clusters.html", "Model clusters", intro, body))
 
 
 def main() -> int:
