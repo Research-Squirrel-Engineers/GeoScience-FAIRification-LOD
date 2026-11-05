@@ -10,7 +10,7 @@ caption page, and the documentation pages of the data model. Everything is one s
     py visuals/build.py --only slides
 
 Published at <https://research-squirrel-engineers.github.io/GeoScience-FAIRification-LOD/docu/>. The ontology pages
-of SPARQL Unicorn (the IRI pages) are under `/semweb/`; the root of the site forwards to `docu/`.
+of SPARQL Unicorn (the IRI pages) are under `/semweb/`; the root of the site forwards to `docu/`. The third navigation row, "Ontology pages", links into `/semweb/` (overview and the main collections, `SEMWEB_PAGES` in `site_kit.py`); those pages exist only on the `gh-pages` branch, so the links do not work in a local checkout.
 
 Inputs are the repository's own files: `EPICA/rdf/`, `SISAL/rdf/`,
 `data/derived/sisal/tables/`, `data/raw/ci/`, `data/curated/`, `data/raw/basemap/`
