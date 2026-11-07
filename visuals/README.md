@@ -1,6 +1,6 @@
 # Slide figures and documentation
 
-Twelve figures for the semantic-modelling section of the CHNT31 talk, with a
+Thirteen figures for the semantic-modelling section of the CHNT31 talk, with a
 caption page, and the documentation pages of the data model. Everything is one site and is written to `../docu/`
 (`slides.html`, the cluster pages and the documentation pages share one navigation). Everything under `docu/` is generated.
 

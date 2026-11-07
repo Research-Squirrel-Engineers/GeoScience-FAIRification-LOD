@@ -1,0 +1,62 @@
+<svg width="1750" height="1000" viewBox="0 0 1750 1000" xmlns="http://www.w3.org/2000/svg" role="img"><title>The semantic layer: published data, ELT notebooks, a CRM-based graph with PeriodO and Wikidata, and discovery</title>
+<rect width="1750" height="1000" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="220.0" y="52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="36" font-weight="500" fill="#1f1f1d">1 Data</text>
+<text x="220.0" y="98" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#55544f">What is published?</text>
+<text x="650.0" y="52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="36" font-weight="500" fill="#1f1f1d">2 Notebooks</text>
+<text x="650.0" y="98" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#55544f">How is it made?</text>
+<text x="1135.0" y="52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="36" font-weight="500" fill="#1f1f1d">3 Graph</text>
+<text x="1135.0" y="98" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#55544f">What does it mean?</text>
+<text x="1580.0" y="52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="36" font-weight="500" fill="#1f1f1d">4 Discovery</text>
+<text x="1580.0" y="98" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#55544f">How is it found?</text>
+<rect x="40" y="390" width="360" height="110" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="220.0" y="431.66" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="23" font-weight="500" fill="#000000">Tables and measurements</text>
+<text x="220.0" y="460.18" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">environmental and cultural data</text>
+<rect x="40" y="530" width="360" height="110" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="220.0" y="571.66" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="23" font-weight="500" fill="#000000">Cloud-native layers</text>
+<text x="220.0" y="600.18" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">vector, raster, 3D Tiles</text>
+<rect x="480" y="380" width="340" height="260" rx="14" fill="#e2e8f0" stroke="#000000" stroke-width="1.2"/>
+<text x="650" y="424" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">ELT notebooks</text>
+<text x="650" y="480" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">Jupyter, published</text>
+<text x="650" y="512" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">together with the data</text>
+<text x="650" y="576" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">same input, same graph</text>
+<rect x="900" y="170" width="470" height="110" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1135.0" y="210.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="25" font-weight="500" fill="#ffffff">PeriodO</text>
+<text x="1135.0" y="241.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#ffffff">period definitions with sources</text>
+<rect x="900" y="380" width="470" height="260" rx="14" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1135" y="424" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">Semantic graph</text>
+<text x="1135" y="478" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">CIDOC CRM and its extensions</text>
+<text x="1135" y="510" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">CRMsci, CRMarchaeo, CRMgeo</text>
+<text x="1135" y="542" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">domain modules on top</text>
+<text x="1135" y="606" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">one table row, many statements</text>
+<rect x="900" y="740" width="470" height="110" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1135.0" y="780.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="25" font-weight="500" fill="#ffffff">Wikidata</text>
+<text x="1135.0" y="811.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#ffffff">places, sites, people, events</text>
+<line x1="1135" y1="380" x2="1135" y2="282" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1053.9" y="316" width="162.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1135.0" y="331" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">references period</text>
+<line x1="1135" y1="640" x2="1135" y2="738" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1079.4" y="674" width="111.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1135.0" y="689" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">owl:sameAs</text>
+<rect x="1450" y="380" width="260" height="110" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1580.0" y="420.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="25" font-weight="500" fill="#000000">Matadisco</text>
+<text x="1580.0" y="451.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">metadata on AT Protocol</text>
+<rect x="1450" y="540" width="260" height="110" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="1580.0" y="580.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="25" font-weight="500" fill="#000000">Clients</text>
+<text x="1580.0" y="611.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">WebApp, QGIS plugin, API</text>
+<line x1="1580" y1="490" x2="1580" y2="538" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1542.7" y="502" width="74.6" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1580.0" y="514" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">found by</text>
+<line x1="400" y1="445" x2="478" y2="445" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="400" y1="585" x2="478" y2="585" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="820" y1="510" x2="898" y2="510" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1370" y1="435" x2="1448" y2="435" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="465.9" y="929" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="497.9" y="940" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Data and software</text>
+<rect x="691.5999999999999" y="929" width="22" height="22" rx="3" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="723.5999999999999" y="940" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Semantic graph</text>
+<rect x="894.6999999999999" y="929" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="926.6999999999999" y="940" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">External authority</text>
+<rect x="1118.3" y="929" width="22" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1150.3" y="940" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">Publication</text>
+</svg>

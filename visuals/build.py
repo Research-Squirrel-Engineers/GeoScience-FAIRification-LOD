@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build.py - slide figures for the CHNT31 talk (docu/slides.html) and the documentation pages (docu/).
 
-Twelve figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
+Thirteen figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
 and a caption page (docu/slides.html). docu/ is what the workflow
 docu-pages.yml publishes under /docu/ on GitHub Pages. The documentation
 (data model, CRM coverage, instance models, query page) is written by docu.py to
@@ -769,6 +769,41 @@ def fig12():
     f.save()
 
 
+def fig13():
+    """The semantic layer of SpaceTimeArc in general: published data, ELT notebooks, a CRM-based graph with PeriodO and Wikidata, discovery."""
+    f = Fig("13-semantic-layer", "The semantic layer: published data, ELT notebooks, a CRM-based graph with PeriodO and Wikidata, and discovery")
+    cols = ((40, 360, "1 Data", "What is published?"), (480, 340, "2 Notebooks", "How is it made?"),
+            (900, 470, "3 Graph", "What does it mean?"), (1450, 260, "4 Discovery", "How is it found?"))
+    for x, w, t, s in cols:
+        f.text(x+w/2, 52, t, 36, True); f.text(x+w/2, 98, s, 24, color=MUTED)
+    # 1 data
+    f.box(40, 390, 360, 110, "Tables and measurements", "environmental and cultural data", INST, 23, 19)
+    f.box(40, 530, 360, 110, "Cloud-native layers", "vector, raster, 3D Tiles", INST, 23, 19)
+    # 2 notebooks
+    f.rect(480, 380, 340, 260, INST[0], "#000000", 14, 1.2)
+    f.text(650, 424, "ELT notebooks", 27, True, "#000000")
+    for i, t in enumerate(("Jupyter, published", "together with the data", "", "same input, same graph")):
+        if t: f.text(650, 480+i*32, t, 20, color="#000000", maxw=324)
+    # 3 graph, with the two outside authorities
+    f.box(900, 170, 470, 110, "PeriodO", "period definitions with sources", TERM, 25, 19)
+    f.rect(900, 380, 470, 260, GL[0], "#000000", 14, 1.2)
+    f.text(1135, 424, "Semantic graph", 27, True, "#000000")
+    for i, t in enumerate(("CIDOC CRM and its extensions", "CRMsci, CRMarchaeo, CRMgeo", "domain modules on top", "", "one table row, many statements")):
+        if t: f.text(1135, 478+i*32, t, 20, color="#000000", maxw=454)
+    f.box(900, 740, 470, 110, "Wikidata", "places, sites, people, events", TERM, 25, 19)
+    f.line(1135, 380, 1135, 282); chip(f, 1135, 331, "references period")
+    f.line(1135, 640, 1135, 738); chip(f, 1135, 689, "owl:sameAs")
+    # 4 discovery
+    f.box(1450, 380, 260, 110, "Matadisco", "metadata on AT Protocol", OWL, 25, 19)
+    f.box(1450, 540, 260, 110, "Clients", "WebApp, QGIS plugin, API", INST, 25, 19)
+    f.line(1580, 490, 1580, 538); label(f, 1580, 514, "found by")
+    # flow
+    for y in (445, 585): f.line(400, y, 478, y)
+    f.line(820, 510, 898, 510)
+    f.line(1370, 435, 1448, 435)
+    f.legend(940, [(INST, "Data and software"), (GL, "Semantic graph"), (TERM, "External authority"), (OWL, "Publication")])
+    f.save()
+
 ITEMS = [
  ("01-from-measurement-to-crm", "From one table row to CIDOC CRM and its extensions.", "Data: EPICA Dome C, Spahni & Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0."),
  ("02-crm-family", "Extensions specialise CIDOC CRM classes rather than replace them.", "Classes: geo-lod, CIDOC CRM, CRMsci 2.0, CRMarchaeo 1.4.8; figure CC BY 4.0."),
@@ -782,12 +817,13 @@ ITEMS = [
  ("10-strat-ontology", "The strat module: stratigraphy of a core.", "Ontology: strat.ttl; dashed anchors are planned; figure CC BY 4.0."),
  ("11-analysis-ontology", "The an module: one analysis of one specimen.", "Ontology: analysis_core.ttl; anchors through crm_bridging.ttl; figure CC BY 4.0."),
  ("12-modules-and-crm", "Three modules, one CRM family.", "Ontology modules of geo-lod; figure CC BY 4.0."),
+ ("13-semantic-layer", "The semantic layer of SpaceTimeArc: from published data to discovery.", "General architecture; geo-lod is its demonstrator; figure CC BY 4.0."),
 ]
 
 def caption_page():
     import site_kit
     cards = [site_kit.fig_card(IMG, n, str(i), c, cr) for i, (n, c, cr) in enumerate(ITEMS, 1)]
-    intro = ("Twelve figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, "
+    intro = ("Thirteen figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, "
              'the CRM coverage and a query page are in the <a href="index.html">documentation</a>.')
     site_kit.write_assets(SITE)
     site_kit.write_page(SITE/"slides.html", site_kit.page("docu", "slides.html", "Slide figures", intro, "\n".join(cards)))
@@ -795,7 +831,7 @@ def caption_page():
 
 def slides():
     check_quoted_values()
-    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12()
+    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12(); fig13()
     caption_page()
     print(f"Wrote {len(list(IMG.glob('*.png')))} figures and slides.html to {SITE}")
 
