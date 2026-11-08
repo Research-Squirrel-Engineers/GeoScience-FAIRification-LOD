@@ -776,33 +776,22 @@ def fig13():
             (900, 470, "3 Graph", "What does it mean?"), (1450, 260, "4 Discovery", "How is it found?"))
     for x, w, t, s in cols:
         f.text(x+w/2, 52, t, 36, True); f.text(x+w/2, 98, s, 24, color=MUTED)
-    # 1 data
-    f.box(40, 390, 360, 110, "Tables and measurements", "environmental and cultural data", INST, 23, 19)
-    f.box(40, 530, 360, 110, "Cloud-native layers", "vector, raster, 3D Tiles", INST, 23, 19)
-    # 2 notebooks
-    f.rect(480, 380, 340, 260, INST[0], "#000000", 14, 1.2)
-    f.text(650, 424, "ELT notebooks", 27, True, "#000000")
-    for i, t in enumerate(("Jupyter, published", "together with the data", "", "same input, same graph")):
-        if t: f.text(650, 480+i*32, t, 20, color="#000000", maxw=324)
-    # 3 graph, with the two outside authorities
-    f.box(900, 170, 470, 110, "PeriodO", "period definitions with sources", TERM, 25, 19)
-    f.rect(900, 380, 470, 260, GL[0], "#000000", 14, 1.2)
-    f.text(1135, 424, "Semantic graph", 27, True, "#000000")
-    for i, t in enumerate(("CIDOC CRM and its extensions", "CRMsci, CRMarchaeo, CRMgeo", "domain modules on top", "", "one table row, many statements")):
-        if t: f.text(1135, 478+i*32, t, 20, color="#000000", maxw=454)
-    f.box(900, 740, 470, 110, "Wikidata", "places, sites, people, events", TERM, 25, 19)
-    f.line(1135, 380, 1135, 282); chip(f, 1135, 331, "references period")
-    f.line(1135, 640, 1135, 738); chip(f, 1135, 689, "owl:sameAs")
-    # 4 discovery
-    f.box(1450, 380, 260, 110, "Matadisco", "metadata on AT Protocol", OWL, 25, 19)
-    f.box(1450, 540, 260, 110, "Clients", "WebApp, QGIS plugin, API", INST, 25, 19)
-    f.line(1580, 490, 1580, 538); label(f, 1580, 514, "found by")
-    # flow
-    for y in (445, 585): f.line(400, y, 478, y)
-    f.line(820, 510, 898, 510)
-    f.line(1370, 435, 1448, 435)
-    f.legend(940, [(INST, "Data and software"), (GL, "Semantic graph"), (TERM, "External authority"), (OWL, "Publication")])
+    f.box(40, 395, 360, 110, "Tables and measurements", None, INST, 27)
+    f.box(40, 545, 360, 110, "Cloud-native layers", None, INST, 27)
+    f.box(480, 400, 340, 210, "ELT notebooks", None, INST, 32)
+    f.box(900, 170, 470, 110, "PeriodO", None, TERM, 32)
+    f.box(900, 400, 470, 210, "Semantic graph", None, GL, 34)
+    f.box(900, 790, 470, 110, "Wikidata", None, TERM, 32)
+    f.line(1135, 400, 1135, 282); chip(f, 1135, 341, "references period")
+    f.line(1135, 610, 1135, 788); chip(f, 1135, 699, "owl:sameAs")
+    f.box(1450, 400, 260, 100, "Matadisco", None, OWL, 28)
+    f.box(1450, 560, 260, 100, "Clients", None, INST, 28)
+    f.line(1580, 500, 1580, 558); label(f, 1580, 529, "found by")
+    f.line(400, 450, 478, 450); f.line(400, 600, 478, 600)
+    f.line(820, 505, 898, 505)
+    f.line(1370, 450, 1448, 450)
     f.save()
+
 
 def fig14():
     """geo-lod in one picture: three datasets, one reproducible pipeline, a CRM-based graph, publication."""
@@ -811,28 +800,24 @@ def fig14():
             (900, 470, "3 Graph", "What does it mean?"), (1450, 260, "4 Publication", "How is it reached?"))
     for x, w, t, sub in cols:
         f.text(x+w/2, 52, t, 36, True); f.text(x+w/2, 98, sub, 24, color=MUTED)
-    ys = (250, 410, 570)
-    for y, a, b in zip(ys, ("EPICA Dome C", "SISAL", "Campanian Ignimbrite"), ("ice core, five proxies", "stalagmites, 365 caves", "archaeological findspots")):
-        f.box(40, y, 360, 130, a, b, INST, 26, 20)
-    f.rect(480, 300, 340, 350, INST[0], "#000000", 14, 1.2)
-    f.text(650, 352, "Python pipeline", 28, True, "#000000")
-    for i, t in enumerate(("one command, main.py", "explicit parameters", "every age names its chronology", "no timestamps, same output")):
-        f.text(650, 425+i*50, t, 21, color="#000000", maxw=324)
-    f.rect(900, 170, 470, 640, GL[0], "#000000", 14, 1.2)
-    f.text(1135, 214, "Semantic graph", 28, True, "#000000")
-    f.box(917, 254, 436, 80, "CIDOC CRM", None, ("#d4e1f5", "#000000", "#000000"), 26, 18, rx=10)
+    ys = (255, 405, 555)
+    for y, a in zip(ys, ("EPICA Dome C", "SISAL", "Campanian Ignimbrite")):
+        f.box(40, y, 360, 130, a, None, INST, 28)
+    f.box(480, 370, 340, 200, "Python pipeline", None, INST, 32)
+    f.rect(900, 180, 470, 580, GL[0], "#000000", 14, 1.2)
+    f.text(1135, 226, "Semantic graph", 30, True, "#000000")
+    f.box(917, 264, 436, 90, "CIDOC CRM", None, ("#d4e1f5", "#000000", "#000000"), 26, 18, rx=10)
     for x, a, col in ((917, "CRMsci", "#ffcc99"), (1069, "CRMarchaeo", "#e3d5f0"), (1221, "CRMgeo", "#d9ead3")):
-        f.box(x, 356, 132, 74, a, None, (col, "#000000", "#000000"), 20, 18, rx=10)
-    f.box(917, 580, 436, 110, "Domain layer geo-lod", None, ST, 28, 19, rx=10)
-    f.line(1135, 578, 1135, 432); chip(f, 1135, 505, "anchored in the CRM family")
-    f.text(1135, 752, "one table row, many statements", 21, color="#000000", maxw=440)
-    f.box(900, 850, 470, 110, "Wikidata", "owl:sameAs, skos:closeMatch", TERM, 26, 20)
-    f.line(1135, 810, 1135, 848)
-    for y, a, b in zip(ys, ("Documentation", "SPARQL page", "Turtle and figures"), ("model and CRM coverage", "queries in the browser", "downloads, Zenodo DOI")):
-        f.box(1450, y, 260, 130, a, b, OWL, 25, 19)
-    for y in (315, 475, 635): f.line(400, y, 478, y)
-    f.line(820, 475, 898, 475)
-    for y in (315, 475, 635): f.line(1370, y, 1448, y)
+        f.box(x, 376, 132, 90, a, None, (col, "#000000", "#000000"), 20, 18, rx=10)
+    f.box(917, 590, 436, 140, "Domain layer geo-lod", None, ST, 28, 19, rx=10)
+    f.line(1135, 588, 1135, 468); chip(f, 1135, 528, "anchored in the CRM family")
+    f.box(900, 810, 470, 120, "Wikidata", None, TERM, 30)
+    f.line(1135, 760, 1135, 808)
+    for y, a in zip(ys, ("Documentation", "SPARQL page", "Turtle and figures")):
+        f.box(1450, y, 260, 130, a, None, OWL, 27)
+    f.line(400, 320, 478, 420); f.line(400, 470, 478, 470); f.line(400, 620, 478, 520)
+    f.line(820, 470, 898, 470)
+    for y in ys: f.line(1370, y+65, 1448, y+65)
     f.save()
 
 
