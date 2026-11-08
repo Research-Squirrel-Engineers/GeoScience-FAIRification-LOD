@@ -1,0 +1,85 @@
+<svg width="1750" height="1000" viewBox="0 0 1750 1000" xmlns="http://www.w3.org/2000/svg" role="img"><title>The geo-lod layer between the CIDOC CRM family and W3C standards, and the knowledge graph it produces</title>
+<rect width="1750" height="1000" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<rect x="20" y="24" width="1270" height="262" rx="14" fill="#eef2f9" stroke="#000000" stroke-width="1"/>
+<text x="50" y="58" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">CRM family</text>
+<rect x="50" y="84" width="1210" height="70" rx="10" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="655.0" y="105.66" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="23" font-weight="500" fill="#000000">CIDOC CRM</text>
+<text x="655.0" y="134.18" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">events, things, places, time, types</text>
+<rect x="50" y="174" width="390" height="90" rx="10" fill="#ffcc99" stroke="#000000" stroke-width="1"/>
+<text x="245.0" y="205.66" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="23" font-weight="500" fill="#000000">CRMsci</text>
+<text x="245.0" y="234.18" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">scientific observation</text>
+<rect x="460" y="174" width="390" height="90" rx="10" fill="#e3d5f0" stroke="#000000" stroke-width="1"/>
+<text x="655.0" y="205.66" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="23" font-weight="500" fill="#000000">CRMarchaeo</text>
+<text x="655.0" y="234.18" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">archaeological excavation</text>
+<rect x="870" y="174" width="390" height="90" rx="10" fill="#d9ead3" stroke="#000000" stroke-width="1"/>
+<text x="1065.0" y="205.66" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="23" font-weight="500" fill="#000000">CRMgeo</text>
+<text x="1065.0" y="234.18" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">spatial reference</text>
+<rect x="20" y="352" width="1270" height="220" rx="14" fill="#f6f6f2" stroke="#000000" stroke-width="1.4"/>
+<text x="50" y="384" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">Domain layer geo-lod</text>
+<rect x="40" y="420" width="400" height="110" rx="12" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="240.0" y="459.34" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">Geoscience records</text>
+<text x="240.0" y="492.82" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">cores, speleothems, ages, chronologies</text>
+<rect x="455" y="420" width="400" height="110" rx="12" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="655.0" y="459.34" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">Stratigraphy</text>
+<text x="655.0" y="492.82" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">units, boundaries, age models</text>
+<rect x="870" y="420" width="400" height="110" rx="12" fill="#f7dbe8" stroke="#000000" stroke-width="1"/>
+<text x="1070.0" y="459.34" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">Analysis</text>
+<text x="1070.0" y="492.82" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">specimens, methods, properties</text>
+<line x1="240.0" y1="350" x2="240.0" y2="288" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="655.0" y1="350" x2="655.0" y2="288" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1070.0" y1="350" x2="1070.0" y2="288" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="480.9" y="310" width="348.2" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="655.0" y="322" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">anchored by subclass axioms or a bridging file</text>
+<rect x="20" y="680" width="1270" height="90" rx="10" fill="#e4e4e0" stroke="#000000" stroke-width="1"/>
+<text x="655.0" y="711.08" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">W3C and community standards</text>
+<text x="655.0" y="740.84" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#000000">SOSA/SSN, OWL-Time, GeoSPARQL, PROV-O, SKOS, DCAT</text>
+<line x1="240.0" y1="574" x2="240.0" y2="678" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="655.0" y1="574" x2="655.0" y2="678" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="1070.0" y1="574" x2="1070.0" y2="678" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="581.75" y="614" width="146.5" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="655.0" y="626" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">reused, not copied</text>
+<rect x="1360" y="24" width="370" height="746" rx="14" fill="#ffffff" stroke="#000000" stroke-width="1.4"/>
+<text x="1545" y="60" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">Knowledge graph</text>
+<text x="1545" y="96" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#55544f">instances typed by the modules</text>
+<line x1="1545" y1="380" x2="1450" y2="250" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1545" y1="380" x2="1650" y2="240" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1545" y1="380" x2="1450" y2="520" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1545" y1="380" x2="1655" y2="500" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1545" y1="380" x2="1545" y2="640" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1545" y1="380" x2="1400" y2="390" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1545" y1="380" x2="1695" y2="380" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1450" y1="250" x2="1545" y2="190" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1450" y1="250" x2="1400" y2="390" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1450" y1="520" x2="1400" y2="390" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1650" y1="240" x2="1695" y2="380" stroke="#55544f" stroke-width="1.8"/>
+<line x1="1655" y1="500" x2="1695" y2="380" stroke="#55544f" stroke-width="1.8"/>
+<circle cx="1545" cy="380" r="28" fill="#e2e8f0" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1450" cy="250" r="19" fill="#e2e8f0" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1650" cy="240" r="19" fill="#4c1d95" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1450" cy="520" r="19" fill="#e2e8f0" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1655" cy="500" r="19" fill="#4c1d95" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1545" cy="640" r="19" fill="#4c1d95" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1400" cy="390" r="14" fill="#e2e8f0" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1695" cy="380" r="14" fill="#4c1d95" stroke="#000000" stroke-width="1.4"/>
+<circle cx="1545" cy="190" r="14" fill="#e2e8f0" stroke="#000000" stroke-width="1.4"/>
+<line x1="1292" y1="462" x2="1358" y2="462" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1297.5" y="424" width="55.0" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1325.0" y="436" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">builds</text>
+<rect x="20" y="830" width="1710" height="150" rx="14" fill="#f1ecf8" stroke="#000000" stroke-width="1.4"/>
+<text x="50" y="862" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">Federated Knowledge Graph Ecosystem</text>
+<rect x="40" y="890" width="400" height="76" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="240.0" y="928.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">RDF graphs</text>
+<rect x="455" y="890" width="400" height="76" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="655.0" y="928.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">Wikibase</text>
+<rect x="870" y="890" width="400" height="76" rx="10" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1070.0" y="928.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">FDO data</text>
+<rect x="1340" y="890" width="370" height="76" rx="10" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1525.0" y="928.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#ffffff">Other knowledge graphs</text>
+<line x1="1272" y1="928" x2="1338" y2="928" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1277.45" y="892" width="55.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1305.0" y="904" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">linked</text>
+<line x1="1545" y1="772" x2="1545" y2="828" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1517.45" y="788" width="55.1" height="24" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="1545.0" y="800" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#000000">linked</text>
+</svg>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build.py - slide figures for the CHNT31 talk (docu/slides.html) and the documentation pages (docu/).
 
-Thirteen figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
+Sixteen figures in the *-visuals house pattern (1750x1000, Fira Sans, SVG plus PNG)
 and a caption page (docu/slides.html). docu/ is what the workflow
 docu-pages.yml publishes under /docu/ on GitHub Pages. The documentation
 (data model, CRM coverage, instance models, query page) is written by docu.py to
@@ -804,6 +804,136 @@ def fig13():
     f.legend(940, [(INST, "Data and software"), (GL, "Semantic graph"), (TERM, "External authority"), (OWL, "Publication")])
     f.save()
 
+def fig14():
+    """geo-lod in one picture: three datasets, one reproducible pipeline, a CRM-based graph, publication."""
+    f = Fig("14-geo-lod-workflow", "geo-lod: from three datasets through one pipeline to a CIDOC CRM based graph and its publication")
+    cols = ((40, 360, "1 Datasets", "What goes in?"), (480, 340, "2 Pipeline", "How is it run?"),
+            (900, 470, "3 Graph", "What does it mean?"), (1450, 260, "4 Publication", "How is it reached?"))
+    for x, w, t, sub in cols:
+        f.text(x+w/2, 52, t, 36, True); f.text(x+w/2, 98, sub, 24, color=MUTED)
+    ys = (250, 410, 570)
+    for y, a, b in zip(ys, ("EPICA Dome C", "SISAL", "Campanian Ignimbrite"), ("ice core, five proxies", "stalagmites, 365 caves", "archaeological findspots")):
+        f.box(40, y, 360, 130, a, b, INST, 26, 20)
+    f.rect(480, 300, 340, 350, INST[0], "#000000", 14, 1.2)
+    f.text(650, 352, "Python pipeline", 28, True, "#000000")
+    for i, t in enumerate(("one command, main.py", "explicit parameters", "every age names its chronology", "no timestamps, same output")):
+        f.text(650, 425+i*50, t, 21, color="#000000", maxw=324)
+    f.rect(900, 170, 470, 640, GL[0], "#000000", 14, 1.2)
+    f.text(1135, 214, "Semantic graph", 28, True, "#000000")
+    f.box(917, 254, 436, 80, "CIDOC CRM", None, ("#d4e1f5", "#000000", "#000000"), 26, 18, rx=10)
+    for x, a, col in ((917, "CRMsci", "#ffcc99"), (1069, "CRMarchaeo", "#e3d5f0"), (1221, "CRMgeo", "#d9ead3")):
+        f.box(x, 356, 132, 74, a, None, (col, "#000000", "#000000"), 20, 18, rx=10)
+    f.box(917, 580, 436, 110, "Domain layer geo-lod", None, ST, 28, 19, rx=10)
+    f.line(1135, 578, 1135, 432); chip(f, 1135, 505, "anchored in the CRM family")
+    f.text(1135, 752, "one table row, many statements", 21, color="#000000", maxw=440)
+    f.box(900, 850, 470, 110, "Wikidata", "owl:sameAs, skos:closeMatch", TERM, 26, 20)
+    f.line(1135, 810, 1135, 848)
+    for y, a, b in zip(ys, ("Documentation", "SPARQL page", "Turtle and figures"), ("model and CRM coverage", "queries in the browser", "downloads, Zenodo DOI")):
+        f.box(1450, y, 260, 130, a, b, OWL, 25, 19)
+    for y in (315, 475, 635): f.line(400, y, 478, y)
+    f.line(820, 475, 898, 475)
+    for y in (315, 475, 635): f.line(1370, y, 1448, y)
+    f.save()
+
+
+def fig15():
+    """The CRM family, the geo-lod layer and the knowledge graph it produces, without file names or class counts."""
+    f = Fig("15-crm-family-simple", "The geo-lod layer between the CIDOC CRM family and W3C standards, and the knowledge graph it produces")
+    f.rect(20, 24, 1270, 262, "#eef2f9", "#000000", 14, 1)
+    f.text(50, 58, "CRM family", 26, True, anchor="start")
+    f.box(50, 84, 1210, 70, "CIDOC CRM", "events, things, places, time, types", ("#d4e1f5", "#000000", "#000000"), 23, 18, rx=10)
+    for x, a, b, col in ((50, "CRMsci", "scientific observation", "#ffcc99"), (460, "CRMarchaeo", "archaeological excavation", "#e3d5f0"), (870, "CRMgeo", "spatial reference", "#d9ead3")):
+        f.box(x, 174, 390, 90, a, b, (col, "#000000", "#000000"), 23, 18, rx=10)
+    X = [(40, 400), (455, 400), (870, 400)]
+    f.rect(20, 352, 1270, 220, "#f6f6f2", "#000000", 14, 1.4)
+    f.text(50, 384, "Domain layer geo-lod", 28, True, anchor="start")
+    for (x, ww), (a, b, st) in zip(X, (("Geoscience records", "cores, speleothems, ages, chronologies", GL),
+                                        ("Stratigraphy", "units, boundaries, age models", ST),
+                                        ("Analysis", "specimens, methods, properties", AN))):
+        f.box(x, 420, ww, 110, a, b, st, 27, 20, rx=12)
+    for x, ww in X: f.line(x+ww/2, 350, x+ww/2, 288)
+    label(f, 655, 322, "anchored by subclass axioms or a bridging file")
+    f.box(20, 680, 1270, 90, "W3C and community standards", "SOSA/SSN, OWL-Time, GeoSPARQL, PROV-O, SKOS, DCAT", W3, 24, 20, rx=10)
+    for x, ww in X: f.line(x+ww/2, 574, x+ww/2, 678)
+    label(f, 655, 626, "reused, not copied")
+    # the knowledge graph the layer produces
+    f.rect(1360, 24, 370, 746, "#ffffff", "#000000", 14, 1.4)
+    f.text(1545, 60, "Knowledge graph", 28, True)
+    f.text(1545, 96, "instances typed by the modules", 20, color=MUTED, maxw=340)
+    nodes = [(1545, 380, 28, INST), (1450, 250, 19, INST), (1650, 240, 19, TERM), (1450, 520, 19, INST), (1655, 500, 19, TERM),
+             (1545, 640, 19, TERM), (1400, 390, 14, INST), (1695, 380, 14, TERM), (1545, 190, 14, INST)]
+    for a, b in ((0,1),(0,2),(0,3),(0,4),(0,5),(0,6),(0,7),(1,8),(1,6),(3,6),(2,7),(4,7)):
+        f.raw(f'<line x1="{nodes[a][0]}" y1="{nodes[a][1]}" x2="{nodes[b][0]}" y2="{nodes[b][1]}" stroke="{LINE}" stroke-width="1.8"/>')
+    for x, y, r, st in nodes:
+        f.raw(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{st[0]}" stroke="#000000" stroke-width="1.4"/>')
+    f.line(1292, 462, 1358, 462); label(f, 1325, 436, "builds")
+    f.rect(20, 830, 1710, 150, "#f1ecf8", "#000000", 14, 1.4)
+    f.text(50, 862, "Federated Knowledge Graph Ecosystem", 28, True, anchor="start")
+    for x, a, b in ((40, "RDF graphs", None), (455, "Wikibase", None), (870, "FDO data", None)):
+        f.box(x, 890, 400, 76, a, b, OWL, 24, 19, rx=10)
+    f.box(1340, 890, 370, 76, "Other knowledge graphs", None, TERM, 24, 19, rx=10)
+    f.line(1272, 928, 1338, 928); label(f, 1305, 904, "linked")
+    f.line(1545, 772, 1545, 828); label(f, 1545, 800, "linked")
+    f.save()
+
+
+def stalagmite_glyph(f, cx, by, sx=0.9, sy=0.24):
+    """The stalagmite outline of figure 4, scaled: warm layers, growth lines."""
+    Y = lambda d: 158 + 3.3*d
+    st = f"M 62 {Y(230)} C 85 640 110 260 122 {Y(10)} C 132 {Y(-16)} 188 {Y(-16)} 198 {Y(10)} C 210 260 235 640 258 {Y(230)} Z"
+    tf = f"translate({cx-160*sx:.1f} {by-Y(230)*sy:.1f}) scale({sx} {sy})"
+    f.raw(f'<g transform="{tf}"><clipPath id="st16"><path d="{st}"/></clipPath><g clip-path="url(#st16)"><rect x="50" y="60" width="220" height="900" fill="url(#warm)"/>')
+    for y in range(250, 930, 62):
+        f.raw(f'<path d="M 50 {y+28} Q 160 {y-28} 270 {y+28}" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>')
+    f.raw(f'</g><path d="{st}" fill="none" stroke="#000000" stroke-width="1.6" vector-effect="non-scaling-stroke"/></g>')
+
+
+def cave_glyph(f, cx, by, sc=1.0):
+    """A free-hand cave: rock mass, dark chamber, stalactites above, stalagmites below."""
+    T = lambda x, y: f"{cx+(x)*sc:.1f} {by+(y)*sc:.1f}"
+    rock = ("M " + T(-130, 0) + " C " + T(-150, -40) + " " + T(-135, -95) + " " + T(-95, -118) + " C " + T(-70, -150) + " " + T(-20, -158) + " " + T(10, -140)
+            + " C " + T(50, -165) + " " + T(110, -140) + " " + T(125, -90) + " C " + T(150, -60) + " " + T(140, -20) + " " + T(135, 0) + " Z")
+    hole = ("M " + T(-92, 0) + " C " + T(-98, -30) + " " + T(-80, -62) + " " + T(-48, -78) + " C " + T(-30, -100) + " " + T(0, -96) + " " + T(14, -84)
+            + " C " + T(34, -104) + " " + T(70, -92) + " " + T(82, -62) + " C " + T(100, -40) + " " + T(96, -14) + " " + T(94, 0) + " Z")
+    f.raw(f'<path d="{rock}" fill="#cfd6e0" stroke="#000000" stroke-width="1.6"/>')
+    f.raw(f'<path d="{hole}" fill="#4b5563"/>')
+    # stalactites hang from the ceiling of the chamber, stalagmites rise from the floor; both in the colour of the rock
+    for x, y, w, h in ((-46, -76, 7, 26), (-20, -90, 5, 14), (8, -93, 8, 40), (40, -91, 6, 20), (66, -74, 5, 14)):
+        f.raw(f'<polygon points="{cx+(x-w)*sc:.1f},{by+y*sc:.1f} {cx+(x+w)*sc:.1f},{by+y*sc:.1f} {cx+(x+1)*sc:.1f},{by+(y+h)*sc:.1f}" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>')
+    for x, w, h in ((-52, 10, 20), (22, 12, 30), (60, 7, 14)):
+        f.raw(f'<polygon points="{cx+(x-w)*sc:.1f},{by:.1f} {cx+(x+w)*sc:.1f},{by:.1f} {cx+x*sc:.1f},{by-h*sc:.1f}" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>')
+    f.raw(f'<path d="M {cx-150*sc:.1f} {by:.1f} L {cx+155*sc:.1f} {by:.1f}" stroke="#000000" stroke-width="1.6"/>')
+
+
+def fig16():
+    """Where the graph opens up, schematically: one stalagmite and what it is linked to."""
+    f = Fig("16-linked-graph", "Where the graph opens up: a stalagmite as a node, linked to the CIDOC CRM family, its cave, Wikidata, DOIs, ORCID and its source repository")
+    f.box(650, 80, 450, 100, "PeriodO", "period of the age", TERM, 25, 19, dash=True)
+    f.box(40, 200, 360, 110, "CIDOC CRM family", "class of the node", CLS, 25, 19)
+    f.box(40, 740, 360, 110, "Wikidata, OpenStreetMap", "the same place", TERM, 25, 19)
+    f.box(1350, 200, 360, 110, "PANGAEA, Zenodo", "DOI of the dataset", TERM, 25, 19)
+    f.box(1350, 390, 360, 110, "ORCID", "creators of the data", TERM, 25, 19)
+    f.box(1350, 580, 360, 110, "Repository", "code and data of the graph", OWL, 25, 19)
+    f.box(650, 700, 450, 100, "GeoSPARQL geometry", "coordinates of the cave", INST, 25, 19)
+    stalagmite_glyph(f, 875, 495, 0.7, 0.29)
+    f.text(875, 530, "Stalagmite", 34, True); f.text(875, 568, "one node, one persistent URI", 20, color=MUTED)
+    cave_glyph(f, 220, 575, 1.0)
+    f.text(220, 612, "Cave", 30, True); f.text(220, 646, "place of the stalagmite", 20, color=MUTED)
+    for (x1, y1, x2, y2, t, cx, cy, d) in (
+            (800, 340, 402, 270, "rdf:type", 600, 305, False),
+            (800, 450, 372, 520, "located in", 580, 485, False),
+            (220, 668, 220, 738, None, 0, 0, False),
+            (950, 340, 1348, 270, "owl:sameAs", 1160, 305, False),
+            (960, 410, 1348, 445, "dct:creator", 1160, 428, False),
+            (950, 470, 1348, 620, "prov:wasDerivedFrom", 1150, 545, False),
+            (875, 590, 875, 698, "geo:hasGeometry", 875, 644, False),
+            (875, 262, 875, 182, "references period", 875, 222, True)):
+        f.line(x1, y1, x2, y2, dash=d)
+        if t: chip(f, cx, cy, t)
+    chip(f, 220, 703, "owl:sameAs")
+    f.save()
+
+
 ITEMS = [
  ("01-from-measurement-to-crm", "From one table row to CIDOC CRM and its extensions.", "Data: EPICA Dome C, Spahni & Stocker 2006, doi:10.1594/PANGAEA.472484; figure CC BY 4.0."),
  ("02-crm-family", "Extensions specialise CIDOC CRM classes rather than replace them.", "Classes: geo-lod, CIDOC CRM, CRMsci 2.0, CRMarchaeo 1.4.8; figure CC BY 4.0."),
@@ -818,12 +948,15 @@ ITEMS = [
  ("11-analysis-ontology", "The an module: one analysis of one specimen.", "Ontology: analysis_core.ttl; anchors through crm_bridging.ttl; figure CC BY 4.0."),
  ("12-modules-and-crm", "Three modules, one CRM family.", "Ontology modules of geo-lod; figure CC BY 4.0."),
  ("13-semantic-layer", "The semantic layer of SpaceTimeArc: from published data to discovery.", "General architecture; geo-lod is its demonstrator; figure CC BY 4.0."),
+ ("14-geo-lod-workflow", "geo-lod in one picture: datasets, one reproducible pipeline, a CRM-based graph, publication.", "Overview of the demonstrator; figure CC BY 4.0."),
+ ("15-crm-family-simple", "Domain modules anchored in the CIDOC CRM family and reusing W3C standards.", "Simplified from figure 12; figure CC BY 4.0."),
+ ("16-linked-graph", "Where the graph opens up: a stalagmite as a node and what it is linked to.", "Schematic; the links are those used in geo-lod, the PeriodO link is planned; figure CC BY 4.0."),
 ]
 
 def caption_page():
     import site_kit
     cards = [site_kit.fig_card(IMG, n, str(i), c, cr) for i, (n, c, cr) in enumerate(ITEMS, 1)]
-    intro = ("Thirteen figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, "
+    intro = ("Sixteen figures for the semantic-modelling section of the CHNT31 talk. The classes and properties behind them, "
              'the CRM coverage and a query page are in the <a href="index.html">documentation</a>.')
     site_kit.write_assets(SITE)
     site_kit.write_page(SITE/"slides.html", site_kit.page("docu", "slides.html", "Slide figures", intro, "\n".join(cards)))
@@ -831,7 +964,7 @@ def caption_page():
 
 def slides():
     check_quoted_values()
-    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12(); fig13()
+    fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12(); fig13(); fig14(); fig15(); fig16()
     caption_page()
     print(f"Wrote {len(list(IMG.glob('*.png')))} figures and slides.html to {SITE}")
 
