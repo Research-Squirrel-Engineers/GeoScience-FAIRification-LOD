@@ -458,6 +458,13 @@ def print_summary(results: dict[str, bool], requested: dict[str, bool],
 
 
 def main():
+    # Output that goes to a file or a pipe (python main.py > log.txt) uses the
+    # locale encoding on Windows (cp1252), which cannot print the box-drawing
+    # characters of print_section(). Switch this process to UTF-8; the child
+    # processes already get PYTHONIOENCODING from run_script().
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(
         description="geo-lod pipeline: EPICA, SISAL and CI palaeoclimate data "
                     "to RDF, figures, the archaeological HTML pages, and "

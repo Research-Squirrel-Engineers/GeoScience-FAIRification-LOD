@@ -1114,8 +1114,7 @@ MERMAID_TAXONOMY: str = textwrap.dedent(
         direction TB
         CIFINDSPOT["CIFindspot"]
         CIARCHSITE["CIArchaeologicalSite"]
-        CIVOLEVENT["CIVolcanicEvent"]
-        CITEPHRA["CITephraDeposit"]
+        CIVOLEVENT["strat:Eruption (geolod:ci_volcanic_event)"]
     end
 
     subgraph CRMEXT["CRMarchaeo / CRMgeo"]
@@ -1123,7 +1122,6 @@ MERMAID_TAXONOMY: str = textwrap.dedent(
         CA2["crmarchaeo:A2_Stratigraphic_Volume_Unit"]
         CGP6["crmgeo:SP6_Declarative_Place"]
         CE5["crm:E5_Event"]
-        CE26["crm:E26_Physical_Feature"]
     end
 
     %% External to Core relationships
@@ -1169,7 +1167,6 @@ MERMAID_TAXONOMY: str = textwrap.dedent(
     CIFINDSPOT --> CIARCHSITE
     CA2 -.-> CIARCHSITE
     CE5 -.-> CIVOLEVENT
-    CE26 -.-> CITEPHRA
     CGP6 -.-> CIFINDSPOT
 
     %% Styling - External Ontologies
@@ -1231,14 +1228,12 @@ MERMAID_TAXONOMY: str = textwrap.dedent(
     style CIFINDSPOT fill:#a0522d,color:#fff,stroke:#7a3b1e,stroke-width:2px
     style CIARCHSITE fill:#cd6c2a,color:#fff,stroke:#a0522d
     style CIVOLEVENT fill:#cd6c2a,color:#fff,stroke:#a0522d
-    style CITEPHRA fill:#cd6c2a,color:#fff,stroke:#a0522d
 
     %% Styling - CRMarchaeo / CRMgeo
     style CRMEXT fill:#f5e6f0,stroke:#7b2d8b,stroke-width:2px,color:#333
     style CA2 fill:#7b2d8b,color:#fff,stroke:#5c1f6a
     style CGP6 fill:#7b2d8b,color:#fff,stroke:#5c1f6a
     style CE5 fill:#9b2226,color:#fff,stroke:#7a1a1d
-    style CE26 fill:#9b2226,color:#fff,stroke:#7a1a1d
 """
 )
 
@@ -1486,7 +1481,7 @@ def _mermaid_instance_ci(n: int = 74) -> str:
         f"""\
     flowchart LR
 
-    EVENT(["CIVolcanicEvent
+    EVENT(["strat:Eruption
     geolod:ci_volcanic_event
     ~40 ka BP"])
 
@@ -1520,8 +1515,7 @@ def _mermaid_instance_ci(n: int = 74) -> str:
     LCERT((hasCertaintyLevel))
     LLIT((hasLiteratureReference))
 
-    EVENT -->|crm:P7_took_place_at| ARCHSITE
-    EVENT -->|crm:P12_occurred_in_presence_of| SITE
+    EVENT -->|crm:P12_occurred_in_the_presence_of| SITE
     EVENT -->|crm:P7_took_place_at| SOURCE
     COLLECTION -->|rdfs:member| SITE
     COLLECTION -->|rdfs:member| ARCHSITE

@@ -2003,8 +2003,10 @@ Jetzt modelliert `CI/ci_pipeline.py` (`add_eruption`):
   ELSA-20-Chronologie, umgerechnet 39,890 ± 0,150 ka BP. Das dritte ist das Fallout-Alter
   der Tephra im Auel-Kern, **kein** Eruptionsalter; der Beitrag hatte beides gleichgesetzt.
 - Keine neue Klasse: das Modell bleibt bei 46/10/6, `check()` läuft ohne Änderung.
-  Die Mermaid-Übersicht in `geo_lod_utils.py` nennt `CIVolcanicEvent` und
-  `CITephraDeposit`, die in keiner Ontologiedatei stehen — offen.
+  Die Mermaid-Übersicht in `geo_lod_utils.py` nannte `CIVolcanicEvent` und
+  `CITephraDeposit`, die in keiner Ontologiedatei stehen — ERLEDIGT 24.11.2026: das
+  Ereignis ist `strat:Eruption`, eine Tephra-Klasse für CI gibt es nicht (die
+  CI-Tabelle hat keine Tephra-Angaben), die Diagramme zeigen nur noch Vorhandenes.
 - Neue Abbildung `docu/img/cl-archaeology-eruption` (Seite „Archaeology and the CI"):
   das Ereignis als Wurzel mit Ort, Zeitspanne, Fundstellen und den drei Altern als
   Balken. Neunte Abfrage `ci-eruption-ages` auf der Abfrageseite.

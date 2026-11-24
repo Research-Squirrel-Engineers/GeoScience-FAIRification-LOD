@@ -1,6 +1,6 @@
 flowchart LR
 
-EVENT(["CIVolcanicEvent
+EVENT(["strat:Eruption
 geolod:ci_volcanic_event
 ~40 ka BP"])
 
@@ -34,8 +34,7 @@ LLABEL((rdfs:label))
 LCERT((hasCertaintyLevel))
 LLIT((hasLiteratureReference))
 
-EVENT -->|crm:P7_took_place_at| ARCHSITE
-EVENT -->|crm:P12_occurred_in_presence_of| SITE
+EVENT -->|crm:P12_occurred_in_the_presence_of| SITE
 EVENT -->|crm:P7_took_place_at| SOURCE
 COLLECTION -->|rdfs:member| SITE
 COLLECTION -->|rdfs:member| ARCHSITE
