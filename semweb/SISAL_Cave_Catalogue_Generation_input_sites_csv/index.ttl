@@ -7,6 +7,6 @@
         prov:Entity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "sites.csv" ;
-    dcterms:identifier "sha256:291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449" ;
+    dcterms:identifier "sha256:398f14d25607a78c1863e93086cba47b6370208156a832f947c6e2885776db14" ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

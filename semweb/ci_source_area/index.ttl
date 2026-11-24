@@ -1,0 +1,12 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/ci_source_area> a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "Phlegraean Fields (Campi Flegrei), source area of the CI eruption"@en ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    rdfs:comment "The source area, not a vent: the exact vent of the CI eruption is discussed (De Vivo et al. 2001 propose fissures along Apennine faults rather than a ring fracture of the Campi Flegrei caldera)."@en ;
+    skos:closeMatch <http://www.wikidata.org/entity/Q755123> .
+

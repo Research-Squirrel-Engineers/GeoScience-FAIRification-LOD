@@ -1,0 +1,9 @@
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/ci_eruption_end_devivo2001> a time:Instant,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    time:inTimePosition <http://w3id.org/geo-lod/ci_eruption_end_pos_devivo2001> .
+

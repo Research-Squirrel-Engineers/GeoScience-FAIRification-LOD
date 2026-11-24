@@ -14,8 +14,11 @@ ns1:Cave_site_0055 a ns1:Cave,
     void:inDataset ns1:geo-lod ;
     ns1:countD13CSamples 1439 ;
     ns1:countD18OSamples 20974 ;
+    ns1:countDatedD18OSamples 20974 ;
     ns1:elevation_m 1955.0 ;
+    ns1:oldestAgeKaBP 133.6213 ;
     ns1:siteId 55 ;
+    ns1:youngestAgeKaBP 14.6200 ;
     geo:hasGeometry <http://w3id.org/geo-lod/sisal/geom_site_0055> ;
     prov:wasDerivedFrom ns1:SISALv3_DataSource .
 

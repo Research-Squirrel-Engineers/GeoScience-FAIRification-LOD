@@ -36,6 +36,8 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#A2_Stratigraphic_Volume_Unit_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Activity>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Activity_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#AgeUncertainty>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#AgeUncertainty_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Agent>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#AllPalaeoclimateSites_Collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Borehole>,
@@ -425,8 +427,18 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#DrillingCampaign_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#DrillingSite>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#DrillingSite_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E13_Attribute_Assignment>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E13_Attribute_Assignment_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E52_Time-Span>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E52_Time-Span_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E53_Place>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E53_Place_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E5_Event>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E5_Event_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Entity>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Entity_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Eruption>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Eruption_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#FeatureCollection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#FeatureCollection_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#GeometryCollection>,
@@ -438,6 +450,8 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#IceCoreObservation>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#IceCoreObservation_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#IceCore_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Instant>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Instant_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#MISAttributeAssignment>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#MISAttributeAssignment_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#MISMembershipAssignment>,
@@ -453,6 +467,8 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Place_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Point>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Point_collection>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ProperInterval>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ProperInterval_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#RollingMedianFilter>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#RollingMedianFilter_collection>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#SISAL_Archaeological_Cave_Collection>,
@@ -477,10 +493,41 @@ void:Linkset a owl:Class .
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#campaign_1996_2004>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#catalog_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#catalog_suniv1_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_pos_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_pos_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_pos_schenk2024>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_schenk2024>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_devivo2001_suniv0_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_devivo2001_suniv1_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_giaccio2017_suniv0_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_giaccio2017_suniv1_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_schenk2024_suniv0_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_schenk2024_suniv1_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_pos_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_pos_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_pos_schenk2024>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_schenk2024>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_interval_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_interval_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_interval_schenk2024>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_timespan>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_tp_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_tp_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_tp_schenk2024>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_unc_devivo2001>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_unc_giaccio2017>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_unc_schenk2024>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_findspots_dataset>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_findspots_generation>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_findspots_generation_input_ci_pipeline_py>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_findspots_generation_input_cifindspots_part_full_csv>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_source_area>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_volcanic_event_suniv0_>,
+        <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_volcanic_event_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#cisite_101_activity_suniv0_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#cisite_101_activity_suniv1_>,
         <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#cisite_101_geom_suniv0_>,
@@ -17501,6 +17548,14 @@ void:Linkset a owl:Class .
 
 <https://www.iana.org/assignments/media-types/text/turtle#Resource> a owl:Class .
 
+<http://w3id.org/geo-lod/strat/Eruption> a owl:Class .
+
+<http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> a owl:Class .
+
+<http://www.cidoc-crm.org/cidoc-crm/E53_Place> a owl:Class .
+
+<http://www.cidoc-crm.org/cidoc-crm/E5_Event> a owl:Class .
+
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#0000-0002-3246-3531_suniv0_> ns1:forClass prov:Agent ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/0000-0002-3246-3531_suniv0_> .
 
@@ -17518,6 +17573,12 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Activity_collection> ns1:forClass skos:Collection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Activity_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#AgeUncertainty> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/AgeUncertainty> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#AgeUncertainty_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/AgeUncertainty_collection> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Agent> ns1:forClass <#> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Agent> .
@@ -18686,11 +18747,41 @@ void:Linkset a owl:Class .
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#DrillingSite_collection> ns1:forClass geo:FeatureCollection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/DrillingSite_collection> .
 
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E13_Attribute_Assignment> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E13_Attribute_Assignment> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E13_Attribute_Assignment_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E13_Attribute_Assignment_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E52_Time-Span> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E52_Time-Span> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E52_Time-Span_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E52_Time-Span_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E53_Place> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E53_Place> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E53_Place_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E53_Place_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E5_Event> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E5_Event> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#E5_Event_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/E5_Event_collection> .
+
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Entity> ns1:forClass <#> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Entity> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Entity_collection> ns1:forClass skos:Collection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Entity_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Eruption> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Eruption> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Eruption_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Eruption_collection> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#FeatureCollection> ns1:forClass geo:SpatialObjectCollection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/FeatureCollection> .
@@ -18724,6 +18815,12 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#IceCore_collection> ns1:forClass skos:Collection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/IceCore_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Instant> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Instant> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Instant_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Instant_collection> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#MISAttributeAssignment> ns1:forClass <#> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/MISAttributeAssignment> .
@@ -18769,6 +18866,12 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#Point_collection> ns1:forClass geo:GeometryCollection ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/Point_collection> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ProperInterval> ns1:forClass <#> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ProperInterval> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ProperInterval_collection> ns1:forClass skos:Collection ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ProperInterval_collection> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#RollingMedianFilter> ns1:forClass <#> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/RollingMedianFilter> .
@@ -18842,6 +18945,90 @@ void:Linkset a owl:Class .
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#catalog_suniv1_> ns1:forClass dcat:Catalog ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/catalog_suniv1_> .
 
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_devivo2001> ns1:forClass time:Instant ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_begin_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_giaccio2017> ns1:forClass time:Instant ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_begin_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_pos_devivo2001> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_begin_pos_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_pos_giaccio2017> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_begin_pos_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_pos_schenk2024> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_begin_pos_schenk2024> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_begin_schenk2024> ns1:forClass time:Instant ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_begin_schenk2024> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_devivo2001_suniv0_> ns1:forClass prov:Entity ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_dating_devivo2001_suniv0_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_devivo2001_suniv1_> ns1:forClass <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_dating_devivo2001_suniv1_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_giaccio2017_suniv0_> ns1:forClass prov:Entity ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_dating_giaccio2017_suniv0_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_giaccio2017_suniv1_> ns1:forClass <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_dating_giaccio2017_suniv1_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_schenk2024_suniv0_> ns1:forClass prov:Entity ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_dating_schenk2024_suniv0_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_dating_schenk2024_suniv1_> ns1:forClass <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_dating_schenk2024_suniv1_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_devivo2001> ns1:forClass time:Instant ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_end_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_giaccio2017> ns1:forClass time:Instant ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_end_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_pos_devivo2001> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_end_pos_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_pos_giaccio2017> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_end_pos_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_pos_schenk2024> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_end_pos_schenk2024> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_end_schenk2024> ns1:forClass time:Instant ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_end_schenk2024> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_interval_devivo2001> ns1:forClass time:ProperInterval ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_interval_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_interval_giaccio2017> ns1:forClass time:ProperInterval ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_interval_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_interval_schenk2024> ns1:forClass time:ProperInterval ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_interval_schenk2024> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_timespan> ns1:forClass <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_timespan> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_tp_devivo2001> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_tp_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_tp_giaccio2017> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_tp_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_tp_schenk2024> ns1:forClass time:TimePosition ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_tp_schenk2024> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_unc_devivo2001> ns1:forClass <http://w3id.org/geo-lod/AgeUncertainty> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_unc_devivo2001> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_unc_giaccio2017> ns1:forClass <http://w3id.org/geo-lod/AgeUncertainty> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_unc_giaccio2017> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_eruption_unc_schenk2024> ns1:forClass <http://w3id.org/geo-lod/AgeUncertainty> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_eruption_unc_schenk2024> .
+
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_findspots_dataset> ns1:forClass prov:Entity ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_findspots_dataset> .
 
@@ -18853,6 +19040,15 @@ void:Linkset a owl:Class .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_findspots_generation_input_cifindspots_part_full_csv> ns1:forClass prov:Entity ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_findspots_generation_input_cifindspots_part_full_csv> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_source_area> ns1:forClass <http://www.cidoc-crm.org/cidoc-crm/E53_Place> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_source_area> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_volcanic_event_suniv0_> ns1:forClass <http://w3id.org/geo-lod/strat/Eruption> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_volcanic_event_suniv0_> .
+
+<https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#ci_volcanic_event_suniv1_> ns1:forClass <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
+    ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/ci_volcanic_event_suniv1_> .
 
 <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/settings/publicTypeIndex.ttl#cisite_101_activity_suniv0_> ns1:forClass <http://fuzzy-sl.squirrel.link/ontology/Georeferencing> ;
     ns1:instance <https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/cisite_101_activity_suniv0_> .
@@ -69912,8 +70108,16 @@ prov:Agent a owl:Class .
 
 foaf:Person a owl:Class .
 
+<http://w3id.org/geo-lod/AgeUncertainty> a owl:Class .
+
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> a owl:Class .
+
+time:ProperInterval a owl:Class .
+
 geo:SpatialObjectCollection a owl:Class ;
     rdfs:subClassOf skos:Collection .
+
+time:Instant a owl:Class .
 
 <http://w3id.org/geo-lod/CIArchaeologicalSite> a owl:Class .
 
@@ -69939,4 +70143,6 @@ prov:Entity a owl:Class .
 prov:Activity a owl:Class .
 
 <http://www.opengis.net/ont/sf#Point> a owl:Class .
+
+time:TimePosition a owl:Class .
 

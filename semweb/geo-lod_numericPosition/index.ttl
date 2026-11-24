@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: numericPosition"@en ;
     void:property time:numericPosition ;
-    void:triples 5126 .
+    void:triples 9 .
 

@@ -7,6 +7,6 @@
         prov:Entity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "cifindspots_part_full.csv" ;
-    dcterms:identifier "sha256:1a6af6fba99889796c31de6307cfa8954efaa17070ef231c6f3cf206ca292437" ;
+    dcterms:identifier "sha256:e712f91af1f92473216328940c81c17aa217ad53c1b78acfe183ed4407659fea" ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

@@ -1,0 +1,1 @@
+{"http://rdfs.org/ns/void#inDataset":["http://w3id.org/geo-lod/geo-lod"],"http://w3id.org/geo-lod/hasTimePosition":["http://w3id.org/geo-lod/ci_eruption_tp_giaccio2017"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":["http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"],"http://www.w3.org/2000/01/rdf-schema#label":["Time-span of the CI eruption"]}

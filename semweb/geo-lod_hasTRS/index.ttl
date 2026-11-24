@@ -8,5 +8,5 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "Property Partition: hasTRS"@en ;
     void:property time:hasTRS ;
-    void:triples 5126 .
+    void:triples 9 .
 

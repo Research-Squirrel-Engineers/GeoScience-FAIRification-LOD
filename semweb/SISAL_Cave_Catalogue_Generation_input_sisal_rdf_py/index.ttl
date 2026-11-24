@@ -7,6 +7,6 @@
         prov:Entity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "sisal_rdf.py" ;
-    dcterms:identifier "sha256:656bc1a0de3d94c6e18d5f2b3911cbad6c9e8d6d5dc42a3c58b9e9a9ecc18105" ;
+    dcterms:identifier "sha256:59d4b1d18b7400a2027407da4d6816e2ac914a451680f73e682dfd52a887877e" ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

@@ -1,0 +1,11 @@
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geo-lod/ci_eruption_begin_pos_schenk2024> a time:TimePosition,
+        <http://www.w3.org/ns/ldp#Resource>,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    time:hasTRS <http://w3id.org/geo-lod/trs/ELSA-20> ;
+    time:numericPosition 40.040 .
+

@@ -1,0 +1,20 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://w3id.org/geo-lod/ci_eruption_dating_giaccio2017> a ns1:E13_Attribute_Assignment,
+        <http://www.w3.org/ns/ldp#Resource>,
+        prov:Entity,
+        <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
+    rdfs:label "40Ar/39Ar age of the CI eruption, Giaccio et al. (2017)"@en ;
+    dcterms:bibliographicCitation "Giaccio, B., Hajdas, I., Isaia, R., Deino, A., Nomade, S. (2017). High-precision 14C and 40Ar/39Ar dating of the Campanian Ignimbrite (Y-5) reconciles the time-scales of climatic-cultural processes at 40 ka. Scientific Reports 7, 45940." ;
+    void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
+    ns1:P140_assigned_attribute_to <http://w3id.org/geo-lod/ci_eruption_timespan> ;
+    ns1:P141_assigned <http://w3id.org/geo-lod/ci_eruption_tp_giaccio2017> ;
+    rdfs:comment "Direct 40Ar/39Ar age of the eruption. The same study gives 34.29 ± 0.09 14C kyr BP (1σ), which is not calendar-calibrated and is not stored as ka BP here."@en ;
+    skos:note "Adopted as the age of the event: the direct 40Ar/39Ar age of the eruption that Schenk et al. (2024) call the latest."@en ;
+    prov:wasDerivedFrom <https://doi.org/10.1038/srep45940> .
+

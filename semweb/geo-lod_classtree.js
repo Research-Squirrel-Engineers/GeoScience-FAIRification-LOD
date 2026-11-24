@@ -117,8 +117,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 6,
-              "http://rdfs.org/ns/void#Dataset": 6,
               "http://www.w3.org/ns/adms#Asset": 6,
+              "http://rdfs.org/ns/void#Dataset": 6,
               "http://www.w3.org/ns/ldp#Resource": 3,
               "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
             },
@@ -131,11 +131,11 @@ var tree={
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 320,
               "http://fuzzy-sl.squirrel.link/ontology/Site": 320,
-              "http://w3id.org/geo-lod/CIFindspot": 320,
-              "http://www.w3.org/ns/prov#Entity": 320,
-              "https://pleiades.stoa.org/places/vocab#Place": 320,
               "http://w3id.org/geo-lod/CIArchaeologicalSite": 72,
-              "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 72
+              "http://w3id.org/geo-lod/CIFindspot": 320,
+              "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 72,
+              "http://www.w3.org/ns/prov#Entity": 320,
+              "https://pleiades.stoa.org/places/vocab#Place": 320
             }
           }
         }
@@ -155,6 +155,36 @@ var tree={
         "parent": "http://www.w3.org/ns/prov#Entity",
         "type": "instance",
         "text": " (ci:ci_findspots_dataset)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_dating_devivo2001_suniv0_",
+        "parent": "http://www.w3.org/ns/prov#Entity",
+        "type": "instance",
+        "text": "40Ar/39Ar age of the CI eruption, De Vivo et al. (2001) (geolod:ci_eruption_dating_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_dating_giaccio2017_suniv0_",
+        "parent": "http://www.w3.org/ns/prov#Entity",
+        "type": "instance",
+        "text": "40Ar/39Ar age of the CI eruption, Giaccio et al. (2017) (geolod:ci_eruption_dating_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_dating_schenk2024_suniv0_",
+        "parent": "http://www.w3.org/ns/prov#Entity",
+        "type": "instance",
+        "text": "Modelled age of the CI cryptotephra in the Auel core, Schenk et al. (2024) (geolod:ci_eruption_dating_schenk2024)",
         "data": {
           "from": {},
           "to": {}
@@ -734,7 +764,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_51_suniv0_",
         "parent": "http://www.w3.org/ns/prov#Entity",
         "type": "geoinstance",
-        "text": "Crvena Stiljena (Montenegro) (ci:cisite_51)",
+        "text": "Crvena Stijena (Montenegro) (ci:cisite_51)",
         "data": {
           "from": {},
           "to": {}
@@ -864,7 +894,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_63_suniv0_",
         "parent": "http://www.w3.org/ns/prov#Entity",
         "type": "geoinstance",
-        "text": "Titel Pleateau (Serbia) (ci:cisite_63)",
+        "text": "Titel Plateau (Serbia) (ci:cisite_63)",
         "data": {
           "from": {},
           "to": {}
@@ -884,7 +914,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_65_suniv0_",
         "parent": "http://www.w3.org/ns/prov#Entity",
         "type": "geoinstance",
-        "text": "Haua-Fteah (Libya) (ci:cisite_65)",
+        "text": "Haua Fteah (Libya) (ci:cisite_65)",
         "data": {
           "from": {},
           "to": {}
@@ -924,32 +954,38 @@ var tree={
         "id": "http://www.w3.org/ns/prov#Entity",
         "parent": "#",
         "type": "halfgeoclass",
-        "instancecount": 77,
-        "text": "Entity (prov:Entity) [100]",
+        "instancecount": 80,
+        "text": "Entity (prov:Entity) [103]",
         "data": {
           "from": {
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.w3.org/2004/02/skos/core#Collection": 3,
-              "http://www.w3.org/ns/ldp#Resource": 3,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
+              "http://www.w3.org/ns/ldp#Resource": 1,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
             },
             "http://www.w3.org/ns/prov#used": {
               "http://www.w3.org/ns/prov#Activity": 2
             }
           },
           "to": {
-            "http://purl.org/dc/terms/created": {
-              "instancecount": 1
+            "http://purl.org/dc/terms/identifier": {
+              "instancecount": 2
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 3,
-              "http://rdfs.org/ns/void#Dataset": 3,
               "http://www.w3.org/ns/adms#Asset": 3,
-              "http://www.w3.org/ns/ldp#Resource": 3,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
+              "http://rdfs.org/ns/void#Dataset": 3,
+              "http://www.w3.org/ns/ldp#Resource": 1,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 3
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 2
+            },
+            "http://purl.org/dc/terms/created": {
+              "instancecount": 1
             },
             "http://www.w3.org/2002/07/owl#versionInfo": {
               "instancecount": 1
@@ -957,12 +993,168 @@ var tree={
             "http://www.w3.org/ns/prov#wasGeneratedBy": {
               "instancecount": 1,
               "http://www.w3.org/ns/prov#Activity": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_dating_devivo2001_suniv1_",
+        "parent": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+        "type": "instance",
+        "text": "40Ar/39Ar age of the CI eruption, De Vivo et al. (2001) (geolod:ci_eruption_dating_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_dating_giaccio2017_suniv1_",
+        "parent": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+        "type": "instance",
+        "text": "40Ar/39Ar age of the CI eruption, Giaccio et al. (2017) (geolod:ci_eruption_dating_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_dating_schenk2024_suniv1_",
+        "parent": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+        "type": "instance",
+        "text": "Modelled age of the CI cryptotephra in the Auel core, Schenk et al. (2024) (geolod:ci_eruption_dating_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 3,
+        "text": "E13_Attribute_Assignment (crm:E13_Attribute_Assignment) [3]",
+        "data": {
+          "from": {
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 6,
+              "http://www.w3.org/ns/ldp#Resource": 3,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
+            }
+          },
+          "to": {
+            "http://purl.org/dc/terms/bibliographicCitation": {
+              "instancecount": 3
             },
-            "http://purl.org/dc/terms/identifier": {
-              "instancecount": 2
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 3,
+              "http://www.w3.org/ns/adms#Asset": 3,
+              "http://rdfs.org/ns/void#Dataset": 3,
+              "http://www.w3.org/ns/ldp#Resource": 2,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to": {
+              "instancecount": 3,
+              "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span": 3
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P141_assigned": {
+              "instancecount": 3,
+              "http://www.w3.org/2006/time#TimePosition": 3
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 6
+            },
+            "http://www.w3.org/2000/01/rdf-schema#comment": {
+              "instancecount": 3
             },
             "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/ns/prov#wasDerivedFrom": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/2004/02/skos/core#note": {
+              "instancecount": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_volcanic_event_suniv0_",
+        "parent": "http://w3id.org/geo-lod/strat/Eruption",
+        "type": "instance",
+        "text": "CI/Y-5 eruption (geolod:ci_volcanic_event)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/strat/Eruption",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 1,
+        "text": "Eruption (Eruption) [1]",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_volcanic_event_suniv1_",
+        "parent": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
+        "type": "instance",
+        "text": "CI/Y-5 eruption (geolod:ci_volcanic_event)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 1,
+        "text": "E5_Event (crm:E5_Event) [1]",
+        "data": {
+          "from": {
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 2
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 1,
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of": {
+              "instancecount": 74,
+              "http://fuzzy-sl.squirrel.link/ontology/Site": 74,
+              "http://w3id.org/geo-lod/CIFindspot": 74,
+              "http://www.w3.org/ns/prov#Entity": 74,
+              "https://pleiades.stoa.org/places/vocab#Place": 74,
+              "http://w3id.org/geo-lod/CIArchaeologicalSite": 12,
+              "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 12
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": {
+              "instancecount": 1,
+              "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span": 1
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": {
+              "instancecount": 1,
+              "http://www.cidoc-crm.org/cidoc-crm/E53_Place": 1
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 2
+            },
+            "http://www.w3.org/2000/01/rdf-schema#comment": {
+              "instancecount": 1
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 1
+            },
+            "http://www.w3.org/2004/02/skos/core#altLabel": {
+              "instancecount": 1
             }
           }
         }
@@ -3218,16 +3410,16 @@ var tree={
           "from": {
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.w3.org/2004/02/skos/core#Collection": 223,
-              "http://www.w3.org/ns/ldp#Resource": 90,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 90
+              "http://www.w3.org/ns/ldp#Resource": 97,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 97
             },
             "http://www.w3.org/ns/prov#wasGeneratedBy": {
-              "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place": 74,
-              "http://www.opengis.net/ont/sf#Point": 74,
               "http://fuzzy-sl.squirrel.link/ontology/Site": 74,
               "http://w3id.org/geo-lod/CIFindspot": 74,
               "http://www.w3.org/ns/prov#Entity": 75,
               "https://pleiades.stoa.org/places/vocab#Place": 74,
+              "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place": 74,
+              "http://www.opengis.net/ont/sf#Point": 74,
               "http://w3id.org/geo-lod/CIArchaeologicalSite": 12,
               "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 12
             },
@@ -3236,27 +3428,12 @@ var tree={
             }
           },
           "to": {
-            "http://fuzzy-sl.squirrel.link/ontology/activityDesc": {
-              "instancecount": 74
-            },
-            "http://fuzzy-sl.squirrel.link/ontology/hasSource": {
-              "instancecount": 74
-            },
-            "http://fuzzy-sl.squirrel.link/ontology/hasSourceType": {
-              "instancecount": 74
-            },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 149,
-              "http://rdfs.org/ns/void#Dataset": 149,
               "http://www.w3.org/ns/adms#Asset": 149,
-              "http://www.w3.org/ns/ldp#Resource": 67,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 67
-            },
-            "http://w3id.org/geo-lod/hasCertaintyLevel": {
-              "instancecount": 74
-            },
-            "http://w3id.org/geo-lod/hasLiteratureReference": {
-              "instancecount": 100
+              "http://rdfs.org/ns/void#Dataset": 149,
+              "http://www.w3.org/ns/ldp#Resource": 107,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 107
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 223
@@ -3269,6 +3446,21 @@ var tree={
             "http://www.w3.org/ns/prov#wasInformedBy": {
               "instancecount": 74,
               "http://www.w3.org/ns/prov#Activity": 74
+            },
+            "http://fuzzy-sl.squirrel.link/ontology/activityDesc": {
+              "instancecount": 74
+            },
+            "http://fuzzy-sl.squirrel.link/ontology/hasSource": {
+              "instancecount": 74
+            },
+            "http://fuzzy-sl.squirrel.link/ontology/hasSourceType": {
+              "instancecount": 74
+            },
+            "http://w3id.org/geo-lod/hasCertaintyLevel": {
+              "instancecount": 74
+            },
+            "http://w3id.org/geo-lod/hasLiteratureReference": {
+              "instancecount": 100
             },
             "http://www.w3.org/2000/01/rdf-schema#label": {
               "instancecount": 1
@@ -4784,25 +4976,25 @@ var tree={
           "from": {
             "http://www.opengis.net/ont/geosparql#hasGeometry": {
               "http://fuzzy-sl.squirrel.link/ontology/Site": 74,
-              "http://w3id.org/geo-lod/CIArchaeologicalSite": 12,
               "http://w3id.org/geo-lod/CIFindspot": 74,
-              "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 12,
               "http://www.w3.org/ns/prov#Entity": 74,
-              "https://pleiades.stoa.org/places/vocab#Place": 74
+              "https://pleiades.stoa.org/places/vocab#Place": 74,
+              "http://w3id.org/geo-lod/CIArchaeologicalSite": 12,
+              "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 12
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.opengis.net/ont/geosparql#GeometryCollection": 148,
-              "http://www.w3.org/ns/ldp#Resource": 55,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 55
+              "http://www.w3.org/ns/ldp#Resource": 16,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 16
             }
           },
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 74,
-              "http://rdfs.org/ns/void#Dataset": 74,
               "http://www.w3.org/ns/adms#Asset": 74,
-              "http://www.w3.org/ns/ldp#Resource": 28,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 28
+              "http://rdfs.org/ns/void#Dataset": 74,
+              "http://www.w3.org/ns/ldp#Resource": 52,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 52
             },
             "http://w3id.org/geo-lod/hasCertaintyDescription": {
               "instancecount": 74
@@ -4820,6 +5012,447 @@ var tree={
               "instancecount": 74,
               "http://fuzzy-sl.squirrel.link/ontology/Georeferencing": 74,
               "http://www.w3.org/ns/prov#Activity": 74
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_begin_devivo2001",
+        "parent": "http://www.w3.org/2006/time#Instant",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_begin_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_begin_giaccio2017",
+        "parent": "http://www.w3.org/2006/time#Instant",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_begin_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_begin_schenk2024",
+        "parent": "http://www.w3.org/2006/time#Instant",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_begin_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_end_devivo2001",
+        "parent": "http://www.w3.org/2006/time#Instant",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_end_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_end_giaccio2017",
+        "parent": "http://www.w3.org/2006/time#Instant",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_end_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_end_schenk2024",
+        "parent": "http://www.w3.org/2006/time#Instant",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_end_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.w3.org/2006/time#Instant",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 6,
+        "text": "Instant (time:Instant) [6]",
+        "data": {
+          "from": {
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 6
+            },
+            "http://www.w3.org/2006/time#hasEnd": {
+              "http://www.w3.org/2006/time#ProperInterval": 3
+            },
+            "http://www.w3.org/2006/time#hasBeginning": {
+              "http://www.w3.org/2006/time#ProperInterval": 3
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 6,
+              "http://www.w3.org/ns/adms#Asset": 6,
+              "http://rdfs.org/ns/void#Dataset": 6,
+              "http://www.w3.org/ns/ldp#Resource": 6,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 6
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 6
+            },
+            "http://www.w3.org/2006/time#inTimePosition": {
+              "instancecount": 6,
+              "http://www.w3.org/2006/time#TimePosition": 6
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_begin_pos_devivo2001",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_begin_pos_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_begin_pos_giaccio2017",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_begin_pos_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_begin_pos_schenk2024",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_begin_pos_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_end_pos_devivo2001",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_end_pos_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_end_pos_giaccio2017",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_end_pos_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_end_pos_schenk2024",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": " (geolod:ci_eruption_end_pos_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_tp_devivo2001",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": "39.28 ± 0.11 ka (40Ar/39Ar), as ka BP (geolod:ci_eruption_tp_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_tp_schenk2024",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": "39,940 ± 150 yr b2k (ELSA-20 chronology), as ka BP (geolod:ci_eruption_tp_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_tp_giaccio2017",
+        "parent": "http://www.w3.org/2006/time#TimePosition",
+        "type": "instance",
+        "text": "39.85 ± 0.14 ka (40Ar/39Ar, 95% confidence level), as ka BP (geolod:ci_eruption_tp_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.w3.org/2006/time#TimePosition",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 9,
+        "text": "TimePosition (time:TimePosition) [5135]",
+        "data": {
+          "from": {
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 9,
+              "http://www.w3.org/ns/ldp#Resource": 3,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 3
+            },
+            "http://www.w3.org/2006/time#inTimePosition": {
+              "http://www.w3.org/2006/time#Instant": 6
+            },
+            "http://w3id.org/geo-lod/hasTimePosition": {
+              "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span": 1
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P141_assigned": {
+              "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment": 3,
+              "http://www.w3.org/ns/prov#Entity": 3
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 9,
+              "http://www.w3.org/ns/adms#Asset": 9,
+              "http://rdfs.org/ns/void#Dataset": 9,
+              "http://www.w3.org/ns/ldp#Resource": 8,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 8
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 9
+            },
+            "http://www.w3.org/2006/time#hasTRS": {
+              "instancecount": 9
+            },
+            "http://www.w3.org/2006/time#numericPosition": {
+              "instancecount": 9
+            },
+            "http://w3id.org/geo-lod/ageKaBP": {
+              "instancecount": 3
+            },
+            "http://w3id.org/geo-lod/ageUncertaintyNeg_ka": {
+              "instancecount": 3
+            },
+            "http://w3id.org/geo-lod/ageUncertaintyPos_ka": {
+              "instancecount": 3
+            },
+            "http://w3id.org/geo-lod/hasAgeUncertainty": {
+              "instancecount": 3,
+              "http://w3id.org/geo-lod/AgeUncertainty": 3
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/2004/02/skos/core#note": {
+              "instancecount": 3
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_interval_devivo2001",
+        "parent": "http://www.w3.org/2006/time#ProperInterval",
+        "type": "instance",
+        "text": "Age interval of 39.28 ± 0.11 ka (40Ar/39Ar), 39.17 to 39.39 ka BP (geolod:ci_eruption_interval_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_interval_giaccio2017",
+        "parent": "http://www.w3.org/2006/time#ProperInterval",
+        "type": "instance",
+        "text": "Age interval of 39.85 ± 0.14 ka (40Ar/39Ar, 95% confidence level), 39.71 to 39.99 ka BP (geolod:ci_eruption_interval_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_interval_schenk2024",
+        "parent": "http://www.w3.org/2006/time#ProperInterval",
+        "type": "instance",
+        "text": "Age interval of 39,940 ± 150 yr b2k (ELSA-20 chronology), 39.740 to 40.040 ka BP (geolod:ci_eruption_interval_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.w3.org/2006/time#ProperInterval",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 3,
+        "text": "ProperInterval (time:ProperInterval) [3]",
+        "data": {
+          "from": {
+            "http://w3id.org/geo-lod/hasAgeInterval": {
+              "http://w3id.org/geo-lod/AgeUncertainty": 3
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 3
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 3,
+              "http://www.w3.org/ns/adms#Asset": 3,
+              "http://rdfs.org/ns/void#Dataset": 3,
+              "http://www.w3.org/ns/ldp#Resource": 2,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/2006/time#hasBeginning": {
+              "instancecount": 3,
+              "http://www.w3.org/2006/time#Instant": 3
+            },
+            "http://www.w3.org/2006/time#hasEnd": {
+              "instancecount": 3,
+              "http://www.w3.org/2006/time#Instant": 3
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_unc_devivo2001",
+        "parent": "http://w3id.org/geo-lod/AgeUncertainty",
+        "type": "instance",
+        "text": "Uncertainty of 39.28 ± 0.11 ka (40Ar/39Ar) (geolod:ci_eruption_unc_devivo2001)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_unc_giaccio2017",
+        "parent": "http://w3id.org/geo-lod/AgeUncertainty",
+        "type": "instance",
+        "text": "Uncertainty of 39.85 ± 0.14 ka (40Ar/39Ar, 95% confidence level) (geolod:ci_eruption_unc_giaccio2017)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_unc_schenk2024",
+        "parent": "http://w3id.org/geo-lod/AgeUncertainty",
+        "type": "instance",
+        "text": "Uncertainty of 39,940 ± 150 yr b2k (ELSA-20 chronology) (geolod:ci_eruption_unc_schenk2024)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/AgeUncertainty",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 3,
+        "text": "AgeUncertainty (geolod:AgeUncertainty) [3]",
+        "data": {
+          "from": {
+            "http://w3id.org/geo-lod/hasAgeUncertainty": {
+              "http://www.w3.org/2006/time#TimePosition": 3
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 3
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 3,
+              "http://www.w3.org/ns/adms#Asset": 3,
+              "http://rdfs.org/ns/void#Dataset": 3,
+              "http://www.w3.org/ns/ldp#Resource": 2,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+            },
+            "http://w3id.org/geo-lod/hasAgeInterval": {
+              "instancecount": 3,
+              "http://www.w3.org/2006/time#ProperInterval": 3
+            },
+            "http://w3id.org/geo-lod/minusKa": {
+              "instancecount": 3
+            },
+            "http://w3id.org/geo-lod/plusKa": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 3
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 3
+            },
+            "http://w3id.org/geo-lod/coverageLevel": {
+              "instancecount": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_source_area",
+        "parent": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+        "type": "instance",
+        "text": "Phlegraean Fields (Campi Flegrei), source area of the CI eruption (geolod:ci_source_area)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 1,
+        "text": "E53_Place (crm:E53_Place) [1]",
+        "data": {
+          "from": {
+            "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": {
+              "http://w3id.org/geo-lod/strat/Eruption": 1,
+              "http://www.cidoc-crm.org/cidoc-crm/E5_Event": 1
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 1
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 1,
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 1
+            },
+            "http://www.w3.org/2000/01/rdf-schema#comment": {
+              "instancecount": 1
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
+              "instancecount": 1
+            },
+            "http://www.w3.org/2004/02/skos/core#closeMatch": {
+              "instancecount": 1
             }
           }
         }
@@ -5378,7 +6011,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_51_suniv1_",
         "parent": "http://fuzzy-sl.squirrel.link/ontology/Site",
         "type": "geoinstance",
-        "text": "Crvena Stiljena (Montenegro) (ci:cisite_51)",
+        "text": "Crvena Stijena (Montenegro) (ci:cisite_51)",
         "data": {
           "from": {},
           "to": {}
@@ -5508,7 +6141,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_63_suniv1_",
         "parent": "http://fuzzy-sl.squirrel.link/ontology/Site",
         "type": "geoinstance",
-        "text": "Titel Pleateau (Serbia) (ci:cisite_63)",
+        "text": "Titel Plateau (Serbia) (ci:cisite_63)",
         "data": {
           "from": {},
           "to": {}
@@ -5528,7 +6161,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_65_suniv1_",
         "parent": "http://fuzzy-sl.squirrel.link/ontology/Site",
         "type": "geoinstance",
-        "text": "Haua-Fteah (Libya) (ci:cisite_65)",
+        "text": "Haua Fteah (Libya) (ci:cisite_65)",
         "data": {
           "from": {},
           "to": {}
@@ -6129,7 +6762,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_51_suniv2_",
         "parent": "http://w3id.org/geo-lod/CIFindspot",
         "type": "geoinstance",
-        "text": "Crvena Stiljena (Montenegro) (ci:cisite_51)",
+        "text": "Crvena Stijena (Montenegro) (ci:cisite_51)",
         "data": {
           "from": {},
           "to": {}
@@ -6259,7 +6892,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_63_suniv2_",
         "parent": "http://w3id.org/geo-lod/CIFindspot",
         "type": "geoinstance",
-        "text": "Titel Pleateau (Serbia) (ci:cisite_63)",
+        "text": "Titel Plateau (Serbia) (ci:cisite_63)",
         "data": {
           "from": {},
           "to": {}
@@ -6279,7 +6912,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_65_suniv2_",
         "parent": "http://w3id.org/geo-lod/CIFindspot",
         "type": "geoinstance",
-        "text": "Haua-Fteah (Libya) (ci:cisite_65)",
+        "text": "Haua Fteah (Libya) (ci:cisite_65)",
         "data": {
           "from": {},
           "to": {}
@@ -6880,7 +7513,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_51_suniv3_",
         "parent": "https://pleiades.stoa.org/places/vocab#Place",
         "type": "geoinstance",
-        "text": "Crvena Stiljena (Montenegro) (ci:cisite_51)",
+        "text": "Crvena Stijena (Montenegro) (ci:cisite_51)",
         "data": {
           "from": {},
           "to": {}
@@ -7010,7 +7643,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_63_suniv3_",
         "parent": "https://pleiades.stoa.org/places/vocab#Place",
         "type": "geoinstance",
-        "text": "Titel Pleateau (Serbia) (ci:cisite_63)",
+        "text": "Titel Plateau (Serbia) (ci:cisite_63)",
         "data": {
           "from": {},
           "to": {}
@@ -7030,7 +7663,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_65_suniv3_",
         "parent": "https://pleiades.stoa.org/places/vocab#Place",
         "type": "geoinstance",
-        "text": "Haua-Fteah (Libya) (ci:cisite_65)",
+        "text": "Haua Fteah (Libya) (ci:cisite_65)",
         "data": {
           "from": {},
           "to": {}
@@ -7074,17 +7707,18 @@ var tree={
         "text": "Place (pleiades:Place) [74]",
         "data": {
           "from": {
+            "http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of": {
+              "http://w3id.org/geo-lod/strat/Eruption": 62,
+              "http://www.cidoc-crm.org/cidoc-crm/E5_Event": 62
+            },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.opengis.net/ont/geosparql#FeatureCollection": 248,
               "http://www.w3.org/2004/02/skos/core#Collection": 62,
-              "http://www.w3.org/ns/ldp#Resource": 33,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 33
+              "http://www.w3.org/ns/ldp#Resource": 46,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 46
             }
           },
           "to": {
-            "http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch": {
-              "instancecount": 14
-            },
             "http://purl.org/dc/terms/creator": {
               "instancecount": 124
             },
@@ -7096,10 +7730,10 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 62,
-              "http://rdfs.org/ns/void#Dataset": 62,
               "http://www.w3.org/ns/adms#Asset": 62,
-              "http://www.w3.org/ns/ldp#Resource": 28,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 28
+              "http://rdfs.org/ns/void#Dataset": 62,
+              "http://www.w3.org/ns/ldp#Resource": 41,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 41
             },
             "http://w3id.org/geo-lod/hasCertaintyDescription": {
               "instancecount": 62
@@ -7127,6 +7761,9 @@ var tree={
             "http://www.w3.org/2000/01/rdf-schema#label": {
               "instancecount": 62
             },
+            "http://www.w3.org/2004/02/skos/core#closeMatch": {
+              "instancecount": 50
+            },
             "http://www.w3.org/2004/02/skos/core#prefLabel": {
               "instancecount": 62
             },
@@ -7145,8 +7782,8 @@ var tree={
               "instancecount": 62,
               "http://www.w3.org/ns/prov#Activity": 62
             },
-            "http://www.w3.org/2004/02/skos/core#closeMatch": {
-              "instancecount": 50
+            "http://fuzzy-sl.squirrel.link/ontology/spatialCloseMatch": {
+              "instancecount": 14
             },
             "http://fuzzy-sl.squirrel.link/ontology/partlyMatch": {
               "instancecount": 8
@@ -7231,7 +7868,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_51_suniv4_",
         "parent": "http://w3id.org/geo-lod/CIArchaeologicalSite",
         "type": "geoinstance",
-        "text": "Crvena Stiljena (Montenegro) (ci:cisite_51)",
+        "text": "Crvena Stijena (Montenegro) (ci:cisite_51)",
         "data": {
           "from": {},
           "to": {}
@@ -7261,7 +7898,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_63_suniv4_",
         "parent": "http://w3id.org/geo-lod/CIArchaeologicalSite",
         "type": "geoinstance",
-        "text": "Titel Pleateau (Serbia) (ci:cisite_63)",
+        "text": "Titel Plateau (Serbia) (ci:cisite_63)",
         "data": {
           "from": {},
           "to": {}
@@ -7271,7 +7908,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_65_suniv4_",
         "parent": "http://w3id.org/geo-lod/CIArchaeologicalSite",
         "type": "geoinstance",
-        "text": "Haua-Fteah (Libya) (ci:cisite_65)",
+        "text": "Haua Fteah (Libya) (ci:cisite_65)",
         "data": {
           "from": {},
           "to": {}
@@ -7362,7 +7999,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_51_suniv5_",
         "parent": "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit",
         "type": "geoinstance",
-        "text": "Crvena Stiljena (Montenegro) (ci:cisite_51)",
+        "text": "Crvena Stijena (Montenegro) (ci:cisite_51)",
         "data": {
           "from": {},
           "to": {}
@@ -7392,7 +8029,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_63_suniv5_",
         "parent": "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit",
         "type": "geoinstance",
-        "text": "Titel Pleateau (Serbia) (ci:cisite_63)",
+        "text": "Titel Plateau (Serbia) (ci:cisite_63)",
         "data": {
           "from": {},
           "to": {}
@@ -7402,7 +8039,7 @@ var tree={
         "id": "http://w3id.org/geo-lod/ci/cisite_65_suniv5_",
         "parent": "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit",
         "type": "geoinstance",
-        "text": "Haua-Fteah (Libya) (ci:cisite_65)",
+        "text": "Haua Fteah (Libya) (ci:cisite_65)",
         "data": {
           "from": {},
           "to": {}
@@ -7416,11 +8053,15 @@ var tree={
         "text": "A2_Stratigraphic_Volume_Unit (A2_Stratigraphic_Volume_Unit) [12]",
         "data": {
           "from": {
+            "http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of": {
+              "http://w3id.org/geo-lod/strat/Eruption": 12,
+              "http://www.cidoc-crm.org/cidoc-crm/E5_Event": 12
+            },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "http://www.opengis.net/ont/geosparql#FeatureCollection": 72,
               "http://www.w3.org/2004/02/skos/core#Collection": 12,
-              "http://www.w3.org/ns/ldp#Resource": 9,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 9
+              "http://www.w3.org/ns/ldp#Resource": 8,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 8
             }
           },
           "to": {
@@ -7435,10 +8076,10 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 12,
-              "http://rdfs.org/ns/void#Dataset": 12,
               "http://www.w3.org/ns/adms#Asset": 12,
-              "http://www.w3.org/ns/ldp#Resource": 7,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 7
+              "http://rdfs.org/ns/void#Dataset": 12,
+              "http://www.w3.org/ns/ldp#Resource": 8,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 8
             },
             "http://w3id.org/geo-lod/hasCertaintyDescription": {
               "instancecount": 12
@@ -7487,7 +8128,61 @@ var tree={
               "instancecount": 12,
               "http://www.w3.org/ns/prov#Activity": 12
             },
+            "http://www.w3.org/2004/02/skos/core#altLabel": {
+              "instancecount": 3
+            },
             "http://fuzzy-sl.squirrel.link/ontology/dubiousMatch": {
+              "instancecount": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ci_eruption_timespan",
+        "parent": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+        "type": "instance",
+        "text": "Time-span of the CI eruption (geolod:ci_eruption_timespan)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+        "parent": "#",
+        "type": "class",
+        "instancecount": 1,
+        "text": "E52_Time-Span (crm:E52_Time-Span) [1]",
+        "data": {
+          "from": {
+            "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to": {
+              "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment": 3,
+              "http://www.w3.org/ns/prov#Entity": 3
+            },
+            "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": {
+              "http://w3id.org/geo-lod/strat/Eruption": 1,
+              "http://www.cidoc-crm.org/cidoc-crm/E5_Event": 1
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://www.w3.org/2004/02/skos/core#Collection": 1
+            }
+          },
+          "to": {
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 1,
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/ldp#Resource": 1,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 1
+            },
+            "http://w3id.org/geo-lod/hasTimePosition": {
+              "instancecount": 1,
+              "http://www.w3.org/2006/time#TimePosition": 1
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 1
+            },
+            "http://www.w3.org/2000/01/rdf-schema#label": {
               "instancecount": 1
             }
           }
@@ -7574,6 +8269,36 @@ var tree={
         }
       },
       {
+        "id": "http://w3id.org/geo-lod/E13_Attribute_Assignment_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "E13_Attribute_Assignment Instances Collection (geolod:E13_Attribute_Assignment_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/Eruption_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "Eruption Instances Collection (geolod:Eruption_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/E5_Event_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "E5_Event Instances Collection (geolod:E5_Event_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
         "id": "http://w3id.org/geo-lod/Georeferencing_collection",
         "parent": "http://www.w3.org/2004/02/skos/core#Collection",
         "type": "instance",
@@ -7594,37 +8319,106 @@ var tree={
         }
       },
       {
+        "id": "http://w3id.org/geo-lod/Instant_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "Instant Instances Collection (geolod:Instant_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/TimePosition_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "TimePosition Instances Collection (geolod:TimePosition_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/ProperInterval_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "ProperInterval Instances Collection (geolod:ProperInterval_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/AgeUncertainty_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "AgeUncertainty Instances Collection (geolod:AgeUncertainty_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/E53_Place_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "E53_Place Instances Collection (geolod:E53_Place_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
+        "id": "http://w3id.org/geo-lod/E52_Time-Span_collection",
+        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
+        "type": "instance",
+        "text": "E52_Time-Span Instances Collection (geolod:E52_Time-Span_collection)",
+        "data": {
+          "from": {},
+          "to": {}
+        }
+      },
+      {
         "id": "http://www.w3.org/2004/02/skos/core#Collection",
         "parent": "#",
         "type": "collectionclass",
-        "instancecount": 4,
-        "text": "Collection (skos:Collection) [20]",
+        "instancecount": 13,
+        "text": "Collection (skos:Collection) [28]",
         "data": {
           "from": {},
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
-              "instancecount": 4,
-              "http://rdfs.org/ns/void#Dataset": 4,
-              "http://www.w3.org/ns/adms#Asset": 4,
-              "http://www.w3.org/ns/ldp#Resource": 2,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
+              "instancecount": 13,
+              "http://www.w3.org/ns/adms#Asset": 13,
+              "http://rdfs.org/ns/void#Dataset": 13,
+              "http://www.w3.org/ns/ldp#Resource": 10,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 10
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 4
+              "instancecount": 13
             },
             "http://www.w3.org/2000/01/rdf-schema#label": {
-              "instancecount": 4
+              "instancecount": 13
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
-              "instancecount": 301,
-              "http://fuzzy-sl.squirrel.link/ontology/Georeferencing": 148,
-              "http://www.w3.org/ns/prov#Activity": 223,
+              "instancecount": 332,
+              "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span": 1,
+              "http://www.cidoc-crm.org/cidoc-crm/E53_Place": 1,
               "http://fuzzy-sl.squirrel.link/ontology/Site": 74,
               "http://w3id.org/geo-lod/CIFindspot": 74,
-              "http://www.w3.org/ns/prov#Entity": 77,
+              "http://www.w3.org/ns/prov#Entity": 83,
               "https://pleiades.stoa.org/places/vocab#Place": 74,
+              "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment": 6,
               "http://w3id.org/geo-lod/CIArchaeologicalSite": 12,
               "http://www.cidoc-crm.org/extensions/crmarchaeo/A2_Stratigraphic_Volume_Unit": 12,
+              "http://www.w3.org/ns/prov#Activity": 223,
+              "http://fuzzy-sl.squirrel.link/ontology/Georeferencing": 148,
+              "http://w3id.org/geo-lod/AgeUncertainty": 3,
+              "http://www.w3.org/2006/time#Instant": 6,
+              "http://w3id.org/geo-lod/strat/Eruption": 2,
+              "http://www.cidoc-crm.org/cidoc-crm/E5_Event": 2,
+              "http://www.w3.org/2006/time#TimePosition": 9,
+              "http://www.w3.org/2006/time#ProperInterval": 3,
               "http://www.opengis.net/ont/geosparql#FeatureCollection": 1
             }
           }
@@ -7661,8 +8455,10 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 2,
+              "http://www.w3.org/ns/adms#Asset": 2,
               "http://rdfs.org/ns/void#Dataset": 2,
-              "http://www.w3.org/ns/adms#Asset": 2
+              "http://www.w3.org/ns/ldp#Resource": 2,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 2
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 2
@@ -15067,20 +15863,20 @@ var tree={
         "data": {
           "from": {
             "http://www.w3.org/2000/01/rdf-schema#member": {
-              "http://www.opengis.net/ont/geosparql#FeatureCollection": 1161,
-              "http://www.w3.org/2004/02/skos/core#Collection": 112,
-              "http://www.w3.org/ns/ldp#Resource": 178,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 178,
-              "http://www.w3.org/2002/07/owl#NamedIndividual": 66
+              "http://www.opengis.net/ont/geosparql#FeatureCollection": 1340,
+              "http://www.w3.org/2002/07/owl#NamedIndividual": 245,
+              "http://www.w3.org/ns/ldp#Resource": 281,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 281,
+              "http://www.w3.org/2004/02/skos/core#Collection": 36
             }
           },
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 365,
-              "http://rdfs.org/ns/void#Dataset": 365,
               "http://www.w3.org/ns/adms#Asset": 365,
-              "http://www.w3.org/ns/ldp#Resource": 165,
-              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 165
+              "http://rdfs.org/ns/void#Dataset": 365,
+              "http://www.w3.org/ns/ldp#Resource": 253,
+              "https://www.iana.org/assignments/media-types/text/turtle#Resource": 253
             },
             "http://w3id.org/geo-lod/countD13CSamples": {
               "instancecount": 365
@@ -15088,11 +15884,20 @@ var tree={
             "http://w3id.org/geo-lod/countD18OSamples": {
               "instancecount": 365
             },
+            "http://w3id.org/geo-lod/countDatedD18OSamples": {
+              "instancecount": 365
+            },
             "http://w3id.org/geo-lod/elevation_m": {
               "instancecount": 365
             },
+            "http://w3id.org/geo-lod/oldestAgeKaBP": {
+              "instancecount": 361
+            },
             "http://w3id.org/geo-lod/siteId": {
               "instancecount": 365
+            },
+            "http://w3id.org/geo-lod/youngestAgeKaBP": {
+              "instancecount": 361
             },
             "http://www.opengis.net/ont/geosparql#hasGeometry": {
               "instancecount": 365,
@@ -15186,8 +15991,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 2,
-              "http://rdfs.org/ns/void#Dataset": 2,
-              "http://www.w3.org/ns/adms#Asset": 2
+              "http://www.w3.org/ns/adms#Asset": 2,
+              "http://rdfs.org/ns/void#Dataset": 2
             },
             "http://w3id.org/geo-lod/elevation_m": {
               "instancecount": 2
@@ -15239,8 +16044,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
-              "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
             },
             "http://w3id.org/geo-lod/removedSample": {
               "instancecount": 1,
@@ -15323,22 +16128,10 @@ var tree={
             }
           },
           "to": {
-            "http://purl.org/dc/terms/created": {
-              "instancecount": 1
-            },
-            "http://purl.org/dc/terms/description": {
-              "instancecount": 1
-            },
-            "http://purl.org/dc/terms/publisher": {
-              "instancecount": 1
-            },
-            "http://purl.org/dc/terms/title": {
-              "instancecount": 1
-            },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 2,
-              "http://rdfs.org/ns/void#Dataset": 2,
-              "http://www.w3.org/ns/adms#Asset": 2
+              "http://www.w3.org/ns/adms#Asset": 2,
+              "http://rdfs.org/ns/void#Dataset": 2
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 4
@@ -15352,6 +16145,18 @@ var tree={
               "http://www.w3.org/2002/07/owl#NamedIndividual": 10,
               "http://www.w3.org/ns/dcat#Dataset": 10,
               "http://www.w3.org/ns/prov#Entity": 10
+            },
+            "http://purl.org/dc/terms/created": {
+              "instancecount": 1
+            },
+            "http://purl.org/dc/terms/description": {
+              "instancecount": 1
+            },
+            "http://purl.org/dc/terms/publisher": {
+              "instancecount": 1
+            },
+            "http://purl.org/dc/terms/title": {
+              "instancecount": 1
             }
           }
         }
@@ -16144,8 +16949,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 77,
-              "http://rdfs.org/ns/void#Dataset": 77,
-              "http://www.w3.org/ns/adms#Asset": 77
+              "http://www.w3.org/ns/adms#Asset": 77,
+              "http://rdfs.org/ns/void#Dataset": 77
             },
             "http://w3id.org/geo-lod/assignmentStatus": {
               "instancecount": 77
@@ -65239,8 +66044,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 4904,
-              "http://rdfs.org/ns/void#Dataset": 4904,
-              "http://www.w3.org/ns/adms#Asset": 4904
+              "http://www.w3.org/ns/adms#Asset": 4904,
+              "http://rdfs.org/ns/void#Dataset": 4904
             },
             "http://w3id.org/geo-lod/assignmentStatus": {
               "instancecount": 4904
@@ -66056,8 +66861,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 77,
-              "http://rdfs.org/ns/void#Dataset": 77,
-              "http://www.w3.org/ns/adms#Asset": 77
+              "http://www.w3.org/ns/adms#Asset": 77,
+              "http://rdfs.org/ns/void#Dataset": 77
             },
             "http://w3id.org/geo-lod/atDepth_m": {
               "instancecount": 77
@@ -74513,8 +75318,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 814,
-              "http://rdfs.org/ns/void#Dataset": 814,
-              "http://www.w3.org/ns/adms#Asset": 814
+              "http://www.w3.org/ns/adms#Asset": 814,
+              "http://rdfs.org/ns/void#Dataset": 814
             },
             "http://w3id.org/geo-lod/ageMaxKaBP": {
               "instancecount": 814
@@ -125808,46 +126613,6 @@ var tree={
         }
       },
       {
-        "id": "http://www.w3.org/2006/time#TimePosition",
-        "parent": "#",
-        "type": "class",
-        "instancecount": 5126,
-        "text": "TimePosition (time:TimePosition) [5126]",
-        "data": {
-          "from": {
-            "http://w3id.org/geo-lod/hasTimePosition": {
-              "http://w3id.org/geo-lod/IceCoreObservation": 5126,
-              "http://www.w3.org/2002/07/owl#NamedIndividual": 5126
-            },
-            "http://www.w3.org/2000/01/rdf-schema#member": {
-              "http://www.w3.org/2004/02/skos/core#Collection": 5126
-            }
-          },
-          "to": {
-            "http://rdfs.org/ns/void#inDataset": {
-              "instancecount": 5126,
-              "http://rdfs.org/ns/void#Dataset": 5126,
-              "http://www.w3.org/ns/adms#Asset": 5126
-            },
-            "http://w3id.org/geo-lod/ageKaBP": {
-              "instancecount": 5126
-            },
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 5126
-            },
-            "http://www.w3.org/2000/01/rdf-schema#label": {
-              "instancecount": 5126
-            },
-            "http://www.w3.org/2006/time#hasTRS": {
-              "instancecount": 5126
-            },
-            "http://www.w3.org/2006/time#numericPosition": {
-              "instancecount": 5126
-            }
-          }
-        }
-      },
-      {
         "id": "http://w3id.org/geo-lod/epica/obs_ch4_0001",
         "parent": "http://w3id.org/geo-lod/IceCoreObservation",
         "type": "instance",
@@ -174920,8 +175685,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 4904,
-              "http://rdfs.org/ns/void#Dataset": 4904,
-              "http://www.w3.org/ns/adms#Asset": 4904
+              "http://www.w3.org/ns/adms#Asset": 4904,
+              "http://rdfs.org/ns/void#Dataset": 4904
             },
             "http://w3id.org/geo-lod/ageChronology": {
               "instancecount": 4904
@@ -175153,8 +175918,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 5,
-              "http://rdfs.org/ns/void#Dataset": 5,
-              "http://www.w3.org/ns/adms#Asset": 5
+              "http://www.w3.org/ns/adms#Asset": 5,
+              "http://rdfs.org/ns/void#Dataset": 5
             },
             "http://w3id.org/geo-lod/ageChronology": {
               "instancecount": 5
@@ -175257,8 +176022,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 5,
-              "http://rdfs.org/ns/void#Dataset": 5,
-              "http://www.w3.org/ns/adms#Asset": 5
+              "http://www.w3.org/ns/adms#Asset": 5,
+              "http://rdfs.org/ns/void#Dataset": 5
             },
             "http://www.cidoc-crm.org/cidoc-crm/P2_has_type": {
               "instancecount": 5
@@ -175347,8 +176112,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 5,
-              "http://rdfs.org/ns/void#Dataset": 5,
-              "http://www.w3.org/ns/adms#Asset": 5
+              "http://www.w3.org/ns/adms#Asset": 5,
+              "http://rdfs.org/ns/void#Dataset": 5
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 10
@@ -175455,8 +176220,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 5,
-              "http://rdfs.org/ns/void#Dataset": 5,
-              "http://www.w3.org/ns/adms#Asset": 5
+              "http://www.w3.org/ns/adms#Asset": 5,
+              "http://rdfs.org/ns/void#Dataset": 5
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 10
@@ -175505,8 +176270,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
-              "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
             },
             "http://w3id.org/geo-lod/windowSize": {
               "instancecount": 1
@@ -175555,8 +176320,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
-              "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
             },
             "http://w3id.org/geo-lod/polyOrder": {
               "instancecount": 1
@@ -175627,8 +176392,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
-              "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
             },
             "http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by": {
               "instancecount": 1
@@ -175698,8 +176463,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1,
-              "http://rdfs.org/ns/void#Dataset": 1,
-              "http://www.w3.org/ns/adms#Asset": 1
+              "http://www.w3.org/ns/adms#Asset": 1,
+              "http://rdfs.org/ns/void#Dataset": 1
             },
             "http://w3id.org/geo-lod/extractedFrom": {
               "instancecount": 1,
@@ -175793,16 +176558,6 @@ var tree={
         "parent": "http://www.w3.org/2004/02/skos/core#Collection",
         "type": "instance",
         "text": "SampleSection Instances Collection (geolod:SampleSection_collection)",
-        "data": {
-          "from": {},
-          "to": {}
-        }
-      },
-      {
-        "id": "http://w3id.org/geo-lod/TimePosition_collection",
-        "parent": "http://www.w3.org/2004/02/skos/core#Collection",
-        "type": "instance",
-        "text": "TimePosition Instances Collection (geolod:TimePosition_collection)",
         "data": {
           "from": {},
           "to": {}

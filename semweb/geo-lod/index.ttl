@@ -34,19 +34,19 @@
         <http://www.w3.org/ns/ldp#Resource>,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "geo-lod"@en ;
-    ns1:averageLiteralLength 36 ;
+    ns1:averageLiteralLength 37 ;
     ns1:averageObjectIRILength 42 ;
-    ns1:averagePropertyIRILength 43 ;
-    ns1:averageSubjectIRILength 42 ;
-    ns1:datatypes 2 ;
+    ns1:averagePropertyIRILength 42 ;
+    ns1:averageSubjectIRILength 43 ;
+    ns1:datatypes 3 ;
     ns1:distinctBlankNodes 0 ;
-    ns1:distinctIRIReferences 1005 ;
-    ns1:distinctLiterals 220 ;
-    ns1:distinctRDFNodes 1225 ;
+    ns1:distinctIRIReferences 1156 ;
+    ns1:distinctLiterals 273 ;
+    ns1:distinctRDFNodes 1429 ;
     ns1:languages 1 ;
     ns1:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
-    dcterms:modified "2026-11-08T18:20:05"^^xsd:dateTime ;
+    dcterms:modified "2026-11-24T13:59:58"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
@@ -57,6 +57,7 @@
     vann:preferredNamespaceUri "http://w3id.org/geo-lod/"^^xsd:anyURI ;
     void:classPartition <http://w3id.org/geo-lod/geo-lod_A2_Stratigraphic_Volume_Unit>,
         <http://w3id.org/geo-lod/geo-lod_Activity>,
+        <http://w3id.org/geo-lod/geo-lod_AgeUncertainty>,
         <http://w3id.org/geo-lod/geo-lod_Agent>,
         <http://w3id.org/geo-lod/geo-lod_CIArchaeologicalSite>,
         <http://w3id.org/geo-lod/geo-lod_CIFindspot>,
@@ -65,13 +66,19 @@
         <http://w3id.org/geo-lod/geo-lod_Dataset>,
         <http://w3id.org/geo-lod/geo-lod_DepthPosition>,
         <http://w3id.org/geo-lod/geo-lod_DrillingCampaign>,
+        <http://w3id.org/geo-lod/geo-lod_E13_Attribute_Assignment>,
+        <http://w3id.org/geo-lod/geo-lod_E52_Time-Span>,
+        <http://w3id.org/geo-lod/geo-lod_E53_Place>,
+        <http://w3id.org/geo-lod/geo-lod_E5_Event>,
         <http://w3id.org/geo-lod/geo-lod_Entity>,
+        <http://w3id.org/geo-lod/geo-lod_Eruption>,
         <http://w3id.org/geo-lod/geo-lod_FeatureCollection>,
         <http://w3id.org/geo-lod/geo-lod_GeometryCollection>,
         <http://w3id.org/geo-lod/geo-lod_Georeferencing>,
         <http://w3id.org/geo-lod/geo-lod_IceCore>,
         <http://w3id.org/geo-lod/geo-lod_IceCoreDataset>,
         <http://w3id.org/geo-lod/geo-lod_IceCoreObservation>,
+        <http://w3id.org/geo-lod/geo-lod_Instant>,
         <http://w3id.org/geo-lod/geo-lod_MISAttributeAssignment>,
         <http://w3id.org/geo-lod/geo-lod_MISMembershipAssignment>,
         <http://w3id.org/geo-lod/geo-lod_MeasurementType>,
@@ -80,6 +87,7 @@
         <http://w3id.org/geo-lod/geo-lod_Person>,
         <http://w3id.org/geo-lod/geo-lod_Place>,
         <http://w3id.org/geo-lod/geo-lod_Point>,
+        <http://w3id.org/geo-lod/geo-lod_ProperInterval>,
         <http://w3id.org/geo-lod/geo-lod_RollingMedianFilter>,
         <http://w3id.org/geo-lod/geo-lod_SP6_Declarative_Place>,
         <http://w3id.org/geo-lod/geo-lod_SampleSection>,
@@ -87,35 +95,55 @@
         <http://w3id.org/geo-lod/geo-lod_Site>,
         <http://w3id.org/geo-lod/geo-lod_SpatialObjectCollection>,
         <http://w3id.org/geo-lod/geo-lod_TimePosition> ;
-    void:classes 16 ;
+    void:classes 25 ;
     void:dataDump "https://Research-Squirrel-Engineers.github.io/GeoScience-FAIRification-LOD/semweb/index.ttl"^^xsd:anyURI ;
-    void:distinctObjects 653 ;
-    void:distinctSubjects 318 ;
-    void:entities 314 ;
+    void:distinctObjects 749 ;
+    void:distinctSubjects 353 ;
+    void:entities 349 ;
     void:feature <http://www.w3.org/ns/formats/RDFa>,
         <http://www.w3.org/ns/formats/Turtle> ;
-    void:properties 34 ;
+    void:properties 54 ;
     void:propertyPartition <http://w3id.org/geo-lod/geo-lod_P12_occurred_in_the_presence_of>,
+        <http://w3id.org/geo-lod/geo-lod_P140_assigned_attribute_to>,
+        <http://w3id.org/geo-lod/geo-lod_P141_assigned>,
+        <http://w3id.org/geo-lod/geo-lod_P4_has_time-span>,
         <http://w3id.org/geo-lod/geo-lod_P7_took_place_at>,
         <http://w3id.org/geo-lod/geo-lod_activityDesc>,
+        <http://w3id.org/geo-lod/geo-lod_ageKaBP>,
+        <http://w3id.org/geo-lod/geo-lod_ageUncertaintyNeg_ka>,
+        <http://w3id.org/geo-lod/geo-lod_ageUncertaintyPos_ka>,
+        <http://w3id.org/geo-lod/geo-lod_altLabel>,
         <http://w3id.org/geo-lod/geo-lod_asWKT>,
+        <http://w3id.org/geo-lod/geo-lod_bibliographicCitation>,
         <http://w3id.org/geo-lod/geo-lod_closeMatch>,
         <http://w3id.org/geo-lod/geo-lod_comment>,
+        <http://w3id.org/geo-lod/geo-lod_coverageLevel>,
         <http://w3id.org/geo-lod/geo-lod_created>,
         <http://w3id.org/geo-lod/geo-lod_creator>,
         <http://w3id.org/geo-lod/geo-lod_dubiousMatch>,
+        <http://w3id.org/geo-lod/geo-lod_hasAgeInterval>,
+        <http://w3id.org/geo-lod/geo-lod_hasAgeUncertainty>,
+        <http://w3id.org/geo-lod/geo-lod_hasBeginning>,
         <http://w3id.org/geo-lod/geo-lod_hasCertaintyDescription>,
         <http://w3id.org/geo-lod/geo-lod_hasCertaintyLevel>,
+        <http://w3id.org/geo-lod/geo-lod_hasEnd>,
         <http://w3id.org/geo-lod/geo-lod_hasGeometry>,
         <http://w3id.org/geo-lod/geo-lod_hasLiteratureReference>,
         <http://w3id.org/geo-lod/geo-lod_hasSource>,
         <http://w3id.org/geo-lod/geo-lod_hasSourceType>,
         <http://w3id.org/geo-lod/geo-lod_hasSpatialType>,
+        <http://w3id.org/geo-lod/geo-lod_hasTRS>,
+        <http://w3id.org/geo-lod/geo-lod_hasTimePosition>,
         <http://w3id.org/geo-lod/geo-lod_identifier>,
+        <http://w3id.org/geo-lod/geo-lod_inTimePosition>,
         <http://w3id.org/geo-lod/geo-lod_label>,
         <http://w3id.org/geo-lod/geo-lod_license>,
         <http://w3id.org/geo-lod/geo-lod_member>,
+        <http://w3id.org/geo-lod/geo-lod_minusKa>,
+        <http://w3id.org/geo-lod/geo-lod_note>,
+        <http://w3id.org/geo-lod/geo-lod_numericPosition>,
         <http://w3id.org/geo-lod/geo-lod_partlyMatch>,
+        <http://w3id.org/geo-lod/geo-lod_plusKa>,
         <http://w3id.org/geo-lod/geo-lod_prefLabel>,
         <http://w3id.org/geo-lod/geo-lod_rightsHolder>,
         <http://w3id.org/geo-lod/geo-lod_scopeNote>,
@@ -129,7 +157,7 @@
         <http://w3id.org/geo-lod/geo-lod_wasDerivedFrom>,
         <http://w3id.org/geo-lod/geo-lod_wasGeneratedBy>,
         <http://w3id.org/geo-lod/geo-lod_wasInformedBy> ;
-    void:triples 4270 ;
+    void:triples 4481 ;
     void:uriSpace "http://w3id.org/geo-lod/"^^xsd:string ;
     void:vocabulary ns1:,
         dcam:,

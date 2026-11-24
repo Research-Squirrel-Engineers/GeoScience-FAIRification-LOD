@@ -91,23 +91,23 @@ var vowlresult={
   },
   {
    "id": 2,
-   "type": "http://www.w3.org/ns/prov#Entity"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
   },
   {
    "id": 3,
-   "type": "http://www.w3.org/ns/prov#Entity"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
   },
   {
    "id": 4,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
   },
   {
    "id": 5,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/ns/prov#Entity"
   },
   {
    "id": 6,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/ns/prov#Entity"
   },
   {
    "id": 7,
@@ -395,35 +395,35 @@ var vowlresult={
   },
   {
    "id": 78,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 79,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 80,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 81,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
   },
   {
    "id": 82,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
   },
   {
    "id": 83,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
   },
   {
    "id": 84,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://w3id.org/geo-lod/strat/Eruption"
   },
   {
    "id": 85,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
+   "type": "http://w3id.org/geo-lod/strat/Eruption"
   },
   {
    "id": 86,
@@ -695,7 +695,7 @@ var vowlresult={
   },
   {
    "id": 153,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 154,
@@ -703,7 +703,7 @@ var vowlresult={
   },
   {
    "id": 155,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 156,
@@ -711,7 +711,7 @@ var vowlresult={
   },
   {
    "id": 157,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 158,
@@ -719,7 +719,7 @@ var vowlresult={
   },
   {
    "id": 159,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 160,
@@ -1283,39 +1283,39 @@ var vowlresult={
   },
   {
    "id": 300,
-   "type": "http://www.w3.org/ns/prov#Activity"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 301,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 302,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 303,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 304,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 305,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 306,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Georeferencing"
   },
   {
    "id": 307,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 308,
-   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
+   "type": "http://www.w3.org/ns/prov#Activity"
   },
   {
    "id": 309,
@@ -1879,123 +1879,123 @@ var vowlresult={
   },
   {
    "id": 449,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 450,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 451,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 452,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 453,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 454,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 455,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 456,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.ics.forth.gr/isl/CRMgeo/SP6_Declarative_Place"
   },
   {
    "id": 457,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#Instant"
   },
   {
    "id": 458,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#Instant"
   },
   {
    "id": 459,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#Instant"
   },
   {
    "id": 460,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#Instant"
   },
   {
    "id": 461,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#Instant"
   },
   {
    "id": 462,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#Instant"
   },
   {
    "id": 463,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 464,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 465,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 466,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 467,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 468,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 469,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 470,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 471,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#TimePosition"
   },
   {
    "id": 472,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#ProperInterval"
   },
   {
    "id": 473,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#ProperInterval"
   },
   {
    "id": 474,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.w3.org/2006/time#ProperInterval"
   },
   {
    "id": 475,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://w3id.org/geo-lod/AgeUncertainty"
   },
   {
    "id": 476,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://w3id.org/geo-lod/AgeUncertainty"
   },
   {
    "id": 477,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://w3id.org/geo-lod/AgeUncertainty"
   },
   {
    "id": 478,
-   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
   },
   {
    "id": 479,
@@ -2863,18 +2863,142 @@ var vowlresult={
   },
   {
    "id": 695,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 696,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 697,
-   "type": "http://www.w3.org/ns/prov#Agent"
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
   },
   {
    "id": 698,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 699,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 700,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 701,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 702,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 703,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 704,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 705,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 706,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 707,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 708,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 709,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 710,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 711,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 712,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 713,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 714,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 715,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 716,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 717,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 718,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 719,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 720,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 721,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 722,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 723,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 724,
+   "type": "http://fuzzy-sl.squirrel.link/ontology/Site"
+  },
+  {
+   "id": 725,
+   "type": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"
+  },
+  {
+   "id": 726,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 727,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 728,
+   "type": "http://www.w3.org/ns/prov#Agent"
+  },
+  {
+   "id": 729,
    "type": "http://www.w3.org/ns/prov#Agent"
   }
  ],
@@ -2900,7 +3024,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
       "language": "undefined",
-      "value": "sha256:b88531826e4a",
+      "value": "sha256:af6fb303bd23",
       "type": "label"
      }
     ],
@@ -2923,13 +3047,55 @@ var vowlresult={
    "iri": "http://w3id.org/geo-lod/ci/ci_findspots_dataset",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
+   "label": {
+    "IRI-based": "ci_findspots_dataset"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 2,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_dating_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_dating_devivo2001"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 3,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_dating_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_dating_giaccio2017"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 4,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_dating_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
    "label": "ci_pipeline.py",
    "annotations": {
     "http://purl.org/dc/terms/identifier": [
      {
       "identifier": "http://purl.org/dc/terms/identifier",
       "language": "undefined",
-      "value": "sha256:273ee250d113fac85d1fd30e3676b6474afb6273c02c1c1243c07922a4e578d9",
+      "value": "sha256:7c269caa782fecac382df36d28a478c4202a5170a9339f3abcc4961946d5fded",
       "type": "label"
      }
     ]
@@ -2940,7 +3106,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 2,
+   "id": 5,
    "iri": "http://w3id.org/geo-lod/ci/ci_findspots_generation_input_ci_pipeline_py",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2950,7 +3116,7 @@ var vowlresult={
      {
       "identifier": "http://purl.org/dc/terms/identifier",
       "language": "undefined",
-      "value": "sha256:1a6af6fba99889796c31de6307cfa8954efaa17070ef231c6f3cf206ca292437",
+      "value": "sha256:e712f91af1f92473216328940c81c17aa217ad53c1b78acfe183ed4407659fea",
       "type": "label"
      }
     ]
@@ -2961,7 +3127,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 3,
+   "id": 6,
    "iri": "http://w3id.org/geo-lod/ci/ci_findspots_generation_input_cifindspots_part_full_csv",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2975,7 +3141,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 4,
+   "id": 7,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -2989,7 +3155,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 5,
+   "id": 8,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3003,7 +3169,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 6,
+   "id": 9,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3017,7 +3183,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 7,
+   "id": 10,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3031,7 +3197,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 8,
+   "id": 11,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3045,7 +3211,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 9,
+   "id": 12,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3059,7 +3225,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 10,
+   "id": 13,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3073,7 +3239,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 11,
+   "id": 14,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3087,7 +3253,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 12,
+   "id": 15,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3101,7 +3267,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 13,
+   "id": 16,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3115,7 +3281,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 14,
+   "id": 17,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3129,7 +3295,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 15,
+   "id": 18,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3143,7 +3309,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 16,
+   "id": 19,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3157,7 +3323,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 17,
+   "id": 20,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3171,7 +3337,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 18,
+   "id": 21,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3185,7 +3351,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 19,
+   "id": 22,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3199,7 +3365,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 20,
+   "id": 23,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3213,7 +3379,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 21,
+   "id": 24,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3227,7 +3393,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 22,
+   "id": 25,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3241,7 +3407,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 23,
+   "id": 26,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3255,7 +3421,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 24,
+   "id": 27,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3269,7 +3435,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 25,
+   "id": 28,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3283,7 +3449,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 26,
+   "id": 29,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3297,7 +3463,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 27,
+   "id": 30,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3311,7 +3477,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 28,
+   "id": 31,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3325,7 +3491,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 29,
+   "id": 32,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3339,7 +3505,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 30,
+   "id": 33,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3353,7 +3519,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 31,
+   "id": 34,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3367,7 +3533,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 32,
+   "id": 35,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3381,7 +3547,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 33,
+   "id": 36,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3395,7 +3561,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 34,
+   "id": 37,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3409,7 +3575,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 35,
+   "id": 38,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3423,7 +3589,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 36,
+   "id": 39,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3437,7 +3603,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 37,
+   "id": 40,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3451,7 +3617,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 38,
+   "id": 41,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3465,7 +3631,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 39,
+   "id": 42,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3479,7 +3645,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 40,
+   "id": 43,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3493,7 +3659,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 41,
+   "id": 44,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3507,7 +3673,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 42,
+   "id": 45,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3521,7 +3687,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 43,
+   "id": 46,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3535,7 +3701,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 44,
+   "id": 47,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3549,7 +3715,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 45,
+   "id": 48,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3563,7 +3729,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 46,
+   "id": 49,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3577,7 +3743,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 47,
+   "id": 50,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3591,7 +3757,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 48,
+   "id": 51,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3605,7 +3771,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 49,
+   "id": 52,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3619,7 +3785,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 50,
+   "id": 53,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3633,7 +3799,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 51,
+   "id": 54,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3647,7 +3813,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 52,
+   "id": 55,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3661,7 +3827,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 53,
+   "id": 56,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3675,7 +3841,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 54,
+   "id": 57,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3689,7 +3855,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 55,
+   "id": 58,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3703,7 +3869,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 56,
+   "id": 59,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3717,7 +3883,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 57,
+   "id": 60,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3731,7 +3897,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 58,
+   "id": 61,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3745,7 +3911,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 59,
+   "id": 62,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3759,7 +3925,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 60,
+   "id": 63,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3773,7 +3939,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 61,
+   "id": 64,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3787,7 +3953,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 62,
+   "id": 65,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3801,7 +3967,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 63,
+   "id": 66,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3815,7 +3981,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 64,
+   "id": 67,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3829,7 +3995,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 65,
+   "id": 68,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3843,7 +4009,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 66,
+   "id": 69,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3857,7 +4023,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 67,
+   "id": 70,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3871,7 +4037,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 68,
+   "id": 71,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3885,7 +4051,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 69,
+   "id": 72,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3899,7 +4065,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 70,
+   "id": 73,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3913,7 +4079,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 71,
+   "id": 74,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3927,7 +4093,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 72,
+   "id": 75,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3941,7 +4107,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 73,
+   "id": 76,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3955,7 +4121,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 74,
+   "id": 77,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3969,7 +4135,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 75,
+   "id": 78,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3983,7 +4149,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 76,
+   "id": 79,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -3997,12 +4163,179 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 77,
+   "id": 80,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
+   "label": "40Ar/39Ar age of the CI eruption, De Vivo et al. (2001)",
+   "annotations": {
+    "http://purl.org/dc/terms/bibliographicCitation": [
+     {
+      "identifier": "http://purl.org/dc/terms/bibliographicCitation",
+      "language": "undefined",
+      "value": "De Vivo, B., Rolandi, G., Gans, P.B., Calvert, A., Bohrson, W.A., Spera, F.J., Belkin, H.E. (2001). New constraints on the pyroclastic eruptive history of the Campanian volcanic Plain (Italy). Mineralogy and Petrology 73, 47-65.",
+      "type": "label"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_timespan",
+      "type": "iri"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P141_assigned": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_tp_devivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "Earlier 40Ar/39Ar age, about 2 ka older than the previous best estimate at the time and younger than the 2017 age. Kept as a competing assertion, not as the adopted one.",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "language": "undefined",
+      "value": "https://doi.org/10.1007/s007100170010",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 81,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_dating_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "40Ar/39Ar age of the CI eruption, Giaccio et al. (2017)",
+   "annotations": {
+    "http://purl.org/dc/terms/bibliographicCitation": [
+     {
+      "identifier": "http://purl.org/dc/terms/bibliographicCitation",
+      "language": "undefined",
+      "value": "Giaccio, B., Hajdas, I., Isaia, R., Deino, A., Nomade, S. (2017). High-precision 14C and 40Ar/39Ar dating of the Campanian Ignimbrite (Y-5) reconciles the time-scales of climatic-cultural processes at 40 ka. Scientific Reports 7, 45940.",
+      "type": "label"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_timespan",
+      "type": "iri"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P141_assigned": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_tp_giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "Direct 40Ar/39Ar age of the eruption. The same study gives 34.29 \u00b1 0.09 14C kyr BP (1\u03c3), which is not calendar-calibrated and is not stored as ka BP here.",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#note",
+      "language": "undefined",
+      "value": "Adopted as the age of the event: the direct 40Ar/39Ar age of the eruption that Schenk et al. (2024) call the latest.",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "language": "undefined",
+      "value": "https://doi.org/10.1038/srep45940",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 82,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_dating_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Modelled age of the CI cryptotephra in the Auel core, Schenk et al. (2024)",
+   "annotations": {
+    "http://purl.org/dc/terms/bibliographicCitation": [
+     {
+      "identifier": "http://purl.org/dc/terms/bibliographicCitation",
+      "language": "undefined",
+      "value": "Schenk, F., Hambach, U., Britzius, S., Veres, D., Sirocko, F. (2024). A Cryptotephra Layer in Sediments of an Infilled Maar Lake from the Eifel (Germany): First Evidence of Campanian Ignimbrite Ash Airfall in Central Europe. Quaternary 7(2), 17.",
+      "type": "label"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_timespan",
+      "type": "iri"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P141_assigned": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_tp_schenk2024",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "Fallout age of the CI tephra at Auel (Eifel) in the ELSA-20 chronology, almost identical to the latest 40Ar/39Ar dates. It dates the layer in one core, not the vent.",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+     {
+      "identifier": "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "language": "undefined",
+      "value": "https://doi.org/10.3390/quat7020017",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 83,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_dating_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
    "label": {
-    "IRI-based": "cisite_9"
+    "IRI-based": "ci_eruption_dating_schenk2024"
    },
    "annotations": {},
    "range": [],
@@ -4011,7 +4344,74 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 78,
+   "id": 84,
+   "iri": "http://w3id.org/geo-lod/ci_volcanic_event",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Campanian Ignimbrite / Y-5 eruption",
+   "annotations": {
+    "http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci/cisite_9",
+      "type": "iri"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_timespan",
+      "type": "iri"
+     }
+    ],
+    "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at": [
+     {
+      "identifier": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_source_area",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "The Late Pleistocene super-eruption whose tephra marks the findspots of the CI strand. The findspots are places where the tephra is present (crm:P12_occurred_in_the_presence_of); the eruption took place at its source area.",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "language": "undefined",
+      "value": "CI/Y-5 eruption",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 85,
+   "iri": "http://w3id.org/geo-lod/ci_volcanic_event",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_volcanic_event"
+   },
+   "annotations": {},
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 86,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4025,7 +4425,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 79,
+   "id": 87,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4039,7 +4439,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 80,
+   "id": 88,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4053,7 +4453,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 81,
+   "id": 89,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4067,7 +4467,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 82,
+   "id": 90,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4081,7 +4481,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 83,
+   "id": 91,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4095,7 +4495,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 84,
+   "id": 92,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4109,7 +4509,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 85,
+   "id": 93,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4123,7 +4523,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 86,
+   "id": 94,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4137,7 +4537,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 87,
+   "id": 95,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4151,7 +4551,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 88,
+   "id": 96,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4165,7 +4565,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 89,
+   "id": 97,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4179,7 +4579,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 90,
+   "id": 98,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4193,7 +4593,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 91,
+   "id": 99,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4207,7 +4607,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 92,
+   "id": 100,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4221,7 +4621,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 93,
+   "id": 101,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4235,7 +4635,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 94,
+   "id": 102,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4249,7 +4649,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 95,
+   "id": 103,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4263,7 +4663,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 96,
+   "id": 104,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4277,7 +4677,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 97,
+   "id": 105,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4291,7 +4691,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 98,
+   "id": 106,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4305,7 +4705,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 99,
+   "id": 107,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4319,7 +4719,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 100,
+   "id": 108,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4333,7 +4733,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 101,
+   "id": 109,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4347,7 +4747,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 102,
+   "id": 110,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4361,7 +4761,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 103,
+   "id": 111,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4375,7 +4775,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 104,
+   "id": 112,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4389,7 +4789,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 105,
+   "id": 113,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4403,7 +4803,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 106,
+   "id": 114,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4417,7 +4817,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 107,
+   "id": 115,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4431,7 +4831,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 108,
+   "id": 116,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4445,7 +4845,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 109,
+   "id": 117,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4459,7 +4859,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 110,
+   "id": 118,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4473,7 +4873,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 111,
+   "id": 119,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4487,7 +4887,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 112,
+   "id": 120,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4501,7 +4901,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 113,
+   "id": 121,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4515,7 +4915,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 114,
+   "id": 122,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4529,7 +4929,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 115,
+   "id": 123,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4543,7 +4943,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 116,
+   "id": 124,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4557,7 +4957,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 117,
+   "id": 125,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4571,7 +4971,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 118,
+   "id": 126,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4585,7 +4985,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 119,
+   "id": 127,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4599,7 +4999,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 120,
+   "id": 128,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4613,7 +5013,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 121,
+   "id": 129,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4627,7 +5027,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 122,
+   "id": 130,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4641,7 +5041,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 123,
+   "id": 131,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4655,7 +5055,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 124,
+   "id": 132,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4669,7 +5069,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 125,
+   "id": 133,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4683,7 +5083,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 126,
+   "id": 134,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4697,7 +5097,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 127,
+   "id": 135,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4711,7 +5111,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 128,
+   "id": 136,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4725,7 +5125,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 129,
+   "id": 137,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4739,7 +5139,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 130,
+   "id": 138,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4753,7 +5153,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 131,
+   "id": 139,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4767,7 +5167,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 132,
+   "id": 140,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4781,7 +5181,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 133,
+   "id": 141,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4795,7 +5195,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 134,
+   "id": 142,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4809,7 +5209,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 135,
+   "id": 143,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4823,7 +5223,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 136,
+   "id": 144,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4837,7 +5237,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 137,
+   "id": 145,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4851,7 +5251,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 138,
+   "id": 146,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4865,7 +5265,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 139,
+   "id": 147,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4879,7 +5279,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 140,
+   "id": 148,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4893,7 +5293,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 141,
+   "id": 149,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4907,7 +5307,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 142,
+   "id": 150,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4921,7 +5321,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 143,
+   "id": 151,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4935,7 +5335,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 144,
+   "id": 152,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4949,7 +5349,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 145,
+   "id": 153,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4963,7 +5363,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 146,
+   "id": 154,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4977,7 +5377,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 147,
+   "id": 155,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -4991,7 +5391,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 148,
+   "id": 156,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5005,7 +5405,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 149,
+   "id": 157,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5019,7 +5419,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 150,
+   "id": 158,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5033,7 +5433,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 151,
+   "id": 159,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5096,7 +5496,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 152,
+   "id": 160,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5127,7 +5527,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 153,
+   "id": 161,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5190,7 +5590,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 154,
+   "id": 162,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5221,7 +5621,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 155,
+   "id": 163,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5284,7 +5684,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 156,
+   "id": 164,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5315,7 +5715,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 157,
+   "id": 165,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5378,7 +5778,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 158,
+   "id": 166,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5409,7 +5809,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 159,
+   "id": 167,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5472,7 +5872,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 160,
+   "id": 168,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5503,7 +5903,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 161,
+   "id": 169,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5566,7 +5966,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 162,
+   "id": 170,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5597,7 +5997,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 163,
+   "id": 171,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5660,7 +6060,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 164,
+   "id": 172,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5691,7 +6091,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 165,
+   "id": 173,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5754,7 +6154,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 166,
+   "id": 174,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5785,7 +6185,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 167,
+   "id": 175,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5848,7 +6248,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 168,
+   "id": 176,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5879,7 +6279,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 169,
+   "id": 177,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5942,7 +6342,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 170,
+   "id": 178,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -5973,7 +6373,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 171,
+   "id": 179,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6036,7 +6436,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 172,
+   "id": 180,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6067,7 +6467,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 173,
+   "id": 181,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6130,7 +6530,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 174,
+   "id": 182,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6161,7 +6561,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 175,
+   "id": 183,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6224,7 +6624,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 176,
+   "id": 184,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6255,7 +6655,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 177,
+   "id": 185,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6318,7 +6718,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 178,
+   "id": 186,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6349,7 +6749,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 179,
+   "id": 187,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6412,7 +6812,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 180,
+   "id": 188,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6443,7 +6843,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 181,
+   "id": 189,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6506,7 +6906,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 182,
+   "id": 190,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6537,7 +6937,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 183,
+   "id": 191,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6600,7 +7000,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 184,
+   "id": 192,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6631,7 +7031,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 185,
+   "id": 193,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6694,7 +7094,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 186,
+   "id": 194,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6725,7 +7125,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 187,
+   "id": 195,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6788,7 +7188,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 188,
+   "id": 196,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6819,7 +7219,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 189,
+   "id": 197,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6882,7 +7282,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 190,
+   "id": 198,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6913,7 +7313,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 191,
+   "id": 199,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -6976,7 +7376,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 192,
+   "id": 200,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7007,7 +7407,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 193,
+   "id": 201,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7070,7 +7470,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 194,
+   "id": 202,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7101,7 +7501,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 195,
+   "id": 203,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7164,7 +7564,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 196,
+   "id": 204,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7195,7 +7595,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 197,
+   "id": 205,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7258,7 +7658,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 198,
+   "id": 206,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7289,7 +7689,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 199,
+   "id": 207,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7352,7 +7752,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 200,
+   "id": 208,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7383,7 +7783,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 201,
+   "id": 209,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7446,7 +7846,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 202,
+   "id": 210,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7477,7 +7877,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 203,
+   "id": 211,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7540,7 +7940,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 204,
+   "id": 212,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7571,7 +7971,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 205,
+   "id": 213,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7634,7 +8034,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 206,
+   "id": 214,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7665,7 +8065,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 207,
+   "id": 215,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7728,7 +8128,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 208,
+   "id": 216,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7759,7 +8159,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 209,
+   "id": 217,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7822,7 +8222,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 210,
+   "id": 218,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7853,7 +8253,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 211,
+   "id": 219,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7916,7 +8316,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 212,
+   "id": 220,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -7947,7 +8347,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 213,
+   "id": 221,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8010,7 +8410,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 214,
+   "id": 222,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8041,7 +8441,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 215,
+   "id": 223,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8104,7 +8504,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 216,
+   "id": 224,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8135,7 +8535,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 217,
+   "id": 225,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8198,7 +8598,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 218,
+   "id": 226,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8229,7 +8629,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 219,
+   "id": 227,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8292,7 +8692,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 220,
+   "id": 228,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8323,7 +8723,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 221,
+   "id": 229,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8386,7 +8786,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 222,
+   "id": 230,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8417,7 +8817,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 223,
+   "id": 231,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8480,7 +8880,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 224,
+   "id": 232,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8511,7 +8911,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 225,
+   "id": 233,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8574,7 +8974,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 226,
+   "id": 234,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8605,7 +9005,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 227,
+   "id": 235,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8668,7 +9068,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 228,
+   "id": 236,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8699,7 +9099,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 229,
+   "id": 237,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8762,7 +9162,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 230,
+   "id": 238,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8793,7 +9193,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 231,
+   "id": 239,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8856,7 +9256,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 232,
+   "id": 240,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8887,7 +9287,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 233,
+   "id": 241,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8950,7 +9350,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 234,
+   "id": 242,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -8981,7 +9381,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 235,
+   "id": 243,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9044,7 +9444,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 236,
+   "id": 244,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9075,7 +9475,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 237,
+   "id": 245,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9138,7 +9538,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 238,
+   "id": 246,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9169,7 +9569,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 239,
+   "id": 247,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9232,7 +9632,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 240,
+   "id": 248,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9263,7 +9663,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 241,
+   "id": 249,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9326,7 +9726,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 242,
+   "id": 250,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9357,7 +9757,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 243,
+   "id": 251,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9420,7 +9820,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 244,
+   "id": 252,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9451,7 +9851,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 245,
+   "id": 253,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9514,7 +9914,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 246,
+   "id": 254,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9545,7 +9945,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 247,
+   "id": 255,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9608,7 +10008,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 248,
+   "id": 256,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9639,7 +10039,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 249,
+   "id": 257,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9702,7 +10102,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 250,
+   "id": 258,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9733,7 +10133,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 251,
+   "id": 259,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9796,7 +10196,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 252,
+   "id": 260,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9827,7 +10227,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 253,
+   "id": 261,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9890,7 +10290,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 254,
+   "id": 262,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9921,7 +10321,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 255,
+   "id": 263,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -9984,7 +10384,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 256,
+   "id": 264,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10015,7 +10415,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 257,
+   "id": 265,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10078,7 +10478,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 258,
+   "id": 266,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10109,7 +10509,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 259,
+   "id": 267,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10172,7 +10572,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 260,
+   "id": 268,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10203,7 +10603,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 261,
+   "id": 269,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10266,7 +10666,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 262,
+   "id": 270,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10297,7 +10697,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 263,
+   "id": 271,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10360,7 +10760,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 264,
+   "id": 272,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10391,7 +10791,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 265,
+   "id": 273,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10454,7 +10854,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 266,
+   "id": 274,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10485,7 +10885,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 267,
+   "id": 275,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10548,7 +10948,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 268,
+   "id": 276,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10579,7 +10979,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 269,
+   "id": 277,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10642,7 +11042,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 270,
+   "id": 278,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10673,7 +11073,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 271,
+   "id": 279,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10736,7 +11136,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 272,
+   "id": 280,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10767,7 +11167,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 273,
+   "id": 281,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10830,7 +11230,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 274,
+   "id": 282,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10861,7 +11261,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 275,
+   "id": 283,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10924,7 +11324,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 276,
+   "id": 284,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -10955,7 +11355,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 277,
+   "id": 285,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11018,7 +11418,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 278,
+   "id": 286,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11049,7 +11449,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 279,
+   "id": 287,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11112,7 +11512,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 280,
+   "id": 288,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11143,7 +11543,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 281,
+   "id": 289,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11206,7 +11606,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 282,
+   "id": 290,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11237,7 +11637,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 283,
+   "id": 291,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11300,7 +11700,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 284,
+   "id": 292,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11331,7 +11731,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 285,
+   "id": 293,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11394,7 +11794,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 286,
+   "id": 294,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11425,7 +11825,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 287,
+   "id": 295,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11488,7 +11888,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 288,
+   "id": 296,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11519,7 +11919,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 289,
+   "id": 297,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11582,7 +11982,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 290,
+   "id": 298,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11613,7 +12013,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 291,
+   "id": 299,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11676,7 +12076,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 292,
+   "id": 300,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11707,7 +12107,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 293,
+   "id": 301,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11770,7 +12170,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 294,
+   "id": 302,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11801,7 +12201,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 295,
+   "id": 303,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11864,7 +12264,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 296,
+   "id": 304,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11895,7 +12295,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 297,
+   "id": 305,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11958,7 +12358,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 298,
+   "id": 306,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_activity",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11989,7 +12389,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 299,
+   "id": 307,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_pyscript",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -11999,7 +12399,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2002/07/owl#versionInfo",
       "language": "undefined",
-      "value": "sha256:b88531826e4a",
+      "value": "sha256:af6fb303bd23",
       "type": "label"
      }
     ],
@@ -12026,7 +12426,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 300,
+   "id": 308,
    "iri": "http://w3id.org/geo-lod/ci/ci_findspots_generation",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12040,7 +12440,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 301,
+   "id": 309,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12054,7 +12454,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 302,
+   "id": 310,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12068,7 +12468,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 303,
+   "id": 311,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12082,7 +12482,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 304,
+   "id": 312,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12096,7 +12496,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 305,
+   "id": 313,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12110,7 +12510,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 306,
+   "id": 314,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12124,7 +12524,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 307,
+   "id": 315,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12138,7 +12538,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 308,
+   "id": 316,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12152,7 +12552,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 309,
+   "id": 317,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12166,7 +12566,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 310,
+   "id": 318,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12180,7 +12580,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 311,
+   "id": 319,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12194,7 +12594,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 312,
+   "id": 320,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12208,7 +12608,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 313,
+   "id": 321,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12222,7 +12622,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 314,
+   "id": 322,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12236,7 +12636,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 315,
+   "id": 323,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12250,7 +12650,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 316,
+   "id": 324,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12264,7 +12664,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 317,
+   "id": 325,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12278,7 +12678,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 318,
+   "id": 326,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12292,7 +12692,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 319,
+   "id": 327,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12306,7 +12706,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 320,
+   "id": 328,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12320,7 +12720,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 321,
+   "id": 329,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12334,7 +12734,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 322,
+   "id": 330,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12348,7 +12748,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 323,
+   "id": 331,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12362,7 +12762,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 324,
+   "id": 332,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12376,7 +12776,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 325,
+   "id": 333,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12390,7 +12790,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 326,
+   "id": 334,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12404,7 +12804,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 327,
+   "id": 335,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12418,7 +12818,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 328,
+   "id": 336,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12432,7 +12832,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 329,
+   "id": 337,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12446,7 +12846,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 330,
+   "id": 338,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12460,7 +12860,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 331,
+   "id": 339,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12474,7 +12874,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 332,
+   "id": 340,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12488,7 +12888,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 333,
+   "id": 341,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12502,7 +12902,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 334,
+   "id": 342,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12516,7 +12916,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 335,
+   "id": 343,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12530,7 +12930,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 336,
+   "id": 344,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12544,7 +12944,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 337,
+   "id": 345,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12558,7 +12958,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 338,
+   "id": 346,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12572,7 +12972,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 339,
+   "id": 347,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12586,7 +12986,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 340,
+   "id": 348,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12600,7 +13000,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 341,
+   "id": 349,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12614,7 +13014,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 342,
+   "id": 350,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12628,7 +13028,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 343,
+   "id": 351,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12642,7 +13042,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 344,
+   "id": 352,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12656,7 +13056,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 345,
+   "id": 353,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12670,7 +13070,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 346,
+   "id": 354,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12684,7 +13084,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 347,
+   "id": 355,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12698,7 +13098,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 348,
+   "id": 356,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12712,7 +13112,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 349,
+   "id": 357,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12726,7 +13126,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 350,
+   "id": 358,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12740,7 +13140,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 351,
+   "id": 359,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12754,7 +13154,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 352,
+   "id": 360,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12768,7 +13168,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 353,
+   "id": 361,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12782,7 +13182,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 354,
+   "id": 362,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12796,7 +13196,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 355,
+   "id": 363,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12810,7 +13210,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 356,
+   "id": 364,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12824,7 +13224,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 357,
+   "id": 365,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12838,7 +13238,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 358,
+   "id": 366,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12852,7 +13252,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 359,
+   "id": 367,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12866,7 +13266,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 360,
+   "id": 368,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12880,7 +13280,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 361,
+   "id": 369,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12894,7 +13294,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 362,
+   "id": 370,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12908,7 +13308,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 363,
+   "id": 371,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12922,7 +13322,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 364,
+   "id": 372,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12936,7 +13336,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 365,
+   "id": 373,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12950,7 +13350,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 366,
+   "id": 374,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12964,7 +13364,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 367,
+   "id": 375,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12978,7 +13378,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 368,
+   "id": 376,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -12992,7 +13392,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 369,
+   "id": 377,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13006,7 +13406,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 370,
+   "id": 378,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13020,7 +13420,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 371,
+   "id": 379,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13034,7 +13434,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 372,
+   "id": 380,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13048,7 +13448,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 373,
+   "id": 381,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13062,7 +13462,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 374,
+   "id": 382,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13109,7 +13509,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 375,
+   "id": 383,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13156,7 +13556,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 376,
+   "id": 384,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13203,7 +13603,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 377,
+   "id": 385,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13250,7 +13650,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 378,
+   "id": 386,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13297,7 +13697,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 379,
+   "id": 387,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13344,7 +13744,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 380,
+   "id": 388,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13391,7 +13791,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 381,
+   "id": 389,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13438,7 +13838,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 382,
+   "id": 390,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13485,7 +13885,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 383,
+   "id": 391,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13532,7 +13932,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 384,
+   "id": 392,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13579,7 +13979,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 385,
+   "id": 393,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13626,7 +14026,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 386,
+   "id": 394,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13673,7 +14073,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 387,
+   "id": 395,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13720,7 +14120,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 388,
+   "id": 396,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13767,7 +14167,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 389,
+   "id": 397,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13814,7 +14214,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 390,
+   "id": 398,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13861,7 +14261,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 391,
+   "id": 399,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13908,7 +14308,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 392,
+   "id": 400,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -13955,7 +14355,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 393,
+   "id": 401,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14002,7 +14402,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 394,
+   "id": 402,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14049,7 +14449,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 395,
+   "id": 403,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14096,7 +14496,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 396,
+   "id": 404,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14143,7 +14543,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 397,
+   "id": 405,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14190,7 +14590,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 398,
+   "id": 406,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14237,7 +14637,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 399,
+   "id": 407,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14284,7 +14684,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 400,
+   "id": 408,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14331,7 +14731,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 401,
+   "id": 409,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14378,7 +14778,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 402,
+   "id": 410,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14425,7 +14825,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 403,
+   "id": 411,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14472,7 +14872,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 404,
+   "id": 412,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14519,7 +14919,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 405,
+   "id": 413,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14566,7 +14966,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 406,
+   "id": 414,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14613,7 +15013,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 407,
+   "id": 415,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14660,7 +15060,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 408,
+   "id": 416,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14707,7 +15107,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 409,
+   "id": 417,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14754,7 +15154,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 410,
+   "id": 418,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14801,7 +15201,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 411,
+   "id": 419,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14848,7 +15248,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 412,
+   "id": 420,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14895,7 +15295,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 413,
+   "id": 421,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14942,7 +15342,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 414,
+   "id": 422,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -14989,7 +15389,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 415,
+   "id": 423,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15036,7 +15436,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 416,
+   "id": 424,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15083,7 +15483,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 417,
+   "id": 425,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15130,7 +15530,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 418,
+   "id": 426,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15177,7 +15577,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 419,
+   "id": 427,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15224,7 +15624,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 420,
+   "id": 428,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15271,7 +15671,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 421,
+   "id": 429,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15318,7 +15718,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 422,
+   "id": 430,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15365,7 +15765,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 423,
+   "id": 431,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15412,7 +15812,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 424,
+   "id": 432,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15459,7 +15859,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 425,
+   "id": 433,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15506,7 +15906,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 426,
+   "id": 434,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15553,7 +15953,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 427,
+   "id": 435,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15600,7 +16000,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 428,
+   "id": 436,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15647,7 +16047,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 429,
+   "id": 437,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15694,7 +16094,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 430,
+   "id": 438,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15741,7 +16141,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 431,
+   "id": 439,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15788,7 +16188,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 432,
+   "id": 440,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15835,7 +16235,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 433,
+   "id": 441,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15882,7 +16282,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 434,
+   "id": 442,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15929,7 +16329,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 435,
+   "id": 443,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -15976,7 +16376,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 436,
+   "id": 444,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16023,7 +16423,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 437,
+   "id": 445,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16070,7 +16470,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 438,
+   "id": 446,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16117,7 +16517,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 439,
+   "id": 447,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16164,7 +16564,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 440,
+   "id": 448,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16211,7 +16611,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 441,
+   "id": 449,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16258,7 +16658,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 442,
+   "id": 450,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16305,7 +16705,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 443,
+   "id": 451,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16352,7 +16752,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 444,
+   "id": 452,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16399,7 +16799,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 445,
+   "id": 453,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16446,7 +16846,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 446,
+   "id": 454,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16493,7 +16893,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 447,
+   "id": 455,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16540,12 +16940,778 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 448,
+   "id": 456,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9_geom",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
    "label": {
     "IRI-based": "cisite_9_geom"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#inTimePosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#inTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_begin_pos_devivo2001",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 457,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_begin_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_begin_devivo2001"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#inTimePosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#inTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_begin_pos_giaccio2017",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 458,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_begin_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_begin_giaccio2017"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#inTimePosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#inTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_begin_pos_schenk2024",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 459,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_begin_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_begin_schenk2024"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#inTimePosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#inTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_end_pos_devivo2001",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 460,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_end_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_end_devivo2001"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#inTimePosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#inTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_end_pos_giaccio2017",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 461,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_end_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_end_giaccio2017"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#inTimePosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#inTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_end_pos_schenk2024",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 462,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_end_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_end_schenk2024"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ArAr-DeVivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.39",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 463,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_begin_pos_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_begin_pos_devivo2001"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ArAr-Giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.99",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 464,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_begin_pos_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_begin_pos_giaccio2017"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ELSA-20",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "40.040",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 465,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_begin_pos_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_begin_pos_schenk2024"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ArAr-DeVivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.17",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 466,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_end_pos_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_end_pos_devivo2001"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ArAr-Giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.71",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 467,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_end_pos_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_eruption_end_pos_giaccio2017"
+   },
+   "annotations": {
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ELSA-20",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.740",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 468,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_end_pos_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "39.28 \u00b1 0.11 ka (40Ar/39Ar), as ka BP",
+   "annotations": {
+    "http://w3id.org/geo-lod/ageKaBP": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageKaBP",
+      "language": "undefined",
+      "value": "39.28",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/ageUncertaintyNeg_ka": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageUncertaintyNeg_ka",
+      "language": "undefined",
+      "value": "0.11",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/ageUncertaintyPos_ka": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageUncertaintyPos_ka",
+      "language": "undefined",
+      "value": "0.11",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasAgeUncertainty": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasAgeUncertainty",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_unc_devivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#note",
+      "language": "undefined",
+      "value": "Published as 39.28 \u00b1 0.11 ka (40Ar/39Ar).",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ArAr-DeVivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.28",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 469,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_tp_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "39,940 \u00b1 150 yr b2k (ELSA-20 chronology), as ka BP",
+   "annotations": {
+    "http://w3id.org/geo-lod/ageKaBP": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageKaBP",
+      "language": "undefined",
+      "value": "39.890",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/ageUncertaintyNeg_ka": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageUncertaintyNeg_ka",
+      "language": "undefined",
+      "value": "0.150",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/ageUncertaintyPos_ka": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageUncertaintyPos_ka",
+      "language": "undefined",
+      "value": "0.150",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasAgeUncertainty": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasAgeUncertainty",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_unc_schenk2024",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#note",
+      "language": "undefined",
+      "value": "Published as 39,940 \u00b1 150 yr b2k (ELSA-20 chronology).",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ELSA-20",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.890",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 470,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_tp_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "39.85 \u00b1 0.14 ka (40Ar/39Ar, 95% confidence level), as ka BP",
+   "annotations": {
+    "http://w3id.org/geo-lod/ageKaBP": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageKaBP",
+      "language": "undefined",
+      "value": "39.85",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/ageUncertaintyNeg_ka": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageUncertaintyNeg_ka",
+      "language": "undefined",
+      "value": "0.14",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/ageUncertaintyPos_ka": [
+     {
+      "identifier": "http://w3id.org/geo-lod/ageUncertaintyPos_ka",
+      "language": "undefined",
+      "value": "0.14",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasAgeUncertainty": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasAgeUncertainty",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_unc_giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#note",
+      "language": "undefined",
+      "value": "Published as 39.85 \u00b1 0.14 ka (40Ar/39Ar, 95% confidence level).",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2006/time#hasTRS": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasTRS",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/trs/ArAr-Giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#numericPosition": [
+     {
+      "identifier": "http://www.w3.org/2006/time#numericPosition",
+      "language": "undefined",
+      "value": "39.85",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 471,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_tp_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Age interval of 39.28 \u00b1 0.11 ka (40Ar/39Ar), 39.17 to 39.39 ka BP",
+   "annotations": {
+    "http://www.w3.org/2006/time#hasBeginning": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasBeginning",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_begin_devivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasEnd",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_end_devivo2001",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 472,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_interval_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Age interval of 39.85 \u00b1 0.14 ka (40Ar/39Ar, 95% confidence level), 39.71 to 39.99 ka BP",
+   "annotations": {
+    "http://www.w3.org/2006/time#hasBeginning": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasBeginning",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_begin_giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasEnd",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_end_giaccio2017",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 473,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_interval_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Age interval of 39,940 \u00b1 150 yr b2k (ELSA-20 chronology), 39.740 to 40.040 ka BP",
+   "annotations": {
+    "http://www.w3.org/2006/time#hasBeginning": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasBeginning",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_begin_schenk2024",
+      "type": "iri"
+     }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+     {
+      "identifier": "http://www.w3.org/2006/time#hasEnd",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_end_schenk2024",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 474,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_interval_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Uncertainty of 39.28 \u00b1 0.11 ka (40Ar/39Ar)",
+   "annotations": {
+    "http://w3id.org/geo-lod/hasAgeInterval": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasAgeInterval",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_interval_devivo2001",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/minusKa": [
+     {
+      "identifier": "http://w3id.org/geo-lod/minusKa",
+      "language": "undefined",
+      "value": "0.11",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/plusKa": [
+     {
+      "identifier": "http://w3id.org/geo-lod/plusKa",
+      "language": "undefined",
+      "value": "0.11",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 475,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_unc_devivo2001",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Uncertainty of 39.85 \u00b1 0.14 ka (40Ar/39Ar, 95% confidence level)",
+   "annotations": {
+    "http://w3id.org/geo-lod/coverageLevel": [
+     {
+      "identifier": "http://w3id.org/geo-lod/coverageLevel",
+      "language": "undefined",
+      "value": "0.95",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/hasAgeInterval": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasAgeInterval",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_interval_giaccio2017",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/minusKa": [
+     {
+      "identifier": "http://w3id.org/geo-lod/minusKa",
+      "language": "undefined",
+      "value": "0.14",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/plusKa": [
+     {
+      "identifier": "http://w3id.org/geo-lod/plusKa",
+      "language": "undefined",
+      "value": "0.14",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 476,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_unc_giaccio2017",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Uncertainty of 39,940 \u00b1 150 yr b2k (ELSA-20 chronology)",
+   "annotations": {
+    "http://w3id.org/geo-lod/hasAgeInterval": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasAgeInterval",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_interval_schenk2024",
+      "type": "iri"
+     }
+    ],
+    "http://w3id.org/geo-lod/minusKa": [
+     {
+      "identifier": "http://w3id.org/geo-lod/minusKa",
+      "language": "undefined",
+      "value": "0.150",
+      "type": "label"
+     }
+    ],
+    "http://w3id.org/geo-lod/plusKa": [
+     {
+      "identifier": "http://w3id.org/geo-lod/plusKa",
+      "language": "undefined",
+      "value": "0.150",
+      "type": "label"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 477,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_unc_schenk2024",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": "Phlegraean Fields (Campi Flegrei), source area of the CI eruption",
+   "annotations": {
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+     {
+      "identifier": "http://www.w3.org/2000/01/rdf-schema#comment",
+      "language": "undefined",
+      "value": "The source area, not a vent: the exact vent of the CI eruption is discussed (De Vivo et al. 2001 propose fissures along Apennine faults rather than a ring fracture of the Campi Flegrei caldera).",
+      "type": "label"
+     }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "language": "undefined",
+      "value": "http://www.wikidata.org/entity/Q755123",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 478,
+   "iri": "http://w3id.org/geo-lod/ci_source_area",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
+   "label": {
+    "IRI-based": "ci_source_area"
    },
    "annotations": {},
    "range": [],
@@ -16554,7 +17720,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 449,
+   "id": 479,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16568,7 +17734,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 450,
+   "id": 480,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16582,7 +17748,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 451,
+   "id": 481,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16596,7 +17762,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 452,
+   "id": 482,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16610,7 +17776,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 453,
+   "id": 483,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16624,7 +17790,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 454,
+   "id": 484,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16638,7 +17804,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 455,
+   "id": 485,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16652,7 +17818,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 456,
+   "id": 486,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16666,7 +17832,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 457,
+   "id": 487,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16680,7 +17846,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 458,
+   "id": 488,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16694,7 +17860,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 459,
+   "id": 489,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16708,7 +17874,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 460,
+   "id": 490,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16722,7 +17888,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 461,
+   "id": 491,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16736,7 +17902,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 462,
+   "id": 492,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16750,7 +17916,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 463,
+   "id": 493,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16764,7 +17930,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 464,
+   "id": 494,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16778,7 +17944,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 465,
+   "id": 495,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16792,7 +17958,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 466,
+   "id": 496,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16806,7 +17972,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 467,
+   "id": 497,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16820,7 +17986,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 468,
+   "id": 498,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16834,7 +18000,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 469,
+   "id": 499,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16848,7 +18014,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 470,
+   "id": 500,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16862,7 +18028,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 471,
+   "id": 501,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16876,7 +18042,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 472,
+   "id": 502,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16890,7 +18056,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 473,
+   "id": 503,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16904,7 +18070,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 474,
+   "id": 504,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16918,7 +18084,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 475,
+   "id": 505,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16932,7 +18098,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 476,
+   "id": 506,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16946,7 +18112,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 477,
+   "id": 507,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16960,7 +18126,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 478,
+   "id": 508,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16974,7 +18140,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 479,
+   "id": 509,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -16988,7 +18154,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 480,
+   "id": 510,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17002,7 +18168,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 481,
+   "id": 511,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17016,7 +18182,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 482,
+   "id": 512,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17030,7 +18196,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 483,
+   "id": 513,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17044,7 +18210,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 484,
+   "id": 514,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17058,7 +18224,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 485,
+   "id": 515,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17072,7 +18238,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 486,
+   "id": 516,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17086,7 +18252,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 487,
+   "id": 517,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17100,7 +18266,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 488,
+   "id": 518,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17114,7 +18280,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 489,
+   "id": 519,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17128,7 +18294,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 490,
+   "id": 520,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17142,7 +18308,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 491,
+   "id": 521,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17156,7 +18322,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 492,
+   "id": 522,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17170,7 +18336,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 493,
+   "id": 523,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17184,7 +18350,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 494,
+   "id": 524,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17198,7 +18364,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 495,
+   "id": 525,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17212,7 +18378,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 496,
+   "id": 526,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17226,7 +18392,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 497,
+   "id": 527,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17240,7 +18406,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 498,
+   "id": 528,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17254,7 +18420,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 499,
+   "id": 529,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17268,7 +18434,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 500,
+   "id": 530,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17282,7 +18448,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 501,
+   "id": 531,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17296,7 +18462,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 502,
+   "id": 532,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17310,7 +18476,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 503,
+   "id": 533,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17324,7 +18490,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 504,
+   "id": 534,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17338,7 +18504,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 505,
+   "id": 535,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17352,7 +18518,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 506,
+   "id": 536,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17366,7 +18532,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 507,
+   "id": 537,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17380,7 +18546,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 508,
+   "id": 538,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17394,7 +18560,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 509,
+   "id": 539,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17408,7 +18574,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 510,
+   "id": 540,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17422,7 +18588,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 511,
+   "id": 541,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17436,7 +18602,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 512,
+   "id": 542,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17450,7 +18616,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 513,
+   "id": 543,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17464,7 +18630,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 514,
+   "id": 544,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17478,7 +18644,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 515,
+   "id": 545,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17492,7 +18658,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 516,
+   "id": 546,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17506,7 +18672,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 517,
+   "id": 547,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17520,7 +18686,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 518,
+   "id": 548,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17534,7 +18700,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 519,
+   "id": 549,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17548,7 +18714,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 520,
+   "id": 550,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17562,7 +18728,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 521,
+   "id": 551,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17576,7 +18742,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 522,
+   "id": 552,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17590,7 +18756,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 523,
+   "id": 553,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17604,7 +18770,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 524,
+   "id": 554,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17618,7 +18784,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 525,
+   "id": 555,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17632,7 +18798,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 526,
+   "id": 556,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17646,7 +18812,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 527,
+   "id": 557,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17660,7 +18826,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 528,
+   "id": 558,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17674,7 +18840,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 529,
+   "id": 559,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17688,7 +18854,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 530,
+   "id": 560,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17702,7 +18868,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 531,
+   "id": 561,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17716,7 +18882,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 532,
+   "id": 562,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17730,7 +18896,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 533,
+   "id": 563,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17744,7 +18910,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 534,
+   "id": 564,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17758,7 +18924,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 535,
+   "id": 565,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17772,7 +18938,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 536,
+   "id": 566,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17786,7 +18952,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 537,
+   "id": 567,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17800,7 +18966,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 538,
+   "id": 568,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17814,7 +18980,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 539,
+   "id": 569,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17828,7 +18994,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 540,
+   "id": 570,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17842,7 +19008,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 541,
+   "id": 571,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17856,7 +19022,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 542,
+   "id": 572,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17870,7 +19036,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 543,
+   "id": 573,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17884,7 +19050,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 544,
+   "id": 574,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17898,7 +19064,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 545,
+   "id": 575,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17912,7 +19078,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 546,
+   "id": 576,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17926,7 +19092,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 547,
+   "id": 577,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17940,7 +19106,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 548,
+   "id": 578,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17954,7 +19120,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 549,
+   "id": 579,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17968,7 +19134,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 550,
+   "id": 580,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17982,7 +19148,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 551,
+   "id": 581,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -17996,7 +19162,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 552,
+   "id": 582,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18010,7 +19176,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 553,
+   "id": 583,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18024,7 +19190,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 554,
+   "id": 584,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18038,7 +19204,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 555,
+   "id": 585,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18052,7 +19218,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 556,
+   "id": 586,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18066,7 +19232,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 557,
+   "id": 587,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18080,7 +19246,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 558,
+   "id": 588,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18094,7 +19260,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 559,
+   "id": 589,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18108,7 +19274,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 560,
+   "id": 590,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18122,7 +19288,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 561,
+   "id": 591,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18136,7 +19302,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 562,
+   "id": 592,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18150,7 +19316,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 563,
+   "id": 593,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18164,7 +19330,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 564,
+   "id": 594,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18178,7 +19344,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 565,
+   "id": 595,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18192,7 +19358,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 566,
+   "id": 596,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18206,7 +19372,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 567,
+   "id": 597,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18220,7 +19386,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 568,
+   "id": 598,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18234,7 +19400,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 569,
+   "id": 599,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18248,7 +19414,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 570,
+   "id": 600,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18262,7 +19428,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 571,
+   "id": 601,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18276,7 +19442,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 572,
+   "id": 602,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18290,7 +19456,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 573,
+   "id": 603,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18304,7 +19470,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 574,
+   "id": 604,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18318,7 +19484,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 575,
+   "id": 605,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18332,7 +19498,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 576,
+   "id": 606,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18346,7 +19512,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 577,
+   "id": 607,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18360,7 +19526,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 578,
+   "id": 608,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18374,7 +19540,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 579,
+   "id": 609,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18388,7 +19554,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 580,
+   "id": 610,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18402,7 +19568,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 581,
+   "id": 611,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18416,7 +19582,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 582,
+   "id": 612,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18430,7 +19596,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 583,
+   "id": 613,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18444,7 +19610,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 584,
+   "id": 614,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18458,7 +19624,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 585,
+   "id": 615,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18472,7 +19638,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 586,
+   "id": 616,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18486,7 +19652,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 587,
+   "id": 617,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18500,7 +19666,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 588,
+   "id": 618,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18514,7 +19680,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 589,
+   "id": 619,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18528,7 +19694,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 590,
+   "id": 620,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18542,7 +19708,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 591,
+   "id": 621,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18556,7 +19722,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 592,
+   "id": 622,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18570,7 +19736,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 593,
+   "id": 623,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18584,7 +19750,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 594,
+   "id": 624,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18598,7 +19764,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 595,
+   "id": 625,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18612,7 +19778,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 596,
+   "id": 626,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18745,7 +19911,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 597,
+   "id": 627,
    "iri": "http://w3id.org/geo-lod/ci/cisite_1",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -18878,7 +20044,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 598,
+   "id": 628,
    "iri": "http://w3id.org/geo-lod/ci/cisite_10",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19011,7 +20177,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 599,
+   "id": 629,
    "iri": "http://w3id.org/geo-lod/ci/cisite_101",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19144,7 +20310,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 600,
+   "id": 630,
    "iri": "http://w3id.org/geo-lod/ci/cisite_102",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19277,7 +20443,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 601,
+   "id": 631,
    "iri": "http://w3id.org/geo-lod/ci/cisite_103",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19410,7 +20576,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 602,
+   "id": 632,
    "iri": "http://w3id.org/geo-lod/ci/cisite_104",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19543,7 +20709,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 603,
+   "id": 633,
    "iri": "http://w3id.org/geo-lod/ci/cisite_105",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19676,7 +20842,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 604,
+   "id": 634,
    "iri": "http://w3id.org/geo-lod/ci/cisite_106",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19809,7 +20975,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 605,
+   "id": 635,
    "iri": "http://w3id.org/geo-lod/ci/cisite_11",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -19942,7 +21108,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 606,
+   "id": 636,
    "iri": "http://w3id.org/geo-lod/ci/cisite_12",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20075,7 +21241,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 607,
+   "id": 637,
    "iri": "http://w3id.org/geo-lod/ci/cisite_13",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20208,7 +21374,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 608,
+   "id": 638,
    "iri": "http://w3id.org/geo-lod/ci/cisite_14",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20341,7 +21507,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 609,
+   "id": 639,
    "iri": "http://w3id.org/geo-lod/ci/cisite_15",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20474,7 +21640,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 610,
+   "id": 640,
    "iri": "http://w3id.org/geo-lod/ci/cisite_16",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20607,7 +21773,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 611,
+   "id": 641,
    "iri": "http://w3id.org/geo-lod/ci/cisite_17",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20740,7 +21906,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 612,
+   "id": 642,
    "iri": "http://w3id.org/geo-lod/ci/cisite_18",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20754,7 +21920,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 613,
+   "id": 643,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -20887,7 +22053,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 614,
+   "id": 644,
    "iri": "http://w3id.org/geo-lod/ci/cisite_2",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21020,7 +22186,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 615,
+   "id": 645,
    "iri": "http://w3id.org/geo-lod/ci/cisite_20",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21153,7 +22319,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 616,
+   "id": 646,
    "iri": "http://w3id.org/geo-lod/ci/cisite_201",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21286,7 +22452,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 617,
+   "id": 647,
    "iri": "http://w3id.org/geo-lod/ci/cisite_202",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21419,7 +22585,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 618,
+   "id": 648,
    "iri": "http://w3id.org/geo-lod/ci/cisite_203",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21552,7 +22718,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 619,
+   "id": 649,
    "iri": "http://w3id.org/geo-lod/ci/cisite_21",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21685,7 +22851,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 620,
+   "id": 650,
    "iri": "http://w3id.org/geo-lod/ci/cisite_22",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21818,7 +22984,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 621,
+   "id": 651,
    "iri": "http://w3id.org/geo-lod/ci/cisite_23",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -21951,7 +23117,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 622,
+   "id": 652,
    "iri": "http://w3id.org/geo-lod/ci/cisite_24",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22084,7 +23250,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 623,
+   "id": 653,
    "iri": "http://w3id.org/geo-lod/ci/cisite_25",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22217,7 +23383,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 624,
+   "id": 654,
    "iri": "http://w3id.org/geo-lod/ci/cisite_26",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22350,7 +23516,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 625,
+   "id": 655,
    "iri": "http://w3id.org/geo-lod/ci/cisite_27",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22483,7 +23649,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 626,
+   "id": 656,
    "iri": "http://w3id.org/geo-lod/ci/cisite_28",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22616,7 +23782,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 627,
+   "id": 657,
    "iri": "http://w3id.org/geo-lod/ci/cisite_29",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22749,7 +23915,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 628,
+   "id": 658,
    "iri": "http://w3id.org/geo-lod/ci/cisite_3",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -22882,7 +24048,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 629,
+   "id": 659,
    "iri": "http://w3id.org/geo-lod/ci/cisite_30",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23015,7 +24181,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 630,
+   "id": 660,
    "iri": "http://w3id.org/geo-lod/ci/cisite_31",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23148,7 +24314,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 631,
+   "id": 661,
    "iri": "http://w3id.org/geo-lod/ci/cisite_32",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23281,7 +24447,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 632,
+   "id": 662,
    "iri": "http://w3id.org/geo-lod/ci/cisite_33",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23414,7 +24580,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 633,
+   "id": 663,
    "iri": "http://w3id.org/geo-lod/ci/cisite_34",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23547,7 +24713,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 634,
+   "id": 664,
    "iri": "http://w3id.org/geo-lod/ci/cisite_35",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23680,7 +24846,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 635,
+   "id": 665,
    "iri": "http://w3id.org/geo-lod/ci/cisite_36",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23813,7 +24979,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 636,
+   "id": 666,
    "iri": "http://w3id.org/geo-lod/ci/cisite_37",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -23946,7 +25112,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 637,
+   "id": 667,
    "iri": "http://w3id.org/geo-lod/ci/cisite_38",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24079,7 +25245,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 638,
+   "id": 668,
    "iri": "http://w3id.org/geo-lod/ci/cisite_39",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24212,7 +25378,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 639,
+   "id": 669,
    "iri": "http://w3id.org/geo-lod/ci/cisite_4",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24345,7 +25511,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 640,
+   "id": 670,
    "iri": "http://w3id.org/geo-lod/ci/cisite_40",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24478,7 +25644,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 641,
+   "id": 671,
    "iri": "http://w3id.org/geo-lod/ci/cisite_41",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24492,7 +25658,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 642,
+   "id": 672,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24506,7 +25672,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 643,
+   "id": 673,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24520,7 +25686,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 644,
+   "id": 674,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24534,7 +25700,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 645,
+   "id": 675,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24667,7 +25833,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 646,
+   "id": 676,
    "iri": "http://w3id.org/geo-lod/ci/cisite_46",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24800,7 +25966,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 647,
+   "id": 677,
    "iri": "http://w3id.org/geo-lod/ci/cisite_47",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -24933,7 +26099,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 648,
+   "id": 678,
    "iri": "http://w3id.org/geo-lod/ci/cisite_48",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25066,7 +26232,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 649,
+   "id": 679,
    "iri": "http://w3id.org/geo-lod/ci/cisite_49",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25080,7 +26246,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 650,
+   "id": 680,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25094,7 +26260,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 651,
+   "id": 681,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25108,7 +26274,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 652,
+   "id": 682,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25241,7 +26407,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 653,
+   "id": 683,
    "iri": "http://w3id.org/geo-lod/ci/cisite_52",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25374,7 +26540,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 654,
+   "id": 684,
    "iri": "http://w3id.org/geo-lod/ci/cisite_53",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25507,7 +26673,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 655,
+   "id": 685,
    "iri": "http://w3id.org/geo-lod/ci/cisite_54",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25640,7 +26806,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 656,
+   "id": 686,
    "iri": "http://w3id.org/geo-lod/ci/cisite_55",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25773,7 +26939,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 657,
+   "id": 687,
    "iri": "http://w3id.org/geo-lod/ci/cisite_56",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -25906,7 +27072,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 658,
+   "id": 688,
    "iri": "http://w3id.org/geo-lod/ci/cisite_57",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26039,7 +27205,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 659,
+   "id": 689,
    "iri": "http://w3id.org/geo-lod/ci/cisite_58",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26053,7 +27219,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 660,
+   "id": 690,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26186,7 +27352,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 661,
+   "id": 691,
    "iri": "http://w3id.org/geo-lod/ci/cisite_6",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26319,7 +27485,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 662,
+   "id": 692,
    "iri": "http://w3id.org/geo-lod/ci/cisite_60",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26452,7 +27618,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 663,
+   "id": 693,
    "iri": "http://w3id.org/geo-lod/ci/cisite_61",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26466,7 +27632,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 664,
+   "id": 694,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26480,7 +27646,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 665,
+   "id": 695,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26613,7 +27779,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 666,
+   "id": 696,
    "iri": "http://w3id.org/geo-lod/ci/cisite_64",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26627,7 +27793,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 667,
+   "id": 697,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26760,7 +27926,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 668,
+   "id": 698,
    "iri": "http://w3id.org/geo-lod/ci/cisite_7",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -26893,7 +28059,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 669,
+   "id": 699,
    "iri": "http://w3id.org/geo-lod/ci/cisite_8",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27026,7 +28192,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 670,
+   "id": 700,
    "iri": "http://w3id.org/geo-lod/ci/cisite_9",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27040,7 +28206,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 671,
+   "id": 701,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27054,7 +28220,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 672,
+   "id": 702,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27068,7 +28234,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 673,
+   "id": 703,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27082,7 +28248,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 674,
+   "id": 704,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27096,7 +28262,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 675,
+   "id": 705,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27110,7 +28276,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 676,
+   "id": 706,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27124,7 +28290,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 677,
+   "id": 707,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27138,7 +28304,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 678,
+   "id": 708,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27152,7 +28318,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 679,
+   "id": 709,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27166,7 +28332,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 680,
+   "id": 710,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27180,7 +28346,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 681,
+   "id": 711,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27194,7 +28360,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 682,
+   "id": 712,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27327,7 +28493,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 683,
+   "id": 713,
    "iri": "http://w3id.org/geo-lod/ci/cisite_19",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27460,7 +28626,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 684,
+   "id": 714,
    "iri": "http://w3id.org/geo-lod/ci/cisite_42",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27593,7 +28759,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 685,
+   "id": 715,
    "iri": "http://w3id.org/geo-lod/ci/cisite_43",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27726,7 +28892,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 686,
+   "id": 716,
    "iri": "http://w3id.org/geo-lod/ci/cisite_44",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27859,7 +29025,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 687,
+   "id": 717,
    "iri": "http://w3id.org/geo-lod/ci/cisite_45",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -27992,7 +29158,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 688,
+   "id": 718,
    "iri": "http://w3id.org/geo-lod/ci/cisite_5",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28125,11 +29291,11 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 689,
+   "id": 719,
    "iri": "http://w3id.org/geo-lod/ci/cisite_50",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
-   "label": "Crvena Stiljena (Montenegro)",
+   "label": "Crvena Stijena (Montenegro)",
    "annotations": {
     "http://purl.org/dc/terms/creator": [
      {
@@ -28203,6 +29369,14 @@ var vowlresult={
       "type": "label"
      }
     ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "language": "undefined",
+      "value": "Crvena Stiljena (Montenegro)",
+      "type": "label"
+     }
+    ],
     "http://www.w3.org/2004/02/skos/core#closeMatch": [
      {
       "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
@@ -28215,7 +29389,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
       "language": "undefined",
-      "value": "Crvena Stiljena (Montenegro)",
+      "value": "Crvena Stijena (Montenegro)",
       "type": "label"
      }
     ],
@@ -28258,7 +29432,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 690,
+   "id": 720,
    "iri": "http://w3id.org/geo-lod/ci/cisite_51",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28391,7 +29565,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 691,
+   "id": 721,
    "iri": "http://w3id.org/geo-lod/ci/cisite_59",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
@@ -28524,11 +29698,11 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 692,
+   "id": 722,
    "iri": "http://w3id.org/geo-lod/ci/cisite_62",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
-   "label": "Titel Pleateau (Serbia)",
+   "label": "Titel Plateau (Serbia)",
    "annotations": {
     "http://purl.org/dc/terms/creator": [
      {
@@ -28602,6 +29776,14 @@ var vowlresult={
       "type": "label"
      }
     ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "language": "undefined",
+      "value": "Titel Pleateau (Serbia)",
+      "type": "label"
+     }
+    ],
     "http://www.w3.org/2004/02/skos/core#closeMatch": [
      {
       "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
@@ -28614,7 +29796,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
       "language": "undefined",
-      "value": "Titel Pleateau (Serbia)",
+      "value": "Titel Plateau (Serbia)",
       "type": "label"
      }
     ],
@@ -28657,11 +29839,11 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 693,
+   "id": 723,
    "iri": "http://w3id.org/geo-lod/ci/cisite_63",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
-   "label": "Haua-Fteah (Libya)",
+   "label": "Haua Fteah (Libya)",
    "annotations": {
     "http://purl.org/dc/terms/creator": [
      {
@@ -28735,6 +29917,14 @@ var vowlresult={
       "type": "label"
      }
     ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+     {
+      "identifier": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "language": "undefined",
+      "value": "Haua-Fteah (Libya)",
+      "type": "label"
+     }
+    ],
     "http://www.w3.org/2004/02/skos/core#closeMatch": [
      {
       "identifier": "http://www.w3.org/2004/02/skos/core#closeMatch",
@@ -28747,7 +29937,7 @@ var vowlresult={
      {
       "identifier": "http://www.w3.org/2004/02/skos/core#prefLabel",
       "language": "undefined",
-      "value": "Haua-Fteah (Libya)",
+      "value": "Haua Fteah (Libya)",
       "type": "label"
      }
     ],
@@ -28790,12 +29980,33 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 694,
+   "id": 724,
    "iri": "http://w3id.org/geo-lod/ci/cisite_65",
    "baseIRI": "http://w3id.org/geo-lod/ci",
    "instances": 0,
+   "label": "Time-span of the CI eruption",
+   "annotations": {
+    "http://w3id.org/geo-lod/hasTimePosition": [
+     {
+      "identifier": "http://w3id.org/geo-lod/hasTimePosition",
+      "language": "undefined",
+      "value": "http://w3id.org/geo-lod/ci_eruption_tp_giaccio2017",
+      "type": "iri"
+     }
+    ]
+   },
+   "range": [],
+   "domain": [],
+   "subProperties": [],
+   "superProperties": []
+  },
+  {
+   "id": 725,
+   "iri": "http://w3id.org/geo-lod/ci_eruption_timespan",
+   "baseIRI": "http://w3id.org/geo-lod",
+   "instances": 0,
    "label": {
-    "IRI-based": "cisite_65"
+    "IRI-based": "ci_eruption_timespan"
    },
    "annotations": {},
    "range": [],
@@ -28804,7 +30015,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 695,
+   "id": 726,
    "iri": "http://orcid.org/0000-0002-3246-3531",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -28818,7 +30029,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 696,
+   "id": 727,
    "iri": "http://orcid.org/0009-0008-2877-3204",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -28832,7 +30043,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 697,
+   "id": 728,
    "iri": "http://orcid.org/0000-0002-3246-3531",
    "baseIRI": "http://orcid.org",
    "instances": 0,
@@ -28846,7 +30057,7 @@ var vowlresult={
    "superProperties": []
   },
   {
-   "id": 698,
+   "id": 729,
    "iri": "http://orcid.org/0009-0008-2877-3204",
    "baseIRI": "http://orcid.org",
    "instances": 0,

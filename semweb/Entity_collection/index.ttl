@@ -83,5 +83,8 @@
         <http://w3id.org/geo-lod/ci/cisite_65>,
         <http://w3id.org/geo-lod/ci/cisite_7>,
         <http://w3id.org/geo-lod/ci/cisite_8>,
-        <http://w3id.org/geo-lod/ci/cisite_9> .
+        <http://w3id.org/geo-lod/ci/cisite_9>,
+        <http://w3id.org/geo-lod/ci_eruption_dating_devivo2001>,
+        <http://w3id.org/geo-lod/ci_eruption_dating_giaccio2017>,
+        <http://w3id.org/geo-lod/ci_eruption_dating_schenk2024> .
 

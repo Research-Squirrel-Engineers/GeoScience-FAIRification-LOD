@@ -8,7 +8,7 @@
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "SISAL v3 cave catalogue"@en ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> ;
-    owl:versionInfo "sha256:2ffafadeccb1" ;
+    owl:versionInfo "sha256:3c15a7b07111" ;
     prov:used <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py>,
         <http://w3id.org/geo-lod/SISAL_Cave_Catalogue_Generation_input_sites_csv> ;
     prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
