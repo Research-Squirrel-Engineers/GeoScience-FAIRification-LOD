@@ -7,6 +7,6 @@
         prov:Entity,
         <https://www.iana.org/assignments/media-types/text/turtle#Resource> ;
     rdfs:label "epica_rdf.py" ;
-    dcterms:identifier "sha256:edbdcf51d2dc2573b519a45c10985299f895049e5e71cfe73929bd0db1bd153a" ;
+    dcterms:identifier "sha256:0dab2f74137a25107e8efc0af2cd06f896cb918cd72c7629979233cc004e7cb6" ;
     void:inDataset <http://w3id.org/geo-lod/geo-lod> .
 

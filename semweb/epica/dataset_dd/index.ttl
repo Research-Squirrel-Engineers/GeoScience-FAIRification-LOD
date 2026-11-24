@@ -835,7 +835,7 @@
         <http://w3id.org/geo-lod/epica/obs_dd_0812>,
         <http://w3id.org/geo-lod/epica/obs_dd_0813>,
         <http://w3id.org/geo-lod/epica/obs_dd_0814> ;
-    owl:versionInfo "sha256:9491cc87d355" ;
+    owl:versionInfo "sha256:75a93466b0db" ;
     dcat:record <http://w3id.org/geo-lod/epica/obs_dd_0001>,
         <http://w3id.org/geo-lod/epica/obs_dd_0002>,
         <http://w3id.org/geo-lod/epica/obs_dd_0003>,
