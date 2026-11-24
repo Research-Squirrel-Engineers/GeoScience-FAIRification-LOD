@@ -1,0 +1,93 @@
+<svg width="1700" height="1078" viewBox="0 0 1700 1078" xmlns="http://www.w3.org/2000/svg" role="img"><title>The classes of the paper and the CIDOC CRM family classes that carry them</title>
+<rect width="1700" height="1078" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<path d="M 452.0 51.0 C 830.0 51.0 830.0 79.0 1208.0 79.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 107.0 C 830.0 107.0 830.0 79.0 1208.0 79.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 163.0 C 830.0 163.0 830.0 163.0 1208.0 163.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 219.0 C 830.0 219.0 830.0 275.0 1208.0 275.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 275.0 C 830.0 275.0 830.0 275.0 1208.0 275.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 331.0 C 830.0 331.0 830.0 275.0 1208.0 275.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 387.0 C 830.0 387.0 830.0 387.0 1208.0 387.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 443.0 C 565.0 443.0 565.0 443.0 678.0 443.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 982.0 443.0 C 1095.0 443.0 1095.0 443.0 1208.0 443.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 499.0 C 830.0 499.0 830.0 527.0 1208.0 527.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 555.0 C 565.0 555.0 565.0 555.0 678.0 555.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 982.0 555.0 C 1095.0 555.0 1095.0 527.0 1208.0 527.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 611.0 C 830.0 611.0 830.0 611.0 1208.0 611.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 667.0 C 830.0 667.0 830.0 695.0 1208.0 695.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 723.0 C 830.0 723.0 830.0 695.0 1208.0 695.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 779.0 C 830.0 779.0 830.0 779.0 1208.0 779.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 835.0 C 830.0 835.0 830.0 863.0 1208.0 863.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 891.0 C 830.0 891.0 830.0 863.0 1208.0 863.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 452.0 947.0 C 830.0 947.0 830.0 947.0 1208.0 947.0" fill="none" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="20.0" y="30" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="51.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">AgeAssignment</text>
+<rect x="20.0" y="86" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="107.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">MISMembershipAssignment</text>
+<rect x="20.0" y="142" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="163.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">IceCore</text>
+<rect x="20.0" y="198" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="219.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">CIFindspot</text>
+<rect x="20.0" y="254" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="275.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">Cave</text>
+<rect x="20.0" y="310" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="331.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">DrillingSite</text>
+<rect x="20.0" y="366" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="387.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">MarineIsotopeStage</text>
+<rect x="20.0" y="422" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="443.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">DatingMethod</text>
+<rect x="20.0" y="478" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="499.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">DataSource</text>
+<rect x="20.0" y="534" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="555.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">IceCoreDataset</text>
+<rect x="20.0" y="590" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="611.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">DrillingCampaign</text>
+<rect x="20.0" y="646" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="667.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">IceCoreObservation</text>
+<rect x="20.0" y="702" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="723.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">SpeleothemObservation</text>
+<rect x="20.0" y="758" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="779.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">AgeModel</text>
+<rect x="20.0" y="814" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="835.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">ArchaeologicalCaveSite</text>
+<rect x="20.0" y="870" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="891.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">CIArchaeologicalSite</text>
+<rect x="20.0" y="926" width="430" height="42" rx="8" fill="#fff2cc" stroke="#000000" stroke-width="1.4"/>
+<text x="34.0" y="947.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">GrowthHiatus</text>
+<rect x="680.0" y="422.0" width="300" height="42" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.4"/>
+<text x="830.0" y="443.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">skos:Concept</text>
+<rect x="680.0" y="534.0" width="300" height="42" rx="8" fill="#e4e4e0" stroke="#000000" stroke-width="1.4"/>
+<text x="830.0" y="555.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">dcat:Dataset</text>
+<rect x="1210.0" y="58.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="79.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E13_Attribute_Assignment</text>
+<rect x="1210.0" y="142.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="163.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E22_Human-Made_Object</text>
+<rect x="1210.0" y="254.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="275.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E27_Site</text>
+<rect x="1210.0" y="366.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="387.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E4_Period</text>
+<rect x="1210.0" y="422.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="443.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E55_Type</text>
+<rect x="1210.0" y="506.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="527.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E73_Information_Object</text>
+<rect x="1210.0" y="590.0" width="470" height="42" rx="8" fill="#d4e1f5" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="611.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crm:E7_Activity</text>
+<rect x="1210.0" y="674.0" width="470" height="42" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="695.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crmsci:S4_Observation</text>
+<rect x="1210.0" y="758.0" width="470" height="42" rx="8" fill="#ffcc99" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="779.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crmsci:S6_Data_Evaluation</text>
+<rect x="1210.0" y="842.0" width="470" height="42" rx="8" fill="#e3d5f0" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="863.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crmarchaeo:A2_Stratigraphic_Volume_Unit</text>
+<rect x="1210.0" y="926.0" width="470" height="42" rx="8" fill="#e3d5f0" stroke="#000000" stroke-width="1.4"/>
+<text x="1445.0" y="947.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#1f1f1d">crmarchaeo:A3_Stratigraphic_Interface</text>
+<rect x="20" y="1022" width="26" height="26" rx="4" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="58" y="1035" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">geolod:</text>
+<rect x="181.9" y="1022" width="26" height="26" rx="4" fill="#d4e1f5" stroke="#000000" stroke-width="1.2"/>
+<text x="219.9" y="1035" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">CIDOC CRM</text>
+<rect x="379.70000000000005" y="1022" width="26" height="26" rx="4" fill="#ffcc99" stroke="#000000" stroke-width="1.2"/>
+<text x="417.70000000000005" y="1035" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">CRMsci</text>
+<rect x="538.1" y="1022" width="26" height="26" rx="4" fill="#e3d5f0" stroke="#000000" stroke-width="1.2"/>
+<text x="576.1" y="1035" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">CRMarchaeo</text>
+<rect x="750.2" y="1022" width="26" height="26" rx="4" fill="#e4e4e0" stroke="#000000" stroke-width="1.2"/>
+<text x="788.2" y="1035" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">other vocabulary</text>
+</svg>

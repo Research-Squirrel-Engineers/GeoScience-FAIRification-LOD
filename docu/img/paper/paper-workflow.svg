@@ -1,0 +1,60 @@
+<svg width="1700" height="900" viewBox="0 0 1700 900" xmlns="http://www.w3.org/2000/svg" role="img"><title>geo-lod: from three datasets through one pipeline to a CIDOC CRM based graph and its publication</title>
+<rect width="1700" height="900" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<text x="190.0" y="40" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="32" font-weight="500" fill="#1f1f1d">Datasets</text>
+<text x="645.0" y="40" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="32" font-weight="500" fill="#1f1f1d">Pipeline</text>
+<text x="1120.0" y="40" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="32" font-weight="500" fill="#1f1f1d">Graph</text>
+<text x="1580.0" y="40" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="32" font-weight="500" fill="#1f1f1d">Publication</text>
+<rect x="20" y="190" width="340" height="120" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="190.0" y="233.76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#000000">EPICA Dome C</text>
+<text x="190.0" y="268.48" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">ice core</text>
+<rect x="20" y="340" width="340" height="120" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="190.0" y="383.76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#000000">SISAL</text>
+<text x="190.0" y="418.48" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">speleothems</text>
+<rect x="20" y="490" width="340" height="120" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="190.0" y="533.76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#000000">CI findspots</text>
+<text x="190.0" y="568.48" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">tephra</text>
+<rect x="520" y="290" width="250" height="220" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="645.0" y="382.6" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="30" font-weight="500" fill="#000000">Python</text>
+<text x="645.0" y="419.8" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">one pipeline</text>
+<line x1="360" y1="250" x2="518" y2="400" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="360" y1="400" x2="518" y2="400" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="360" y1="550" x2="518" y2="400" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="401.4" y="385" width="77.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="440.0" y="400" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">reads</text>
+<rect x="905" y="120" width="430" height="540" rx="14" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
+<text x="1120" y="160" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">Semantic graph</text>
+<rect x="920" y="190" width="400" height="80" rx="10" fill="#d4e1f5" stroke="#000000" stroke-width="1"/>
+<text x="1120.0" y="230.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">CIDOC CRM</text>
+<rect x="920" y="300" width="112" height="80" rx="10" fill="#ffcc99" stroke="#000000" stroke-width="1"/>
+<text x="976.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#000000">CRMsci</text>
+<rect x="1040" y="300" width="168" height="80" rx="10" fill="#e3d5f0" stroke="#000000" stroke-width="1"/>
+<text x="1124.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#000000">CRMarchaeo</text>
+<rect x="1216" y="300" width="104" height="80" rx="10" fill="#d9ead3" stroke="#000000" stroke-width="1"/>
+<text x="1268.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#000000">CRMgeo</text>
+<rect x="920" y="500" width="400" height="130" rx="10" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="1120.0" y="548.76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#000000">Domain layer</text>
+<text x="1120.0" y="583.48" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">geo-lod</text>
+<line x1="1120" y1="498" x2="1120" y2="382" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="961.5" y="425" width="317.0" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1120.0" y="440" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">anchored in the CRM family</text>
+<line x1="770" y1="400" x2="903" y2="400" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="794.3" y="385" width="83.4" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="836.0" y="400" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">builds</text>
+<rect x="905" y="740" width="430" height="110" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1120.0" y="795.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="30" font-weight="500" fill="#ffffff">Wikidata</text>
+<line x1="1120" y1="662" x2="1120" y2="738" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1071.8" y="685" width="96.4" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1120.0" y="700" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">links to</text>
+<rect x="1470" y="190" width="220" height="120" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1580.0" y="250.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">Documentation</text>
+<line x1="1335" y1="250" x2="1468" y2="250" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1470" y="340" width="220" height="120" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1580.0" y="400.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">SPARQL page</text>
+<line x1="1335" y1="400" x2="1468" y2="400" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1470" y="490" width="220" height="120" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1580.0" y="550.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">Turtle, figures</text>
+<line x1="1335" y1="550" x2="1468" y2="550" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1356.95" y="385" width="86.1" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1400.0" y="400" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">serves</text>
+</svg>

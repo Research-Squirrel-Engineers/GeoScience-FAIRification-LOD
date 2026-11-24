@@ -21,7 +21,7 @@
 <rect x="40" y="470" width="470" height="170" rx="14" fill="#fff2cc" stroke="#000000" stroke-width="1.2"/>
 <text x="275.0" y="504" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">geolod:</text>
 <text x="275.0" y="542" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">geo_lod_core, epica_ontology, sisal_ontology</text>
-<text x="275.0" y="572" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">46 classes with subclass axioms into CRM</text>
+<text x="275.0" y="572" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">47 classes with subclass axioms into CRM</text>
 <text x="275.0" y="602" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#000000">archive, chronology, stage, hiatus</text>
 <rect x="650" y="470" width="480" height="170" rx="14" fill="#d8ead3" stroke="#000000" stroke-width="1.2"/>
 <text x="890.0" y="504" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="27" font-weight="500" fill="#000000">strat:</text>
