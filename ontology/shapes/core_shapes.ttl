@@ -35,6 +35,7 @@
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:        <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:       <http://www.w3.org/2006/time#> .
 
 @prefix geolod:     <http://w3id.org/geo-lod/> .
 @prefix sosa:       <http://www.w3.org/ns/sosa/> .
@@ -602,4 +603,38 @@ geolod:RecordGapShape
         sh:maxCount 1 ;
         sh:datatype xsd:decimal ;
         sh:message "A record gap carries at most one depth in mm. Not required: all four gaps in the cut sit in the CC_stack composite, where an uncovered position has no single depth to name - 1538 of its 1542 samples have one, and the four that do not are these."@en ;
+    ] .
+
+geolod:AgeUncertaintyShape
+    a sh:NodeShape ;
+    sh:targetClass geolod:AgeUncertainty ;
+    sh:property [
+        sh:path geolod:plusKa ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ;
+        sh:message "An age uncertainty needs exactly one non-negative plusKa (xsd:decimal)."@en ] ;
+    sh:property [
+        sh:path geolod:minusKa ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ;
+        sh:message "An age uncertainty needs exactly one non-negative minusKa (xsd:decimal)."@en ] ;
+    sh:property [
+        sh:path geolod:coverageLevel ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "coverageLevel is a decimal between 0 and 1, stated only where the source states it."@en ] ;
+    sh:property [
+        sh:path geolod:hasAgeInterval ; sh:maxCount 1 ; sh:class time:ProperInterval ;
+        sh:message "hasAgeInterval points to one time:ProperInterval."@en ] .
+
+geolod:CaveAgeSpanShape
+    a sh:NodeShape ;
+    sh:targetClass geolod:Cave ;
+    sh:property [
+        sh:path geolod:youngestAgeKaBP ; sh:maxCount 1 ; sh:datatype xsd:decimal ;
+        sh:message "A cave states at most one youngest age in ka BP (xsd:decimal); a cave with no dated delta-18-O sample states none."@en ] ;
+    sh:property [
+        sh:path geolod:oldestAgeKaBP ; sh:maxCount 1 ; sh:datatype xsd:decimal ;
+        sh:message "A cave states at most one oldest age in ka BP (xsd:decimal); a cave with no dated delta-18-O sample states none."@en ] ;
+    sh:property [
+        sh:path geolod:countDatedD18OSamples ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ;
+        sh:message "The number of dated delta-18-O samples is one non-negative integer."@en ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The youngest age of a cave may not be older than its oldest age."@en ;
+        sh:select """SELECT $this ?value WHERE { $this <http://w3id.org/geo-lod/youngestAgeKaBP> ?y ; <http://w3id.org/geo-lod/oldestAgeKaBP> ?value . FILTER (?y > ?value) }"""
     ] .

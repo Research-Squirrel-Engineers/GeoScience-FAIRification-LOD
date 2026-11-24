@@ -2,8 +2,8 @@
 ========================================================================
   Campanian Ignimbrite findspots to RDF
 ========================================================================
-  Input:  data\raw\ci\cifindspots_part_full.csv
-          data\curated\ci_site_annotations.csv
+  Input:  data/raw/ci/cifindspots_part_full.csv
+          data/curated/ci_site_annotations.csv
 
   ▶ reading the findspot table
     74 findspots, 74 with a geometry
@@ -20,5 +20,5 @@
   ▶ provenance
 
   ▶ writing
-  ✓ CI\rdf\ci_findspots.ttl  (3,237 triples)
-  ✓ CI\rdf\ci_site_annotations.ttl  (55 triples)
+  ✓ CI/rdf/ci_findspots.ttl  (3,364 triples)
+  ✓ CI/rdf/ci_site_annotations.ttl  (55 triples)

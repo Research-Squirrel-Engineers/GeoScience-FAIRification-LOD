@@ -302,6 +302,14 @@ per_site: |
 # The counts are recomputed here rather than copied: a sample counts towards a
 # site when it carries the measurement, whatever the status of the speleothem
 # it belongs to. Where the old CSV disagrees, this statement is the definition.
+#
+# The age columns state the span of the published age model (original_chronology,
+# interp_age, years BP with 1950 as zero, so a negative value is a sample younger
+# than 1950) over the samples of the site that carry a d18O measurement:
+# youngest_age_bp is its minimum, oldest_age_bp its maximum, n_dated_d18o_samples
+# the number of samples that have both a d18O value and such an age. A site with
+# no such sample has empty ages and a count of 0. The span says where a record
+# begins and ends, not that it is continuous: hiatuses and gaps lie inside it.
 catalogue:
   sites: |
     SELECT s.site_id,
@@ -312,12 +320,16 @@ catalogue:
            s.monitoring,
            COUNT(DISTINCT d18.sample_id) AS n_d18o_samples,
            COUNT(DISTINCT d13.sample_id) AS n_d13c_samples,
-           COUNT(DISTINCT e.entity_id)   AS n_entities
+           COUNT(DISTINCT e.entity_id)   AS n_entities,
+           ROUND(MIN(oc.interp_age)::numeric, 1) AS youngest_age_bp,
+           ROUND(MAX(oc.interp_age)::numeric, 1) AS oldest_age_bp,
+           COUNT(DISTINCT oc.sample_id)  AS n_dated_d18o_samples
       FROM site s
       LEFT JOIN entity e   ON e.site_id    = s.site_id
       LEFT JOIN sample sa  ON sa.entity_id = e.entity_id
       LEFT JOIN d18o d18   ON d18.sample_id = sa.sample_id
       LEFT JOIN d13c d13   ON d13.sample_id = sa.sample_id
+      LEFT JOIN original_chronology oc ON oc.sample_id = d18.sample_id
      GROUP BY s.site_id, s.site_name, s.latitude, s.longitude,
               s.elevation, s.monitoring
      ORDER BY s.site_id

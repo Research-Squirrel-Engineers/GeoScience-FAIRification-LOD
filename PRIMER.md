@@ -1981,6 +1981,37 @@ unter `archaeo-connect/`.
   unterscheidet geprüft-ohne-Befund von nie-geprüft, also fällt das nicht
   stillschweigend unter den Tisch.
 
+### Erledigt 2026-11-23 — CI-Ereignis im Graphen
+
+Das Ereignis `geolod:ci_volcanic_event` war nur Subjekt von P12/P7-Tripeln: ohne
+Typ, Zeitspanne und Quelle. Der ECEASST-Beitrag beschrieb es als datiertes E5.
+Jetzt modelliert `CI/ci_pipeline.py` (`add_eruption`):
+
+- `crm:E5_Event` und `strat:Eruption`; `crm:P7_took_place_at` auf das Quellgebiet
+  (`geolod:ci_source_area`, `crm:E53_Place`, `skos:closeMatch wd:Q755123`);
+  `crm:P4_has_time-span` auf `geolod:ci_eruption_timespan`.
+- `crm:P12_occurred_in_the_presence_of` auf **alle 74** Fundstellen. Bisher trugen
+  archäologische Fundstellen P7, das die Eruption an die Fundstelle gelegt hätte;
+  dass sie archäologisch sind, sagt ihre eigene Klasse.
+- Drei veröffentlichte Alter, je ein `crm:E13_Attribute_Assignment` mit
+  `prov:wasDerivedFrom` auf den Artikel, einer `time:TimePosition` (Wert in ka BP,
+  `geolod:ageUncertaintyPos_ka`/`Neg_ka`) und einer eigenen `time:TRS`
+  (`trs:ArAr-Giaccio2017`, `trs:ArAr-DeVivo2001`, `trs:ELSA-20`, erzeugt in
+  `ontology/build_mis_vocab.py`): Giaccio et al. 2017, 39,85 ± 0,14 ka
+  (40Ar/39Ar, als Alter des Ereignisses übernommen); De Vivo et al. 2001,
+  39,28 ± 0,11 ka (konkurrierend); Schenk et al. 2024, 39.940 ± 150 yr b2k in der
+  ELSA-20-Chronologie, umgerechnet 39,890 ± 0,150 ka BP. Das dritte ist das Fallout-Alter
+  der Tephra im Auel-Kern, **kein** Eruptionsalter; der Beitrag hatte beides gleichgesetzt.
+- Keine neue Klasse: das Modell bleibt bei 46/10/6, `check()` läuft ohne Änderung.
+  Die Mermaid-Übersicht in `geo_lod_utils.py` nennt `CIVolcanicEvent` und
+  `CITephraDeposit`, die in keiner Ontologiedatei stehen — offen.
+- Neue Abbildung `docu/img/cl-archaeology-eruption` (Seite „Archaeology and the CI"):
+  das Ereignis als Wurzel mit Ort, Zeitspanne, Fundstellen und den drei Altern als
+  Balken. Neunte Abfrage `ci-eruption-ages` auf der Abfrageseite.
+- `check_quoted_values()` hält die Werte der Abbildung im Graphen fest.
+- SHACL: keine neue Verletzung. Die 38 bestehenden betreffen SISAL-Datierungspunkte
+  ohne Tiefe (nicht angefasst).
+
 ---
 
 ## S4 — Ontologie-Angleichung

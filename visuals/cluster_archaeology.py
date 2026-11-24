@@ -12,6 +12,7 @@ Layout is deterministic: sorted iteration, no random numbers, text widths from t
 """
 from __future__ import annotations
 
+import math
 import re
 import sys
 from collections import defaultdict
@@ -253,6 +254,124 @@ def context_fig(D: ArchData, outdir: Path, name: str) -> tuple[Fig, dict]:
     f.text(50, H - 32, "The category beside the context (for example 'Palaeolithic Art') stays free text; only the broader context is a controlled term.", 17, color=MUTED, anchor="start", maxw=W - 100)
     f.save()
     return f, {"rows": {f"{k[0]}/{k[1]}/{k[2]}": v for k, v in sorted(D.contexts.items())}, "total": sum(D.contexts.values())}
+
+
+
+# ------------------------------------------------------------------ one eruption, several published ages
+
+TIME = Namespace("http://www.w3.org/2006/time#")
+ERUPTION_SPAN = G["ci_eruption_timespan"]
+# colours: the age adopted for the event, a competing age of the eruption, the age of the tephra layer in one core
+AGE_ADOPTED, AGE_COMPETING, AGE_LAYER = "#0072B2", "#56B4E9", "#E69F00"
+
+
+def eruption_ages(D: ArchData) -> list[dict]:
+    """The published ages of the CI eruption, read from the dating assertions on its time-span."""
+    ci = D.ci
+    adopted = set(ci.objects(ERUPTION_SPAN, G.hasTimePosition))
+    rows = []
+    for a in ci.subjects(CRM.P140_assigned_attribute_to, ERUPTION_SPAN):
+        tp = ci.value(a, CRM.P141_assigned)
+        trs = _local(ci.value(tp, TIME.hasTRS))
+        cite = str(ci.value(a, DCTERMS.bibliographicCitation))
+        m = re.match(r"([^,]+),.*\((\d{4})\)", cite)
+        if not m:
+            raise ValueError(f"{a}: no author and year in the citation: {cite!r}")
+        published = str(ci.value(tp, SKOS.note)).removeprefix("Published as ").rstrip(".")
+        unc_node = ci.value(tp, G.hasAgeUncertainty)
+        if unc_node is None:
+            raise ValueError(f"{tp}: no geolod:hasAgeUncertainty node; rebuild CI/rdf with CI/ci_pipeline.py")
+        cov = ci.value(unc_node, G.coverageLevel)
+        iv = ci.value(unc_node, G.hasAgeInterval)
+        older = float(ci.value(ci.value(ci.value(iv, TIME.hasBeginning), TIME.inTimePosition), TIME.numericPosition))
+        younger = float(ci.value(ci.value(ci.value(iv, TIME.hasEnd), TIME.inTimePosition), TIME.numericPosition))
+        rows.append({"cov": float(cov) if cov is not None else None, "older": older, "younger": younger,
+                     "who": f"{m.group(1)} et al. {m.group(2)}", "ka": float(ci.value(tp, TIME.numericPosition)),
+                     "unc": float(ci.value(tp, G.ageUncertaintyPos_ka)), "trs": trs, "published": published,
+                     "adopted": tp in adopted, "layer": trs.startswith("ELSA")})
+    if len(rows) < 2:
+        raise ValueError("the committed CI graph holds fewer than two dating assertions on the eruption time-span")
+    return sorted(rows, key=lambda r: -r["ka"])
+
+
+def eruption_fig(D: ArchData, outdir: Path, name: str) -> tuple[Fig, dict]:
+    """The eruption as the root of the CI strand: its place, its findspots, and its time-span with every published age.
+
+    Each age is a CRM attribute assignment that points at a time position; the time position is drawn as the bar
+    (value and uncertainty on one ka axis) and names its own reference system.
+    """
+    from build import chip, CLS, INST, TERM
+    ci = D.ci
+    ev = G["ci_volcanic_event"]
+    place = ci.value(ev, CRM.P7_took_place_at)
+    wd = ci.value(place, SKOS.closeMatch)
+    sites = set(ci.objects(ev, CRM.P12_occurred_in_the_presence_of))
+    arch = {x for x in sites if (x, RDF.type, G.CIArchaeologicalSite) in ci}
+    if place is None or wd is None or not sites:
+        raise ValueError("the committed CI graph holds no source area or no findspots on the eruption")
+    qid = str(wd).rsplit("/", 1)[-1]
+    rows = eruption_ages(D)
+    for r in rows:
+        r["doi"] = None
+    for a_ in ci.subjects(CRM.P140_assigned_attribute_to, ERUPTION_SPAN):
+        tp = ci.value(a_, CRM.P141_assigned)
+        for r in rows:
+            if r["trs"] == _local(ci.value(tp, TIME.hasTRS)):
+                r["doi"] = str(ci.value(a_, PROV.wasDerivedFrom)).replace("https://doi.org/", "doi:")
+    lo, hi = min(r["ka"] - r["unc"] for r in rows), max(r["ka"] + r["unc"] for r in rows)
+    a0, a1 = math.floor((lo - 0.1) * 5) / 5, math.ceil((hi + 0.1) * 5) / 5
+    W, rowh, top = 2250, 270, 330
+    H = top + rowh * (len(rows) - 1) + 330
+    f = Fig(name, "The Campanian Ignimbrite eruption as the root of the CI strand", W, H, outdir)
+    cy = top + rowh * (len(rows) - 1) / 2
+    # root, and its three branches
+    rx0, rw, cx1, cw = 30, 270, 620, 320
+    f.box(rx0, cy - 100, rw, 200, "CI eruption", "crm:E5_Event, strat:Eruption", INST, 30, 17)
+    f.box(cx1, 70, cw, 110, "Phlegraean Fields", f"crm:E53_Place, wd:{qid}", INST, 24, 17)
+    f.box(cx1, cy - 55, cw, 110, "Time-span", "crm:E52_Time-Span", INST, 24, 18)
+    f.box(cx1, H - 190, cw, 120, "Findspots (selection)", f"{len(sites)} crm:E27_Site, {len(arch)} also CRMarchaeo A2", INST, 24, 17)
+    for (tx, ty, txt) in ((cx1, 125, "P7 took place at"), (cx1, cy, "P4 has time-span"), (cx1, H - 130, "P12 occurred in the presence of")):
+        f.line(rx0 + rw, cy, tx - 2, ty, None if False else "a")
+        chip(f, (rx0 + rw + tx) / 2, (cy + ty) / 2, txt, 15)
+    # one assertion per published age
+    ex, ew, px, pw, ph = 1250, 280, 1700, 520, 130
+    inner0, inner1 = px + 30, px + pw - 30
+    x_of = lambda v: inner0 + (v - a0) / (a1 - a0) * (inner1 - inner0)
+    t = a0
+    while t <= a1 + 1e-9:
+        f.text(x_of(t), top - ph / 2 - 26, f"{t:.1f}", 16, color=MUTED)
+        t += 0.2
+    f.text(px + pw, top - ph / 2 - 58, "ka BP", 16, True, color=MUTED, anchor="end")
+    for i, r in enumerate(rows):
+        y = top + i * rowh
+        colour = AGE_ADOPTED if r["adopted"] else AGE_LAYER if r["layer"] else AGE_COMPETING
+        f.box(ex, y - 50, ew, 100, r["who"], "crm:E13_Attribute_Assignment", CLS, 22, 15)
+        f.text(ex + ew / 2, y + 74, f"source: {r['doi']}", 15, color=MUTED)
+        f.line(ex, y, cx1 + cw + 2, cy, "a")
+        chip(f, (ex + cx1 + cw) / 2, (y + cy) / 2, "P140 assigned attribute to", 15)
+        f.line(ex + ew, y, px - 2, y, "a")
+        chip(f, (ex + ew + px) / 2, y, "P141 assigned", 15)
+        # the time position, drawn as its own bar
+        f.rect(px, y - ph / 2, pw, ph, "#ffffff", "#000000", 6, 1)
+        f.text(px + 16, y - ph / 2 + 24, f"{r['ka']:.2f} \u00b1 {r['unc']:.2f} ka", 21, True, anchor="start")
+        f.text(px + pw - 16, y - ph / 2 + 24, "time:TimePosition", 15, color=MUTED, anchor="end")
+        tt = a0
+        while tt <= a1 + 1e-9:
+            f.line(x_of(tt), y - 8, x_of(tt), y + ph / 2 - 8, None, w=1, color=GRID)
+            tt += 0.2
+        by = y + 24
+        f.line(x_of(r["ka"] - r["unc"]), by, x_of(r["ka"] + r["unc"]), by, None, w=6, color=colour)
+        for v in (r["ka"] - r["unc"], r["ka"] + r["unc"]):
+            f.line(x_of(v), by - 13, x_of(v), by + 13, None, w=3, color=colour)
+        f.raw(f'<circle cx="{x_of(r["ka"]):.1f}" cy="{by}" r="10" fill="{colour}" stroke="#000000" stroke-width="1.5"/>')
+        f.line(px + pw / 2, y + ph / 2, px + pw / 2, y + ph / 2 + 56, "a")
+        chip(f, px + pw / 2, y + ph / 2 + 28, "time:hasTRS", 15)
+        f.box(px + 80, y + ph / 2 + 58, pw - 160, 46, f"trs:{r['trs']}", None, TERM, 17)
+    f.legend(H - 28, [(INST, "instance"), (CLS, "class of the assignment"), (TERM, "time reference system"),
+                      ((AGE_ADOPTED,), "adopted age of the event"), ((AGE_COMPETING,), "competing age of the eruption"),
+                      ((AGE_LAYER,), "age of the tephra layer in one core, not of the vent")], x=50)
+    f.save()
+    return f, {"rows": {r["trs"]: (r["ka"], r["unc"]) for r in rows}, "sites": len(sites), "arch": len(arch)}
 
 
 # ------------------------------------------------------------------ the map

@@ -70,6 +70,9 @@ def check_quoted_values():
         REPO/"SISAL/rdf/sisal_v3_dating.ttl": [
             "sisal:hiatus_0420893 a geolod:GrowthHiatus", "sisal:datingpoint_012773 a strat:AgeControlPoint",
             "geolod:ageKaBP 35.022453", "geolod:ageKaBP 31.481986"],
+        REPO/"CI/rdf/ci_findspots.ttl": [
+            "geolod:ci_eruption_tp_giaccio2017", "geolod:ageKaBP 39.85 ;", "geolod:ageUncertaintyPos_ka 0.14 ;",
+            "geolod:ci_eruption_tp_schenk2024", "geolod:ageKaBP 39.890 ;"],
     }
     for path, needles in quoted.items():
         text = path.read_text(encoding="utf-8")
@@ -624,7 +627,7 @@ def fig8():
     model_legend(f, 918, [(GL[0], "geo-lod"), (ST[0], "strat:"), (PILL["crm"], "CIDOC CRM"), (PILL["sci"], "CRMsci"), (PILL["arch"], "CRMarchaeo")])
     f.line(1010, 918, 1058, 918, "t"); f.text(1068, 918, "subclass of", 20, anchor="start")
     f.line(1230, 918, 1278, 918, "a"); f.text(1288, 918, "property, as used in the graph", 20, anchor="start")
-    f.text(40, 970, "Selected classes of 46 in geo_lod_core, EPICA and SISAL. A pill names the CRM-family anchor; a class without one inherits it.", 18, color=MUTED, anchor="start", maxw=1670)
+    f.text(40, 970, "Selected classes of 47 in geo_lod_core, EPICA and SISAL. A pill names the CRM-family anchor; a class without one inherits it.", 18, color=MUTED, anchor="start", maxw=1670)
     f.save()
 
 
@@ -744,7 +747,7 @@ def fig12():
         f.box(x, 174, 530, 90, a, b, (col, "#000000", "#000000"), 23, 18, rx=10)
     X = [(40, 470), (650, 480), (1270, 440)]
     f.box(650, 340, 1060, 70, "crm_bridging.ttl", "anchors SOSA, PROV, GeoSPARQL, SKOS, OWL-Time, DCAT and one strat: class", OWL_B, 22, 18, rx=10)
-    mods = [("geolod:", ["geo_lod_core, epica_ontology, sisal_ontology", "46 classes with subclass axioms into CRM", "archive, chronology, stage, hiatus"], GL),
+    mods = [("geolod:", ["geo_lod_core, epica_ontology, sisal_ontology", "47 classes with subclass axioms into CRM", "archive, chronology, stage, hiatus"], GL),
             ("strat:", ["strat.ttl, 10 classes", "CRM-free by design", "core, unit, tephra, boundary, age model"], ST),
             ("an:", ["analysis_core.ttl, 6 classes", "CRM-free by design", "specimen, analysis, method, property"], AN)]
     for (x, ww), (n, lines, st) in zip(X, mods):
@@ -957,7 +960,7 @@ def slides():
 def main(argv=None):
     import argparse
     ap = argparse.ArgumentParser(description="Slide figures and the documentation pages (both in docu/).")
-    ap.add_argument("--only", choices=["slides", "clusters", "docu"], help="build one of the three; default is all")
+    ap.add_argument("--only", choices=["slides", "clusters", "docu", "paper"], help="build one of the four; default is all")
     args = ap.parse_args(argv)
     if args.only in (None, "slides"):
         slides()
@@ -967,6 +970,9 @@ def main(argv=None):
     if args.only in (None, "docu"):
         import docu
         docu.main()
+    if args.only in (None, "paper"):
+        import paper_page
+        paper_page.build()
     return 0
 
 

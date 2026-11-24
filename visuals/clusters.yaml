@@ -29,7 +29,7 @@
   short: Chronology
   page: cluster-chronology.html
   lead: How a depth becomes an age; dating points, age models, the ages they give one sample, and the breaks in the growth.
-  classes: [geolod:AgeAssignment, geolod:AgeModel, geolod:Chronology, geolod:DatingMethod, geolod:GrowthHiatus,
+  classes: [geolod:AgeAssignment, geolod:AgeModel, geolod:AgeUncertainty, geolod:Chronology, geolod:DatingMethod, geolod:GrowthHiatus,
             geolod:IceCoreChronology, geolod:RecordGap, geolod:UThChronology, strat:AgeControlPoint, strat:AgeDepthModel]
 
 - id: mis

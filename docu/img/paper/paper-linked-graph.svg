@@ -1,0 +1,77 @@
+<svg width="1500" height="880" viewBox="0 0 1500 880" xmlns="http://www.w3.org/2000/svg" role="img"><title>Where the graph opens up: a stalagmite as a node, linked to the CIDOC CRM family, its cave, Wikidata, DOIs, ORCID and its repository</title>
+<rect width="1500" height="880" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<rect x="520" y="20" width="460" height="100" rx="6" fill="#4c1d95" stroke="#000000" stroke-dasharray="8 6" stroke-width="2.4"/>
+<text x="750.0" y="54.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">PeriodO</text>
+<text x="750.0" y="87.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">period of the age, planned</text>
+<rect x="20" y="150" width="360" height="110" rx="6" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="200.0" y="189.92000000000002" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">CIDOC CRM family</text>
+<text x="200.0" y="222.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">class of the node</text>
+<rect x="20" y="730" width="360" height="110" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="200.0" y="769.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">Wikidata, OSM</text>
+<text x="200.0" y="802.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">the same place</text>
+<rect x="1120" y="150" width="360" height="110" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1300.0" y="189.92000000000002" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">PANGAEA, Zenodo</text>
+<text x="1300.0" y="222.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">DOI of the dataset</text>
+<rect x="1120" y="340" width="360" height="110" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1300.0" y="379.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">ORCID</text>
+<text x="1300.0" y="412.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">creators of the data</text>
+<rect x="1120" y="530" width="360" height="110" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1300.0" y="569.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">Repository</text>
+<text x="1300.0" y="602.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">code and data</text>
+<rect x="520" y="730" width="460" height="110" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="750.0" y="769.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">GeoSPARQL geometry</text>
+<text x="750.0" y="802.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">coordinates of the cave</text>
+<g transform="translate(622.0 224.9) scale(0.8 0.3)"><clipPath id="st16"><path d="M 62 917.0 C 85 640 110 260 122 191.0 C 132 105.2 188 105.2 198 191.0 C 210 260 235 640 258 917.0 Z"/></clipPath><g clip-path="url(#st16)"><rect x="50" y="60" width="220" height="900" fill="url(#warm)"/>
+<path d="M 50 278 Q 160 222 270 278" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 340 Q 160 284 270 340" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 402 Q 160 346 270 402" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 464 Q 160 408 270 464" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 526 Q 160 470 270 526" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 588 Q 160 532 270 588" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 650 Q 160 594 270 650" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 712 Q 160 656 270 712" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 774 Q 160 718 270 774" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 836 Q 160 780 270 836" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+<path d="M 50 898 Q 160 842 270 898" fill="none" stroke="#6b6a63" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+</g><path d="M 62 917.0 C 85 640 110 260 122 191.0 C 132 105.2 188 105.2 198 191.0 C 210 260 235 640 258 917.0 Z" fill="none" stroke="#000000" stroke-width="1.6" vector-effect="non-scaling-stroke"/></g>
+<text x="750" y="540" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="34" font-weight="500" fill="#1f1f1d">Stalagmite</text>
+<text x="750" y="578" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">one node, one persistent URI</text>
+<path d="M 70.0 505.0 C 50.0 465.0 65.0 410.0 105.0 387.0 C 130.0 355.0 180.0 347.0 210.0 365.0 C 250.0 340.0 310.0 365.0 325.0 415.0 C 350.0 445.0 340.0 485.0 335.0 505.0 Z" fill="#cfd6e0" stroke="#000000" stroke-width="1.6"/>
+<path d="M 108.0 505.0 C 102.0 475.0 120.0 443.0 152.0 427.0 C 170.0 405.0 200.0 409.0 214.0 421.0 C 234.0 401.0 270.0 413.0 282.0 443.0 C 300.0 465.0 296.0 491.0 294.0 505.0 Z" fill="#4b5563"/>
+<polygon points="147.0,429.0 161.0,429.0 155.0,455.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="175.0,415.0 185.0,415.0 181.0,429.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="200.0,412.0 216.0,412.0 209.0,452.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="234.0,414.0 246.0,414.0 241.0,434.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="261.0,431.0 271.0,431.0 267.0,445.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="138.0,505.0 158.0,505.0 148.0,485.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="210.0,505.0 234.0,505.0 222.0,475.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="253.0,505.0 267.0,505.0 260.0,491.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<path d="M 50.0 505.0 L 355.0 505.0" stroke="#000000" stroke-width="1.6"/>
+<text x="200" y="545" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="30" font-weight="500" fill="#1f1f1d">Cave</text>
+<text x="200" y="580" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">place of the stalagmite</text>
+<line x1="690" y1="330" x2="382" y2="215" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="485.3" y="257" width="101.4" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="536.0" y="272" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">rdf:type</text>
+<line x1="690" y1="440" x2="372" y2="440" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="468.5" y="425" width="125.0" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="531.0" y="440" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">located in</text>
+<line x1="200" y1="600" x2="200" y2="728" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="128.5" y="649" width="143.0" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="200.0" y="664" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">owl:sameAs</text>
+<line x1="810" y1="330" x2="1118" y2="215" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="892.5" y="257" width="143.0" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="964.0" y="272" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">owl:sameAs</text>
+<line x1="815" y1="395" x2="1118" y2="395" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="898.35" y="380" width="135.3" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="966.0" y="395" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">dct:creator</text>
+<line x1="800" y1="450" x2="1118" y2="585" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="857.9" y="513" width="252.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="984.0" y="528" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">prov:wasDerivedFrom</text>
+<line x1="750" y1="600" x2="750" y2="728" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="647.2" y="649" width="205.6" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="750.0" y="664" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">geo:hasGeometry</text>
+<line x1="750" y1="252" x2="750" y2="122" stroke="#55544f" stroke-width="1.6" stroke-dasharray="7 6" marker-end="url(#a)"/>
+<rect x="644.55" y="172" width="210.9" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="750.0" y="187" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">references period</text>
+</svg>

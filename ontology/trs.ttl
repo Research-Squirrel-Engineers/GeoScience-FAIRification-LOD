@@ -104,3 +104,31 @@ trs:AICC2023-ice
     rdfs:label   "AICC2023 ice age, EPICA Dome C (ka BP)"@en ;
     rdfs:comment "Ice-age branch of the Antarctic Ice Core Chronology 2023. Dates the ice matrix itself. Offset against the gas age of the same depth by the gas-age/ice-age difference."@en ;
     dct:source   <https://doi.org/10.5194/cp-19-2257-2023> .
+
+# --------------------------------------------------------------------------
+# Ages of the Campanian Ignimbrite eruption (CI strand)
+# --------------------------------------------------------------------------
+# Not chronologies in the sense above: the two 40Ar/39Ar ages are single
+# radiometric determinations and the third is the modelled age of a tephra
+# layer in one core. Each is a reference system of its own because the ages
+# are not on one scale and must not be read as if they were. All in ka BP;
+# the ELSA-20 age is published in years b2k and converted with
+# ka BP = (b2k - 50) / 1000.
+
+trs:ArAr-Giaccio2017
+    a time:TRS, owl:NamedIndividual ;
+    rdfs:label   "40Ar/39Ar age of the CI eruption, Giaccio et al. 2017 (ka)"@en ;
+    rdfs:comment "Direct 40Ar/39Ar age of the Campanian Ignimbrite eruption, as published (ka, 95% confidence level)."@en ;
+    dct:source   <https://doi.org/10.1038/srep45940> .
+
+trs:ArAr-DeVivo2001
+    a time:TRS, owl:NamedIndividual ;
+    rdfs:label   "40Ar/39Ar age of the CI eruption, De Vivo et al. 2001 (ka)"@en ;
+    rdfs:comment "Earlier 40Ar/39Ar age of the Campanian Ignimbrite eruption, as published (ka)."@en ;
+    dct:source   <https://doi.org/10.1007/s007100170010> .
+
+trs:ELSA-20
+    a time:TRS, owl:NamedIndividual ;
+    rdfs:label   "ELSA-20 chronology, Eifel Laminated Sediment Archive (ka BP)"@en ;
+    rdfs:comment "Chronology of the Eifel maar sediment cores, published in years before 2000 CE (b2k) and converted to ka BP as (b2k - 50) / 1000."@en ;
+    dct:source   <https://doi.org/10.3390/quat7020017> .

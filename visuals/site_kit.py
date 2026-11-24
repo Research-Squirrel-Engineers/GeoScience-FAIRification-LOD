@@ -23,7 +23,7 @@ FONTS = HERE / "fonts"
 
 # (file, label) per row. Every page lives in docu/.
 DOCU_PAGES = [("index.html", "Overview"), ("model.html", "Data model"), ("crm-coverage.html", "CRM coverage"), ("crosswalk.html", "Crosswalk"),
-              ("instances.html", "Instance models"), ("slides.html", "Slide figures"), ("sparql.html", "Query")]
+              ("instances.html", "Instance models"), ("slides.html", "Slide figures"), ("paper.html", "Paper figures"), ("sparql.html", "Query")]
 # Cluster pages: the overview first, then the clusters that have a page (clusters.yaml). Kept in step by clusters.py.
 CLUSTER_PAGES = [("clusters.html", "Overview"), ("cluster-chronology.html", "Chronology"),
                  ("cluster-mis.html", "Marine isotope stages"),

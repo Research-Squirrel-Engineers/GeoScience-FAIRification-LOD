@@ -50,7 +50,7 @@ OWN = {"strat": "http://w3id.org/geo-lod/strat/", "an": "http://w3id.org/geo-lod
        "geolod": "http://w3id.org/geo-lod/"}
 
 # What figures 08 and 12 print about the model. check() compares these with the ontology.
-STATED = {"geolod": 46, "strat": 10, "an": 6}
+STATED = {"geolod": 47, "strat": 10, "an": 6}
 
 
 def ns_key(iri: str) -> str | None:

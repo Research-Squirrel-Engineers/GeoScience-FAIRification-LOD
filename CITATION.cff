@@ -3,7 +3,7 @@
 
 cff-version: 1.2.0
 title: >-
-  EPICA-SISAL-FAIRification: Palaeoclimate Data Processing
+  GeoScience-FAIRification-LOD: Palaeoclimate Data Processing
   Pipeline
 message: 'If you use this software, please cite it as below.'
 type: software
@@ -21,26 +21,20 @@ identifiers:
     value: 10.5281/zenodo.18814640
     description: DOI of all software versions
 repository-code: >-
-  https://github.com/Research-Squirrel-Engineers/EPICA-SISAL-FAIRification
+  https://github.com/Research-Squirrel-Engineers/GeoScience-FAIRification-LOD
 url: >-
-  https://github.com/Research-Squirrel-Engineers/EPICA-SISAL-FAIRification
+  https://github.com/Research-Squirrel-Engineers/GeoScience-FAIRification-LOD
 abstract: >
-  A comprehensive Python pipeline for processing and
-  FAIRifying palaeoclimate data from EPICA (European Project
-  for Ice Coring in Antarctica) ice cores and SISAL
-  (Speleothem Isotopes Synthesis and AnaLysis) speleothem
-  databases. The tool generates publication-ready
-  visualizations, converts raw data into RDF/Linked Open
-  Data following FAIR principles, and produces interactive
-  Mermaid diagrams of the ontology structure. It implements
-  a GeoSPARQL-compliant ontology extending SOSA (Sensor,
-  Observation, Sample, and Actuator), harmonizes EPICA ice
-  core observations (CH₄, δ¹⁸O) with SISAL speleothem
-  isotope data (δ¹⁸O, δ¹³C), and provides 306 georeferenced
-  palaeoclimate sites as a unified FeatureCollection. The
-  pipeline outputs 192,428 RDF triples across multiple
-  files, enabling SPARQL queries for integrated
-  palaeoclimate research spanning up to 805,000 years.
+  A Python pipeline that turns palaeoclimate measurements into
+  FAIR Linked Open Data. It covers five proxy records from the
+  EPICA Dome C ice core, speleothem isotopes from the SISAL
+  database (365 caves) and Campanian Ignimbrite findspots.
+  The graph is built on SOSA/SSN for the measurements,
+  GeoSPARQL for the geometries, PROV-O for the provenance and
+  CIDOC-CRM as the anchor that lets it enter the NFDI4Objects
+  Knowledge Graph. Every age names the chronology it comes
+  from, and the same run produces the figures, so a plot and
+  a triple cannot disagree about what a source file said.
 keywords:
   - palaeoclimate
   - FAIR data

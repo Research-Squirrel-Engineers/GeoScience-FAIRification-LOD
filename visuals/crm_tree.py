@@ -40,6 +40,7 @@ _P = {  # class -> primary parent
     CRM + "E32_Authority_Document": "E31_Document",
     CRM + "E39_Actor": "E77_Persistent_Item",
     CRM + "E53_Place": "E1_CRM_Entity",
+    CRM + "E52_Time-Span": "E1_CRM_Entity",
     CRM + "E54_Dimension": "E1_CRM_Entity",
     SCI + "S4_Observation": "E13_Attribute_Assignment",
     SCI + "S6_Data_Evaluation": "E13_Attribute_Assignment",

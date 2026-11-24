@@ -171,6 +171,15 @@ time:TimePosition
 time:TRS
     rdfs:subClassOf crm:E29_Design_or_Procedure .
 
+# The age of the Campanian Ignimbrite eruption is a span between two instants
+# (CI/ci_pipeline.py), which is what E52 describes. An instant is a span of
+# zero extent, so it takes the same anchor.
+time:ProperInterval
+    rdfs:subClassOf crm:E52_Time-Span .
+
+time:Instant
+    rdfs:subClassOf crm:E52_Time-Span .
+
 # ============================================================================
 # strat: / an:  →  CRM
 # ============================================================================

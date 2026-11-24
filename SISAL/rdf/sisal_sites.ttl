@@ -379,7 +379,7 @@ geolod:SISAL_Archaeological_Cave_Collection a geo:FeatureCollection ;
 
 geolod:SISAL_Cave_Catalogue_Dataset a prov:Entity ;
     dct:created "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:2ffafadeccb1" ;
+    owl:versionInfo "sha256:3c15a7b07111" ;
     prov:wasGeneratedBy geolod:SISAL_Cave_Catalogue_Generation .
 
 geolod:SISAL_Cave_Collection a geo:FeatureCollection ;
@@ -752,18 +752,18 @@ geolod:SISAL_Cave_Collection a geo:FeatureCollection ;
 
 geolod:SISAL_Cave_Catalogue_Generation a prov:Activity ;
     rdfs:label "SISAL v3 cave catalogue"@en ;
-    owl:versionInfo "sha256:2ffafadeccb1" ;
+    owl:versionInfo "sha256:3c15a7b07111" ;
     prov:used geolod:SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py,
         geolod:SISAL_Cave_Catalogue_Generation_input_sites_csv ;
     prov:wasAssociatedWith <https://orcid.org/0000-0002-3246-3531> .
 
 geolod:SISAL_Cave_Catalogue_Generation_input_sisal_rdf_py a prov:Entity ;
     rdfs:label "sisal_rdf.py" ;
-    dct:identifier "sha256:656bc1a0de3d94c6e18d5f2b3911cbad6c9e8d6d5dc42a3c58b9e9a9ecc18105" .
+    dct:identifier "sha256:59d4b1d18b7400a2027407da4d6816e2ac914a451680f73e682dfd52a887877e" .
 
 geolod:SISAL_Cave_Catalogue_Generation_input_sites_csv a prov:Entity ;
     rdfs:label "sites.csv" ;
-    dct:identifier "sha256:291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449" .
+    dct:identifier "sha256:398f14d25607a78c1863e93086cba47b6370208156a832f947c6e2885776db14" .
 
 sisal:geom_site_0001 a sf:Point ;
     geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(77.7764 30.7903)"^^geo:wktLiteral .
@@ -1865,8 +1865,11 @@ geolod:Cave_site_0001 a geolod:Cave,
     rdfs:label "Bittoo cave"@en ;
     geolod:countD13CSamples 4815 ;
     geolod:countD18OSamples 4815 ;
+    geolod:countDatedD18OSamples 4815 ;
     geolod:elevation_m 3000.0 ;
+    geolod:oldestAgeKaBP 283.8170 ;
     geolod:siteId 1 ;
+    geolod:youngestAgeKaBP 0.8740 ;
     geo:hasGeometry sisal:geom_site_0001 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1875,8 +1878,11 @@ geolod:Cave_site_0002 a geolod:Cave,
     rdfs:label "Kesang cave"@en ;
     geolod:countD13CSamples 2679 ;
     geolod:countD18OSamples 3843 ;
+    geolod:countDatedD18OSamples 3843 ;
     geolod:elevation_m 2000.0 ;
+    geolod:oldestAgeKaBP 456.4562 ;
     geolod:siteId 2 ;
+    geolod:youngestAgeKaBP -0.0668 ;
     geo:hasGeometry sisal:geom_site_0002 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1885,8 +1891,11 @@ geolod:Cave_site_0003 a geolod:Cave,
     rdfs:label "Paraiso cave"@en ;
     geolod:countD13CSamples 2187 ;
     geolod:countD18OSamples 5379 ;
+    geolod:countDatedD18OSamples 5379 ;
     geolod:elevation_m 60.0 ;
+    geolod:oldestAgeKaBP 45.1440 ;
     geolod:siteId 3 ;
+    geolod:youngestAgeKaBP -0.0480 ;
     geo:hasGeometry sisal:geom_site_0003 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1895,8 +1904,11 @@ geolod:Cave_site_0004 a geolod:Cave,
     rdfs:label "Villars cave"@en ;
     geolod:countD13CSamples 1755 ;
     geolod:countD18OSamples 1755 ;
+    geolod:countDatedD18OSamples 1755 ;
     geolod:elevation_m 175.0 ;
+    geolod:oldestAgeKaBP 178.0020 ;
     geolod:siteId 4 ;
+    geolod:youngestAgeKaBP -0.0430 ;
     geo:hasGeometry sisal:geom_site_0004 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1905,8 +1917,11 @@ geolod:Cave_site_0005 a geolod:Cave,
     rdfs:label "Yangkou cave"@en ;
     geolod:countD13CSamples 1104 ;
     geolod:countD18OSamples 2535 ;
+    geolod:countDatedD18OSamples 2535 ;
     geolod:elevation_m 2140.0 ;
+    geolod:oldestAgeKaBP 206.8390 ;
     geolod:siteId 5 ;
+    geolod:youngestAgeKaBP 37.7930 ;
     geo:hasGeometry sisal:geom_site_0005 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1915,8 +1930,11 @@ geolod:Cave_site_0006 a geolod:Cave,
     rdfs:label "Hulu cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 3054 ;
+    geolod:countDatedD18OSamples 3054 ;
     geolod:elevation_m 86.0 ;
+    geolod:oldestAgeKaBP 178.0500 ;
     geolod:siteId 6 ;
+    geolod:youngestAgeKaBP 10.4950 ;
     geo:hasGeometry sisal:geom_site_0006 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1925,8 +1943,11 @@ geolod:Cave_site_0007 a geolod:Cave,
     rdfs:label "Cold Air cave"@en ;
     geolod:countD13CSamples 3079 ;
     geolod:countD18OSamples 3079 ;
+    geolod:countDatedD18OSamples 3079 ;
     geolod:elevation_m 1420.0 ;
+    geolod:oldestAgeKaBP 24.3782 ;
     geolod:siteId 7 ;
+    geolod:youngestAgeKaBP -0.0480 ;
     geo:hasGeometry sisal:geom_site_0007 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1935,8 +1956,11 @@ geolod:Cave_site_0008 a geolod:Cave,
     rdfs:label "Lancaster Hole"@en ;
     geolod:countD13CSamples 1206 ;
     geolod:countD18OSamples 1206 ;
+    geolod:countDatedD18OSamples 1206 ;
     geolod:elevation_m 294.0 ;
+    geolod:oldestAgeKaBP 12.7176 ;
     geolod:siteId 8 ;
+    geolod:youngestAgeKaBP 0.2619 ;
     geo:hasGeometry sisal:geom_site_0008 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1945,8 +1969,11 @@ geolod:Cave_site_0009 a geolod:Cave,
     rdfs:label "Tonnel’naya cave"@en ;
     geolod:countD13CSamples 6253 ;
     geolod:countD18OSamples 6253 ;
+    geolod:countDatedD18OSamples 6253 ;
     geolod:elevation_m 3226.0 ;
+    geolod:oldestAgeKaBP 134.0589 ;
     geolod:siteId 9 ;
+    geolod:youngestAgeKaBP -0.0581 ;
     geo:hasGeometry sisal:geom_site_0009 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1955,8 +1982,11 @@ geolod:Cave_site_0010 a geolod:Cave,
     rdfs:label "Jaraguá cave"@en ;
     geolod:countD13CSamples 4358 ;
     geolod:countD18OSamples 7744 ;
+    geolod:countDatedD18OSamples 7744 ;
     geolod:elevation_m 570.0 ;
+    geolod:oldestAgeKaBP 28.0345 ;
     geolod:siteId 10 ;
+    geolod:youngestAgeKaBP -0.0509 ;
     geo:hasGeometry sisal:geom_site_0010 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1965,8 +1995,11 @@ geolod:Cave_site_0011 a geolod:Cave,
     rdfs:label "Jeita cave"@en ;
     geolod:countD13CSamples 1830 ;
     geolod:countD18OSamples 1830 ;
+    geolod:countDatedD18OSamples 1830 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 20.3670 ;
     geolod:siteId 11 ;
+    geolod:youngestAgeKaBP 0.3720 ;
     geo:hasGeometry sisal:geom_site_0011 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1975,8 +2008,11 @@ geolod:Cave_site_0012 a geolod:Cave,
     rdfs:label "Mawmluh cave"@en ;
     geolod:countD13CSamples 2480 ;
     geolod:countD18OSamples 4701 ;
+    geolod:countDatedD18OSamples 4701 ;
     geolod:elevation_m 1160.0 ;
+    geolod:oldestAgeKaBP 135.4882 ;
     geolod:siteId 12 ;
+    geolod:youngestAgeKaBP -0.0625 ;
     geo:hasGeometry sisal:geom_site_0012 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1985,8 +2021,11 @@ geolod:Cave_site_0013 a geolod:Cave,
     rdfs:label "Ball Gown cave"@en ;
     geolod:countD13CSamples 262 ;
     geolod:countD18OSamples 502 ;
+    geolod:countDatedD18OSamples 502 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 39.9711 ;
     geolod:siteId 13 ;
+    geolod:youngestAgeKaBP 8.3670 ;
     geo:hasGeometry sisal:geom_site_0013 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -1995,8 +2034,11 @@ geolod:Cave_site_0014 a geolod:Cave,
     rdfs:label "Lehman caves"@en ;
     geolod:countD13CSamples 491 ;
     geolod:countD18OSamples 491 ;
+    geolod:countDatedD18OSamples 491 ;
     geolod:elevation_m 2080.0 ;
+    geolod:oldestAgeKaBP 174.0964 ;
     geolod:siteId 14 ;
+    geolod:youngestAgeKaBP 3.8360 ;
     geo:hasGeometry sisal:geom_site_0014 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2005,8 +2047,11 @@ geolod:Cave_site_0015 a geolod:Cave,
     rdfs:label "Baschg cave"@en ;
     geolod:countD13CSamples 666 ;
     geolod:countD18OSamples 3156 ;
+    geolod:countDatedD18OSamples 3156 ;
     geolod:elevation_m 780.0 ;
+    geolod:oldestAgeKaBP 90.2996 ;
     geolod:siteId 15 ;
+    geolod:youngestAgeKaBP 75.4924 ;
     geo:hasGeometry sisal:geom_site_0015 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2015,8 +2060,11 @@ geolod:Cave_site_0016 a geolod:Cave,
     rdfs:label "Han-sur-Lesse cave"@en ;
     geolod:countD13CSamples 984 ;
     geolod:countD18OSamples 983 ;
+    geolod:countDatedD18OSamples 983 ;
     geolod:elevation_m 180.0 ;
+    geolod:oldestAgeKaBP 125.3431 ;
     geolod:siteId 16 ;
+    geolod:youngestAgeKaBP -0.0440 ;
     geo:hasGeometry sisal:geom_site_0016 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2025,8 +2073,11 @@ geolod:Cave_site_0017 a geolod:Cave,
     rdfs:label "Huangye cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 543 ;
+    geolod:countDatedD18OSamples 543 ;
     geolod:elevation_m 1650.0 ;
+    geolod:oldestAgeKaBP 1.8120 ;
     geolod:siteId 17 ;
+    geolod:youngestAgeKaBP -0.0518 ;
     geo:hasGeometry sisal:geom_site_0017 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2035,8 +2086,11 @@ geolod:Cave_site_0018 a geolod:Cave,
     rdfs:label "Abissal cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 188 ;
+    geolod:countDatedD18OSamples 188 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 25.6940 ;
     geolod:siteId 18 ;
+    geolod:youngestAgeKaBP 15.0570 ;
     geo:hasGeometry sisal:geom_site_0018 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2045,8 +2099,11 @@ geolod:Cave_site_0019 a geolod:Cave,
     rdfs:label "Kanaan cave"@en ;
     geolod:countD13CSamples 1012 ;
     geolod:countD18OSamples 1012 ;
+    geolod:countDatedD18OSamples 1012 ;
     geolod:elevation_m 98.0 ;
+    geolod:oldestAgeKaBP 193.4980 ;
     geolod:siteId 19 ;
+    geolod:youngestAgeKaBP 83.1250 ;
     geo:hasGeometry sisal:geom_site_0019 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2055,8 +2112,11 @@ geolod:Cave_site_0020 a geolod:Cave,
     rdfs:label "Secret cave"@en ;
     geolod:countD13CSamples 102 ;
     geolod:countD18OSamples 791 ;
+    geolod:countDatedD18OSamples 791 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 99.7190 ;
     geolod:siteId 20 ;
+    geolod:youngestAgeKaBP 10.6910 ;
     geo:hasGeometry sisal:geom_site_0020 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2065,8 +2125,11 @@ geolod:Cave_site_0021 a geolod:Cave,
     rdfs:label "Uamh an Tartair"@en ;
     geolod:countD13CSamples 596 ;
     geolod:countD18OSamples 596 ;
+    geolod:countDatedD18OSamples 596 ;
     geolod:elevation_m 220.0 ;
+    geolod:oldestAgeKaBP 0.8920 ;
     geolod:siteId 21 ;
+    geolod:youngestAgeKaBP -0.0530 ;
     geo:hasGeometry sisal:geom_site_0021 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2075,8 +2138,11 @@ geolod:Cave_site_0022 a geolod:Cave,
     rdfs:label "RukieSSa cave"@en ;
     geolod:countD13CSamples 173 ;
     geolod:countD18OSamples 173 ;
+    geolod:countDatedD18OSamples 173 ;
     geolod:elevation_m 1618.0 ;
+    geolod:oldestAgeKaBP 0.0560 ;
     geolod:siteId 22 ;
+    geolod:youngestAgeKaBP -0.0530 ;
     geo:hasGeometry sisal:geom_site_0022 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2085,8 +2151,11 @@ geolod:Cave_site_0023 a geolod:Cave,
     rdfs:label "Lapa grande cave"@en ;
     geolod:countD13CSamples 758 ;
     geolod:countD18OSamples 2670 ;
+    geolod:countDatedD18OSamples 2670 ;
     geolod:elevation_m 590.0 ;
+    geolod:oldestAgeKaBP 83.7683 ;
     geolod:siteId 23 ;
+    geolod:youngestAgeKaBP 1.2880 ;
     geo:hasGeometry sisal:geom_site_0023 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2095,8 +2164,11 @@ geolod:Cave_site_0024 a geolod:Cave,
     rdfs:label "Lapa sem fim cave"@en ;
     geolod:countD13CSamples 2218 ;
     geolod:countD18OSamples 4232 ;
+    geolod:countDatedD18OSamples 4232 ;
     geolod:elevation_m 341.0 ;
+    geolod:oldestAgeKaBP 84.0648 ;
     geolod:siteId 24 ;
+    geolod:youngestAgeKaBP 1.0360 ;
     geo:hasGeometry sisal:geom_site_0024 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2105,8 +2177,11 @@ geolod:Cave_site_0025 a geolod:Cave,
     rdfs:label "Palestina cave"@en ;
     geolod:countD13CSamples 435 ;
     geolod:countD18OSamples 434 ;
+    geolod:countDatedD18OSamples 434 ;
     geolod:elevation_m 870.0 ;
+    geolod:oldestAgeKaBP 1.5370 ;
     geolod:siteId 25 ;
+    geolod:youngestAgeKaBP 0.0220 ;
     geo:hasGeometry sisal:geom_site_0025 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2115,8 +2190,11 @@ geolod:Cave_site_0026 a geolod:Cave,
     rdfs:label "Okshola cave"@en ;
     geolod:countD13CSamples 438 ;
     geolod:countD18OSamples 438 ;
+    geolod:countDatedD18OSamples 438 ;
     geolod:elevation_m 165.0 ;
+    geolod:oldestAgeKaBP 10.3276 ;
     geolod:siteId 26 ;
+    geolod:youngestAgeKaBP -0.0470 ;
     geo:hasGeometry sisal:geom_site_0026 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2125,8 +2203,11 @@ geolod:Cave_site_0027 a geolod:Cave,
     rdfs:label "Tamboril cave"@en ;
     geolod:countD13CSamples 866 ;
     geolod:countD18OSamples 866 ;
+    geolod:countDatedD18OSamples 866 ;
     geolod:elevation_m 200.0 ;
+    geolod:oldestAgeKaBP 9.9815 ;
     geolod:siteId 27 ;
+    geolod:youngestAgeKaBP -0.0322 ;
     geo:hasGeometry sisal:geom_site_0027 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2135,8 +2216,11 @@ geolod:Cave_site_0028 a geolod:Cave,
     rdfs:label "Valmiki cave "@en ;
     geolod:countD13CSamples 263 ;
     geolod:countD18OSamples 485 ;
+    geolod:countDatedD18OSamples 485 ;
     geolod:elevation_m 420.0 ;
+    geolod:oldestAgeKaBP 15.6961 ;
     geolod:siteId 28 ;
+    geolod:youngestAgeKaBP 13.1610 ;
     geo:hasGeometry sisal:geom_site_0028 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2145,8 +2229,11 @@ geolod:Cave_site_0029 a geolod:Cave,
     rdfs:label "Mairs cave"@en ;
     geolod:countD13CSamples 878 ;
     geolod:countD18OSamples 878 ;
+    geolod:countDatedD18OSamples 878 ;
     geolod:elevation_m 475.0 ;
+    geolod:oldestAgeKaBP 23.1350 ;
     geolod:siteId 29 ;
+    geolod:youngestAgeKaBP 14.8870 ;
     geo:hasGeometry sisal:geom_site_0029 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2155,8 +2242,11 @@ geolod:Cave_site_0030 a geolod:Cave,
     rdfs:label "Lobatse cave"@en ;
     geolod:countD13CSamples 117 ;
     geolod:countD18OSamples 117 ;
+    geolod:countDatedD18OSamples 117 ;
     geolod:elevation_m 1200.0 ;
+    geolod:oldestAgeKaBP 50.9426 ;
     geolod:siteId 30 ;
+    geolod:youngestAgeKaBP 21.4258 ;
     geo:hasGeometry sisal:geom_site_0030 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2165,8 +2255,11 @@ geolod:Cave_site_0031 a geolod:Cave,
     rdfs:label "Abaliget cave"@en ;
     geolod:countD13CSamples 779 ;
     geolod:countD18OSamples 779 ;
+    geolod:countDatedD18OSamples 779 ;
     geolod:elevation_m 209.0 ;
+    geolod:oldestAgeKaBP 160.5980 ;
     geolod:siteId 31 ;
+    geolod:youngestAgeKaBP 123.3032 ;
     geo:hasGeometry sisal:geom_site_0031 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2175,8 +2268,11 @@ geolod:Cave_site_0032 a geolod:Cave,
     rdfs:label "Anjokipoty"@en ;
     geolod:countD13CSamples 286 ;
     geolod:countD18OSamples 286 ;
+    geolod:countDatedD18OSamples 286 ;
     geolod:elevation_m 43.0 ;
+    geolod:oldestAgeKaBP 9.8805 ;
     geolod:siteId 32 ;
+    geolod:youngestAgeKaBP 0.1831 ;
     geo:hasGeometry sisal:geom_site_0032 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2185,8 +2281,11 @@ geolod:Cave_site_0033 a geolod:Cave,
     rdfs:label "Bero cave"@en ;
     geolod:countD13CSamples 882 ;
     geolod:countD18OSamples 882 ;
+    geolod:countDatedD18OSamples 882 ;
     geolod:elevation_m 1363.0 ;
+    geolod:oldestAgeKaBP 7.7500 ;
     geolod:siteId 33 ;
+    geolod:youngestAgeKaBP -0.0548 ;
     geo:hasGeometry sisal:geom_site_0033 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2195,8 +2294,11 @@ geolod:Cave_site_0034 a geolod:Cave,
     rdfs:label "Cueva del Diablo"@en ;
     geolod:countD13CSamples 150 ;
     geolod:countD18OSamples 150 ;
+    geolod:countDatedD18OSamples 150 ;
     geolod:elevation_m 1030.0 ;
+    geolod:oldestAgeKaBP 10.8120 ;
     geolod:siteId 34 ;
+    geolod:youngestAgeKaBP 1.2200 ;
     geo:hasGeometry sisal:geom_site_0034 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2205,8 +2307,11 @@ geolod:Cave_site_0035 a geolod:Cave,
     rdfs:label "Curupira cave"@en ;
     geolod:countD13CSamples 253 ;
     geolod:countD18OSamples 253 ;
+    geolod:countDatedD18OSamples 253 ;
     geolod:elevation_m 420.0 ;
+    geolod:oldestAgeKaBP 0.1549 ;
     geolod:siteId 35 ;
+    geolod:youngestAgeKaBP -0.0210 ;
     geo:hasGeometry sisal:geom_site_0035 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2215,8 +2320,11 @@ geolod:Cave_site_0036 a geolod:Cave,
     rdfs:label "Dayu cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 305 ;
+    geolod:countDatedD18OSamples 305 ;
     geolod:elevation_m 870.0 ;
+    geolod:oldestAgeKaBP 0.7011 ;
     geolod:siteId 36 ;
+    geolod:youngestAgeKaBP -0.0327 ;
     geo:hasGeometry sisal:geom_site_0036 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2225,8 +2333,11 @@ geolod:Cave_site_0037 a geolod:Cave,
     rdfs:label "DeSoto caverns"@en ;
     geolod:countD13CSamples 1459 ;
     geolod:countD18OSamples 1459 ;
+    geolod:countDatedD18OSamples 1459 ;
     geolod:elevation_m 150.0 ;
+    geolod:oldestAgeKaBP 4.2040 ;
     geolod:siteId 37 ;
+    geolod:youngestAgeKaBP -0.0580 ;
     geo:hasGeometry sisal:geom_site_0037 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2235,8 +2346,11 @@ geolod:Cave_site_0038 a geolod:Cave,
     rdfs:label "Diva cave"@en ;
     geolod:countD13CSamples 539 ;
     geolod:countD18OSamples 539 ;
+    geolod:countDatedD18OSamples 539 ;
     geolod:elevation_m 680.0 ;
+    geolod:oldestAgeKaBP 2.7650 ;
     geolod:siteId 38 ;
+    geolod:youngestAgeKaBP 0.0390 ;
     geo:hasGeometry sisal:geom_site_0038 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2245,8 +2359,11 @@ geolod:Cave_site_0039 a geolod:Cave,
     rdfs:label "Dongge cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 5414 ;
+    geolod:countDatedD18OSamples 5414 ;
     geolod:elevation_m 680.0 ;
+    geolod:oldestAgeKaBP 225.2578 ;
     geolod:siteId 39 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0039 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2255,8 +2372,11 @@ geolod:Cave_site_0040 a geolod:Cave,
     rdfs:label "Excentrica cave"@en ;
     geolod:countD13CSamples 32 ;
     geolod:countD18OSamples 32 ;
+    geolod:countDatedD18OSamples 32 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 6.5652 ;
     geolod:siteId 40 ;
+    geolod:youngestAgeKaBP 5.3294 ;
     geo:hasGeometry sisal:geom_site_0040 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2265,8 +2385,11 @@ geolod:Cave_site_0041 a geolod:Cave,
     rdfs:label "Fukugaguchi cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 963 ;
+    geolod:countDatedD18OSamples 963 ;
     geolod:elevation_m 170.0 ;
+    geolod:oldestAgeKaBP 10.0064 ;
     geolod:siteId 41 ;
+    geolod:youngestAgeKaBP -0.0528 ;
     geo:hasGeometry sisal:geom_site_0041 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2275,8 +2398,11 @@ geolod:Cave_site_0042 a geolod:Cave,
     rdfs:label "Ifoulki cave"@en ;
     geolod:countD13CSamples 727 ;
     geolod:countD18OSamples 727 ;
+    geolod:countDatedD18OSamples 727 ;
     geolod:elevation_m 1250.0 ;
+    geolod:oldestAgeKaBP 1.6000 ;
     geolod:siteId 42 ;
+    geolod:youngestAgeKaBP -0.0600 ;
     geo:hasGeometry sisal:geom_site_0042 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2285,8 +2411,11 @@ geolod:Cave_site_0043 a geolod:Cave,
     rdfs:label "Kalakot cave"@en ;
     geolod:countD13CSamples 245 ;
     geolod:countD18OSamples 245 ;
+    geolod:countDatedD18OSamples 245 ;
     geolod:elevation_m 826.0 ;
+    geolod:oldestAgeKaBP 16.3227 ;
     geolod:siteId 43 ;
+    geolod:youngestAgeKaBP 9.6457 ;
     geo:hasGeometry sisal:geom_site_0043 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2295,8 +2424,11 @@ geolod:Cave_site_0044 a geolod:Cave,
     rdfs:label "Kapsia cave"@en ;
     geolod:countD13CSamples 178 ;
     geolod:countD18OSamples 178 ;
+    geolod:countDatedD18OSamples 178 ;
     geolod:elevation_m 700.0 ;
+    geolod:oldestAgeKaBP 2.9040 ;
     geolod:siteId 44 ;
+    geolod:youngestAgeKaBP 1.1153 ;
     geo:hasGeometry sisal:geom_site_0044 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2305,8 +2437,11 @@ geolod:Cave_site_0045 a geolod:Cave,
     rdfs:label "Kulishu cave"@en ;
     geolod:countD13CSamples 234 ;
     geolod:countD18OSamples 234 ;
+    geolod:countDatedD18OSamples 234 ;
     geolod:elevation_m 610.0 ;
+    geolod:oldestAgeKaBP 13.9710 ;
     geolod:siteId 45 ;
+    geolod:youngestAgeKaBP 10.3780 ;
     geo:hasGeometry sisal:geom_site_0045 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2315,8 +2450,11 @@ geolod:Cave_site_0046 a geolod:Cave,
     rdfs:label "Labyrintgrottan cave"@en ;
     geolod:countD13CSamples 46 ;
     geolod:countD18OSamples 46 ;
+    geolod:countDatedD18OSamples 46 ;
     geolod:elevation_m 730.0 ;
+    geolod:oldestAgeKaBP 9.5651 ;
     geolod:siteId 46 ;
+    geolod:youngestAgeKaBP 7.3475 ;
     geo:hasGeometry sisal:geom_site_0046 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2325,8 +2463,11 @@ geolod:Cave_site_0047 a geolod:Cave,
     rdfs:label "Larshullet cave"@en ;
     geolod:countD13CSamples 273 ;
     geolod:countD18OSamples 273 ;
+    geolod:countDatedD18OSamples 273 ;
     geolod:elevation_m 400.0 ;
+    geolod:oldestAgeKaBP 3.9205 ;
     geolod:siteId 47 ;
+    geolod:youngestAgeKaBP 0.1300 ;
     geo:hasGeometry sisal:geom_site_0047 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2335,8 +2476,11 @@ geolod:Cave_site_0048 a geolod:Cave,
     rdfs:label "Leviathan cave"@en ;
     geolod:countD13CSamples 1430 ;
     geolod:countD18OSamples 1430 ;
+    geolod:countDatedD18OSamples 1430 ;
     geolod:elevation_m 2400.0 ;
+    geolod:oldestAgeKaBP 103.7400 ;
     geolod:siteId 48 ;
+    geolod:youngestAgeKaBP -0.0600 ;
     geo:hasGeometry sisal:geom_site_0048 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2345,8 +2489,11 @@ geolod:Cave_site_0049 a geolod:Cave,
     rdfs:label "McLean's cave"@en ;
     geolod:countD13CSamples 900 ;
     geolod:countD18OSamples 900 ;
+    geolod:countDatedD18OSamples 900 ;
     geolod:elevation_m 300.0 ;
+    geolod:oldestAgeKaBP 66.9023 ;
     geolod:siteId 49 ;
+    geolod:youngestAgeKaBP 10.9713 ;
     geo:hasGeometry sisal:geom_site_0049 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2355,8 +2502,11 @@ geolod:Cave_site_0050 a geolod:Cave,
     rdfs:label "Moaning cave"@en ;
     geolod:countD13CSamples 114 ;
     geolod:countD18OSamples 114 ;
+    geolod:countDatedD18OSamples 114 ;
     geolod:elevation_m 520.0 ;
+    geolod:oldestAgeKaBP 15.8700 ;
     geolod:siteId 50 ;
+    geolod:youngestAgeKaBP 8.7020 ;
     geo:hasGeometry sisal:geom_site_0050 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2365,8 +2515,11 @@ geolod:Cave_site_0051 a geolod:Cave,
     rdfs:label "Natural Bridge caverns"@en ;
     geolod:countD13CSamples 257 ;
     geolod:countD18OSamples 255 ;
+    geolod:countDatedD18OSamples 255 ;
     geolod:elevation_m 306.0 ;
+    geolod:oldestAgeKaBP 6.3806 ;
     geolod:siteId 51 ;
+    geolod:youngestAgeKaBP 0.0181 ;
     geo:hasGeometry sisal:geom_site_0051 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2375,8 +2528,11 @@ geolod:Cave_site_0052 a geolod:Cave,
     rdfs:label "Pau d'Alho cave"@en ;
     geolod:countD13CSamples 1170 ;
     geolod:countD18OSamples 1170 ;
+    geolod:countDatedD18OSamples 1170 ;
     geolod:elevation_m 340.0 ;
+    geolod:oldestAgeKaBP 1.4583 ;
     geolod:siteId 52 ;
+    geolod:youngestAgeKaBP 0.0897 ;
     geo:hasGeometry sisal:geom_site_0052 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2385,8 +2541,11 @@ geolod:Cave_site_0053 a geolod:Cave,
     rdfs:label "Pippikin Pot cave"@en ;
     geolod:countD13CSamples 483 ;
     geolod:countD18OSamples 483 ;
+    geolod:countDatedD18OSamples 483 ;
     geolod:elevation_m 320.0 ;
+    geolod:oldestAgeKaBP 9.4789 ;
     geolod:siteId 53 ;
+    geolod:youngestAgeKaBP 4.2056 ;
     geo:hasGeometry sisal:geom_site_0053 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2395,8 +2554,11 @@ geolod:Cave_site_0054 a geolod:Cave,
     rdfs:label "Sahiya cave"@en ;
     geolod:countD13CSamples 7580 ;
     geolod:countD18OSamples 7580 ;
+    geolod:countDatedD18OSamples 7580 ;
     geolod:elevation_m 1190.0 ;
+    geolod:oldestAgeKaBP 5.7061 ;
     geolod:siteId 54 ;
+    geolod:youngestAgeKaBP -0.0563 ;
     geo:hasGeometry sisal:geom_site_0054 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2405,8 +2567,11 @@ geolod:Cave_site_0055 a geolod:Cave,
     rdfs:label "Sieben Hengste cave"@en ;
     geolod:countD13CSamples 1439 ;
     geolod:countD18OSamples 20974 ;
+    geolod:countDatedD18OSamples 20974 ;
     geolod:elevation_m 1955.0 ;
+    geolod:oldestAgeKaBP 133.6213 ;
     geolod:siteId 55 ;
+    geolod:youngestAgeKaBP 14.6200 ;
     geo:hasGeometry sisal:geom_site_0055 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2415,8 +2580,11 @@ geolod:Cave_site_0056 a geolod:Cave,
     rdfs:label "Skala Marion cave"@en ;
     geolod:countD13CSamples 209 ;
     geolod:countD18OSamples 209 ;
+    geolod:countDatedD18OSamples 209 ;
     geolod:elevation_m 41.0 ;
+    geolod:oldestAgeKaBP 5.5339 ;
     geolod:siteId 56 ;
+    geolod:youngestAgeKaBP 1.4814 ;
     geo:hasGeometry sisal:geom_site_0056 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2425,8 +2593,11 @@ geolod:Cave_site_0057 a geolod:Cave,
     rdfs:label "Soylegrotta cave"@en ;
     geolod:countD13CSamples 477 ;
     geolod:countD18OSamples 477 ;
+    geolod:countDatedD18OSamples 453 ;
     geolod:elevation_m 280.0 ;
+    geolod:oldestAgeKaBP 10.4206 ;
     geolod:siteId 57 ;
+    geolod:youngestAgeKaBP -0.0430 ;
     geo:hasGeometry sisal:geom_site_0057 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2435,8 +2606,11 @@ geolod:Cave_site_0058 a geolod:Cave,
     rdfs:label "Spannagel cave"@en ;
     geolod:countD13CSamples 3401 ;
     geolod:countD18OSamples 14199 ;
+    geolod:countDatedD18OSamples 9799 ;
     geolod:elevation_m 2310.0 ;
+    geolod:oldestAgeKaBP 247.3240 ;
     geolod:siteId 58 ;
+    geolod:youngestAgeKaBP -0.0130 ;
     geo:hasGeometry sisal:geom_site_0058 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2445,8 +2619,11 @@ geolod:Cave_site_0059 a geolod:Cave,
     rdfs:label "Suozi cave"@en ;
     geolod:countD13CSamples 183 ;
     geolod:countD18OSamples 183 ;
+    geolod:countDatedD18OSamples 183 ;
     geolod:elevation_m 700.0 ;
+    geolod:oldestAgeKaBP 119.3400 ;
     geolod:siteId 59 ;
+    geolod:youngestAgeKaBP 102.8100 ;
     geo:hasGeometry sisal:geom_site_0059 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2455,8 +2632,11 @@ geolod:Cave_site_0060 a geolod:Cave,
     rdfs:label "Taurius cave"@en ;
     geolod:countD13CSamples 1630 ;
     geolod:countD18OSamples 1630 ;
+    geolod:countDatedD18OSamples 1630 ;
     geolod:elevation_m 230.0 ;
+    geolod:oldestAgeKaBP 0.3928 ;
     geolod:siteId 60 ;
+    geolod:youngestAgeKaBP -0.0535 ;
     geo:hasGeometry sisal:geom_site_0060 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2465,8 +2645,11 @@ geolod:Cave_site_0061 a geolod:Cave,
     rdfs:label "Timta cave"@en ;
     geolod:countD13CSamples 362 ;
     geolod:countD18OSamples 362 ;
+    geolod:countDatedD18OSamples 362 ;
     geolod:elevation_m 1900.0 ;
+    geolod:oldestAgeKaBP 15.2151 ;
     geolod:siteId 61 ;
+    geolod:youngestAgeKaBP 11.6646 ;
     geo:hasGeometry sisal:geom_site_0061 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2475,8 +2658,11 @@ geolod:Cave_site_0062 a geolod:Cave,
     rdfs:label "Torrinha cave"@en ;
     geolod:countD13CSamples 91 ;
     geolod:countD18OSamples 91 ;
+    geolod:countDatedD18OSamples 91 ;
     geolod:elevation_m 680.0 ;
+    geolod:oldestAgeKaBP 0.0757 ;
     geolod:siteId 62 ;
+    geolod:youngestAgeKaBP -0.0566 ;
     geo:hasGeometry sisal:geom_site_0062 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2485,8 +2671,11 @@ geolod:Cave_site_0063 a geolod:Cave,
     rdfs:label "Tzabnah cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 709 ;
+    geolod:countDatedD18OSamples 709 ;
     geolod:elevation_m 20.0 ;
+    geolod:oldestAgeKaBP 1.4629 ;
     geolod:siteId 63 ;
+    geolod:youngestAgeKaBP -0.0540 ;
     geo:hasGeometry sisal:geom_site_0063 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2495,8 +2684,11 @@ geolod:Cave_site_0064 a geolod:Cave,
     rdfs:label "Wah Shikhar cave"@en ;
     geolod:countD13CSamples 602 ;
     geolod:countD18OSamples 625 ;
+    geolod:countDatedD18OSamples 625 ;
     geolod:elevation_m 1290.0 ;
+    geolod:oldestAgeKaBP 0.5510 ;
     geolod:siteId 64 ;
+    geolod:youngestAgeKaBP -0.0567 ;
     geo:hasGeometry sisal:geom_site_0064 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2505,8 +2697,11 @@ geolod:Cave_site_0065 a geolod:Cave,
     rdfs:label "Whiterock cave"@en ;
     geolod:countD13CSamples 189 ;
     geolod:countD18OSamples 1142 ;
+    geolod:countDatedD18OSamples 1142 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 475.9150 ;
     geolod:siteId 65 ;
+    geolod:youngestAgeKaBP 113.8740 ;
     geo:hasGeometry sisal:geom_site_0065 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2515,8 +2710,11 @@ geolod:Cave_site_0066 a geolod:Cave,
     rdfs:label "White Scar cave"@en ;
     geolod:countD13CSamples 160 ;
     geolod:countD18OSamples 160 ;
+    geolod:countDatedD18OSamples 160 ;
     geolod:elevation_m 255.0 ;
+    geolod:oldestAgeKaBP 11.1907 ;
     geolod:siteId 66 ;
+    geolod:youngestAgeKaBP 7.3479 ;
     geo:hasGeometry sisal:geom_site_0066 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2525,8 +2723,11 @@ geolod:Cave_site_0067 a geolod:Cave,
     rdfs:label "Clearwater/Wind caves connection"@en ;
     geolod:countD13CSamples 407 ;
     geolod:countD18OSamples 407 ;
+    geolod:countDatedD18OSamples 407 ;
     geolod:elevation_m 224.0 ;
+    geolod:oldestAgeKaBP 325.3046 ;
     geolod:siteId 67 ;
+    geolod:youngestAgeKaBP 228.1719 ;
     geo:hasGeometry sisal:geom_site_0067 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2535,8 +2736,11 @@ geolod:Cave_site_0068 a geolod:Cave,
     rdfs:label "Jerusalem west cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 308 ;
+    geolod:countDatedD18OSamples 308 ;
     geolod:elevation_m 700.0 ;
+    geolod:oldestAgeKaBP 168.7140 ;
     geolod:siteId 68 ;
+    geolod:youngestAgeKaBP -0.0160 ;
     geo:hasGeometry sisal:geom_site_0068 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2545,8 +2749,11 @@ geolod:Cave_site_0069 a geolod:Cave,
     rdfs:label "Xinglong cave"@en ;
     geolod:countD13CSamples 395 ;
     geolod:countD18OSamples 569 ;
+    geolod:countDatedD18OSamples 569 ;
     geolod:elevation_m 710.0 ;
+    geolod:oldestAgeKaBP 133.4170 ;
     geolod:siteId 69 ;
+    geolod:youngestAgeKaBP 50.1371 ;
     geo:hasGeometry sisal:geom_site_0069 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2555,8 +2762,11 @@ geolod:Cave_site_0070 a geolod:Cave,
     rdfs:label "Abaco Island cave"@en ;
     geolod:countD13CSamples 2650 ;
     geolod:countD18OSamples 2650 ;
+    geolod:countDatedD18OSamples 2650 ;
     geolod:elevation_m -45.0 ;
+    geolod:oldestAgeKaBP 63.8480 ;
     geolod:siteId 70 ;
+    geolod:youngestAgeKaBP 13.7660 ;
     geo:hasGeometry sisal:geom_site_0070 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2565,8 +2775,11 @@ geolod:Cave_site_0071 a geolod:Cave,
     rdfs:label "Baradla cave"@en ;
     geolod:countD13CSamples 680 ;
     geolod:countD18OSamples 680 ;
+    geolod:countDatedD18OSamples 680 ;
     geolod:elevation_m 375.0 ;
+    geolod:oldestAgeKaBP 129.0031 ;
     geolod:siteId 71 ;
+    geolod:youngestAgeKaBP -0.0599 ;
     geo:hasGeometry sisal:geom_site_0071 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2575,8 +2788,11 @@ geolod:Cave_site_0072 a geolod:Cave,
     rdfs:label "Ascunsa cave"@en ;
     geolod:countD13CSamples 890 ;
     geolod:countD18OSamples 890 ;
+    geolod:countDatedD18OSamples 890 ;
     geolod:elevation_m 1050.0 ;
+    geolod:oldestAgeKaBP 47.1770 ;
     geolod:siteId 72 ;
+    geolod:youngestAgeKaBP -0.0320 ;
     geo:hasGeometry sisal:geom_site_0072 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2585,8 +2801,11 @@ geolod:Cave_site_0073 a geolod:Cave,
     rdfs:label "Bourgeois–Delaunay cave"@en ;
     geolod:countD13CSamples 358 ;
     geolod:countD18OSamples 358 ;
+    geolod:countDatedD18OSamples 358 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 128.1510 ;
     geolod:siteId 73 ;
+    geolod:youngestAgeKaBP 121.3390 ;
     geo:hasGeometry sisal:geom_site_0073 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2595,8 +2814,11 @@ geolod:Cave_site_0074 a geolod:Cave,
     rdfs:label "Cango cave"@en ;
     geolod:countD13CSamples 178 ;
     geolod:countD18OSamples 178 ;
+    geolod:countDatedD18OSamples 178 ;
     geolod:elevation_m 687.0 ;
+    geolod:oldestAgeKaBP 47.9780 ;
     geolod:siteId 74 ;
+    geolod:youngestAgeKaBP 0.0410 ;
     geo:hasGeometry sisal:geom_site_0074 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2605,8 +2827,11 @@ geolod:Cave_site_0075 a geolod:Cave,
     rdfs:label "Cave Without a Name"@en ;
     geolod:countD13CSamples 386 ;
     geolod:countD18OSamples 395 ;
+    geolod:countDatedD18OSamples 395 ;
     geolod:elevation_m 377.0 ;
+    geolod:oldestAgeKaBP 28.4900 ;
     geolod:siteId 75 ;
+    geolod:youngestAgeKaBP 9.5460 ;
     geo:hasGeometry sisal:geom_site_0075 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2615,8 +2840,11 @@ geolod:Cave_site_0076 a geolod:Cave,
     rdfs:label "Ceremosnja cave"@en ;
     geolod:countD13CSamples 100 ;
     geolod:countD18OSamples 100 ;
+    geolod:countDatedD18OSamples 100 ;
     geolod:elevation_m 530.0 ;
+    geolod:oldestAgeKaBP 2.4256 ;
     geolod:siteId 76 ;
+    geolod:youngestAgeKaBP -0.0480 ;
     geo:hasGeometry sisal:geom_site_0076 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2625,8 +2853,11 @@ geolod:Cave_site_0077 a geolod:Cave,
     rdfs:label "Chauvet cave"@en ;
     geolod:countD13CSamples 210 ;
     geolod:countD18OSamples 210 ;
+    geolod:countDatedD18OSamples 210 ;
     geolod:elevation_m 240.0 ;
+    geolod:oldestAgeKaBP 34.1830 ;
     geolod:siteId 77 ;
+    geolod:youngestAgeKaBP 11.4150 ;
     geo:hasGeometry sisal:geom_site_0077 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2635,8 +2866,11 @@ geolod:Cave_site_0078 a geolod:Cave,
     rdfs:label "Chilibrillo cave"@en ;
     geolod:countD13CSamples 483 ;
     geolod:countD18OSamples 483 ;
+    geolod:countDatedD18OSamples 483 ;
     geolod:elevation_m 60.0 ;
+    geolod:oldestAgeKaBP 2.1795 ;
     geolod:siteId 78 ;
+    geolod:youngestAgeKaBP 0.6900 ;
     geo:hasGeometry sisal:geom_site_0078 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2645,8 +2879,11 @@ geolod:Cave_site_0079 a geolod:Cave,
     rdfs:label "Dim cave"@en ;
     geolod:countD13CSamples 1050 ;
     geolod:countD18OSamples 1050 ;
+    geolod:countDatedD18OSamples 1050 ;
     geolod:elevation_m 232.0 ;
+    geolod:oldestAgeKaBP 132.1511 ;
     geolod:siteId 79 ;
+    geolod:youngestAgeKaBP 9.7381 ;
     geo:hasGeometry sisal:geom_site_0079 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2655,8 +2892,11 @@ geolod:Cave_site_0080 a geolod:Cave,
     rdfs:label "Furong cave"@en ;
     geolod:countD13CSamples 299 ;
     geolod:countD18OSamples 669 ;
+    geolod:countDatedD18OSamples 669 ;
     geolod:elevation_m 480.0 ;
+    geolod:oldestAgeKaBP 16.9910 ;
     geolod:siteId 80 ;
+    geolod:youngestAgeKaBP -0.0550 ;
     geo:hasGeometry sisal:geom_site_0080 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2665,8 +2905,11 @@ geolod:Cave_site_0081 a geolod:Cave,
     rdfs:label "Gueldaman cave"@en ;
     geolod:countD13CSamples 425 ;
     geolod:countD18OSamples 425 ;
+    geolod:countDatedD18OSamples 425 ;
     geolod:elevation_m 507.0 ;
+    geolod:oldestAgeKaBP 6.1907 ;
     geolod:siteId 81 ;
+    geolod:youngestAgeKaBP 3.1933 ;
     geo:hasGeometry sisal:geom_site_0081 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2675,8 +2918,11 @@ geolod:Cave_site_0082 a geolod:Cave,
     rdfs:label "Hollywood cave"@en ;
     geolod:countD13CSamples 856 ;
     geolod:countD18OSamples 856 ;
+    geolod:countDatedD18OSamples 856 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 73.2014 ;
     geolod:siteId 82 ;
+    geolod:youngestAgeKaBP -0.0439 ;
     geo:hasGeometry sisal:geom_site_0082 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2685,8 +2931,11 @@ geolod:Cave_site_0083 a geolod:Cave,
     rdfs:label "La Mine cave"@en ;
     geolod:countD13CSamples 78 ;
     geolod:countD18OSamples 78 ;
+    geolod:countDatedD18OSamples 78 ;
     geolod:elevation_m 975.0 ;
+    geolod:oldestAgeKaBP 23.1680 ;
     geolod:siteId 83 ;
+    geolod:youngestAgeKaBP 5.3162 ;
     geo:hasGeometry sisal:geom_site_0083 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2695,8 +2944,11 @@ geolod:Cave_site_0084 a geolod:Cave,
     rdfs:label "Leány cave"@en ;
     geolod:countD13CSamples 189 ;
     geolod:countD18OSamples 189 ;
+    geolod:countDatedD18OSamples 189 ;
     geolod:elevation_m 420.0 ;
+    geolod:oldestAgeKaBP 10.5432 ;
     geolod:siteId 84 ;
+    geolod:youngestAgeKaBP 4.7388 ;
     geo:hasGeometry sisal:geom_site_0084 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2705,8 +2957,11 @@ geolod:Cave_site_0085 a geolod:Cave,
     rdfs:label "Macal Chasm"@en ;
     geolod:countD13CSamples 660 ;
     geolod:countD18OSamples 660 ;
+    geolod:countDatedD18OSamples 660 ;
     geolod:elevation_m 530.0 ;
+    geolod:oldestAgeKaBP 5.2450 ;
     geolod:siteId 85 ;
+    geolod:youngestAgeKaBP -0.0426 ;
     geo:hasGeometry sisal:geom_site_0085 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2715,8 +2970,11 @@ geolod:Cave_site_0086 a geolod:Cave,
     rdfs:label "Modric cave"@en ;
     geolod:countD13CSamples 218 ;
     geolod:countD18OSamples 218 ;
+    geolod:countDatedD18OSamples 123 ;
     geolod:elevation_m 32.0 ;
+    geolod:oldestAgeKaBP 1.6369 ;
     geolod:siteId 86 ;
+    geolod:youngestAgeKaBP -0.0580 ;
     geo:hasGeometry sisal:geom_site_0086 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2725,8 +2983,11 @@ geolod:Cave_site_0087 a geolod:Cave,
     rdfs:label "Pindal cave"@en ;
     geolod:countD13CSamples 1199 ;
     geolod:countD18OSamples 1217 ;
+    geolod:countDatedD18OSamples 1217 ;
     geolod:elevation_m 24.0 ;
+    geolod:oldestAgeKaBP 29.3400 ;
     geolod:siteId 87 ;
+    geolod:youngestAgeKaBP 11.6403 ;
     geo:hasGeometry sisal:geom_site_0087 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2735,8 +2996,11 @@ geolod:Cave_site_0088 a geolod:Cave,
     rdfs:label "Postojna cave"@en ;
     geolod:countD13CSamples 10 ;
     geolod:countD18OSamples 10 ;
+    geolod:countDatedD18OSamples 10 ;
     geolod:elevation_m 529.0 ;
+    geolod:oldestAgeKaBP 0.0080 ;
     geolod:siteId 88 ;
+    geolod:youngestAgeKaBP -0.0460 ;
     geo:hasGeometry sisal:geom_site_0088 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2745,8 +3009,11 @@ geolod:Cave_site_0089 a geolod:Cave,
     rdfs:label "New St Michael's cave"@en ;
     geolod:countD13CSamples 443 ;
     geolod:countD18OSamples 443 ;
+    geolod:countDatedD18OSamples 443 ;
     geolod:elevation_m 325.0 ;
+    geolod:oldestAgeKaBP 0.0020 ;
     geolod:siteId 89 ;
+    geolod:youngestAgeKaBP -0.0536 ;
     geo:hasGeometry sisal:geom_site_0089 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2755,8 +3022,11 @@ geolod:Cave_site_0090 a geolod:Cave,
     rdfs:label "Trió cave"@en ;
     geolod:countD13CSamples 142 ;
     geolod:countD18OSamples 142 ;
+    geolod:countDatedD18OSamples 142 ;
     geolod:elevation_m 275.0 ;
+    geolod:oldestAgeKaBP 4.7108 ;
     geolod:siteId 90 ;
+    geolod:youngestAgeKaBP 3.0279 ;
     geo:hasGeometry sisal:geom_site_0090 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2765,8 +3035,11 @@ geolod:Cave_site_0091 a geolod:Cave,
     rdfs:label "Ursilor cave"@en ;
     geolod:countD13CSamples 39 ;
     geolod:countD18OSamples 39 ;
+    geolod:countDatedD18OSamples 39 ;
     geolod:elevation_m 482.0 ;
+    geolod:oldestAgeKaBP 7.0684 ;
     geolod:siteId 91 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0091 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2775,8 +3048,11 @@ geolod:Cave_site_0092 a geolod:Cave,
     rdfs:label "Bir-Uja cave"@en ;
     geolod:countD13CSamples 447 ;
     geolod:countD18OSamples 447 ;
+    geolod:countDatedD18OSamples 447 ;
     geolod:elevation_m 1435.0 ;
+    geolod:oldestAgeKaBP 0.8003 ;
     geolod:siteId 92 ;
+    geolod:youngestAgeKaBP -0.0610 ;
     geo:hasGeometry sisal:geom_site_0092 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2785,8 +3061,11 @@ geolod:Cave_site_0093 a geolod:Cave,
     rdfs:label "Green Cathedral cave"@en ;
     geolod:countD13CSamples 656 ;
     geolod:countD18OSamples 655 ;
+    geolod:countDatedD18OSamples 655 ;
     geolod:elevation_m 569.0 ;
+    geolod:oldestAgeKaBP 565.2800 ;
     geolod:siteId 93 ;
+    geolod:youngestAgeKaBP 210.8700 ;
     geo:hasGeometry sisal:geom_site_0093 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2795,8 +3074,11 @@ geolod:Cave_site_0094 a geolod:Cave,
     rdfs:label "Anjohibe"@en ;
     geolod:countD13CSamples 2556 ;
     geolod:countD18OSamples 2556 ;
+    geolod:countDatedD18OSamples 2556 ;
     geolod:elevation_m 131.0 ;
+    geolod:oldestAgeKaBP 9.0275 ;
     geolod:siteId 94 ;
+    geolod:youngestAgeKaBP -0.0640 ;
     geo:hasGeometry sisal:geom_site_0094 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2805,8 +3087,11 @@ geolod:Cave_site_0095 a geolod:Cave,
     rdfs:label "Brown's cave"@en ;
     geolod:countD13CSamples 1476 ;
     geolod:countD18OSamples 1476 ;
+    geolod:countDatedD18OSamples 1476 ;
     geolod:elevation_m 25.0 ;
+    geolod:oldestAgeKaBP 6.6037 ;
     geolod:siteId 95 ;
+    geolod:youngestAgeKaBP 4.6268 ;
     geo:hasGeometry sisal:geom_site_0095 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2815,8 +3100,11 @@ geolod:Cave_site_0096 a geolod:Cave,
     rdfs:label "Brown's Folly mine"@en ;
     geolod:countD13CSamples 46 ;
     geolod:countD18OSamples 46 ;
+    geolod:countDatedD18OSamples 46 ;
     geolod:elevation_m 150.0 ;
+    geolod:oldestAgeKaBP 0.0320 ;
     geolod:siteId 96 ;
+    geolod:youngestAgeKaBP -0.0470 ;
     geo:hasGeometry sisal:geom_site_0096 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2825,8 +3113,11 @@ geolod:Cave_site_0097 a geolod:Cave,
     rdfs:label "Bue Marino cave"@en ;
     geolod:countD13CSamples 295 ;
     geolod:countD18OSamples 295 ;
+    geolod:countDatedD18OSamples 295 ;
     geolod:elevation_m 0.0 ;
+    geolod:oldestAgeKaBP 112.8810 ;
     geolod:siteId 97 ;
+    geolod:youngestAgeKaBP 110.2070 ;
     geo:hasGeometry sisal:geom_site_0097 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2835,8 +3126,11 @@ geolod:Cave_site_0098 a geolod:Cave,
     rdfs:label "Crag cave"@en ;
     geolod:countD13CSamples 145 ;
     geolod:countD18OSamples 145 ;
+    geolod:countDatedD18OSamples 145 ;
     geolod:elevation_m 60.0 ;
+    geolod:oldestAgeKaBP 10.1320 ;
     geolod:siteId 98 ;
+    geolod:youngestAgeKaBP -0.0470 ;
     geo:hasGeometry sisal:geom_site_0098 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2845,8 +3139,11 @@ geolod:Cave_site_0099 a geolod:Cave,
     rdfs:label "Dante cave"@en ;
     geolod:countD13CSamples 579 ;
     geolod:countD18OSamples 579 ;
+    geolod:countDatedD18OSamples 579 ;
     geolod:elevation_m 1400.0 ;
+    geolod:oldestAgeKaBP 4.6180 ;
     geolod:siteId 99 ;
+    geolod:youngestAgeKaBP 0.0109 ;
     geo:hasGeometry sisal:geom_site_0099 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2855,8 +3152,11 @@ geolod:Cave_site_0100 a geolod:Cave,
     rdfs:label "Katerloch cave"@en ;
     geolod:countD13CSamples 2534 ;
     geolod:countD18OSamples 2534 ;
+    geolod:countDatedD18OSamples 2534 ;
     geolod:elevation_m 900.0 ;
+    geolod:oldestAgeKaBP 129.5995 ;
     geolod:siteId 100 ;
+    geolod:youngestAgeKaBP 7.0795 ;
     geo:hasGeometry sisal:geom_site_0100 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2865,8 +3165,11 @@ geolod:Cave_site_0101 a geolod:Cave,
     rdfs:label "Klapferloch cave"@en ;
     geolod:countD13CSamples 2814 ;
     geolod:countD18OSamples 2814 ;
+    geolod:countDatedD18OSamples 2814 ;
     geolod:elevation_m 1140.0 ;
+    geolod:oldestAgeKaBP 2.9430 ;
     geolod:siteId 101 ;
+    geolod:youngestAgeKaBP -0.0470 ;
     geo:hasGeometry sisal:geom_site_0101 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2875,8 +3178,11 @@ geolod:Cave_site_0102 a geolod:Cave,
     rdfs:label "Korallgrottan cave"@en ;
     geolod:countD13CSamples 486 ;
     geolod:countD18OSamples 486 ;
+    geolod:countDatedD18OSamples 486 ;
     geolod:elevation_m 570.0 ;
+    geolod:oldestAgeKaBP 8.8961 ;
     geolod:siteId 102 ;
+    geolod:youngestAgeKaBP -0.0550 ;
     geo:hasGeometry sisal:geom_site_0102 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2885,8 +3191,11 @@ geolod:Cave_site_0103 a geolod:Cave,
     rdfs:label "Lapa Doce cave"@en ;
     geolod:countD13CSamples 124 ;
     geolod:countD18OSamples 124 ;
+    geolod:countDatedD18OSamples 124 ;
     geolod:elevation_m 680.0 ;
+    geolod:oldestAgeKaBP 0.0391 ;
     geolod:siteId 103 ;
+    geolod:youngestAgeKaBP -0.0610 ;
     geo:hasGeometry sisal:geom_site_0103 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2895,8 +3204,11 @@ geolod:Cave_site_0104 a geolod:Cave,
     rdfs:label "Liang Luar"@en ;
     geolod:countD13CSamples 2050 ;
     geolod:countD18OSamples 4625 ;
+    geolod:countDatedD18OSamples 4625 ;
     geolod:elevation_m 550.0 ;
+    geolod:oldestAgeKaBP 90.9362 ;
     geolod:siteId 104 ;
+    geolod:youngestAgeKaBP -0.0540 ;
     geo:hasGeometry sisal:geom_site_0104 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2905,8 +3217,11 @@ geolod:Cave_site_0105 a geolod:Cave,
     rdfs:label "Schneckenloch cave"@en ;
     geolod:countD13CSamples 2481 ;
     geolod:countD18OSamples 3235 ;
+    geolod:countDatedD18OSamples 3235 ;
     geolod:elevation_m 1285.0 ;
+    geolod:oldestAgeKaBP 134.0850 ;
     geolod:siteId 105 ;
+    geolod:youngestAgeKaBP 75.0045 ;
     geo:hasGeometry sisal:geom_site_0105 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2915,8 +3230,11 @@ geolod:Cave_site_0106 a geolod:Cave,
     rdfs:label "Seso cave"@en ;
     geolod:countD13CSamples 153 ;
     geolod:countD18OSamples 153 ;
+    geolod:countDatedD18OSamples 153 ;
     geolod:elevation_m 794.0 ;
+    geolod:oldestAgeKaBP 12.9952 ;
     geolod:siteId 106 ;
+    geolod:youngestAgeKaBP 11.6163 ;
     geo:hasGeometry sisal:geom_site_0106 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2925,8 +3243,11 @@ geolod:Cave_site_0107 a geolod:Cave,
     rdfs:label "Yok Balum cave"@en ;
     geolod:countD13CSamples 7589 ;
     geolod:countD18OSamples 7534 ;
+    geolod:countDatedD18OSamples 7534 ;
     geolod:elevation_m 336.0 ;
+    geolod:oldestAgeKaBP 1.9646 ;
     geolod:siteId 107 ;
+    geolod:youngestAgeKaBP -0.0555 ;
     geo:hasGeometry sisal:geom_site_0107 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2935,8 +3256,11 @@ geolod:Cave_site_0108 a geolod:Cave,
     rdfs:label "Clamouse cave"@en ;
     geolod:countD13CSamples 309 ;
     geolod:countD18OSamples 309 ;
+    geolod:countDatedD18OSamples 309 ;
     geolod:elevation_m 110.0 ;
+    geolod:oldestAgeKaBP 187.4050 ;
     geolod:siteId 108 ;
+    geolod:youngestAgeKaBP 0.1423 ;
     geo:hasGeometry sisal:geom_site_0108 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2945,8 +3269,11 @@ geolod:Cave_site_0109 a geolod:Cave,
     rdfs:label "Molinos cave"@en ;
     geolod:countD13CSamples 309 ;
     geolod:countD18OSamples 309 ;
+    geolod:countDatedD18OSamples 309 ;
     geolod:elevation_m 1050.0 ;
+    geolod:oldestAgeKaBP 11.3348 ;
     geolod:siteId 109 ;
+    geolod:youngestAgeKaBP 3.2530 ;
     geo:hasGeometry sisal:geom_site_0109 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2955,8 +3282,11 @@ geolod:Cave_site_0110 a geolod:Cave,
     rdfs:label "Ma'ale Efrayim cave"@en ;
     geolod:countD13CSamples 392 ;
     geolod:countD18OSamples 394 ;
+    geolod:countDatedD18OSamples 394 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 66.9480 ;
     geolod:siteId 110 ;
+    geolod:youngestAgeKaBP 16.5480 ;
     geo:hasGeometry sisal:geom_site_0110 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2965,8 +3295,11 @@ geolod:Cave_site_0111 a geolod:Cave,
     rdfs:label "Rainha cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 955 ;
+    geolod:countDatedD18OSamples 955 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 23.8904 ;
     geolod:siteId 111 ;
+    geolod:youngestAgeKaBP 4.0448 ;
     geo:hasGeometry sisal:geom_site_0111 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2975,8 +3308,11 @@ geolod:Cave_site_0112 a geolod:Cave,
     rdfs:label "Xinya cave"@en ;
     geolod:countD13CSamples 800 ;
     geolod:countD18OSamples 985 ;
+    geolod:countDatedD18OSamples 985 ;
     geolod:elevation_m 1250.0 ;
+    geolod:oldestAgeKaBP 69.5527 ;
     geolod:siteId 112 ;
+    geolod:youngestAgeKaBP -0.0555 ;
     geo:hasGeometry sisal:geom_site_0112 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2985,8 +3321,11 @@ geolod:Cave_site_0113 a geolod:Cave,
     rdfs:label "Paixão cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1272 ;
+    geolod:countDatedD18OSamples 1272 ;
     geolod:elevation_m 598.0 ;
+    geolod:oldestAgeKaBP 29.7444 ;
     geolod:siteId 113 ;
+    geolod:youngestAgeKaBP 13.8754 ;
     geo:hasGeometry sisal:geom_site_0113 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -2995,8 +3334,11 @@ geolod:Cave_site_0114 a geolod:Cave,
     rdfs:label "Achere cave"@en ;
     geolod:countD13CSamples 209 ;
     geolod:countD18OSamples 209 ;
+    geolod:countDatedD18OSamples 209 ;
     geolod:elevation_m 1534.0 ;
+    geolod:oldestAgeKaBP 4.9680 ;
     geolod:siteId 114 ;
+    geolod:youngestAgeKaBP 4.5225 ;
     geo:hasGeometry sisal:geom_site_0114 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3005,8 +3347,11 @@ geolod:Cave_site_0115 a geolod:Cave,
     rdfs:label "Hölloch im Mahdtal"@en ;
     geolod:countD13CSamples 5604 ;
     geolod:countD18OSamples 9949 ;
+    geolod:countDatedD18OSamples 6280 ;
     geolod:elevation_m 1240.0 ;
+    geolod:oldestAgeKaBP 131.7650 ;
     geolod:siteId 115 ;
+    geolod:youngestAgeKaBP 10.2177 ;
     geo:hasGeometry sisal:geom_site_0115 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3015,8 +3360,11 @@ geolod:Cave_site_0116 a geolod:Cave,
     rdfs:label "Bukit Assam cave"@en ;
     geolod:countD13CSamples 862 ;
     geolod:countD18OSamples 4863 ;
+    geolod:countDatedD18OSamples 4863 ;
     geolod:elevation_m 150.0 ;
+    geolod:oldestAgeKaBP 45.5930 ;
     geolod:siteId 116 ;
+    geolod:youngestAgeKaBP -0.0447 ;
     geo:hasGeometry sisal:geom_site_0116 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3025,8 +3373,11 @@ geolod:Cave_site_0117 a geolod:Cave,
     rdfs:label "Bunker cave"@en ;
     geolod:countD13CSamples 6454 ;
     geolod:countD18OSamples 9131 ;
+    geolod:countDatedD18OSamples 9131 ;
     geolod:elevation_m 184.0 ;
+    geolod:oldestAgeKaBP 51.9493 ;
     geolod:siteId 117 ;
+    geolod:youngestAgeKaBP -0.0574 ;
     geo:hasGeometry sisal:geom_site_0117 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3035,8 +3386,11 @@ geolod:Cave_site_0118 a geolod:Cave,
     rdfs:label "Clearwater cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 689 ;
+    geolod:countDatedD18OSamples 689 ;
     geolod:elevation_m 120.0 ;
+    geolod:oldestAgeKaBP 161.5330 ;
     geolod:siteId 118 ;
+    geolod:youngestAgeKaBP 73.7560 ;
     geo:hasGeometry sisal:geom_site_0118 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3045,8 +3399,11 @@ geolod:Cave_site_0119 a geolod:Cave,
     rdfs:label "Cueva de Asiul"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 2019 ;
+    geolod:countDatedD18OSamples 2019 ;
     geolod:elevation_m 285.0 ;
+    geolod:oldestAgeKaBP 12.1610 ;
     geolod:siteId 119 ;
+    geolod:youngestAgeKaBP -0.0620 ;
     geo:hasGeometry sisal:geom_site_0119 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3055,8 +3412,11 @@ geolod:Cave_site_0120 a geolod:Cave,
     rdfs:label "Ejulve cave"@en ;
     geolod:countD13CSamples 1237 ;
     geolod:countD18OSamples 1237 ;
+    geolod:countDatedD18OSamples 1237 ;
     geolod:elevation_m 1240.0 ;
+    geolod:oldestAgeKaBP 257.4265 ;
     geolod:siteId 120 ;
+    geolod:youngestAgeKaBP 2.7084 ;
     geo:hasGeometry sisal:geom_site_0120 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3065,8 +3425,11 @@ geolod:Cave_site_0121 a geolod:Cave,
     rdfs:label "Entrische Kirche cave"@en ;
     geolod:countD13CSamples 1340 ;
     geolod:countD18OSamples 1340 ;
+    geolod:countDatedD18OSamples 1340 ;
     geolod:elevation_m 2119.0 ;
+    geolod:oldestAgeKaBP 126.8890 ;
     geolod:siteId 121 ;
+    geolod:youngestAgeKaBP 113.3895 ;
     geo:hasGeometry sisal:geom_site_0121 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3075,8 +3438,11 @@ geolod:Cave_site_0122 a geolod:Cave,
     rdfs:label "Heshang cave"@en ;
     geolod:countD13CSamples 2086 ;
     geolod:countD18OSamples 2086 ;
+    geolod:countDatedD18OSamples 2086 ;
     geolod:elevation_m 294.0 ;
+    geolod:oldestAgeKaBP 9.4700 ;
     geolod:siteId 122 ;
+    geolod:youngestAgeKaBP -0.0520 ;
     geo:hasGeometry sisal:geom_site_0122 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3085,8 +3451,11 @@ geolod:Cave_site_0123 a geolod:Cave,
     rdfs:label "Milchbach cave"@en ;
     geolod:countD13CSamples 3135 ;
     geolod:countD18OSamples 3135 ;
+    geolod:countDatedD18OSamples 2838 ;
     geolod:elevation_m 1840.0 ;
+    geolod:oldestAgeKaBP 9.0258 ;
     geolod:siteId 123 ;
+    geolod:youngestAgeKaBP 1.9870 ;
     geo:hasGeometry sisal:geom_site_0123 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3095,8 +3464,11 @@ geolod:Cave_site_0124 a geolod:Cave,
     rdfs:label "Pinnacle cave"@en ;
     geolod:countD13CSamples 216 ;
     geolod:countD18OSamples 216 ;
+    geolod:countDatedD18OSamples 216 ;
     geolod:elevation_m 1792.0 ;
+    geolod:oldestAgeKaBP 19.9996 ;
     geolod:siteId 124 ;
+    geolod:youngestAgeKaBP 15.5846 ;
     geo:hasGeometry sisal:geom_site_0124 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3105,8 +3477,11 @@ geolod:Cave_site_0125 a geolod:Cave,
     rdfs:label "Schafsloch cave "@en ;
     geolod:countD13CSamples 318 ;
     geolod:countD18OSamples 318 ;
+    geolod:countDatedD18OSamples 318 ;
     geolod:elevation_m 1890.0 ;
+    geolod:oldestAgeKaBP 137.3900 ;
     geolod:siteId 125 ;
+    geolod:youngestAgeKaBP 130.0500 ;
     geo:hasGeometry sisal:geom_site_0125 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3115,8 +3490,11 @@ geolod:Cave_site_0126 a geolod:Cave,
     rdfs:label "Tityana cave"@en ;
     geolod:countD13CSamples 125 ;
     geolod:countD18OSamples 125 ;
+    geolod:countDatedD18OSamples 125 ;
     geolod:elevation_m 1470.0 ;
+    geolod:oldestAgeKaBP 3.9070 ;
     geolod:siteId 126 ;
+    geolod:youngestAgeKaBP 1.5800 ;
     geo:hasGeometry sisal:geom_site_0126 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3125,8 +3503,11 @@ geolod:Cave_site_0127 a geolod:Cave,
     rdfs:label "Xiaobailong cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1894 ;
+    geolod:countDatedD18OSamples 1894 ;
     geolod:elevation_m 1500.0 ;
+    geolod:oldestAgeKaBP 251.9600 ;
     geolod:siteId 127 ;
+    geolod:youngestAgeKaBP 5.3400 ;
     geo:hasGeometry sisal:geom_site_0127 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3135,8 +3516,11 @@ geolod:Cave_site_0128 a geolod:Cave,
     rdfs:label "Buckeye creek"@en ;
     geolod:countD13CSamples 1024 ;
     geolod:countD18OSamples 3014 ;
+    geolod:countDatedD18OSamples 3014 ;
     geolod:elevation_m 600.0 ;
+    geolod:oldestAgeKaBP 337.5151 ;
     geolod:siteId 128 ;
+    geolod:youngestAgeKaBP -0.0240 ;
     geo:hasGeometry sisal:geom_site_0128 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3145,8 +3529,11 @@ geolod:Cave_site_0129 a geolod:Cave,
     rdfs:label "Grotta di Carburangeli"@en ;
     geolod:countD13CSamples 1232 ;
     geolod:countD18OSamples 1232 ;
+    geolod:countDatedD18OSamples 1232 ;
     geolod:elevation_m 22.0 ;
+    geolod:oldestAgeKaBP 8.3737 ;
     geolod:siteId 129 ;
+    geolod:youngestAgeKaBP 0.9477 ;
     geo:hasGeometry sisal:geom_site_0129 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3155,8 +3542,11 @@ geolod:Cave_site_0130 a geolod:Cave,
     rdfs:label "Dandak cave"@en ;
     geolod:countD13CSamples 1871 ;
     geolod:countD18OSamples 1874 ;
+    geolod:countDatedD18OSamples 1874 ;
     geolod:elevation_m 400.0 ;
+    geolod:oldestAgeKaBP 1.3253 ;
     geolod:siteId 130 ;
+    geolod:youngestAgeKaBP 0.3879 ;
     geo:hasGeometry sisal:geom_site_0130 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3165,8 +3555,11 @@ geolod:Cave_site_0131 a geolod:Cave,
     rdfs:label "Grotta di Ernesto"@en ;
     geolod:countD13CSamples 1220 ;
     geolod:countD18OSamples 1220 ;
+    geolod:countDatedD18OSamples 1220 ;
     geolod:elevation_m 1167.0 ;
+    geolod:oldestAgeKaBP 7.9691 ;
     geolod:siteId 131 ;
+    geolod:youngestAgeKaBP 2.5115 ;
     geo:hasGeometry sisal:geom_site_0131 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3175,8 +3568,11 @@ geolod:Cave_site_0132 a geolod:Cave,
     rdfs:label "Kleegruben cave"@en ;
     geolod:countD13CSamples 3224 ;
     geolod:countD18OSamples 3224 ;
+    geolod:countDatedD18OSamples 3224 ;
     geolod:elevation_m 2165.0 ;
+    geolod:oldestAgeKaBP 58.2660 ;
     geolod:siteId 132 ;
+    geolod:youngestAgeKaBP 47.3960 ;
     geo:hasGeometry sisal:geom_site_0132 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3185,8 +3581,11 @@ geolod:Cave_site_0133 a geolod:Cave,
     rdfs:label "Buca della Renella"@en ;
     geolod:countD13CSamples 1619 ;
     geolod:countD18OSamples 1617 ;
+    geolod:countDatedD18OSamples 1617 ;
     geolod:elevation_m 300.0 ;
+    geolod:oldestAgeKaBP 7.2772 ;
     geolod:siteId 133 ;
+    geolod:youngestAgeKaBP 1.0241 ;
     geo:hasGeometry sisal:geom_site_0133 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3195,8 +3594,11 @@ geolod:Cave_site_0134 a geolod:Cave,
     rdfs:label "Cave of the Bells"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1207 ;
+    geolod:countDatedD18OSamples 1207 ;
     geolod:elevation_m 1639.0 ;
+    geolod:oldestAgeKaBP 53.3350 ;
     geolod:siteId 134 ;
+    geolod:youngestAgeKaBP 11.4840 ;
     geo:hasGeometry sisal:geom_site_0134 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3205,8 +3607,11 @@ geolod:Cave_site_0135 a geolod:Cave,
     rdfs:label "Grotte de Piste"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 792 ;
+    geolod:countDatedD18OSamples 792 ;
     geolod:elevation_m 1260.0 ;
+    geolod:oldestAgeKaBP 11.4159 ;
     geolod:siteId 135 ;
+    geolod:youngestAgeKaBP -0.0087 ;
     geo:hasGeometry sisal:geom_site_0135 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3215,8 +3620,11 @@ geolod:Cave_site_0136 a geolod:Cave,
     rdfs:label "Juxtlahuaca cave"@en ;
     geolod:countD13CSamples 688 ;
     geolod:countD18OSamples 2707 ;
+    geolod:countDatedD18OSamples 2707 ;
     geolod:elevation_m 934.0 ;
+    geolod:oldestAgeKaBP 22.0610 ;
     geolod:siteId 136 ;
+    geolod:youngestAgeKaBP -0.0601 ;
     geo:hasGeometry sisal:geom_site_0136 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3225,8 +3633,11 @@ geolod:Cave_site_0137 a geolod:Cave,
     rdfs:label "Kinderlinskaya cave"@en ;
     geolod:countD13CSamples 933 ;
     geolod:countD18OSamples 1866 ;
+    geolod:countDatedD18OSamples 1866 ;
     geolod:elevation_m 240.0 ;
+    geolod:oldestAgeKaBP 11.7040 ;
     geolod:siteId 137 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0137 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3235,8 +3646,11 @@ geolod:Cave_site_0138 a geolod:Cave,
     rdfs:label "Moomi cave"@en ;
     geolod:countD13CSamples 632 ;
     geolod:countD18OSamples 1521 ;
+    geolod:countDatedD18OSamples 1521 ;
     geolod:elevation_m 400.0 ;
+    geolod:oldestAgeKaBP 53.4840 ;
     geolod:siteId 138 ;
+    geolod:youngestAgeKaBP 11.0860 ;
     geo:hasGeometry sisal:geom_site_0138 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3245,8 +3659,11 @@ geolod:Cave_site_0139 a geolod:Cave,
     rdfs:label "Oregon caves national monument"@en ;
     geolod:countD13CSamples 2680 ;
     geolod:countD18OSamples 2680 ;
+    geolod:countDatedD18OSamples 2680 ;
     geolod:elevation_m 1300.0 ;
+    geolod:oldestAgeKaBP 7.9917 ;
     geolod:siteId 139 ;
+    geolod:youngestAgeKaBP 0.2343 ;
     geo:hasGeometry sisal:geom_site_0139 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3255,8 +3672,11 @@ geolod:Cave_site_0140 a geolod:Cave,
     rdfs:label "Sanbao cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 10061 ;
+    geolod:countDatedD18OSamples 10061 ;
     geolod:elevation_m 1900.0 ;
+    geolod:oldestAgeKaBP 641.3000 ;
     geolod:siteId 140 ;
+    geolod:youngestAgeKaBP 0.0703 ;
     geo:hasGeometry sisal:geom_site_0140 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3265,8 +3685,11 @@ geolod:Cave_site_0141 a geolod:Cave,
     rdfs:label "Sofular cave"@en ;
     geolod:countD13CSamples 3976 ;
     geolod:countD18OSamples 9358 ;
+    geolod:countDatedD18OSamples 9358 ;
     geolod:elevation_m 440.0 ;
+    geolod:oldestAgeKaBP 670.0000 ;
     geolod:siteId 141 ;
+    geolod:youngestAgeKaBP -0.0600 ;
     geo:hasGeometry sisal:geom_site_0141 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3275,8 +3698,11 @@ geolod:Cave_site_0142 a geolod:Cave,
     rdfs:label "Tianmen"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1399 ;
+    geolod:countDatedD18OSamples 1399 ;
     geolod:elevation_m 4800.0 ;
+    geolod:oldestAgeKaBP 127.2150 ;
     geolod:siteId 142 ;
+    geolod:youngestAgeKaBP 0.6108 ;
     geo:hasGeometry sisal:geom_site_0142 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3285,8 +3711,11 @@ geolod:Cave_site_0143 a geolod:Cave,
     rdfs:label "Cova da Arcoia"@en ;
     geolod:countD13CSamples 100 ;
     geolod:countD18OSamples 100 ;
+    geolod:countDatedD18OSamples 100 ;
     geolod:elevation_m 1240.0 ;
+    geolod:oldestAgeKaBP 9.4400 ;
     geolod:siteId 143 ;
+    geolod:youngestAgeKaBP 0.3400 ;
     geo:hasGeometry sisal:geom_site_0143 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3295,8 +3724,11 @@ geolod:Cave_site_0144 a geolod:Cave,
     rdfs:label "Botuverá cave"@en ;
     geolod:countD13CSamples 1599 ;
     geolod:countD18OSamples 1599 ;
+    geolod:countDatedD18OSamples 1599 ;
     geolod:elevation_m 180.0 ;
+    geolod:oldestAgeKaBP 116.1033 ;
     geolod:siteId 144 ;
+    geolod:youngestAgeKaBP -0.0580 ;
     geo:hasGeometry sisal:geom_site_0144 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3305,8 +3737,11 @@ geolod:Cave_site_0145 a geolod:Cave,
     rdfs:label "Antro del Corchia"@en ;
     geolod:countD13CSamples 7379 ;
     geolod:countD18OSamples 7490 ;
+    geolod:countDatedD18OSamples 7490 ;
     geolod:elevation_m 840.0 ;
+    geolod:oldestAgeKaBP 393.4077 ;
     geolod:siteId 145 ;
+    geolod:youngestAgeKaBP 2.4422 ;
     geo:hasGeometry sisal:geom_site_0145 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3315,8 +3750,11 @@ geolod:Cave_site_0146 a geolod:Cave,
     rdfs:label "Gunung-buda cave (snail shell cave)"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 728 ;
+    geolod:countDatedD18OSamples 728 ;
     geolod:elevation_m 150.0 ;
+    geolod:oldestAgeKaBP 26.3800 ;
     geolod:siteId 146 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0146 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3325,8 +3763,11 @@ geolod:Cave_site_0147 a geolod:Cave,
     rdfs:label "Fort Stanton cave"@en ;
     geolod:countD13CSamples 359 ;
     geolod:countD18OSamples 1568 ;
+    geolod:countDatedD18OSamples 1568 ;
     geolod:elevation_m 1864.0 ;
+    geolod:oldestAgeKaBP 55.8460 ;
     geolod:siteId 147 ;
+    geolod:youngestAgeKaBP 11.3100 ;
     geo:hasGeometry sisal:geom_site_0147 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3335,8 +3776,11 @@ geolod:Cave_site_0148 a geolod:Cave,
     rdfs:label "Buffalo cave"@en ;
     geolod:countD13CSamples 483 ;
     geolod:countD18OSamples 483 ;
+    geolod:countDatedD18OSamples 483 ;
     geolod:elevation_m 1140.0 ;
+    geolod:oldestAgeKaBP 1989.8500 ;
     geolod:siteId 148 ;
+    geolod:youngestAgeKaBP 1517.5500 ;
     geo:hasGeometry sisal:geom_site_0148 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3345,6 +3789,7 @@ geolod:Cave_site_0149 a geolod:Cave,
     rdfs:label "Arch cave"@en ;
     geolod:countD13CSamples 40 ;
     geolod:countD18OSamples 40 ;
+    geolod:countDatedD18OSamples 0 ;
     geolod:elevation_m 660.0 ;
     geolod:siteId 149 ;
     geo:hasGeometry sisal:geom_site_0149 ;
@@ -3355,8 +3800,11 @@ geolod:Cave_site_0150 a geolod:Cave,
     rdfs:label "Exhaleair cave"@en ;
     geolod:countD13CSamples 33 ;
     geolod:countD18OSamples 33 ;
+    geolod:countDatedD18OSamples 33 ;
     geolod:elevation_m 685.0 ;
+    geolod:oldestAgeKaBP 15.5675 ;
     geolod:siteId 150 ;
+    geolod:youngestAgeKaBP 0.5238 ;
     geo:hasGeometry sisal:geom_site_0150 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3365,8 +3813,11 @@ geolod:Cave_site_0151 a geolod:Cave,
     rdfs:label "Guillotine cave"@en ;
     geolod:countD13CSamples 187 ;
     geolod:countD18OSamples 187 ;
+    geolod:countDatedD18OSamples 187 ;
     geolod:elevation_m 130.0 ;
+    geolod:oldestAgeKaBP 8.8692 ;
     geolod:siteId 151 ;
+    geolod:youngestAgeKaBP -0.0557 ;
     geo:hasGeometry sisal:geom_site_0151 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3375,8 +3826,11 @@ geolod:Cave_site_0152 a geolod:Cave,
     rdfs:label "Hoti cave"@en ;
     geolod:countD13CSamples 832 ;
     geolod:countD18OSamples 1219 ;
+    geolod:countDatedD18OSamples 1219 ;
     geolod:elevation_m 800.0 ;
+    geolod:oldestAgeKaBP 9.6071 ;
     geolod:siteId 152 ;
+    geolod:youngestAgeKaBP 6.0260 ;
     geo:hasGeometry sisal:geom_site_0152 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3385,8 +3839,11 @@ geolod:Cave_site_0153 a geolod:Cave,
     rdfs:label "Jhumar cave"@en ;
     geolod:countD13CSamples 572 ;
     geolod:countD18OSamples 642 ;
+    geolod:countDatedD18OSamples 642 ;
     geolod:elevation_m 600.0 ;
+    geolod:oldestAgeKaBP 0.8738 ;
     geolod:siteId 153 ;
+    geolod:youngestAgeKaBP -0.0580 ;
     geo:hasGeometry sisal:geom_site_0153 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3395,8 +3852,11 @@ geolod:Cave_site_0154 a geolod:Cave,
     rdfs:label "Jiuxian cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1043 ;
+    geolod:countDatedD18OSamples 1043 ;
     geolod:elevation_m 1495.0 ;
+    geolod:oldestAgeKaBP 18.9580 ;
     geolod:siteId 154 ;
+    geolod:youngestAgeKaBP -0.0480 ;
     geo:hasGeometry sisal:geom_site_0154 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3405,8 +3865,11 @@ geolod:Cave_site_0155 a geolod:Cave,
     rdfs:label "KNI-51"@en ;
     geolod:countD13CSamples 182 ;
     geolod:countD18OSamples 2156 ;
+    geolod:countDatedD18OSamples 2156 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 20.8771 ;
     geolod:siteId 155 ;
+    geolod:youngestAgeKaBP -0.0585 ;
     geo:hasGeometry sisal:geom_site_0155 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3415,8 +3878,11 @@ geolod:Cave_site_0156 a geolod:Cave,
     rdfs:label "Mavri Trypa cave"@en ;
     geolod:countD13CSamples 354 ;
     geolod:countD18OSamples 354 ;
+    geolod:countDatedD18OSamples 354 ;
     geolod:elevation_m 70.0 ;
+    geolod:oldestAgeKaBP 4.6874 ;
     geolod:siteId 156 ;
+    geolod:youngestAgeKaBP 1.2965 ;
     geo:hasGeometry sisal:geom_site_0156 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3425,8 +3891,11 @@ geolod:Cave_site_0157 a geolod:Cave,
     rdfs:label "Munagamanu cave"@en ;
     geolod:countD13CSamples 423 ;
     geolod:countD18OSamples 423 ;
+    geolod:countDatedD18OSamples 423 ;
     geolod:elevation_m 475.0 ;
+    geolod:oldestAgeKaBP 3.8522 ;
     geolod:siteId 157 ;
+    geolod:youngestAgeKaBP -0.0591 ;
     geo:hasGeometry sisal:geom_site_0157 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3435,8 +3904,11 @@ geolod:Cave_site_0158 a geolod:Cave,
     rdfs:label "Nettlebed cave"@en ;
     geolod:countD13CSamples 201 ;
     geolod:countD18OSamples 201 ;
+    geolod:countDatedD18OSamples 201 ;
     geolod:elevation_m 390.0 ;
+    geolod:oldestAgeKaBP 30.8486 ;
     geolod:siteId 158 ;
+    geolod:youngestAgeKaBP 0.1148 ;
     geo:hasGeometry sisal:geom_site_0158 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3445,8 +3917,11 @@ geolod:Cave_site_0159 a geolod:Cave,
     rdfs:label "Qunf cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1412 ;
+    geolod:countDatedD18OSamples 1412 ;
     geolod:elevation_m 650.0 ;
+    geolod:oldestAgeKaBP 10.5580 ;
     geolod:siteId 159 ;
+    geolod:youngestAgeKaBP 0.3080 ;
     geo:hasGeometry sisal:geom_site_0159 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3455,8 +3930,11 @@ geolod:Cave_site_0160 a geolod:Cave,
     rdfs:label "Soreq cave"@en ;
     geolod:countD13CSamples 2631 ;
     geolod:countD18OSamples 4064 ;
+    geolod:countDatedD18OSamples 4064 ;
     geolod:elevation_m 400.0 ;
+    geolod:oldestAgeKaBP 183.9500 ;
     geolod:siteId 160 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0160 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3465,8 +3943,11 @@ geolod:Cave_site_0161 a geolod:Cave,
     rdfs:label "Aurora cave"@en ;
     geolod:countD13CSamples 124 ;
     geolod:countD18OSamples 124 ;
+    geolod:countDatedD18OSamples 124 ;
     geolod:elevation_m 260.0 ;
+    geolod:oldestAgeKaBP 7.0897 ;
     geolod:siteId 161 ;
+    geolod:youngestAgeKaBP 1.7008 ;
     geo:hasGeometry sisal:geom_site_0161 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3475,8 +3956,11 @@ geolod:Cave_site_0162 a geolod:Cave,
     rdfs:label "Calcite cave (Mt Luxmore, Fiordland)"@en ;
     geolod:countD13CSamples 51 ;
     geolod:countD18OSamples 51 ;
+    geolod:countDatedD18OSamples 51 ;
     geolod:elevation_m 1025.0 ;
+    geolod:oldestAgeKaBP 9.2842 ;
     geolod:siteId 162 ;
+    geolod:youngestAgeKaBP 1.6901 ;
     geo:hasGeometry sisal:geom_site_0162 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3485,8 +3969,11 @@ geolod:Cave_site_0163 a geolod:Cave,
     rdfs:label "Gardener's Gut"@en ;
     geolod:countD13CSamples 208 ;
     geolod:countD18OSamples 208 ;
+    geolod:countDatedD18OSamples 208 ;
     geolod:elevation_m 90.0 ;
+    geolod:oldestAgeKaBP 11.7727 ;
     geolod:siteId 163 ;
+    geolod:youngestAgeKaBP -0.0237 ;
     geo:hasGeometry sisal:geom_site_0163 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3495,8 +3982,11 @@ geolod:Cave_site_0164 a geolod:Cave,
     rdfs:label "Max's cave"@en ;
     geolod:countD13CSamples 61 ;
     geolod:countD18OSamples 61 ;
+    geolod:countDatedD18OSamples 61 ;
     geolod:elevation_m 325.0 ;
+    geolod:oldestAgeKaBP 6.1039 ;
     geolod:siteId 164 ;
+    geolod:youngestAgeKaBP 2.9521 ;
     geo:hasGeometry sisal:geom_site_0164 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3505,8 +3995,11 @@ geolod:Cave_site_0165 a geolod:Cave,
     rdfs:label "Ruakuri cave"@en ;
     geolod:countD13CSamples 829 ;
     geolod:countD18OSamples 829 ;
+    geolod:countDatedD18OSamples 829 ;
     geolod:elevation_m 80.0 ;
+    geolod:oldestAgeKaBP 76.1973 ;
     geolod:siteId 165 ;
+    geolod:youngestAgeKaBP 0.5364 ;
     geo:hasGeometry sisal:geom_site_0165 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3515,8 +4008,11 @@ geolod:Cave_site_0166 a geolod:Cave,
     rdfs:label "Te Reinga cave"@en ;
     geolod:countD13CSamples 429 ;
     geolod:countD18OSamples 429 ;
+    geolod:countDatedD18OSamples 429 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 9.2787 ;
     geolod:siteId 166 ;
+    geolod:youngestAgeKaBP 0.1731 ;
     geo:hasGeometry sisal:geom_site_0166 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3525,6 +4021,7 @@ geolod:Cave_site_0167 a geolod:Cave,
     rdfs:label "Waiau cave"@en ;
     geolod:countD13CSamples 26 ;
     geolod:countD18OSamples 26 ;
+    geolod:countDatedD18OSamples 0 ;
     geolod:elevation_m 100.0 ;
     geolod:siteId 167 ;
     geo:hasGeometry sisal:geom_site_0167 ;
@@ -3535,8 +4032,11 @@ geolod:Cave_site_0168 a geolod:Cave,
     rdfs:label "Wazpretti cave"@en ;
     geolod:countD13CSamples 85 ;
     geolod:countD18OSamples 85 ;
+    geolod:countDatedD18OSamples 85 ;
     geolod:elevation_m 95.0 ;
+    geolod:oldestAgeKaBP 13.4107 ;
     geolod:siteId 168 ;
+    geolod:youngestAgeKaBP 4.9284 ;
     geo:hasGeometry sisal:geom_site_0168 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3545,8 +4045,11 @@ geolod:Cave_site_0169 a geolod:Cave,
     rdfs:label "Doubtful Xanadu"@en ;
     geolod:countD13CSamples 96 ;
     geolod:countD18OSamples 96 ;
+    geolod:countDatedD18OSamples 96 ;
     geolod:elevation_m 960.0 ;
+    geolod:oldestAgeKaBP 11.2157 ;
     geolod:siteId 169 ;
+    geolod:youngestAgeKaBP 2.9296 ;
     geo:hasGeometry sisal:geom_site_0169 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3555,8 +4058,11 @@ geolod:Cave_site_0170 a geolod:Cave,
     rdfs:label "Defore cave"@en ;
     geolod:countD13CSamples 603 ;
     geolod:countD18OSamples 603 ;
+    geolod:countDatedD18OSamples 603 ;
     geolod:elevation_m 150.0 ;
+    geolod:oldestAgeKaBP 0.7314 ;
     geolod:siteId 170 ;
+    geolod:youngestAgeKaBP -0.0460 ;
     geo:hasGeometry sisal:geom_site_0170 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3565,8 +4071,11 @@ geolod:Cave_site_0171 a geolod:Cave,
     rdfs:label "Devils Hole"@en ;
     geolod:countD13CSamples 1830 ;
     geolod:countD18OSamples 1830 ;
+    geolod:countDatedD18OSamples 1830 ;
     geolod:elevation_m 719.0 ;
+    geolod:oldestAgeKaBP 204.2260 ;
     geolod:siteId 171 ;
+    geolod:youngestAgeKaBP 4.8960 ;
     geo:hasGeometry sisal:geom_site_0171 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3575,8 +4084,11 @@ geolod:Cave_site_0172 a geolod:Cave,
     rdfs:label "Wolkberg cave"@en ;
     geolod:countD13CSamples 195 ;
     geolod:countD18OSamples 195 ;
+    geolod:countDatedD18OSamples 195 ;
     geolod:elevation_m 1450.0 ;
+    geolod:oldestAgeKaBP 57.8720 ;
     geolod:siteId 172 ;
+    geolod:youngestAgeKaBP 39.7420 ;
     geo:hasGeometry sisal:geom_site_0172 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3585,8 +4097,11 @@ geolod:Cave_site_0173 a geolod:Cave,
     rdfs:label "Perdida cave"@en ;
     geolod:countD13CSamples 218 ;
     geolod:countD18OSamples 216 ;
+    geolod:countDatedD18OSamples 216 ;
     geolod:elevation_m 350.0 ;
+    geolod:oldestAgeKaBP 0.7420 ;
     geolod:siteId 173 ;
+    geolod:youngestAgeKaBP -0.0538 ;
     geo:hasGeometry sisal:geom_site_0173 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3595,8 +4110,11 @@ geolod:Cave_site_0174 a geolod:Cave,
     rdfs:label "Zhuliuping cave"@en ;
     geolod:countD13CSamples 1128 ;
     geolod:countD18OSamples 1128 ;
+    geolod:countDatedD18OSamples 1128 ;
     geolod:elevation_m 1217.0 ;
+    geolod:oldestAgeKaBP 14.6590 ;
     geolod:siteId 174 ;
+    geolod:youngestAgeKaBP 4.6196 ;
     geo:hasGeometry sisal:geom_site_0174 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3605,8 +4123,11 @@ geolod:Cave_site_0175 a geolod:Cave,
     rdfs:label "Yaoba Don cave"@en ;
     geolod:countD13CSamples 189 ;
     geolod:countD18OSamples 189 ;
+    geolod:countDatedD18OSamples 189 ;
     geolod:elevation_m 420.0 ;
+    geolod:oldestAgeKaBP 30.3000 ;
     geolod:siteId 175 ;
+    geolod:youngestAgeKaBP 19.1000 ;
     geo:hasGeometry sisal:geom_site_0175 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3615,8 +4136,11 @@ geolod:Cave_site_0176 a geolod:Cave,
     rdfs:label "Qingtian cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1806 ;
+    geolod:countDatedD18OSamples 1806 ;
     geolod:elevation_m 1630.0 ;
+    geolod:oldestAgeKaBP 10.8923 ;
     geolod:siteId 176 ;
+    geolod:youngestAgeKaBP 6.0650 ;
     geo:hasGeometry sisal:geom_site_0176 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3625,8 +4149,11 @@ geolod:Cave_site_0177 a geolod:Cave,
     rdfs:label "Santo Tomas cave"@en ;
     geolod:countD13CSamples 2010 ;
     geolod:countD18OSamples 2002 ;
+    geolod:countDatedD18OSamples 2002 ;
     geolod:elevation_m 170.0 ;
+    geolod:oldestAgeKaBP 96.1020 ;
     geolod:siteId 177 ;
+    geolod:youngestAgeKaBP 6.8497 ;
     geo:hasGeometry sisal:geom_site_0177 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3635,8 +4162,11 @@ geolod:Cave_site_0178 a geolod:Cave,
     rdfs:label "Yamen cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1020 ;
+    geolod:countDatedD18OSamples 1020 ;
     geolod:elevation_m 570.0 ;
+    geolod:oldestAgeKaBP 16.3190 ;
     geolod:siteId 178 ;
+    geolod:youngestAgeKaBP 7.3220 ;
     geo:hasGeometry sisal:geom_site_0178 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3645,8 +4175,11 @@ geolod:Cave_site_0179 a geolod:Cave,
     rdfs:label "Closani cave"@en ;
     geolod:countD13CSamples 1832 ;
     geolod:countD18OSamples 1832 ;
+    geolod:countDatedD18OSamples 1832 ;
     geolod:elevation_m 433.0 ;
+    geolod:oldestAgeKaBP 3.7929 ;
     geolod:siteId 179 ;
+    geolod:youngestAgeKaBP -0.0362 ;
     geo:hasGeometry sisal:geom_site_0179 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3655,8 +4188,11 @@ geolod:Cave_site_0180 a geolod:Cave,
     rdfs:label "Chillagoe cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 777 ;
+    geolod:countDatedD18OSamples 777 ;
     geolod:elevation_m 489.0 ;
+    geolod:oldestAgeKaBP 0.7230 ;
     geolod:siteId 180 ;
+    geolod:youngestAgeKaBP -0.0530 ;
     geo:hasGeometry sisal:geom_site_0180 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3665,8 +4201,11 @@ geolod:Cave_site_0181 a geolod:Cave,
     rdfs:label "Forestry cave"@en ;
     geolod:countD13CSamples 2679 ;
     geolod:countD18OSamples 2679 ;
+    geolod:countDatedD18OSamples 2679 ;
     geolod:elevation_m 200.0 ;
+    geolod:oldestAgeKaBP 0.5268 ;
     geolod:siteId 181 ;
+    geolod:youngestAgeKaBP -0.0606 ;
     geo:hasGeometry sisal:geom_site_0181 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3675,8 +4214,11 @@ geolod:Cave_site_0182 a geolod:Cave,
     rdfs:label "Kotumsar cave"@en ;
     geolod:countD13CSamples 1546 ;
     geolod:countD18OSamples 1546 ;
+    geolod:countDatedD18OSamples 1546 ;
     geolod:elevation_m 32.0 ;
+    geolod:oldestAgeKaBP 8.5838 ;
     geolod:siteId 182 ;
+    geolod:youngestAgeKaBP 2.1450 ;
     geo:hasGeometry sisal:geom_site_0182 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3685,8 +4227,11 @@ geolod:Cave_site_0183 a geolod:Cave,
     rdfs:label "Dos Anas cave"@en ;
     geolod:countD13CSamples 1824 ;
     geolod:countD18OSamples 1823 ;
+    geolod:countDatedD18OSamples 1823 ;
     geolod:elevation_m 120.0 ;
+    geolod:oldestAgeKaBP 12.3328 ;
     geolod:siteId 183 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0183 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3695,8 +4240,11 @@ geolod:Cave_site_0184 a geolod:Cave,
     rdfs:label "Cape range"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1499 ;
+    geolod:countDatedD18OSamples 1499 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 1.4390 ;
     geolod:siteId 184 ;
+    geolod:youngestAgeKaBP -0.0600 ;
     geo:hasGeometry sisal:geom_site_0184 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3705,8 +4253,11 @@ geolod:Cave_site_0185 a geolod:Cave,
     rdfs:label "Beatus cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 3037 ;
+    geolod:countDatedD18OSamples 3037 ;
     geolod:elevation_m 875.0 ;
+    geolod:oldestAgeKaBP 110.0384 ;
     geolod:siteId 185 ;
+    geolod:youngestAgeKaBP 77.4695 ;
     geo:hasGeometry sisal:geom_site_0185 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3715,8 +4266,11 @@ geolod:Cave_site_0186 a geolod:Cave,
     rdfs:label "Bribin cave"@en ;
     geolod:countD13CSamples 374 ;
     geolod:countD18OSamples 377 ;
+    geolod:countDatedD18OSamples 377 ;
     geolod:elevation_m 500.0 ;
+    geolod:oldestAgeKaBP 3.9128 ;
     geolod:siteId 186 ;
+    geolod:youngestAgeKaBP 0.3486 ;
     geo:hasGeometry sisal:geom_site_0186 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3725,8 +4279,11 @@ geolod:Cave_site_0187 a geolod:Cave,
     rdfs:label "Cesare Battisti cave"@en ;
     geolod:countD13CSamples 435 ;
     geolod:countD18OSamples 435 ;
+    geolod:countDatedD18OSamples 435 ;
     geolod:elevation_m 1880.0 ;
+    geolod:oldestAgeKaBP 127.7169 ;
     geolod:siteId 187 ;
+    geolod:youngestAgeKaBP 120.2871 ;
     geo:hasGeometry sisal:geom_site_0187 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3735,8 +4292,11 @@ geolod:Cave_site_0188 a geolod:Cave,
     rdfs:label "Chan Hol cave"@en ;
     geolod:countD13CSamples 117 ;
     geolod:countD18OSamples 117 ;
+    geolod:countDatedD18OSamples 117 ;
     geolod:elevation_m -8.5 ;
+    geolod:oldestAgeKaBP 13.6510 ;
     geolod:siteId 188 ;
+    geolod:youngestAgeKaBP 8.4620 ;
     geo:hasGeometry sisal:geom_site_0188 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3745,8 +4305,11 @@ geolod:Cave_site_0189 a geolod:Cave,
     rdfs:label "Chen Ha cave"@en ;
     geolod:countD13CSamples 1573 ;
     geolod:countD18OSamples 1573 ;
+    geolod:countDatedD18OSamples 1573 ;
     geolod:elevation_m 550.0 ;
+    geolod:oldestAgeKaBP 7.1591 ;
     geolod:siteId 189 ;
+    geolod:youngestAgeKaBP 4.6306 ;
     geo:hasGeometry sisal:geom_site_0189 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3755,8 +4318,11 @@ geolod:Cave_site_0190 a geolod:Cave,
     rdfs:label "Cold Water cave"@en ;
     geolod:countD13CSamples 483 ;
     geolod:countD18OSamples 483 ;
+    geolod:countDatedD18OSamples 483 ;
     geolod:elevation_m 356.0 ;
+    geolod:oldestAgeKaBP 8.5980 ;
     geolod:siteId 190 ;
+    geolod:youngestAgeKaBP -0.0400 ;
     geo:hasGeometry sisal:geom_site_0190 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3765,8 +4331,11 @@ geolod:Cave_site_0191 a geolod:Cave,
     rdfs:label "Devil's Icebox cave"@en ;
     geolod:countD13CSamples 115 ;
     geolod:countD18OSamples 115 ;
+    geolod:countDatedD18OSamples 115 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 3.6490 ;
     geolod:siteId 191 ;
+    geolod:youngestAgeKaBP 0.7400 ;
     geo:hasGeometry sisal:geom_site_0191 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3775,8 +4344,11 @@ geolod:Cave_site_0192 a geolod:Cave,
     rdfs:label "El Condor cave"@en ;
     geolod:countD13CSamples 742 ;
     geolod:countD18OSamples 1797 ;
+    geolod:countDatedD18OSamples 1797 ;
     geolod:elevation_m 860.0 ;
+    geolod:oldestAgeKaBP 54.3600 ;
     geolod:siteId 192 ;
+    geolod:youngestAgeKaBP 0.2900 ;
     geo:hasGeometry sisal:geom_site_0192 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3785,8 +4357,11 @@ geolod:Cave_site_0193 a geolod:Cave,
     rdfs:label "Frasassi cave system - Grotta Grande del Vento"@en ;
     geolod:countD13CSamples 546 ;
     geolod:countD18OSamples 544 ;
+    geolod:countDatedD18OSamples 544 ;
     geolod:elevation_m 257.0 ;
+    geolod:oldestAgeKaBP 112.9580 ;
     geolod:siteId 193 ;
+    geolod:youngestAgeKaBP 96.7240 ;
     geo:hasGeometry sisal:geom_site_0193 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3795,8 +4370,11 @@ geolod:Cave_site_0194 a geolod:Cave,
     rdfs:label "Goshute cave"@en ;
     geolod:countD13CSamples 119 ;
     geolod:countD18OSamples 119 ;
+    geolod:countDatedD18OSamples 119 ;
     geolod:elevation_m 2000.0 ;
+    geolod:oldestAgeKaBP 101.8990 ;
     geolod:siteId 194 ;
+    geolod:youngestAgeKaBP 83.7040 ;
     geo:hasGeometry sisal:geom_site_0194 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3805,8 +4383,11 @@ geolod:Cave_site_0195 a geolod:Cave,
     rdfs:label "Harrison's cave"@en ;
     geolod:countD13CSamples 344 ;
     geolod:countD18OSamples 344 ;
+    geolod:countDatedD18OSamples 344 ;
     geolod:elevation_m 300.0 ;
+    geolod:oldestAgeKaBP 8.9118 ;
     geolod:siteId 195 ;
+    geolod:youngestAgeKaBP 3.0943 ;
     geo:hasGeometry sisal:geom_site_0195 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3815,8 +4396,11 @@ geolod:Cave_site_0196 a geolod:Cave,
     rdfs:label "Karaca cave"@en ;
     geolod:countD13CSamples 309 ;
     geolod:countD18OSamples 309 ;
+    geolod:countDatedD18OSamples 309 ;
     geolod:elevation_m 1536.0 ;
+    geolod:oldestAgeKaBP 77.2675 ;
     geolod:siteId 196 ;
+    geolod:youngestAgeKaBP 5.9044 ;
     geo:hasGeometry sisal:geom_site_0196 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3825,8 +4409,11 @@ geolod:Cave_site_0197 a geolod:Cave,
     rdfs:label "Klaus Cramer cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 850 ;
+    geolod:countDatedD18OSamples 850 ;
     geolod:elevation_m 1964.0 ;
+    geolod:oldestAgeKaBP 72.0138 ;
     geolod:siteId 197 ;
+    geolod:youngestAgeKaBP 63.7187 ;
     geo:hasGeometry sisal:geom_site_0197 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3835,8 +4422,11 @@ geolod:Cave_site_0198 a geolod:Cave,
     rdfs:label "Lianhua cave, Hunan"@en ;
     geolod:countD13CSamples 818 ;
     geolod:countD18OSamples 1573 ;
+    geolod:countDatedD18OSamples 1573 ;
     geolod:elevation_m 455.0 ;
+    geolod:oldestAgeKaBP 12.4310 ;
     geolod:siteId 198 ;
+    geolod:youngestAgeKaBP -0.0560 ;
     geo:hasGeometry sisal:geom_site_0198 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3845,8 +4435,11 @@ geolod:Cave_site_0199 a geolod:Cave,
     rdfs:label "Lynds cave"@en ;
     geolod:countD13CSamples 53 ;
     geolod:countD18OSamples 53 ;
+    geolod:countDatedD18OSamples 53 ;
     geolod:elevation_m 300.0 ;
+    geolod:oldestAgeKaBP 8.8880 ;
     geolod:siteId 199 ;
+    geolod:youngestAgeKaBP 5.0810 ;
     geo:hasGeometry sisal:geom_site_0199 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3855,8 +4448,11 @@ geolod:Cave_site_0200 a geolod:Cave,
     rdfs:label "Minnetonka cave"@en ;
     geolod:countD13CSamples 694 ;
     geolod:countD18OSamples 694 ;
+    geolod:countDatedD18OSamples 694 ;
     geolod:elevation_m 2347.0 ;
+    geolod:oldestAgeKaBP 11.1229 ;
     geolod:siteId 200 ;
+    geolod:youngestAgeKaBP 0.0073 ;
     geo:hasGeometry sisal:geom_site_0200 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3865,8 +4461,11 @@ geolod:Cave_site_0201 a geolod:Cave,
     rdfs:label "Moondyne cave"@en ;
     geolod:countD13CSamples 44 ;
     geolod:countD18OSamples 44 ;
+    geolod:countDatedD18OSamples 44 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 0.0380 ;
     geolod:siteId 201 ;
+    geolod:youngestAgeKaBP -0.0415 ;
     geo:hasGeometry sisal:geom_site_0201 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3875,8 +4474,11 @@ geolod:Cave_site_0202 a geolod:Cave,
     rdfs:label "Piani Eterni karst system"@en ;
     geolod:countD13CSamples 964 ;
     geolod:countD18OSamples 964 ;
+    geolod:countDatedD18OSamples 964 ;
     geolod:elevation_m 1893.0 ;
+    geolod:oldestAgeKaBP 374.4293 ;
     geolod:siteId 202 ;
+    geolod:youngestAgeKaBP 84.0332 ;
     geo:hasGeometry sisal:geom_site_0202 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3885,8 +4487,11 @@ geolod:Cave_site_0203 a geolod:Cave,
     rdfs:label "Poleva cave"@en ;
     geolod:countD13CSamples 154 ;
     geolod:countD18OSamples 154 ;
+    geolod:countDatedD18OSamples 154 ;
     geolod:elevation_m 390.0 ;
+    geolod:oldestAgeKaBP 74.0800 ;
     geolod:siteId 203 ;
+    geolod:youngestAgeKaBP 2.3600 ;
     geo:hasGeometry sisal:geom_site_0203 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3895,8 +4500,11 @@ geolod:Cave_site_0204 a geolod:Cave,
     rdfs:label "Xibalba cave"@en ;
     geolod:countD13CSamples 582 ;
     geolod:countD18OSamples 595 ;
+    geolod:countDatedD18OSamples 595 ;
     geolod:elevation_m 350.0 ;
+    geolod:oldestAgeKaBP 0.2514 ;
     geolod:siteId 204 ;
+    geolod:youngestAgeKaBP -0.0570 ;
     geo:hasGeometry sisal:geom_site_0204 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3905,8 +4513,11 @@ geolod:Cave_site_0205 a geolod:Cave,
     rdfs:label "São Bernardo cave"@en ;
     geolod:countD13CSamples 1714 ;
     geolod:countD18OSamples 3428 ;
+    geolod:countDatedD18OSamples 3428 ;
     geolod:elevation_m 631.0 ;
+    geolod:oldestAgeKaBP 0.8265 ;
     geolod:siteId 205 ;
+    geolod:youngestAgeKaBP -0.0604 ;
     geo:hasGeometry sisal:geom_site_0205 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3915,8 +4526,11 @@ geolod:Cave_site_0206 a geolod:Cave,
     rdfs:label "São Matheus cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 576 ;
+    geolod:countDatedD18OSamples 576 ;
     geolod:elevation_m 631.0 ;
+    geolod:oldestAgeKaBP 1.6859 ;
     geolod:siteId 206 ;
+    geolod:youngestAgeKaBP 0.7494 ;
     geo:hasGeometry sisal:geom_site_0206 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3925,8 +4539,11 @@ geolod:Cave_site_0207 a geolod:Cave,
     rdfs:label "Shatuca cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 3966 ;
+    geolod:countDatedD18OSamples 3966 ;
     geolod:elevation_m 1960.0 ;
+    geolod:oldestAgeKaBP 10.6019 ;
     geolod:siteId 207 ;
+    geolod:youngestAgeKaBP -0.0345 ;
     geo:hasGeometry sisal:geom_site_0207 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3935,8 +4552,11 @@ geolod:Cave_site_0208 a geolod:Cave,
     rdfs:label "Tangga cave"@en ;
     geolod:countD13CSamples 981 ;
     geolod:countD18OSamples 981 ;
+    geolod:countDatedD18OSamples 981 ;
     geolod:elevation_m 600.0 ;
+    geolod:oldestAgeKaBP 16.5710 ;
     geolod:siteId 208 ;
+    geolod:youngestAgeKaBP 0.1590 ;
     geo:hasGeometry sisal:geom_site_0208 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3945,8 +4565,11 @@ geolod:Cave_site_0209 a geolod:Cave,
     rdfs:label "Uluu-Too cave"@en ;
     geolod:countD13CSamples 1807 ;
     geolod:countD18OSamples 1807 ;
+    geolod:countDatedD18OSamples 1807 ;
     geolod:elevation_m 1490.0 ;
+    geolod:oldestAgeKaBP 4.6963 ;
     geolod:siteId 209 ;
+    geolod:youngestAgeKaBP 0.0241 ;
     geo:hasGeometry sisal:geom_site_0209 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3955,8 +4578,11 @@ geolod:Cave_site_0210 a geolod:Cave,
     rdfs:label "White moon cave"@en ;
     geolod:countD13CSamples 273 ;
     geolod:countD18OSamples 273 ;
+    geolod:countDatedD18OSamples 273 ;
     geolod:elevation_m 170.0 ;
+    geolod:oldestAgeKaBP 8.6039 ;
     geolod:siteId 210 ;
+    geolod:youngestAgeKaBP 6.9256 ;
     geo:hasGeometry sisal:geom_site_0210 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3965,8 +4591,11 @@ geolod:Cave_site_0211 a geolod:Cave,
     rdfs:label "Xiangshui cave"@en ;
     geolod:countD13CSamples 248 ;
     geolod:countD18OSamples 248 ;
+    geolod:countDatedD18OSamples 248 ;
     geolod:elevation_m 380.0 ;
+    geolod:oldestAgeKaBP 49.9619 ;
     geolod:siteId 211 ;
+    geolod:youngestAgeKaBP 19.6700 ;
     geo:hasGeometry sisal:geom_site_0211 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3975,8 +4604,11 @@ geolod:Cave_site_0212 a geolod:Cave,
     rdfs:label "Peqiin cave"@en ;
     geolod:countD13CSamples 569 ;
     geolod:countD18OSamples 569 ;
+    geolod:countDatedD18OSamples 569 ;
     geolod:elevation_m 650.0 ;
+    geolod:oldestAgeKaBP 248.2000 ;
     geolod:siteId 212 ;
+    geolod:youngestAgeKaBP 14.0000 ;
     geo:hasGeometry sisal:geom_site_0212 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3985,8 +4617,11 @@ geolod:Cave_site_0213 a geolod:Cave,
     rdfs:label "Tausoare cave"@en ;
     geolod:countD13CSamples 740 ;
     geolod:countD18OSamples 740 ;
+    geolod:countDatedD18OSamples 740 ;
     geolod:elevation_m 950.0 ;
+    geolod:oldestAgeKaBP 68.3125 ;
     geolod:siteId 213 ;
+    geolod:youngestAgeKaBP 20.0109 ;
     geo:hasGeometry sisal:geom_site_0213 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -3995,8 +4630,11 @@ geolod:Cave_site_0214 a geolod:Cave,
     rdfs:label "Cave C126"@en ;
     geolod:countD13CSamples 312 ;
     geolod:countD18OSamples 312 ;
+    geolod:countDatedD18OSamples 312 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 25.6400 ;
     geolod:siteId 214 ;
+    geolod:youngestAgeKaBP 5.6760 ;
     geo:hasGeometry sisal:geom_site_0214 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4005,8 +4643,11 @@ geolod:Cave_site_0215 a geolod:Cave,
     rdfs:label "Chaara cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 2350 ;
+    geolod:countDatedD18OSamples 2350 ;
     geolod:elevation_m 1260.0 ;
+    geolod:oldestAgeKaBP 11.6218 ;
     geolod:siteId 215 ;
+    geolod:youngestAgeKaBP -0.0582 ;
     geo:hasGeometry sisal:geom_site_0215 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4015,8 +4656,11 @@ geolod:Cave_site_0216 a geolod:Cave,
     rdfs:label "Dark cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 510 ;
+    geolod:countDatedD18OSamples 510 ;
     geolod:elevation_m 1120.0 ;
+    geolod:oldestAgeKaBP 6.1645 ;
     geolod:siteId 216 ;
+    geolod:youngestAgeKaBP 0.3049 ;
     geo:hasGeometry sisal:geom_site_0216 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4025,8 +4669,11 @@ geolod:Cave_site_0217 a geolod:Cave,
     rdfs:label "E'mei cave"@en ;
     geolod:countD13CSamples 779 ;
     geolod:countD18OSamples 779 ;
+    geolod:countDatedD18OSamples 779 ;
     geolod:elevation_m 53.0 ;
+    geolod:oldestAgeKaBP 0.1395 ;
     geolod:siteId 217 ;
+    geolod:youngestAgeKaBP -0.0597 ;
     geo:hasGeometry sisal:geom_site_0217 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4035,8 +4682,11 @@ geolod:Cave_site_0218 a geolod:Cave,
     rdfs:label "Nuanhe cave"@en ;
     geolod:countD13CSamples 687 ;
     geolod:countD18OSamples 687 ;
+    geolod:countDatedD18OSamples 687 ;
     geolod:elevation_m 500.0 ;
+    geolod:oldestAgeKaBP 8.7030 ;
     geolod:siteId 218 ;
+    geolod:youngestAgeKaBP 7.7240 ;
     geo:hasGeometry sisal:geom_site_0218 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4045,8 +4695,11 @@ geolod:Cave_site_0219 a geolod:Cave,
     rdfs:label "Shennong cave"@en ;
     geolod:countD13CSamples 2523 ;
     geolod:countD18OSamples 2523 ;
+    geolod:countDatedD18OSamples 2523 ;
     geolod:elevation_m 383.0 ;
+    geolod:oldestAgeKaBP 14.0048 ;
     geolod:siteId 219 ;
+    geolod:youngestAgeKaBP 0.9315 ;
     geo:hasGeometry sisal:geom_site_0219 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4055,8 +4708,11 @@ geolod:Cave_site_0220 a geolod:Cave,
     rdfs:label "Baeg-nyong cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 303 ;
+    geolod:countDatedD18OSamples 303 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 5.4370 ;
     geolod:siteId 220 ;
+    geolod:youngestAgeKaBP 0.0000 ;
     geo:hasGeometry sisal:geom_site_0220 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4065,8 +4721,11 @@ geolod:Cave_site_0221 a geolod:Cave,
     rdfs:label "La Vierge cave"@en ;
     geolod:countD13CSamples 2666 ;
     geolod:countD18OSamples 2666 ;
+    geolod:countDatedD18OSamples 2666 ;
     geolod:elevation_m 32.0 ;
+    geolod:oldestAgeKaBP 8.0575 ;
     geolod:siteId 221 ;
+    geolod:youngestAgeKaBP -0.0651 ;
     geo:hasGeometry sisal:geom_site_0221 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4075,8 +4734,11 @@ geolod:Cave_site_0222 a geolod:Cave,
     rdfs:label "Patate cave"@en ;
     geolod:countD13CSamples 190 ;
     geolod:countD18OSamples 190 ;
+    geolod:countDatedD18OSamples 190 ;
     geolod:elevation_m 20.0 ;
+    geolod:oldestAgeKaBP 6.1144 ;
     geolod:siteId 222 ;
+    geolod:youngestAgeKaBP 3.3634 ;
     geo:hasGeometry sisal:geom_site_0222 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4085,8 +4747,11 @@ geolod:Cave_site_0223 a geolod:Cave,
     rdfs:label "Wanxiang cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1448 ;
+    geolod:countDatedD18OSamples 1448 ;
     geolod:elevation_m 1200.0 ;
+    geolod:oldestAgeKaBP 310.1870 ;
     geolod:siteId 223 ;
+    geolod:youngestAgeKaBP -0.0530 ;
     geo:hasGeometry sisal:geom_site_0223 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4095,8 +4760,11 @@ geolod:Cave_site_0224 a geolod:Cave,
     rdfs:label "Xianglong cave"@en ;
     geolod:countD13CSamples 981 ;
     geolod:countD18OSamples 981 ;
+    geolod:countDatedD18OSamples 981 ;
     geolod:elevation_m 940.0 ;
+    geolod:oldestAgeKaBP 6.6510 ;
     geolod:siteId 224 ;
+    geolod:youngestAgeKaBP 0.6530 ;
     geo:hasGeometry sisal:geom_site_0224 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4105,8 +4773,11 @@ geolod:Cave_site_0225 a geolod:Cave,
     rdfs:label "Chiflonkhakha cave"@en ;
     geolod:countD13CSamples 371 ;
     geolod:countD18OSamples 702 ;
+    geolod:countDatedD18OSamples 702 ;
     geolod:elevation_m 2660.0 ;
+    geolod:oldestAgeKaBP 1.2423 ;
     geolod:siteId 225 ;
+    geolod:youngestAgeKaBP 0.0784 ;
     geo:hasGeometry sisal:geom_site_0225 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4115,8 +4786,11 @@ geolod:Cave_site_0226 a geolod:Cave,
     rdfs:label "Cueva del Diamante"@en ;
     geolod:countD13CSamples 1838 ;
     geolod:countD18OSamples 1835 ;
+    geolod:countDatedD18OSamples 1835 ;
     geolod:elevation_m 960.0 ;
+    geolod:oldestAgeKaBP 246.3600 ;
     geolod:siteId 226 ;
+    geolod:youngestAgeKaBP 2.4040 ;
     geo:hasGeometry sisal:geom_site_0226 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4125,8 +4799,11 @@ geolod:Cave_site_0227 a geolod:Cave,
     rdfs:label "El Capitan cave"@en ;
     geolod:countD13CSamples 453 ;
     geolod:countD18OSamples 453 ;
+    geolod:countDatedD18OSamples 453 ;
     geolod:elevation_m 80.0 ;
+    geolod:oldestAgeKaBP 75.1250 ;
     geolod:siteId 227 ;
+    geolod:youngestAgeKaBP 11.1000 ;
     geo:hasGeometry sisal:geom_site_0227 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4135,8 +4812,11 @@ geolod:Cave_site_0228 a geolod:Cave,
     rdfs:label "Bat cave"@en ;
     geolod:countD13CSamples 147 ;
     geolod:countD18OSamples 147 ;
+    geolod:countDatedD18OSamples 147 ;
     geolod:elevation_m 1300.0 ;
+    geolod:oldestAgeKaBP 1.4085 ;
     geolod:siteId 228 ;
+    geolod:youngestAgeKaBP -0.0540 ;
     geo:hasGeometry sisal:geom_site_0228 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4145,8 +4825,11 @@ geolod:Cave_site_0229 a geolod:Cave,
     rdfs:label "Actun Tunichil Muknal"@en ;
     geolod:countD13CSamples 1248 ;
     geolod:countD18OSamples 1248 ;
+    geolod:countDatedD18OSamples 1248 ;
     geolod:elevation_m 40.0 ;
+    geolod:oldestAgeKaBP -0.0285 ;
     geolod:siteId 229 ;
+    geolod:youngestAgeKaBP -0.0510 ;
     geo:hasGeometry sisal:geom_site_0229 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4155,8 +4838,11 @@ geolod:Cave_site_0230 a geolod:Cave,
     rdfs:label "Marota cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 734 ;
+    geolod:countDatedD18OSamples 734 ;
     geolod:elevation_m 560.0 ;
+    geolod:oldestAgeKaBP 58.8247 ;
     geolod:siteId 230 ;
+    geolod:youngestAgeKaBP 39.3451 ;
     geo:hasGeometry sisal:geom_site_0230 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4165,8 +4851,11 @@ geolod:Cave_site_0231 a geolod:Cave,
     rdfs:label "Pacupahuain cave"@en ;
     geolod:countD13CSamples 1010 ;
     geolod:countD18OSamples 1009 ;
+    geolod:countDatedD18OSamples 1009 ;
     geolod:elevation_m 3800.0 ;
+    geolod:oldestAgeKaBP 49.4700 ;
     geolod:siteId 231 ;
+    geolod:youngestAgeKaBP 16.0210 ;
     geo:hasGeometry sisal:geom_site_0231 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4175,8 +4864,11 @@ geolod:Cave_site_0232 a geolod:Cave,
     rdfs:label "Rio Secreto cave system"@en ;
     geolod:countD13CSamples 333 ;
     geolod:countD18OSamples 1160 ;
+    geolod:countDatedD18OSamples 1160 ;
     geolod:elevation_m 20.0 ;
+    geolod:oldestAgeKaBP 26.4430 ;
     geolod:siteId 232 ;
+    geolod:youngestAgeKaBP 1.5521 ;
     geo:hasGeometry sisal:geom_site_0232 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4185,8 +4877,11 @@ geolod:Cave_site_0233 a geolod:Cave,
     rdfs:label "Robinson cave"@en ;
     geolod:countD13CSamples 136 ;
     geolod:countD18OSamples 136 ;
+    geolod:countDatedD18OSamples 136 ;
     geolod:elevation_m 2007.0 ;
+    geolod:oldestAgeKaBP 86.0940 ;
     geolod:siteId 233 ;
+    geolod:youngestAgeKaBP 69.3260 ;
     geo:hasGeometry sisal:geom_site_0233 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4195,8 +4890,11 @@ geolod:Cave_site_0234 a geolod:Cave,
     rdfs:label "Santana cave"@en ;
     geolod:countD13CSamples 665 ;
     geolod:countD18OSamples 665 ;
+    geolod:countDatedD18OSamples 665 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 130.6450 ;
     geolod:siteId 234 ;
+    geolod:youngestAgeKaBP -0.0550 ;
     geo:hasGeometry sisal:geom_site_0234 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4205,8 +4903,11 @@ geolod:Cave_site_0235 a geolod:Cave,
     rdfs:label "Cueva del Tigre Perdido"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 590 ;
+    geolod:countDatedD18OSamples 590 ;
     geolod:elevation_m 1000.0 ;
+    geolod:oldestAgeKaBP 13.3940 ;
     geolod:siteId 235 ;
+    geolod:youngestAgeKaBP 0.0240 ;
     geo:hasGeometry sisal:geom_site_0235 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4215,8 +4916,11 @@ geolod:Cave_site_0236 a geolod:Cave,
     rdfs:label "Toca da Boa Vista"@en ;
     geolod:countD13CSamples 61 ;
     geolod:countD18OSamples 806 ;
+    geolod:countDatedD18OSamples 806 ;
     geolod:elevation_m 600.0 ;
+    geolod:oldestAgeKaBP 48.3043 ;
     geolod:siteId 236 ;
+    geolod:youngestAgeKaBP 11.7462 ;
     geo:hasGeometry sisal:geom_site_0236 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4225,8 +4929,11 @@ geolod:Cave_site_0237 a geolod:Cave,
     rdfs:label "Umajalanta cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 242 ;
+    geolod:countDatedD18OSamples 242 ;
     geolod:elevation_m 2830.0 ;
+    geolod:oldestAgeKaBP 1.3297 ;
     geolod:siteId 237 ;
+    geolod:youngestAgeKaBP 0.6542 ;
     geo:hasGeometry sisal:geom_site_0237 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4235,8 +4942,11 @@ geolod:Cave_site_0238 a geolod:Cave,
     rdfs:label "Akalagavi cave"@en ;
     geolod:countD13CSamples 301 ;
     geolod:countD18OSamples 301 ;
+    geolod:countDatedD18OSamples 301 ;
     geolod:elevation_m 521.0 ;
+    geolod:oldestAgeKaBP 0.2840 ;
     geolod:siteId 238 ;
+    geolod:youngestAgeKaBP -0.0460 ;
     geo:hasGeometry sisal:geom_site_0238 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4245,8 +4955,11 @@ geolod:Cave_site_0239 a geolod:Cave,
     rdfs:label "Baluk cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 250 ;
+    geolod:countDatedD18OSamples 250 ;
     geolod:elevation_m 2752.0 ;
+    geolod:oldestAgeKaBP 8.3618 ;
     geolod:siteId 239 ;
+    geolod:youngestAgeKaBP 2.6893 ;
     geo:hasGeometry sisal:geom_site_0239 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4255,8 +4968,11 @@ geolod:Cave_site_0240 a geolod:Cave,
     rdfs:label "Baratang cave"@en ;
     geolod:countD13CSamples 226 ;
     geolod:countD18OSamples 226 ;
+    geolod:countDatedD18OSamples 226 ;
     geolod:elevation_m 20.0 ;
+    geolod:oldestAgeKaBP 3.9115 ;
     geolod:siteId 240 ;
+    geolod:youngestAgeKaBP 0.0000 ;
     geo:hasGeometry sisal:geom_site_0240 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4265,8 +4981,11 @@ geolod:Cave_site_0241 a geolod:Cave,
     rdfs:label "Gempa bumi cave"@en ;
     geolod:countD13CSamples 1077 ;
     geolod:countD18OSamples 1077 ;
+    geolod:countDatedD18OSamples 1077 ;
     geolod:elevation_m 140.0 ;
+    geolod:oldestAgeKaBP 42.1300 ;
     geolod:siteId 241 ;
+    geolod:youngestAgeKaBP 0.0300 ;
     geo:hasGeometry sisal:geom_site_0241 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4275,8 +4994,11 @@ geolod:Cave_site_0242 a geolod:Cave,
     rdfs:label "Haozhu cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 422 ;
+    geolod:countDatedD18OSamples 422 ;
     geolod:elevation_m 1017.0 ;
+    geolod:oldestAgeKaBP 30.4330 ;
     geolod:siteId 242 ;
+    geolod:youngestAgeKaBP 8.5580 ;
     geo:hasGeometry sisal:geom_site_0242 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4285,8 +5007,11 @@ geolod:Cave_site_0243 a geolod:Cave,
     rdfs:label "Kailash cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1186 ;
+    geolod:countDatedD18OSamples 1186 ;
     geolod:elevation_m 490.0 ;
+    geolod:oldestAgeKaBP 14.8370 ;
     geolod:siteId 243 ;
+    geolod:youngestAgeKaBP 12.6839 ;
     geo:hasGeometry sisal:geom_site_0243 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4295,8 +5020,11 @@ geolod:Cave_site_0244 a geolod:Cave,
     rdfs:label "Lianhua cave, Shanxi"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1138 ;
+    geolod:countDatedD18OSamples 1138 ;
     geolod:elevation_m 1200.0 ;
+    geolod:oldestAgeKaBP 14.5940 ;
     geolod:siteId 244 ;
+    geolod:youngestAgeKaBP 0.1995 ;
     geo:hasGeometry sisal:geom_site_0244 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4305,8 +5033,11 @@ geolod:Cave_site_0245 a geolod:Cave,
     rdfs:label "Nakarallu cave"@en ;
     geolod:countD13CSamples 1134 ;
     geolod:countD18OSamples 1134 ;
+    geolod:countDatedD18OSamples 1134 ;
     geolod:elevation_m 280.0 ;
+    geolod:oldestAgeKaBP 3.1783 ;
     geolod:siteId 245 ;
+    geolod:youngestAgeKaBP 1.7248 ;
     geo:hasGeometry sisal:geom_site_0245 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4315,8 +5046,11 @@ geolod:Cave_site_0246 a geolod:Cave,
     rdfs:label "Palawan cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 335 ;
+    geolod:countDatedD18OSamples 335 ;
     geolod:elevation_m 2.0 ;
+    geolod:oldestAgeKaBP 13.6470 ;
     geolod:siteId 246 ;
+    geolod:youngestAgeKaBP 10.7200 ;
     geo:hasGeometry sisal:geom_site_0246 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4325,8 +5059,11 @@ geolod:Cave_site_0247 a geolod:Cave,
     rdfs:label "Shalaii cave"@en ;
     geolod:countD13CSamples 65 ;
     geolod:countD18OSamples 65 ;
+    geolod:countDatedD18OSamples 65 ;
     geolod:elevation_m 739.0 ;
+    geolod:oldestAgeKaBP 8.0253 ;
     geolod:siteId 247 ;
+    geolod:youngestAgeKaBP 0.4940 ;
     geo:hasGeometry sisal:geom_site_0247 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4335,8 +5072,11 @@ geolod:Cave_site_0248 a geolod:Cave,
     rdfs:label "Shenqi cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 787 ;
+    geolod:countDatedD18OSamples 787 ;
     geolod:elevation_m 1407.0 ;
+    geolod:oldestAgeKaBP 2.2674 ;
     geolod:siteId 248 ;
+    geolod:youngestAgeKaBP -0.0597 ;
     geo:hasGeometry sisal:geom_site_0248 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4345,8 +5085,11 @@ geolod:Cave_site_0249 a geolod:Cave,
     rdfs:label "Shigao cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 453 ;
+    geolod:countDatedD18OSamples 453 ;
     geolod:elevation_m 970.0 ;
+    geolod:oldestAgeKaBP 9.8642 ;
     geolod:siteId 249 ;
+    geolod:youngestAgeKaBP -0.0508 ;
     geo:hasGeometry sisal:geom_site_0249 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4355,8 +5098,11 @@ geolod:Cave_site_0250 a geolod:Cave,
     rdfs:label "Wuya cave"@en ;
     geolod:countD13CSamples 2282 ;
     geolod:countD18OSamples 2576 ;
+    geolod:countDatedD18OSamples 2576 ;
     geolod:elevation_m 1370.0 ;
+    geolod:oldestAgeKaBP 11.2010 ;
     geolod:siteId 250 ;
+    geolod:youngestAgeKaBP -0.0600 ;
     geo:hasGeometry sisal:geom_site_0250 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4365,8 +5111,11 @@ geolod:Cave_site_0251 a geolod:Cave,
     rdfs:label "Zhenzhu cave"@en ;
     geolod:countD13CSamples 470 ;
     geolod:countD18OSamples 470 ;
+    geolod:countDatedD18OSamples 470 ;
     geolod:elevation_m 975.0 ;
+    geolod:oldestAgeKaBP 0.7815 ;
     geolod:siteId 251 ;
+    geolod:youngestAgeKaBP -0.0599 ;
     geo:hasGeometry sisal:geom_site_0251 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4375,8 +5124,11 @@ geolod:Cave_site_0252 a geolod:Cave,
     rdfs:label "Andriamaniloke"@en ;
     geolod:countD13CSamples 106 ;
     geolod:countD18OSamples 106 ;
+    geolod:countDatedD18OSamples 106 ;
     geolod:elevation_m 20.0 ;
+    geolod:oldestAgeKaBP 19.1369 ;
     geolod:siteId 252 ;
+    geolod:youngestAgeKaBP 15.4219 ;
     geo:hasGeometry sisal:geom_site_0252 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4385,8 +5137,11 @@ geolod:Cave_site_0253 a geolod:Cave,
     rdfs:label "Hoq cave"@en ;
     geolod:countD13CSamples 1426 ;
     geolod:countD18OSamples 1426 ;
+    geolod:countDatedD18OSamples 1426 ;
     geolod:elevation_m 335.0 ;
+    geolod:oldestAgeKaBP 9.2494 ;
     geolod:siteId 253 ;
+    geolod:youngestAgeKaBP -0.0560 ;
     geo:hasGeometry sisal:geom_site_0253 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4395,8 +5150,11 @@ geolod:Cave_site_0254 a geolod:Cave,
     rdfs:label "PP29"@en ;
     geolod:countD13CSamples 557 ;
     geolod:countD18OSamples 554 ;
+    geolod:countDatedD18OSamples 554 ;
     geolod:elevation_m 10.0 ;
+    geolod:oldestAgeKaBP 112.6939 ;
     geolod:siteId 254 ;
+    geolod:youngestAgeKaBP 41.4500 ;
     geo:hasGeometry sisal:geom_site_0254 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4405,8 +5163,11 @@ geolod:Cave_site_0255 a geolod:Cave,
     rdfs:label "Mitoho"@en ;
     geolod:countD13CSamples 1387 ;
     geolod:countD18OSamples 1387 ;
+    geolod:countDatedD18OSamples 1387 ;
     geolod:elevation_m 20.0 ;
+    geolod:oldestAgeKaBP 22.2252 ;
     geolod:siteId 255 ;
+    geolod:youngestAgeKaBP 11.9129 ;
     geo:hasGeometry sisal:geom_site_0255 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4415,8 +5176,11 @@ geolod:Cave_site_0256 a geolod:Cave,
     rdfs:label "Lithophagus cave"@en ;
     geolod:countD13CSamples 42 ;
     geolod:countD18OSamples 42 ;
+    geolod:countDatedD18OSamples 42 ;
     geolod:elevation_m 545.0 ;
+    geolod:oldestAgeKaBP 131.9350 ;
     geolod:siteId 256 ;
+    geolod:youngestAgeKaBP 54.9350 ;
     geo:hasGeometry sisal:geom_site_0256 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4425,8 +5189,11 @@ geolod:Cave_site_0257 a geolod:Cave,
     rdfs:label "Akcakale cave"@en ;
     geolod:countD13CSamples 218 ;
     geolod:countD18OSamples 218 ;
+    geolod:countDatedD18OSamples 218 ;
     geolod:elevation_m 1530.0 ;
+    geolod:oldestAgeKaBP 0.4415 ;
     geolod:siteId 257 ;
+    geolod:youngestAgeKaBP -0.0550 ;
     geo:hasGeometry sisal:geom_site_0257 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4435,8 +5202,11 @@ geolod:Cave_site_0258 a geolod:Cave,
     rdfs:label "B7 cave"@en ;
     geolod:countD13CSamples 227 ;
     geolod:countD18OSamples 227 ;
+    geolod:countDatedD18OSamples 227 ;
     geolod:elevation_m 185.0 ;
+    geolod:oldestAgeKaBP 17.5507 ;
     geolod:siteId 258 ;
+    geolod:youngestAgeKaBP -0.0470 ;
     geo:hasGeometry sisal:geom_site_0258 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4445,8 +5215,11 @@ geolod:Cave_site_0259 a geolod:Cave,
     rdfs:label "Cobre cave"@en ;
     geolod:countD13CSamples 252 ;
     geolod:countD18OSamples 252 ;
+    geolod:countDatedD18OSamples 252 ;
     geolod:elevation_m 1600.0 ;
+    geolod:oldestAgeKaBP 116.3418 ;
     geolod:siteId 259 ;
+    geolod:youngestAgeKaBP 100.6056 ;
     geo:hasGeometry sisal:geom_site_0259 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4455,8 +5228,11 @@ geolod:Cave_site_0260 a geolod:Cave,
     rdfs:label "Crovassa Azzurra"@en ;
     geolod:countD13CSamples 737 ;
     geolod:countD18OSamples 737 ;
+    geolod:countDatedD18OSamples 737 ;
     geolod:elevation_m 410.0 ;
+    geolod:oldestAgeKaBP 238.1678 ;
     geolod:siteId 260 ;
+    geolod:youngestAgeKaBP 72.6400 ;
     geo:hasGeometry sisal:geom_site_0260 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4465,8 +5241,11 @@ geolod:Cave_site_0261 a geolod:Cave,
     rdfs:label "El Soplao cave"@en ;
     geolod:countD13CSamples 329 ;
     geolod:countD18OSamples 329 ;
+    geolod:countDatedD18OSamples 329 ;
     geolod:elevation_m 550.0 ;
+    geolod:oldestAgeKaBP 14.6697 ;
     geolod:siteId 261 ;
+    geolod:youngestAgeKaBP 7.9653 ;
     geo:hasGeometry sisal:geom_site_0261 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4475,8 +5254,11 @@ geolod:Cave_site_0262 a geolod:Cave,
     rdfs:label "Bleßberg cave"@en ;
     geolod:countD13CSamples 1957 ;
     geolod:countD18OSamples 1957 ;
+    geolod:countDatedD18OSamples 1957 ;
     geolod:elevation_m 500.0 ;
+    geolod:oldestAgeKaBP 11.9907 ;
     geolod:siteId 262 ;
+    geolod:youngestAgeKaBP 0.1501 ;
     geo:hasGeometry sisal:geom_site_0262 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4485,8 +5267,11 @@ geolod:Cave_site_0263 a geolod:Cave,
     rdfs:label "Bulgarian Orlova Chuka cave"@en ;
     geolod:countD13CSamples 763 ;
     geolod:countD18OSamples 763 ;
+    geolod:countDatedD18OSamples 763 ;
     geolod:elevation_m 150.0 ;
+    geolod:oldestAgeKaBP 129.0179 ;
     geolod:siteId 263 ;
+    geolod:youngestAgeKaBP 112.3548 ;
     geo:hasGeometry sisal:geom_site_0263 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4495,8 +5280,11 @@ geolod:Cave_site_0264 a geolod:Cave,
     rdfs:label "Strašna peć cave"@en ;
     geolod:countD13CSamples 258 ;
     geolod:countD18OSamples 258 ;
+    geolod:countDatedD18OSamples 258 ;
     geolod:elevation_m 74.0 ;
+    geolod:oldestAgeKaBP 4.3000 ;
     geolod:siteId 264 ;
+    geolod:youngestAgeKaBP 1.3760 ;
     geo:hasGeometry sisal:geom_site_0264 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4505,8 +5293,11 @@ geolod:Cave_site_0265 a geolod:Cave,
     rdfs:label "Coves de Campanet"@en ;
     geolod:countD13CSamples 448 ;
     geolod:countD18OSamples 448 ;
+    geolod:countDatedD18OSamples 448 ;
     geolod:elevation_m 65.0 ;
+    geolod:oldestAgeKaBP 121.0153 ;
     geolod:siteId 265 ;
+    geolod:youngestAgeKaBP 0.1518 ;
     geo:hasGeometry sisal:geom_site_0265 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4515,8 +5306,11 @@ geolod:Cave_site_0266 a geolod:Cave,
     rdfs:label "Cueva Victoria"@en ;
     geolod:countD13CSamples 1030 ;
     geolod:countD18OSamples 1030 ;
+    geolod:countDatedD18OSamples 1030 ;
     geolod:elevation_m 75.0 ;
+    geolod:oldestAgeKaBP 95.1619 ;
     geolod:siteId 266 ;
+    geolod:youngestAgeKaBP 6.9878 ;
     geo:hasGeometry sisal:geom_site_0266 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4525,8 +5319,11 @@ geolod:Cave_site_0267 a geolod:Cave,
     rdfs:label "Gruta do Casal da Lebre"@en ;
     geolod:countD13CSamples 55 ;
     geolod:countD18OSamples 55 ;
+    geolod:countDatedD18OSamples 55 ;
     geolod:elevation_m 130.0 ;
+    geolod:oldestAgeKaBP 186.9619 ;
     geolod:siteId 267 ;
+    geolod:youngestAgeKaBP 161.4167 ;
     geo:hasGeometry sisal:geom_site_0267 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4535,8 +5332,11 @@ geolod:Cave_site_0268 a geolod:Cave,
     rdfs:label "Pere Noel cave"@en ;
     geolod:countD13CSamples 260 ;
     geolod:countD18OSamples 260 ;
+    geolod:countDatedD18OSamples 260 ;
     geolod:elevation_m 230.0 ;
+    geolod:oldestAgeKaBP 12.8769 ;
     geolod:siteId 268 ;
+    geolod:youngestAgeKaBP 1.7886 ;
     geo:hasGeometry sisal:geom_site_0268 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4545,8 +5345,11 @@ geolod:Cave_site_0269 a geolod:Cave,
     rdfs:label "Gejkar cave"@en ;
     geolod:countD13CSamples 841 ;
     geolod:countD18OSamples 841 ;
+    geolod:countDatedD18OSamples 841 ;
     geolod:elevation_m 650.0 ;
+    geolod:oldestAgeKaBP 2.3650 ;
     geolod:siteId 269 ;
+    geolod:youngestAgeKaBP -0.0620 ;
     geo:hasGeometry sisal:geom_site_0269 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4555,8 +5358,11 @@ geolod:Cave_site_0270 a geolod:Cave,
     rdfs:label "Gol-E-Zard cave"@en ;
     geolod:countD13CSamples 259 ;
     geolod:countD18OSamples 259 ;
+    geolod:countDatedD18OSamples 259 ;
     geolod:elevation_m 2535.0 ;
+    geolod:oldestAgeKaBP 4.9200 ;
     geolod:siteId 270 ;
+    geolod:youngestAgeKaBP 3.7662 ;
     geo:hasGeometry sisal:geom_site_0270 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4565,8 +5371,11 @@ geolod:Cave_site_0271 a geolod:Cave,
     rdfs:label "Jersey cave"@en ;
     geolod:countD13CSamples 132 ;
     geolod:countD18OSamples 132 ;
+    geolod:countDatedD18OSamples 132 ;
     geolod:elevation_m 800.0 ;
+    geolod:oldestAgeKaBP 98.9364 ;
     geolod:siteId 271 ;
+    geolod:youngestAgeKaBP 34.9774 ;
     geo:hasGeometry sisal:geom_site_0271 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4575,8 +5384,11 @@ geolod:Cave_site_0272 a geolod:Cave,
     rdfs:label "Metro cave"@en ;
     geolod:countD13CSamples 488 ;
     geolod:countD18OSamples 489 ;
+    geolod:countDatedD18OSamples 489 ;
     geolod:elevation_m 60.0 ;
+    geolod:oldestAgeKaBP 12.1170 ;
     geolod:siteId 272 ;
+    geolod:youngestAgeKaBP 0.0069 ;
     geo:hasGeometry sisal:geom_site_0272 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4585,8 +5397,11 @@ geolod:Cave_site_0273 a geolod:Cave,
     rdfs:label "Crystal cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1054 ;
+    geolod:countDatedD18OSamples 1054 ;
     geolod:elevation_m 1386.0 ;
+    geolod:oldestAgeKaBP 1.0981 ;
     geolod:siteId 273 ;
+    geolod:youngestAgeKaBP -0.0577 ;
     geo:hasGeometry sisal:geom_site_0273 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4595,8 +5410,11 @@ geolod:Cave_site_0274 a geolod:Cave,
     rdfs:label "Terciopelo cave"@en ;
     geolod:countD13CSamples 1705 ;
     geolod:countD18OSamples 1705 ;
+    geolod:countDatedD18OSamples 1705 ;
     geolod:elevation_m 370.0 ;
+    geolod:oldestAgeKaBP 98.2460 ;
     geolod:siteId 274 ;
+    geolod:youngestAgeKaBP 6.5024 ;
     geo:hasGeometry sisal:geom_site_0274 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4605,8 +5423,11 @@ geolod:Cave_site_0275 a geolod:Cave,
     rdfs:label "Buraca Gloriosa"@en ;
     geolod:countD13CSamples 1400 ;
     geolod:countD18OSamples 1400 ;
+    geolod:countDatedD18OSamples 1400 ;
     geolod:elevation_m 420.0 ;
+    geolod:oldestAgeKaBP 222.4480 ;
     geolod:siteId 275 ;
+    geolod:youngestAgeKaBP 1.3192 ;
     geo:hasGeometry sisal:geom_site_0275 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4615,8 +5436,11 @@ geolod:Cave_site_0276 a geolod:Cave,
     rdfs:label "Béke cave"@en ;
     geolod:countD13CSamples 261 ;
     geolod:countD18OSamples 261 ;
+    geolod:countDatedD18OSamples 261 ;
     geolod:elevation_m 338.0 ;
+    geolod:oldestAgeKaBP 4.3480 ;
     geolod:siteId 276 ;
+    geolod:youngestAgeKaBP 0.4537 ;
     geo:hasGeometry sisal:geom_site_0276 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4625,8 +5449,11 @@ geolod:Cave_site_0277 a geolod:Cave,
     rdfs:label "Huagapo cave"@en ;
     geolod:countD13CSamples 1347 ;
     geolod:countD18OSamples 4220 ;
+    geolod:countDatedD18OSamples 4220 ;
     geolod:elevation_m 3850.0 ;
+    geolod:oldestAgeKaBP 196.5838 ;
     geolod:siteId 277 ;
+    geolod:youngestAgeKaBP -0.0500 ;
     geo:hasGeometry sisal:geom_site_0277 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4635,8 +5462,11 @@ geolod:Cave_site_0278 a geolod:Cave,
     rdfs:label "Pink Panther cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 682 ;
+    geolod:countDatedD18OSamples 682 ;
     geolod:elevation_m 1900.0 ;
+    geolod:oldestAgeKaBP 12.0870 ;
     geolod:siteId 278 ;
+    geolod:youngestAgeKaBP -0.0150 ;
     geo:hasGeometry sisal:geom_site_0278 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4645,8 +5475,11 @@ geolod:Cave_site_0279 a geolod:Cave,
     rdfs:label "Staircase cave"@en ;
     geolod:countD13CSamples 632 ;
     geolod:countD18OSamples 632 ;
+    geolod:countDatedD18OSamples 632 ;
     geolod:elevation_m 30.0 ;
+    geolod:oldestAgeKaBP 335.5342 ;
     geolod:siteId 279 ;
+    geolod:youngestAgeKaBP 129.8250 ;
     geo:hasGeometry sisal:geom_site_0279 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4655,6 +5488,7 @@ geolod:Cave_site_0280 a geolod:Cave,
     rdfs:label "Atta cave"@en ;
     geolod:countD13CSamples 384 ;
     geolod:countD18OSamples 384 ;
+    geolod:countDatedD18OSamples 0 ;
     geolod:elevation_m 308.0 ;
     geolod:siteId 280 ;
     geo:hasGeometry sisal:geom_site_0280 ;
@@ -4665,8 +5499,11 @@ geolod:Cave_site_0281 a geolod:Cave,
     rdfs:label "Venado cave"@en ;
     geolod:countD13CSamples 253 ;
     geolod:countD18OSamples 253 ;
+    geolod:countDatedD18OSamples 253 ;
     geolod:elevation_m 380.0 ;
+    geolod:oldestAgeKaBP 8.8064 ;
     geolod:siteId 281 ;
+    geolod:youngestAgeKaBP 4.9362 ;
     geo:hasGeometry sisal:geom_site_0281 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4675,6 +5512,7 @@ geolod:Cave_site_0282 a geolod:Cave,
     rdfs:label "Wadi Sannur cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 70 ;
+    geolod:countDatedD18OSamples 0 ;
     geolod:elevation_m 200.0 ;
     geolod:siteId 282 ;
     geo:hasGeometry sisal:geom_site_0282 ;
@@ -4685,8 +5523,11 @@ geolod:Cave_site_0283 a geolod:Cave,
     rdfs:label "Babylon cave"@en ;
     geolod:countD13CSamples 219 ;
     geolod:countD18OSamples 219 ;
+    geolod:countDatedD18OSamples 219 ;
     geolod:elevation_m 175.0 ;
+    geolod:oldestAgeKaBP 63.7696 ;
     geolod:siteId 283 ;
+    geolod:youngestAgeKaBP 1.0451 ;
     geo:hasGeometry sisal:geom_site_0283 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4695,8 +5536,11 @@ geolod:Cave_site_0284 a geolod:Cave,
     rdfs:label "Creighton`s cave"@en ;
     geolod:countD13CSamples 40 ;
     geolod:countD18OSamples 40 ;
+    geolod:countDatedD18OSamples 40 ;
     geolod:elevation_m 80.0 ;
+    geolod:oldestAgeKaBP 13.9037 ;
     geolod:siteId 284 ;
+    geolod:youngestAgeKaBP 7.2082 ;
     geo:hasGeometry sisal:geom_site_0284 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4705,8 +5549,11 @@ geolod:Cave_site_0285 a geolod:Cave,
     rdfs:label "Disbelief cave"@en ;
     geolod:countD13CSamples 46 ;
     geolod:countD18OSamples 46 ;
+    geolod:countDatedD18OSamples 46 ;
     geolod:elevation_m 600.0 ;
+    geolod:oldestAgeKaBP 7.6719 ;
     geolod:siteId 285 ;
+    geolod:youngestAgeKaBP 0.6124 ;
     geo:hasGeometry sisal:geom_site_0285 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4715,8 +5562,11 @@ geolod:Cave_site_0286 a geolod:Cave,
     rdfs:label "La Garma cave"@en ;
     geolod:countD13CSamples 497 ;
     geolod:countD18OSamples 765 ;
+    geolod:countDatedD18OSamples 765 ;
     geolod:elevation_m 85.0 ;
+    geolod:oldestAgeKaBP 13.8644 ;
     geolod:siteId 286 ;
+    geolod:youngestAgeKaBP -0.0264 ;
     geo:hasGeometry sisal:geom_site_0286 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4725,8 +5575,11 @@ geolod:Cave_site_0287 a geolod:Cave,
     rdfs:label "Twin Forks cave"@en ;
     geolod:countD13CSamples 34 ;
     geolod:countD18OSamples 34 ;
+    geolod:countDatedD18OSamples 34 ;
     geolod:elevation_m 80.0 ;
+    geolod:oldestAgeKaBP 22.2328 ;
     geolod:siteId 287 ;
+    geolod:youngestAgeKaBP 17.6806 ;
     geo:hasGeometry sisal:geom_site_0287 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4735,8 +5588,11 @@ geolod:Cave_site_0288 a geolod:Cave,
     rdfs:label "Wet Neck cave"@en ;
     geolod:countD13CSamples 140 ;
     geolod:countD18OSamples 140 ;
+    geolod:countDatedD18OSamples 140 ;
     geolod:elevation_m 90.0 ;
+    geolod:oldestAgeKaBP 21.1232 ;
     geolod:siteId 288 ;
+    geolod:youngestAgeKaBP 13.7206 ;
     geo:hasGeometry sisal:geom_site_0288 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4745,8 +5601,11 @@ geolod:Cave_site_0289 a geolod:Cave,
     rdfs:label "Gassel Tropfsteinhöhle"@en ;
     geolod:countD13CSamples 3047 ;
     geolod:countD18OSamples 3047 ;
+    geolod:countDatedD18OSamples 3047 ;
     geolod:elevation_m 1225.0 ;
+    geolod:oldestAgeKaBP 107.9705 ;
     geolod:siteId 289 ;
+    geolod:youngestAgeKaBP 76.9144 ;
     geo:hasGeometry sisal:geom_site_0289 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4755,8 +5614,11 @@ geolod:Cave_site_0290 a geolod:Cave,
     rdfs:label "Grete-Ruth Shaft"@en ;
     geolod:countD13CSamples 705 ;
     geolod:countD18OSamples 705 ;
+    geolod:countDatedD18OSamples 705 ;
     geolod:elevation_m 1435.0 ;
+    geolod:oldestAgeKaBP 111.3145 ;
     geolod:siteId 290 ;
+    geolod:youngestAgeKaBP 102.9175 ;
     geo:hasGeometry sisal:geom_site_0290 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4765,8 +5627,11 @@ geolod:Cave_site_0292 a geolod:Cave,
     rdfs:label "Limnon cave"@en ;
     geolod:countD13CSamples 177 ;
     geolod:countD18OSamples 177 ;
+    geolod:countDatedD18OSamples 177 ;
     geolod:elevation_m 820.0 ;
+    geolod:oldestAgeKaBP 12.4131 ;
     geolod:siteId 292 ;
+    geolod:youngestAgeKaBP 6.6877 ;
     geo:hasGeometry sisal:geom_site_0292 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4775,8 +5640,11 @@ geolod:Cave_site_0293 a geolod:Cave,
     rdfs:label "Tham Doun Mai"@en ;
     geolod:countD13CSamples 2481 ;
     geolod:countD18OSamples 2481 ;
+    geolod:countDatedD18OSamples 2481 ;
     geolod:elevation_m 352.0 ;
+    geolod:oldestAgeKaBP 9.3090 ;
     geolod:siteId 293 ;
+    geolod:youngestAgeKaBP 0.0705 ;
     geo:hasGeometry sisal:geom_site_0293 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4785,8 +5653,11 @@ geolod:Cave_site_0294 a geolod:Cave,
     rdfs:label "Palco cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 340 ;
+    geolod:countDatedD18OSamples 340 ;
     geolod:elevation_m 250.0 ;
+    geolod:oldestAgeKaBP 6.3350 ;
     geolod:siteId 294 ;
+    geolod:youngestAgeKaBP -0.0630 ;
     geo:hasGeometry sisal:geom_site_0294 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4795,8 +5666,11 @@ geolod:Cave_site_0295 a geolod:Cave,
     rdfs:label "Qadisha cave"@en ;
     geolod:countD13CSamples 228 ;
     geolod:countD18OSamples 228 ;
+    geolod:countDatedD18OSamples 228 ;
     geolod:elevation_m 1720.0 ;
+    geolod:oldestAgeKaBP 9.1330 ;
     geolod:siteId 295 ;
+    geolod:youngestAgeKaBP -0.0365 ;
     geo:hasGeometry sisal:geom_site_0295 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4805,8 +5679,11 @@ geolod:Cave_site_0296 a geolod:Cave,
     rdfs:label "Amir Timur cave"@en ;
     geolod:countD13CSamples 270 ;
     geolod:countD18OSamples 270 ;
+    geolod:countDatedD18OSamples 270 ;
     geolod:elevation_m 1813.0 ;
+    geolod:oldestAgeKaBP 391.7506 ;
     geolod:siteId 296 ;
+    geolod:youngestAgeKaBP 390.9482 ;
     geo:hasGeometry sisal:geom_site_0296 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4815,8 +5692,11 @@ geolod:Cave_site_0297 a geolod:Cave,
     rdfs:label "Bàsura cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 265 ;
+    geolod:countDatedD18OSamples 265 ;
     geolod:elevation_m 200.0 ;
+    geolod:oldestAgeKaBP 0.7522 ;
     geolod:siteId 297 ;
+    geolod:youngestAgeKaBP 0.0048 ;
     geo:hasGeometry sisal:geom_site_0297 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4825,8 +5705,11 @@ geolod:Cave_site_0298 a geolod:Cave,
     rdfs:label "Belum cave"@en ;
     geolod:countD13CSamples 861 ;
     geolod:countD18OSamples 861 ;
+    geolod:countDatedD18OSamples 861 ;
     geolod:elevation_m 367.0 ;
+    geolod:oldestAgeKaBP 182.7655 ;
     geolod:siteId 298 ;
+    geolod:youngestAgeKaBP 81.9199 ;
     geo:hasGeometry sisal:geom_site_0298 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4835,8 +5718,11 @@ geolod:Cave_site_0299 a geolod:Cave,
     rdfs:label "Calabrez"@en ;
     geolod:countD13CSamples 42 ;
     geolod:countD18OSamples 42 ;
+    geolod:countDatedD18OSamples 42 ;
     geolod:elevation_m 121.0 ;
+    geolod:oldestAgeKaBP 10.1110 ;
     geolod:siteId 299 ;
+    geolod:youngestAgeKaBP 8.5650 ;
     geo:hasGeometry sisal:geom_site_0299 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4845,8 +5731,11 @@ geolod:Cave_site_0300 a geolod:Cave,
     rdfs:label "Careys cave"@en ;
     geolod:countD13CSamples 178 ;
     geolod:countD18OSamples 178 ;
+    geolod:countDatedD18OSamples 178 ;
     geolod:elevation_m 393.0 ;
+    geolod:oldestAgeKaBP 0.0821 ;
     geolod:siteId 300 ;
+    geolod:youngestAgeKaBP -0.0400 ;
     geo:hasGeometry sisal:geom_site_0300 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4855,8 +5744,11 @@ geolod:Cave_site_0301 a geolod:Cave,
     rdfs:label "Cathedral cave"@en ;
     geolod:countD13CSamples 575 ;
     geolod:countD18OSamples 575 ;
+    geolod:countDatedD18OSamples 575 ;
     geolod:elevation_m 300.0 ;
+    geolod:oldestAgeKaBP 0.0131 ;
     geolod:siteId 301 ;
+    geolod:youngestAgeKaBP -0.0601 ;
     geo:hasGeometry sisal:geom_site_0301 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4865,8 +5757,11 @@ geolod:Cave_site_0302 a geolod:Cave,
     rdfs:label "Crevice cave"@en ;
     geolod:countD13CSamples 352 ;
     geolod:countD18OSamples 352 ;
+    geolod:countDatedD18OSamples 352 ;
     geolod:elevation_m 14.0 ;
+    geolod:oldestAgeKaBP 90.5000 ;
     geolod:siteId 302 ;
+    geolod:youngestAgeKaBP 53.0600 ;
     geo:hasGeometry sisal:geom_site_0302 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4875,8 +5770,11 @@ geolod:Cave_site_0303 a geolod:Cave,
     rdfs:label "Crystal cave, Australia"@en ;
     geolod:countD13CSamples 246 ;
     geolod:countD18OSamples 246 ;
+    geolod:countDatedD18OSamples 246 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 0.0078 ;
     geolod:siteId 303 ;
+    geolod:youngestAgeKaBP -0.0589 ;
     geo:hasGeometry sisal:geom_site_0303 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4885,8 +5783,11 @@ geolod:Cave_site_0304 a geolod:Cave,
     rdfs:label "Cueva Bonita"@en ;
     geolod:countD13CSamples 399 ;
     geolod:countD18OSamples 399 ;
+    geolod:countDatedD18OSamples 399 ;
     geolod:elevation_m 1071.0 ;
+    geolod:oldestAgeKaBP 3.0664 ;
     geolod:siteId 304 ;
+    geolod:youngestAgeKaBP 1.8826 ;
     geo:hasGeometry sisal:geom_site_0304 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4895,8 +5796,11 @@ geolod:Cave_site_0305 a geolod:Cave,
     rdfs:label "Cueva Rosa"@en ;
     geolod:countD13CSamples 499 ;
     geolod:countD18OSamples 499 ;
+    geolod:countDatedD18OSamples 499 ;
     geolod:elevation_m 121.0 ;
+    geolod:oldestAgeKaBP 136.5000 ;
     geolod:siteId 305 ;
+    geolod:youngestAgeKaBP 65.0487 ;
     geo:hasGeometry sisal:geom_site_0305 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4905,8 +5809,11 @@ geolod:Cave_site_0306 a geolod:Cave,
     rdfs:label "Cuíca cave"@en ;
     geolod:countD13CSamples 1505 ;
     geolod:countD18OSamples 1509 ;
+    geolod:countDatedD18OSamples 1509 ;
     geolod:elevation_m 310.0 ;
+    geolod:oldestAgeKaBP 2.9709 ;
     geolod:siteId 306 ;
+    geolod:youngestAgeKaBP -0.0639 ;
     geo:hasGeometry sisal:geom_site_0306 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4915,8 +5822,11 @@ geolod:Cave_site_0307 a geolod:Cave,
     rdfs:label "Efflux cave"@en ;
     geolod:countD13CSamples 1666 ;
     geolod:countD18OSamples 1657 ;
+    geolod:countDatedD18OSamples 1657 ;
     geolod:elevation_m 716.0 ;
+    geolod:oldestAgeKaBP 114.2008 ;
     geolod:siteId 307 ;
+    geolod:youngestAgeKaBP -0.0307 ;
     geo:hasGeometry sisal:geom_site_0307 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4925,8 +5835,11 @@ geolod:Cave_site_0308 a geolod:Cave,
     rdfs:label "GD8"@en ;
     geolod:countD13CSamples 1918 ;
     geolod:countD18OSamples 1918 ;
+    geolod:countDatedD18OSamples 1918 ;
     geolod:elevation_m 520.0 ;
+    geolod:oldestAgeKaBP 622.2490 ;
     geolod:siteId 308 ;
+    geolod:youngestAgeKaBP 534.0360 ;
     geo:hasGeometry sisal:geom_site_0308 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4935,8 +5848,11 @@ geolod:Cave_site_0309 a geolod:Cave,
     rdfs:label "Goda Mea cave"@en ;
     geolod:countD13CSamples 1351 ;
     geolod:countD18OSamples 1354 ;
+    geolod:countDatedD18OSamples 1354 ;
     geolod:elevation_m 1574.0 ;
+    geolod:oldestAgeKaBP 129.1660 ;
     geolod:siteId 309 ;
+    geolod:youngestAgeKaBP 108.2300 ;
     geo:hasGeometry sisal:geom_site_0309 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4945,8 +5861,11 @@ geolod:Cave_site_0310 a geolod:Cave,
     rdfs:label "Golgotha cave"@en ;
     geolod:countD13CSamples 897 ;
     geolod:countD18OSamples 897 ;
+    geolod:countDatedD18OSamples 897 ;
     geolod:elevation_m 72.0 ;
+    geolod:oldestAgeKaBP 0.7732 ;
     geolod:siteId 310 ;
+    geolod:youngestAgeKaBP -0.0607 ;
     geo:hasGeometry sisal:geom_site_0310 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4955,8 +5874,11 @@ geolod:Cave_site_0311 a geolod:Cave,
     rdfs:label "Harrie Wood cave"@en ;
     geolod:countD13CSamples 580 ;
     geolod:countD18OSamples 579 ;
+    geolod:countDatedD18OSamples 579 ;
     geolod:elevation_m 965.0 ;
+    geolod:oldestAgeKaBP 0.0280 ;
     geolod:siteId 311 ;
+    geolod:youngestAgeKaBP -0.0636 ;
     geo:hasGeometry sisal:geom_site_0311 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4965,8 +5887,11 @@ geolod:Cave_site_0312 a geolod:Cave,
     rdfs:label "Heifeng cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 325 ;
+    geolod:countDatedD18OSamples 325 ;
     geolod:elevation_m 2132.0 ;
+    geolod:oldestAgeKaBP 11.4900 ;
     geolod:siteId 312 ;
+    geolod:youngestAgeKaBP 0.4800 ;
     geo:hasGeometry sisal:geom_site_0312 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4975,8 +5900,11 @@ geolod:Cave_site_0313 a geolod:Cave,
     rdfs:label "Herbstlabyrinth cave"@en ;
     geolod:countD13CSamples 1598 ;
     geolod:countD18OSamples 1598 ;
+    geolod:countDatedD18OSamples 1598 ;
     geolod:elevation_m 435.0 ;
+    geolod:oldestAgeKaBP 8.5065 ;
     geolod:siteId 313 ;
+    geolod:youngestAgeKaBP 0.0811 ;
     geo:hasGeometry sisal:geom_site_0313 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4985,8 +5913,11 @@ geolod:Cave_site_0314 a geolod:Cave,
     rdfs:label "Herolds Bay cave"@en ;
     geolod:countD13CSamples 484 ;
     geolod:countD18OSamples 477 ;
+    geolod:countDatedD18OSamples 477 ;
     geolod:elevation_m 5.0 ;
+    geolod:oldestAgeKaBP 92.7861 ;
     geolod:siteId 314 ;
+    geolod:youngestAgeKaBP 62.5455 ;
     geo:hasGeometry sisal:geom_site_0314 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -4995,8 +5926,11 @@ geolod:Cave_site_0315 a geolod:Cave,
     rdfs:label "Huangchao cave"@en ;
     geolod:countD13CSamples 111 ;
     geolod:countD18OSamples 111 ;
+    geolod:countDatedD18OSamples 111 ;
     geolod:elevation_m 518.0 ;
+    geolod:oldestAgeKaBP 2.1240 ;
     geolod:siteId 315 ;
+    geolod:youngestAgeKaBP 0.1400 ;
     geo:hasGeometry sisal:geom_site_0315 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5005,8 +5939,11 @@ geolod:Cave_site_0316 a geolod:Cave,
     rdfs:label "Hüttenbläserschachthöhle"@en ;
     geolod:countD13CSamples 1348 ;
     geolod:countD18OSamples 1346 ;
+    geolod:countDatedD18OSamples 1346 ;
     geolod:elevation_m 430.0 ;
+    geolod:oldestAgeKaBP 11.3790 ;
     geolod:siteId 316 ;
+    geolod:youngestAgeKaBP 0.5544 ;
     geo:hasGeometry sisal:geom_site_0316 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5015,8 +5952,11 @@ geolod:Cave_site_0317 a geolod:Cave,
     rdfs:label "Jiangjun cave"@en ;
     geolod:countD13CSamples 323 ;
     geolod:countD18OSamples 323 ;
+    geolod:countDatedD18OSamples 323 ;
     geolod:elevation_m 200.0 ;
+    geolod:oldestAgeKaBP 147.1068 ;
     geolod:siteId 317 ;
+    geolod:youngestAgeKaBP 124.3391 ;
     geo:hasGeometry sisal:geom_site_0317 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5025,8 +5965,11 @@ geolod:Cave_site_0318 a geolod:Cave,
     rdfs:label "Jinfo cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 592 ;
+    geolod:countDatedD18OSamples 592 ;
     geolod:elevation_m 2114.0 ;
+    geolod:oldestAgeKaBP 11.5900 ;
     geolod:siteId 318 ;
+    geolod:youngestAgeKaBP 0.2600 ;
     geo:hasGeometry sisal:geom_site_0318 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5035,8 +5978,11 @@ geolod:Cave_site_0319 a geolod:Cave,
     rdfs:label "Jiulong cave"@en ;
     geolod:countD13CSamples 505 ;
     geolod:countD18OSamples 505 ;
+    geolod:countDatedD18OSamples 505 ;
     geolod:elevation_m 162.0 ;
+    geolod:oldestAgeKaBP 7.2712 ;
     geolod:siteId 319 ;
+    geolod:youngestAgeKaBP 0.1016 ;
     geo:hasGeometry sisal:geom_site_0319 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5045,8 +5991,11 @@ geolod:Cave_site_0320 a geolod:Cave,
     rdfs:label "Katalekhor"@en ;
     geolod:countD13CSamples 287 ;
     geolod:countD18OSamples 287 ;
+    geolod:countDatedD18OSamples 287 ;
     geolod:elevation_m 1719.0 ;
+    geolod:oldestAgeKaBP 9.3650 ;
     geolod:siteId 320 ;
+    geolod:youngestAgeKaBP 0.0240 ;
     geo:hasGeometry sisal:geom_site_0320 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5055,8 +6004,11 @@ geolod:Cave_site_0321 a geolod:Cave,
     rdfs:label "Klang"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 677 ;
+    geolod:countDatedD18OSamples 677 ;
     geolod:elevation_m 50.0 ;
+    geolod:oldestAgeKaBP 11.2300 ;
     geolod:siteId 321 ;
+    geolod:youngestAgeKaBP 1.6661 ;
     geo:hasGeometry sisal:geom_site_0321 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5065,8 +6017,11 @@ geolod:Cave_site_0322 a geolod:Cave,
     rdfs:label "Kuna Ba"@en ;
     geolod:countD13CSamples 3082 ;
     geolod:countD18OSamples 3082 ;
+    geolod:countDatedD18OSamples 3082 ;
     geolod:elevation_m 660.0 ;
+    geolod:oldestAgeKaBP 3.9889 ;
     geolod:siteId 322 ;
+    geolod:youngestAgeKaBP -0.0566 ;
     geo:hasGeometry sisal:geom_site_0322 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5075,8 +6030,11 @@ geolod:Cave_site_0323 a geolod:Cave,
     rdfs:label "Kyok-Tash cave"@en ;
     geolod:countD13CSamples 818 ;
     geolod:countD18OSamples 818 ;
+    geolod:countDatedD18OSamples 818 ;
     geolod:elevation_m 890.0 ;
+    geolod:oldestAgeKaBP 11.4045 ;
     geolod:siteId 323 ;
+    geolod:youngestAgeKaBP 8.8745 ;
     geo:hasGeometry sisal:geom_site_0323 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5085,8 +6043,11 @@ geolod:Cave_site_0324 a geolod:Cave,
     rdfs:label "La Vallina"@en ;
     geolod:countD13CSamples 969 ;
     geolod:countD18OSamples 969 ;
+    geolod:countDatedD18OSamples 969 ;
     geolod:elevation_m 70.0 ;
+    geolod:oldestAgeKaBP 194.0862 ;
     geolod:siteId 324 ;
+    geolod:youngestAgeKaBP 10.1630 ;
     geo:hasGeometry sisal:geom_site_0324 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5095,8 +6056,11 @@ geolod:Cave_site_0325 a geolod:Cave,
     rdfs:label "Larga cave"@en ;
     geolod:countD13CSamples 2032 ;
     geolod:countD18OSamples 2049 ;
+    geolod:countDatedD18OSamples 2049 ;
     geolod:elevation_m 350.0 ;
+    geolod:oldestAgeKaBP 46.3980 ;
     geolod:siteId 325 ;
+    geolod:youngestAgeKaBP 15.3201 ;
     geo:hasGeometry sisal:geom_site_0325 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5105,8 +6069,11 @@ geolod:Cave_site_0326 a geolod:Cave,
     rdfs:label "Linzhu cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 356 ;
+    geolod:countDatedD18OSamples 356 ;
     geolod:elevation_m 780.0 ;
+    geolod:oldestAgeKaBP 361.9000 ;
     geolod:siteId 326 ;
+    geolod:youngestAgeKaBP 224.6000 ;
     geo:hasGeometry sisal:geom_site_0326 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5115,8 +6082,11 @@ geolod:Cave_site_0327 a geolod:Cave,
     rdfs:label "Manita peć cave"@en ;
     geolod:countD13CSamples 405 ;
     geolod:countD18OSamples 405 ;
+    geolod:countDatedD18OSamples 405 ;
     geolod:elevation_m 570.0 ;
+    geolod:oldestAgeKaBP 105.9230 ;
     geolod:siteId 327 ;
+    geolod:youngestAgeKaBP 5.3262 ;
     geo:hasGeometry sisal:geom_site_0327 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5125,8 +6095,11 @@ geolod:Cave_site_0328 a geolod:Cave,
     rdfs:label "Mata Virgem cave"@en ;
     geolod:countD13CSamples 536 ;
     geolod:countD18OSamples 536 ;
+    geolod:countDatedD18OSamples 536 ;
     geolod:elevation_m 365.0 ;
+    geolod:oldestAgeKaBP 1.0292 ;
     geolod:siteId 328 ;
+    geolod:youngestAgeKaBP 0.2508 ;
     geo:hasGeometry sisal:geom_site_0328 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5135,8 +6108,11 @@ geolod:Cave_site_0329 a geolod:Cave,
     rdfs:label "Matupi cave"@en ;
     geolod:countD13CSamples 363 ;
     geolod:countD18OSamples 363 ;
+    geolod:countDatedD18OSamples 363 ;
     geolod:elevation_m 1110.0 ;
+    geolod:oldestAgeKaBP 16.4040 ;
     geolod:siteId 329 ;
+    geolod:youngestAgeKaBP 3.0700 ;
     geo:hasGeometry sisal:geom_site_0329 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5145,8 +6121,11 @@ geolod:Cave_site_0330 a geolod:Cave,
     rdfs:label "Meravelles cave"@en ;
     geolod:countD13CSamples 250 ;
     geolod:countD18OSamples 250 ;
+    geolod:countDatedD18OSamples 250 ;
     geolod:elevation_m 125.0 ;
+    geolod:oldestAgeKaBP 18.6109 ;
     geolod:siteId 330 ;
+    geolod:youngestAgeKaBP 14.6720 ;
     geo:hasGeometry sisal:geom_site_0330 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5155,8 +6134,11 @@ geolod:Cave_site_0331 a geolod:Cave,
     rdfs:label "Mizpe Shelagim"@en ;
     geolod:countD13CSamples 282 ;
     geolod:countD18OSamples 279 ;
+    geolod:countDatedD18OSamples 279 ;
     geolod:elevation_m 2180.0 ;
+    geolod:oldestAgeKaBP 86.4000 ;
     geolod:siteId 331 ;
+    geolod:youngestAgeKaBP 4.4240 ;
     geo:hasGeometry sisal:geom_site_0331 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5165,8 +6147,11 @@ geolod:Cave_site_0332 a geolod:Cave,
     rdfs:label "Murada"@en ;
     geolod:countD13CSamples 93 ;
     geolod:countD18OSamples 93 ;
+    geolod:countDatedD18OSamples 93 ;
     geolod:elevation_m 80.0 ;
+    geolod:oldestAgeKaBP 125.4960 ;
     geolod:siteId 332 ;
+    geolod:youngestAgeKaBP 113.6850 ;
     geo:hasGeometry sisal:geom_site_0332 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5175,8 +6160,11 @@ geolod:Cave_site_0333 a geolod:Cave,
     rdfs:label "Neotektonik cave"@en ;
     geolod:countD13CSamples 2285 ;
     geolod:countD18OSamples 2285 ;
+    geolod:countDatedD18OSamples 2285 ;
     geolod:elevation_m 1700.0 ;
+    geolod:oldestAgeKaBP 132.1675 ;
     geolod:siteId 333 ;
+    geolod:youngestAgeKaBP 115.2175 ;
     geo:hasGeometry sisal:geom_site_0333 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5185,8 +6173,11 @@ geolod:Cave_site_0334 a geolod:Cave,
     rdfs:label "Nova Grgosova cave"@en ;
     geolod:countD13CSamples 839 ;
     geolod:countD18OSamples 839 ;
+    geolod:countDatedD18OSamples 839 ;
     geolod:elevation_m 239.0 ;
+    geolod:oldestAgeKaBP 10.0225 ;
     geolod:siteId 334 ;
+    geolod:youngestAgeKaBP -0.0521 ;
     geo:hasGeometry sisal:geom_site_0334 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5195,8 +6186,11 @@ geolod:Cave_site_0335 a geolod:Cave,
     rdfs:label "Ostolo cave"@en ;
     geolod:countD13CSamples 1307 ;
     geolod:countD18OSamples 1307 ;
+    geolod:countDatedD18OSamples 1307 ;
     geolod:elevation_m 248.0 ;
+    geolod:oldestAgeKaBP 18.7130 ;
     geolod:siteId 335 ;
+    geolod:youngestAgeKaBP 8.5260 ;
     geo:hasGeometry sisal:geom_site_0335 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5205,8 +6199,11 @@ geolod:Cave_site_0336 a geolod:Cave,
     rdfs:label "Pentadactylos"@en ;
     geolod:countD13CSamples 684 ;
     geolod:countD18OSamples 685 ;
+    geolod:countDatedD18OSamples 685 ;
     geolod:elevation_m 800.0 ;
+    geolod:oldestAgeKaBP 174.5988 ;
     geolod:siteId 336 ;
+    geolod:youngestAgeKaBP 110.8921 ;
     geo:hasGeometry sisal:geom_site_0336 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5215,8 +6212,11 @@ geolod:Cave_site_0337 a geolod:Cave,
     rdfs:label "Pir Ghar cave"@en ;
     geolod:countD13CSamples 116 ;
     geolod:countD18OSamples 116 ;
+    geolod:countDatedD18OSamples 116 ;
     geolod:elevation_m 1600.0 ;
+    geolod:oldestAgeKaBP 97.1000 ;
     geolod:siteId 337 ;
+    geolod:youngestAgeKaBP 71.2740 ;
     geo:hasGeometry sisal:geom_site_0337 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5225,8 +6225,11 @@ geolod:Cave_site_0338 a geolod:Cave,
     rdfs:label "Coves del pirata"@en ;
     geolod:countD13CSamples 90 ;
     geolod:countD18OSamples 90 ;
+    geolod:countDatedD18OSamples 90 ;
     geolod:elevation_m 32.0 ;
+    geolod:oldestAgeKaBP 1.5268 ;
     geolod:siteId 338 ;
+    geolod:youngestAgeKaBP 0.8484 ;
     geo:hasGeometry sisal:geom_site_0338 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5235,8 +6238,11 @@ geolod:Cave_site_0339 a geolod:Cave,
     rdfs:label "Pozzo Cucù cave"@en ;
     geolod:countD13CSamples 2658 ;
     geolod:countD18OSamples 2658 ;
+    geolod:countDatedD18OSamples 2658 ;
     geolod:elevation_m 276.0 ;
+    geolod:oldestAgeKaBP 106.0200 ;
     geolod:siteId 339 ;
+    geolod:youngestAgeKaBP 26.6057 ;
     geo:hasGeometry sisal:geom_site_0339 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5245,8 +6251,11 @@ geolod:Cave_site_0340 a geolod:Cave,
     rdfs:label "Qujia cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 95 ;
+    geolod:countDatedD18OSamples 95 ;
     geolod:elevation_m 456.0 ;
+    geolod:oldestAgeKaBP 0.3937 ;
     geolod:siteId 340 ;
+    geolod:youngestAgeKaBP 0.2372 ;
     geo:hasGeometry sisal:geom_site_0340 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5255,8 +6264,11 @@ geolod:Cave_site_0341 a geolod:Cave,
     rdfs:label "Rey Marcos"@en ;
     geolod:countD13CSamples 520 ;
     geolod:countD18OSamples 520 ;
+    geolod:countDatedD18OSamples 520 ;
     geolod:elevation_m 1460.0 ;
+    geolod:oldestAgeKaBP 12.7780 ;
     geolod:siteId 341 ;
+    geolod:youngestAgeKaBP 0.3430 ;
     geo:hasGeometry sisal:geom_site_0341 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5265,8 +6277,11 @@ geolod:Cave_site_0342 a geolod:Cave,
     rdfs:label "Sa balma des quartó cave"@en ;
     geolod:countD13CSamples 1008 ;
     geolod:countD18OSamples 1008 ;
+    geolod:countDatedD18OSamples 1008 ;
     geolod:elevation_m 10.5 ;
+    geolod:oldestAgeKaBP 2.6030 ;
     geolod:siteId 342 ;
+    geolod:youngestAgeKaBP 0.0704 ;
     geo:hasGeometry sisal:geom_site_0342 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5275,8 +6290,11 @@ geolod:Cave_site_0343 a geolod:Cave,
     rdfs:label "Sant'Angelo cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1002 ;
+    geolod:countDatedD18OSamples 1002 ;
     geolod:elevation_m 148.0 ;
+    geolod:oldestAgeKaBP 47.8201 ;
     geolod:siteId 343 ;
+    geolod:youngestAgeKaBP 6.7693 ;
     geo:hasGeometry sisal:geom_site_0343 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5285,8 +6303,11 @@ geolod:Cave_site_0344 a geolod:Cave,
     rdfs:label "Sarma cave"@en ;
     geolod:countD13CSamples 288 ;
     geolod:countD18OSamples 288 ;
+    geolod:countDatedD18OSamples 288 ;
     geolod:elevation_m 2150.0 ;
+    geolod:oldestAgeKaBP 22.4079 ;
     geolod:siteId 344 ;
+    geolod:youngestAgeKaBP 2.9836 ;
     geo:hasGeometry sisal:geom_site_0344 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5295,8 +6316,11 @@ geolod:Cave_site_0345 a geolod:Cave,
     rdfs:label "Schratten cave"@en ;
     geolod:countD13CSamples 584 ;
     geolod:countD18OSamples 584 ;
+    geolod:countDatedD18OSamples 584 ;
     geolod:elevation_m 1580.0 ;
+    geolod:oldestAgeKaBP 121.1195 ;
     geolod:siteId 345 ;
+    geolod:youngestAgeKaBP 112.4314 ;
     geo:hasGeometry sisal:geom_site_0345 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5305,8 +6329,11 @@ geolod:Cave_site_0346 a geolod:Cave,
     rdfs:label "Shijiangjun cave"@en ;
     geolod:countD13CSamples 959 ;
     geolod:countD18OSamples 959 ;
+    geolod:countDatedD18OSamples 959 ;
     geolod:elevation_m 1300.0 ;
+    geolod:oldestAgeKaBP 3.1090 ;
     geolod:siteId 346 ;
+    geolod:youngestAgeKaBP 0.6940 ;
     geo:hasGeometry sisal:geom_site_0346 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5315,8 +6342,11 @@ geolod:Cave_site_0347 a geolod:Cave,
     rdfs:label "Shizi cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 312 ;
+    geolod:countDatedD18OSamples 312 ;
     geolod:elevation_m 401.0 ;
+    geolod:oldestAgeKaBP 9.2700 ;
     geolod:siteId 347 ;
+    geolod:youngestAgeKaBP 0.0200 ;
     geo:hasGeometry sisal:geom_site_0347 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5325,8 +6355,11 @@ geolod:Cave_site_0348 a geolod:Cave,
     rdfs:label "Sudwala cave"@en ;
     geolod:countD13CSamples 109 ;
     geolod:countD18OSamples 109 ;
+    geolod:countDatedD18OSamples 109 ;
     geolod:elevation_m 975.0 ;
+    geolod:oldestAgeKaBP 40.9911 ;
     geolod:siteId 348 ;
+    geolod:youngestAgeKaBP 12.7169 ;
     geo:hasGeometry sisal:geom_site_0348 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5335,8 +6368,11 @@ geolod:Cave_site_0349 a geolod:Cave,
     rdfs:label "Talisman cave"@en ;
     geolod:countD13CSamples 1513 ;
     geolod:countD18OSamples 1513 ;
+    geolod:countDatedD18OSamples 1513 ;
     geolod:elevation_m 1486.0 ;
+    geolod:oldestAgeKaBP 7.7739 ;
     geolod:siteId 349 ;
+    geolod:youngestAgeKaBP 3.0006 ;
     geo:hasGeometry sisal:geom_site_0349 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5345,8 +6381,11 @@ geolod:Cave_site_0350 a geolod:Cave,
     rdfs:label "Toca da Barriguda"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 298 ;
+    geolod:countDatedD18OSamples 298 ;
     geolod:elevation_m 600.0 ;
+    geolod:oldestAgeKaBP 39.7252 ;
     geolod:siteId 350 ;
+    geolod:youngestAgeKaBP 38.5356 ;
     geo:hasGeometry sisal:geom_site_0350 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5355,8 +6394,11 @@ geolod:Cave_site_0351 a geolod:Cave,
     rdfs:label "Trapiá cave"@en ;
     geolod:countD13CSamples 855 ;
     geolod:countD18OSamples 819 ;
+    geolod:countDatedD18OSamples 819 ;
     geolod:elevation_m 72.0 ;
+    geolod:oldestAgeKaBP 5.5072 ;
     geolod:siteId 351 ;
+    geolod:youngestAgeKaBP 0.0174 ;
     geo:hasGeometry sisal:geom_site_0351 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5365,8 +6407,11 @@ geolod:Cave_site_0352 a geolod:Cave,
     rdfs:label "War Eagle"@en ;
     geolod:countD13CSamples 657 ;
     geolod:countD18OSamples 659 ;
+    geolod:countDatedD18OSamples 659 ;
     geolod:elevation_m 210.0 ;
+    geolod:oldestAgeKaBP 12.2220 ;
     geolod:siteId 352 ;
+    geolod:youngestAgeKaBP 0.3100 ;
     geo:hasGeometry sisal:geom_site_0352 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5375,8 +6420,11 @@ geolod:Cave_site_0353 a geolod:Cave,
     rdfs:label "Wintimdouine"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 3506 ;
+    geolod:countDatedD18OSamples 3506 ;
     geolod:elevation_m 1250.0 ;
+    geolod:oldestAgeKaBP 11.5740 ;
     geolod:siteId 353 ;
+    geolod:youngestAgeKaBP -0.0370 ;
     geo:hasGeometry sisal:geom_site_0353 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5385,8 +6433,11 @@ geolod:Cave_site_0354 a geolod:Cave,
     rdfs:label "Wulu cave"@en ;
     geolod:countD13CSamples 945 ;
     geolod:countD18OSamples 1111 ;
+    geolod:countDatedD18OSamples 1111 ;
     geolod:elevation_m 1440.0 ;
+    geolod:oldestAgeKaBP 50.7680 ;
     geolod:siteId 354 ;
+    geolod:youngestAgeKaBP 0.0342 ;
     geo:hasGeometry sisal:geom_site_0354 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5395,8 +6446,11 @@ geolod:Cave_site_0355 a geolod:Cave,
     rdfs:label "Xiniu cave"@en ;
     geolod:countD13CSamples 1582 ;
     geolod:countD18OSamples 1582 ;
+    geolod:countDatedD18OSamples 1582 ;
     geolod:elevation_m 1900.0 ;
+    geolod:oldestAgeKaBP 0.7849 ;
     geolod:siteId 355 ;
+    geolod:youngestAgeKaBP 0.1019 ;
     geo:hasGeometry sisal:geom_site_0355 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5405,8 +6459,11 @@ geolod:Cave_site_0356 a geolod:Cave,
     rdfs:label "Yangzi cave"@en ;
     geolod:countD13CSamples 1298 ;
     geolod:countD18OSamples 1298 ;
+    geolod:countDatedD18OSamples 1298 ;
     geolod:elevation_m 400.0 ;
+    geolod:oldestAgeKaBP 118.1760 ;
     geolod:siteId 356 ;
+    geolod:youngestAgeKaBP 3.6820 ;
     geo:hasGeometry sisal:geom_site_0356 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5415,8 +6472,11 @@ geolod:Cave_site_0357 a geolod:Cave,
     rdfs:label "Yonderup cave"@en ;
     geolod:countD13CSamples 183 ;
     geolod:countD18OSamples 183 ;
+    geolod:countDatedD18OSamples 183 ;
     geolod:elevation_m 100.0 ;
+    geolod:oldestAgeKaBP 0.1904 ;
     geolod:siteId 357 ;
+    geolod:youngestAgeKaBP -0.0533 ;
     geo:hasGeometry sisal:geom_site_0357 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5425,8 +6485,11 @@ geolod:Cave_site_0358 a geolod:Cave,
     rdfs:label "Zhangjia cave"@en ;
     geolod:countD13CSamples 0 ;
     geolod:countD18OSamples 1017 ;
+    geolod:countDatedD18OSamples 1017 ;
     geolod:elevation_m 164.0 ;
+    geolod:oldestAgeKaBP 40.4405 ;
     geolod:siteId 358 ;
+    geolod:youngestAgeKaBP 36.9948 ;
     geo:hasGeometry sisal:geom_site_0358 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5435,8 +6498,11 @@ geolod:Cave_site_0359 a geolod:Cave,
     rdfs:label "Zoolithen cave"@en ;
     geolod:countD13CSamples 263 ;
     geolod:countD18OSamples 263 ;
+    geolod:countDatedD18OSamples 263 ;
     geolod:elevation_m 455.0 ;
+    geolod:oldestAgeKaBP 0.1290 ;
     geolod:siteId 359 ;
+    geolod:youngestAgeKaBP -0.0200 ;
     geo:hasGeometry sisal:geom_site_0359 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5445,8 +6511,11 @@ geolod:Cave_site_0360 a geolod:Cave,
     rdfs:label "Bigonda cave"@en ;
     geolod:countD13CSamples 758 ;
     geolod:countD18OSamples 758 ;
+    geolod:countDatedD18OSamples 758 ;
     geolod:elevation_m 370.0 ;
+    geolod:oldestAgeKaBP 132.4742 ;
     geolod:siteId 360 ;
+    geolod:youngestAgeKaBP 104.4720 ;
     geo:hasGeometry sisal:geom_site_0360 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5455,8 +6524,11 @@ geolod:Cave_site_0361 a geolod:Cave,
     rdfs:label "Kocain cave"@en ;
     geolod:countD13CSamples 369 ;
     geolod:countD18OSamples 369 ;
+    geolod:countDatedD18OSamples 369 ;
     geolod:elevation_m 730.0 ;
+    geolod:oldestAgeKaBP 3.3160 ;
     geolod:siteId 361 ;
+    geolod:youngestAgeKaBP -0.0502 ;
     geo:hasGeometry sisal:geom_site_0361 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5465,8 +6537,11 @@ geolod:Cave_site_0362 a geolod:Cave,
     rdfs:label "Labyrinth cave"@en ;
     geolod:countD13CSamples 161 ;
     geolod:countD18OSamples 161 ;
+    geolod:countDatedD18OSamples 161 ;
     geolod:elevation_m 65.0 ;
+    geolod:oldestAgeKaBP 0.0486 ;
     geolod:siteId 362 ;
+    geolod:youngestAgeKaBP -0.0585 ;
     geo:hasGeometry sisal:geom_site_0362 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5475,8 +6550,11 @@ geolod:Cave_site_0363 a geolod:Cave,
     rdfs:label "Lake Shasta cave"@en ;
     geolod:countD13CSamples 1025 ;
     geolod:countD18OSamples 1025 ;
+    geolod:countDatedD18OSamples 1025 ;
     geolod:elevation_m 725.0 ;
+    geolod:oldestAgeKaBP 36.1510 ;
     geolod:siteId 363 ;
+    geolod:youngestAgeKaBP 14.2400 ;
     geo:hasGeometry sisal:geom_site_0363 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5485,8 +6563,11 @@ geolod:Cave_site_0364 a geolod:Cave,
     rdfs:label "Naharon"@en ;
     geolod:countD13CSamples 419 ;
     geolod:countD18OSamples 419 ;
+    geolod:countDatedD18OSamples 419 ;
     geolod:elevation_m -17.7 ;
+    geolod:oldestAgeKaBP 11.0433 ;
     geolod:siteId 364 ;
+    geolod:youngestAgeKaBP 9.5256 ;
     geo:hasGeometry sisal:geom_site_0364 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5495,8 +6576,11 @@ geolod:Cave_site_0365 a geolod:Cave,
     rdfs:label "Pot au Feu"@en ;
     geolod:countD13CSamples 229 ;
     geolod:countD18OSamples 229 ;
+    geolod:countDatedD18OSamples 229 ;
     geolod:elevation_m 997.0 ;
+    geolod:oldestAgeKaBP 115.1002 ;
     geolod:siteId 365 ;
+    geolod:youngestAgeKaBP 68.5440 ;
     geo:hasGeometry sisal:geom_site_0365 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 
@@ -5505,8 +6589,11 @@ geolod:Cave_site_0366 a geolod:Cave,
     rdfs:label "Savi cave"@en ;
     geolod:countD13CSamples 609 ;
     geolod:countD18OSamples 609 ;
+    geolod:countDatedD18OSamples 609 ;
     geolod:elevation_m 350.0 ;
+    geolod:oldestAgeKaBP 15.2876 ;
     geolod:siteId 366 ;
+    geolod:youngestAgeKaBP 9.2606 ;
     geo:hasGeometry sisal:geom_site_0366 ;
     prov:wasDerivedFrom geolod:SISALv3_DataSource .
 

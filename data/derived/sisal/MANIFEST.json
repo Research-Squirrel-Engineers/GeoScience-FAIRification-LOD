@@ -1,13 +1,13 @@
 {
   "files": {
     "catalogue/sites.csv": {
-      "bytes": 20391,
+      "bytes": 27225,
       "rows": 365,
-      "sha256": "291f52b5e003e8441179b60f20fec979e48bf690c66ed53d71027f79cdb13449"
+      "sha256": "398f14d25607a78c1863e93086cba47b6370208156a832f947c6e2885776db14"
     },
     "queries.yaml": {
-      "bytes": 15676,
-      "sha256": "805b82fbc4e63a234c6bdc7ec5aaf41ce038f7415c2a11cde55580e5f0689163"
+      "bytes": 16509,
+      "sha256": "f0a32705002d6f4db217b01e971f5edef51f5d88b9ebcbf3dd75716a978ec798"
     },
     "sites/botuvera.csv": {
       "bytes": 76433,

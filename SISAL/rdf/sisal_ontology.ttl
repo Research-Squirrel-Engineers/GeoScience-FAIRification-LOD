@@ -366,6 +366,27 @@ geolod:countD13CSamples
     rdfs:label   "number of δ¹³C samples"@en ;
     rdfs:comment "Number of delta-13-C measurements recorded for the cave in the SISAL v3 release."@en .
 
+geolod:countDatedD18OSamples
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:integer ;
+    rdfs:label   "number of dated δ¹⁸O samples"@en ;
+    rdfs:comment "Samples of this cave that carry a δ¹⁸O measurement and an age in the published age model of the SISAL v3 release."@en .
+
+geolod:youngestAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "youngest age, ka BP"@en ;
+    rdfs:comment "The youngest age, in thousand years before 1950, that the published age model of the SISAL v3 release gives to a sample of this cave carrying a δ¹⁸O measurement. A negative value is younger than 1950. The span between this and the oldest age says where the records of the cave begin and end, not that they are continuous: hiatuses and gaps lie inside it."@en .
+
+geolod:oldestAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "oldest age, ka BP"@en ;
+    rdfs:comment "The oldest age, in thousand years before 1950, that the published age model of the SISAL v3 release gives to a sample of this cave carrying a δ¹⁸O measurement."@en .
+
 geolod:collectedFrom
     a owl:ObjectProperty ;
     rdfs:domain  geolod:SpeleothemSample ;

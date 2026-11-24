@@ -115,6 +115,8 @@ the CRM extensions; the axioms are the same.
 | `skos:Collection`                        | `crm:E78_Curated_Holding`                   | Curated subset of a vocabulary |
 | `time:TimePosition`                     | `crm:E54_Dimension`                         | Value with unit and reference system |
 | `time:TRS`                              | `crm:E29_Design_or_Procedure`               | Mirrors `crmgeo:SP4` for spatial CRS |
+| `time:ProperInterval`                   | `crm:E52_Time-Span`                         | Age span of the CI eruption |
+| `time:Instant`                          | `crm:E52_Time-Span`                         | Span of zero extent; start and end of the interval |
 | `pleiades:Place`                        | `crm:E53_Place`                             |  |
 | `fuzzy-sl:Site`                         | `crm:E27_Site`                              | Squirrel.link Site model |
 | `fuzzy-sl:Georeferencing`               | `crm:E13_Attribute_Assignment`              | Statement of position |

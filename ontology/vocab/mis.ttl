@@ -13,7 +13,7 @@
 # GENERATED FILE - do not edit by hand.
 # Source: ontology/build_mis_vocab.py
 # Release: 2026-08-08
-# Fingerprint (input data + generator): sha256:2e1c25d11e13
+# Fingerprint (input data + generator): sha256:bf342374334d
 # ==========================================================================
 
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -36,14 +36,14 @@
     skos:editorialNote """Concepts up to 1013.1 ka BP follow Railsback et al. (2015), which is the leading scheme for all MIS assignments in geo-lod. Older concepts are taken from the LR04 boundaries of Lisiecki & Raymo (2005), the only source covering that range."""@en ;
     owl:imports  <http://w3id.org/geo-lod/> ;
     dct:created  "2026-08-08"^^xsd:date ;
-    owl:versionInfo "sha256:2e1c25d11e13" ;
+    owl:versionInfo "sha256:bf342374334d" ;
     prov:wasGeneratedBy mis:vocabulary_generation ;
     dct:source   mis:source_railsback2015, mis:source_lisieckiRaymo2005 .
 
 mis:vocabulary_generation
     a prov:Activity ;
     rdfs:label "MIS vocabulary generation"@en ;
-    owl:versionInfo "sha256:2e1c25d11e13" ;
+    owl:versionInfo "sha256:bf342374334d" ;
     prov:used mis:input_LR04_MISboundaries_csv ,
         mis:input_Railsback2015_csv ,
         mis:input_build_mis_vocab_py ;
@@ -52,17 +52,17 @@ mis:vocabulary_generation
 mis:input_LR04_MISboundaries_csv
     a prov:Entity ;
     rdfs:label "LR04_MISboundaries.csv" ;
-    dct:identifier "sha256:6dd5e35ed5d8faf508697560b3bf24556a3fc102b4893b721da24fae78612765" .
+    dct:identifier "sha256:8593f86f6d6e47ff82667a02efe304f8a4b5a8359010a7db263b8659f52e54f2" .
 
 mis:input_Railsback2015_csv
     a prov:Entity ;
     rdfs:label "Railsbacketal2015MISSubstagesFig3-TableVersion01-CSV.csv" ;
-    dct:identifier "sha256:e37a9be128a94932137fade02025e5bc876c6092f4e7a55be3943ecf40352d4a" .
+    dct:identifier "sha256:63640a07e76a31ff776d4a12480758893482e3ac6a7bc9fbe879acdc40982c43" .
 
 mis:input_build_mis_vocab_py
     a prov:Entity ;
     rdfs:label "build_mis_vocab.py" ;
-    dct:identifier "sha256:c451728938a9e9eb8ab923bb20af4778fa35f6cedabb6369af7d544594391541" .
+    dct:identifier "sha256:6ba8f36ba4e43f47ecce47388b6a0ed65490d623085aa7b0008b19840b95379c" .
 
 
 mis:source_railsback2015

@@ -158,5 +158,5 @@
 <text x="1068" y="918" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#1f1f1d">subclass of</text>
 <line x1="1230" y1="918" x2="1278" y2="918" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
 <text x="1288" y="918" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="20" fill="#1f1f1d">property, as used in the graph</text>
-<text x="40" y="970" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Selected classes of 46 in geo_lod_core, EPICA and SISAL. A pill names the CRM-family anchor; a class without one inherits it.</text>
+<text x="40" y="970" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#55544f">Selected classes of 47 in geo_lod_core, EPICA and SISAL. A pill names the CRM-family anchor; a class without one inherits it.</text>
 </svg>

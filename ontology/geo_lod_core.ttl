@@ -556,6 +556,48 @@ geolod:hasTimePosition
     rdfs:label   "has time position"@en ;
     rdfs:comment "The age of an observation as a time position, carrying both  the numeric value and the reference system it belongs to. Kept alongside the  plain geolod:ageKaBP literal, which stays queryable without a join."@en .
 
+# -- Age uncertainty (+/- ka) as a node of its own ---------------------------
+
+geolod:AgeUncertainty
+    a owl:Class ;
+    rdfs:subClassOf crm:E54_Dimension ;
+    rdfs:label   "Age uncertainty"@en ;
+    rdfs:comment "The stated uncertainty of one age (a time:TimePosition): the plus and minus values in ka, and the confidence level when the source states one. Kept next to the flat geolod:ageUncertaintyPos_ka and geolod:ageUncertaintyNeg_ka literals, which stay queryable without a join."@en .
+
+geolod:hasAgeUncertainty
+    a owl:ObjectProperty ;
+    rdfs:domain  time:TimePosition ;
+    rdfs:range   geolod:AgeUncertainty ;
+    rdfs:label   "has age uncertainty"@en .
+
+geolod:plusKa
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:AgeUncertainty ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "plus (ka)"@en ;
+    rdfs:comment "Uncertainty on the older side of the age, in ka."@en .
+
+geolod:minusKa
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:AgeUncertainty ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "minus (ka)"@en ;
+    rdfs:comment "Uncertainty on the younger side of the age, in ka."@en .
+
+geolod:coverageLevel
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:AgeUncertainty ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "coverage level"@en ;
+    rdfs:comment "Probability content of the interval as stated in the source (0.95 for a 95% confidence level). Absent where the source does not state it; it is not assumed."@en .
+
+geolod:hasAgeInterval
+    a owl:ObjectProperty ;
+    rdfs:domain  geolod:AgeUncertainty ;
+    rdfs:range   time:ProperInterval ;
+    rdfs:label   "has age interval"@en ;
+    rdfs:comment "The interval age minus minusKa to age plus plusKa as an OWL-Time interval: beginning is the older instant, end the younger one, both on the age's own reference system."@en .
+
 geolod:atDepth_m
     a owl:DatatypeProperty ;
     rdfs:range   xsd:decimal ;

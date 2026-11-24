@@ -12,7 +12,7 @@ graph:
 page:
   title: Query
   intro: >-
-    Eight queries over a sample of the geo-lod graph. They run in your browser; nothing is sent anywhere. Edit a query and
+    Nine queries over a sample of the geo-lod graph. They run in your browser; nothing is sent anywhere. Edit a query and
     press Run.
 
 prefixes: |
@@ -30,6 +30,7 @@ prefixes: |
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+  PREFIX time: <http://www.w3.org/2006/time#>
 
 queries:
   - id: classes-in-use
@@ -135,3 +136,20 @@ queries:
            geo:hasGeometry ?geometry .
         OPTIONAL { ?f geolod:hasLiteratureReference ?literature }
       } ORDER BY ?label
+
+  - id: ci-eruption-ages
+    title: Published ages of the Campanian Ignimbrite eruption
+    intro: >-
+      The eruption is one event with one time-span. Each published age is a CRM attribute assignment that names its
+      article and its own time reference system, so the ages stay side by side instead of being merged. The third age
+      dates the tephra layer in one core, not the vent.
+    sparql: |
+      SELECT ?label ?ageKa ?uncertaintyKa ?scale ?article WHERE {
+        geolod:ci_eruption_timespan ^crm:P140_assigned_attribute_to ?assignment .
+        ?assignment rdfs:label ?label ;
+                    crm:P141_assigned ?position ;
+                    prov:wasDerivedFrom ?article .
+        ?position time:numericPosition ?ageKa ;
+                  geolod:ageUncertaintyPos_ka ?uncertaintyKa ;
+                  time:hasTRS ?scale .
+      } ORDER BY DESC(?ageKa)

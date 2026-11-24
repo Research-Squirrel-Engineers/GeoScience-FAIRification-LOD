@@ -1,0 +1,231 @@
+<svg width="1700" height="1860" viewBox="0 0 1700 1860" xmlns="http://www.w3.org/2000/svg" role="img"><title>The cave site Chauvet and one SISAL speleothem with its dating points</title>
+<rect width="1700" height="1860" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<rect x="20" y="12" width="40" height="40" rx="6" fill="#000000" stroke="#000000" stroke-width="1"/>
+<text x="40" y="33" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#ffffff">a</text>
+<text x="76" y="33" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">A cave site, enriched with the archaeological annotation</text>
+<g transform="translate(0,70)">
+<path d="M 40.5 470.0 C 17.5 424.0 34.8 360.8 80.8 334.3 C 109.5 297.5 167.0 288.3 201.5 309.0 C 247.5 280.2 316.5 309.0 333.8 366.5 C 362.5 401.0 351.0 447.0 345.2 470.0 Z" fill="#cfd6e0" stroke="#000000" stroke-width="1.6"/>
+<path d="M 84.2 470.0 C 77.3 435.5 98.0 398.7 134.8 380.3 C 155.5 355.0 190.0 359.6 206.1 373.4 C 229.1 350.4 270.5 364.2 284.3 398.7 C 305.0 424.0 300.4 453.9 298.1 470.0 Z" fill="#4b5563"/>
+<polygon points="129.1,382.6 145.2,382.6 138.2,412.5" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="161.2,366.5 172.8,366.5 168.2,382.6" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="190.0,363.1 208.4,363.1 200.3,409.1" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="229.1,365.4 242.9,365.4 237.2,388.4" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="260.1,384.9 271.6,384.9 267.1,401.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="118.7,470.0 141.7,470.0 130.2,447.0" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="201.5,470.0 229.1,470.0 215.3,435.5" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<polygon points="250.9,470.0 267.1,470.0 259.0,453.9" fill="#cfd6e0" stroke="#000000" stroke-width="1"/>
+<path d="M 17.5 470.0 L 368.2 470.0" stroke="#000000" stroke-width="1.6"/>
+<rect x="360" y="20" width="390" height="90" rx="6" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="555.0" y="49.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">SISAL cave collection</text>
+<text x="555.0" y="82.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">365 caves</text>
+<rect x="830" y="20" width="400" height="90" rx="6" fill="#fff2cc" stroke="#000000" stroke-width="1"/>
+<text x="1030.0" y="51.08" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">Archaeological cave collection</text>
+<text x="1030.0" y="80.84" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">37 caves, archaeological record</text>
+<rect x="480" y="230" width="440" height="250" rx="6" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="700.0" y="266" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="30" font-weight="500" fill="#1f1f1d">Chauvet cave</text>
+<text x="700.0" y="312" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#1f1f1d">Cave, ArchaeologicalCaveSite</text>
+<text x="700.0" y="350" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#1f1f1d">Cave_site_0077, 240 m</text>
+<text x="700.0" y="388" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#1f1f1d">δ18O 210, δ13C 210 samples</text>
+<text x="700.0" y="426" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">Palaeolithic Art, confidence high</text>
+<line x1="555" y1="112" x2="600" y2="228" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="505.25" y="155.0" width="144.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="577.5" y="170.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">rdfs:member</text>
+<line x1="1030" y1="112" x2="820" y2="228" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="852.75" y="155.0" width="144.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="925.0" y="170.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">rdfs:member</text>
+<rect x="1290" y="50" width="380" height="92" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1480.0" y="80.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">wd:Q191483</text>
+<text x="1480.0" y="113.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">Wikidata</text>
+<line x1="920" y1="270" x2="1288" y2="96" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1018.8" y="168.0" width="132.4" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1085.0" y="183.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">owl:sameAs</text>
+<rect x="1290" y="168" width="380" height="92" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1480.0" y="198.92000000000002" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">UNESCO World Heritage</text>
+<text x="1480.0" y="231.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">whc.unesco.org/en/list/1426</text>
+<line x1="920" y1="312" x2="1288" y2="214" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1024.75" y="248.0" width="140.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1095.0" y="263.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">unescoWHId</text>
+<rect x="1290" y="286" width="380" height="92" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1480.0" y="316.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">PalaeolithicContext</text>
+<text x="1480.0" y="349.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">ArchaeologicalContext</text>
+<line x1="920" y1="354" x2="1288" y2="332" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="945.2" y="328.0" width="319.6" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1105.0" y="343.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">archaeologicalBroaderContext</text>
+<rect x="1290" y="404" width="380" height="92" rx="6" fill="#e4e4e0" stroke="#000000" stroke-width="1"/>
+<text x="1480.0" y="434.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">sf:Point</text>
+<text x="1480.0" y="467.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">POINT(4.26 44.23)</text>
+<line x1="920" y1="396" x2="1288" y2="450" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1040.9" y="408.0" width="148.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1115.0" y="423.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">hasGeometry</text>
+<rect x="1290" y="522" width="380" height="92" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1480.0" y="552.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">DataSource</text>
+<text x="1480.0" y="585.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">SISAL v3, site annotations</text>
+<line x1="920" y1="438" x2="1288" y2="568" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1008.75" y="488.0" width="232.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1125.0" y="503.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">prov:wasDerivedFrom</text>
+</g>
+<rect x="20" y="736" width="40" height="40" rx="6" fill="#000000" stroke="#000000" stroke-width="1"/>
+<text x="40" y="757" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#ffffff">b</text>
+<text x="76" y="757" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#1f1f1d">One speleothem of that cave strand, its dating points and age models</text>
+<g transform="translate(0,800)">
+<g transform="translate(-4.0 76.4) scale(1.15 0.68)"><clipPath id="sttick"><path d="M 62 917.0 C 85 640 110 260 122 191.0 C 132 105.2 188 105.2 198 191.0 C 210 260 235 640 258 917.0 Z"/></clipPath><g clip-path="url(#sttick)"><rect x="50" y="60" width="220" height="900" fill="url(#warm)"/>
+<path d="M 50 278 Q 160 222 270 278" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 340 Q 160 284 270 340" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 402 Q 160 346 270 402" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 464 Q 160 408 270 464" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 526 Q 160 470 270 526" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 588 Q 160 532 270 588" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 650 Q 160 594 270 650" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 712 Q 160 656 270 712" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 774 Q 160 718 270 774" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 836 Q 160 780 270 836" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<path d="M 50 898 Q 160 842 270 898" fill="none" stroke="#6b6a63" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="141.2" x2="270" y2="141.2" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="161.1" x2="270" y2="161.1" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="182.7" x2="270" y2="182.7" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="199.6" x2="270" y2="199.6" stroke="#dc2626" stroke-width="4.5" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="212.0" x2="270" y2="212.0" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="223.0" x2="270" y2="223.0" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="244.8" x2="270" y2="244.8" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="252.8" x2="270" y2="252.8" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="261.9" x2="270" y2="261.9" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="335.0" x2="270" y2="335.0" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="375.7" x2="270" y2="375.7" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="397.1" x2="270" y2="397.1" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="428.3" x2="270" y2="428.3" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="455.3" x2="270" y2="455.3" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="485.9" x2="270" y2="485.9" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="524.8" x2="270" y2="524.8" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="553.7" x2="270" y2="553.7" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="587.3" x2="270" y2="587.3" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="599.8" x2="270" y2="599.8" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="622.7" x2="270" y2="622.7" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="649.4" x2="270" y2="649.4" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="662.5" x2="270" y2="662.5" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="668.3" x2="270" y2="668.3" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="672.5" x2="270" y2="672.5" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="682.9" x2="270" y2="682.9" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="686.2" x2="270" y2="686.2" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="694.4" x2="270" y2="694.4" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="701.1" x2="270" y2="701.1" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="712.8" x2="270" y2="712.8" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="738.4" x2="270" y2="738.4" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="740.4" x2="270" y2="740.4" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="751.1" x2="270" y2="751.1" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="753.2" x2="270" y2="753.2" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="761.9" x2="270" y2="761.9" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="779.4" x2="270" y2="779.4" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="782.6" x2="270" y2="782.6" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="809.9" x2="270" y2="809.9" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="809.9" x2="270" y2="809.9" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="831.2" x2="270" y2="831.2" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+<line x1="50" y1="850.3" x2="270" y2="850.3" stroke="#000000" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+</g><path d="M 62 917.0 C 85 640 110 260 122 191.0 C 132 105.2 188 105.2 198 191.0 C 210 260 235 640 258 917.0 Z" fill="none" stroke="#000000" stroke-width="2" vector-effect="non-scaling-stroke"/></g>
+<text x="180" y="40" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="30" font-weight="500" fill="#1f1f1d">Speleothem</text>
+<text x="180" y="76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">sisal:entity_00055</text>
+<text x="180" y="736" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">ticks mark the dated depths</text>
+<rect x="620" y="90" width="330" height="150" rx="6" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="785.0" y="148.76" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="28" font-weight="500" fill="#000000">AgeControlPoint</text>
+<text x="785.0" y="183.48" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" fill="#000000">6.504 ± 0.024 ka</text>
+<text x="785.0" y="208" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#1f1f1d">at 101.2 mm</text>
+<line x1="620" y1="165" x2="255" y2="212.17685363931935" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="319.6" y="173.58842681965967" width="240.8" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="440.0" y="188.58842681965967" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">constrainsSpeleothem</text>
+<rect x="620" y="330" width="330" height="150" rx="6" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="785.0" y="389.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">GrowthHiatus</text>
+<text x="785.0" y="422.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">at 1061.7 mm</text>
+<text x="785.0" y="446" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">respected by all 6 models</text>
+<line x1="620" y1="395" x2="255" y2="608.5253190888596" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="362.25" y="486.7626595444298" width="155.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="440.0" y="501.7626595444298" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">inSpeleothem</text>
+<rect x="620" y="530" width="330" height="130" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2.2" stroke-dasharray="7 6"/>
+<text x="785.0" y="566" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">SpeleothemSample</text>
+<text x="785.0" y="602" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#1f1f1d">δ18O and δ13C observations</text>
+<text x="785.0" y="634" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">pipeline only</text>
+<line x1="620" y1="595" x2="275" y2="632.3536" stroke="#55544f" stroke-width="1.6" stroke-dasharray="7 6" marker-end="url(#a)"/>
+<rect x="360.5" y="598.6768" width="159.0" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="440.0" y="613.6768" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">collectedFrom</text>
+<rect x="1340" y="40" width="330" height="100" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1505.0" y="74.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#ffffff">DatingMethod</text>
+<text x="1505.0" y="107.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#ffffff">U/Th, unspecified</text>
+<rect x="1340" y="230" width="330" height="200" rx="6" fill="#d8ead3" stroke="#000000" stroke-width="1"/>
+<text x="1505.0" y="264" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#1f1f1d">AgeModel</text>
+<text x="1505.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#1f1f1d">6 age models</text>
+<text x="1505.0" y="342" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">Bacon, Bchron, COPRA,</text>
+<text x="1505.0" y="372" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">linear interpolation,</text>
+<text x="1505.0" y="402" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">OxCal, StalAge</text>
+<rect x="1340" y="500" width="330" height="100" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1505.0" y="534.92" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="26" font-weight="500" fill="#000000">DataSource</text>
+<text x="1505.0" y="567.16" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">SISAL v3</text>
+<line x1="950" y1="165" x2="1338" y2="90" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1066.95" y="112.5" width="156.1" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1145.0" y="127.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">datingMethod</text>
+<line x1="950" y1="165" x2="1338" y2="330" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1053.95" y="232.5" width="182.1" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1145.0" y="247.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">usedInAgeModel</text>
+<line x1="950" y1="165" x2="1338" y2="550" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1028.75" y="342.5" width="232.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1145.0" y="357.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#000000">prov:wasDerivedFrom</text>
+<rect x="480" y="710" width="1090" height="320" rx="10" fill="#ffffff" stroke="#bdbbb2" stroke-width="1"/>
+<text x="1030.0" y="740" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#1f1f1d">40 dating points of this speleothem</text>
+<line x1="560" y1="940" x2="1500" y2="940" stroke="#555555" stroke-width="1.6"/>
+<line x1="560" y1="790" x2="560" y2="940" stroke="#555555" stroke-width="1.6"/>
+<line x1="554" y1="940.0" x2="560" y2="940.0" stroke="#555555" stroke-width="1.6"/>
+<text x="546" y="940.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">0</text>
+<line x1="554" y1="861.0526315789474" x2="560" y2="861.0526315789474" stroke="#555555" stroke-width="1.6"/>
+<text x="546" y="861.0526315789474" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">10</text>
+<line x1="560.0" y1="940" x2="560.0" y2="946" stroke="#555555" stroke-width="1.6"/>
+<text x="560.0" y="968" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">0</text>
+<line x1="862.2984328720602" y1="940" x2="862.2984328720602" y2="946" stroke="#555555" stroke-width="1.6"/>
+<text x="862.2984328720602" y="968" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">400</text>
+<line x1="1164.5968657441204" y1="940" x2="1164.5968657441204" y2="946" stroke="#555555" stroke-width="1.6"/>
+<text x="1164.5968657441204" y="968" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">800</text>
+<line x1="1466.8952986161808" y1="940" x2="1466.8952986161808" y2="946" stroke="#555555" stroke-width="1.6"/>
+<text x="1466.8952986161808" y="968" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">1200</text>
+<text x="1030.0" y="998" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">depth from the top (mm)</text>
+<text x="546" y="772" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">age (ka BP)</text>
+<line x1="1362.3605005290224" y1="790" x2="1362.3605005290224" y2="940" stroke="#555555" stroke-width="1.8" stroke-dasharray="7 6"/>
+<text x="1352.3605005290224" y="804" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="22" fill="#55544f">hiatus</text>
+<circle cx="563.7" cy="896.3" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="588.5" cy="894.8" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="615.5" cy="892.8" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="636.5" cy="888.7" r="9" fill="#dc2626" stroke="#000000" stroke-width="1.2"/>
+<circle cx="651.9" cy="887.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="665.7" cy="886.1" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="692.7" cy="884.5" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="702.8" cy="884.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="714.0" cy="877.0" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="805.1" cy="872.6" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="855.7" cy="867.8" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="882.4" cy="867.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="921.2" cy="864.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="955.0" cy="861.8" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="993.0" cy="860.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1041.4" cy="857.5" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1077.5" cy="853.9" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1119.3" cy="851.6" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1134.8" cy="851.4" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1163.4" cy="849.9" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1196.6" cy="847.5" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1213.0" cy="846.0" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1220.2" cy="845.4" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1225.4" cy="844.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1238.4" cy="842.0" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1242.4" cy="840.1" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1252.7" cy="838.8" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1261.0" cy="836.5" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1275.6" cy="833.7" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1307.4" cy="830.3" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1310.0" cy="828.4" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1323.2" cy="827.3" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1325.9" cy="826.9" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1336.8" cy="822.0" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1358.5" cy="813.8" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1362.5" cy="810.1" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1396.5" cy="831.5" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1396.5" cy="805.6" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1423.1" cy="800.5" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+<circle cx="1446.8" cy="794.2" r="6" fill="#0072B2" stroke="#000000" stroke-width="1.2"/>
+</g>
+</svg>

@@ -705,6 +705,27 @@ geolod:countD13CSamples
     rdfs:label   "number of δ¹³C samples"@en ;
     rdfs:comment "Number of delta-13-C measurements recorded for the cave in the SISAL v3 release."@en .
 
+geolod:countDatedD18OSamples
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:integer ;
+    rdfs:label   "number of dated δ¹⁸O samples"@en ;
+    rdfs:comment "Samples of this cave that carry a δ¹⁸O measurement and an age in the published age model of the SISAL v3 release."@en .
+
+geolod:youngestAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "youngest age, ka BP"@en ;
+    rdfs:comment "The youngest age, in thousand years before 1950, that the published age model of the SISAL v3 release gives to a sample of this cave carrying a δ¹⁸O measurement. A negative value is younger than 1950. The span between this and the oldest age says where the records of the cave begin and end, not that they are continuous: hiatuses and gaps lie inside it."@en .
+
+geolod:oldestAgeKaBP
+    a owl:DatatypeProperty ;
+    rdfs:domain  geolod:Cave ;
+    rdfs:range   xsd:decimal ;
+    rdfs:label   "oldest age, ka BP"@en ;
+    rdfs:comment "The oldest age, in thousand years before 1950, that the published age model of the SISAL v3 release gives to a sample of this cave carrying a δ¹⁸O measurement."@en .
+
 geolod:collectedFrom
     a owl:ObjectProperty ;
     rdfs:domain  geolod:SpeleothemSample ;
@@ -889,11 +910,20 @@ def add_cave_catalogue(g: Graph, ann: Graph) -> tuple[int, int, int]:
         if elevation is not None:
             g.add((site, GEOLOD["elevation_m"], dec(elevation, 1)))
         for column, prop in [("n_d18o_samples", "countD18OSamples"),
-                             ("n_d13c_samples", "countD13CSamples")]:
+                             ("n_d13c_samples", "countD13CSamples"),
+                             ("n_dated_d18o_samples", "countDatedD18OSamples")]:
             count = num(row.get(column))
             if count is not None:
                 g.add((site, GEOLOD[prop],
                        Literal(int(count), datatype=XSD.integer)))
+        # The span of the published age model over the samples with a d18O
+        # value, in ka BP. The catalogue states years BP (1950 = 0); a cave
+        # with no such sample has empty fields and gets no statement.
+        for column, prop in [("youngest_age_bp", "youngestAgeKaBP"),
+                             ("oldest_age_bp", "oldestAgeKaBP")]:
+            age = num(row.get(column))
+            if age is not None:
+                g.add((site, GEOLOD[prop], dec(age / 1000.0, 4)))
 
         note = annotations.get(row["site_id"])
         if note:

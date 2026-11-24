@@ -6,7 +6,8 @@
     docu/crm-coverage.html   which own classes reach the CIDOC CRM family, and through which chain
     docu/crosswalk.html      every class defined or used, drawn with its chain to the CIDOC CRM family
     docu/instances.html      one resource per strand with its neighbours, as stored
-    docu/sparql.html         eight queries run in the browser (visuals/queries.yaml)
+    docu/sparql.html         nine queries run in the browser (visuals/queries.yaml)
+    docu/paper.html          the paper figures with their captions (visuals/paper_page.py, built apart from this script)
 
 Run it through `py main.py --visuals-only` or `py visuals/build.py --only docu`. The output is deterministic: no date,
 sorted iteration, LF line endings. Publishing is done by .github/workflows/docu-pages.yml (gh-pages, /docu/).
@@ -227,8 +228,9 @@ def build_index(M: md.Model) -> None:
              ("crm-coverage.html", "CRM coverage", "Which classes reach the CIDOC CRM family, and how."),
              ("crosswalk.html", "Crosswalk", "Every defined or used class, drawn with its chain to the CRM family."),
              ("instances.html", "Instance models", "One EPICA, SISAL and CI resource with its neighbours."),
-             ("sparql.html", "Query", "Eight queries over a sample graph, run in the browser."),
+             ("sparql.html", "Query", "Nine queries over a sample graph, run in the browser."),
              ("slides.html", "Slide figures", "The sixteen figures of the CHNT31 talk."),
+             ("paper.html", "Paper figures", "The figures of the paper with their captions."),
              ("clusters.html", "Model clusters", "The data model in thematic slices."),
              ("../semweb/index.html", "Ontology pages", "One page per class, property and resource (SPARQL Unicorn), with collections of the sites, cores and datasets.")]
     body = (f'<div class="stat">{stats}</div><section class="text"><ul>'

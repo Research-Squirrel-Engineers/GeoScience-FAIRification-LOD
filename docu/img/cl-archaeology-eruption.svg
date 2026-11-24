@@ -1,0 +1,132 @@
+<svg width="2250" height="1200" viewBox="0 0 2250 1200" xmlns="http://www.w3.org/2000/svg" role="img"><title>The Campanian Ignimbrite eruption as the root of the CI strand</title>
+<rect width="2250" height="1200" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#55544f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#ffffff" stroke="#55544f" stroke-width="1.3" stroke-linejoin="round"/></marker><pattern id="warm" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f9dfb8"/><circle cx="7" cy="7" r="1.6" fill="#d9974a"/></pattern><pattern id="cold" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="11" height="11" fill="#cfe3f3"/><line x1="0" y1="0" x2="0" y2="11" stroke="#7fb0d6" stroke-width="2.4"/></pattern></defs>
+<rect x="30" y="500.0" width="270" height="200" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="165.0" y="582.6" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="30" font-weight="500" fill="#000000">CI eruption</text>
+<text x="165.0" y="619.8" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">crm:E5_Event, strat:Eruption</text>
+<rect x="620" y="70" width="320" height="110" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="780.0" y="111.08" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">Phlegraean Fields</text>
+<text x="780.0" y="140.84" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">crm:E53_Place, wd:Q755123</text>
+<rect x="620" y="545.0" width="320" height="110" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="780.0" y="586.08" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">Time-span</text>
+<text x="780.0" y="615.84" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="18" fill="#000000">crm:E52_Time-Span</text>
+<rect x="620" y="1010" width="320" height="120" rx="6" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="780.0" y="1056.08" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="24" font-weight="500" fill="#000000">Findspots (selection)</text>
+<text x="780.0" y="1085.84" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" fill="#000000">74 crm:E27_Site, 12 also CRMarchaeo A2</text>
+<line x1="300" y1="600.0" x2="618" y2="125" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="397.9" y="347.5" width="124.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="460.0" y="362.5" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P7 took place at</text>
+<line x1="300" y1="600.0" x2="618" y2="600.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="392.85" y="585.0" width="134.3" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="460.0" y="600.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P4 has time-span</text>
+<line x1="300" y1="600.0" x2="618" y2="1070" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="344.2" y="820.0" width="231.6" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="460.0" y="835.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P12 occurred in the presence of</text>
+<text x="1730.0" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">39.0</text>
+<text x="1806.6666666666677" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">39.2</text>
+<text x="1883.333333333335" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">39.4</text>
+<text x="1960.0000000000027" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">39.6</text>
+<text x="2036.6666666666702" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">39.8</text>
+<text x="2113.333333333338" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">40.0</text>
+<text x="2190.0000000000055" y="239.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="16" fill="#55544f">40.2</text>
+<text x="2220" y="207.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="16" font-weight="500" fill="#55544f">ka BP</text>
+<rect x="1250" y="280" width="280" height="100" rx="6" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1390.0" y="317.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#ffffff">Schenk et al. 2024</text>
+<text x="1390.0" y="344.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#ffffff">crm:E13_Attribute_Assignment</text>
+<text x="1390.0" y="404" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source: doi:10.3390/quat7020017</text>
+<line x1="1250" y1="330" x2="942" y2="600.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="997.9" y="450.0" width="194.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1095.0" y="465.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P140 assigned attribute to</text>
+<line x1="1530" y1="330" x2="1698" y2="330" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1560.05" y="315" width="109.9" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1615.0" y="330" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P141 assigned</text>
+<rect x="1700" y="265.0" width="520" height="130" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1716" y="289.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">39.89 ± 0.15 ka</text>
+<text x="2204" y="289.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">time:TimePosition</text>
+<line x1="1730.0" y1="322" x2="1730.0" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1806.6666666666677" y1="322" x2="1806.6666666666677" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1883.333333333335" y1="322" x2="1883.333333333335" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1960.0000000000027" y1="322" x2="1960.0000000000027" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2036.6666666666702" y1="322" x2="2036.6666666666702" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2113.333333333338" y1="322" x2="2113.333333333338" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2190.0000000000055" y1="322" x2="2190.0000000000055" y2="387.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2013.6666666666667" y1="354" x2="2128.666666666665" y2="354" stroke="#E69F00" stroke-width="6"/>
+<line x1="2013.6666666666667" y1="341" x2="2013.6666666666667" y2="367" stroke="#E69F00" stroke-width="3"/>
+<line x1="2128.666666666665" y1="341" x2="2128.666666666665" y2="367" stroke="#E69F00" stroke-width="3"/>
+<circle cx="2071.2" cy="354" r="10" fill="#E69F00" stroke="#000000" stroke-width="1.5"/>
+<line x1="1960.0" y1="395.0" x2="1960.0" y2="451.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1910.25" y="408.0" width="99.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1960.0" y="423.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">time:hasTRS</text>
+<rect x="1780" y="453.0" width="360" height="46" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1960.0" y="476.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">trs:ELSA-20</text>
+<rect x="1250" y="550" width="280" height="100" rx="6" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1390.0" y="587.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#ffffff">Giaccio et al. 2017</text>
+<text x="1390.0" y="614.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#ffffff">crm:E13_Attribute_Assignment</text>
+<text x="1390.0" y="674" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source: doi:10.1038/srep45940</text>
+<line x1="1250" y1="600" x2="942" y2="600.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="997.9" y="585.0" width="194.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1095.0" y="600.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P140 assigned attribute to</text>
+<line x1="1530" y1="600" x2="1698" y2="600" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1560.05" y="585" width="109.9" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1615.0" y="600" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P141 assigned</text>
+<rect x="1700" y="535.0" width="520" height="130" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1716" y="559.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">39.85 ± 0.14 ka</text>
+<text x="2204" y="559.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">time:TimePosition</text>
+<line x1="1730.0" y1="592" x2="1730.0" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1806.6666666666677" y1="592" x2="1806.6666666666677" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1883.333333333335" y1="592" x2="1883.333333333335" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1960.0000000000027" y1="592" x2="1960.0000000000027" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2036.6666666666702" y1="592" x2="2036.6666666666702" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2113.333333333338" y1="592" x2="2113.333333333338" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2190.0000000000055" y1="592" x2="2190.0000000000055" y2="657.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2002.1666666666663" y1="624" x2="2109.5" y2="624" stroke="#0072B2" stroke-width="6"/>
+<line x1="2002.1666666666663" y1="611" x2="2002.1666666666663" y2="637" stroke="#0072B2" stroke-width="3"/>
+<line x1="2109.5" y1="611" x2="2109.5" y2="637" stroke="#0072B2" stroke-width="3"/>
+<circle cx="2055.8" cy="624" r="10" fill="#0072B2" stroke="#000000" stroke-width="1.5"/>
+<line x1="1960.0" y1="665.0" x2="1960.0" y2="721.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1910.25" y="678.0" width="99.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1960.0" y="693.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">time:hasTRS</text>
+<rect x="1780" y="723.0" width="360" height="46" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1960.0" y="746.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">trs:ArAr-Giaccio2017</text>
+<rect x="1250" y="820" width="280" height="100" rx="6" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="1390.0" y="857.24" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="22" font-weight="500" fill="#ffffff">De Vivo et al. 2001</text>
+<text x="1390.0" y="884.52" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#ffffff">crm:E13_Attribute_Assignment</text>
+<text x="1390.0" y="944" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">source: doi:10.1007/s007100170010</text>
+<line x1="1250" y1="870" x2="942" y2="600.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="997.9" y="720.0" width="194.2" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1095.0" y="735.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P140 assigned attribute to</text>
+<line x1="1530" y1="870" x2="1698" y2="870" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1560.05" y="855" width="109.9" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1615.0" y="870" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">P141 assigned</text>
+<rect x="1700" y="805.0" width="520" height="130" rx="6" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+<text x="1716" y="829.0" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="21" font-weight="500" fill="#1f1f1d">39.28 ± 0.11 ka</text>
+<text x="2204" y="829.0" text-anchor="end" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#55544f">time:TimePosition</text>
+<line x1="1730.0" y1="862" x2="1730.0" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1806.6666666666677" y1="862" x2="1806.6666666666677" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1883.333333333335" y1="862" x2="1883.333333333335" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1960.0000000000027" y1="862" x2="1960.0000000000027" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2036.6666666666702" y1="862" x2="2036.6666666666702" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2113.333333333338" y1="862" x2="2113.333333333338" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="2190.0000000000055" y1="862" x2="2190.0000000000055" y2="927.0" stroke="#d8d6ce" stroke-width="1"/>
+<line x1="1795.1666666666672" y1="894" x2="1879.4999999999998" y2="894" stroke="#56B4E9" stroke-width="6"/>
+<line x1="1795.1666666666672" y1="881" x2="1795.1666666666672" y2="907" stroke="#56B4E9" stroke-width="3"/>
+<line x1="1879.4999999999998" y1="881" x2="1879.4999999999998" y2="907" stroke="#56B4E9" stroke-width="3"/>
+<circle cx="1837.3" cy="894" r="10" fill="#56B4E9" stroke="#000000" stroke-width="1.5"/>
+<line x1="1960.0" y1="935.0" x2="1960.0" y2="991.0" stroke="#55544f" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="1910.25" y="948.0" width="99.5" height="30" rx="4" fill="#fbbf24" stroke="#000000" stroke-width="1"/>
+<text x="1960.0" y="963.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="15" fill="#000000">time:hasTRS</text>
+<rect x="1780" y="993.0" width="360" height="46" rx="6" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="1960.0" y="1016.0" text-anchor="middle" dominant-baseline="central" font-family="Fira Sans" font-size="17" font-weight="500" fill="#ffffff">trs:ArAr-DeVivo2001</text>
+<rect x="50" y="1161" width="22" height="22" rx="3" fill="#e2e8f0" stroke="#000000" stroke-width="1"/>
+<text x="82" y="1172" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">instance</text>
+<rect x="191.3" y="1161" width="22" height="22" rx="3" fill="#9a3412" stroke="#000000" stroke-width="1"/>
+<text x="223.3" y="1172" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">class of the assignment</text>
+<rect x="462.8" y="1161" width="22" height="22" rx="3" fill="#4c1d95" stroke="#000000" stroke-width="1"/>
+<text x="494.8" y="1172" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">time reference system</text>
+<rect x="724.2" y="1161" width="22" height="22" rx="3" fill="#0072B2" stroke="#000000" stroke-width="1"/>
+<text x="756.2" y="1172" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">adopted age of the event</text>
+<rect x="1010.1" y="1161" width="22" height="22" rx="3" fill="#56B4E9" stroke="#000000" stroke-width="1"/>
+<text x="1042.1" y="1172" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">competing age of the eruption</text>
+<rect x="1341.1" y="1161" width="22" height="22" rx="3" fill="#E69F00" stroke="#000000" stroke-width="1"/>
+<text x="1373.1" y="1172" text-anchor="start" dominant-baseline="central" font-family="Fira Sans" font-size="19" fill="#55544f">age of the tephra layer in one core, not of the vent</text>
+</svg>

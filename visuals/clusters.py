@@ -421,6 +421,14 @@ SELECT ?site ?property ?value WHERE {
   VALUES ?site { geolod:Cave_site_0077 ci:cisite_43 ci:cisite_1 }
   ?site ?property ?value .
 } ORDER BY ?site ?property ?value"""
+Q_ERUPTION = YPFX + """
+# The published ages of the CI eruption: one time-span, one dating assertion per age, each with its own reference system.
+PREFIX time: <http://www.w3.org/2006/time#>
+SELECT ?scale ?age_ka ?uncertainty_ka WHERE {
+  geolod:ci_eruption_timespan ^crm:P140_assigned_attribute_to ?assignment .
+  ?assignment crm:P141_assigned ?position .
+  ?position time:numericPosition ?age_ka ; geolod:ageUncertaintyPos_ka ?uncertainty_ka ; time:hasTRS ?scale .
+} ORDER BY DESC(?age_ka)"""
 Q_SCREENING = YPFX + """
 # Per kind of place: how many, how many have been screened for archaeology, how many carry archaeological evidence.
 SELECT ?kind (COUNT(DISTINCT ?site) AS ?places) (COUNT(DISTINCT ?screened) AS ?screened_places)
@@ -517,6 +525,13 @@ def data_figures_archaeology(M: md.Model, D: AY.ArchData, cl: dict) -> tuple[lis
     data.append(K.fig_card(IMG, "cl-archaeology-context", "", "Archaeological sites by broader context and confidence", CREDIT))
     data.append(query_block(Q_CONTEXT, f"Run on the committed graphs and compared with the figure: {st['total']} sites."))
 
+    fe, ste = AY.eruption_fig(D, IMG, "cl-archaeology-eruption")
+    got = {str(r[0]).rsplit("/", 1)[-1]: (round(float(r[1]), 3), round(float(r[2]), 3)) for r in D.g.query(Q_ERUPTION)}
+    if got != {k: (round(v[0], 3), round(v[1], 3)) for k, v in ste["rows"].items()}:
+        raise ValueError(f"cl-archaeology-eruption: the query gives {got}, the figure {ste['rows']}")
+    data.append(K.fig_card(IMG, "cl-archaeology-eruption", "", "One eruption, several published ages", CREDIT))
+    data.append(query_block(Q_ERUPTION, f"Run on ci_findspots.ttl and compared with the figure: {len(ste['rows'])} ages on one time-span, each with its own reference system; they are not merged."))
+
     f, st = AY.map_fig(D, IMG, "cl-archaeology-map")
     from rdflib import URIRef
     got = sorted((str(r[0]).rsplit("/", 1)[-1], round(AY._point(r[1])[0], 4), round(AY._point(r[1])[1], 4), str(r[2]).rsplit("/", 1)[-1] if r[2] is not None else "none") for r in D.g.query(Q_FINDSPOTS))
@@ -526,6 +541,8 @@ def data_figures_archaeology(M: md.Model, D: AY.ArchData, cl: dict) -> tuple[lis
     if got != st["caves"]:
         raise ValueError("cl-archaeology-map: the query and the figure disagree on the archaeological caves")
     data.append(K.fig_card(IMG, "cl-archaeology-map", "", "Campanian Ignimbrite findspots and archaeological caves", CREDIT))
+
+
     data.append(query_block(Q_FINDSPOTS, f"Run on ci_findspots.ttl and compared with the figure: {len(st['findspots'])} findspots; the certainty is read from the geometry node."))
     data.append(query_block(Q_ARCH_CAVES, f"Compared with the figure: {len(st['caves'])} caves, {st['inside']} of them inside the window."))
 
