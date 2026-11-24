@@ -44,9 +44,9 @@ class TeeOutput:
 
     def __init__(self, filepath):
         self.terminal = sys.stdout
-        # newline="\n": sonst schreibt Python auf Windows CRLF, während Git
-        # die Datei nach .gitattributes als LF speichert - die Arbeitskopie
-        # wiche dann dauerhaft von ihrer eigenen abgelegten Form ab.
+        # newline="\n": otherwise Python writes CRLF on Windows while Git
+        # stores the file as LF according to .gitattributes - the working copy
+        # would then differ permanently from its own committed form.
         self.log = open(filepath, "w", encoding="utf-8", newline="\n")
 
     def write(self, message):
@@ -69,8 +69,8 @@ def print_header(text: str, char: str = "=", width: int = 80):
     print()
 
 
-# Laufzeit je Schritt. print_section startet die Uhr, end_section hält sie an;
-# print_summary zeigt daraus, wo die Zeit geblieben ist.
+# Run time per step. print_section starts the clock, end_section stops it;
+# print_summary uses it to show where the time went.
 STEP_TIMES: list[tuple[str, float]] = []
 _current_step: list = []
 
@@ -86,7 +86,7 @@ def print_section(text: str):
 
 
 def end_section() -> None:
-    """Hält die Uhr des laufenden Abschnitts an und meldet die Dauer."""
+    """Stops the clock of the current section and reports its duration."""
     if not _current_step:
         return
     label, started = _current_step[0], _current_step[1]
@@ -203,23 +203,23 @@ def clean_before_run(args) -> None:
 
 
 def regenerate_canonical_ontology() -> bool:
-    """Schritt 0: Schreibt die kanonischen Ontologie-Dateien aus
-    geo_lod_utils.py nach ontology/. Single Source of Truth - die Sub-
-    Skripte sollen keine eigenen Kopien mehr in ihre rdf/-Verzeichnisse
-    legen.
+    """Step 0: Write the canonical ontology files from
+    geo_lod_utils.py to ontology/. Single source of truth - the sub-
+    scripts should no longer place their own copies in their rdf/
+    directories.
 
-    Aktuell wird nur ontology/geo_lod_core.ttl regeneriert; weitere
-    TTL-Konstanten (z.B. EPICA_ONTOLOGY_TTL, SISAL_ONTOLOGY_TTL) können
-    hier ergänzt werden, sobald sie nach geo_lod_utils.py gewandert sind.
+    Currently only ontology/geo_lod_core.ttl is regenerated; further
+    TTL constants (e.g. EPICA_ONTOLOGY_TTL, SISAL_ONTOLOGY_TTL) can be
+    added here once they have moved to geo_lod_utils.py.
     """
-    print("\n  ▶ Regeneriere kanonische Ontologie-Dateien aus geo_lod_utils.py ...")
+    print("\n  ▶ Regenerating canonical ontology files from geo_lod_utils.py ...")
 
-    # geo_lod_utils.py liegt in ONTOLOGY_DIR
+    # geo_lod_utils.py lives in ONTOLOGY_DIR
     sys.path.insert(0, str(ONTOLOGY_DIR))
     try:
         from geo_lod_utils import GEO_LOD_CORE_TTL
     except ImportError as e:
-        print(f"  ✗ geo_lod_utils.py konnte nicht importiert werden: {e}")
+        print(f"  ✗ geo_lod_utils.py could not be imported: {e}")
         return False
 
     ONTOLOGY_DIR.mkdir(parents=True, exist_ok=True)
@@ -227,36 +227,36 @@ def regenerate_canonical_ontology() -> bool:
     try:
         target.write_text(GEO_LOD_CORE_TTL, encoding="utf-8")
         size_kb = target.stat().st_size / 1024
-        print(f"  ✓ {target.name} geschrieben ({size_kb:.1f} KB)")
+        print(f"  ✓ {target.name} written ({size_kb:.1f} KB)")
         return True
     except Exception as e:
-        print(f"  ✗ Fehler beim Schreiben von {target}: {e}")
+        print(f"  ✗ Error writing {target}: {e}")
         return False
 
 
 def regenerate_vocabularies() -> bool:
-    """Schritt 0b: Erzeugt die kontrollierten Vokabulare unter
-    ontology/vocab/ aus den Primärquellen in data/raw/.
+    """Step 0b: Build the controlled vocabularies under
+    ontology/vocab/ from the primary sources in data/raw/.
 
-    Nebenprodukt sind die aufbereiteten Tabellen in dist/ - dieselben Werte
-    wie im TTL, für Abbildungen und Achsencode.
+    A by-product is the prepared tables in dist/ - the same values
+    as in the TTL, for figures and axis code.
 
-    Aktuell nur das MIS-Vokabular (plus ontology/trs.ttl); weitere Schemata
-    (z.B. tephra) kommen hier dazu.
+    Currently only the MIS vocabulary (plus ontology/trs.ttl); further
+    schemata (e.g. tephra) will be added here.
     """
-    print("\n  ▶ Regeneriere kontrollierte Vokabulare aus data/raw/ ...")
+    print("\n  ▶ Regenerating controlled vocabularies from data/raw/ ...")
 
     sys.path.insert(0, str(ONTOLOGY_DIR))
     try:
         from build_mis_vocab import build as build_mis
     except ImportError as e:
-        print(f"  ✗ build_mis_vocab.py konnte nicht importiert werden: {e}")
+        print(f"  ✗ build_mis_vocab.py could not be imported: {e}")
         return False
 
     try:
         return build_mis()
     except Exception as e:
-        print(f"  ✗ MIS-Vokabular konnte nicht erzeugt werden: {e}")
+        print(f"  ✗ MIS vocabulary could not be generated: {e}")
         return False
 
 
@@ -264,16 +264,16 @@ def run_script(script_path: Path, description: str,
                script_args: list[str] | None = None) -> bool:
     """Execute Python script with PYTHONPATH set correctly.
 
-    Die Ausgabe des Sub-Skripts wird zeilenweise eingefangen und über den
-    TeeOutput weitergereicht. Damit steht im pipeline_report.txt exakt das,
-    was auch im Terminal steht - vorher schrieben die Sub-Skripte direkt auf
-    die Konsole und kamen am Log vorbei.
+    The output of the sub-script is captured line by line and passed on through
+    the TeeOutput. This way pipeline_report.txt contains exactly what the
+    terminal shows - previously the sub-scripts wrote directly to the
+    console and bypassed the log.
 
-    Zwei Umgebungsvariablen sind dafür nötig: sobald die Ausgabe durch eine
-    Pipe geht, fällt Python im Kindprozess auf die Locale-Kodierung zurück
-    (auf Windows cp1252), und Zeichen wie ✓, ‰ oder δ würden dort scheitern.
-    PYTHONIOENCODING erzwingt UTF-8, PYTHONUNBUFFERED sorgt dafür, dass die
-    Zeilen sofort ankommen statt erst am Ende des Schrittes.
+    Two environment variables are needed for this: as soon as the output goes
+    through a pipe, Python in the child process falls back to the locale
+    encoding (cp1252 on Windows), and characters such as ✓, ‰ or δ would fail
+    there. PYTHONIOENCODING forces UTF-8, PYTHONUNBUFFERED makes sure the
+    lines arrive immediately rather than at the end of the step.
     """
     if not script_path.exists():
         print(f"  ✗ {description} not found: {script_path}")
@@ -333,7 +333,7 @@ def run_script(script_path: Path, description: str,
 
 
 def _bundle_format_choices():
-    """Formatliste aus bundle_rdf importieren, ohne rdflib zu erzwingen."""
+    """Import the format list from bundle_rdf without forcing rdflib."""
     sys.path.insert(0, str(SCRIPT_DIR))
     from bundle_rdf import (
         BUNDLE_FORMATS,
@@ -350,26 +350,26 @@ BUNDLE_FORMATS, DEFAULT_BUNDLE_FORMATS, RELEASE_BUNDLE_FORMATS = (
 
 
 def run_bundle(epica_ok: bool, sisal_ok: bool, ci_ok: bool, formats) -> bool:
-    """Schritt 5: Ontologie + alle RDF-Outputs zu dist/geo-lod-bundle.ttl
-    zusammenführen und validieren (CRM-Coverage + SHACL).
+    """Step 5: Merge the ontology and all RDF outputs into dist/geo-lod-bundle.ttl
+    and validate (CRM coverage + SHACL).
 
-    Wird nur ausgeführt, wenn mindestens ein Subschritt erfolgreich war -
-    sonst ergibt das Bundle keinen Sinn.
+    Only runs if at least one sub-step succeeded -
+    otherwise the bundle makes no sense.
     """
     if not (epica_ok or sisal_ok or ci_ok):
-        print("  ⚠  Kein Subschritt erfolgreich - Bundle wird übersprungen.")
+        print("  ⚠  No sub-step succeeded - bundle skipped.")
         return False
 
-    # bundle_rdf.py liegt neben main.py
+    # bundle_rdf.py lives next to main.py
     try:
         sys.path.insert(0, str(SCRIPT_DIR))
         from bundle_rdf import run_bundle_step
     except ImportError as e:
-        print(f"  ✗ bundle_rdf.py konnte nicht importiert werden: {e}")
+        print(f"  ✗ bundle_rdf.py could not be imported: {e}")
         return False
 
-    # Nur die RDF-Verzeichnisse einbeziehen, deren Subschritt erfolgreich war.
-    # So vermeiden wir, dass veraltete Outputs in ein neues Bundle geraten.
+    # Include only the RDF directories whose sub-step succeeded.
+    # This keeps stale outputs from ending up in a new bundle.
     rdf_dirs = []
     if epica_ok:
         rdf_dirs.append(EPICA_RDF_DIR)
@@ -387,7 +387,7 @@ def run_bundle(epica_ok: bool, sisal_ok: bool, ci_ok: bool, formats) -> bool:
             formats=formats,
         )
     except Exception as e:
-        print(f"  ✗ Bundle-Schritt fehlgeschlagen: {e}")
+        print(f"  ✗ Bundle step failed: {e}")
         return False
 
 
@@ -449,10 +449,10 @@ def print_summary(results: dict[str, bool], requested: dict[str, bool],
     print(f"\n  Total duration: {duration.total_seconds():.1f} seconds")
     print(f"  Log saved to: {LOG_FILE}")
 
-    # Was der Sweep nicht anfasst: Reste, die kein Schritt mehr schreibt, und
-    # Dateien, die noch gebraucht werden und mit einem benannten Schritt
-    # entfallen. Eine Zeile, damit die Liste im Blick bleibt, ohne den Bericht
-    # zu fluten - Einzelheiten liefert clean.py.
+    # What the sweep does not touch: leftovers that no step writes any more, and
+    # files that are still needed and go away with a named step. One line so
+    # that the list stays in view without flooding the report - clean.py has
+    # the details.
     print()
     print(clean.summarise())
 
@@ -475,71 +475,70 @@ def main():
         "--clean",
         action="store_true",
         help=(
-            "Generierte Ausgaben vor dem Lauf entfernen. Voreingestellt an; "
-            "die Option bleibt, damit bestehende Aufrufe weiter gelten."
+            "Remove generated outputs before the run. On by default; "
+            "the option remains so that existing invocations keep working."
         ),
     )
     parser.add_argument(
         "--no-clean",
         action="store_true",
         help=(
-            "Schritt 0 überspringen und in die vorhandenen Ausgaben "
-            "hineinschreiben. Dann kann eine Datei überleben, die kein "
-            "Schritt mehr schreibt."
+            "Skip step 0 and write into the existing outputs. A file that "
+            "no step writes any more can then survive."
         ),
     )
     parser.add_argument(
         "--no-overview", action="store_true",
-        help="die Übersichtskarte überspringen. Sie liest die frisch "
-             "geschriebenen TTL und braucht dafür ein paar Sekunden mehr.")
+        help="skip the overview map. It reads the freshly written TTL and "
+             "needs a few seconds more.")
     parser.add_argument(
         "--no-bundle",
         action="store_true",
-        help="den Bundle-Schritt (RDF-Bundle + Validierung) überspringen",
+        help="skip the bundle step (RDF bundle + validation)",
     )
     parser.add_argument(
         "--no-visuals", action="store_true",
-        help="den Schritt Dokumentationsseiten und Vortragsabbildungen "
-             "(visuals/build.py, Ausgabe docu/) überspringen",
+        help="skip the step for the documentation pages and slide figures "
+             "(visuals/build.py, output in docu/)",
     )
     parser.add_argument(
         "--visuals-only", action="store_true",
-        help="nur die Dokumentationsseiten und Vortragsabbildungen bauen; "
-             "liest die vorhandenen Ontologie- und RDF-Dateien, ändert nichts "
-             "an der Pipeline",
+        help="only build the documentation pages and slide figures; "
+             "reads the existing ontology and RDF files and changes nothing "
+             "in the pipeline",
     )
     parser.add_argument(
         "--bundle-format",
         default=",".join(DEFAULT_BUNDLE_FORMATS),
         help=(
-            "Ausgabeformate des Bundles, kommagetrennt. "
-            "Verfügbar: " + ", ".join(BUNDLE_FORMATS) + ". "
-            "'release' schreibt " + ", ".join(RELEASE_BUNDLE_FORMATS) + ". "
-            "Voreinstellung: " + ",".join(DEFAULT_BUNDLE_FORMATS)
-            + " - schnell für Entwicklungsläufe."
+            "Output formats of the bundle, comma-separated. "
+            "Available: " + ", ".join(BUNDLE_FORMATS) + ". "
+            "'release' writes " + ", ".join(RELEASE_BUNDLE_FORMATS) + ". "
+            "Default: " + ",".join(DEFAULT_BUNDLE_FORMATS)
+            + " - fast, for development runs."
         ),
     )
     parser.add_argument(
         "--sisal-sites",
         default="dev",
         help=(
-            "Welche SISAL-Sites in den Graphen gehen: 'dev' (fünf Sites, so "
-            "gewählt, dass jede Prüfung des Generators noch feuert), 'all', "
-            "oder eine Liste von site_ids bzw. Namen, z. B. --sisal-sites "
-            "spannagel. Ein Release-Lauf setzt 'all' durch. "
-            "Voreinstellung: dev - schnell für Entwicklungsläufe."
+            "Which SISAL sites go into the graph: 'dev' (five sites, chosen "
+            "so that every check of the generator still fires), 'all', "
+            "or a list of site_ids or names, e.g. --sisal-sites "
+            "spannagel. A release run enforces 'all'. "
+            "Default: dev - fast, for development runs."
         ),
     )
     parser.add_argument(
         "--dpi",
         default="draft",
         help=(
-            "Auflösung der JPG: 'draft' (100 dpi, klein und schnell), "
-            "'print' (300 dpi und mindestens 3000 px auf der kürzeren Seite) "
-            "oder eine Zahl. Ab 300 kommt die Pixelgrenze mit, darunter "
-            "nicht. Ein Release-Lauf setzt 'print' durch. Das SVG neben jedem "
-            "JPG hat ohnehin keine Auflösung. "
-            "Voreinstellung: draft - schnell für Entwicklungsläufe."
+            "Resolution of the JPG: 'draft' (100 dpi, small and fast), "
+            "'print' (300 dpi and at least 3000 px on the shorter side) "
+            "or a number. From 300 the pixel limit applies, below it "
+            "it does not. A release run enforces 'print'. The SVG next to "
+            "each JPG has no resolution anyway. "
+            "Default: draft - fast, for development runs."
         ),
     )
     parser.add_argument("-v", "--verbose", action="store_true")
@@ -562,17 +561,17 @@ def main():
     # passed down. Two independent switches would eventually disagree.
     release_run = set(bundle_formats) >= set(RELEASE_BUNDLE_FORMATS)
 
-    # Ein Release darf keinen Teilgraphen enthalten. Die Voreinstellung des
-    # Schalters ist 'dev', und ein Release-Lauf, der sie erbt, wäre ein
-    # unvollständiges Bundle unter einem vollständigen Namen.
+    # A release must not contain a partial graph. The default of the switch
+    # is 'dev', and a release run that inherited it would be an incomplete
+    # bundle under a complete name.
     # A release run is high resolution, whatever --dpi says. The point of the
     # switch is a fast development run; a release that quietly shipped 100 dpi
     # rasters would be the one case where the default does real damage.
     raster = args.dpi.strip().lower()
     if release_run and raster in ("draft", "dev", ""):
         if raster:
-            print("  ℹ  --dpi draft wird für den Release-Lauf auf 'print' "
-                  "angehoben")
+            print("  ℹ  --dpi draft is raised to 'print' for the release "
+                  "run")
         raster = "print"
     RASTER_QUALITY["GEO_LOD_RASTER_DPI"] = raster
 
@@ -630,7 +629,7 @@ def main():
             import check_docs
             check_docs.check()
         except Exception as error:
-            print(f"  ⚠  check_docs konnte nicht laufen: {error}")
+            print(f"  ⚠  check_docs could not run: {error}")
     end_section()
 
     overview_ok = True
@@ -644,22 +643,22 @@ def main():
     print_section(step("Regenerate canonical ontology"))
     canonical_ok = regenerate_canonical_ontology()
     if not canonical_ok:
-        print("\n  ⚠  Ontologie konnte nicht regeneriert werden - Bundle wird")
-        print("     vermutlich mit veralteter ontology/geo_lod_core.ttl arbeiten.")
+        print("\n  ⚠  Ontology could not be regenerated - the bundle will")
+        print("     probably work with an outdated ontology/geo_lod_core.ttl.")
     end_section()
 
     print_section(step("Regenerate controlled vocabularies"))
     vocab_ok = regenerate_vocabularies()
     if not vocab_ok:
-        print("\n  ⚠  Vokabulare konnten nicht regeneriert werden - das Bundle")
-        print("     arbeitet dann mit einem veralteten ontology/vocab/mis.ttl.")
+        print("\n  ⚠  Vocabularies could not be regenerated - the bundle")
+        print("     will then work with an outdated ontology/vocab/mis.ttl.")
     end_section()
 
-    # EPICA ist seit S2 zweigeteilt: erst die Tripel, dann die Abbildungen.
-    # Der Generator liest die fuenf .tab aus data/raw/epica/, das Plot-Skript
-    # dieselben Dateien ueber denselben Loader. Die Reihenfolge ist so gewaehlt,
-    # dass ein Fehler in den Daten am RDF-Schritt auffaellt, bevor eine halbe
-    # Stunde Abbildungen entsteht.
+    # EPICA has been split in two since S2: first the triples, then the figures.
+    # The generator reads the five .tab files from data/raw/epica/, the plot
+    # script the same files through the same loader. The order is chosen so
+    # that an error in the data shows up at the RDF step before half an hour
+    # of figures has been produced.
     if not args.sisal_only and not args.ci_only and epica_exists:
         print_section(step("EPICA Dome C (RDF)"))
         epica_ok = run_script(EPICA_RDF_SCRIPT, "EPICA Dome C RDF generation")
@@ -684,8 +683,8 @@ def main():
         # which is the format that gets versioned.
         sisal_format = ["--format", "turtle" if release_run else "nt"]
         if release_run and args.sisal_sites.strip().lower() != "all":
-            print(f"  ℹ  --sisal-sites {args.sisal_sites.strip()} wird für "
-                  f"diesen Release-Lauf auf 'all' gesetzt.")
+            print(f"  ℹ  --sisal-sites {args.sisal_sites.strip()} is set to "
+                  f"'all' for this release run.")
         sisal_ok = run_script(SISAL_RDF_SCRIPT, "SISAL v3 RDF generation",
                               sisal_format + ["--sites", sisal_sites])
         end_section()
@@ -740,19 +739,19 @@ def main():
         bundle_ok = run_bundle(epica_ok, sisal_ok, ci_ok, bundle_formats)
         end_section()
 
-    # Dokumentationsseiten und Vortragsabbildungen lesen die geschriebenen
-    # Ontologie- und RDF-Dateien, deshalb nach dem Bundle. Ihre Abhängigkeiten
-    # (visuals/requirements.txt) gehören nicht zur Pipeline: fehlen sie, wird
-    # der Schritt als nicht angefordert gemeldet, nicht als Fehler.
+    # The documentation pages and slide figures read the written ontology and
+    # RDF files, hence after the bundle. Their dependencies
+    # (visuals/requirements.txt) are not part of the pipeline: if they are
+    # missing, the step is reported as not requested, not as an error.
     visuals_wanted = not args.no_visuals and VISUALS_SCRIPT.exists() and visuals_ready(quiet=True)
     if visuals_wanted:
         print_section(step("Documentation pages and slide figures"))
         visuals_ok = run_script(VISUALS_SCRIPT, "docu/")
         end_section()
 
-    # Was dieser Lauf überhaupt vorhatte. Ein nicht angeforderter Schritt ist
-    # nicht fehlgeschlagen; vorher gab `--sisal-only` selbst bei fehlerfreiem
-    # Lauf Exit-Code 1 zurück, was einen CI-Job reihenweise rot färbt.
+    # What this run intended to do at all. A step that was not requested has
+    # not failed; previously `--sisal-only` returned exit code 1 even after a
+    # flawless run, which turns a CI job red across the board.
     exists = {"epica": epica_exists, "sisal": sisal_exists, "ci": ci_exists,
               "archaeo": archaeo_exists}
     requested = {name: strand_requested(args, name) and exists[name]
@@ -771,8 +770,8 @@ def main():
         and all(ok for name, ok in results.items() if requested[name])
     )
 
-    # Schlusszeile noch durch den Tee, damit Log und Terminal Zeile für Zeile
-    # dasselbe zeigen; erst danach die Logdatei schliessen.
+    # Final line still through the tee, so that log and terminal show the
+    # same thing line by line; only then close the log file.
     if overall_ok:
         print("✓ Pipeline completed successfully!")
     else:

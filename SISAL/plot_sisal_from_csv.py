@@ -1,29 +1,29 @@
-# Datei: plot_sisal_from_csv.py
-# Abbildungen des SISAL-Speleothem-Strangs (d18O, d13C gegen Alter).
+# File: plot_sisal_from_csv.py
+# Figures of the SISAL speleothem strand (d18O, d13C against age).
 #
-# Reines Abbildungsskript. Der RDF-Export ist mit S3c.2 nach SISAL/sisal_rdf.py
-# gewandert; mit S3c.4 liest auch dieses Skript aus dem geprueften Ausschnitt
-# unter data/derived/sisal/sites/ statt aus den v_data_*.csv. Die alten CSV
-# trugen den Dezimaltrenner-Fehler und einen engeren Stand: Botuvera 907 statt
-# 920 Zeilen, Sanbao 5832 statt 6085, Buraca Gloriosa 1137 statt 1178.
+# Pure figure script. The RDF export moved to SISAL/sisal_rdf.py with S3c.2;
+# with S3c.4 this script, too, reads from the checked cut
+# under data/derived/sisal/sites/ instead of from the v_data_*.csv. The old CSVs
+# carried the decimal-separator error and a narrower state: Botuvera 907 instead of
+# 920 rows, Sanbao 5832 instead of 6085, Buraca Gloriosa 1137 instead of 1178.
 #
-# Drei Dinge, die sich mit S3c.4 geaendert haben:
+# Three things that changed with S3c.4:
 #
-#   1. Eine Linie je Entitaet, nicht je Site. Vorher wurden alle Proben einer
-#      Site nach Alter sortiert und zu einer Kurve verbunden. Sanbao hat
-#      achtzehn Speleotheme mit ueberlappenden Altersbereichen - zwischen 0,4
-#      und 13,6 ka liegen sechs uebereinander -, und die Linie sprang zwischen
-#      ihnen hin und her. Was wie ein verrauschtes Signal aussah, war die
-#      Sortierung.
-#   2. MIS-Baender aus dist/mis_stages.csv statt aus einer Liste im Code. Die
-#      Liste war LR04 bis MIS 12; sie endete bei 533 ka und fuehrte MIS 3 als
-#      Interstadial, waehrend das Leitschema Railsback es als warm fuehrt.
-#   3. Achsen aus geo_lod_figures.nice_ticks statt aus handgesetzten Ticks.
+#   1. One line per entity, not per site. Previously all samples of a
+#      site were sorted by age and joined into one curve. Sanbao has
+#      eighteen speleothems with overlapping age ranges - between 0.4
+#      and 13.6 ka six lie on top of each other - and the line jumped between
+#      them. What looked like a noisy signal was the
+#      sorting.
+#   2. MIS bands from dist/mis_stages.csv instead of a list in the code. The
+#      list was LR04 up to MIS 12; it ended at 533 ka and treated MIS 3 as an
+#      interstadial, whereas the guiding scheme of Railsback treats it as warm.
+#   3. Axes from geo_lod_figures.nice_ticks instead of hand-set ticks.
 #
-# Mit S3c.6 stehen zwoelf Sites statt sechs im Ausschnitt, und jede traegt
-# ihr Klimasystem: Europa, ostasiatischer und suedamerikanischer Monsun. Fuer
-# die Einzelabbildungen aendert das nichts ausser der Anzahl; die Tafeln in
-# sisal_plates.py gruppieren danach.
+# With S3c.6 there are twelve sites instead of six in the cut, and each carries
+# its climate system: Europe, East Asian and South American monsoon. For
+# the single figures this changes nothing except the number; the plates in
+# sisal_plates.py group by it.
 
 import os
 import sys

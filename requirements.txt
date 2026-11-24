@@ -17,3 +17,7 @@ pyshacl>=0.25
 # hand-written caption from a generated one, and SISAL/sisal_import.py reads the
 # export definition that came with the cut.
 pyyaml>=6.0
+
+# Optional, only for example_query/local_ttl-fair4rs-coin.py (an interactive map
+# of the findspots); the pipeline itself does not import them.
+folium>=0.14

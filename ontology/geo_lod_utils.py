@@ -264,15 +264,15 @@ def add_feature_collection(
 # 3b.  PROVENANCE  — release date and content fingerprint
 # ===========================================================================
 #
-# Ein erzeugter Datensatz gilt genau für den Stand aus Eingabedaten und
-# Generator-Code, aus dem er entstanden ist. Sichtbar gemacht wird das nicht
-# über die Uhr des Rechners - die sagt nur, wann jemand das Skript gestartet
-# hat -, sondern über einen Fingerabdruck über genau diese Dateien. Er ändert
-# sich, wenn sich Daten oder Code ändern, und sonst nie. Zwei Läufe ohne
-# Änderung sind damit byte-identisch.
+# A generated dataset holds for exactly the state of input data and
+# generator code from which it arose. This is made visible not
+# through the computer's clock - which only says when someone started the script -,
+# but through a fingerprint over exactly these files. It changes
+# when data or code change, and never otherwise. Two runs without
+# a change are therefore byte-identical.
 #
-# Daneben steht ein von Hand gepflegtes Release-Datum für dct:created, weil
-# in einem Katalog ein Datum stehen soll und kein Hash.
+# Beside it stands a release date maintained by hand for dct:created, because
+# a catalogue should carry a date and not a hash.
 
 # Lives in geo_lod_release.py so that geo_lod_figures can read it without
 # importing rdflib through this module. Re-exported here, because every
@@ -283,7 +283,7 @@ FINGERPRINT_LENGTH: int = 12
 
 
 def file_sha256(path) -> str:
-    """Vollständiger SHA-256 einer Datei, hexadezimal."""
+    """Full SHA-256 of a file, hexadecimal."""
     h = hashlib.sha256()
     with open(path, "rb") as fh:
         for chunk in iter(lambda: fh.read(65536), b""):
@@ -292,11 +292,11 @@ def file_sha256(path) -> str:
 
 
 def content_fingerprint(paths) -> str:
-    """Fingerabdruck über mehrere Dateien: 'sha256:xxxxxxxxxxxx'.
+    """Fingerprint over several files: 'sha256:xxxxxxxxxxxx'.
 
-    Gehasht wird über Dateiname und Inhalt, in sortierter Reihenfolge -
-    damit hängt das Ergebnis weder an der Reihenfolge der Argumente noch am
-    absoluten Pfad, also auch nicht daran, wo das Repo liegt.
+    The hash is taken over file name and content, in sorted order -
+    so the result depends neither on the order of the arguments nor on the
+    absolute path, and thus not on where the repo lives.
     """
     entries = sorted(
         (os.path.basename(str(p)), file_sha256(p))
@@ -318,16 +318,16 @@ def add_generation_provenance(
     agents=(),
     label: str = "generation",
 ) -> str:
-    """Hängt die Erzeugungs-Provenienz an einen Datensatzknoten und gibt den
-    Fingerabdruck zurück.
+    """Attaches the generation provenance to a dataset node and returns the
+    fingerprint.
 
-    Modelliert wird: der Datensatz entstand durch eine Aktivität, die die
-    aufgeführten Dateien benutzt hat; jede davon trägt ihre eigene Prüfsumme.
-    Wer diesen TTL-Dump vor sich hat, kann damit prüfen, ob er zu den Daten
-    und dem Code passt, aus denen er hervorgegangen ist.
+    What is modelled: the dataset arose through an activity that used the
+    listed files; each of them carries its own checksum.
+    Whoever has this TTL dump in front of them can thereby check whether it matches the data
+    and the code from which it arose.
 
-    Bewusst ohne prov:startedAtTime / prov:endedAtTime: die Laufzeit eines
-    Konvertierungsskripts ist keine Aussage über die Daten.
+    Deliberately without prov:startedAtTime / prov:endedAtTime: the run time of a
+    conversion script is not a statement about the data.
     """
     fingerprint = content_fingerprint(inputs)
 

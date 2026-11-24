@@ -146,9 +146,9 @@ three smoothing variants (`full`, `full_smooth11`, `full_savgol11p2`). Named
 CH₄, each against age and depth) and `plate_pipeline_outputs_five` (all five
 records). Both show the measured series in grey behind the smoothed one.
 
-**SISAL — 24 plots** for four caves: Botuverá (144), Antro del Corchia (145),
-Sanbao (140, δ¹⁸O only), Buraca Gloriosa (275). Format
-`{site_id}_{cave}_{isotope}_age_{variant}.{jpg,svg}`.
+**SISAL** — profiles per speleothem and isotope for the sites of the cut (twelve
+with `--sisal-sites all`, five in the default development run), plus the cluster
+plates.
 
 Axis limits are derived from the data (`geo_lod_figures.nice_ticks`), never
 from a fixed tick list, so a record cannot be drawn outside its own axis.
@@ -192,13 +192,10 @@ where prose and data have drifted apart.
 
 **SISAL:**
 - `SISAL/rdf/sisal_ontology.ttl` — SISAL-specific classes (SpeleothemObservation, Cave, etc.)
-- `SISAL/rdf/sisal_sites.ttl` — All 365 SISAL v3 caves with WGS84 geometries and measurement counts (4,765 triples). Separate from the core graph so that a consumer after positions does not have to parse the measurements
+- `SISAL/rdf/sisal_sites.ttl` — All 365 SISAL v3 caves with WGS84 geometries and measurement counts (5,852 triples). Separate from the core graph so that a consumer after positions does not have to parse the measurements
 - `SISAL/rdf/sisal_site_annotations.ttl` — geo-lod's archaeological, Wikidata and UNESCO reading of those caves, with its own source node
-- `SISAL/rdf/sisal_144_botuvera_data.ttl` — 907 δ¹⁸O + 907 δ¹³C observations (21,795 triples)
-- `SISAL/rdf/sisal_145_corchia_data.ttl` — 1,234 δ¹⁸O + 1,234 δ¹³C observations (29,651 triples)
-- `SISAL/rdf/sisal_140_sanbao_data.ttl` — 5,832 δ¹⁸O observations (70,075 triples)
-- `SISAL/rdf/sisal_275_buracagloriosa_data.ttl` — 1,137 δ¹⁸O + 1,137 δ¹³C observations (27,327 triples)
-- `SISAL/rdf/sisal_all_data.ttl` — Combined file (**152,169 triples total**)
+- `SISAL/rdf/sisal_v3_dating.ttl` — the dating part of the graph (24,981 triples). The per-site data files `sisal_<id>_<cave>_data.ttl` are written by a run and are not part of the repository
+- **32,008 triples** in the committed SISAL files
 
 
 **Maps** live in `maps/` beside the `plots/` of each strand: `EPICA/maps/epica_dome_c_map` (Antarctica, polar stereographic), `SISAL/maps/sisal_sites_map*` (world and one per climate system), `CI/maps/ci_findspots_map`, `ci_findspots_campania` and `ci_findspots_certainty`, and `maps/geo_lod_sites_map` at the root, which is read from the RDF rather than from the input tables. Land polygons: Natural Earth 1:50m, public domain, in `data/raw/basemap/`.
@@ -417,11 +414,11 @@ nothing in the graph to explain why.
 
 ### FeatureCollections (GeoSPARQL)
 
-- `geolod:EPICA_DrillingSite_Collection` — 1 member
-- `geolod:SISAL_Cave_Collection` — 305 members
-- `geolod:SISAL_ArchaeologicalCave_Collection` — 37 members
-- `geolod:AllPalaeoclimateSites_Collection` — 306 members
-- `geolod:CIFindspotCollection` — CI findspots
+- `epica:collection_drilling_sites` — 1 member
+- `geolod:SISAL_Cave_Collection` — 365 members
+- `geolod:SISAL_Archaeological_Cave_Collection` — 37 members
+- `geolod:AllPalaeoclimateSites_Collection` — 366 members
+- `geolod:CIFindspotCollection` — 74 CI findspots
 
 ## 🌐 W3ID URIs
 
@@ -451,13 +448,13 @@ Examples: `…/epica/site_dome_c`, `…/epica/obs_ch4_0001`, `…/epica/tp_ch4_0
 - **187,554 RDF triples**
 
 ### SISAL
-- **305 cave sites** worldwide (37 typed as `geolod:ArchaeologicalCaveSite`, 27 with Wikidata `owl:sameAs`, 7 UNESCO World Heritage)
-- **9,110 observations** in four example caves
-- **152,169 RDF triples**
+- **365 caves** in the catalogue, 305 of them screened for archaeological context (37 typed as `geolod:ArchaeologicalCaveSite`, 27 with Wikidata `owl:sameAs`, 7 UNESCO World Heritage)
+- **32,008 RDF triples** in the committed SISAL files
 
-### Bundle
-- **354,901 triples**, 57 distinct classes, 121 distinct properties
-- CIDOC-CRM coverage complete, 0 SHACL violations
+### Committed Turtle files
+- **223,063 triples** across the committed Turtle files of the three strands (`tools/paper_numbers.py`)
+- 63 classes and 109 properties in the `geolod`, `strat` and `an` namespaces, all anchored in the CIDOC CRM family
+- 0 SHACL violations
 
 ## ♻️ Reproducibility
 
@@ -542,7 +539,7 @@ The scripts automatically set `PYTHONPATH` to include the `ontology/` directory.
 If `ontology/*.mermaid` files are missing:
 - Check `pipeline_report.txt` for import errors
 - Ensure `geo_lod_utils.py` is in `ontology/` directory
-- Run with `--clean` flag: `python main.py --clean`
+- Run `python main.py` again; a run starts from clean outputs by default
 
 ### No data found
 

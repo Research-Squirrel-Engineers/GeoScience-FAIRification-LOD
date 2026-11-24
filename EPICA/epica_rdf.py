@@ -481,10 +481,10 @@ def add_observations(
     median_method = EPICA[f"smoothing_rolling_median_w{ROLLING_WINDOW}"]
     savgol_method = EPICA[f"smoothing_savitzky_golay_w{SG_WINDOW}_p{SG_POLYORDER}"]
 
-    # Geglättet wird je ununterbrochenem Lauf, nicht über die ganze Reihe: ein
-    # zentriertes Fenster über eine Datenlücke hinweg mischt Messungen von
-    # beiden Seiten und schreibt einen Wert ins RDF, der zu keiner Tiefe im Kern
-    # gehört. Dieselbe Funktion und dieselbe Schwelle wie in den Abbildungen.
+    # Smoothing is done per uninterrupted run, not across the whole series: a
+    # centred window across a data gap mixes measurements from
+    # both sides and writes a value into the RDF that belongs to no depth in the core.
+    # The same function and the same threshold as in the figures.
     values = df["value"].to_numpy()
     breaks = gf.find_breaks(df["age_ka"].to_numpy(), ed.MAX_INTERPOLATION_GAP_KA)
     smooth_median = gf.smooth_by_run(values, breaks, "median", ROLLING_WINDOW)

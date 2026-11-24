@@ -1,4 +1,4 @@
-# Datei: plot_epica_from_tab.py
+# File: plot_epica_from_tab.py
 #
 # Draws the EPICA Dome C figures. Nothing else: the RDF that used to be built
 # here moved to epica_rdf.py in S2, together with the three records this
@@ -32,7 +32,7 @@ from geo_lod_captions import CaptionFile
 
 
 class Tee:
-    """Schreibt gleichzeitig auf stdout und in eine Datei."""
+    """Writes to stdout and to a file at the same time."""
 
     def __init__(self, filepath):
         self.file = open(filepath, "w", encoding="utf-8", newline="\n")
@@ -62,7 +62,7 @@ class Tee:
         self.file.close()
 
 
-# Arbeitsverzeichnis auf Ordner des Skripts setzen
+# Set the working directory to the script's folder
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # Output-Ordner erstellen
@@ -77,7 +77,7 @@ os.makedirs(ONTOLOGY_DIR, exist_ok=True)
 os.makedirs(REPORT_DIR, exist_ok=True)
 
 # ──────────────────────────────────────────────
-# Gemeinsame Plot-Einstellungen
+# Shared plot settings
 # ──────────────────────────────────────────────
 FIGURE_SIZE = (10, 30)
 #: Screen dpi of the figure while it is being laid out. It is not the
@@ -90,11 +90,11 @@ LINE_WIDTH = 1
 GRID_COLOR = "#cccccc"
 GRID_WIDTH = 1
 
-# Y-Achsen-Ticks (Tiefe in m)
+# Y-axis ticks (depth in m)
 DEPTH_MAJOR_TICK_INTERVAL = 500  # alle 500 m ein dicker Tick
 DEPTH_MINOR_TICK_INTERVAL = 100  # alle 100 m ein kleiner Tick
 
-# Y-Achsen-Ticks (Age in ka BP)
+# Y-axis ticks (age in ka BP)
 AGE_MAJOR_TICK_INTERVAL = 100  # alle 100 ka ein dicker Tick
 AGE_MINOR_TICK_INTERVAL = 20  # alle 20 ka ein kleiner Tick
 
@@ -112,30 +112,30 @@ LINE_WIDTH_SMOOTH = 1.5  # smoothed line slightly thicker   # MIS label size
 LABEL_PAD = 12
 
 # ──────────────────────────────────────────────
-# Achsen-Overrides je Datensatz
+# Axis overrides per dataset
 # ──────────────────────────────────────────────
-# Voreinstellung sind Ticks aus den Daten (epica_style.nice_ticks). Wer eine
-# Achse von Hand setzen will, trägt sie hier ein - genau dafür ist das Dict
-# da, damit niemand wieder eine Tick-Liste in den Plot-Aufruf schreibt und
-# damit unbemerkt Messwerte abschneidet.
+# The default is ticks derived from the data (epica_style.nice_ticks). Whoever
+# wants to set an axis by hand enters it here - that is exactly what the dict
+# is for, so that nobody writes a tick list into the plot call again and
+# thereby silently cuts off measured values.
 #
-#   "log"      : logarithmische Wertachse
-#   "ticks"    : feste Tick-Positionen; die Grenzen umschliessen trotzdem
-#                immer die Daten, damit nichts wegfallen kann
-#   "target"   : ungefähre Anzahl Intervalle für die automatische Teilung
+#   "log"      : logarithmic value axis
+#   "ticks"    : fixed tick positions; the limits still enclose
+#                the data in every case, so that nothing can drop out
+#   "target"   : approximate number of intervals for the automatic division
 AXIS_OVERRIDES: dict[str, dict] = {
-    # Dust spannt Faktor 560; linear wären neun Zehntel der Achse leer.
+    # Dust spans a factor of 560; on a linear axis nine tenths of it would be empty.
     "dust": {"log": True},
 }
 
 # ──────────────────────────────────────────────
-# MIS-Bänder
+# MIS bands
 # ──────────────────────────────────────────────
-# Grenzen und Warm/Kalt kommen aus dist/mis_stages.csv, also aus derselben
-# Quelle wie die Zuweisungen im Graphen (Railsback et al. 2015 als Leitschema).
-# Vorher stand hier eine eigene Liste nach LR04 mit zwei von Hand an das
-# CH4-Signal angepassten Übergängen und ohne MIS 14. Die Abbildungen ändern
-# sich dadurch sichtbar; das ist der Beschluss vom 2026-08-09.
+# Boundaries and warm/cold come from dist/mis_stages.csv, that is, from the same
+# source as the assignments in the graph (Railsback et al. 2015 as the guiding scheme).
+# This used to be a list of its own after LR04, with two transitions adjusted by hand to the
+# CH4 signal and without MIS 14. The figures change visibly as a
+# result; this is the decision of 2026-08-09.
 MIS_COLOR_WARM = "#fddbc7"
 MIS_COLOR_COLD = "#d6e8f7"
 MIS_LABEL_COLOR_WARM = "#8b1a00"
@@ -143,14 +143,14 @@ MIS_LABEL_COLOR_COLD = "#003f6b"
 
 
 def draw_mis_bands(ax, y_min_ka, y_max_ka, covered=None, horizontal=False):
-    """Zeichnet die MIS-Bänder auf der Altersachse.
+    """Draws the MIS bands on the age axis.
 
-    covered  : optionale Folge von Altern der tatsächlichen Messpunkte. Ist sie
-               gegeben, bekommen Stadien ohne einen einzigen Messwert eine
-               gestrichelte Umrandung statt einer Füllung - so ist eine
-               Datenlücke als Lücke erkennbar und nicht als flache Kurve.
-               Ersetzt die früher für CH4 hartcodierten "nodata"-Einträge.
-    horizontal : True, wenn das Alter auf der X-Achse liegt (Zeilen-Tafeln).
+    covered  : optional sequence of ages of the actual measurement points. If it is
+               given, stages without a single measured value get a
+               dashed outline instead of a fill - so that a data gap
+               can be recognised as a gap and not as a flat curve.
+               Replaces the "nodata" entries formerly hard-coded for CH4.
+    horizontal : True if the age is on the x-axis (row panels).
     """
     stages = ed.read_mis_stages()
     y_lo, y_hi = min(y_min_ka, y_max_ka), max(y_min_ka, y_max_ka)
@@ -205,10 +205,10 @@ def draw_mis_bands(ax, y_min_ka, y_max_ka, covered=None, horizontal=False):
             )
 
 
-#: Ab dieser Lücke zwischen zwei Messungen gilt der Verlauf als unterbrochen.
-#: Derselbe Wert wie ed.MAX_INTERPOLATION_GAP_KA, und mit Absicht: eine Strecke,
-#: die in der Abbildung als Lücke erscheint, ist genau die Strecke, über die der
-#: Generator keine Stadiengrenze interpoliert.
+#: From this gap between two measurements on, the curve counts as interrupted.
+#: The same value as ed.MAX_INTERPOLATION_GAP_KA, and deliberately so: a stretch
+#: that appears as a gap in the figure is exactly the stretch over which the
+#: generator interpolates no stage boundary.
 GAP_THRESHOLD_KA = ed.MAX_INTERPOLATION_GAP_KA
 
 FIGURE_LICENSE = "CC BY 4.0, Florian Thiery"
@@ -227,7 +227,7 @@ SMOOTHING_TEXT = {
 
 
 def caption_for(meta, df, axis, suffix):
-    """Bildunterschrift einer Einzelabbildung, aus dem was gezeichnet wurde."""
+    """Caption of a single figure, from what was drawn."""
     n = len(df)
     if axis["key"] == "age_ka":
         span = (
@@ -255,11 +255,11 @@ def caption_for(meta, df, axis, suffix):
 
 
 def _gap_edge_depth(df, age_ka, side):
-    """Tiefe der letzten Messung vor bzw. der ersten nach der Lücke, in die
-    *age_ka* fällt. Liefert None, wenn das Alter ausserhalb der Messreihe liegt.
+    """Depth of the last measurement before, or the first after, the gap into which
+    *age_ka* falls. Returns None if the age lies outside the measurement series.
 
-    ``side="older"`` heisst: die gesuchte Kante ist die ältere Grenze eines
-    Stadiums, das Band endet also an der letzten Messung *vor* der Lücke.
+    ``side="older"`` means: the edge sought is the older boundary of a
+    stage, so the band ends at the last measurement *before* the gap.
     """
     pairs = sorted(zip(df["age_ka"].tolist(), df["depth_m"].tolist()))
     for (a0, d0), (a1, d1) in zip(pairs, pairs[1:]):
@@ -269,26 +269,26 @@ def _gap_edge_depth(df, age_ka, side):
 
 
 def mis_depth_bands_for(dataset_id, df):
-    """MIS-Bänder in Tiefe für einen Datensatz.
+    """MIS bands in depth for a dataset.
 
-    Jede Stadiengrenze ist als Alter publiziert. Eine Tiefe dafür entsteht nur
-    durch Interpolation im Tiefen-Alters-Modell dieses Datensatzes - dasselbe
-    Verfahren, das der Generator für `geolod:MISBoundaryDepth` benutzt, und
-    aus derselben Funktion, damit Abbildung und Graph nicht auseinanderlaufen
-    können.
+    Every stage boundary is published as an age. A depth for it arises only
+    through interpolation in the depth-age model of this dataset - the same
+    procedure that the generator uses for `geolod:MISBoundaryDepth`, and
+    from the same function, so that figure and graph cannot drift
+    apart.
 
-    Drei Fälle, seit 2026-08-09 unterschieden:
+    Three cases, distinguished since 2026-08-09:
 
-    * Beide Grenzen interpolierbar - das Band steht ausgefüllt.
-    * Nur eine Grenze interpolierbar, weil die andere in eine Datenlücke fällt
-      - das Band reicht von der bekannten Kante bis an den Rand der Messreihe
-      und ist schraffiert. Vorher entfiel es ganz; bei CH4 verschwanden so
-      MIS 7 und MIS 11, obwohl von beiden je eine Kante bekannt ist.
-    * Keine der beiden - das Stadium liegt vollständig in der Lücke, und es
-      gibt keine Tiefe, der es zuzuordnen wäre. Bei CH4 sind das MIS 8 bis 10.
+    * Both boundaries interpolable - the band is drawn filled.
+    * Only one boundary interpolable, because the other falls into a data gap
+      - the band extends from the known edge to the end of the measurement series
+      and is hatched. Previously it was dropped entirely; for CH4 this made
+      MIS 7 and MIS 11 disappear, although one edge of each is known.
+    * Neither - the stage lies completely within the gap, and there
+      is no depth to which it could be assigned. For CH4 these are MIS 8 to 10.
 
-    Dazu ein neutrales Band über die Lücke selbst. Ohne das steht dort nur
-    weisse Fläche, und weiss ist in dieser Abbildung sonst nichts.
+    In addition, a neutral band over the gap itself. Without it there is only
+    white space, and nothing else in this figure is white.
     """
     bands = []
     top_of_core = float(df["depth_m"].min())
@@ -299,7 +299,7 @@ def mis_depth_bands_for(dataset_id, df):
         d_bot = ed.interpolate_depth(df, st_["begin"])
 
         if d_top is None and st_["end"] <= youngest:
-            # Jüngstes Stadium: das Band beginnt am obersten Messpunkt.
+            # Youngest stage: the band begins at the topmost measurement point.
             d_top = top_of_core
 
         partial = False
@@ -318,7 +318,7 @@ def mis_depth_bands_for(dataset_id, df):
 
 
 def gap_bands_for(df):
-    """Die Datenlücken selbst, als neutrale Bänder in Tiefe."""
+    """The data gaps themselves, as neutral bands in depth."""
     pairs = sorted(zip(df["age_ka"].tolist(), df["depth_m"].tolist()))
     return [
         (d0, d1)
@@ -328,7 +328,7 @@ def gap_bands_for(df):
 
 
 def draw_mis_depth_bands(ax, bands, gaps=()):
-    """Zeichnet die vorberechneten Tiefen-Bänder."""
+    """Draws the precomputed depth bands."""
     trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
 
     for d_top, d_bot in gaps:
@@ -344,8 +344,8 @@ def draw_mis_depth_bands(ax, bands, gaps=()):
         color = MIS_COLOR_WARM if warm else MIS_COLOR_COLD
         label_color = MIS_LABEL_COLOR_WARM if warm else MIS_LABEL_COLOR_COLD
         if partial:
-            # Schraffiert: das Stadium reicht über den Rand der Messreihe
-            # hinaus, wo seine Tiefe unbekannt ist.
+            # Hatched: the stage extends beyond the edge of the measurement series,
+            # where its depth is unknown.
             ax.axhspan(d_top, d_bot, facecolor=color, alpha=0.45,
                        edgecolor=label_color, linestyle=(0, (4, 3)),
                        linewidth=1.0, zorder=0)
@@ -414,35 +414,35 @@ def create_plot(
 
     # MIS bands in background (zorder=0)
     if show_mis:
-        # y_values sind hier die Alter - damit weiss die Bänderfunktion,
-        # welche Stadien im Datensatz überhaupt Messwerte haben.
+        # y_values here are the ages - so that the band function knows
+        # which stages have any measured values in the dataset at all.
         draw_mis_bands(ax, y_min_ka=y_min, y_max_ka=y_max, covered=y_values)
     elif mis_depth_bands:
         draw_mis_depth_bands(ax, mis_depth_bands, mis_depth_gaps or ())
 
-    # Die Kurve, mit Lücken als Lücken. Die Konvention ist aus wdttest-sisal
-    # übernommen: durchgezogen innerhalb eines Laufs, gestrichelt über die
-    # Unterbrechung, und die letzte Probe davor wie die erste danach geringelt.
-    # Ohne sie zieht matplotlib eine gerade Linie über 178 ka ohne Daten, die
-    # aussieht wie ein gemessener flacher Verlauf.
+    # The curve, with gaps shown as gaps. The convention is taken from wdttest-sisal:
+    # solid within a run, dashed across the
+    # interruption, and the last sample before it, like the first after it, ringed.
+    # Without it matplotlib draws a straight line across 178 ka without data, which
+    # looks like a measured flat course.
     #
-    # Die Unterbrechungen werden immer über die Alter gesucht, auch in den
-    # Tiefendarstellungen: eine Lücke ist eine Lücke in der Beprobung, und ob
-    # sie in Metern gross wirkt, hängt nur an der Kompression des Eises.
+    # Interruptions are always searched for by age, also in the
+    # depth views: a gap is a gap in the sampling, and whether
+    # it looks large in metres depends only on the compression of the ice.
     breaks = st.find_breaks(np.asarray(age_values), GAP_THRESHOLD_KA)
     values = np.asarray(x_values, dtype=float)
     positions = np.asarray(y_values, dtype=float)
 
     if use_savgol or rolling_window is not None:
-        # Rohwerte blass im Hintergrund, geglättet darüber.
-        # Auch die Rohkurve bekommt Ringe und Strichelung. Der Ring markiert
-        # die letzte gemessene Probe vor der Unterbrechung - das ist eine
-        # Aussage über die Messreihe, nicht über die Glättung, und sie gilt
-        # für beide Kurven.
+        # Raw values pale in the background, smoothed values on top.
+        # The raw curve also gets rings and dashing. The ring marks
+        # the last measured sample before the interruption - that is a
+        # statement about the measurement series, not about the smoothing, and it applies
+        # to both curves.
         st.draw_profile(ax, values, positions, breaks,
                         colour=LINE_COLOR_FADED, linewidth=LINE_WIDTH,
                         zorder=2)
-        # Laufweise geglättet, nicht über die Unterbrechung hinweg.
+        # Smoothed run by run, not across the interruption.
         if use_savgol:
             smooth = st.smooth_by_run(values, breaks, "savgol", SG_WINDOW,
                                       SG_POLYORDER)
@@ -461,14 +461,14 @@ def create_plot(
     ax.grid(axis="y", which="major", color=GRID_COLOR, linewidth=GRID_WIDTH)
     ax.tick_params(axis="y", which="minor", length=4, width=0.8)
 
-    # X-Achse oben
+    # X-axis at the top
     ax.xaxis.tick_top()
     ax.xaxis.set_label_position("top")
 
-    # X-Achse: Ticks und Grenzen aus den Daten, nicht aus einer Liste im Code.
-    # Die Grenzen umschliessen den Wertebereich immer - die frühere feste Liste
-    # endete bei d18O auf 1.0, wo die Daten bis 1.457 reichen, und schnitt
-    # damit 82 von 1378 Messwerten aus der Abbildung.
+    # X-axis: ticks and limits from the data, not from a list in the code.
+    # The limits always enclose the value range - the earlier fixed list
+    # ended at 1.0 for d18O, where the data reach 1.457, and thereby cut
+    # 82 of 1378 measured values out of the figure.
     x_min, x_max = float(x_values.min()), float(x_values.max())
 
     if log_x:
@@ -498,7 +498,7 @@ def create_plot(
             FuncFormatter(lambda val, pos: st.format_tick(val, decimals))
         )
 
-    # Beschriftungen
+    # Labels
     ax.set_xlabel(xlabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD)
     ax.set_ylabel(
         ylabel, fontsize=FONT_SIZE_LABEL, labelpad=LABEL_PAD, fontweight="bold"
@@ -519,8 +519,8 @@ def create_plot(
         fontweight="bold",
         pad=8,
     )
-    # Untertitel UNTERHALB des X-Achsen-Labels (negative y in figure-koordinaten)
-    # Wir nutzen ax.annotate mit xycoords='axes fraction' und negativem y
+    # Subtitle BELOW the x-axis label (negative y in figure coordinates)
+    # We use ax.annotate with xycoords='axes fraction' and negative y
     ax.annotate(
         subtitle,
         xy=(0.5, -0.01),
@@ -535,8 +535,8 @@ def create_plot(
     ax.tick_params(axis="x", labelsize=FONT_SIZE_TICK)
     ax.tick_params(axis="y", labelsize=FONT_SIZE_TICK)
 
-    # Speichern - SVG über ein binär geöffnetes Handle, sonst schreibt Python
-    # auf Windows CRLF, während .gitattributes LF ablegt.
+    # Saving - SVG through a handle opened in binary mode, otherwise Python writes
+    # CRLF on Windows, while .gitattributes stores LF.
     st.save_figure(fig, output_filename)
     plt.close(fig)
 
@@ -550,16 +550,16 @@ def main():
     print("EPICA Dome C - figure generator (five records)")
     print("=" * 60)
 
-    # Alle fünf Datensätze, beide Achsen, drei Glättungsvarianten. Vorher
-    # standen hier zwölf von Hand geschriebene Konfigurationen für CH4 und
-    # d18O; die drei übrigen Datensätze kamen in keiner Einzelabbildung vor,
-    # obwohl sie seit S2 im Graphen stehen.
+    # All five datasets, both axes, three smoothing variants. Previously
+    # twelve hand-written configurations for CH4 and d18O stood here;
+    # the three other datasets did not appear in any single figure,
+    # although they have been in the graph since S2.
     frames = {k: df for k, df in ed.load_all()}
 
-    # Eine Caption-Datei je Strang, gesammelt in epica_plates.CAPTIONS: die
-    # Einzelabbildungen tragen ihre Unterschrift dort ein, die Tafeln ebenso,
-    # geschrieben wird einmal am Ende. Zwei getrennte Sammler hätten sich beim
-    # Schreiben gegenseitig überschrieben.
+    # One caption file per strand, collected in epica_plates.CAPTIONS: the
+    # single figures enter their caption there, the plates likewise,
+    # and writing happens once at the end. Two separate collectors would have
+    # overwritten each other on writing.
     captions = epica_plates.CAPTIONS
 
     variants = [
@@ -599,8 +599,8 @@ def main():
             {
                 "key": "age_ka",
                 "y": df["age_ka"],
-                # Nach A4: "Age [ka]", ohne BP oder b2k. Der Bezugspunkt steht
-                # am Chronologieknoten im Graphen.
+                # According to A4: "Age [ka]", without BP or b2k. The reference point is
+                # at the chronology node in the graph.
                 "ylabel": "Age [ka]",
                 "y_major": AGE_MAJOR_TICK_INTERVAL,
                 "y_minor": AGE_MINOR_TICK_INTERVAL,
@@ -642,9 +642,9 @@ def main():
                     sources=[meta["doi"]],
                 )
 
-    # Die mehrteiligen Tafeln kommen neben den Einzeldateien, nicht statt
-    # ihrer: die Einzelabbildung zeigt eine Kurve gross, die Tafel den
-    # Vergleich, den eine Einzelabbildung nicht leisten kann.
+    # The multi-part plates come beside the single files, not instead
+    # of them: the single figure shows one curve large, the plate the
+    # comparison that a single figure cannot provide.
     epica_plates.build_all()
     captions.write()
 

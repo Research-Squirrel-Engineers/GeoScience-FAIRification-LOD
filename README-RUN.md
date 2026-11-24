@@ -1,137 +1,137 @@
-# README-RUN.md — was man womit anstösst
+# README-RUN.md — what to start with what
 
-Jeder Einstiegspunkt des Repositoriums, seine Schalter, und was danach auf der
-Platte liegt. Gedacht zum Nachschlagen, nicht zum Durchlesen.
+Every entry point of the repository, its switches, and what is on disk
+afterwards. Meant for looking things up, not for reading from start to finish.
 
-Alle Befehle stehen auf **einer** Zeile und laufen aus dem Wurzelverzeichnis,
-sofern nicht anders angegeben. Windows-Schreibweise mit `py`; unter Linux und
-macOS `python3` und Schrägstriche.
+All commands are on **one** line and run from the root directory unless stated
+otherwise. Windows notation with `py`; on Linux and macOS use `python3` and
+forward slashes.
 
-Diese Datei wird bei jeder Änderung an den Skripten mitgeführt. Wenn ein
-Schalter hier fehlt, ist das ein Fehler und kein Geheimnis.
+This file is kept in step with every change to the scripts. If a switch is
+missing here, that is a bug and not a secret.
 
 ---
 
-## Der kurze Weg
+## The short way
 
-| Ich will … | Befehl |
+| I want to … | Command |
 |---|---|
-| alles neu bauen, schnell | `py main.py` |
-| alles neu bauen, vollständig | `py main.py --sisal-sites all` |
-| eine Release-Fassung | `py main.py --bundle-format release` |
-| nur am CI-Strang arbeiten | `py main.py --ci-only --archaeo-only --no-bundle` |
-| Abbildungen für den Druck | `py main.py --sisal-sites all --dpi print` |
-| sehen, was erzeugt wurde | `py clean.py` |
+| rebuild everything, fast | `py main.py` |
+| rebuild everything, completely | `py main.py --sisal-sites all` |
+| a release version | `py main.py --bundle-format release` |
+| work on the CI strand only | `py main.py --ci-only --archaeo-only --no-bundle` |
+| figures for print | `py main.py --sisal-sites all --dpi print` |
+| see what was generated | `py clean.py` |
 
 ---
 
-## `main.py` — die Pipeline
+## `main.py` — the pipeline
 
-Führt die Einzelskripte in fester Reihenfolge aus, protokolliert alles nach
-`pipeline_report.txt` und misst jeden Schritt. Die Schrittnummern kommen aus
-einem Zähler und folgen dem Lauf: ein voller Lauf zählt bis 14, ein
-`--ci-only` bis 8.
+Runs the individual scripts in a fixed order, logs everything to
+`pipeline_report.txt` and times every step. The step numbers come from a
+counter and follow the run: a full run counts up to 14, a `--ci-only` run up
+to 8.
 
 ```cmd
 py main.py
 ```
 
-### Welche Stränge
+### Which strands
 
-| Schalter | Wirkung |
+| Switch | Effect |
 |---|---|
-| *(keiner)* | alle Stränge |
-| `--epica-only` | nur EPICA |
-| `--sisal-only` | nur SISAL |
-| `--ci-only` | nur der CI-Strang |
-| `--archaeo-only` | nur die archäologischen HTML-Seiten |
+| *(none)* | all strands |
+| `--epica-only` | EPICA only |
+| `--sisal-only` | SISAL only |
+| `--ci-only` | the CI strand only |
+| `--archaeo-only` | only the archaeological HTML pages |
 
-Die Schalter sind **kombinierbar**. `--ci-only --archaeo-only` läuft die
-beiden zusammengehörigen Schritte, ohne EPICA und SISAL anzufassen — der
-schnellste sinnvolle Lauf, wenn man am CI-Strang arbeitet.
+The switches can be **combined**. `--ci-only --archaeo-only` runs the two
+steps that belong together without touching EPICA and SISAL — the fastest
+sensible run when working on the CI strand.
 
-### Umfang und Format
+### Scope and format
 
-| Schalter | Voreinstellung | Wirkung |
+| Switch | Default | Effect |
 |---|---|---|
-| `--sisal-sites dev` | `dev` | fünf Sites, so gewählt, dass jede Prüfung des Generators noch feuert |
-| `--sisal-sites all` | | alle zwölf Sites des Ausschnitts |
-| `--sisal-sites spannagel` | | eine oder mehrere Sites, nach Name oder `site_id`, kommagetrennt |
-| `--bundle-format nt` | `nt` | Bundle nur als N-Triples, schnell |
-| `--bundle-format release` | | N-Triples, Turtle, JSON-LD und RDF/XML |
-| `--no-bundle` | | den Bundle-Schritt ganz überspringen |
-| `--no-overview` | | die Übersichtskarte überspringen |
-| `--no-visuals` | | den Schritt Dokumentationsseiten und Vortragsabbildungen überspringen. Er läuft ohnehin nur, wenn `visuals/requirements.txt` installiert ist |
-| `--visuals-only` | | nur `docu/` bauen, ohne die Pipeline |
-| `--no-clean` | | Schritt 0 überspringen und in vorhandene Ausgaben schreiben |
-| `--clean` | an | Schritt 0 ausführen. Ist ohnehin die Voreinstellung; der Schalter bleibt, damit ältere Aufrufe weiter gelten |
+| `--sisal-sites dev` | `dev` | five sites, chosen so that every check of the generator still fires |
+| `--sisal-sites all` | | all twelve sites of the cut |
+| `--sisal-sites spannagel` | | one or more sites, by name or `site_id`, comma-separated |
+| `--bundle-format nt` | `nt` | bundle as N-Triples only, fast |
+| `--bundle-format release` | | N-Triples, Turtle, JSON-LD and RDF/XML |
+| `--no-bundle` | | skip the bundle step altogether |
+| `--no-overview` | | skip the overview map |
+| `--no-visuals` | | skip the step for the documentation pages and slide figures. It runs only if `visuals/requirements.txt` is installed anyway |
+| `--visuals-only` | | build only `docu/`, without the pipeline |
+| `--no-clean` | | skip step 0 and write into the existing outputs |
+| `--clean` | on | run step 0. This is the default anyway; the switch remains so that older invocations keep working |
 
-Ein **Release-Lauf** ist alles, was `--bundle-format release` setzt. Er zieht
-drei Dinge nach: `--sisal-sites all`, Turtle statt N-Triples für die grossen
-SISAL-Graphen, und Druckauflösung für alle Rastergrafiken. Jedes davon wird
-gemeldet, wenn es eine Voreinstellung überschreibt.
+A **release run** is everything that `--bundle-format release` sets. It brings
+three things with it: `--sisal-sites all`, Turtle instead of N-Triples for the
+large SISAL graphs, and print resolution for all raster graphics. Each of them
+is reported when it overrides a default.
 
-### Auflösung der Rastergrafiken
+### Resolution of the raster graphics
 
-| Schalter | Wirkung |
+| Switch | Effect |
 |---|---|
-| *(keiner)* | `draft` — 100 dpi, keine Pixelgrenze, kleine Dateien |
-| `--dpi print` | 300 dpi **und** mindestens 3 000 px auf der kürzeren Seite |
-| `--dpi 150` | genau 150 dpi. Ab 300 kommt die Pixelgrenze mit, darunter nicht |
+| *(none)* | `draft` — 100 dpi, no pixel floor, small files |
+| `--dpi print` | 300 dpi **and** at least 3,000 px on the shorter side |
+| `--dpi 150` | exactly 150 dpi. From 300 the pixel floor applies, below it it does not |
 
-Gerechnet wird auf das fertig beschnittene Bild, nicht auf die Figurgrösse —
-deshalb steht in der Ausgabe selten glatt 300 dpi. Bei breiten Abbildungen
-gewinnt die Pixelgrenze: die SISAL-Weltkarte landet bei 495 dpi.
+The calculation is made on the finished, cropped image, not on the figure size —
+which is why the output rarely says a round 300 dpi. For wide figures the
+pixel floor wins: the SISAL world map ends up at 495 dpi.
 
-Das SVG neben jedem JPG hat keine Auflösung und ist von alldem unberührt.
+The SVG next to every JPG has no resolution and is unaffected by all of this.
 
-Der Wert erreicht die Zeichenskripte über die Umgebungsvariable
-`GEO_LOD_RASTER_DPI`, weil jedes von ihnen ein eigener Prozess ist. Wer ein
-Skript einzeln startet, setzt sie selbst:
+The value reaches the drawing scripts through the environment variable
+`GEO_LOD_RASTER_DPI`, because each of them is a process of its own. Whoever
+starts a script individually sets it themselves:
 
 ```cmd
 set GEO_LOD_RASTER_DPI=print & py SISAL\plot_sisal_maps.py
 ```
 
-### Was ein voller Lauf schreibt
+### What a full run writes
 
 ```
-ontology/geo_lod_core.ttl          die kanonische Ontologie
-ontology/vocab/mis.ttl             MIS-Vokabular
-ontology/trs.ttl                   zeitliche Bezugssysteme
-dist/mis_stages.csv                MIS-Stufen als Tabelle
-dist/mis_assignments.csv           MIS-Zuordnungen als Tabelle
+ontology/geo_lod_core.ttl          the canonical ontology
+ontology/vocab/mis.ttl             MIS vocabulary
+ontology/trs.ttl                   temporal reference systems
+dist/mis_stages.csv                MIS stages as a table
+dist/mis_assignments.csv           MIS assignments as a table
 EPICA/rdf/                         epica_dome_c.ttl, epica_ontology.ttl
-EPICA/plots/                       78 Abbildungen der fünf Proxy-Aufzeichnungen
+EPICA/plots/                       78 figures of the five proxy records
 EPICA/maps/                        epica_dome_c_map
-EPICA/captions.yaml                eine Bildunterschrift je Abbildung
+EPICA/captions.yaml                one caption per figure
 SISAL/rdf/                         sisal_sites.ttl, sisal_site_annotations.ttl,
                                    sisal_ontology.ttl, sisal_v3_core,
                                    sisal_v3_chronologies, sisal_v3_dating.ttl
-SISAL/plots/                       Profile je Speläothem und die Cluster-Tafeln
-SISAL/maps/                        Weltkarte und drei Cluster-Karten
-SISAL/captions.yaml                73 Einträge
+SISAL/plots/                       profiles per speleothem and the cluster plates
+SISAL/maps/                        world map and three cluster maps
+SISAL/captions.yaml                73 entries
 CI/rdf/                            ci_findspots.ttl, ci_site_annotations.ttl
-CI/maps/                           drei Karten
-CI/captions.yaml                   drei Einträge
+CI/maps/                           three maps
+CI/captions.yaml                   three entries
 archaeo-connect/CI_findspots_CAA.html
-maps/geo_lod_sites_map             die Übersichtskarte, aus dem Graphen gelesen
+maps/geo_lod_sites_map             the overview map, read from the graph
 maps/captions.yaml
-dist/geo-lod-bundle.*              das validierte Bundle
-pipeline_report.txt                das Protokoll des Laufs
+dist/geo-lod-bundle.*              the validated bundle
+pipeline_report.txt                the log of the run
 ```
 
-Laufzeiten zur Orientierung, gemessen an einem vollen Lauf mit zwölf Sites:
-rund 15 Minuten, davon zwei Drittel im Bundle-Schritt mit der
-SHACL-Validierung. Ein `--ci-only --archaeo-only --no-bundle` ist in wenigen
-Sekunden durch.
+Run times for orientation, measured on a full run with twelve sites:
+about 15 minutes, two thirds of it in the bundle step with the SHACL
+validation. A `--ci-only --archaeo-only --no-bundle` run is through in a few
+seconds.
 
 ---
 
-## Die Einzelskripte
+## The individual scripts
 
-Alle laufen auch für sich, mit `PYTHONPATH` auf `ontology`. `main.py` setzt
-das selbst; von Hand geht es so:
+All of them also run on their own, with `PYTHONPATH` pointing to `ontology`.
+`main.py` sets that itself; by hand it goes like this:
 
 ```cmd
 set PYTHONPATH=C:\git\GeoScience-FAIRification-LOD\ontology & py CI\ci_pipeline.py
@@ -139,177 +139,175 @@ set PYTHONPATH=C:\git\GeoScience-FAIRification-LOD\ontology & py CI\ci_pipeline.
 
 ### EPICA
 
-| Skript | Schalter | Ergebnis |
+| Script | Switches | Result |
 |---|---|---|
-| `EPICA/epica_rdf.py` | keine | `EPICA/rdf/epica_dome_c.ttl`, `epica_ontology.ttl` |
-| `EPICA/plot_epica_from_tab.py` | keine | 78 Abbildungen nach `EPICA/plots/` |
-| `EPICA/epica_plates.py` | keine | die Tafeln, dieselben Verzeichnisse |
-| `EPICA/plot_epica_map.py` | keine | `EPICA/maps/epica_dome_c_map` |
+| `EPICA/epica_rdf.py` | none | `EPICA/rdf/epica_dome_c.ttl`, `epica_ontology.ttl` |
+| `EPICA/plot_epica_from_tab.py` | none | 78 figures to `EPICA/plots/` |
+| `EPICA/epica_plates.py` | none | the plates, same directories |
+| `EPICA/plot_epica_map.py` | none | `EPICA/maps/epica_dome_c_map` |
 
 ### SISAL
 
-| Skript | Schalter | Ergebnis |
+| Script | Switches | Result |
 |---|---|---|
-| `SISAL/sisal_import.py` | `--from PFAD`, `--verify` | holt den Ausschnitt aus `squirrels-sisal-db-v3` nach `data/derived/sisal/`; `--verify` prüft nur gegen das Manifest |
-| `SISAL/sisal_rdf.py` | `--format nt\|turtle`, `--sites all\|dev\|NAME` | die sechs Dateien in `SISAL/rdf/` |
-| `SISAL/plot_sisal_from_csv.py` | keine | Profile je Speläothem nach `SISAL/plots/` |
-| `SISAL/plot_sisal_maps.py` | keine | vier Karten nach `SISAL/maps/` |
+| `SISAL/sisal_import.py` | `--from PATH`, `--verify` | fetches the cut from `squirrels-sisal-db-v3` into `data/derived/sisal/`; `--verify` only checks against the manifest |
+| `SISAL/sisal_rdf.py` | `--format nt\|turtle`, `--sites all\|dev\|NAME` | the six files in `SISAL/rdf/` |
+| `SISAL/plot_sisal_from_csv.py` | none | profiles per speleothem to `SISAL/plots/` |
+| `SISAL/plot_sisal_maps.py` | none | four maps to `SISAL/maps/` |
 
-`--sites` nimmt `all`, `dev` (fünf Sites) oder eine kommagetrennte Liste aus
-Namen und `site_id`. Namen werden nach Präfix und ohne Rücksicht auf Gross-
-und Kleinschreibung gesucht: `--sites spannagel` findet „Spannagel cave".
+`--sites` takes `all`, `dev` (five sites) or a comma-separated list of names
+and `site_id`s. Names are searched by prefix and regardless of upper and lower
+case: `--sites spannagel` finds "Spannagel cave".
 
-### CI und Archäologie
+### CI and archaeology
 
-| Skript | Schalter | Ergebnis |
+| Script | Switches | Result |
 |---|---|---|
-| `CI/ci_pipeline.py` | keine | `CI/rdf/ci_findspots.ttl`, `ci_site_annotations.ttl` |
-| `CI/plot_ci_findspots.py` | keine | drei Karten nach `CI/maps/` |
-| `archaeo-connect/ci_findspots_html.py` | keine | `archaeo-connect/CI_findspots_CAA.html` |
+| `CI/ci_pipeline.py` | none | `CI/rdf/ci_findspots.ttl`, `ci_site_annotations.ttl` |
+| `CI/plot_ci_findspots.py` | none | three maps to `CI/maps/` |
+| `archaeo-connect/ci_findspots_html.py` | none | `archaeo-connect/CI_findspots_CAA.html` |
 
-### Strangübergreifend
+### Across strands
 
-| Skript | Schalter | Ergebnis |
+| Script | Switches | Result |
 |---|---|---|
-| `plot_overview_map.py` | keine | `maps/geo_lod_sites_map`, gelesen aus den TTL |
-| `ontology/build_mis_vocab.py` | keine | `ontology/vocab/mis.ttl`, `trs.ttl`, die beiden CSV in `dist/` |
-| `ontology/geo_lod_utils.py` | keine | Selbsttest der geteilten Bausteine |
+| `plot_overview_map.py` | none | `maps/geo_lod_sites_map`, read from the TTL |
+| `ontology/build_mis_vocab.py` | none | `ontology/vocab/mis.ttl`, `trs.ttl`, the two CSVs in `dist/` |
+| `ontology/geo_lod_utils.py` | none | self-test of the shared building blocks |
 
-`plot_overview_map.py` liest die frisch geschriebenen Turtle-Dateien, nicht die
-Eingabetabellen. Ein Strang, dessen TTL fehlt, wird gemeldet und in der
-Bildunterschrift genannt; ein geplanter Strang wie ELSA schweigt, bis es ihn
-gibt.
+`plot_overview_map.py` reads the freshly written Turtle files, not the input
+tables. A strand whose TTL is missing is reported and named in the caption; a
+planned strand such as ELSA stays silent until it exists.
 
 ---
 
-## `bundle_rdf.py` — Bundle und Validierung
+## `bundle_rdf.py` — bundle and validation
 
 ```cmd
 py bundle_rdf.py
 ```
 
-| Schalter | Wirkung |
+| Switch | Effect |
 |---|---|
-| `--format nt,turtle,jsonld,xml` | Ausgabeformate, kommagetrennt |
-| `--sites spannagel` | statt des Gesamtbundles ein Site-Bundle |
+| `--format nt,turtle,jsonld,xml` | output formats, comma-separated |
+| `--sites spannagel` | a site bundle instead of the overall bundle |
 
-Verfügbare Formate: `nt`, `turtle`, `longturtle`, `xml`, `jsonld`.
-Voreinstellung ist `nt` — das Bundle mit über zwei Millionen Tripeln als Turtle
-zu schreiben dauert ein Vielfaches, und im Entwicklungslauf liest es niemand
-mit den Augen.
+Available formats: `nt`, `turtle`, `longturtle`, `xml`, `jsonld`.
+The default is `nt` — writing the bundle of more than a million triples as
+Turtle takes many times as long, and nobody reads it with their eyes in a
+development run.
 
-Ein Site-Bundle setzt einen Graphen voraus, der die Site enthält:
+A site bundle requires a graph that contains the site:
 
 ```cmd
 py main.py --sisal-only --sisal-sites spannagel --no-bundle & py bundle_rdf.py --sites spannagel --format turtle
 ```
 
-Danach liegt `dist/spannagel-bundle.ttl` — die Datei, die `wdttest-sisal`
-erwartet. Sie steht in `.gitignore`.
+Afterwards `dist/spannagel-bundle.ttl` exists — the file that `wdttest-sisal`
+expects. It is in `.gitignore`.
 
 ---
 
-## `check_docs.py` — bleibt diese Datei aktuell?
+## `check_docs.py` — does this file stay up to date?
 
 ```cmd
 py check_docs.py
 ```
 
-Sammelt alle Skripte mit `__main__`, zieht ihre `add_argument`-Schalter heraus
-und hält beides gegen `README-RUN.md`. Gemeldet wird dreierlei: ein Skript, das
-hier fehlt; ein Schalter, der hier fehlt; und ein Schalter, der hier steht, den
-aber kein Skript mehr annimmt.
+Collects all scripts with `__main__`, pulls out their `add_argument` switches
+and holds both against `README-RUN.md`. Three things are reported: a script
+that is missing here; a switch that is missing here; and a switch that is
+listed here but that no script accepts any more.
 
-`main.py` ruft es im Vorbereitungsschritt auf. Es ist immer eine **Warnung** —
-eine Dokumentationsprüfung, die einen Lauf abbricht, ist eine, die man
-abschaltet.
+`main.py` calls it in the preparation step. It is always a **warning** — a
+documentation check that aborts a run is one that gets switched off.
 
-| Schalter | Wirkung |
+| Switch | Effect |
 |---|---|
-| `--verbose` | jeden Einstiegspunkt mit seinen Schaltern auflisten |
+| `--verbose` | list every entry point with its switches |
 
-Die Prosa bleibt Handarbeit. Was ein Skript *schreibt*, weiss kein Parser, und
-das ist die nützlichere Hälfte dieser Datei — die Prüfung deckt die andere ab.
+The prose remains manual work. What a script *writes* is unknown to any parser,
+and that is the more useful half of this file — the check covers the other.
 
 ---
 
-## `clean.py` — was ist erzeugt, was ist übrig
+## `clean.py` — what is generated, what is left over
 
-Ohne Schalter wird **nichts** gelöscht, sondern nur aufgelistet:
+Without a switch **nothing** is deleted, it is only listed:
 
 ```cmd
 py clean.py
 ```
 
-Drei Rubriken, und der Unterschied ist wichtig:
+Three headings, and the difference matters:
 
-- **Generated** — schreibt der Schritt, dem die Datei gehört, bei jedem Lauf neu
-- **Unused leftovers** — einmal geschrieben, von nichts mehr gelesen
-- **Scheduled** — in Benutzung, aber mit Verfallsdatum. Wird hier **nie**
-  entfernt, egal mit welchem Schalter. Die Meldung am Ende eines Laufs ist eine
-  Erinnerung, keine Aufforderung.
+- **Generated** — written afresh on every run by the step that owns the file
+- **Unused leftovers** — written once, read by nothing any more
+- **Scheduled** — in use, but with an expiry date. Is **never** removed here,
+  whatever the switch. The message at the end of a run is a reminder, not a
+  request.
 
-| Schalter | Wirkung |
+| Switch | Effect |
 |---|---|
-| `--delete` | die erzeugten Dateien wirklich entfernen |
-| `--delete --stale` | zusätzlich die Leftovers |
-| `--group NAME` | auf eine Gruppe beschränken, wiederholbar |
-| `--list-groups` | die Gruppen zeigen und beenden |
+| `--delete` | really remove the generated files |
+| `--delete --stale` | additionally the leftovers |
+| `--group NAME` | restrict to one group, repeatable |
+| `--list-groups` | show the groups and exit |
 
-Gruppen: `vocab`, `diagrams`, `epica`, `sisal`, `overview`, `ci`, `archaeo`,
-`bundle`, `cache` und `log`, wobei `log` nicht im Standardsatz ist.
+Groups: `vocab`, `diagrams`, `epica`, `sisal`, `overview`, `ci`, `archaeo`,
+`bundle`, `cache` and `log`, where `log` is not in the default set.
 
-`main.py` ruft `clean.py` in Schritt 0 mit genau den Gruppen auf, die der Lauf
-danach neu schreibt — deshalb bleiben die Ausgaben eines `--ci-only`-Laufs von
-EPICA und SISAL unberührt.
+`main.py` calls `clean.py` in step 0 with exactly the groups that the run
+rewrites afterwards — which is why the outputs of EPICA and SISAL stay
+untouched after a `--ci-only` run.
 
 ---
 
-## Prüfungen, die sich lohnen
+## Checks that are worth it
 
-**Byte-Stabilität.** Zwei Läufe auf unveränderten Eingaben müssen dieselben
-Bytes erzeugen. Einzige zugelassene Ausnahme ist `pipeline_report.txt`.
+**Byte stability.** Two runs on unchanged inputs must produce the same bytes.
+The only permitted exception is `pipeline_report.txt`.
 
 ```cmd
 py main.py --ci-only --archaeo-only --no-bundle & git add -A & py main.py --ci-only --archaeo-only --no-bundle & git status --short
 ```
 
-Sauber ist es, wenn nur `pipeline_report.txt` in der **zweiten** Spalte ein `M`
-trägt. Beide Läufe müssen dieselbe Auflösung verwenden, sonst ändern sich die
-JPG selbstverständlich, und das wäre kein Befund.
+It is clean if only `pipeline_report.txt` carries an `M` in the **second**
+column. Both runs must use the same resolution, otherwise the JPGs naturally
+change, and that would not be a finding.
 
-**Der Ausschnitt gegen sein Manifest.**
+**The cut against its manifest.**
 
 ```cmd
 py SISAL\sisal_import.py --verify
 ```
 
-**Vollständigkeit vor einem Release.**
+**Completeness before a release.**
 
 ```cmd
 py main.py --bundle-format release
 ```
 
-Erwartet: CRM-Abdeckung ohne Lücke, null SHACL-Verstösse. Eine Warnung zu
-`cisite_59` ist bekannt und offen — Kostenki-Borschtschewo trägt noch keinen
-`skos:closeMatch` auf eine externe Normdatei.
+Expected: CRM coverage without a gap, zero SHACL violations. A warning about
+`cisite_59` is known and open — Kostenki-Borshchevo does not yet carry a
+`skos:closeMatch` to an external authority file.
 
 ---
 
-## Wenn etwas nicht läuft
+## When something does not run
 
-| Meldung | Ursache |
+| Message | Cause |
 |---|---|
-| `ModuleNotFoundError: geo_lod_utils` | `PYTHONPATH` zeigt nicht auf `ontology/`. `main.py` setzt das selbst |
-| `data/raw/basemap/ne_50m_land.geojson not found` | die Kartengrundlage fehlt; sie ist 1,6 MB gross und reist nicht in jedem Bundle mit |
-| `none of SISAL/rdf/sisal_sites.ttl … found` | die Übersichtskarte lief vor dem SISAL-Schritt |
-| `columns missing from cifindspots_part_full.csv` | die Fundstellentabelle stammt aus einer anderen Fassung von `campanian-ignimbrite-geo` |
-| Bundle-Schritt dauert ewig | das ist die SHACL-Validierung über zwei Millionen Tripel. `--no-bundle` überspringt sie |
+| `ModuleNotFoundError: geo_lod_utils` | `PYTHONPATH` does not point to `ontology/`. `main.py` sets that itself |
+| `data/raw/basemap/ne_50m_land.geojson not found` | the base map is missing; it is 1.6 MB and does not travel with every bundle |
+| `none of SISAL/rdf/sisal_sites.ttl … found` | the overview map ran before the SISAL step |
+| `columns missing from cifindspots_part_full.csv` | the findspot table comes from a different version of `campanian-ignimbrite-geo` |
+| The bundle step takes forever | that is the SHACL validation over more than a million triples. `--no-bundle` skips it |
 
-## `visuals/build.py` — Dokumentation und Abbildungen
+## `visuals/build.py` — documentation and figures
 
 ```cmd
 py -m pip install -r visuals\requirements.txt && py visuals\build.py
 ```
 
-Baut beides: zwölf Vortragsabbildungen als SVG und PNG plus `slides.html` und die Clusterseiten, und die Dokumentation, alles nach `docu/` (`index`, `model`, `crm-coverage`, `crosswalk`, `instances`, `sparql` mit Abbildungen, `downloads/queries/*.rq` und dem Beispielgraphen `data/geo-lod-sample.nt`). `--only slides` oder `--only docu` baut eine Hälfte. Im Lauf von `main.py` ist es der Schritt nach dem Bundle; `py main.py --visuals-only` führt nur ihn aus. `visuals/docu.py` und `visuals/sample_graph.py` sind die Teile, aus denen `docu/` entsteht. Der Workflow `docu-pages.yml` veröffentlicht `docu/` unter `/docu/` auf GitHub Pages und legt eine Weiterleitungsseite (`pages-root/index.html`) auf die Wurzel; die Unicorn-Seiten (`main.yml`) liegen unter `/semweb/`.
+Builds both: twelve slide figures as SVG and PNG plus `slides.html` and the cluster pages, and the documentation, all into `docu/` (`index`, `model`, `crm-coverage`, `crosswalk`, `instances`, `sparql` with figures, `downloads/queries/*.rq` and the sample graph `data/geo-lod-sample.nt`). `--only slides` or `--only docu` builds one half. Within a `main.py` run it is the step after the bundle; `py main.py --visuals-only` runs only it. `visuals/docu.py` and `visuals/sample_graph.py` are the parts from which `docu/` arises. The workflow `docu-pages.yml` publishes `docu/` under `/docu/` on GitHub Pages and places a redirect page (`pages-root/index.html`) on the root; the Unicorn pages (`main.yml`) live under `/semweb/`.

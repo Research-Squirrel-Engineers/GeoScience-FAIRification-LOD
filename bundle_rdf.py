@@ -5,16 +5,16 @@ bundle_rdf.py - Aggregate ontology + instance RDF into a single distributable
 
 Pipeline-Schritt 5:
   1. Merge alle TTL-Dateien aus ontology/, EPICA/rdf/, SISAL/rdf/, CI/rdf/
-     in einen rdflib.Graph -> dist/geo-lod-bundle.ttl
-     (mit defensivem Auto-Repair für mehrzeilige String-Literale)
-  2. CIDOC-CRM-Coverage: jede getypte Instanz muss (transitiv über
-     rdfs:subClassOf) unter einer CRM-Familien-Klasse hängen
+     into an rdflib.Graph -> dist/geo-lod-bundle.ttl
+     (with defensive auto-repair for multi-line string literals)
+  2. CIDOC-CRM coverage: every typed instance must hang (transitively via
+     rdfs:subClassOf) under a CRM-family class
      (crm:, crmsci:, crmarchaeo:, crmgeo:)
   3. SHACL-Validierung gegen ontology/shapes/*.ttl bzw. ontology/*-shapes.ttl
   4. Sanity-Checks (Triple-Count, Klassen-/Property-Inventar)
 
-Aufruf direkt:    python bundle_rdf.py
-Aufruf über main: ruft run_bundle_step(...) auf.
+Direct call:       python bundle_rdf.py
+Call through main: calls run_bundle_step(...).
 """
 
 from __future__ import annotations
@@ -29,11 +29,11 @@ from typing import Iterable
 try:
     from rdflib import Graph, Literal, Namespace, RDF, RDFS, OWL, URIRef
 except ImportError as e:
-    print(f"  ✗ rdflib nicht verfügbar: {e}")
-    print("    Installiere mit:  pip install rdflib")
+    print(f"  ✗ rdflib not available: {e}")
+    print("    Install with:  pip install rdflib")
     raise
 
-# pyshacl ist optional - SHACL-Validierung wird übersprungen, wenn nicht da.
+# pyshacl is optional - SHACL validation is skipped if it is not available.
 try:
     from pyshacl import validate as shacl_validate
 
@@ -45,11 +45,11 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # Namespaces - CIDOC-CRM-Familie
 # ---------------------------------------------------------------------------
-# Strikte CRM-Coverage: ALLE Klassen, auch externe Standardvokabulare
-# (SOSA, PROV, GeoSPARQL, DCAT, FOAF, ...), müssen einen CRM-Anker
-# bekommen, da das Bundle in den NFDI4Objects Knowledge Graph einfließt.
-# Für externe Vokabulare geschieht das per Bridging-Axiom in der eigenen
-# Ontologie (siehe ontology/README.md - Crosswalk).
+# Strict CRM coverage: ALL classes, including external standard vocabularies
+# (SOSA, PROV, GeoSPARQL, DCAT, FOAF, ...), must receive a CRM anchor,
+# because the bundle flows into the NFDI4Objects Knowledge Graph.
+# For external vocabularies this happens by a bridging axiom in the project's
+# own ontology (see ontology/README.md - crosswalk).
 
 CRM_FAMILY_PREFIXES = (
     "http://www.cidoc-crm.org/cidoc-crm/",
@@ -67,12 +67,12 @@ GEO_LOD = Namespace("http://w3id.org/geo-lod/")
 # ---------------------------------------------------------------------------
 # TTL Auto-Repair
 # ---------------------------------------------------------------------------
-# Bekanntes Problem in den Generator-Skripten: mehrzeilige String-Literale
-# werden mit normalen "..."-Quotes geschrieben, was Turtle nicht erlaubt.
-# Wir reparieren das im Speicher beim Re-Parse - die Quelle muss aber
-# trotzdem gefixt werden. Siehe Hinweise im Output und ontology/README.md.
+# Known problem in the generator scripts: multi-line string literals
+# are written with normal "..." quotes, which Turtle does not allow.
+# We repair this in memory on re-parse - but the source still has to
+# be fixed. See the notes in the output and ontology/README.md.
 
-# Matcht: einfaches "..."-Literal, das mindestens ein Newline enthält.
+# Matches: a plain "..." literal that contains at least one newline.
 _BROKEN_LITERAL = re.compile(
     r'"((?:[^"\\]|\\.)*?\n(?:[^"\\]|\\.)*?)"',
     re.DOTALL,
@@ -80,11 +80,11 @@ _BROKEN_LITERAL = re.compile(
 
 
 def _repair_multiline_strings(ttl_text: str) -> tuple[str, int]:
-    """Ersetzt einfache "..."-Literale, die Newlines enthalten, durch
-    Triple-Quoted-Literale.
+    """Replace plain "..." literals that contain newlines with
+    triple-quoted literals.
 
-    Liefert (repariertes Text, Anzahl Ersetzungen). Konservativ: ersetzt
-    nur, wenn der String nicht selbst schon \"\"\" enthält.
+    Returns (repaired text, number of replacements). Conservative: replaces
+    only if the string does not itself contain \"\"\" already.
     """
     n = 0
 
@@ -100,15 +100,15 @@ def _repair_multiline_strings(ttl_text: str) -> tuple[str, int]:
 
 
 def _parse_with_repair(graph: Graph, path: Path) -> tuple[int, int, bool]:
-    """Versucht erst normales Parsen, fällt bei Fehler auf Auto-Repair zurück.
+    """Try normal parsing first, fall back to auto-repair on error.
 
     Returns: (added_triples, file_triples, repaired_flag)
-      - added_triples: wieviele Triples NEU im Graph durch dieses Parsing
-      - file_triples:  wieviele Triples die Datei selbst enthält (für Anzeige
-                       von Aggregaten, deren Inhalt schon im Bundle ist)
-      - repaired_flag: True wenn Auto-Repair greifen musste
+      - added_triples: how many triples are NEW in the graph from this parse
+      - file_triples:  how many triples the file itself contains (for display
+                       of aggregates whose content is already in the bundle)
+      - repaired_flag: True if auto-repair had to step in
 
-    Wirft Exception nur, wenn auch der Repair-Versuch fehlschlägt.
+    Raises an exception only if the repair attempt fails as well.
     """
     before = len(graph)
     repaired_flag = False
@@ -130,10 +130,10 @@ def _parse_with_repair(graph: Graph, path: Path) -> tuple[int, int, bool]:
 
     added = len(graph) - before
 
-    # Datei isoliert parsen, um die intrinsische Triple-Zahl zu kennen.
-    # Das ist nur nötig, wenn 'added' nicht der vollen Datei entspricht
-    # (sprich: Set-Duplikate mit bereits geladenem Material).
-    # Wir zählen immer mit, weil's billig ist.
+    # Parse the file in isolation to learn its intrinsic triple count.
+    # This is only necessary if 'added' does not correspond to the full file
+    # (that is: set duplicates with material already loaded).
+    # We always count, because it is cheap.
     file_graph = Graph()
     try:
         file_graph.parse(path, format="turtle")
@@ -141,7 +141,7 @@ def _parse_with_repair(graph: Graph, path: Path) -> tuple[int, int, bool]:
         if repaired_flag:
             file_graph.parse(data=repaired, format="turtle")
         else:
-            # Sollte nicht passieren - wenn das erste Parsen klappte, klappt das hier auch
+            # Should not happen - if the first parse worked, this one will too
             pass
     file_triples = len(file_graph)
 
@@ -154,35 +154,35 @@ def _parse_with_repair(graph: Graph, path: Path) -> tuple[int, int, bool]:
 
 
 # ---------------------------------------------------------------------------
-# Ausgabeformate
+# Output formats
 # ---------------------------------------------------------------------------
 #
-# Gemessen an einem Bundle mit rund 208.000 Tripeln (10 MB Turtle):
+# Measured on a bundle of about 208,000 triples (10 MB Turtle):
 #
-#   nt          1.4s   30.1 MB   schnell, zeilenweise, gut zu grep-en
+#   nt          1.4s   30.1 MB   fast, line by line, easy to grep
 #   xml         2.7s   21.3 MB
-#   turtle      6.6s   10.4 MB   kompakt und lesbar - das Release-Format
+#   turtle      6.6s   10.4 MB   compact and readable - the release format
 #   longturtle  6.4s   10.6 MB
 #   json-ld     8.9s   28.7 MB
 #
-# Voreinstellung ist Turtle. N-Triples wäre schneller, spart aber gemessen nur
-# rund 13 der 187 Sekunden eines vollen Laufs - zu wenig, um dafür in Kauf zu
-# nehmen, dass die versionierte .ttl hinter dem Code herhinkt und man an ein
-# Flag denken muss. Wer eng iteriert, nimmt --bundle-format nt; für eine
-# Veröffentlichung schreibt --bundle-format release alle Formate.
+# The default is Turtle. N-Triples would be faster, but measurably saves only
+# about 13 of the 187 seconds of a full run - too little to justify accepting
+# that the versioned .ttl lags behind the code and that one has to remember a
+# flag. Whoever iterates tightly uses --bundle-format nt; for a
+# publication, --bundle-format release writes all formats.
 
 BUNDLE_FORMATS: dict[str, tuple[str, str, str]] = {
-    # Schlüssel: (rdflib-Format, Dateiendung, Beschreibung)
-    # Achtung: N-Triples ist nicht byte-stabil. rdflib vergibt beim Parsen
-    # neue Blank-Node-Labels, und N-Triples schreibt sie im Klartext aus -
-    # rund 30 Zeilen mit OWL-Restriktionen aendern sich damit bei jedem Lauf.
-    # Deshalb steht dist/geo-lod-bundle.nt in der .gitignore. Turtle bleibt
-    # stabil, weil dieselben Knoten dort inline als [ ] serialisiert werden.
-    "nt": ("nt", ".nt", "N-Triples - eine Zeile je Tripel, am schnellsten"),
-    "turtle": ("turtle", ".ttl", "Turtle - kompakt und lesbar, Release-Format"),
-    "longturtle": ("longturtle", ".lttl", "Turtle mit einem Prädikat je Zeile"),
-    "xml": ("xml", ".rdf", "RDF/XML - für Werkzeuge, die nichts anderes lesen"),
-    "jsonld": ("json-ld", ".jsonld", "JSON-LD - für Web-Clients"),
+    # Key: (rdflib format, file extension, description)
+    # Note: N-Triples is not byte-stable. rdflib assigns new blank-node labels
+    # on parsing, and N-Triples writes them out in plain text -
+    # about 30 lines with OWL restrictions therefore change on every run.
+    # That is why dist/geo-lod-bundle.nt is in .gitignore. Turtle stays
+    # stable because the same nodes are serialised inline as [ ] there.
+    "nt": ("nt", ".nt", "N-Triples - one line per triple, fastest"),
+    "turtle": ("turtle", ".ttl", "Turtle - compact and readable, release format"),
+    "longturtle": ("longturtle", ".lttl", "Turtle with one predicate per line"),
+    "xml": ("xml", ".rdf", "RDF/XML - for tools that read nothing else"),
+    "jsonld": ("json-ld", ".jsonld", "JSON-LD - for web clients"),
 }
 
 # N-Triples for a development run: writing the 1.2-million-triple bundle as
@@ -192,10 +192,10 @@ BUNDLE_FORMATS: dict[str, tuple[str, str, str]] = {
 DEFAULT_BUNDLE_FORMATS: tuple[str, ...] = ("nt",)
 RELEASE_BUNDLE_FORMATS: tuple[str, ...] = ("nt", "turtle", "jsonld", "xml")
 
-# Aggregatdateien: Vereinigungen von Dateien, die einzeln ohnehin geladen
-# werden. Sie tragen nichts zum Bundle bei, kosten aber den vollen Parse.
-# Geprüft 2026-08-08: ohne sisal_all_data.ttl bleibt das Bundle bei
-# identischer Tripelzahl, der Schritt wird rund ein Drittel schneller.
+# Aggregate files: unions of files that are loaded individually anyway.
+# They add nothing to the bundle but cost a full parse.
+# Checked 2026-08-08: without sisal_all_data.ttl the bundle keeps an
+# identical triple count and the step becomes about a third faster.
 AGGREGATE_FILENAMES: set[str] = {"sisal_all_data.ttl"}
 
 # Files a development run leaves out. sisal_v3_chronologies.ttl holds the
@@ -249,15 +249,15 @@ def _collect_ttl_files(source_dirs: Iterable[Path],
                 continue
             files.append(path)
     for path in skipped:
-        print(f"  ℹ  {path.name} übersprungen - nur im Release-Bundle. "
-              f"Mit --bundle-format release ist es dabei.")
+        print(f"  ℹ  {path.name} skipped - only in the release bundle. "
+              f"With --bundle-format release it is included.")
     return files
 
 
 def _dedupe_core_copies(files: list[Path], canonical_ontology_dir: Path) -> list[Path]:
-    """Wenn sub-Skripte eine Kopie von z.B. geo_lod_core.ttl in ihre rdf/-
-    Verzeichnisse schreiben, ignorieren wir die - die kanonische Version
-    steht in ontology/.
+    """If sub-scripts write a copy of e.g. geo_lod_core.ttl into their rdf/
+    directories, we ignore it - the canonical version
+    lives in ontology/.
     """
     canonical_names = {p.name for p in canonical_ontology_dir.glob("*.ttl")}
 
@@ -273,7 +273,7 @@ def _dedupe_core_copies(files: list[Path], canonical_ontology_dir: Path) -> list
         kept.append(f)
 
     if skipped:
-        print("    (Duplikate ignoriert - kanonische Version liegt in ontology/):")
+        print("    (Duplicates ignored - canonical version lives in ontology/):")
         for f in skipped:
             print(f"      ~ {f}")
     return kept
@@ -285,11 +285,11 @@ def build_bundle(
     output_path: Path,
     formats: Iterable[str] = DEFAULT_BUNDLE_FORMATS,
 ) -> Graph | None:
-    """Merge alle TTLs in einen Graph, schreibe nach output_path."""
-    print("\n  ▶ Sammle TTL-Quellen ...")
+    """Merge all TTLs into one graph and write to output_path."""
+    print("\n  ▶ Collecting TTL sources ...")
 
-    # ontology/*.ttl plus die kontrollierten Vokabulare in ontology/vocab/.
-    # ontology/shapes/ bleibt draussen - Shapes gehören nicht in den Datengraph.
+    # ontology/*.ttl plus the controlled vocabularies in ontology/vocab/.
+    # ontology/shapes/ stays out - shapes do not belong in the data graph.
     # "Release" is read off the formats rather than passed as a second switch:
     # a run that asks for the release formats is the release run, and two
     # independent flags would eventually disagree.
@@ -298,7 +298,7 @@ def build_bundle(
     instance_files = _collect_ttl_files(rdf_dirs, release=release,
                                         suffixes=INSTANCE_SUFFIXES)
 
-    print(f"    Ontologie-Dateien: {len(ontology_files)}")
+    print(f"    Ontology files: {len(ontology_files)}")
     for f in ontology_files:
         try:
             print(f"      • {f.relative_to(ontology_dir.parent)}")
@@ -309,12 +309,12 @@ def build_bundle(
 
     aggregates = [f for f in instance_files if f.name in AGGREGATE_FILENAMES]
     if aggregates:
-        print("    (Aggregate übersprungen - Inhalt liegt schon in den Einzeldateien):")
+        print("    (Aggregates skipped - content is already in the individual files):")
         for f in aggregates:
             print(f"      ~ {f.name}")
         instance_files = [f for f in instance_files if f.name not in AGGREGATE_FILENAMES]
 
-    print(f"    Instanz-Dateien:   {len(instance_files)}")
+    print(f"    Instance files: {len(instance_files)}")
     for f in instance_files:
         try:
             print(f"      • {f.relative_to(ontology_dir.parent)}")
@@ -323,7 +323,7 @@ def build_bundle(
 
     all_files = ontology_files + instance_files
     if not all_files:
-        print("  ✗ Keine TTL-Dateien gefunden - Bundle nicht erstellt.")
+        print("  ✗ No TTL files found - bundle not created.")
         return None
 
     g = Graph()
@@ -343,9 +343,9 @@ def build_bundle(
         try:
             added, file_triples, was_repaired = _parse_with_repair(g, f)
             tag = "  (auto-repaired)" if was_repaired else ""
-            # Wenn alle Triples neu sind: nur eine Zahl zeigen.
-            # Wenn die Datei mehr Triples enthält als sie zum Bundle beiträgt
-            # (= Aggregat / Set-Duplikate), beide Zahlen zeigen.
+            # If all triples are new: show only one number.
+            # If the file contains more triples than it contributes to the bundle
+            # (= aggregate / set duplicates), show both numbers.
             if added == file_triples:
                 print(f"    + {f.name}: {file_triples:>8,} Triples{tag}")
             else:
@@ -357,28 +357,28 @@ def build_bundle(
                 repaired_files.append(f)
         except Exception as e:
             short = str(e).splitlines()[0][:120]
-            print(f"    ✗ Fehler beim Parsen von {f.name}: {short}")
+            print(f"    ✗ Error parsing {f.name}: {short}")
             parse_errors.append((f, str(e)))
 
     if repaired_files:
         print()
-        print("  ⚠  Auto-Repair angewendet - FIX IN GENERATOR-SKRIPTEN NÖTIG:")
+        print("  ⚠  Auto-repair applied - FIX NEEDED IN GENERATOR SCRIPTS:")
         for f in repaired_files:
             print(f"      • {f}")
-        print('    → Mehrzeilige String-Literale müssen mit """..."""')
-        print('      statt "..." geschrieben werden (Turtle-Spec).')
+        print('    → Multi-line string literals must be written with """..."""')
+        print('      instead of "..." (Turtle spec).')
 
     if parse_errors:
-        print(f"\n  ⚠  {len(parse_errors)} Datei(en) konnten nicht geparst werden.")
+        print(f"\n  ⚠  {len(parse_errors)} file(s) could not be parsed.")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    print(f"\n  ▶ Serialisiere Bundle ({len(g):,} Triples) ...")
+    print(f"\n  ▶ Serialising bundle ({len(g):,} triples) ...")
 
     written: set[str] = set()
 
     for key in formats:
         if key not in BUNDLE_FORMATS:
-            print(f"    ⚠  Unbekanntes Format übersprungen: {key}")
+            print(f"    ⚠  Unknown format skipped: {key}")
             continue
         rdflib_format, suffix, description = BUNDLE_FORMATS[key]
         target = output_path.with_suffix(suffix)
@@ -391,19 +391,19 @@ def build_bundle(
         )
         written.add(target.name)
 
-    # Bundles aus früheren Läufen, die diesmal nicht neu geschrieben wurden,
-    # sind jetzt veraltet. Stillschweigend liegen lassen wäre die gefährlichere
-    # Variante: sie sehen aktuell aus und sind es nicht.
+    # Bundles from earlier runs that were not rewritten this time
+    # are now stale. Quietly leaving them in place would be the more dangerous
+    # option: they look current and are not.
     stale = sorted(
         f.name
         for f in output_path.parent.glob(output_path.stem + ".*")
         if f.name not in written
     )
     if stale:
-        print("\n  ℹ  Aus früheren Läufen, in diesem Lauf nicht neu geschrieben:")
+        print("\n  ℹ  From earlier runs, not rewritten in this run:")
         for name in stale:
             print(f"      • {name}")
-        print("     Vor einer Veröffentlichung: python main.py --bundle-format release")
+        print("     Before a publication: python main.py --bundle-format release")
 
     return g
 
@@ -419,15 +419,14 @@ def _is_crm_class(uri: URIRef) -> bool:
 
 
 def validate_crm_coverage(g: Graph) -> bool:
-    """Strikt: jede getypte Instanz muss über die rdfs:subClassOf-Schließung
-    unter einer Klasse aus der CIDOC-CRM-Familie hängen
+    """Strict: every typed instance must hang, via the rdfs:subClassOf closure,
+    under a class from the CIDOC CRM family
     (crm: / crmsci: / crmgeo: / crmarchaeo:).
 
-    Externe Vokabulare (SOSA, PROV, GeoSPARQL, DCAT, FOAF, ...) werden NICHT
-    als 'ok' gewertet - sie brauchen ein Bridging-Axiom in der eigenen
-    Ontologie. Siehe ontology/README.md (Crosswalk).
+    External vocabularies (SOSA, PROV, GeoSPARQL, DCAT, FOAF, ...) are NOT
+    counted as 'ok' - they need a bridging axiom in the project's own
+    ontology. See ontology/README.md (crosswalk).
     """
-    print("\n  ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...")
 
     instance_classes: set[URIRef] = {
         o for _, _, o in g.triples((None, RDF.type, None)) if isinstance(o, URIRef)
@@ -447,12 +446,12 @@ def validate_crm_coverage(g: Graph) -> bool:
         RDFS.Datatype,
         RDF.Property,
         RDF.List,
-        # Eigenschaftscharakteristiken. Sie stehen als zweiter rdf:type neben
-        # owl:ObjectProperty und sagen aus, wie eine Property sich verhält -
-        # keine Entität, die einen CRM-Vorfahren haben könnte. Aufgefallen mit
-        # S3c.3: strat.ttl deklariert die Allen-Relationen auf der Tiefenachse
-        # als transitiv beziehungsweise symmetrisch, und der Check las das als
-        # fünf Instanzen zweier nicht verankerter Klassen.
+        # Property characteristics. They appear as a second rdf:type next to
+        # owl:ObjectProperty and state how a property behaves -
+        # not an entity that could have a CRM ancestor. Noticed with
+        # S3c.3: strat.ttl declares the Allen relations on the depth axis
+        # as transitive or symmetric, and the check read this as
+        # five instances of two unanchored classes.
         OWL.TransitiveProperty,
         OWL.SymmetricProperty,
         OWL.AsymmetricProperty,
@@ -466,7 +465,7 @@ def validate_crm_coverage(g: Graph) -> bool:
     instance_classes -= skip
 
     if not instance_classes:
-        print("    ⚠  Keine getypten Instanzen gefunden - Check übersprungen.")
+        print("    ⚠  No typed instances found - check skipped.")
         return True
 
     def ancestors(cls: URIRef, seen: set[URIRef] | None = None) -> set[URIRef]:
@@ -487,18 +486,18 @@ def validate_crm_coverage(g: Graph) -> bool:
         else:
             uncovered.append(cls)
 
-    print(f"    Instanz-Klassen geprüft: {len(instance_classes)}")
-    print(f"    ✓ mit CRM-Anker:         {len(covered)}")
-    print(f"    ✗ ohne CRM-Anker:        {len(uncovered)}")
+    print(f"    Instance classes checked: {len(instance_classes)}")
+    print(f"    ✓ with CRM anchor:        {len(covered)}")
+    print(f"    ✗ without CRM anchor:     {len(uncovered)}")
 
     if uncovered:
-        print("\n    Klassen ohne CRM-Anker (Crosswalk in ontology/README.md):")
+        print("\n    Classes without CRM anchor (crosswalk in ontology/README.md):")
         with_counts = sorted(
             ((cls, sum(1 for _ in g.subjects(RDF.type, cls))) for cls in uncovered),
             key=lambda x: (-x[1], str(x[0])),
         )
         for cls, n_inst in with_counts:
-            print(f"      • {cls}  ({n_inst} Instanz/en)")
+            print(f"      • {cls}  ({n_inst} instance(s))")
         return False
 
     return True
@@ -526,17 +525,17 @@ def _find_shape_files(ontology_dir: Path) -> list[Path]:
 
 
 def validate_shacl(g: Graph, ontology_dir: Path) -> bool:
-    print("\n  ▶ SHACL-Validierung ...")
+    print("\n  ▶ SHACL validation ...")
 
     if not PYSHACL_AVAILABLE:
-        print("    ⚠  pyshacl nicht installiert - übersprungen.")
+        print("    ⚠  pyshacl not installed - skipped.")
         print("       Installation:  pip install pyshacl")
         return True
 
     shape_files = _find_shape_files(ontology_dir)
     if not shape_files:
-        print("    ⚠  Keine Shape-Dateien gefunden - übersprungen.")
-        print(f"       Erwartet z.B. unter: {ontology_dir / 'shapes'}/*.ttl")
+        print("    ⚠  No shape files found - skipped.")
+        print(f"       Expected e.g. under: {ontology_dir / 'shapes'}/*.ttl")
         return True
 
     shapes_graph = Graph()
@@ -544,12 +543,12 @@ def validate_shacl(g: Graph, ontology_dir: Path) -> bool:
         print(f"    + lade Shapes: {sf.name}")
         shapes_graph.parse(sf, format="turtle")
 
-    # inference="none", nicht "rdfs": der RDFS-Reasoner über 200k Triples
-    # kostete zwei Drittel der Laufzeit des Schrittes (42 s gegenüber 14 s)
-    # und ändert am Ergebnis nichts. SHACL folgt rdfs:subClassOf bei
-    # sh:targetClass und sh:class von sich aus; die Subklassen-Axiome müssen
-    # dafür nur im Bundle liegen, und das tun sie (geo_lod_core.ttl,
-    # crm_bridging.ttl). Geprüft 2026-08-08: identische Ergebnisse.
+    # inference="none", not "rdfs": the RDFS reasoner over 200k triples
+    # cost two thirds of the run time of the step (42 s versus 14 s)
+    # and changes nothing in the result. SHACL follows rdfs:subClassOf for
+    # sh:targetClass and sh:class by itself; the subclass axioms only
+    # have to be in the bundle for that, and they are (geo_lod_core.ttl,
+    # crm_bridging.ttl). Checked 2026-08-08: identical results.
     t_start = time.perf_counter()
     conforms, results_graph, results_text = shacl_validate(
         data_graph=g,
@@ -564,11 +563,11 @@ def validate_shacl(g: Graph, ontology_dir: Path) -> bool:
     print(f"    Dauer: {time.perf_counter() - t_start:.1f}s")
 
     if conforms:
-        print("    ✓ Alle SHACL-Shapes erfüllt.")
+        print("    ✓ All SHACL shapes satisfied.")
         return True
 
-    # Conforms=False kann durch Violations ODER Warnings ausgelöst werden.
-    # Nur sh:Violation soll das Bundle blockieren - Warnings sind Audit-Hinweise.
+    # Conforms=False can be triggered by violations OR warnings.
+    # Only sh:Violation should block the bundle - warnings are audit notes.
     SH = Namespace("http://www.w3.org/ns/shacl#")
     n_violations = 0
     n_warnings = 0
@@ -582,7 +581,7 @@ def validate_shacl(g: Graph, ontology_dir: Path) -> bool:
         else:
             n_other += 1
 
-    # Output: erst Übersicht, dann die Details aus pyshacl
+    # Output: overview first, then the details from pyshacl
     print(
         f"    SHACL-Ergebnis: "
         f"{n_violations} Violation(s), "
@@ -592,12 +591,12 @@ def validate_shacl(g: Graph, ontology_dir: Path) -> bool:
         print(f"      {line}")
 
     if n_violations > 0:
-        # Hard fail - es gibt strukturelle Probleme im Bundle
+        # Hard fail - there are structural problems in the bundle
         return False
 
-    # Nur Warnings: Bundle gilt als gültig, Hinweise sind Audit-Material
+    # Warnings only: the bundle counts as valid, notes are audit material
     print()
-    print("    ⚠  Nur Warnings - Bundle gilt als gültig.")
+    print("    ⚠  Warnings only - bundle counts as valid.")
     return True
 
 
@@ -621,11 +620,11 @@ def sanity_report(g: Graph) -> None:
     print(f"    Distinkte Typen: {len(classes):,}")
     print(f"    Distinkte Props: {len(properties):,}")
 
-    print("\n    Top-10 Klassen nach Instanzzahl:")
+    print("\n    Top 10 classes by instance count:")
     for cls, count in classes.most_common(10):
         print(f"      {count:>6,}  {cls}")
 
-    print("\n    Top-10 Properties nach Vorkommen:")
+    print("\n    Top 10 properties by occurrence:")
     for prop, count in properties.most_common(10):
         print(f"      {count:>6,}  {prop}")
 
@@ -642,13 +641,13 @@ def run_bundle_step(
     dist_dir: Path | None = None,
     formats: Iterable[str] = DEFAULT_BUNDLE_FORMATS,
 ) -> bool:
-    """Bauen + validieren. True nur wenn Bundle gebaut UND alle harten
-    Checks ok (CRM-Coverage, SHACL).
+    """Build + validate. True only if the bundle was built AND all hard
+    checks are ok (CRM coverage, SHACL).
     """
     if dist_dir is None:
         dist_dir = script_dir / "dist"
 
-    # Basisname ohne Endung; build_bundle hängt je Format die richtige an.
+    # Base name without extension; build_bundle appends the right one per format.
     bundle_path = dist_dir / "geo-lod-bundle.ttl"
     g = build_bundle(ontology_dir, rdf_dirs, bundle_path, formats=formats)
     if g is None:
@@ -774,7 +773,7 @@ def build_site_bundle(
     formats: Iterable[str] = ("turtle",),
 ) -> Graph | None:
     """One cave, slim profile, ontology and vocabulary whole."""
-    print(f"\n  ▶ Site-Bundle für {site_spec!r} ...")
+    print(f"\n  ▶ Site bundle for {site_spec!r} ...")
 
     ontology_files = _collect_ttl_files([ontology_dir, ontology_dir / "vocab"])
     # release=True so that the collector neither skips the chronologies nor
@@ -790,7 +789,7 @@ def build_site_bundle(
     for f in left_out:
         print(f"    ~ {f.name} bleibt draussen (schlankes Profil)")
     if not instance_files:
-        print(f"  ✗ Keine Instanzdateien in {sisal_rdf_dir}.")
+        print(f"  ✗ No instance files in {sisal_rdf_dir}.")
         return None
 
     g = Graph()
@@ -807,12 +806,12 @@ def build_site_bundle(
 
     before = len(g)
     cave, label = resolve_site_cave(g, site_spec)
-    print(f"\n  ▶ Zuschnitt auf {label} ...")
+    print(f"\n  ▶ Trimming to {label} ...")
 
     other_caves = [c for c in g.subjects(RDF.type, GEO_LOD["Cave"]) if c != cave]
     dropped_catalogue = _drop_nodes(g, other_caves)
     dropped_catalogue += _drop_orphans(g, (GEOSPARQL_NS["Geometry"], SF_NS["Point"]))
-    print(f"    − Katalog: {len(other_caves)} weitere Höhlen, "
+    print(f"    − Catalogue: {len(other_caves)} further caves, "
           f"{dropped_catalogue:,} Triples")
 
     slim_nodes = [node for cls in SLIM_DROP_CLASSES
@@ -831,7 +830,7 @@ def build_site_bundle(
             f"replacement for it.")
     g.add((GEO_LOD["SISAL_Dataset"], OWL.versionInfo, Literal(note, lang="en")))
 
-    print(f"    = {len(g):,} Triples, von {before:,}")
+    print(f"    = {len(g):,} Triples, from {before:,}")
 
     dist_dir.mkdir(parents=True, exist_ok=True)
     slug = re.sub(r"[^a-z0-9]+", "-", _plain(site_spec)).strip("-")
@@ -839,7 +838,7 @@ def build_site_bundle(
 
     for key in formats:
         if key not in BUNDLE_FORMATS:
-            print(f"    ⚠  Unbekanntes Format übersprungen: {key}")
+            print(f"    ⚠  Unknown format skipped: {key}")
             continue
         rdflib_format, suffix, description = BUNDLE_FORMATS[key]
         target = output_path.with_suffix(suffix)
@@ -883,16 +882,16 @@ def _main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument(
         "--sites", dest="site_spec", default=None,
-        help="Statt des Gesamtbundles ein Site-Bundle bauen, z. B. "
-             "--sites spannagel. Setzt einen Graphen voraus, den "
-             "SISAL/sisal_rdf.py --sites <dieselbe Site> geschrieben hat, "
-             "und schreibt dist/<site>-bundle.ttl.")
+        help="Build a site bundle instead of the overall bundle, e.g. "
+             "--sites spannagel. Requires a graph that "
+             "SISAL/sisal_rdf.py --sites <the same site> has written, "
+             "and writes dist/<site>-bundle.ttl.")
     parser.add_argument(
         "--format", dest="formats", default=None,
-        help="Ausgabeformate, kommagetrennt. Verfügbar: "
+        help="Output formats, comma-separated. Available: "
              + ", ".join(BUNDLE_FORMATS)
-             + ". Voreinstellung: nt für das Gesamtbundle, turtle für ein "
-               "Site-Bundle.")
+             + ". Default: nt for the overall bundle, turtle for a "
+               "site bundle.")
     args = parser.parse_args()
 
     here = Path(__file__).parent.absolute()

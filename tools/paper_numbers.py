@@ -1,5 +1,5 @@
-"""Zieht alle Zahlen des Papers aus den committed Graphen eines geo-lod-Klons.
-Aufruf: py -I tools/paper_numbers.py <repo> [out_dir]   ->  numbers.json, numbers.md"""
+"""Extracts all numbers of the paper from the committed graphs of a geo-lod clone.
+Usage: py -I tools/paper_numbers.py <repo> [out_dir]   ->  numbers.json, numbers.md"""
 import sys, glob, json, os, subprocess
 import rdflib
 from rdflib import RDF, RDFS, OWL, URIRef

@@ -202,7 +202,7 @@ do not transitively subclass a CRM-family class:
 
 ```text
 ▶ CIDOC-CRM Coverage-Check (strict CRM-family) ...
-  Instanz-Klassen geprüft: 45
+  Instance classes checked: 45
   ✓ mit CRM-Anker:         45
   ✗ ohne CRM-Anker:         0
 ```

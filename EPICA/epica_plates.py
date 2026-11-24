@@ -47,8 +47,8 @@ from scipy.signal import savgol_filter
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "plots")
 
-# ontology/ auf den Pfad, damit geo_lod_figures auch beim Direktaufruf des
-# Moduls gefunden wird und nicht nur über main.py.
+# Put ontology/ on the path so that geo_lod_figures is also found when the
+# module is called directly and not only through main.py.
 sys.path.insert(0, SCRIPT_DIR)
 sys.path.insert(0, os.path.join(os.path.dirname(SCRIPT_DIR), "ontology"))
 
@@ -155,10 +155,10 @@ def caption_multi(name: str, variant: str, layout: str) -> None:
         sources=[ed.DATASETS[k]["doi"] for k in ed.DATASET_ORDER],
     )
 
-# Ab dieser Lücke gilt der Verlauf als unterbrochen: gestrichelt statt
-# durchgezogen, mit geringelten Enden. Derselbe Wert, über den der Generator
-# keine Stadiengrenze mehr interpoliert - Abbildung und Graph benutzen dieselbe
-# Definition von "Lücke".
+# From this gap on, the curve counts as interrupted: dashed instead of
+# solid, with ringed ends. The same value beyond which the generator
+# no longer interpolates a stage boundary - figure and graph use the same
+# definition of "gap".
 GAP_THRESHOLD_KA = ed.MAX_INTERPOLATION_GAP_KA
 
 
@@ -168,9 +168,9 @@ GAP_THRESHOLD_KA = ed.MAX_INTERPOLATION_GAP_KA
 
 
 def smooth_values(values: np.ndarray, variant: str, breaks) -> np.ndarray:
-    """Glättung je Lauf - ein zentriertes Fenster darf nicht über eine
-    Unterbrechung greifen, sonst enthält der Wert am Rand der Lücke
-    Messungen von jenseits der Lücke."""
+    """Smoothing per run - a centred window must not reach across an
+    interruption, otherwise the value at the edge of the gap contains
+    measurements from beyond the gap."""
     if variant == "unsmoothed":
         return values
     if variant.startswith("smooth"):
@@ -179,7 +179,7 @@ def smooth_values(values: np.ndarray, variant: str, breaks) -> np.ndarray:
 
 
 def breaks_of(ages: np.ndarray) -> list[tuple[int, int]]:
-    """Unterbrechungen des Verlaufs, nach der Konvention aus wdttest-sisal."""
+    """Interruptions of the curve, following the convention from wdttest-sisal."""
     return st.find_breaks(ages, GAP_THRESHOLD_KA)
 
 
@@ -194,9 +194,9 @@ def draw_bands(ax, stages, covered, horizontal: bool):
         trans = transforms.blended_transform_factory(ax.transAxes, ax.transData)
         span = ax.axhspan
 
-    # Grenzen aus der Achse, nicht aus den Modulkonstanten: die Collage setzt
-    # je Panel eigene Grenzen, und ein Band ausserhalb davon würde sein Label
-    # neben die Abbildung schreiben.
+    # Limits from the axis, not from the module constants: the collage sets
+    # its own limits per panel, and a band outside them would write its label
+    # next to the figure.
     if horizontal:
         lo, hi = sorted(ax.get_xlim())
     else:
@@ -241,7 +241,7 @@ def draw_bands(ax, stages, covered, horizontal: bool):
 
 
 def save(fig, name: str) -> None:
-    # Über epica_style, damit das SVG auch auf Windows mit LF herauskommt.
+    # Through epica_style, so that the SVG comes out with LF on Windows as well.
     st.save_figure(fig, os.path.join(OUTPUT_DIR, name))
     plt.close(fig)
 
@@ -278,7 +278,7 @@ def plate_columns(frames: dict, stages: list[dict], variant: str) -> None:
         ages = df["age_ka"].to_numpy()
         values = smooth_values(df["value"].to_numpy(), variant, breaks_of(ages))
 
-        # Grenzen vor den Bändern setzen: draw_bands liest sie von der Achse.
+        # Set limits before the bands: draw_bands reads them from the axis.
         ax.set_ylim(AGE_MAX, AGE_MIN)
         draw_bands(ax, stages, ages, horizontal=False)
 
@@ -297,7 +297,7 @@ def plate_columns(frames: dict, stages: list[dict], variant: str) -> None:
     axes[0].yaxis.set_major_locator(MultipleLocator(AGE_MAJOR))
     axes[0].yaxis.set_minor_locator(MultipleLocator(AGE_MINOR))
 
-    # Keine Überschrift in der Grafik - sie steht in captions.yaml.
+    # No title in the graphic - it is in captions.yaml.
     fig.tight_layout()
     save(fig, f"plate_columns_{variant}")
     caption_multi(f"plate_columns_{variant}", variant, "columns")
@@ -598,10 +598,10 @@ def build_all() -> CaptionFile:
         plate_rows(frames, stages, variant)
     plate_boundary_depths(frames, stages)
 
-    # Die Collage des Beitrags, in zwei Zuschnitten. Der alte Vierer bleibt,
-    # damit die bestehende Abbildung ersetzbar ist, ohne dass sich der Text
-    # ändern muss; der Fünfer zeigt dasselbe Prinzip - Rohwerte und Glättung
-    # nebeneinander - über alle Datensätze, die seit S2 im Graphen stehen.
+    # The collage of the contribution, in two cuts. The old four-panel version stays,
+    # so that the existing figure can be replaced without the text
+    # having to change; the five-panel version shows the same principle - raw values and smoothing
+    # side by side - across all datasets that have been in the graph since S2.
     collage(
         frames, stages, "plate_pipeline_outputs",
         [("d18o", "age_ka"), ("d18o", "depth_m"),
