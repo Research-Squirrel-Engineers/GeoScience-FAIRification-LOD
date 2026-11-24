@@ -1,6 +1,6 @@
-@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ns1: <http://www.ics.forth.gr/isl/CRMsci/> .
 @prefix ns2: <http://w3id.org/geo-lod/> .
-@prefix ns3: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -14,6 +14,6 @@
     void:inDataset ns2:geo-lod ;
     ns2:removedSample <http://w3id.org/geo-lod/epica/core_edc> ;
     ns2:tookPlaceAt <http://w3id.org/geo-lod/epica/site_dome_c> ;
-    ns1:P4_has_time-span "1996/2004"^^xsd:string ;
-    ns3:O1_removed <http://w3id.org/geo-lod/epica/core_edc> .
+    ns3:P4_has_time-span "1996/2004"^^xsd:string ;
+    ns1:O1_removed <http://w3id.org/geo-lod/epica/core_edc> .
 
