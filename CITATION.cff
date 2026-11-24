@@ -15,11 +15,15 @@ authors:
     affiliation: 'Research Squirrel Engineers, Mainz, Germany'
   - family-names: Schenk
     given-names: Fiona
+    orcid: 'https://orcid.org/0009-0008-2877-3204'
     affiliation: 'Johannes Gutenberg-Universität, Mainz, Germany'
 identifiers:
   - type: doi
     value: 10.5281/zenodo.18814640
     description: DOI of all software versions
+  - type: doi
+    value: 10.5281/zenodo.24503670
+    description: DOI of version v0.3
 repository-code: >-
   https://github.com/Research-Squirrel-Engineers/GeoScience-FAIRification-LOD
 url: >-
