@@ -1356,7 +1356,7 @@ def _mermaid_instance_epica(rw: int, sgw: int, sgp: int) -> str:
     )
 
 
-def _mermaid_instance_sisal(n: int = 305) -> str:
+def _mermaid_instance_sisal(n: int = 365) -> str:
     """SISAL named-individual instance diagram."""
     return textwrap.dedent(
         f"""\
@@ -1563,7 +1563,7 @@ def write_mermaid(
     rolling_window: int = 11,
     sg_window: int = 11,
     sg_poly: int = 2,
-    n_sisal_sites: int = 305,
+    n_sisal_sites: int = 365,
     n_ci_sites: int = 74,
 ) -> dict[str, str]:
     """

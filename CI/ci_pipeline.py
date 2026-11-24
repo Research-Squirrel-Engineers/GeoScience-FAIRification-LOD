@@ -507,7 +507,8 @@ def add_annotation_source(g: Graph) -> None:
     g.add((source, DCTERMS.license, CI_LICENSE))
 
 
-def add_annotations(g: Graph, annotations: dict[str, dict]) -> int:
+def add_annotations(g: Graph, annotations: dict[str, dict],
+                    arch: set[str]) -> int:
     """The curated reading, with the same shape as the SISAL annotations.
 
     Screened and found nothing is a result, and a different one from never
@@ -521,6 +522,11 @@ def add_annotations(g: Graph, annotations: dict[str, dict]) -> int:
     g.add((collection, RDF.type, GEO["FeatureCollection"]))
     g.add((collection, RDFS.label,
            Literal("CI findspots with an archaeological record", lang="en")))
+
+    # The collection holds every archaeological findspot, whichever reading
+    # typed it: what the source states in spatialtype and what curation adds.
+    for ci_id in sorted(arch, key=int):
+        g.add((collection, RDFS.member, CI[f"cisite_{ci_id}"]))
 
     n_arch = 0
     for ci_id, note in sorted(annotations.items(), key=lambda kv: int(kv[0])):
@@ -666,7 +672,7 @@ def build() -> bool:
 
     print(f"\n  ▶ {next(step)}")
     ann = build_graph()
-    n_arch = add_annotations(ann, annotations)
+    n_arch = add_annotations(ann, annotations, arch)
     print(f"    {n_arch} archaeological findspots from the annotation table")
 
     print(f"\n  ▶ {next(step)}")

@@ -21,4 +21,4 @@
 
   ▶ writing
   ✓ CI/rdf/ci_findspots.ttl  (3,364 triples)
-  ✓ CI/rdf/ci_site_annotations.ttl  (55 triples)
+  ✓ CI/rdf/ci_site_annotations.ttl  (64 triples)
